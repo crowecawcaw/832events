@@ -1,0 +1,20 @@
+imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Pike_Place_Market_Seattle.jpg"
+geo:
+  lat: 47.6094
+  lng: -122.3417
+  label: "Pike Place Market, Seattle, WA 98101"
+name: pike-place-artwalk
+friendlyname: Pike Place Summer Art Walk
+description: Summer art walk at Pike Place Market
+timezone: America/Los_Angeles
+location: Pike Place Market, Seattle
+url: https://www.seattle.gov/arts/experience/art-walks
+tags:
+  - Artwalk
+  - Pike Place
+cost: free
+schedules:
+  - schedule: 1st Thursday
+    start_time: 18:00
+    duration: PT4H
+    seasonal: summer

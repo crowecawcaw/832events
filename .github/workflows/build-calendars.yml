@@ -1,0 +1,233 @@
+name: Build Calendars
+
+on:
+  workflow_call:
+    inputs:
+      artifact-name:
+        description: "Name for the uploaded artifact"
+        required: false
+        default: "github-pages"
+        type: string
+    outputs:
+      error-count:
+        description: "Number of errors during calendar generation"
+        value: ${{ jobs.build.outputs.error-count }}
+      zero-event-calendars:
+        description: "Newline-separated list of calendars with 0 events"
+        value: ${{ jobs.build.outputs.zero-event-calendars }}
+      new-zero-event-sources:
+        description: "Newline-separated list of new sources with 0 events that have never appeared in production"
+        value: ${{ jobs.build.outputs.new-zero-event-sources }}
+      new-source-summary:
+        description: "JSON summary of new sources not in production (event counts + sample events)"
+        value: ${{ jobs.build.outputs.new-source-summary }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      error-count: ${{ steps.generate-calendars.outputs.ERROR_COUNT }}
+      zero-event-calendars: ${{ steps.generate-calendars.outputs.ZERO_EVENT_CALENDARS }}
+      new-zero-event-sources: ${{ steps.generate-calendars.outputs.NEW_ZERO_EVENT_SOURCES }}
+      new-source-summary: ${{ steps.generate-calendars.outputs.NEW_SOURCE_SUMMARY }}
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Fetch base ref for new source detection
+      if: github.base_ref != ''
+      run: |
+        git fetch origin ${{ github.base_ref }}
+        echo "GITHUB_BASE_REF=${{ github.base_ref }}" >> $GITHUB_ENV
+
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+        cache-dependency-path: |
+          package-lock.json
+          web/package-lock.json
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Typecheck
+      run: npm run typecheck
+
+    - name: Check no null returns in rippers
+      run: bash scripts/check_no_null_returns.sh
+
+    - name: Run unit tests
+      run: npm run test:all
+
+    - name: Configure AWS credentials
+      # The only remaining S3 consumer in this build is the out-of-band
+      # calendar download below, which is itself graceful (exits 0 if the
+      # bucket is unreachable). So a credentials failure must NOT fail the
+      # build — fork PRs and credential hiccups simply skip out-of-band
+      # calendars. The geo-cache and event-uncertainty-cache no longer use
+      # S3 (see docs/github-native-caches.md).
+      continue-on-error: true
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+        aws-region: us-west-2
+
+    - name: Restore geo-cache
+      # geo-cache.json is persisted via the GitHub Actions Cache, not S3.
+      # The committed file is an empty cold-start baseline; an immutable
+      # per-run key never matches exactly, so restore-keys returns the newest
+      # entry (same pattern as the fetch cache below). On a cold cache the
+      # build re-geocodes every location once with the current normalization
+      # logic — slower for one build, and legacy dirty keys don't carry over.
+      uses: actions/cache/restore@v4
+      with:
+        path: geo-cache.json
+        key: geo-cache-v1-${{ github.run_id }}
+        restore-keys: |
+          geo-cache-v1-
+
+    - name: Download out-of-band calendars
+      env:
+        OUTOFBAND_BUCKET: ${{ vars.OUTOFBAND_BUCKET }}
+      run: npm run download-outofband
+
+    - name: Restore source fetch cache
+      # Throttles every source (rippers, external ICS, platform APIs) to one live
+      # fetch per cache key per TTL window, 24h by default (freshness lives in the
+      # JSON's fetchedAt). Immutable per-run key never matches exactly, so the
+      # restore-keys prefix returns the newest entry — same pattern as the
+      # claude-routine rate limit in publish_calendars.yml. PR builds read the
+      # default-branch cache the daily main build writes, so previews ride on
+      # main's recent fetches and make almost no outgoing requests.
+      uses: actions/cache/restore@v4
+      with:
+        path: fetch-cache.json
+        key: fetch-cache-v1-${{ github.run_id }}
+        restore-keys: |
+          fetch-cache-v1-
+
+    - name: Generate calendars
+      id: generate-calendars
+      env:
+        TICKETMASTER_API_KEY: ${{ secrets.TICKETMASTER_API_KEY }}
+        EVENTBRITE_TOKEN: ${{ secrets.EVENTBRITE_TOKEN }}
+        DICE_API_KEY: ${{ secrets.DICE_API_KEY }}
+        BROWSERBASE_API_KEY: ${{ secrets.BROWSERBASE_API_KEY }}
+      run: |
+        npm run generate-calendars
+        cat errorCount.txt
+        echo "ERROR_COUNT=$(cat errorCount.txt)" >> "$GITHUB_OUTPUT"
+        cat zeroEventCalendars.txt
+        delimiter="ghadelim_$(openssl rand -hex 8)"
+        {
+          echo "ZERO_EVENT_CALENDARS<<${delimiter}"
+          cat zeroEventCalendars.txt
+          echo ""
+          echo "${delimiter}"
+        } >> "$GITHUB_OUTPUT"
+        cat newZeroEventSources.txt
+        delimiter2="ghadelim_$(openssl rand -hex 8)"
+        {
+          echo "NEW_ZERO_EVENT_SOURCES<<${delimiter2}"
+          cat newZeroEventSources.txt
+          echo ""
+          echo "${delimiter2}"
+        } >> "$GITHUB_OUTPUT"
+        cat newSourceParseErrors.txt
+        delimiter3="ghadelim_$(openssl rand -hex 8)"
+        {
+          echo "NEW_SOURCE_PARSE_ERRORS<<${delimiter3}"
+          cat newSourceParseErrors.txt
+          echo ""
+          echo "${delimiter3}"
+        } >> "$GITHUB_OUTPUT"
+        delimiter4="ghadelim_$(openssl rand -hex 8)"
+        {
+          echo "NEW_SOURCE_SUMMARY<<${delimiter4}"
+          cat output/new-source-summary.json
+          echo ""
+          echo "${delimiter4}"
+        } >> "$GITHUB_OUTPUT"
+
+    - name: Check for build errors
+      run: |
+        FATAL_ERROR_COUNT=$(cat fatalErrorCount.txt)
+        if [ "$FATAL_ERROR_COUNT" -gt 0 ]; then
+          echo "::error::Build failed with $FATAL_ERROR_COUNT fatal error(s) (new source parse errors, zero-event sources, or URL-entity violations)"
+          exit 1
+        fi
+
+    - name: Save geo-cache
+      if: always()
+      # Persist the (possibly newly-geocoded) cache back to the GitHub Actions
+      # Cache under a unique per-run key. Older entries become unreachable once
+      # a newer one exists (restore-keys picks the newest) and expire naturally.
+      # The 90-day artifact below is the durable backup if the cache evicts.
+      uses: actions/cache/save@v4
+      with:
+        path: geo-cache.json
+        key: geo-cache-v1-${{ github.run_id }}
+
+    - name: Save source fetch cache
+      if: always()
+      # Unique per-run key so we never collide with a prior entry; older entries
+      # are unreachable once a newer one exists (restore-keys picks the newest)
+      # and expire naturally. Always runs so a partial build still persists any
+      # refreshed entries.
+      uses: actions/cache/save@v4
+      with:
+        path: fetch-cache.json
+        key: fetch-cache-v1-${{ github.run_id }}
+
+    - name: Validate discovery API
+      run: npm run check-discovery-api
+
+    - name: Build web interface
+      run: npm run web:build
+      env:
+        VITE_FAVORITES_API_URL: ${{ vars.FAVORITES_API_URL }}
+
+    - name: Get GitHub Pages URL
+      id: get-pages-url
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        # Try to get the GitHub Pages URL, fail gracefully if not configured
+        PAGES_URL=$(gh api repos/${{ github.repository }}/pages --jq '.html_url' 2>/dev/null || echo "")
+        echo "PAGES_URL=${PAGES_URL}" >> "$GITHUB_OUTPUT"
+        if [ -n "$PAGES_URL" ]; then
+          echo "GitHub Pages URL: $PAGES_URL"
+        else
+          echo "GitHub Pages not configured or not accessible, skipping URL check"
+        fi
+
+    - name: Upload geo-cache artifact
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: geo-cache
+        path: geo-cache.json
+        retention-days: 90
+
+    - name: Upload event-uncertainty-cache artifact
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: event-uncertainty-cache
+        path: event-uncertainty-cache.json
+        retention-days: 90
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        path: 'output/'
+        name: ${{ inputs.artifact-name }}
+
+    - name: Check for missing calendar URLs
+      if: steps.get-pages-url.outputs.PAGES_URL != ''
+      run: npm run check-missing-urls -- "${{ steps.get-pages-url.outputs.PAGES_URL }}"

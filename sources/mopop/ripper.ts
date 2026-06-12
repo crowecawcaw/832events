@@ -1,0 +1,237 @@
+import { HTMLRipper } from "../../lib/config/htmlscrapper.js";
+import { HTMLElement } from "node-html-parser";
+import { ChronoUnit, Duration, LocalDateTime, ZonedDateTime, ZoneRegion } from "@js-joda/core";
+import { RipperEvent, RipperCalendarEvent, UncertaintyError, UncertaintyField } from "../../lib/config/schema.js";
+import { decode } from "html-entities";
+import '@js-joda/timezone';
+
+// Deterministic hash for partialFingerprint — stability only, not security.
+function simpleHash(s: string): string {
+    let h = 0;
+    for (let i = 0; i < s.length; i++) {
+        h = (h * 31 + s.charCodeAt(i)) | 0;
+    }
+    return (h >>> 0).toString(36);
+}
+
+const MONTHS: Record<string, number> = {
+    'January': 1, 'February': 2, 'March': 3, 'April': 4,
+    'May': 5, 'June': 6, 'July': 7, 'August': 8,
+    'September': 9, 'October': 10, 'November': 11, 'December': 12
+};
+
+export default class MoPOPRipper extends HTMLRipper {
+    private seenEvents = new Set<string>();
+
+    public async parseEvents(html: HTMLElement, date: ZonedDateTime, config: any): Promise<RipperEvent[]> {
+        const events: RipperEvent[] = [];
+
+        // Parse JSON-LD events (have full start/end times)
+        this.parseJsonLdEvents(html, events);
+
+        // Parse calendar-dot-item elements from Webflow CMS (date-only events)
+        this.parseCmsEvents(html, date.zone() as ZoneRegion, events);
+
+        return events;
+    }
+
+    private parseJsonLdEvents(html: HTMLElement, events: RipperEvent[]): void {
+        const jsonLdScripts = html.querySelectorAll('script[type="application/ld+json"]');
+        for (const script of jsonLdScripts) {
+            try {
+                const data = JSON.parse(script.rawText);
+                if (typeof data !== 'object' || data === null) continue;
+
+                const eventItems = Array.isArray(data.hasPart) ? data.hasPart.filter((p: any) => p["@type"] === "Event") : [];
+                for (const item of eventItems) {
+                    if (!item.name || !item.startDate) {
+                        events.push({
+                            type: "ParseError",
+                            reason: `JSON-LD Event missing name or startDate`,
+                            context: JSON.stringify(item).substring(0, 100)
+                        });
+                        continue;
+                    }
+                    const summary = decode(item.name);
+                    const id = this.generateEventId(summary, null);
+                    if (this.seenEvents.has(id)) continue;
+                    const parsed = this.parseJsonLdEvent(item);
+                    if ("type" in parsed) {
+                        events.push(parsed);
+                    } else {
+                        this.seenEvents.add(parsed.id!);
+                        events.push(parsed);
+                        // Detect duration uncertainty: JSON-LD without endDate
+                        // (or with a non-positive end-start interval) falls
+                        // back to a 4-hour guess in parseJsonLdEvent.
+                        const startMs = item.startDate;
+                        const endMs = item.endDate;
+                        const endParsed = endMs ? this.parseIsoDate(endMs) : null;
+                        const intervalOk = endParsed
+                            ? parsed.date.until(endParsed, ChronoUnit.MINUTES) > 0
+                            : false;
+                        if (!intervalOk) {
+                            events.push({
+                                type: "Uncertainty",
+                                reason: endMs
+                                    ? `JSON-LD endDate not after startDate ("${startMs}" → "${endMs}")`
+                                    : "JSON-LD Event omitted endDate",
+                                source: "mopop",
+                                unknownFields: ["duration"],
+                                event: parsed,
+                                partialFingerprint: simpleHash(`${startMs ?? ''}|${endMs ?? ''}`),
+                            });
+                        }
+                    }
+                }
+            } catch {
+                // Non-event JSON-LD blocks are expected (e.g., Organization schema)
+            }
+        }
+    }
+
+    private parseCmsEvents(html: HTMLElement, timezone: ZoneRegion, events: RipperEvent[]): void {
+        // Find all elements with data-date and data-title attributes
+        const items = html.querySelectorAll('[data-date][data-title]');
+        for (const item of items) {
+            try {
+                const dateStr = item.getAttribute('data-date');
+                const title = item.getAttribute('data-title');
+                if (!dateStr || !title) continue;
+
+                const eventDate = this.parseDateString(dateStr, timezone);
+                if (!eventDate) {
+                    events.push({
+                        type: "ParseError",
+                        reason: `Could not parse date: ${dateStr}`,
+                        context: title
+                    });
+                    continue;
+                }
+
+                // Generate a stable ID from title + date
+                const id = this.generateEventId(decode(title), eventDate);
+                if (this.seenEvents.has(id)) continue;
+                this.seenEvents.add(id);
+
+                // Find the event link
+                const link = item.querySelector('.calendar-dot-link');
+                const href = link?.getAttribute('href');
+                const url = href && href !== '#'
+                    ? (href.startsWith('http') ? href : `https://www.mopop.org${href}`)
+                    : undefined;
+
+                const text = item.getAttribute('data-text') || undefined;
+
+                const event: RipperCalendarEvent = {
+                    id,
+                    ripped: new Date(),
+                    date: eventDate,
+                    duration: Duration.ofHours(4),
+                    summary: decode(title),
+                    description: text,
+                    location: "Museum of Pop Culture, 325 5th Ave N, Seattle, WA",
+                    url
+                };
+
+                events.push(event);
+
+                // CMS data-date attributes carry only a date; the parser
+                // defaults to 10 AM + 4 h. Flag both as uncertain so the
+                // resolver can replace them with the real times.
+                const uncertainty: UncertaintyError = {
+                    type: "Uncertainty",
+                    reason: `CMS event listing carries only a date ("${dateStr}")`,
+                    source: "mopop",
+                    unknownFields: ["startTime", "duration"],
+                    event,
+                    partialFingerprint: simpleHash(dateStr),
+                };
+                events.push(uncertainty);
+            } catch (error) {
+                events.push({
+                    type: "ParseError",
+                    reason: `Failed to parse CMS event: ${error}`,
+                    context: item.toString().substring(0, 200)
+                });
+            }
+        }
+    }
+
+    private parseJsonLdEvent(item: any): RipperEvent {
+        const summary = decode(item.name);
+        const id = this.generateEventId(summary, null);
+
+        const startDate = this.parseIsoDate(item.startDate);
+        if (!startDate) {
+            return {
+                type: "ParseError",
+                reason: `Could not parse startDate: ${item.startDate}`,
+                context: item.name
+            };
+        }
+
+        const endDate = item.endDate ? this.parseIsoDate(item.endDate) : null;
+        let duration: Duration;
+        if (endDate) {
+            const minutes = startDate.until(endDate, ChronoUnit.MINUTES);
+            duration = Duration.ofMinutes(minutes > 0 ? minutes : 240);
+        } else {
+            duration = Duration.ofHours(4);
+        }
+
+        const url = item.url
+            ? (item.url.startsWith('http') ? item.url : `https://www.mopop.org${item.url}`)
+            : undefined;
+
+        return {
+            id,
+            ripped: new Date(),
+            date: startDate,
+            duration,
+            summary,
+            location: "Museum of Pop Culture, 325 5th Ave N, Seattle, WA",
+            url
+        };
+    }
+
+    private parseIsoDate(dateStr: string): ZonedDateTime | null {
+        // Parse "2026-01-17T10:00:00" (no timezone = assume Pacific)
+        const match = dateStr.match(
+            /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})$/
+        );
+        if (!match) return null;
+
+        const [, y, mo, d, h, mi, s] = match;
+        return ZonedDateTime.of(
+            LocalDateTime.of(parseInt(y), parseInt(mo), parseInt(d), parseInt(h), parseInt(mi), parseInt(s)),
+            ZoneRegion.of("America/Los_Angeles")
+        );
+    }
+
+    private parseDateString(dateStr: string, timezone: ZoneRegion): ZonedDateTime | null {
+        // Parse "February 21, 2026"
+        const match = dateStr.match(
+            /^(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2}),\s*(\d{4})$/
+        );
+        if (!match) return null;
+
+        const month = MONTHS[match[1]];
+        const day = parseInt(match[2]);
+        const year = parseInt(match[3]);
+
+        // Default to 10:00 AM (museum opening time)
+        return ZonedDateTime.of(
+            LocalDateTime.of(year, month, day, 10, 0),
+            timezone
+        );
+    }
+
+    private generateEventId(title: string, date: ZonedDateTime | null): string {
+        const slug = title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+        if (date) {
+            return `mopop-${slug}-${date.toLocalDate().toString()}`;
+        }
+        return `mopop-${slug}`;
+    }
+}

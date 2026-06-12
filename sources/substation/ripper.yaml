@@ -1,0 +1,23 @@
+# Music events also appear in seattle-showlists; this ripper provides richer data
+name: substation
+type: eventbrite
+proxy: "outofband"
+description: "Substation"
+url: "https://www.substationseattle.com"
+friendlyLink: https://www.substationseattle.com
+tags: ["Music", "Ballard"]
+imageUrl: "https://www.substationseattle.com/wp-content/uploads/2024/06/429318688_589883466694040_8849684734879412674_n.jpg"
+geo:
+  lat: 47.6613
+  lng: -122.3656
+  label: "Substation, 645 NW 45th St, Seattle, WA 98107"
+  osmType: node
+  osmId: 9287243242
+calendars:
+  - name: substation
+    friendlyname: "Substation"
+    timezone: America/Los_Angeles
+    config:
+      organizerId: "18831550522"
+      defaultLocation: "645 NW 45th St, Seattle, WA 98107"
+      defaultDurationHours: 3

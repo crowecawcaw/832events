@@ -1,0 +1,333 @@
+import { Duration, ZonedDateTime, LocalTime, LocalDate, DayOfWeek, TemporalAdjusters, ZoneRegion } from "@js-joda/core";
+import { z } from "zod";
+import { RipperCalendarEvent, RipperCalendar, geoSchema, costConfigSchema } from "./schema.js";
+import { parse } from 'yaml';
+import * as fs from 'fs';
+import * as path from 'path';
+
+import '@js-joda/timezone'
+
+// A single schedule within a recurring event. Each entry is self-contained:
+// it carries its own day pattern, start time, duration, and optional month
+// restriction. A recurring event declares one or more of these (e.g. a venue
+// open "every Saturday" and "every Sunday" at the same hours is two entries).
+export const scheduleEntrySchema = z.object({
+    schedule: z.string(), // e.g., "2nd Thursday", "1st Friday", "every Saturday"
+    start_time: z.string().transform(t => LocalTime.parse(t)),
+    duration: z.string().transform(d => Duration.parse(d)),
+    seasonal: z.string().optional(), // "summer", "winter", etc.
+    months: z.array(z.number().int().min(1).max(12)).optional(), // explicit month list, e.g. [5,6,7,8,9]
+});
+
+export const recurringEventSchema = z.object({
+    name: z.string().regex(/^[a-zA-Z0-9.-]+$/),
+    friendlyname: z.string(),
+    description: z.string(),
+    timezone: z.string().transform(ZoneRegion.of),
+    location: z.string(),
+    url: z.string().url(),
+    tags: z.array(z.string()),
+    // Required, non-empty: every recurring event declares its timing as one or
+    // more self-contained schedule entries. A venue with multiple schedules
+    // (different days/times/seasons) lists multiple entries instead of being
+    // split across multiple files.
+    schedules: z.array(scheduleEntrySchema).min(1),
+    // Required: every recurring entry must explicitly state whether it is a
+    // single-location venue (geo object) or not (null). A recurring event at
+    // a fixed museum is a venue; a cross-neighborhood art walk is not.
+    geo: geoSchema.nullable(),
+    // Optional venue photo URL (a link, never image bytes) surfaced in
+    // venues.json.
+    imageUrl: z.string().url().optional(),
+    // Optional admission cost (`free` or a flat USD amount) applied to every
+    // generated occurrence. Recurring events are hand-coded, so this is the
+    // only way they get priced.
+    cost: costConfigSchema.optional(),
+});
+
+export const recurringConfigSchema = z.object({
+    events: z.array(recurringEventSchema)
+});
+
+export type ScheduleEntry = z.infer<typeof scheduleEntrySchema>;
+export type RecurringEvent = z.infer<typeof recurringEventSchema>;
+export type RecurringConfig = z.infer<typeof recurringConfigSchema>;
+
+export class RecurringEventProcessor {
+    private config: RecurringConfig;
+
+    /**
+     * Construct from either a directory of per-event yaml files
+     * (`sources/recurring/<name>.yaml`) or, for tests, a parsed
+     * `{events: [...]}` object passed directly.
+     */
+    constructor(source: string | RecurringConfig) {
+        if (typeof source === "string") {
+            const files = fs.readdirSync(source)
+                .filter(f => f.endsWith(".yaml") || f.endsWith(".yml"))
+                .sort();
+            const events: unknown[] = [];
+            for (const f of files) {
+                const content = fs.readFileSync(path.join(source, f), 'utf8');
+                events.push(parse(content));
+            }
+            this.config = recurringConfigSchema.parse({ events });
+        } else {
+            this.config = recurringConfigSchema.parse(source);
+        }
+    }
+
+    /**
+     * Returns the raw (parsed) recurring event definitions. Used by the
+     * discovery-API builder to look up venue-level metadata like `geo`,
+     * `description`, and `url` that aren't exposed on `RipperCalendar`.
+     */
+    public getEvents(): RecurringEvent[] {
+        return this.config.events;
+    }
+
+    public generateCalendars(startDate: LocalDate, endDate: LocalDate): RipperCalendar[] {
+        const calendars: RipperCalendar[] = [];
+
+        for (const event of this.config.events) {
+            const calendar: RipperCalendar = {
+                name: event.name,
+                friendlyname: event.friendlyname,
+                events: this.generateRRuleEvent(event, startDate),
+                errors: [],
+                tags: event.tags
+            };
+            calendars.push(calendar);
+        }
+
+        return calendars;
+    }
+
+    private generateRRuleEvent(event: RecurringEvent, startDate: LocalDate): RipperCalendarEvent[] {
+        const isMulti = event.schedules.length > 1;
+        const events: RipperCalendarEvent[] = [];
+
+        for (const entry of event.schedules) {
+            const { ordinals, dayOfWeek } = this.parseSchedule(entry.schedule);
+
+            if (ordinals.length === 0 || dayOfWeek === null) {
+                continue; // Skip invalid schedules
+            }
+
+            // Resolve allowed months (explicit months take precedence over seasonal)
+            const allowedMonths = entry.months ?? (entry.seasonal ? this.getSeasonalMonths(entry.seasonal) : []);
+
+            // Find the first occurrence on or after startDate, respecting month restrictions
+            const firstOccurrence = this.findNextOccurrence(startDate, ordinals, dayOfWeek, allowedMonths);
+            if (!firstOccurrence) {
+                continue;
+            }
+
+            const zonedDateTime = ZonedDateTime.of(
+                firstOccurrence,
+                entry.start_time,
+                event.timezone
+            );
+
+            // Generate RRULE based on schedule
+            const rrule = this.generateRRule(ordinals, dayOfWeek, allowedMonths);
+
+            // Stable id: a single-schedule event keeps id === event.name (no
+            // churn for existing ICS UIDs / identity). Multi-schedule events
+            // get a deterministic per-schedule suffix so the ids are distinct
+            // without depending on array order.
+            const id = isMulti ? `${event.name}-${this.slugifySchedule(entry.schedule)}` : event.name;
+
+            events.push({
+                id,
+                ripped: new Date(),
+                date: zonedDateTime,
+                duration: entry.duration,
+                summary: event.friendlyname,
+                description: event.description,
+                location: event.location,
+                url: event.url,
+                ...(event.cost ? { cost: event.cost } : {}),
+                rrule: rrule
+            });
+        }
+
+        return events;
+    }
+
+    private slugifySchedule(schedule: string): string {
+        return schedule.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+    }
+
+    private generateRRule(ordinals: number[], dayOfWeek: DayOfWeek, allowedMonths: number[]): string {
+        const dayAbbr = this.getDayAbbreviation(dayOfWeek);
+        const byMonth = allowedMonths.length > 0 ? `;BYMONTH=${allowedMonths.join(',')}` : '';
+
+        if (ordinals.length === 1 && ordinals[0] === 0) {
+            // Weekly recurring. When month-restricted, use FREQ=YEARLY with
+            // BYDAY+BYMONTH instead of FREQ=WEEKLY+BYMONTH because many
+            // calendar apps (Google, Apple) don't properly filter FREQ=WEEKLY
+            // by BYMONTH, causing events to stop before the last allowed month.
+            if (byMonth) {
+                return `FREQ=YEARLY;BYDAY=${dayAbbr}${byMonth}`;
+            }
+            return `FREQ=WEEKLY;BYDAY=${dayAbbr}`;
+        }
+
+        const byDay = ordinals.map(o => `${o}${dayAbbr}`).join(',');
+        return `FREQ=MONTHLY;BYDAY=${byDay}${byMonth}`;
+    }
+
+    private getDayAbbreviation(dayOfWeek: DayOfWeek): string {
+        const dayMap: { [key: number]: string } = {
+            1: 'MO', // Monday
+            2: 'TU', // Tuesday  
+            3: 'WE', // Wednesday
+            4: 'TH', // Thursday
+            5: 'FR', // Friday
+            6: 'SA', // Saturday
+            7: 'SU'  // Sunday
+        };
+        return dayMap[dayOfWeek.value()];
+    }
+
+    private getSeasonalMonths(season: string): number[] {
+        switch (season.toLowerCase()) {
+            case 'summer':
+                return [6, 7, 8, 9]; // June - September
+            case 'winter':
+                return [12, 1, 2]; // December - February
+            case 'spring':
+                return [3, 4, 5]; // March - May
+            case 'fall':
+            case 'autumn':
+                return [9, 10, 11]; // September - November
+            default:
+                return []; // No restriction
+        }
+    }
+
+    private findNextOccurrence(startDate: LocalDate, ordinals: number[], dayOfWeek: DayOfWeek, allowedMonths: number[]): LocalDate | null {
+        // Weekly events (ordinal = 0): find the next occurrence of the day of week
+        if (ordinals.length === 1 && ordinals[0] === 0) {
+            let candidate = startDate.with(TemporalAdjusters.nextOrSame(dayOfWeek));
+            if (allowedMonths.length > 0) {
+                // Advance week by week until we land in an allowed month (cap at 12 months)
+                const limit = startDate.plusMonths(12);
+                while (!allowedMonths.includes(candidate.monthValue()) && candidate.isBefore(limit)) {
+                    candidate = candidate.plusWeeks(1);
+                }
+                if (!allowedMonths.includes(candidate.monthValue())) {
+                    return null;
+                }
+            }
+            return candidate;
+        }
+
+        // Start from the beginning of the current month
+        let currentMonth = startDate.withDayOfMonth(1);
+
+        // Search up to 13 months ahead to handle any month restriction
+        for (let monthOffset = 0; monthOffset < 13; monthOffset++) {
+            const testMonth = currentMonth.plusMonths(monthOffset);
+
+            // Skip months not in the allowed list
+            if (allowedMonths.length > 0 && !allowedMonths.includes(testMonth.monthValue())) {
+                continue;
+            }
+
+            // Find the earliest occurrence across all ordinals in this month
+            const candidates = ordinals
+                .map(ordinal => this.findNthDayOfWeekInMonth(testMonth, ordinal, dayOfWeek))
+                .filter((d): d is LocalDate => d !== null)
+                .filter(d => d.isAfter(startDate) || d.isEqual(startDate))
+                .sort((a, b) => a.compareTo(b));
+
+            if (candidates.length > 0) {
+                return candidates[0];
+            }
+        }
+
+        return null;
+    }
+
+    private parseSchedule(schedule: string): { ordinals: number[], dayOfWeek: DayOfWeek | null } {
+        const dayMap: { [key: string]: DayOfWeek } = {
+            'monday': DayOfWeek.MONDAY,
+            'tuesday': DayOfWeek.TUESDAY,
+            'wednesday': DayOfWeek.WEDNESDAY,
+            'thursday': DayOfWeek.THURSDAY,
+            'friday': DayOfWeek.FRIDAY,
+            'saturday': DayOfWeek.SATURDAY,
+            'sunday': DayOfWeek.SUNDAY
+        };
+
+        // Support "every Sunday" format (weekly recurring, ordinal = 0)
+        const everyMatch = schedule.match(/^every\s+(\w+)$/i);
+        if (everyMatch) {
+            const dayName = everyMatch[1].toLowerCase();
+            return {
+                ordinals: [0],
+                dayOfWeek: dayMap[dayName] || null
+            };
+        }
+
+        // Support "last Friday" format
+        const lastMatch = schedule.match(/^last\s+(\w+)$/i);
+        if (lastMatch) {
+            const dayName = lastMatch[1].toLowerCase();
+            return {
+                ordinals: [-1],
+                dayOfWeek: dayMap[dayName] || null
+            };
+        }
+
+        // Support compound "1st and 3rd Tuesday" format
+        const compoundMatch = schedule.match(/^(\d+)(?:st|nd|rd|th)\s+and\s+(\d+)(?:st|nd|rd|th)\s+(\w+)$/i);
+        if (compoundMatch) {
+            const ordinal1 = parseInt(compoundMatch[1]);
+            const ordinal2 = parseInt(compoundMatch[2]);
+            const dayName = compoundMatch[3].toLowerCase();
+            return {
+                ordinals: [ordinal1, ordinal2],
+                dayOfWeek: dayMap[dayName] || null
+            };
+        }
+
+        const match = schedule.match(/^(\d+)(?:st|nd|rd|th)\s+(\w+)$/i);
+        if (!match) {
+            return { ordinals: [], dayOfWeek: null };
+        }
+
+        const ordinal = parseInt(match[1]);
+        const dayName = match[2].toLowerCase();
+
+        return {
+            ordinals: [ordinal],
+            dayOfWeek: dayMap[dayName] || null
+        };
+    }
+
+    private findNthDayOfWeekInMonth(monthStart: LocalDate, ordinal: number, dayOfWeek: DayOfWeek): LocalDate | null {
+        const firstOfMonth = monthStart.withDayOfMonth(1);
+        
+        // Find all occurrences of the day in the month
+        const occurrences: LocalDate[] = [];
+        let current = firstOfMonth.with(TemporalAdjusters.nextOrSame(dayOfWeek));
+        
+        while (current.month() === firstOfMonth.month()) {
+            occurrences.push(current);
+            current = current.plusWeeks(1);
+        }
+        
+        // Return the nth occurrence (1-indexed), or last if ordinal is -1
+        if (ordinal === -1) {
+            return occurrences.length > 0 ? occurrences[occurrences.length - 1] : null;
+        }
+        if (ordinal <= occurrences.length) {
+            return occurrences[ordinal - 1];
+        }
+        
+        return null;
+    }
+}

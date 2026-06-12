@@ -1,0 +1,25 @@
+imageUrl: "https://upload.wikimedia.org/wikipedia/commons/c/c2/Fremont_and_Wallingford_neighborhoods%2C_Seattle%2C_ca_1906_%28MOHAI_820%29.jpg"
+geo:
+  lat: 47.6603
+  lng: -122.3338
+  label: "Wallingford, Seattle, WA"
+name: wallingford-farmers-market
+friendlyname: Wallingford Farmers Market
+description: Seasonal Wednesday evening farmers market in Wallingford. Runs May through September.
+timezone: America/Los_Angeles
+location: Wallingford neighborhood, Seattle
+url: https://seattlefarmersmarkets.org/
+tags:
+  - FarmersMarket
+  - Wallingford
+cost: free
+schedules:
+  - schedule: every Wednesday
+    start_time: 15:00
+    duration: PT4H
+    months:
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9

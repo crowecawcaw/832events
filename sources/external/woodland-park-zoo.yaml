@@ -1,0 +1,20 @@
+# 2026-06-04: HTTP 403 from CI; works from non-CI IP — escalating to outofband
+# 2026-06-07: 3× outofband HTTP 403 — escalating to browserbase
+imageUrl: "https://upload.wikimedia.org/wikipedia/en/a/a7/Woodlandparkzoo_logo11.png"
+geo:
+  lat: 47.6685
+  lng: -122.3543
+  label: Woodland Park Zoo, 5500 Phinney Ave N, Seattle, WA 98103
+  osmId: 247154840
+  osmType: way
+  osmChecked: 2026-04-28
+name: woodland-park-zoo
+proxy: browserbase
+friendlyname: Woodland Park Zoo
+description: Zoo events, ZooTunes concerts, animal encounters, and dining experiences
+icsUrl: https://zoo.org/?post_type=tribe_events&ical=1&eventDisplay=list
+infoUrl: https://zoo.org/events/
+tags:
+  - Phinney
+  - Community
+  - Music

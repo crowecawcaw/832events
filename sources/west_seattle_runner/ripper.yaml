@@ -1,0 +1,17 @@
+name: west_seattle_runner
+type: squarespace
+description: "West Seattle Runner"
+url: "https://www.westseattlerunner.com/events"
+friendlyLink: https://www.westseattlerunner.com/events
+tags: ["Running", "West Seattle"]
+imageUrl: "https://images.squarespace-cdn.com/content/v1/61d6081052cf487ff63318c3/4d81c8e5-2eb5-45ab-a91a-59a0174ededf/IMG_0393.PNG"
+geo:
+  lat: 47.5540
+  lng: -122.3864
+  label: "West Seattle Runner, 2743 California Ave SW, Seattle, WA 98116"
+  osmType: node
+  osmId: 9823557318
+calendars:
+  - name: all-events
+    friendlyname: "West Seattle Runner"
+    timezone: America/Los_Angeles

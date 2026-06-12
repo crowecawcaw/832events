@@ -1,0 +1,22 @@
+imageUrl: "https://images.squarespace-cdn.com/content/v1/60612e3500d7d560398e9be9/a07a5677-cc25-49d2-8413-f84667d9bfda/HITC-logo-blue-06.png"
+geo:
+  lat: 47.5764343
+  lng: -122.309914
+  label: "3019 Beacon Ave S, Seattle, WA 98144"
+  osmType: node
+  osmId: 9951727017
+name: hitc-trivia-oak
+friendlyname: Trivia at Oak
+description: Weekly pub trivia hosted by Head in the Clouds Trivia
+timezone: America/Los_Angeles
+location: 3019 Beacon Ave S, Seattle, WA 98144
+url: https://www.headinthecloudstrivia.com
+tags:
+  - Trivia
+  - Pub Trivia
+  - Beacon Hill
+cost: free
+schedules:
+  - schedule: every Monday
+    start_time: 19:00
+    duration: PT2H

@@ -1,0 +1,23 @@
+imageUrl: "https://images.squarespace-cdn.com/content/v1/60612e3500d7d560398e9be9/a07a5677-cc25-49d2-8413-f84667d9bfda/HITC-logo-blue-06.png"
+# verified: 2026-06-01 ok
+geo:
+  lat: 47.6605861
+  lng: -122.3902975
+  label: "4441 26th Ave W, Seattle, WA 98199"
+  osmType: node
+  osmId: 2462428354
+name: hitc-trivia-bizarre-brewing
+friendlyname: Trivia at Bizarre Brewing
+description: Weekly pub trivia hosted by Head in the Clouds Trivia
+timezone: America/Los_Angeles
+location: 4441 26th Ave W, Seattle, WA 98199
+url: https://www.headinthecloudstrivia.com
+tags:
+  - Trivia
+  - Pub Trivia
+  - Magnolia
+cost: free
+schedules:
+  - schedule: every Tuesday
+    start_time: 19:00
+    duration: PT2H

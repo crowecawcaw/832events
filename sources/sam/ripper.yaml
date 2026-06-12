@@ -1,0 +1,35 @@
+name: sam
+proxy: "browserbase" # outofband failed 3× (HTTP 403 from residential IPs too)
+friendlyname: "Seattle Art Museum"
+description: "Seattle Art Museum"
+url: "https://www.seattleartmuseum.org/whats-on/events"
+friendlyLink: https://www.seattleartmuseum.org/whats-on/events
+tags: ["Arts", "Museums"]
+imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/15/View_entrance_Seattle_Art_Museum_Seattle_Washington.JPG"
+geo:
+  lat: 47.6074
+  lng: -122.3387
+  label: "Seattle Art Museum, 1300 1st Ave, Seattle, WA 98101"
+  osmType: node
+  osmId: 1851741441
+calendars:
+  - name: sam-downtown
+    friendlyname: "Seattle Art Museum - Downtown"
+    timezone: America/Los_Angeles
+    config:
+      location: "Seattle Art Museum"
+    tags: ["Downtown"]
+
+  - name: sam-asian-art
+    friendlyname: "Seattle Asian Art Museum"
+    timezone: America/Los_Angeles
+    config:
+      location: "Seattle Asian Art Museum"
+    tags: ["Capitol Hill"]
+
+  - name: sam-sculpture-park
+    friendlyname: "Olympic Sculpture Park"
+    timezone: America/Los_Angeles
+    config:
+      location: "Olympic Sculpture Park"
+    tags: ["Belltown"]

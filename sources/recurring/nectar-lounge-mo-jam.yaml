@@ -1,0 +1,22 @@
+geo:
+  lat: 47.6523876
+  lng: -122.3538542
+  label: "412 N 36th St, Seattle"
+  osmType: way
+  osmId: 117752666
+name: nectar-lounge-mo-jam
+friendlyname: Nectar Lounge — Mo Jam Mondays
+description: Weekly music jam and open mic at Nectar Lounge.
+timezone: America/Los_Angeles
+location: 412 N 36th St, Seattle
+url: https://nectarlounge.com/
+imageUrl: "https://nectarlounge.com/files/2019/08/nectar-lounge-about-venue-featured.jpg"
+tags:
+  - OpenMic
+  - Music
+  - Fremont
+cost: free
+schedules:
+  - schedule: every Monday
+    start_time: 19:30
+    duration: PT4H30M

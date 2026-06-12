@@ -1,0 +1,18 @@
+# verified: 2026-06-01 ok
+name: lucky-envelope
+type: squarespace
+description: "Lucky Envelope Brewing"
+url: "https://www.luckyenvelopebrewing.com/events"
+friendlyLink: https://www.luckyenvelopebrewing.com/events
+tags: ["Beer", "Ballard"]
+geo:
+  lat: 47.6649
+  lng: -122.3691
+  label: "Lucky Envelope Brewing, 907 NW 50th St, Seattle, WA 98107"
+  osmType: node
+  osmId: 4321475708
+imageUrl: "https://static1.squarespace.com/static/630403f15865200f779338ce/t/637e89f98f9fba3705f9dd4b/1669237241795/LEB_CIB_BlueBG_Horizontal.png?format=1500w"
+calendars:
+  - name: all-events
+    friendlyname: "Lucky Envelope Brewing"
+    timezone: America/Los_Angeles

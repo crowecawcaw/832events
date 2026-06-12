@@ -1,0 +1,22 @@
+imageUrl: "https://images.squarespace-cdn.com/content/v1/60612e3500d7d560398e9be9/a07a5677-cc25-49d2-8413-f84667d9bfda/HITC-logo-blue-06.png"
+geo:
+  lat: 47.6522408
+  lng: -122.3554032
+  label: "303 N 36th St, Seattle, WA 98103"
+  osmType: node
+  osmId: 2144365453
+name: hitc-trivia-mermaid-lounge
+friendlyname: Trivia at Mermaid Lounge
+description: Weekly pub trivia hosted by Head in the Clouds Trivia
+timezone: America/Los_Angeles
+location: 303 N 36th St, Seattle, WA 98103
+url: https://www.headinthecloudstrivia.com
+tags:
+  - Trivia
+  - Pub Trivia
+  - Fremont
+cost: free
+schedules:
+  - schedule: every Monday
+    start_time: 19:30
+    duration: PT2H

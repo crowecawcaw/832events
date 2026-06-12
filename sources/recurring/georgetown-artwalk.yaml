@@ -1,0 +1,20 @@
+# verified: 2026-05-25 drift-fixed (start_time 18:00→12:00, duration PT4H→PT9H)
+imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Bertoldi_Hall%2C_Georgetown%2C_Seattle.jpg"
+geo:
+  lat: 47.5477
+  lng: -122.3226
+  label: "Georgetown, Seattle, WA"
+name: georgetown-artwalk
+friendlyname: Georgetown Art Attack
+description: Monthly art walk in the Georgetown neighborhood
+timezone: America/Los_Angeles
+location: Georgetown neighborhood, Seattle
+url: https://georgetownseattle.org/art-attack/
+tags:
+  - Artwalk
+  - Georgetown
+cost: free
+schedules:
+  - schedule: 2nd Saturday
+    start_time: "12:00"
+    duration: PT9H

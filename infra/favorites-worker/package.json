@@ -1,0 +1,21 @@
+{
+  "name": "calendar-ripper-favorites",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "fuse.js": "^7.1.0",
+    "hono": "^4.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240208.0",
+    "vitest": "^1.3.0",
+    "wrangler": "^3.28.0"
+  }
+}

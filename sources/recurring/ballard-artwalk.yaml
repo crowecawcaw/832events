@@ -1,0 +1,20 @@
+# verified: 2026-05-11 drift-fixed (duration PT4H→PT3H)
+imageUrl: "https://www.visitballard.com/wp-content/uploads/2025/08/VB_2021_0054.jpg"
+geo:
+  lat: 47.6677
+  lng: -122.3829
+  label: "Ballard, Seattle, WA"
+name: ballard-artwalk
+friendlyname: Ballard Art Walk
+description: Monthly art walk in the Ballard neighborhood
+timezone: America/Los_Angeles
+location: Ballard neighborhood, Seattle
+url: http://www.visitballard.com/artwalk/
+tags:
+  - Artwalk
+  - Ballard
+cost: free
+schedules:
+  - schedule: 2nd Saturday
+    start_time: 18:00
+    duration: PT3H

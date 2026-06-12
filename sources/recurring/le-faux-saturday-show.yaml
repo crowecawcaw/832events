@@ -1,0 +1,22 @@
+imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/df/Seattle_-_Julia%27s_on_Broadway_01.jpg"
+geo:
+  lat: 47.6213
+  lng: -122.3207
+  label: "Julia's on Broadway, 300 Broadway E, Seattle, WA 98102"
+  osmType: node
+  osmId: 2131716660
+name: le-faux-saturday-show
+friendlyname: Le Faux at Julia's on Broadway — Saturday Evening Show
+description: Weekly Saturday evening drag dinner theater show at Julia's on Broadway in Capitol Hill.
+timezone: America/Los_Angeles
+location: 300 Broadway E, Seattle, WA 98102
+url: https://lefauxproductions.simpletix.com
+tags:
+  - Nightlife
+  - Capitol Hill
+  - Theatre
+schedules:
+  - schedule: every Saturday
+    start_time: "19:00"
+    duration: PT3H
+    months: [ 4, 5, 6, 7, 8, 9, 10 ]

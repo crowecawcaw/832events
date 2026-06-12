@@ -1,0 +1,24 @@
+# verified: 2026-06-08 unverifiable
+name: henry-art-gallery
+type: eventbrite
+proxy: "outofband"
+description: "Henry Art Gallery"
+url: "https://henryart.org/"
+friendlyLink: https://henryart.org/programs/all
+tags: ["Arts", "Museums", "University District"]
+imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7c/Henry_Art_Gallery_01.jpg"
+geo:
+  lat: 47.6562183
+  lng: -122.3118201
+  label: "Henry Art Gallery, 4100 15th Ave NE, Seattle, WA 98105"
+  osmType: way
+  osmId: 54029687
+expectEmpty: true
+calendars:
+  - name: henry-art-gallery
+    friendlyname: "Henry Art Gallery"
+    timezone: America/Los_Angeles
+    config:
+      organizerId: "775590393"
+      defaultLocation: "4100 15th Ave NE, Seattle, WA 98105"
+      defaultDurationHours: 2

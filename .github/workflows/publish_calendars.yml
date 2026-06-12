@@ -1,0 +1,191 @@
+name: Generate Calendars and Publish to GitHub Pages
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # Daily
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Allow manual triggering
+    inputs:
+      force_routine:
+        description: "Bypass the 24h rate limit on the Claude build-error routine"
+        type: boolean
+        default: false
+
+jobs:
+  jitter:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+    steps:
+      - name: Random jitter (up to 3 hours)
+        run: sleep $((RANDOM % 10800))
+
+  build:
+    needs: [jitter]
+    if: always() && (needs.jitter.result == 'success' || needs.jitter.result == 'skipped')
+    uses: ./.github/workflows/build-calendars.yml
+    permissions:
+      id-token: write    # OIDC token for AWS proxy authentication
+      contents: read
+    secrets: inherit
+
+  check-errors:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - name: Check Error Count
+      env:
+        ERROR_COUNT: ${{ needs.build.outputs.error-count }}
+      # Fail this if we have a positive error count.
+      # This way we keep publishing our calendars even if there are errors, but we get a notification from this failed step
+      run: (( $ERROR_COUNT == 0 ))
+
+  deploy:
+    # Always run this deploy, even if the build failed. This is so we get newest results even if a calendar had errors
+    if: always()
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    needs: build
+    concurrency:
+      group: cf-pages-deploy
+      cancel-in-progress: false
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: github-pages
+          path: output
+
+      - name: Deploy to Cloudflare Pages
+        # CLOUDFLARE_PAGES_PROJECT repo var overrides the project name for
+        # template copies; defaults to the reference instance's project.
+        run: npx wrangler pages deploy output/ --project-name=${{ vars.CLOUDFLARE_PAGES_PROJECT || '206events' }} --branch=main
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+  trigger-error-routine:
+    # Trigger a Claude Code routine to investigate and fix build errors.
+    # Runs on any build with errors (push, schedule, or manual dispatch).
+    # Does NOT run on PRs (this workflow doesn't trigger on PRs).
+    # Skips if CLAUDE_ROUTINE_ID is not configured (as a secret).
+    # Rate-limited to at most once per rolling 24h window via the Actions cache.
+    # A workflow_dispatch run with force_routine=true bypasses the rate limit.
+    if: always() && needs.build.outputs.error-count != '' && needs.build.outputs.error-count != '0'
+    runs-on: ubuntu-latest
+    needs: build
+    env:
+      # Cache keys are immutable, so each successful fire writes a new entry under
+      # a unique per-run key. The restore step uses a prefix match to recover the
+      # most-recently-created entry, which sidesteps the need to delete the old one.
+      RATE_LIMIT_CACHE_PREFIX: claude-routine-last-fired-v1-
+      RATE_LIMIT_FILE: /tmp/claude-routine-last-fired
+      RATE_LIMIT_WINDOW_SECONDS: "86400"
+    steps:
+      - name: Check routine config
+        id: check-config
+        run: |
+          if [ -z "$CLAUDE_ROUTINE_ID" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "Skipping: CLAUDE_ROUTINE_ID not configured"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+        env:
+          CLAUDE_ROUTINE_ID: ${{ secrets.CLAUDE_ROUTINE_ID }}
+
+      - name: Restore last-fired timestamp
+        if: steps.check-config.outputs.skip != 'true'
+        uses: actions/cache/restore@v4
+        with:
+          path: ${{ env.RATE_LIMIT_FILE }}
+          # The exact key will never match (it includes the current run id),
+          # so the action falls through to the restore-keys prefix and returns
+          # the most-recently-created cache entry under that prefix.
+          key: ${{ env.RATE_LIMIT_CACHE_PREFIX }}${{ github.run_id }}
+          restore-keys: |
+            ${{ env.RATE_LIMIT_CACHE_PREFIX }}
+
+      - name: Check rate limit
+        id: rate-limit
+        if: steps.check-config.outputs.skip != 'true'
+        env:
+          FORCE: ${{ github.event_name == 'workflow_dispatch' && inputs.force_routine == true }}
+        run: |
+          if [ "$FORCE" = "true" ]; then
+            echo "Manual dispatch with force_routine=true; bypassing rate limit"
+            echo "should-fire=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ ! -s "$RATE_LIMIT_FILE" ]; then
+            echo "No prior fire recorded; will fire"
+            echo "should-fire=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          LAST=$(cat "$RATE_LIMIT_FILE")
+          if ! [[ "$LAST" =~ ^[0-9]+$ ]]; then
+            echo "Cached timestamp is not numeric ('$LAST'); treating as never fired"
+            echo "should-fire=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          NOW=$(date +%s)
+          ELAPSED=$(( NOW - LAST ))
+          if [ "$ELAPSED" -lt "$RATE_LIMIT_WINDOW_SECONDS" ]; then
+            HOURS=$(( ELAPSED / 3600 ))
+            echo "::notice::Rate-limited: Claude routine last fired ${HOURS}h ago (window: 24h). Skipping."
+            echo "should-fire=false" >> "$GITHUB_OUTPUT"
+          else
+            HOURS=$(( ELAPSED / 3600 ))
+            echo "Last fire was ${HOURS}h ago; will fire"
+            echo "should-fire=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Trigger Claude Code build-error routine
+        id: fire
+        if: steps.check-config.outputs.skip != 'true' && steps.rate-limit.outputs.should-fire == 'true'
+        env:
+          CLAUDE_ROUTINE_TOKEN: ${{ secrets.CLAUDE_ROUTINE_TOKEN }}
+          CLAUDE_ROUTINE_ID: ${{ secrets.CLAUDE_ROUTINE_ID }}
+          ERROR_COUNT: ${{ needs.build.outputs.error-count }}
+          COMMIT_SHA: ${{ github.sha }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          PAYLOAD=$(jq -n \
+            --arg text "Build errors detected. Error count: ${ERROR_COUNT}. Commit: ${COMMIT_SHA}. Run: ${RUN_URL}" \
+            '{text: $text}')
+          echo "Triggering Claude Code routine ${CLAUDE_ROUTINE_ID}..."
+          HTTP_CODE=$(curl -s --max-time 30 -o /tmp/routine-response.json -w "%{http_code}" -X POST \
+            "https://api.anthropic.com/v1/claude_code/routines/${CLAUDE_ROUTINE_ID}/fire" \
+            -H "Authorization: Bearer $CLAUDE_ROUTINE_TOKEN" \
+            -H "anthropic-beta: experimental-cc-routine-2026-04-01" \
+            -H "anthropic-version: 2023-06-01" \
+            -H "Content-Type: application/json" \
+            -d "$PAYLOAD") || HTTP_CODE="000"
+          echo "Response: HTTP $HTTP_CODE"
+          if [[ "$HTTP_CODE" =~ ^[0-9]+$ ]] && [ "$HTTP_CODE" -ge 200 ] && [ "$HTTP_CODE" -lt 300 ]; then
+            echo "Routine triggered successfully"
+            jq -r '.claude_code_session_url // "(no session URL)"' /tmp/routine-response.json
+            echo "fired=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning::Failed to trigger Claude Code routine (HTTP $HTTP_CODE)"
+            jq . /tmp/routine-response.json 2>/dev/null || cat /tmp/routine-response.json
+            # Don't fail the workflow — the routine trigger is best-effort.
+            # Don't update the rate-limit cache either, so the next run retries.
+            echo "fired=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Record new last-fired timestamp
+        if: steps.fire.outputs.fired == 'true'
+        run: date +%s > "$RATE_LIMIT_FILE"
+
+      - name: Save new last-fired timestamp
+        if: steps.fire.outputs.fired == 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: ${{ env.RATE_LIMIT_FILE }}
+          # Unique per-run key so we never collide with a prior entry. Older
+          # entries are unreachable once a newer one exists (restore-keys picks
+          # the newest) and expire naturally after 7 days of no access.
+          key: ${{ env.RATE_LIMIT_CACHE_PREFIX }}${{ github.run_id }}

@@ -1,0 +1,16 @@
+name: frye-art-museum
+description: "Frye Art Museum"
+url: "https://fryemuseum.org/calendar"
+friendlyLink: "https://fryemuseum.org/calendar"
+tags: ["Arts", "Museums", "First Hill"]
+imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Frye_Museum_front.jpg"
+geo:
+  lat: 47.6072
+  lng: -122.3241
+  label: "Frye Art Museum, 704 Terry Ave, Seattle, WA 98104"
+  osmType: relation
+  osmId: 3185569
+calendars:
+  - name: frye-art-museum
+    friendlyname: "Frye Art Museum"
+    timezone: America/Los_Angeles

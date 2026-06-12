@@ -1,0 +1,20 @@
+name: taproot
+description: "Taproot Theatre"
+url: "https://api.ovationtix.com/public/calendar/client(37019)"
+friendlyLink: "https://taproottheatre.org"
+tags: ["Theatre", "Greenwood"]
+geo:
+  lat: 47.6908
+  lng: -122.3563
+  label: "Taproot Theatre, 204 N 85th St, Seattle, WA 98103"
+  osmType: way
+  osmId: 55197419
+imageUrl: "https://taproottheatre.org/wp-content/uploads/2026/03/Taproot_Logo_Teal.jpg"
+calendars:
+  - name: taproot
+    friendlyname: "Taproot Theatre"
+    timezone: America/Los_Angeles
+    config:
+      clientId: 37019
+      clientOrigin: "https://taproottheatre.org"
+      lookaheadMonths: 6

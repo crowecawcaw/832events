@@ -1,0 +1,99 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  Infrastructure for calendar-ripper out-of-band uploads.
+  GitHub Actions assumes an IAM role via OIDC to read from the S3 bucket.
+
+# ---------------------------------------------------------------------------
+# Parameters
+# ---------------------------------------------------------------------------
+Parameters:
+  GitHubOrg:
+    Type: String
+    Description: GitHub organization or user that owns the repository.
+
+  GitHubRepo:
+    Type: String
+    Default: "206events"
+    Description: GitHub repository name (without the org prefix).
+
+  # Kept for compatibility — no longer used
+  AllowedTargetDomains:
+    Type: String
+    Default: ""
+    Description: "(Unused) Kept for stack compatibility."
+
+  ImageUri:
+    Type: String
+    Default: ""
+    Description: "(Unused) Kept for stack compatibility."
+
+# ---------------------------------------------------------------------------
+# Resources
+# ---------------------------------------------------------------------------
+Resources:
+
+  # -- S3 bucket for out-of-band calendar uploads ---------------------------
+  OutOfBandBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "calendar-ripper-outofband-${AWS::AccountId}"
+
+  # -- GitHub OIDC Provider --------------------------------------------------
+  GitHubOIDCProvider:
+    Type: AWS::IAM::OIDCProvider
+    Properties:
+      Url: https://token.actions.githubusercontent.com
+      ClientIdList:
+        - sts.amazonaws.com
+      ThumbprintList:
+        - 6938fd4d98bab03faadb97b34396831e3780aea1
+
+  # -- IAM role that GitHub Actions assumes ----------------------------------
+  GitHubActionsRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub "${AWS::StackName}-github-actions"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Federated: !GetAtt GitHubOIDCProvider.Arn
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                token.actions.githubusercontent.com:aud: sts.amazonaws.com
+              StringLike:
+                token.actions.githubusercontent.com:sub: !Sub "repo:${GitHubOrg}/${GitHubRepo}:*"
+      Policies:
+        - PolicyName: ReadWriteOutOfBandBucket
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                  - s3:PutObject
+                  - s3:ListBucket
+                Resource:
+                  - !GetAtt OutOfBandBucket.Arn
+                  - !Sub "${OutOfBandBucket.Arn}/*"
+
+
+# ---------------------------------------------------------------------------
+# Outputs
+# ---------------------------------------------------------------------------
+Outputs:
+  OutOfBandBucketName:
+    Description: >
+      S3 bucket for out-of-band calendar uploads. Add as GitHub Actions
+      secret OUTOFBAND_BUCKET.
+    Value: !Ref OutOfBandBucket
+
+  GitHubActionsRoleArn:
+    Description: >
+      IAM role ARN for GitHub Actions to assume via OIDC. Add as GitHub
+      Actions secret AWS_ROLE_ARN.
+    Value: !GetAtt GitHubActionsRole.Arn
+
+

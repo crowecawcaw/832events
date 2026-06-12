@@ -1,0 +1,21 @@
+# verified: 2026-05-17 flagged (url points to Wing Luke JamFest 2025, a specific annual event at 5pm — not a general recurring art walk page; start_time may have drifted from 18:00 to 17:00)
+imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Seattle_-_East_Kong_Yick_Building_01.jpg"
+geo:
+  lat: 47.5983
+  lng: -122.3237
+  label: "Chinatown/International District, Seattle, WA"
+name: chinatown-id-artwalk
+friendlyname: Chinatown/International District Art Walk
+description: Summer art walk in the Chinatown/International District
+timezone: America/Los_Angeles
+location: Chinatown/International District, Seattle
+url: http://www.wingluke.org/jamfest/
+tags:
+  - Artwalk
+  - International District
+cost: free
+schedules:
+  - schedule: 3rd Thursday
+    start_time: 18:00
+    duration: PT4H
+    seasonal: summer

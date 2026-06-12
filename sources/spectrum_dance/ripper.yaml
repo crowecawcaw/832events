@@ -1,0 +1,21 @@
+name: spectrum-dance
+description: "Spectrum Dance Theater"
+url: "https://api.ovationtix.com/public/calendar/client(36947)"
+friendlyLink: "https://spectrumdance.org"
+tags: ["Arts", "Madrona"]
+imageUrl: "https://images.squarespace-cdn.com/content/v1/67a4f7ac1732ae6fd0159d00/30b59f3f-ce21-4456-9bf1-440551e7c10f/20251203-DSC_0321-NEF.jpg"
+geo:
+  lat: 47.6254
+  lng: -122.2921
+  label: "Spectrum Dance Theater, 800 Lake Washington Blvd E, Seattle, WA 98112"
+  osmChecked: 2026-05-09
+  osmType: way
+  osmId: 40416131
+calendars:
+  - name: spectrum-dance
+    friendlyname: "Spectrum Dance Theater"
+    timezone: America/Los_Angeles
+    config:
+      clientId: 36947
+      clientOrigin: "https://spectrumdance.org"
+      lookaheadMonths: 6

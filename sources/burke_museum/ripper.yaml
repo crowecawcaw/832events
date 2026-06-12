@@ -1,0 +1,16 @@
+name: burke-museum
+description: "Burke Museum"
+url: "https://www.burkemuseum.org/calendar"
+friendlyLink: https://www.burkemuseum.org/calendar
+tags: ["Museums", "University District"]
+imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Burke_Museum_of_Natural_History_and_Culture_in_Seattle%2C_Washington.jpg/330px-Burke_Museum_of_Natural_History_and_Culture_in_Seattle%2C_Washington.jpg"
+geo:
+  lat: 47.6605
+  lng: -122.3116
+  label: "Burke Museum, 4300 15th Ave NE, Seattle, WA 98105"
+  osmType: way
+  osmId: 160545994
+calendars:
+  - name: burke-museum
+    friendlyname: "Burke Museum Events"
+    timezone: America/Los_Angeles

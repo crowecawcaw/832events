@@ -1,0 +1,19 @@
+imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/5c/University_District_Seattle%2C_May_2024.jpg"
+geo:
+  lat: 47.6614
+  lng: -122.3121
+  label: "University District, Seattle, WA"
+name: university-district-artwalk
+friendlyname: University District Art Walk
+description: Monthly art walk in the University District
+timezone: America/Los_Angeles
+location: University District, Seattle
+url: http://www.udistrictartwalk.org/
+tags:
+  - Artwalk
+  - University District
+cost: free
+schedules:
+  - schedule: 3rd Friday
+    start_time: 18:00
+    duration: PT4H

@@ -1,0 +1,14 @@
+name: Cleanup PR Preview
+
+on:
+  pull_request:
+    types: [closed]
+
+# Preview deployments are now managed by Cloudflare Pages.
+# CF Pages automatically cleans up preview deployments when the
+# associated branch is deleted. No gh-pages cleanup needed.
+jobs:
+  skip:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Preview cleanup handled by Cloudflare Pages"

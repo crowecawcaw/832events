@@ -1,0 +1,22 @@
+imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7d/Hopvine_bar_Seattle.JPG"
+geo:
+  lat: 47.6233694
+  lng: -122.312828
+  label: "507 15th Avenue E, Seattle"
+  osmType: node
+  osmId: 1726737135
+name: hopvine-pub-open-mic
+friendlyname: Hopvine Pub — Wednesday Open Mic
+description: Casual singer/songwriter-focused open mic hosted by Eric Miller. All welcome.
+timezone: America/Los_Angeles
+location: 507 15th Avenue E, Seattle
+url: https://www.hopvinepub.com/
+tags:
+  - OpenMic
+  - Music
+  - Capitol Hill
+cost: free
+schedules:
+  - schedule: every Wednesday
+    start_time: 21:00
+    duration: PT2H
