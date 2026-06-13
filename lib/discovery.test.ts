@@ -62,7 +62,7 @@ describe("buildIndexJson", () => {
   it("produces a valid IndexDoc with relative hrefs", () => {
     const doc = buildIndexJson({
       generated: "2026-04-13T00:00:00.000Z",
-      site: "https://206.events",
+      site: "https://832.events",
     });
 
     // Schema validates.
@@ -89,7 +89,7 @@ describe("buildIndexJson", () => {
   it("round-trips through JSON without undefined", () => {
     const doc = buildIndexJson({
       generated: "2026-04-13T00:00:00.000Z",
-      site: "https://206.events",
+      site: "https://832.events",
     });
     const roundTripped = JSON.parse(JSON.stringify(doc));
     expect(roundTripped).toEqual(doc);

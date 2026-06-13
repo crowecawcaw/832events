@@ -1,6 +1,6 @@
-// Bidirectional sync between App206's navigation/filter state and the URL hash.
+// Bidirectional sync between App832's navigation/filter state and the URL hash.
 //
-// App206 owns the state (useState); this hook adopts those values + setters and:
+// App832 owns the state (useState); this hook adopts those values + setters and:
 //   1. Writes state -> hash on change (push for navigation so the back button
 //      works; replaceState for filter/search edits so keystrokes don't pollute
 //      history). The `query` write is debounced.
@@ -38,7 +38,7 @@ export function useUrlState({
   // setters (to apply inbound filter/scope values directly)
   setDateWindow, setEmphasis, setQuery, setCategory, setNeighborhood, setCostFilter,
   setHealthTab, setHealthSource,
-  // App206 handlers (clean inbound application of section/overlay changes)
+  // App832 handlers (clean inbound application of section/overlay changes)
   go, openChannel, openEvent, back,
   // derived data for cold-load resolution
   channelByIcsUrl, upcomingEvents, loading,
@@ -131,7 +131,7 @@ export function useUrlState({
       setHealthTab(t.healthTab)
       setHealthSource(t.healthSource)
 
-      // Section + overlays via App206 handlers (which clear/set cleanly).
+      // Section + overlays via App832 handlers (which clear/set cleanly).
       if (t.event) {
         const target = upcomingEvents.find((e) => eventKey(e) === t.event)
         if (target) openEvent(target)

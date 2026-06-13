@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
 import { installDataMocks } from './mock-routes.js'
 
-// High-value, copy-resilient smoke paths for the 206.events web UI. Data is
+// High-value, copy-resilient smoke paths for the 832.events web UI. Data is
 // fully mocked (see mock-routes.js); these exercise the real built bundle in a
 // real browser.
 

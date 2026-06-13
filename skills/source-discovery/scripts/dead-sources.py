@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
-"""206.events dead source checker.
+"""832.events dead source checker.
 
 Usage:
     dead-sources.py [URL]   — check build-errors.json for sources with 0 events or failures
 
-Defaults to https://206.events/build-errors.json
+Defaults to https://832.events/build-errors.json
 """
 
 import json
 import sys
 import urllib.request
 
-DEFAULT_URL = "https://206.events/build-errors.json"
+DEFAULT_URL = "https://832.events/build-errors.json"
 
 
 def main():

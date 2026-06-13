@@ -108,7 +108,7 @@ A global **"Saving to: &lt;list&gt;"** switcher (`SavingToSwitcher` in
 with more than one list, so it's always clear which list a Follow lands in and
 the target can be changed from anywhere. It shares the `.a-dd*` dropdown styling
 and calls the same `setActiveList`. The follow toast (`toggleFollow` in
-`App206.jsx`) names the destination list when there's more than one
+`App832.jsx`) names the destination list when there's more than one
 ("Added 'Neumos' to Date Night").
 
 ## Local UAT / demo mode (`?uat=1`)

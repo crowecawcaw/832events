@@ -6,7 +6,7 @@
 // GitHub "new issue" page.
 
 import { useState, useEffect } from 'react'
-import { useApp206 } from './context.js'
+import { useApp832 } from './context.js'
 import { Ico } from './icons.jsx'
 import cityConfig from '../../../city.config.ts'
 
@@ -25,7 +25,7 @@ const PLACEHOLDERS = {
 const GITHUB_NEW_ISSUE = `https://github.com/${cityConfig.site.repo}/issues/new`
 
 export function FeedbackModal() {
-  const app = useApp206()
+  const app = useApp832()
   const prefill = app.feedbackPrefill
   const open = !!prefill
 

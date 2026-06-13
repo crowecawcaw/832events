@@ -1,6 +1,6 @@
-# 206.events Geo Resolver
+# 832.events Geo Resolver
 
-Resolve missing geocode entries in the 206.events geo-cache.
+Resolve missing geocode entries in the 832.events geo-cache.
 
 ## Workflow
 
@@ -18,7 +18,7 @@ Note the current coverage % — this is your **baseline to beat**.
 python3 skills/geo-resolver/scripts/geo-cache.py analyze
 ```
 
-This fetches the published `https://206.events/geo-cache.json` (read-only) and prints a categorized breakdown of unresolvable entries:
+This fetches the published `https://832.events/geo-cache.json` (read-only) and prints a categorized breakdown of unresolvable entries:
 - Virtual/TBA (correct — no action needed)
 - Dirty keys (legacy — self-heal on a cold cache)
 - Truncated strings (legacy — self-heal on a cold cache)
@@ -93,7 +93,7 @@ When implementing a **logic change** to `lib/geocoder.ts` (new strategy, normali
 Check geo coverage from the PR preview:
 
 ```bash
-python3 skills/geo-resolver/scripts/geo-cache.py coverage "https://206.events/preview/<PR_NUMBER>/build-errors.json"
+python3 skills/geo-resolver/scripts/geo-cache.py coverage "https://832.events/preview/<PR_NUMBER>/build-errors.json"
 ```
 
 Compare against the live site baseline:
@@ -117,7 +117,7 @@ If the PR preview shows equal or lower geo coverage → **do not merge**, invest
 
 If you need to inspect a specific entry, fetch the published mirror:
 ```bash
-python3 -c "import json,urllib.request; d=json.load(urllib.request.urlopen('https://206.events/geo-cache.json')); print(d['entries'].get('the key you want'))"
+python3 -c "import json,urllib.request; d=json.load(urllib.request.urlopen('https://832.events/geo-cache.json')); print(d['entries'].get('the key you want'))"
 ```
 
 ## OSM ID reconciliation
@@ -134,7 +134,7 @@ without re-geocoding. See `docs/osm-ids.md` for the full shape.
 ### 1. Pull the current gap list
 
 ```bash
-curl -s https://206.events/build-errors.json | jq '.osmGaps'
+curl -s https://832.events/build-errors.json | jq '.osmGaps'
 ```
 
 Each entry has `source`, `name`, declared `lat`/`lng`, and `label` —
@@ -241,8 +241,8 @@ Examples of reverse-geocoding failures found in the audit:
 
 ## Key references
 
-- **Geo-cache (read-only mirror):** `https://206.events/geo-cache.json` (persisted in the GitHub Actions Cache; see `docs/github-native-caches.md`)
-- **Live errors:** `https://206.events/build-errors.json`
+- **Geo-cache (read-only mirror):** `https://832.events/geo-cache.json` (persisted in the GitHub Actions Cache; see `docs/github-native-caches.md`)
+- **Live errors:** `https://832.events/build-errors.json`
 - **Geocoder source:** `lib/geocoder.ts`
 - **OSM backfill scripts:** `scripts/backfill-osm-ids.ts`, `scripts/apply-osm-ids.ts`
 - **OSM field docs:** `docs/osm-ids.md`

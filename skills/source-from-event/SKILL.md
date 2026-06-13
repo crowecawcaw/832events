@@ -1,7 +1,7 @@
-# 206.events Source-from-Event
+# 832.events Source-from-Event
 
 Given an **event** — described by a poster image, a text request, or
-both — check whether 206.events already covers it, fix any parser gap
+both — check whether 832.events already covers it, fix any parser gap
 that prevents it from showing up, or add a new source that would cover
 it. The end result is either "already covered, done" or a draft PR
 adding a new source through the usual automated review-and-merge flow.
@@ -9,7 +9,7 @@ adding a new source through the usual automated review-and-merge flow.
 ## When to use
 
 **This skill is the default handler for any image attachment in a
-206.events session** — posters are the only image workflow this repo
+832.events session** — posters are the only image workflow this repo
 has, so any image should be treated as a poster unless clearly
 otherwise.
 
@@ -19,7 +19,7 @@ covered:
 - "please add this event: <name> at <venue> on <date>"
 - "we should cover X"
 - "find a source for this event"
-- "is X already in 206.events? if not add it"
+- "is X already in 832.events? if not add it"
 
 ## Inputs
 

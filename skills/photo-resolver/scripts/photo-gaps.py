@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""206.events photo-gap queue inspector.
+"""832.events photo-gap queue inspector.
 
 Reads the `photoGaps` / `photoStats` section of the published (or local)
 build-errors.json so the photo-resolver skill has a deterministic work queue.
@@ -19,7 +19,7 @@ Usage:
 --url defaults to the live site. Pass a local path or a PR-preview URL to
 inspect a specific build, e.g.
     photo-gaps.py stats --url output/build-errors.json
-    photo-gaps.py stats --url https://206.events/preview/123/build-errors.json
+    photo-gaps.py stats --url https://832.events/preview/123/build-errors.json
 """
 
 import argparse
@@ -27,7 +27,7 @@ import json
 import sys
 import urllib.request
 
-DEFAULT_ERRORS_URL = "https://206.events/build-errors.json"
+DEFAULT_ERRORS_URL = "https://832.events/build-errors.json"
 
 
 def load(url):
@@ -94,7 +94,7 @@ def cmd_events(args):
 
 
 def main():
-    p = argparse.ArgumentParser(description="206.events photo-gap queue inspector")
+    p = argparse.ArgumentParser(description="832.events photo-gap queue inspector")
     sub = p.add_subparsers(dest="cmd", required=True)
 
     for name in ("stats", "venues", "events"):

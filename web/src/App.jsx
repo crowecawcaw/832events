@@ -15,7 +15,7 @@ import { haversineKm } from './lib/haversine.js'
 import { deduplicateEvents } from './lib/event-dedup.js'
 import { eventKey } from './lib/eventKey.js'
 import { extractIcsImageUrl } from './lib/icsImage.js'
-import { App206 } from './redesign/App206.jsx'
+import { App832 } from './redesign/App832.jsx'
 import { upcomingIndexEvents, groupIndexEventsByDay } from './redesign/viewModels.js'
 
 const FUSE_THRESHOLD = 0.1
@@ -1638,7 +1638,7 @@ function App() {
   }
 
   return (
-    <App206
+    <App832
       calendars={calendars}
       eventsIndex={eventsIndex}
       venues={venues}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""206.events geo-cache operations.
+"""832.events geo-cache operations.
 
 Usage:
     geo-cache.py stats           — print geo coverage and error list from build-errors.json
@@ -7,7 +7,7 @@ Usage:
     geo-cache.py coverage URL    — print geo coverage from a build-errors.json URL
 
 The geo-cache lives in the GitHub Actions Cache (persisted per build) and
-is published read-only at https://206.events/geo-cache.json. There is no
+is published read-only at https://832.events/geo-cache.json. There is no
 S3 and no agent-writable store: fix a miss by adding the venue to
 KNOWN_VENUE_COORDS in lib/geocoder.ts (a code change, committed via PR).
 Stale unresolvable entries self-heal — a cold Actions cache re-geocodes
@@ -18,8 +18,8 @@ do not carry forward. See docs/github-native-caches.md.
 import json
 import sys
 
-DEFAULT_ERRORS_URL = "https://206.events/build-errors.json"
-DEFAULT_GEOCACHE_URL = "https://206.events/geo-cache.json"
+DEFAULT_ERRORS_URL = "https://832.events/build-errors.json"
+DEFAULT_GEOCACHE_URL = "https://832.events/geo-cache.json"
 
 
 def fetch_json(url):
@@ -61,7 +61,7 @@ def cmd_stats():
 def cmd_analyze():
     """Fetch the published geo-cache and categorize unresolvable entries.
 
-    Read-only inspection of https://206.events/geo-cache.json (the build
+    Read-only inspection of https://832.events/geo-cache.json (the build
     mirrors the GitHub Actions Cache copy into the published site). There is
     no purge step: stale unresolvable entries self-heal on a cold Actions
     cache, and named-venue misses are fixed in code via KNOWN_VENUE_COORDS.

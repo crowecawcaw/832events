@@ -1,6 +1,6 @@
 # Add-to-Calendar Button
 
-Every event row and the event detail view in the redesigned web UI (`App206`)
+Every event row and the event detail view in the redesigned web UI (`App832`)
 show a 📅 quick-add button. It performs **exactly one** action — there is no
 dropdown. What that action is depends on a user preference (the **mode**),
 defaulting to a platform guess.
@@ -26,7 +26,7 @@ downloadable `.ics`.
   Client-only — it is **not** synced to the server (unlike followed calendars /
   saved searches). Default when unset: `auto`.
 - State + setter live in `web/src/App.jsx` alongside the other localStorage
-  preferences, threaded into `App206` and exposed on the app context as
+  preferences, threaded into `App832` and exposed on the app context as
   `calendarAddMode` / `setCalendarAddMode`.
 - The picker UI is a segmented set of pills in the **You** tab
   (`YouView` in `web/src/redesign/views.jsx`). No login required.

@@ -1,6 +1,6 @@
 import { defineConfig, devices } from '@playwright/test'
 
-// Browser (E2E) test config for the 206.events web UI.
+// Browser (E2E) test config for the 832.events web UI.
 //
 // Tests serve the production bundle (`vite build` → ../output) via `vite
 // preview` and mock every runtime data fetch at the browser level (see

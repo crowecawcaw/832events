@@ -74,7 +74,7 @@ this consumer.
   `L.divIcon` — the bundled pin plus a small corner count badge (design `--pin`
   colour).
 - **Side panel** (`web/src/components/EventGroupPanel.jsx`): clicking a marker
-  opens a drawer styled to the App206 design system — a mono `N dates` eyebrow,
+  opens a drawer styled to the App832 design system — a mono `N dates` eyebrow,
   display-font title, source line, optional image, and a scrollable list of
   compact date cells (weekday + day-number + time) each linking to that
   instance's event page, with a sticky **month divider** (`July 2026`) inserted

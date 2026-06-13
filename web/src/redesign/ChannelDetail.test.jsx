@@ -1,7 +1,7 @@
 import React from 'react'
 import { describe, it, expect, vi } from 'vitest'
 import { render, screen, fireEvent } from '@testing-library/react'
-import { App206Context } from './context.js'
+import { App832Context } from './context.js'
 import { ChannelDetail } from './views.jsx'
 
 // A channel event row on the venue/channel detail page is parsed live from the
@@ -61,9 +61,9 @@ function makeModel(overrides = {}) {
 function renderChannel(overrides) {
   const { model, openEvent } = makeModel(overrides)
   render(
-    <App206Context.Provider value={model}>
+    <App832Context.Provider value={model}>
       <ChannelDetail icsUrl={ICS} />
-    </App206Context.Provider>
+    </App832Context.Provider>
   )
   return { openEvent }
 }

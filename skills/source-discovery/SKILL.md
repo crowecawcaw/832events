@@ -1,6 +1,6 @@
-# 206.events Source Discovery
+# 832.events Source Discovery
 
-Find and add new Seattle event sources to 206.events. Runs after the daily build report when there are no actionable errors to fix.
+Find and add new Seattle event sources to 832.events. Runs after the daily build report when there are no actionable errors to fix.
 
 ## When to run
 
@@ -133,7 +133,7 @@ To implement:
 1. **Cut a feature branch**: `scripts/new_feature_branch.sh`
 2. **Pre-implementation fetch validation** — Before writing a line of parser code, attempt a live fetch of the source URL:
    ```bash
-   curl -sI -A "Mozilla/5.0 (compatible; 206events/1.0)" "<source-url>"
+   curl -sI -A "Mozilla/5.0 (compatible; 832events/1.0)" "<source-url>"
    ```
    Then act based on the response:
 

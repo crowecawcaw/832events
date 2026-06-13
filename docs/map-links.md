@@ -2,7 +2,7 @@
 
 ## Why
 
-206.events already knows where almost everything is — venues carry a
+832.events already knows where almost everything is — venues carry a
 fixed `geo` (`lat`/`lng`, a human-readable `label`, and often a precise
 OpenStreetMap `osmType`/`osmId`), and every event in `events-index.json`
 carries resolved `lat`/`lng` plus a `location` string. None of that was

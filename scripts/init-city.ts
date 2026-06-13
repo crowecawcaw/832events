@@ -258,7 +258,7 @@ Google Calendar, Apple Calendar, Outlook, or any other calendar application.
 
 **${cfg.site.baseUrl}**
 
-Built from the [206.events city template](https://github.com/prestomation/206events)
+Built from the [832.events city template](https://github.com/prestomation/206events)
 — see \`docs/SETUP.md\` for the full setup walkthrough, \`docs/city-template.md\`
 for how this instance is configured, and \`AGENTS.md\` for the agent-driven
 maintenance workflow.
@@ -360,7 +360,7 @@ export async function buildActions(root: string, cfg: CityConfig): Promise<Strip
         rm(join(root, "outofband-report.json"), { force: true }));
 
     // 7. Discord notification workflow — reference-instance specific (hardcoded
-    // role mention, 206events defaults). The workflow is self-contained (its
+    // role mention, 832events defaults). The workflow is self-contained (its
     // workflow_run triggers live inside it), so deleting it breaks nothing.
     // Copies that want Discord restore it from upstream and set
     // DISCORD_WEBHOOK_CALENDAR (see docs/SETUP.md).
@@ -377,7 +377,7 @@ export async function buildActions(root: string, cfg: CityConfig): Promise<Strip
     add("rebrand web/src/sw.js", async () => {
         const path = join(root, "web", "src", "sw.js");
         const sw = await readFile(path, "utf8");
-        await writeFile(path, sw.replaceAll("206.events", cfg.site.name));
+        await writeFile(path, sw.replaceAll("832.events", cfg.site.name));
     });
     add("write README.md (generated for the new city)", () =>
         writeFile(join(root, "README.md"), renderReadme(cfg)));

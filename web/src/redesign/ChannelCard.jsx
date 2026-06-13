@@ -1,12 +1,12 @@
 // Channel (calendar/source) card: avatar, name, "N upcoming · hood", a Follow
 // pill, and a peek of the next two upcoming events.
 
-import { useApp206 } from './context.js'
+import { useApp832 } from './context.js'
 import { ChannelAvatar, CatDot, FollowPill } from './atoms.jsx'
 import cityConfig from '../../../city.config.ts'
 
 export function ChannelCard({ channel }) {
-  const app = useApp206()
+  const app = useApp832()
   const following = app.favoritesSet.has(channel.icsUrl)
   const sub = channel.distributed ? 'Citywide' : (channel.hood || cityConfig.city.name)
   return (

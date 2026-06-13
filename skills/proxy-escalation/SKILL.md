@@ -1,4 +1,4 @@
-# 206.events Proxy Escalation
+# 832.events Proxy Escalation
 
 Drive proxy-marked calendar sources up the fetch-proxy escalation ladder
 (`outofband → browserbase → disabled`) based on the automated
@@ -43,7 +43,7 @@ is **nothing to do** — report and stop.
 Fetch the live queue from the published report:
 
 ```bash
-curl -s https://206.events/build-errors.json | jq '.pendingProxyVerification'
+curl -s https://832.events/build-errors.json | jq '.pendingProxyVerification'
 ```
 
 Each entry looks like:

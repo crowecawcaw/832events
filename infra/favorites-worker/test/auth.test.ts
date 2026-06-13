@@ -13,7 +13,7 @@ function createMockKV() {
   }
 }
 
-const STAGING_ORIGIN = 'https://api-staging.206.events'
+const STAGING_ORIGIN = 'https://api-staging.832.events'
 const HANDOFF_SECRET = 'test-handoff-secret'
 
 const mockEnv = {
@@ -64,21 +64,21 @@ function setCookies(res: Response): string[] {
 
 describe('isAllowedReturnUrl', () => {
   it('accepts existing prod/github/localhost prefixes', () => {
-    expect(isAllowedReturnUrl('https://206.events/')).toBe(true)
+    expect(isAllowedReturnUrl('https://832.events/')).toBe(true)
     expect(isAllowedReturnUrl('https://prestomation.github.io/calendar-ripper/')).toBe(true)
     expect(isAllowedReturnUrl('http://localhost:5173/')).toBe(true)
   })
 
   it('accepts Pages preview subdomains for this project', () => {
-    expect(isAllowedReturnUrl('https://pr-7.206events.pages.dev/')).toBe(true)
-    expect(isAllowedReturnUrl('https://206events.pages.dev/preview')).toBe(true)
-    expect(isAllowedReturnUrl('https://abc123.206events.pages.dev/x')).toBe(true)
+    expect(isAllowedReturnUrl('https://pr-7.832events.pages.dev/')).toBe(true)
+    expect(isAllowedReturnUrl('https://832events.pages.dev/preview')).toBe(true)
+    expect(isAllowedReturnUrl('https://abc123.832events.pages.dev/x')).toBe(true)
   })
 
   it('rejects other pages.dev projects and non-https previews', () => {
     expect(isAllowedReturnUrl('https://evil.pages.dev/')).toBe(false)
-    expect(isAllowedReturnUrl('https://206events.pages.dev.evil.com/')).toBe(false)
-    expect(isAllowedReturnUrl('http://pr-7.206events.pages.dev/')).toBe(false)
+    expect(isAllowedReturnUrl('https://832events.pages.dev.evil.com/')).toBe(false)
+    expect(isAllowedReturnUrl('http://pr-7.832events.pages.dev/')).toBe(false)
     expect(isAllowedReturnUrl('not-a-url')).toBe(false)
   })
 })
@@ -86,12 +86,12 @@ describe('isAllowedReturnUrl', () => {
 describe('isAllowedHandoffOrigin', () => {
   it('accepts only the exact configured staging origin', () => {
     expect(isAllowedHandoffOrigin(STAGING_ORIGIN, { STAGING_ORIGIN })).toBe(true)
-    expect(isAllowedHandoffOrigin('https://api-staging.206.events/', { STAGING_ORIGIN })).toBe(true)
+    expect(isAllowedHandoffOrigin('https://api-staging.832.events/', { STAGING_ORIGIN })).toBe(true)
   })
 
   it('rejects other origins and non-https', () => {
     expect(isAllowedHandoffOrigin('https://evil.example.com', { STAGING_ORIGIN })).toBe(false)
-    expect(isAllowedHandoffOrigin('http://api-staging.206.events', { STAGING_ORIGIN })).toBe(false)
+    expect(isAllowedHandoffOrigin('http://api-staging.832.events', { STAGING_ORIGIN })).toBe(false)
     expect(isAllowedHandoffOrigin('not-a-url', { STAGING_ORIGIN })).toBe(false)
   })
 
@@ -222,7 +222,7 @@ describe('Auth endpoints', () => {
 
   it('GET /auth/callback with handoff bounces to the staging worker without a prod session cookie', async () => {
     stubGoogleFetch({ id: 'g-1', email: 'a@b.com', name: 'Ada', picture: 'https://img/x.png' })
-    const returnTo = 'https://pr-7.206events.pages.dev/'
+    const returnTo = 'https://pr-7.832events.pages.dev/'
     const res = await runCallback({ returnTo, handoff: STAGING_ORIGIN }, mockEnv)
 
     expect(res.status).toBe(302)
@@ -243,10 +243,10 @@ describe('Auth endpoints', () => {
 
   it('GET /auth/callback without handoff still sets the prod session cookie', async () => {
     stubGoogleFetch({ id: 'g-2', email: 'c@d.com', name: 'Bo', picture: 'https://img/y.png' })
-    const res = await runCallback({ returnTo: 'https://206.events/' }, mockEnv)
+    const res = await runCallback({ returnTo: 'https://832.events/' }, mockEnv)
 
     expect(res.status).toBe(302)
-    expect(res.headers.get('Location')).toBe('https://206.events/')
+    expect(res.headers.get('Location')).toBe('https://832.events/')
     const cookies = setCookies(res)
     expect(cookies.some(c => c.startsWith('session='))).toBe(true)
   })
@@ -254,10 +254,10 @@ describe('Auth endpoints', () => {
   it('GET /auth/callback ignores handoff when HANDOFF_SECRET is unset (inert in prod)', async () => {
     stubGoogleFetch({ id: 'g-3', email: 'e@f.com', name: 'Cy', picture: 'https://img/z.png' })
     const envNoSecret = { ...mockEnv, HANDOFF_SECRET: undefined }
-    const res = await runCallback({ returnTo: 'https://206.events/', handoff: STAGING_ORIGIN }, envNoSecret)
+    const res = await runCallback({ returnTo: 'https://832.events/', handoff: STAGING_ORIGIN }, envNoSecret)
 
     expect(res.status).toBe(302)
-    expect(res.headers.get('Location')).toBe('https://206.events/')
+    expect(res.headers.get('Location')).toBe('https://832.events/')
     const cookies = setCookies(res)
     expect(cookies.some(c => c.startsWith('session='))).toBe(true)
   })

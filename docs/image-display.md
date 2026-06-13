@@ -21,7 +21,7 @@ reads as an intentional treatment rather than empty gaps. This works for both
 photos (a brewery interior fills richly) and logos (a wordmark shows in full)
 with no per-source configuration.
 
-CSS lives under the `.app206` scope in `web/src/index.css`
+CSS lives under the `.app832` scope in `web/src/index.css`
 (`.a-banner`, `.a-banner-bg`, `.a-banner-fg`).
 
 ## Problem 2 — event images couldn't be read
@@ -32,7 +32,7 @@ the information (lineups, set times, fine print) and that detail was unreadable.
 
 ### Solution: click-to-zoom lightbox (`Lightbox` + `openLightbox`)
 
-A single `Lightbox` instance is mounted at the App206 root and opened from
+A single `Lightbox` instance is mounted at the App832 root and opened from
 anywhere via `app.openLightbox(src, alt)`. It shows the full image at natural
 size (`object-fit: contain`, capped to the viewport) on a dark backdrop, and is
 dismissed by clicking the backdrop, the close button, or pressing `Escape`. Body
@@ -45,7 +45,7 @@ Every image surface routes into it:
 | Venue/source banner (`ChannelDetail`) | `BannerImage` |
 | Event banner (`EventDetail`) | `BannerImage` |
 | Event row thumbnail (`ParsedEventRow`) | `EventThumb` (stays `cover` at 56px; click enlarges) |
-| Map popup photo (`EventsMap.renderPopupHtml`) | delegated click listener in `App206` on `.map-popup-image` |
+| Map popup photo (`EventsMap.renderPopupHtml`) | delegated click listener in `App832` on `.map-popup-image` |
 
 The map popup is hand-built DOM (outside React, to keep `react-dom/server` out
 of the client bundle), so its photo is wired to the lightbox with a single
@@ -53,7 +53,7 @@ delegated `click` listener on `document` rather than a per-popup React handler.
 
 ## State
 
-`App206` owns `lightbox` (`null` | `{ src, alt }`) with `openLightbox` /
+`App832` owns `lightbox` (`null` | `{ src, alt }`) with `openLightbox` /
 `closeLightbox`, exposed on the app model context. The components are pure leaf
 atoms in `atoms.jsx`; tests live in `web/src/redesign/imageViewer.test.jsx`.
 

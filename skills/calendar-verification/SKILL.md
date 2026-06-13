@@ -1,4 +1,4 @@
-# 206.events Calendar Verification
+# 832.events Calendar Verification
 
 Verify calendar sources that don't have natural error feedback — recurring events and sources flagged `expectEmpty` — and refresh their geo coordinates from OpenStreetMap when locations change. Auto-correct safe drift, flag risky changes, all through a PR.
 

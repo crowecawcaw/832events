@@ -23,12 +23,12 @@
   values (name, domain, timezone, map center/bounds, neighborhoods),
   configure the required GitHub secrets, and get a working
   agent-maintained event calendar site.
-- **This repo is the template.** 206.events remains the reference instance
+- **This repo is the template.** 832.events remains the reference instance
   living on `main`. There is no separate scaffold repo to keep in sync — the
   engine and the template are the same code, so engine improvements land in
   the template automatically.
 - Seattle behavior never changes during the refactor. Every migration PR
-  must produce byte-identical output for the 206.events configuration.
+  must produce byte-identical output for the 832.events configuration.
 
 ## Non-goals
 
@@ -131,8 +131,8 @@ Migrations, all behavior-neutral for the Seattle config:
 - **Shared**: `lib/config/tags.ts` `Neighborhoods` comes from the config
   (raw import — web-reachable module).
 - **Workflows**: Cloudflare Pages project name via
-  `${{ vars.CLOUDFLARE_PAGES_PROJECT || '206events' }}`; Discord workflow
-  site URL via `${{ vars.SITE_URL || 'https://206.events' }}`.
+  `${{ vars.CLOUDFLARE_PAGES_PROJECT || '832events' }}`; Discord workflow
+  site URL via `${{ vars.SITE_URL || 'https://832.events' }}`.
 - **Templates**: `lib/templates/llms.txt` tokenized
   (`{{SITE_NAME}}`, `{{SITE_URL}}`, `{{CITY_NAME}}`, `{{REPO}}`), replaced
   at copy time in `lib/calendar_ripper.ts`.
@@ -147,7 +147,7 @@ Migrations, all behavior-neutral for the Seattle config:
   parameterized) for new cities.
 - `web/src/sw.js` — copied raw into `output/`, so it cannot import the
   config. Its strings are a Phase 2 init-script rewrite target.
-- `web/src/redesign/App206.jsx` and the `app206`/`useApp206` names —
+- `web/src/redesign/App832.jsx` and the `app832`/`useApp832` names —
   internal identifiers with 9+ import sites; renaming is churn with no
   user-facing benefit. Optional cosmetic cleanup later.
 - `infra/favorites-worker/` and `infra/authenticated-proxy/` — see
@@ -202,7 +202,7 @@ The judgment layer on top. Orchestrates `init-city`, then:
 
 ### Genericizing skills
 
-Skill prose and scripts reference `https://206.events` and "Seattle" in ~78
+Skill prose and scripts reference `https://832.events` and "Seattle" in ~78
 places across 18 files. The pattern to migrate them is already established
 by `skills/event-lookup` (`$EVENT_LOOKUP_SITE` env var with a default):
 
@@ -220,7 +220,7 @@ by `skills/event-lookup` (`$EVENT_LOOKUP_SITE` env var with a default):
   template → run city-setup → secrets/vars → Cloudflare Pages → optional
   services → routines.
 - **README split** — template-facing README ("build this for your city")
-  with the 206.events instance intro moved to the deployed site/docs.
+  with the 832.events instance intro moved to the deployed site/docs.
 - **AGENTS.md** — mark the Amazon Q review steps (`/q review`) as optional:
   template users likely don't have Q installed; the PR flow degrades to
   ordinary human review.

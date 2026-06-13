@@ -1,6 +1,6 @@
 # Proxy Verification & Auto-Escalation
 
-How 206.events lets a source that *probably* needs a proxy be added without
+How 832.events lets a source that *probably* needs a proxy be added without
 failing `main`, verifies it out-of-band, and climbs the proxy escalation ladder
 automatically.
 
@@ -92,7 +92,7 @@ write races. Each run it:
      (reachable = produced future events, or produced calendars with no errors;
      a block surfaces as an error with no future events).
    - **`browserbase` sources** — from the published
-     `https://206.events/build-errors.json` (browserbase is fetched live in the
+     `https://832.events/build-errors.json` (browserbase is fetched live in the
      main CI build, not here): a name in `externalCalendarFailures` is a
      failure; a name *present* in `eventCounts` is a success (failed fetches are
      never added to `eventCounts`, so presence means reachable — this counts a

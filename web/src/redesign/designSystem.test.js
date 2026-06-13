@@ -1,4 +1,4 @@
-// Design-system static analysis for the redesign (App206) UI.
+// Design-system static analysis for the redesign (App832) UI.
 //
 // These tests fail the build when JSX drifts away from the token system in
 // index.css. The class of bug they catch is real and has happened twice:

@@ -1,4 +1,4 @@
-# 206.events — Outstanding Work
+# 832.events — Outstanding Work
 
 Operational follow-ups that don't fit `ideas.md` (which is for new content/features).
 Move items to `ideas.md` if they grow into proper feature designs.

@@ -8,7 +8,7 @@ the site publishes without scraping HTML or guessing filenames. Plus an
 `llms.txt` at the root with human-readable usage instructions.
 
 This is **not** a real HTTP API. It is a flat set of JSON files served from
-the existing site (Cloudflare Pages, `https://206.events/`), linked together
+the existing site (Cloudflare Pages, `https://832.events/`), linked together
 by URL — a poor man's HATEOAS.
 
 ## Files we will publish
@@ -24,7 +24,7 @@ naturally belong.
 ```json
 {
   "generated": "2026-04-13T17:00:00.000Z",
-  "site": "https://206.events/",
+  "site": "https://832.events/",
   "links": {
     "self":           { "href": "index.json" },
     "llms":           { "href": "llms.txt",            "type": "text/plain" },
@@ -43,8 +43,8 @@ Notes:
   don't duplicate it, we just point at it from `index.json`.
 - `events-index.json` already exists; we link it too.
 - Every link is **relative** so the file works on production
-  (`206.events`) and on Cloudflare Pages branch previews
-  (`<branch>.206events.pages.dev`) without rewriting.
+  (`832.events`) and on Cloudflare Pages branch previews
+  (`<branch>.832events.pages.dev`) without rewriting.
 
 ### `tags.json`
 
@@ -127,9 +127,9 @@ No counts, no templating.
 Sketch:
 
 ```
-# 206.events
+# 832.events
 
-> 206.events is a build-time aggregator that pulls events from
+> 832.events is a build-time aggregator that pulls events from
 > Seattle-area venues, museums, and community sources and republishes
 > them as ICS calendars, RSS feeds, and JSON.
 
@@ -156,7 +156,7 @@ feeds for each tag live at /tag-<slug>.ics.
 ## Freshness and caching
 
 The build runs daily. The site is hosted on Cloudflare Pages at
-https://206.events/ and serves with permissive CORS, so browser apps can
+https://832.events/ and serves with permissive CORS, so browser apps can
 fetch these files cross-origin without a proxy.
 
 ## Licensing & attribution

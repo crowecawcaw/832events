@@ -3,7 +3,7 @@
 
 import { useState, useMemo, useRef, useEffect, useLayoutEffect } from 'react'
 import { Ico } from './icons.jsx'
-import { useApp206 } from './context.js'
+import { useApp832 } from './context.js'
 import { ChannelAvatar, CatDot, DayList, ActiveFilters, LocationMapLink, BannerImage, EventThumb } from './atoms.jsx'
 import { ChannelCard } from './ChannelCard.jsx'
 import { FilterDropdown } from './shell.jsx'
@@ -44,7 +44,7 @@ function useNeighborhoodOptions(app) {
 
 /* ------------------------------------------------------------- Discover --- */
 export function DiscoverView() {
-  const app = useApp206()
+  const app = useApp832()
   const categoryGroups = useCategoryGroups(app)
   const neighborhoodOptions = useNeighborhoodOptions(app)
   const flatCategoryOptions = useMemo(() => categoryGroups.flatMap((g) => g.options), [categoryGroups])
@@ -254,7 +254,7 @@ function CategoryChips({ options, value, onSelect }) {
 
 // Filter channels by the active category + neighborhood, then group by hood.
 function CalendarsMode() {
-  const app = useApp206()
+  const app = useApp832()
   const groups = useMemo(() => {
     const channels = filterDiscoverChannels(app.channels, {
       category: app.category, neighborhood: app.neighborhood, query: app.query,
@@ -292,7 +292,7 @@ function CalendarsMode() {
 }
 
 function EventsMode() {
-  const app = useApp206()
+  const app = useApp832()
   const groups = useMemo(() => {
     const evs = filterDiscoverEvents(app.upcomingEvents, {
       category: app.category, neighborhood: app.neighborhood, cost: app.costFilter, query: app.query,
@@ -308,7 +308,7 @@ function EventsMode() {
 
 /* ------------------------------------------------------------ Following --- */
 export function FollowingView() {
-  const app = useApp206()
+  const app = useApp832()
   // The feed is already date-scoped; additionally narrow by the active
   // category / neighborhood / search filters so they apply here too.
   const { groups, costHiddenCount } = useMemo(() => {
@@ -404,7 +404,7 @@ export function FollowingView() {
 
 /* ------------------------------------------------------------------ You --- */
 export function YouView() {
-  const app = useApp206()
+  const app = useApp832()
   const [addSearch, setAddSearch] = useState(false)
   const followed = app.channels.filter((c) => app.favoritesSet.has(c.icsUrl))
   const sourceCount = followed.length + app.geoFilters.length + app.searchFilters.length
@@ -561,7 +561,7 @@ function SectionTitle({ kicker, title, count }) {
 // than one list, plus create / rename / delete controls. Follow/add actions
 // throughout the app target whichever list is active here.
 function ListsManager() {
-  const app = useApp206()
+  const app = useApp832()
   const [creating, setCreating] = useState(false)
   const [renaming, setRenaming] = useState(false)
   const [confirmDelete, setConfirmDelete] = useState(false)
@@ -659,7 +659,7 @@ function AddSearchForm({ onSave, onCancel }) {
 
 /* -------------------------------------------------------- ChannelDetail --- */
 export function ChannelDetail({ icsUrl }) {
-  const app = useApp206()
+  const app = useApp832()
   const indexByKey = useChannelIndexByKey(icsUrl)
   const channel = app.channelByIcsUrl.get(icsUrl)
   if (!channel) return null
@@ -812,7 +812,7 @@ function parsedEventCostKey(parsedEvent) {
 // Do not reuse this key across sources (where same-named events at the same
 // time genuinely differ) without adding the icsUrl to the key.
 function useChannelIndexByKey(icsUrl) {
-  const app = useApp206()
+  const app = useApp832()
   return useMemo(() => {
     const map = new Map()
     for (const e of app.eventsByIcsUrl.get(icsUrl) || []) {
@@ -832,7 +832,7 @@ function useChannelIndexByKey(icsUrl) {
 // stopPropagation on their own clicks; the description is wrapped to stop a click
 // on a link inside it from also triggering the row's open-event nav.
 function ParsedEventRow({ event, distributed, indexEvent }) {
-  const app = useApp206()
+  const app = useApp832()
   const cost = indexEvent?.cost
   const eventYear = event.startDate.getFullYear()
   const datePart = event.startDate.toLocaleDateString('en-US', eventYear !== new Date().getFullYear()
@@ -864,7 +864,7 @@ function ParsedEventRow({ event, distributed, indexEvent }) {
 
 /* ---------------------------------------------------------- EventDetail --- */
 export function EventDetail({ event }) {
-  const app = useApp206()
+  const app = useApp832()
   if (!event) return null
   const channel = app.channelByIcsUrl.get(event.icsUrl)
   const row = rowFromIndexEvent(event)

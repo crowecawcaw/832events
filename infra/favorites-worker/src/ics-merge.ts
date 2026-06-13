@@ -49,8 +49,8 @@ export function mergeIcsFiles(icsContents: string[], extraVEventBlocks: string[]
   const lines = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//206.events//Favorites//EN',
-    'X-WR-CALNAME:206.events — Favorites',
+    'PRODID:-//832.events//Favorites//EN',
+    'X-WR-CALNAME:832.events — Favorites',
     ...eventBlocks,
     'END:VCALENDAR',
   ]

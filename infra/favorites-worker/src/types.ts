@@ -19,7 +19,7 @@ export interface Env {
   // keeps the handoff path fully inert: the prod callback issues a handoff ticket
   // only when STAGING_ORIGIN is configured AND HANDOFF_SECRET is present.
   // STAGING_ORIGIN is the exact, allowlisted origin the ticket may be sent to
-  // (e.g. "https://api-staging.206.events"). HANDOFF_SECRET signs/verifies the
+  // (e.g. "https://api-staging.832.events"). HANDOFF_SECRET signs/verifies the
   // ticket and is shared by prod and staging, separate from JWT_SECRET.
   STAGING_ORIGIN?: string
   HANDOFF_SECRET?: string

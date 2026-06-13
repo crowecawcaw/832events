@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import { Ico } from './icons.jsx'
-import { useApp206 } from './context.js'
+import { useApp832 } from './context.js'
 import { Brand } from './atoms.jsx'
 import { EventsMap } from '../components/EventsMap.jsx'
 import { eventKey } from '../lib/eventKey.js'
@@ -26,7 +26,7 @@ const DATE_WINDOW_COMMIT_MS = 180
 // app-wide `query` (which drives filtering), so typing never rebuilds the index
 // per keystroke.
 export function TopBar() {
-  const app = useApp206()
+  const app = useApp832()
   const items = NAV_ITEMS.filter((it) => it.id !== 'you')
   const [text, setText] = useState(app.query)
   const [focused, setFocused] = useState(false)
@@ -122,7 +122,7 @@ export function TopBar() {
 // FilterDropdown (not FilterDropdown itself, which has "All …"/null semantics —
 // a list is always selected).
 export function SavingToSwitcher() {
-  const app = useApp206()
+  const app = useApp832()
   const [open, setOpen] = useState(false)
   const ref = useRef(null)
   useEffect(() => {
@@ -211,11 +211,11 @@ export function FilterDropdown({ label, icon, value, options, onSelect, groups }
 }
 
 export function RailNav() {
-  const app = useApp206()
+  const app = useApp832()
   const items = NAV_ITEMS.filter((it) => !it.mobileOnly)
   return (
     <div className="a-railinner">
-      <div className="logo">206</div>
+      <div className="logo">832</div>
       {items.map((it) => (
         <button key={it.id} className={`a-railitem ${app.section === it.id ? 'on' : ''}`} onClick={() => app.go(it.id)}>
           {it.icon}<span>{it.label}</span>
@@ -226,7 +226,7 @@ export function RailNav() {
 }
 
 export function BottomNav() {
-  const app = useApp206()
+  const app = useApp832()
   return (
     <nav className="a-bottom">
       {NAV_ITEMS.map((it) => (
@@ -241,7 +241,7 @@ export function BottomNav() {
 // position is the stop index; the value is the global `dateWindow` (a day count
 // or 'all'). Label shows both the relative phrase and the resolved end date.
 export function DateWindowSlider({ compact = false }) {
-  const app = useApp206()
+  const app = useApp832()
   const committedIdx = Math.max(0, DATE_WINDOW_STOPS.indexOf(app.dateWindow))
   // The thumb tracks LOCAL state, so dragging is never blocked by the heavy
   // re-filter / marker rebuild — it updates instantly on every input event.
@@ -295,7 +295,7 @@ export function DateWindowSlider({ compact = false }) {
 }
 
 export function FilterPopover() {
-  const app = useApp206()
+  const app = useApp832()
   return (
     <>
       <div onClick={app.toggleFilter} style={{ position: 'absolute', inset: 0, zIndex: 70 }} />
@@ -358,7 +358,7 @@ function MapResizeHandle({ panelRef, setMapWidth, mapWidth }) {
 }
 
 export function MapPanel({ mobile = false }) {
-  const app = useApp206()
+  const app = useApp832()
   const panelRef = useRef(null)
   // Only the persistent desktop panel drives the shared map ref / expand state;
   // the mobile view is a separate instance and must not clobber the ref.
@@ -469,7 +469,7 @@ export function MapPanel({ mobile = false }) {
 }
 
 export function Toast() {
-  const app = useApp206()
+  const app = useApp832()
   if (!app.toast) return null
   return (
     <div className="a-toast"><span style={{ width: 16, height: 16 }}>{Ico.check}</span>{app.toast}</div>

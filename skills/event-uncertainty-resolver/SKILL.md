@@ -1,4 +1,4 @@
-# 206.events Event Uncertainty Resolver
+# 832.events Event Uncertainty Resolver
 
 Resolve outstanding `UncertaintyError` entries in the
 `event-uncertainty-cache.json` by investigating the upstream source page
@@ -20,7 +20,7 @@ python3 skills/event-uncertainty-resolver/scripts/uncertainty-cache.py stats
 ```
 
 Prints outstanding / resolved / unresolvable counts and the work-queue
-size from `https://206.events/build-errors.json`.
+size from `https://832.events/build-errors.json`.
 
 ### 2. List the work queue
 
@@ -108,7 +108,7 @@ See the [flag reference](#prune-flag-reference) below for details.
 gh workflow run "Generate Calendars and Publish to GitHub Pages" --ref main
 ```
 
-After the build runs, fetch `https://206.events/build-errors.json` and
+After the build runs, fetch `https://832.events/build-errors.json` and
 verify the resolved entries no longer appear in `uncertainEvents`.
 
 ### 7. Report results
@@ -187,7 +187,7 @@ to this skill. Out-of-band invocation (e.g. user types
 ## Key references
 
 - **Cache file (source of truth):** committed `event-uncertainty-cache.json` at the repo root
-- **Live build errors:** `https://206.events/build-errors.json`
+- **Live build errors:** `https://832.events/build-errors.json`
 - **Design docs:** `docs/event-uncertainty.md`, `docs/github-native-caches.md`
 - **Cache module:** `lib/event-uncertainty-cache.ts`
 - **Merge function:** `lib/uncertainty-merge.ts`

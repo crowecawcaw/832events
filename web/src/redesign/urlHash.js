@@ -1,12 +1,12 @@
-// Pure, DOM-free codec for the App206 deep-link hash.
+// Pure, DOM-free codec for the App832 deep-link hash.
 //
 // State <-> hash translation lives here so it can be unit-tested without React
-// or a browser. The functions operate on plain string tokens — the App206 glue
+// or a browser. The functions operate on plain string tokens — the App832 glue
 // is responsible for turning an open event object into its `eventKey`
 // (`summary|date`) token and back. URLSearchParams handles percent-encoding of
 // special characters (`|`, `&`, `#`, spaces, unicode) on both set and get.
 //
-// Hash schema (read precedence mirrors App206's content cascade: event > channel > section):
+// Hash schema (read precedence mirrors App832's content cascade: event > channel > section):
 //   section   -> section      (omitted when 'discover')
 //   event     -> openEventObj  (eventKey token; presence wins over channel)
 //   channel   -> openCh        (icsUrl; ignored on read if event present)
@@ -45,8 +45,8 @@ function parseDateWindow(raw) {
   return Number.isInteger(n) && n >= 0 ? n : DEFAULTS.dateWindow
 }
 
-// The only sections App206 renders. An unknown `section` from an untrusted /
-// stale URL falls back to the default rather than dropping into App206's
+// The only sections App832 renders. An unknown `section` from an untrusted /
+// stale URL falls back to the default rather than dropping into App832's
 // else-branch (YouView). React's JSX escaping already prevents injection; this
 // is defense-in-depth plus sane fallback behavior.
 const VALID_SECTIONS = new Set(['discover', 'following', 'you', 'map', 'health'])

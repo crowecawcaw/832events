@@ -2,7 +2,7 @@
 
 Venue and event entries in the public data files carry an OpenStreetMap
 feature identifier when one is available, so downstream consumers can
-join 206.events data to OSM (Overpass, tile servers, address/amenity
+join 832.events data to OSM (Overpass, tile servers, address/amenity
 lookups) without re-geocoding.
 
 ## Shape

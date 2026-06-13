@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
-"""206.events build health check.
+"""832.events build health check.
 
 Usage:
     build-health.py [URL]   — fetch build-errors.json and print a health summary
 
-Defaults to https://206.events/build-errors.json
+Defaults to https://832.events/build-errors.json
 """
 
 import json
 import sys
 import urllib.request
 
-DEFAULT_URL = "https://206.events/build-errors.json"
+DEFAULT_URL = "https://832.events/build-errors.json"
 
 
 def main():

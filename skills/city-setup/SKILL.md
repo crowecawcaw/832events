@@ -6,8 +6,8 @@ mechanical work is done by `npm run init-city`; this skill wraps it with the
 judgment calls (geography, neighborhoods, first sources) and walks the
 operator through the external services.
 
-**Do not run this on the reference instance (206.events / Seattle).** If
-`city.config.ts` still says `name: "206.events"` and the user hasn't asked to
+**Do not run this on the reference instance (832.events / Seattle).** If
+`city.config.ts` still says `name: "832.events"` and the user hasn't asked to
 re-city the repo, you're in the wrong place.
 
 ## Steps

@@ -39,7 +39,7 @@ const cityConfig = {
         productionUrl: "https://832.events",
         // GitHub owner/repo of this copy — llms.txt source links and the
         // web feedback fallback link.
-        repo: "crowecawcaw/713events",
+        repo: "crowecawcaw/832events",
         // Short mark shown in the boot splash and loading screen.
         bootLogoText: "832",
     },

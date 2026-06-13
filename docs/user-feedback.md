@@ -1,8 +1,8 @@
 # In-App User Feedback
 
-Lets anyone on 206.events send feedback, report a problem with a source, or
+Lets anyone on 832.events send feedback, report a problem with a source, or
 suggest a new source from inside the app. Each submission is filed as a
-**GitHub issue** on `prestomation/206events` — the same surface where bug
+**GitHub issue** on `crowecawcaw/832events` — the same surface where bug
 reports and source requests already live (see the "Filing an Issue" section of
 the README).
 
@@ -38,7 +38,7 @@ falls back to opening GitHub's "new issue" page in a new tab.
   "context": {                               // optional
     "sourceName": "Stoup Brewing",
     "icsUrl": "stoup_brewing-all-events.ics",
-    "pageUrl": "https://206.events/#..."
+    "pageUrl": "https://832.events/#..."
   },
   "website": ""                              // honeypot — must be empty
 }
@@ -108,7 +108,7 @@ time, so UX cost is low; it's free.
 - **Config:** add `TURNSTILE_SECRET?: string` to `Env` in `types.ts`;
   `wrangler secret put TURNSTILE_SECRET`; set `VITE_TURNSTILE_SITE_KEY` at web
   build time. Create the Turnstile widget in the Cloudflare dashboard for the
-  `206.events` domain.
+  `832.events` domain.
 - **Tests:** worker test stubs `fetch` for siteverify (success + failure →
   200/403); web test mocks the widget script and asserts the token is sent.
 - **Tradeoff:** one third-party script + one verification round-trip per submit.
@@ -135,7 +135,7 @@ counter that caps **total** submissions per hour.
 #### 3. Cloudflare-origin trust for `CF-Connecting-IP`
 
 The rate-limit key trusts `CF-Connecting-IP`. Today that's safe: the worker is
-bound **only** to the `api.206.events` custom-domain route (`wrangler.toml`
+bound **only** to the `api.832.events` custom-domain route (`wrangler.toml`
 `routes`), so every request arrives through Cloudflare, which sets that header.
 The risk only materializes if the worker ever gains a second, non-Cloudflare
 entry point (e.g. a `*.workers.dev` route) where a client could spoof the header
@@ -164,7 +164,7 @@ AGENTS.md — plumb it through every reporting surface in the same PR. A simple
 The endpoint returns `503` until both are configured:
 
 1. **GitHub token** — create a **fine-grained PAT** scoped to *Issues:
-   read & write* on `prestomation/206events` only, then:
+   read & write* on `crowecawcaw/832events` only, then:
    ```sh
    cd infra/favorites-worker
    wrangler secret put FEEDBACK_GITHUB_ISSUES_TOKEN
@@ -192,7 +192,7 @@ The worker redeploys automatically on push to `main` touching
 | Env bindings (`FEEDBACK_GITHUB_ISSUES_TOKEN`, `GITHUB_REPO`, `RATE_LIMIT`) | `infra/favorites-worker/src/types.ts`, `wrangler.toml` |
 | Worker tests | `infra/favorites-worker/test/feedback.test.ts` |
 | Modal UI | `web/src/redesign/FeedbackModal.jsx` |
-| App-context wiring (`openFeedback` / `closeFeedback`) | `web/src/redesign/App206.jsx` |
+| App-context wiring (`openFeedback` / `closeFeedback`) | `web/src/redesign/App832.jsx` |
 | Entry-point buttons | `web/src/redesign/views.jsx` (YouView, ChannelDetail) |
 | Modal styles | `web/src/index.css` (`.a-modal*`, `.a-hp`) |
 | Web tests | `web/src/redesign/FeedbackModal.test.jsx` |

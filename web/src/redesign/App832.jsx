@@ -1,10 +1,10 @@
-// App206 — the redesigned UI. Receives the raw app model (state + handlers)
+// App832 — the redesigned UI. Receives the raw app model (state + handlers)
 // from App.jsx, derives the view-models, owns local navigation/overlay state,
 // and renders the responsive shell (rail · content · map / bottom nav).
 
 import { useState, useMemo, useRef, useCallback, useEffect, useLayoutEffect, useDeferredValue } from 'react'
 import Fuse from 'fuse.js'
-import { App206Context } from './context.js'
+import { App832Context } from './context.js'
 import { TopBar, RailNav, BottomNav, MapPanel, FilterPopover, Toast } from './shell.jsx'
 import { Lightbox } from './atoms.jsx'
 import { FeedbackModal } from './FeedbackModal.jsx'
@@ -24,7 +24,7 @@ const FUSE_THRESHOLD = 0.1
 const FUSE_IGNORE_LOCATION = true
 
 // Desktop map-column resize bounds. RAIL_W mirrors the 84px rail column in the
-// .app206 grid; MIN_CONTENT_W is the floor below which the content column gets
+// .app832 grid; MIN_CONTENT_W is the floor below which the content column gets
 // uncomfortably narrow. MAP_WIDTH_KEY persists the chosen width.
 const MAP_WIDTH_KEY = 'map-panel-width'
 // First-run flag (same `calendar-ripper-*` convention as the favorites keys in
@@ -34,7 +34,7 @@ const MAP_WIDTH_MIN = 320
 const RAIL_W = 84
 const MIN_CONTENT_W = 420
 
-export function App206(props) {
+export function App832(props) {
   const {
     calendars, eventsIndex, venues, loading, buildErrors,
     favoritesSet, toggleFavorite,
@@ -392,8 +392,8 @@ export function App206(props) {
   else content = <YouView />
 
   return (
-    <App206Context.Provider value={model}>
-      <div className="mk app206" data-nav="adaptive"
+    <App832Context.Provider value={model}>
+      <div className="mk app832" data-nav="adaptive"
         style={mapWidth ? { '--a-map-w': `${mapWidth}px` } : undefined}>
         <div className="a-rail"><RailNav /></div>
         <div className="a-top"><TopBar /></div>
@@ -409,6 +409,6 @@ export function App206(props) {
         <WelcomeModal />
         <HelpModal />
       </div>
-    </App206Context.Provider>
+    </App832Context.Provider>
   )
 }

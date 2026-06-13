@@ -7,7 +7,7 @@ Google Calendar, Apple Calendar, Outlook, or any other calendar application.
 
 **https://832.events/**
 
-Built from the [206.events city template](https://github.com/prestomation/206events)
+Built from the [832.events city template](https://github.com/prestomation/206events)
 — see `docs/SETUP.md` for the full setup walkthrough, `docs/city-template.md`
 for how this instance is configured, and `AGENTS.md` for the agent-driven
 maintenance workflow.
@@ -27,4 +27,4 @@ maintenance workflow.
 ## Request a new calendar
 
 Want a Houston-area event source added? Open an issue at
-https://github.com/crowecawcaw/713events/issues with the website URL.
+https://github.com/crowecawcaw/832events/issues with the website URL.

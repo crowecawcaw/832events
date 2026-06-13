@@ -1,4 +1,4 @@
-# 206.events Event Lookup
+# 832.events Event Lookup
 
 Search the **published production event data** for an event matching a
 description. Returns top fuzzy candidates and a per-dimension score
@@ -7,11 +7,11 @@ actually a match.
 
 ## When to use
 
-- "Is event X already in 206.events?"
+- "Is event X already in 832.events?"
 - "Look up this event / poster / show / performance."
 - The `source-from-event` skill calls this internally before deciding
   whether to add a new source.
-- Whenever you need to know what 206.events currently covers, by event
+- Whenever you need to know what 832.events currently covers, by event
   or by venue. **Searching `sources/` in the repo is the wrong answer**
   — many sources are aggregators (`seattle-showlists`, `19hz`,
   `ticketmaster`) that surface events for venues they don't appear to
@@ -25,7 +25,7 @@ actually a match.
 bash skills/event-lookup/scripts/fetch-data.sh
 ```
 
-Downloads three files to `/tmp/206events/` (refreshed if older than an
+Downloads three files to `/tmp/832events/` (refreshed if older than an
 hour):
 
 - `events-index.json` — every published event (~10k entries)
@@ -129,7 +129,7 @@ python3 skills/event-lookup/scripts/search-events.py --venue "Neumos"
 - Stdlib-only (no `pip install`). Uses `difflib.SequenceMatcher` for
   fuzzy ratios.
 - The cache lives in `$EVENT_LOOKUP_CACHE_DIR` (default
-  `/tmp/206events`). Override to keep multiple agents from stomping on
+  `/tmp/832events`). Override to keep multiple agents from stomping on
   each other.
-- The source site is `$EVENT_LOOKUP_SITE` (default `https://206.events`)
+- The source site is `$EVENT_LOOKUP_SITE` (default `https://832.events`)
   for testing against a PR preview.

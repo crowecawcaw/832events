@@ -15,7 +15,7 @@ import sys
 import urllib.parse
 import urllib.request
 
-USER_AGENT = "206events-calendar-verification/1.0 (https://206.events)"
+USER_AGENT = "832events-calendar-verification/1.0 (https://832.events)"
 
 
 def geocode(query: str) -> tuple[float, float] | None:

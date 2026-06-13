@@ -1,20 +1,20 @@
 import React, { useState, useCallback } from 'react'
 import { describe, it, expect } from 'vitest'
 import { render, screen, fireEvent } from '@testing-library/react'
-import { App206Context } from './context.js'
+import { App832Context } from './context.js'
 import { BannerImage, EventThumb, Lightbox } from './atoms.jsx'
 
-// Minimal host that wires the lightbox handlers the way App206 does, so we can
+// Minimal host that wires the lightbox handlers the way App832 does, so we can
 // exercise BannerImage/EventThumb → openLightbox → Lightbox end to end.
 function Host({ children }) {
   const [lightbox, setLightbox] = useState(null)
   const openLightbox = useCallback((src, alt) => { if (src) setLightbox({ src, alt: alt || '' }) }, [])
   const closeLightbox = useCallback(() => setLightbox(null), [])
   return (
-    <App206Context.Provider value={{ lightbox, openLightbox, closeLightbox }}>
+    <App832Context.Provider value={{ lightbox, openLightbox, closeLightbox }}>
       {children}
       <Lightbox />
-    </App206Context.Provider>
+    </App832Context.Provider>
   )
 }
 

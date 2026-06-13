@@ -130,7 +130,7 @@ function buildIssueBody(args: {
   lines.push(message.replace(/```/g, "'''"))
   lines.push('```')
   lines.push('')
-  lines.push('_Submitted via the in-app feedback form on 206.events._')
+  lines.push('_Submitted via the in-app feedback form on 832.events._')
   return lines.join('\n')
 }
 
@@ -210,7 +210,7 @@ export async function handlePostFeedback(c: Context<{ Bindings: Env }>) {
         Authorization: `Bearer ${c.env.FEEDBACK_GITHUB_ISSUES_TOKEN}`,
         Accept: 'application/vnd.github+json',
         'Content-Type': 'application/json',
-        'User-Agent': '206events-feedback',
+        'User-Agent': '832events-feedback',
         'X-GitHub-Api-Version': '2022-11-28',
       },
       body: JSON.stringify({ title, body: issueBody, labels: meta.labels }),

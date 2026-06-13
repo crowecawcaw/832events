@@ -1,8 +1,8 @@
-# Deep Linking (App206 URL state)
+# Deep Linking (App832 URL state)
 
-The redesigned web UI (`web/src/redesign/App206.jsx`) keeps its navigation and
+The redesigned web UI (`web/src/redesign/App832.jsx`) keeps its navigation and
 filter state in the URL hash so that views are shareable, bookmarkable, and the
-browser back/forward buttons walk the user's in-app path. Before this, `App206`
+browser back/forward buttons walk the user's in-app path. Before this, `App832`
 owned all of that state locally and never touched the URL — only the legacy
 (now-removed) `App.jsx` hash code did, and it drove dead state.
 
@@ -13,16 +13,16 @@ owned all of that state locally and never touched the URL — only the legacy
   unit-tested without React or a browser (`urlHash.test.js`). Uses
   `URLSearchParams`, which percent-encodes special characters (`|`, `&`, `#`,
   spaces, unicode) on both write and read.
-- **`web/src/redesign/useUrlState.js`** — the hook `App206` calls once. It adopts
-  `App206`'s existing `useState` values + setters + nav handlers and does the
+- **`web/src/redesign/useUrlState.js`** — the hook `App832` calls once. It adopts
+  `App832`'s existing `useState` values + setters + nav handlers and does the
   bidirectional sync. It introduces **no new state**.
-- **`web/src/redesign/App206.jsx`** — seeds the synchronously-resolvable state
+- **`web/src/redesign/App832.jsx`** — seeds the synchronously-resolvable state
   (`section`, `dateScope`, `emphasis`, `query`, `category`, `neighborhood`) from
   the hash via lazy `useState` initializers, then calls `useUrlState`.
 
 ## Hash schema
 
-`URLSearchParams` over the hash. Read precedence mirrors `App206`'s content
+`URLSearchParams` over the hash. Read precedence mirrors `App832`'s content
 cascade (**event > channel > section**). All-default state serializes to an empty
 hash (a clean pathname, no dangling `#`).
 
@@ -48,7 +48,7 @@ doesn't pollute history). The `query` write is debounced. The very first run is
 skipped so a cold-load deep link survives until the resolver opens its overlay.
 
 **Inbound (hash → state).** `hashchange`/`popstate` listeners deserialize and
-apply via the `App206` handlers (`go`/`openChannel`/`openEvent`/`back`) and the
+apply via the `App832` handlers (`go`/`openChannel`/`openEvent`/`back`) and the
 filter setters. A `popstateJustFiredRef` flag skips the trailing `hashchange` that
 browsers fire after `popstate` for history navigation.
 

@@ -28,10 +28,10 @@ function createEnv(overrides: Record<string, unknown> = {}) {
     JWT_SECRET,
     GOOGLE_CLIENT_ID: 'test',
     GOOGLE_CLIENT_SECRET: 'test',
-    GITHUB_PAGES_BASE_URL: 'https://206.events',
-    SITE_URL: 'https://206.events',
+    GITHUB_PAGES_BASE_URL: 'https://832.events',
+    SITE_URL: 'https://832.events',
     FEEDBACK_GITHUB_ISSUES_TOKEN: 'gh-test-token',
-    GITHUB_REPO: 'prestomation/206events',
+    GITHUB_REPO: 'crowecawcaw/832events',
     ...overrides,
   }
 }
@@ -42,7 +42,7 @@ function mockGitHub(ok = true) {
   const fn = vi.fn(async (url: string | URL | Request, init?: RequestInit) => {
     const payload = init?.body ? JSON.parse(init.body as string) : null
     calls.push({ url: String(url), init: init || {}, payload })
-    return new Response(JSON.stringify({ html_url: 'https://github.com/prestomation/206events/issues/1' }), {
+    return new Response(JSON.stringify({ html_url: 'https://github.com/crowecawcaw/832events/issues/1' }), {
       status: ok ? 201 : 500,
     })
   })
@@ -72,7 +72,7 @@ describe('Feedback API', () => {
     expect(res.status).toBe(200)
     expect(await res.json()).toEqual({ ok: true })
     expect(calls).toHaveLength(1)
-    expect(calls[0].url).toBe('https://api.github.com/repos/prestomation/206events/issues')
+    expect(calls[0].url).toBe('https://api.github.com/repos/crowecawcaw/832events/issues')
     expect(calls[0].init.headers).toMatchObject({ Authorization: 'Bearer gh-test-token' })
     expect(calls[0].payload.title).toContain('[Feedback]')
     expect(calls[0].payload.labels).toEqual(['feedback'])
@@ -85,7 +85,7 @@ describe('Feedback API', () => {
     const res = await post({
       type: 'bug',
       message: 'Events are missing here',
-      context: { sourceName: 'Stoup Brewing', icsUrl: 'stoup.ics', pageUrl: 'https://206.events/#x' },
+      context: { sourceName: 'Stoup Brewing', icsUrl: 'stoup.ics', pageUrl: 'https://832.events/#x' },
     })
     expect(res.status).toBe(200)
     expect(calls[0].payload.title).toContain('[Bug]')

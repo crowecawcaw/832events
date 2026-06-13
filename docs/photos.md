@@ -1,6 +1,6 @@
-# Photos in the 206.events data model
+# Photos in the 832.events data model
 
-206.events carries an optional **photo** for both **events** and **venues**.
+832.events carries an optional **photo** for both **events** and **venues**.
 The contract is deliberately narrow:
 
 > **Links only.** We store and emit image **URLs** (`imageUrl`), never image

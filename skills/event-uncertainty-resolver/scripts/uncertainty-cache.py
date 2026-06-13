@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""206.events event-uncertainty-cache operations.
+"""832.events event-uncertainty-cache operations.
 
 Usage:
     uncertainty-cache.py stats
@@ -45,7 +45,7 @@ import sys
 import urllib.request
 from datetime import date, timedelta
 
-DEFAULT_ERRORS_URL = "https://206.events/build-errors.json"
+DEFAULT_ERRORS_URL = "https://832.events/build-errors.json"
 CACHE_FILENAME = "event-uncertainty-cache.json"
 
 
