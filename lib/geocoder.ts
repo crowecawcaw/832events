@@ -353,6 +353,10 @@ export function lookupUniversityBuilding(location: string): GeoCoords | null {
  * Keys are lowercased venue names.
  */
 const KNOWN_VENUE_COORDS: Record<string, GeoCoords> = {
+  // Waugh Drive Bridge bat colony in Buffalo Bayou Park (Buffalo Bayou
+  // Partnership feed). Nominatim returns no result for the feed's
+  // "Waugh Drive Bat Bridge, 1" location string.
+  "waugh drive bat bridge, 1": { lat: 29.7573, lng: -95.3936 },
 };
 
 /**
