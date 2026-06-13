@@ -66,8 +66,8 @@ feedRoutes.get('/:filename', async (c) => {
     const emptyIcs = [
       'BEGIN:VCALENDAR',
       'VERSION:2.0',
-      'PRODID:-//206.events//Favorites//EN',
-      'X-WR-CALNAME:206.events — Favorites',
+      'PRODID:-//832.events//Favorites//EN',
+      'X-WR-CALNAME:832.events — Favorites',
       'END:VCALENDAR',
     ].join('\r\n')
 

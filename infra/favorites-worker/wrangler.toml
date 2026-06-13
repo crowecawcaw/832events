@@ -3,14 +3,14 @@ main = "src/index.ts"
 compatibility_date = "2026-02-01"
 
 routes = [
-  { pattern = "api.206.events", custom_domain = true }
+  { pattern = "api.832.events", custom_domain = true }
 ]
 
 [vars]
-GITHUB_PAGES_BASE_URL = "https://206.events"
-SITE_URL = "https://206.events"
+GITHUB_PAGES_BASE_URL = "https://832.events"
+SITE_URL = "https://832.events"
 # Repo that in-app feedback is filed against (Issues created by the worker).
-GITHUB_REPO = "prestomation/206events"
+GITHUB_REPO = "crowecawcaw/832events"
 
 [[kv_namespaces]]
 binding = "USERS"

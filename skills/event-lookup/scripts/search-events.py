@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Fuzzy event search against 206.events production data.
+"""Fuzzy event search against 832.events production data.
 
 Reads cached events-index.json / manifest.json / venues.json from
-$EVENT_LOOKUP_CACHE_DIR (default /tmp/206events), runs a deliberately
+$EVENT_LOOKUP_CACHE_DIR (default /tmp/832events), runs a deliberately
 wide fuzzy search across title queries, venue/org queries, optional
 date, and optional URL hostname, then prints structured JSON with the
 top candidates and a per-dimension score breakdown.
@@ -38,7 +38,7 @@ from dataclasses import dataclass, field
 from typing import Iterable
 from urllib.parse import urlparse
 
-CACHE_DIR = os.environ.get("EVENT_LOOKUP_CACHE_DIR", "/tmp/206events")
+CACHE_DIR = os.environ.get("EVENT_LOOKUP_CACHE_DIR", "/tmp/832events")
 
 # Boilerplate words that show up on posters or in event titles but carry
 # almost no matching signal. Stripped before tokenisation; they still
@@ -288,7 +288,7 @@ def best_venue_score(
 def parse_event_date(raw: str) -> dt.date | None:
     if not raw:
         return None
-    # events-index dates look like "2026-06-12T20:00-07:00[America/Los_Angeles]"
+    # events-index dates look like "2026-06-12T20:00-05:00[America/Chicago]"
     m = re.match(r"^(\d{4})-(\d{2})-(\d{2})", raw)
     if not m:
         return None

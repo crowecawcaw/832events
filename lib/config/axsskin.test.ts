@@ -7,7 +7,7 @@ import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 const ZONE = ZoneId.of('America/Los_Angeles');
-const LOCATION = "Test Venue, 123 Main St, Seattle, WA 98101";
+const LOCATION = "Test Venue, 123 Main St, Houston, TX 98101";
 
 function makeEventItem(html: string): any {
     const root = parse(html);

@@ -1,13 +1,13 @@
 import React from 'react'
 import { describe, it, expect, vi } from 'vitest'
 import { render, screen, fireEvent } from '@testing-library/react'
-import { App206Context } from './context.js'
+import { App832Context } from './context.js'
 import { WelcomeModal, HelpModal, isCleanColdLoad } from './Onboarding.jsx'
 import cityConfig from '../../../city.config.ts'
 
 // Render a modal inside a context provider with an overridable model.
 function renderWithModel(ui, model = {}) {
-  return render(<App206Context.Provider value={model}>{ui}</App206Context.Provider>)
+  return render(<App832Context.Provider value={model}>{ui}</App832Context.Provider>)
 }
 
 describe('isCleanColdLoad', () => {
@@ -35,9 +35,9 @@ describe('WelcomeModal', () => {
     const { rerender } = renderWithModel(<WelcomeModal />, { showWelcome: false })
     expect(screen.queryByRole('dialog')).toBeNull()
     rerender(
-      <App206Context.Provider value={{ showWelcome: true, dismissWelcome: () => {}, openHelp: () => {} }}>
+      <App832Context.Provider value={{ showWelcome: true, dismissWelcome: () => {}, openHelp: () => {} }}>
         <WelcomeModal />
-      </App206Context.Provider>
+      </App832Context.Provider>
     )
     expect(screen.getByRole('dialog')).toBeTruthy()
     expect(screen.getByText(`Every ${cityConfig.city.name} event, one place`)).toBeTruthy()

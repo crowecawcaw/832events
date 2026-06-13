@@ -24,7 +24,7 @@ const MAX_PAGES = 10;
  *
  * Each calendar entry in ripper.yaml must include a `config` block with:
  *   - venueId: the AXS venue ID (e.g. 133070)
- *   - venueSlug: the URL slug for the venue page (e.g. "5th-avenue-theatre-seattle-tickets")
+ *   - venueSlug: the URL slug for the venue page (e.g. "713-music-hall-houston-tickets")
  *   - venueName: display name used as location fallback
  *   - venueAddress: full address used as location fallback
  */

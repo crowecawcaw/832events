@@ -1,4 +1,4 @@
-# 206.events — Outstanding Work
+# 832.events — Outstanding Work
 
 Operational follow-ups that don't fit `ideas.md` (which is for new content/features).
 Move items to `ideas.md` if they grow into proper feature designs.
@@ -20,7 +20,7 @@ anywhere. Add a "View on OpenStreetMap" link to:
 Small UX win, proves the downstream contract works end-to-end.
 
 ### Backfill the hardcoded fallback tables in `lib/geocoder.ts`
-`KNOWN_VENUE_COORDS`, `SPL_BRANCH_COORDS`, and `UW_BUILDING_COORDS` are
+`KNOWN_VENUE_COORDS`, `LIBRARY_BRANCH_COORDS`, and `UNIVERSITY_BUILDING_COORDS` are
 hand-curated lat/lng tables — none of them carry OSM ids today, so any
 event resolved through these tables ships without `osmType`/`osmId`. Two
 options:

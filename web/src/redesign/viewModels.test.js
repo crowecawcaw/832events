@@ -74,7 +74,7 @@ describe('channelFromCalendar geo wiring', () => {
   const cal = { icsUrl: 'neumos-events.ics', name: 'neumos', fullName: 'Neumos', tags: ['Music', HOOD] }
 
   it('carries the venue geo and is not distributed when a venue is provided', () => {
-    const venue = { geo: { lat: 47.6143, lng: -122.3197, label: 'Neumos, Seattle', osmType: 'way', osmId: 42 } }
+    const venue = { geo: { lat: 47.6143, lng: -122.3197, label: 'Neumos, Houston', osmType: 'way', osmId: 42 } }
     const ch = channelFromCalendar(cal, null, { venue })
     expect(ch.geo).toEqual(venue.geo)
     expect(ch.distributed).toBe(false)
@@ -104,7 +104,7 @@ describe('channelFromCalendar geo wiring', () => {
 
   it('never falls back to a raw geo.label when there is no neighborhood tag', () => {
     const untagged = { icsUrl: 'x.ics', name: 'x', fullName: 'X', tags: ['Music'] }
-    const venue = { geo: { lat: 47.6, lng: -122.3, label: '2100 6th Ave, Seattle' } }
+    const venue = { geo: { lat: 47.6, lng: -122.3, label: '2100 6th Ave, Houston' } }
     const ch = channelFromCalendar(untagged, null, { venue })
     expect(ch.hood).toBeNull()
   })

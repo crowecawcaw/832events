@@ -121,7 +121,7 @@ describe('applyUncertaintyResolutions', () => {
             version: 1,
             entries: {
                 'events12:sample-event-2026-02-14': {
-                    fields: { duration: 5400, location: '123 Main St, Seattle' },
+                    fields: { duration: 5400, location: '123 Main St, Houston' },
                     resolvedAt: '2026-05-17',
                     source: 'manual',
                 },
@@ -131,7 +131,7 @@ describe('applyUncertaintyResolutions', () => {
         const result = applyUncertaintyResolutions([event], [err], cache, 'events12');
 
         expect(result.events[0].duration.seconds()).toBe(5400);
-        expect(result.events[0].location).toBe('123 Main St, Seattle');
+        expect(result.events[0].location).toBe('123 Main St, Houston');
         expect(result.stats.resolved).toBe(1);
         expect(result.errors).toEqual([]);
     });

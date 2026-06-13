@@ -3,7 +3,7 @@
 // explain-only — they never write to the user's favorites / search / geo state.
 
 import { Ico } from './icons.jsx'
-import { useApp206 } from './context.js'
+import { useApp832 } from './context.js'
 import { Modal } from './atoms.jsx'
 import cityConfig from '../../../city.config.ts'
 
@@ -24,7 +24,7 @@ const STEPS = [
 ]
 
 export function WelcomeModal() {
-  const app = useApp206()
+  const app = useApp832()
   if (!app.showWelcome) return null
   const footer = (
     <>
@@ -60,7 +60,7 @@ export function WelcomeModal() {
 }
 
 export function HelpModal() {
-  const app = useApp206()
+  const app = useApp832()
   if (!app.helpOpen) return null
   return (
     <Modal title={`How ${cityConfig.site.name} works`} onClose={app.closeHelp} labelledBy="a-help-title">

@@ -55,7 +55,7 @@ function mockFetch(url) {
 
 const clickNav = (label) => fireEvent.click(screen.getAllByText(label)[0].closest('button'))
 
-describe('App206 redesign', () => {
+describe('App832 redesign', () => {
   beforeEach(() => {
     localStorage.clear()
     window.location.hash = ''
@@ -251,7 +251,7 @@ describe('App206 redesign', () => {
   })
 
   describe('desktop map resize', () => {
-    const getApp = (container) => container.querySelector('.app206')
+    const getApp = (container) => container.querySelector('.app832')
 
     it('renders a draggable divider on the desktop map panel', async () => {
       const { container } = render(<App />)

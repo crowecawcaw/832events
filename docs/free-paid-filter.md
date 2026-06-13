@@ -46,7 +46,7 @@ cost?: { min: number; max?: number }  // min 0 = free
   ("price TBA"). Without it, those events would collapse into fully
   unknown.
 - Dollars as a decimal number ($12.50 exists). **USD assumed** —
-  Seattle-only site, no currency field in v1.
+  Houston-only site, no currency field in v1.
 
 Source-level YAML default: add an optional `cost:` field to the ripper
 config, per-calendar config, external calendar YAML, and recurring

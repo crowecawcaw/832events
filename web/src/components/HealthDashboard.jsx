@@ -22,7 +22,7 @@ function statusDot(status) {
 //
 // The active tab and drilled-into source are *controlled* via props so they can
 // be deep-linked in the URL hash (and so the browser back button closes the
-// drawer instead of leaving the dashboard). App206 owns the state; this
+// drawer instead of leaving the dashboard). App832 owns the state; this
 // component renders it and reports changes through onTabChange / onSelectSource.
 export function HealthDashboard({
   buildErrors,

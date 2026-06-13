@@ -3,7 +3,7 @@ import { describe, it, expect } from 'vitest'
 import { render, screen, fireEvent, within } from '@testing-library/react'
 import { HealthDashboard } from './HealthDashboard.jsx'
 
-// HealthDashboard is controlled (tab + drilled-into source live in App206 so
+// HealthDashboard is controlled (tab + drilled-into source live in App832 so
 // they can be deep-linked). This harness mirrors that wiring: switching tabs
 // clears the open drawer, selecting a source opens it.
 function Harness({ buildErrors }) {

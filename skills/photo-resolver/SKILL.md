@@ -1,9 +1,9 @@
 ---
 name: photo-resolver
-description: Backfill missing event and venue photos in 206.events. Reads the photoGaps work queue from build-errors.json and, in bounded batches, fills venue photos via source-YAML PRs and event photos via the event-uncertainty-cache (imageUrl), or marks them unresolvable when no photo exists.
+description: Backfill missing event and venue photos in 832.events. Reads the photoGaps work queue from build-errors.json and, in bounded batches, fills venue photos via source-YAML PRs and event photos via the event-uncertainty-cache (imageUrl), or marks them unresolvable when no photo exists.
 ---
 
-# 206.events Photo Resolver
+# 832.events Photo Resolver
 
 Backfill photos for events and venues that don't have one. The data model
 stores **image URLs only** (never image bytes), in the `imageUrl` field.
@@ -35,7 +35,7 @@ python3 skills/photo-resolver/scripts/photo-gaps.py events --limit 25
 ```
 
 (Pass `--url output/build-errors.json` to inspect a local build, or
-`--url https://206.events/preview/<PR>/build-errors.json` for a PR preview.)
+`--url https://832.events/preview/<PR>/build-errors.json` for a PR preview.)
 
 ### 2. Process a bounded batch
 

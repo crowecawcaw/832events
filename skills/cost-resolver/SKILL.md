@@ -1,9 +1,9 @@
 ---
 name: cost-resolver
-description: Backfill missing event costs in 206.events. Reads the costGaps work queue from build-errors.json and, in bounded batches, fills source-wide free venues via YAML `cost:` PRs and per-event prices via the event-uncertainty-cache (--cost-* flags), or marks them unresolvable when pricing is genuinely not published.
+description: Backfill missing event costs in 832.events. Reads the costGaps work queue from build-errors.json and, in bounded batches, fills source-wide free venues via YAML `cost:` PRs and per-event prices via the event-uncertainty-cache (--cost-* flags), or marks them unresolvable when pricing is genuinely not published.
 ---
 
-# 206.events Cost Resolver
+# 832.events Cost Resolver
 
 Backfill admission costs for events that don't have one. The data model is
 `cost: { min, max? } | { paid: true }` — USD **face value, excluding fees**;
@@ -44,7 +44,7 @@ code, YAML annotations, and every resolution you write:
 Fetch the build health report and note the coverage — your **baseline to beat**:
 
 ```bash
-curl -s https://206.events/build-errors.json | python3 -c "
+curl -s https://832.events/build-errors.json | python3 -c "
 import json,sys
 d = json.load(sys.stdin)
 s = d.get('costStats', {})
@@ -57,7 +57,7 @@ List the gaps, grouped by source (sources with many gaps are YAML-default or
 ripper-extraction candidates; scattered one-offs are cache resolutions):
 
 ```bash
-curl -s https://206.events/build-errors.json | python3 -c "
+curl -s https://832.events/build-errors.json | python3 -c "
 import json,sys,collections
 d = json.load(sys.stdin)
 by = collections.Counter(g['source'] for g in d.get('costGaps', []))
@@ -66,7 +66,7 @@ for src, n in by.most_common(25): print(f'{n:5}  {src}')
 ```
 
 (Use `output/build-errors.json` for a local build, or
-`https://206.events/preview/<PR>/build-errors.json` for a PR preview.)
+`https://832.events/preview/<PR>/build-errors.json` for a PR preview.)
 
 ### 2. Process a bounded batch
 

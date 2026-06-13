@@ -4,7 +4,7 @@ import { eventKey } from '../lib/eventKey.js'
 import cityConfig from '../../../city.config.ts'
 
 // Reference coordinates derived from the configured clamp bounds so the
-// suite passes for any city the template is configured for. For the Seattle
+// suite passes for any city the template is configured for. For the Houston
 // config these correspond to: CENTER ≈ downtown/Eastside, IN_NORTH ≈
 // Shoreline, IN_SOUTH ≈ Federal Way, and the OUT_* points to the Gorge,
 // Everett, and Tacoma.

@@ -81,7 +81,7 @@ Users can now create geo filters that filter their personal ICS feed to only sho
 - **Nominatim** (free, OSM-based): `https://nominatim.openstreetmap.org/search`
   - No API key required
   - Rate limit: 1 req/sec (same as backend geocoder)
-  - Seattle bounding box for relevance: `viewbox=-122.6,47.3,-121.9,47.8`
+  - Houston bounding box for relevance: `viewbox=-122.6,47.3,-121.9,47.8`
 - Or **Photon** (Komoot's geocoder): `https://photon.komoot.io/api/` — faster, no strict rate limit
 - No npm packages required; fetch is enough
 
@@ -107,7 +107,7 @@ Users can now create geo filters that filter their personal ICS feed to only sho
 
 **How it looks and works:**
 1. A small embedded map in the geo filters section (or modal)
-2. Map shows Seattle metro area, centered on downtown
+2. Map shows Houston metro area, centered on downtown
 3. Click to drop a pin (or long-press on mobile)
 4. Draggable circle overlay shows the radius
 5. Radius slider (or circle drag handles) to adjust
@@ -116,7 +116,7 @@ Users can now create geo filters that filter their personal ICS feed to only sho
 **Visual mockup (ASCII):**
 ```
 ┌──────────────────────────────────────────────┐
-│  [Search: Capitol Hill_____________] [📍 Me] │
+│  [Search: Montrose_________________] [📍 Me] │
 │  ┌────────────────────────────────────────┐  │
 │  │                                        │  │
 │  │           ┌───────────┐               │  │
@@ -164,7 +164,7 @@ Users can now create geo filters that filter their personal ICS feed to only sho
 
 **Rationale:**
 1. **Matches existing UI density.** The app's favorites and search filters sections are text-based with simple inputs. A full map widget would feel out of place and bloat the bundle.
-2. **Covers the main use cases.** Most users want: (a) "show me events near where I am now" or (b) "show me events near Capitol Hill / my office / etc."
+2. **Covers the main use cases.** Most users want: (a) "show me events near where I am now" or (b) "show me events near Montrose / my office / etc."
 3. **No new dependencies for Option 1.** Browser geolocation is free.
 4. **Photon geocoder is fast and free.** For Option 2, Photon's autocomplete is snappier than Nominatim and has no strict rate limit.
 5. **Map can be a future enhancement.** If users ask for it, we can add a small preview map that shows the pin after setting a filter, without making the map interactive for input.
@@ -198,7 +198,7 @@ Geo filters UI lives in the **Favorites view** (`tag=__favorites__`), in a new s
 
 1. User clicks `🔍 Search address` or types directly in a search input
 2. Debounced autocomplete (300ms) shows dropdown of Photon results
-3. Results show: "1234 Main St, Seattle, WA" style, max 5 results
+3. Results show: "1234 Main St, Houston, TX" style, max 5 results
 4. User clicks a result
 5. Same inline form as Flow A (radius slider, label input)
 6. On save: chip appears
@@ -355,7 +355,7 @@ Current favorites/search-filters store to localStorage when not logged in. Shoul
 
 ### 6. Privacy: show exact coordinates?
 - Option A: Show "Current location" and never reveal lat/lng
-- Option B: Show approximate location: "Near Capitol Hill" based on reverse geocoding
+- Option B: Show approximate location: "Near Montrose" based on reverse geocoding
 - Option C: Show raw coords (some users want this for debugging)
 - **Recommendation:** Show label if set, else reverse-geocode to neighborhood name, else "Near [rounded lat/lng]"
 

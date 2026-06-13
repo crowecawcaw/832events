@@ -33,8 +33,8 @@ describe("tagSlug", () => {
 
     const cases = [
       "Music",
-      "Capitol Hill",
-      "West Seattle",
+      "Midtown",
+      "West Houston",
       "FarmersMarket",
       "QueenAnne",
       "Pike Place",
@@ -46,7 +46,7 @@ describe("tagSlug", () => {
   });
 
   it("lowercases and replaces spaces", () => {
-    expect(tagSlug("Capitol Hill")).toBe("capitol-hill");
+    expect(tagSlug("Midtown")).toBe("midtown");
   });
 
   it("handles punctuation", () => {
@@ -62,7 +62,7 @@ describe("buildIndexJson", () => {
   it("produces a valid IndexDoc with relative hrefs", () => {
     const doc = buildIndexJson({
       generated: "2026-04-13T00:00:00.000Z",
-      site: "https://206.events",
+      site: "https://832.events",
     });
 
     // Schema validates.
@@ -89,7 +89,7 @@ describe("buildIndexJson", () => {
   it("round-trips through JSON without undefined", () => {
     const doc = buildIndexJson({
       generated: "2026-04-13T00:00:00.000Z",
-      site: "https://206.events",
+      site: "https://832.events",
     });
     const roundTripped = JSON.parse(JSON.stringify(doc));
     expect(roundTripped).toEqual(doc);
@@ -101,7 +101,7 @@ describe("buildIndexJson", () => {
 // ---------------------------------------------------------------------------
 
 // The category assertion depends on the configured neighborhood list, so the
-// fixture uses the first configured neighborhood — "Capitol Hill" on the
+// fixture uses the first configured neighborhood — "Midtown" on the
 // reference instance, whatever the template copy configured otherwise.
 const HOOD = cityConfig.neighborhoods[0];
 
@@ -206,9 +206,9 @@ describe("buildTagsJson", () => {
 // buildVenuesJson
 // ---------------------------------------------------------------------------
 
-const SEATTLE_GEO = { lat: 47.6062, lng: -122.3321, label: "Seattle" };
-const BALLARD_GEO = { lat: 47.6675, lng: -122.3843, label: "Ballard" };
-const CAP_HILL_GEO = { lat: 47.6205, lng: -122.3212, label: "Capitol Hill" };
+const HOUSTON_GEO = { lat: 29.7604, lng: -95.3698, label: "Houston" };
+const MONTROSE_GEO = { lat: 47.6675, lng: -122.3843, label: "Montrose" };
+const MIDTOWN_GEO = { lat: 47.6205, lng: -122.3212, label: "Midtown" };
 
 /**
  * Minimal RipperConfig builder for tests. Fills in the fields the
@@ -304,8 +304,8 @@ describe("buildVenuesJson", () => {
       friendlyname: "Stoup Brewing",
       description: "Stoup Brewing",
       friendlyLink: "https://stoup.com",
-      tags: ["Beer", "Ballard"],
-      geo: BALLARD_GEO,
+      tags: ["Beer", "Montrose"],
+      geo: MONTROSE_GEO,
       calendars: [
         { name: "events", friendlyname: "Stoup Events" },
       ],
@@ -325,24 +325,24 @@ describe("buildVenuesJson", () => {
     expect(venue.name).toBe("stoup");
     expect(venue.friendlyName).toBe("Stoup Brewing");
     expect(venue.kind).toBe("ripper");
-    expect(venue.geo).toEqual(BALLARD_GEO);
+    expect(venue.geo).toEqual(MONTROSE_GEO);
     expect(venue.calendars).toHaveLength(1);
     expect(venue.calendars[0].links.ics.href).toBe("stoup-events.ics");
     expect(venue.calendars[0].links.rss.href).toBe("stoup-events.rss");
-    expect(venue.tags).toEqual(["Beer", "Ballard"]);
+    expect(venue.tags).toEqual(["Beer", "Montrose"]);
   });
 
   it("unions calendar-level tags into a single ripper-geo venue (so neighborhood tags on branches aren't dropped)", () => {
     const ripper = makeRipper({
       name: "sam",
-      friendlyname: "Seattle Art Museum",
-      description: "Seattle Art Museum",
+      friendlyname: "Houston Art Museum",
+      description: "Houston Art Museum",
       friendlyLink: "https://site.org",
       tags: ["Arts", "Museums"],
-      geo: BALLARD_GEO,
+      geo: MONTROSE_GEO,
       calendars: [
         { name: "downtown", friendlyname: "SAM Downtown", tags: ["Downtown"] },
-        { name: "asian", friendlyname: "SAM Asian Art", tags: ["Capitol Hill"] },
+        { name: "asian", friendlyname: "SAM Asian Art", tags: ["Midtown"] },
       ],
     });
 
@@ -360,14 +360,14 @@ describe("buildVenuesJson", () => {
       "Arts",
       "Museums",
       "Downtown",
-      "Capitol Hill",
+      "Midtown",
     ]);
   });
 
   it("stamps a Google Maps web link on every venue (query = label)", () => {
     const ripper = makeRipper({
       name: "stoup",
-      geo: BALLARD_GEO,
+      geo: MONTROSE_GEO,
       calendars: [{ name: "events", friendlyname: "Stoup Events" }],
     });
     const doc = buildVenuesJson({
@@ -379,9 +379,9 @@ describe("buildVenuesJson", () => {
     });
     const venue = doc.venues[0];
     expect(venue.map.web).toBe(
-      "https://www.google.com/maps/search/?api=1&query=Ballard",
+      "https://www.google.com/maps/search/?api=1&query=Montrose",
     );
-    // No OSM identity on BALLARD_GEO → no osm link.
+    // No OSM identity on MONTROSE_GEO → no osm link.
     expect(venue.map.osm).toBeUndefined();
     expect(() => venuesDocSchema.parse(doc)).not.toThrow();
   });
@@ -410,21 +410,21 @@ describe("buildVenuesJson", () => {
   it("emits one venue per calendar-with-geo for multi-branch rippers (SPL pattern)", () => {
     const ripper = makeRipper({
       name: "spl",
-      friendlyname: "Seattle Public Library",
+      friendlyname: "Houston Public Library",
       geo: null,
       tags: ["Education"],
       calendars: [
         {
           name: "central",
           friendlyname: "SPL - Central",
-          geo: SEATTLE_GEO,
+          geo: HOUSTON_GEO,
           tags: ["Downtown"],
         },
         {
           name: "ballard",
-          friendlyname: "SPL - Ballard",
-          geo: BALLARD_GEO,
-          tags: ["Ballard"],
+          friendlyname: "SPL - Montrose",
+          geo: MONTROSE_GEO,
+          tags: ["Montrose"],
         },
         {
           name: "unknown",
@@ -451,7 +451,7 @@ describe("buildVenuesJson", () => {
     expect(names).toEqual(["spl-ballard", "spl-central"]);
 
     const central = doc.venues.find(v => v.name === "spl-central")!;
-    expect(central.geo).toEqual(SEATTLE_GEO);
+    expect(central.geo).toEqual(HOUSTON_GEO);
     // Ripper tags are merged with calendar tags.
     expect(central.tags.sort()).toEqual(["Downtown", "Education"]);
     expect(central.calendars[0].links.ics.href).toBe("spl-central.ics");
@@ -460,7 +460,7 @@ describe("buildVenuesJson", () => {
   it("skips ripper venues whose calendars have no future events", () => {
     const ripper = makeRipper({
       name: "dead-venue",
-      geo: SEATTLE_GEO,
+      geo: HOUSTON_GEO,
       calendars: [{ name: "events", friendlyname: "Dead Events" }],
     });
 
@@ -479,7 +479,7 @@ describe("buildVenuesJson", () => {
     const ripper = makeRipper({
       name: "disabled",
       disabled: true,
-      geo: SEATTLE_GEO,
+      geo: HOUSTON_GEO,
       calendars: [{ name: "events", friendlyname: "Events" }],
     });
 
@@ -498,8 +498,8 @@ describe("buildVenuesJson", () => {
     const ext = makeExternal({
       name: "some-brewery",
       friendlyname: "Some Brewery",
-      geo: CAP_HILL_GEO,
-      tags: ["Beer", "Capitol Hill"],
+      geo: MIDTOWN_GEO,
+      tags: ["Beer", "Midtown"],
       infoUrl: "https://some-brewery.com",
       description: "Some Brewery",
     });
@@ -529,13 +529,13 @@ describe("buildVenuesJson", () => {
     const disabled = makeExternal({
       name: "off",
       friendlyname: "Off",
-      geo: SEATTLE_GEO,
+      geo: HOUSTON_GEO,
       disabled: true,
     });
     const dead = makeExternal({
       name: "dead",
       friendlyname: "Dead",
-      geo: SEATTLE_GEO,
+      geo: HOUSTON_GEO,
     });
 
     const doc = buildVenuesJson({
@@ -558,9 +558,9 @@ describe("buildVenuesJson", () => {
       name: "first-thursday-sam",
       friendlyname: "SAM Free First Thursday",
       description: "Free admission, first Thursday of each month",
-      url: "https://seattleartmuseum.org",
+      url: "https://houstonartmuseum.org",
       tags: ["Museums", "Downtown"],
-      geo: SEATTLE_GEO,
+      geo: HOUSTON_GEO,
     });
 
     const doc = buildVenuesJson({
@@ -575,7 +575,7 @@ describe("buildVenuesJson", () => {
     const venue = doc.venues[0];
     expect(venue.kind).toBe("recurring");
     expect(venue.name).toBe("first-thursday-sam");
-    expect(venue.geo).toEqual(SEATTLE_GEO);
+    expect(venue.geo).toEqual(HOUSTON_GEO);
     expect(venue.calendars[0].links.ics.href).toBe("recurring-first-thursday-sam.ics");
   });
 
@@ -602,11 +602,11 @@ describe("buildVenuesJson", () => {
     const doc = buildVenuesJson({
       configs: [],
       externals: [
-        makeExternal({ name: "z-ext", friendlyname: "Zebra Venue", geo: SEATTLE_GEO }),
-        makeExternal({ name: "a-ext", friendlyname: "Alpha Venue", geo: SEATTLE_GEO }),
+        makeExternal({ name: "z-ext", friendlyname: "Zebra Venue", geo: HOUSTON_GEO }),
+        makeExternal({ name: "a-ext", friendlyname: "Alpha Venue", geo: HOUSTON_GEO }),
       ],
       recurringEvents: [
-        makeRecurring({ name: "mid", friendlyname: "Middle Venue", geo: SEATTLE_GEO }),
+        makeRecurring({ name: "mid", friendlyname: "Middle Venue", geo: HOUSTON_GEO }),
       ],
       calendarsWithFutureEvents: new Set([
         "external-z-ext.ics",
@@ -628,7 +628,7 @@ describe("buildVenuesJson", () => {
       configs: [
         makeRipper({
           name: "r",
-          geo: SEATTLE_GEO,
+          geo: HOUSTON_GEO,
           calendars: [{ name: "c", friendlyname: "C" }],
         }),
       ],
@@ -647,7 +647,7 @@ describe("buildVenuesJson", () => {
       configs: [
         makeRipper({
           name: "stoup",
-          geo: BALLARD_GEO,
+          geo: MONTROSE_GEO,
           imageUrl: "https://example.com/stoup.jpg",
           calendars: [{ name: "events", friendlyname: "Stoup Events" }],
         }),
@@ -666,7 +666,7 @@ describe("buildVenuesJson", () => {
       configs: [
         makeRipper({
           name: "stoup",
-          geo: BALLARD_GEO,
+          geo: MONTROSE_GEO,
           calendars: [{ name: "events", friendlyname: "Stoup Events" }],
         }),
       ],
@@ -689,11 +689,11 @@ describe("buildVenuesJson", () => {
             {
               name: "central",
               friendlyname: "SPL Central",
-              geo: BALLARD_GEO,
+              geo: MONTROSE_GEO,
               imageUrl: "https://example.com/central.jpg",
             },
             // Inherits the ripper-level imageUrl (no own override).
-            { name: "ballard", friendlyname: "SPL Ballard", geo: BALLARD_GEO },
+            { name: "ballard", friendlyname: "SPL Montrose", geo: MONTROSE_GEO },
           ],
         }),
       ],
@@ -716,7 +716,7 @@ describe("buildVenuesJson", () => {
         makeExternal({
           name: "ext",
           friendlyname: "Ext Feed",
-          geo: BALLARD_GEO,
+          geo: MONTROSE_GEO,
           imageUrl: "https://example.com/ext.jpg",
         }),
       ],
@@ -724,7 +724,7 @@ describe("buildVenuesJson", () => {
         makeRecurring({
           name: "market",
           friendlyname: "Market",
-          geo: BALLARD_GEO,
+          geo: MONTROSE_GEO,
           imageUrl: "https://example.com/market.jpg",
         }),
       ],
@@ -792,23 +792,23 @@ describe("buildOsmGaps", () => {
   // Reusable geo blocks. The structural shape matches what Zod produces
   // after parsing — we cast to satisfy the builder, which only reads the
   // shape (no Zod-runtime fields).
-  const GAP_GEO = { lat: 47.6062, lng: -122.3321, label: "Gap Venue" };
+  const GAP_GEO = { lat: 29.7604, lng: -95.3698, label: "Gap Venue" };
   const RESOLVED_GEO = {
-    lat: 47.6062,
-    lng: -122.3321,
+    lat: 29.7604,
+    lng: -95.3698,
     label: "Resolved Venue",
     osmType: "node" as const,
     osmId: 12345,
   };
   const RECENTLY_REJECTED_GEO = {
-    lat: 47.6062,
-    lng: -122.3321,
+    lat: 29.7604,
+    lng: -95.3698,
     label: "Recently Rejected Venue",
     osmChecked: RECENT,
   };
   const STALE_REJECTED_GEO = {
-    lat: 47.6062,
-    lng: -122.3321,
+    lat: 29.7604,
+    lng: -95.3698,
     label: "Stale Rejected Venue",
     osmChecked: STALE,
   };
@@ -830,8 +830,8 @@ describe("buildOsmGaps", () => {
       source: "ripper",
       name: "gappy",
       label: "Gap Venue",
-      lat: 47.6062,
-      lng: -122.3321,
+      lat: 29.7604,
+      lng: -95.3698,
     });
   });
 
@@ -935,8 +935,8 @@ describe("buildOsmGaps", () => {
       source: "external",
       name: "ext-gap",
       label: "Gap Venue",
-      lat: 47.6062,
-      lng: -122.3321,
+      lat: 29.7604,
+      lng: -95.3698,
     });
   });
 
@@ -1036,7 +1036,7 @@ describe("buildPhotoGaps", () => {
     friendlyName: "Has Photo",
     description: "x",
     tags: [],
-    geo: { lat: 47.6, lng: -122.3, label: "Ballard" },
+    geo: { lat: 47.6, lng: -122.3, label: "Montrose" },
     map: { web: "https://maps.example/has" },
     imageUrl: "https://example.com/has.jpg",
     kind: "ripper",
@@ -1048,7 +1048,7 @@ describe("buildPhotoGaps", () => {
     description: "x",
     url: "https://no-photo.example",
     tags: [],
-    geo: { lat: 47.6, lng: -122.3, label: "Fremont" },
+    geo: { lat: 47.6, lng: -122.3, label: "Heights" },
     map: { web: "https://maps.example/no" },
     kind: "external",
     calendars: [],
@@ -1064,7 +1064,7 @@ describe("buildPhotoGaps", () => {
     expect(gaps.venueGaps[0]).toMatchObject({
       source: "external",
       name: "no-photo",
-      label: "Fremont",
+      label: "Heights",
       url: "https://no-photo.example",
       mapUrl: "https://maps.example/no",
     });

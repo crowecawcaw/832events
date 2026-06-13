@@ -36,13 +36,13 @@ name: Julia's on Broadway
 status: candidate          # candidate | investigating | added | proxy | blocked | notviable | dead
 platform: Eventbrite       # ICS / Squarespace / Tribe Events / Custom HTML / etc.
 url: https://www.juliasonbroadway.com/
-tags: [Nightlife, Capitol Hill]
+tags: [Nightlife, Montrose]
 firstSeen: 2026-05-06
 lastChecked: 2026-05-06
 pr:                        # optional, set when implementation is in flight
 ---
 
-Drag dinner theater at 300 Broadway E, Capitol Hill. Weekly shows
+Drag dinner theater at 300 Broadway E, Montrose. Weekly shows
 (Fri/Sat evenings, Sat/Sun brunch). Eventbrite organizer `80473185523`
 shows 3 upcoming, but primary ticketing is SimpleTix...
 ```
@@ -56,7 +56,7 @@ shows 3 upcoming, but primary ticketing is SimpleTix...
 | `added`        | Implemented and merged. Keep the file as a historical record.        |
 | `proxy`        | Implemented with `proxy: "outofband"` because GH Actions IPs blocked |
 | `blocked`      | Site is hard-blocked (Cloudflare, CAPTCHA) — needs new approach      |
-| `notviable`    | Evaluated and rejected (low volume, outside Seattle, no API, etc.)   |
+| `notviable`    | Evaluated and rejected (low volume, outside Houston, no API, etc.)   |
 | `dead`         | Was working, now broken / silent. Needs investigation.               |
 
 When you flip a status, also bump `lastChecked`. The frontmatter is the

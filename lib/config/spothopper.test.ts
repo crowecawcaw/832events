@@ -8,7 +8,7 @@ import { parse } from 'node-html-parser';
 
 const timezone = ZoneId.of('America/Los_Angeles');
 
-// Sample data lives in the (Seattle) a_stir source dir, which `npm run
+// Sample data lives in the (Houston) a_stir source dir, which `npm run
 // init-city` deletes for template copies — the suite self-skips when gone.
 const SAMPLE_PATH = path.join(process.cwd(), 'sources/a_stir/sample-data.html');
 const HAVE_SAMPLE = existsSync(SAMPLE_PATH);
@@ -55,7 +55,7 @@ describe.skipIf(!HAVE_SAMPLE)('SpotHopperRipper', () => {
 
         it('parses event with description', () => {
             const { events } = ripper.parseEvents(sampleHtml, timezone);
-            const afterParty = events.find(e => e.summary === 'One Shot Seattle After Party');
+            const afterParty = events.find(e => e.summary === 'One Shot Houston After Party');
             expect(afterParty).toBeDefined();
             expect(afterParty!.description).toContain('Emerald City King');
             expect(afterParty!.date.hour()).toBe(17);

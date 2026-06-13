@@ -9,7 +9,7 @@ routine is the `trigger-error-routine` job in
 when a daily build has errors.
 
 This catalog documents the automation set the reference instance
-(206.events) actually runs: four hooks. A copy is **self-maintaining** once
+(832.events) actually runs: four hooks. A copy is **self-maintaining** once
 all four exist — see the operator journey in
 [`city-template.md`](./city-template.md#operator-journey).
 

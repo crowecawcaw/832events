@@ -8,7 +8,7 @@ the site publishes without scraping HTML or guessing filenames. Plus an
 `llms.txt` at the root with human-readable usage instructions.
 
 This is **not** a real HTTP API. It is a flat set of JSON files served from
-the existing site (Cloudflare Pages, `https://206.events/`), linked together
+the existing site (Cloudflare Pages, `https://832.events/`), linked together
 by URL — a poor man's HATEOAS.
 
 ## Files we will publish
@@ -24,7 +24,7 @@ naturally belong.
 ```json
 {
   "generated": "2026-04-13T17:00:00.000Z",
-  "site": "https://206.events/",
+  "site": "https://832.events/",
   "links": {
     "self":           { "href": "index.json" },
     "llms":           { "href": "llms.txt",            "type": "text/plain" },
@@ -43,8 +43,8 @@ Notes:
   don't duplicate it, we just point at it from `index.json`.
 - `events-index.json` already exists; we link it too.
 - Every link is **relative** so the file works on production
-  (`206.events`) and on Cloudflare Pages branch previews
-  (`<branch>.206events.pages.dev`) without rewriting.
+  (`832.events`) and on Cloudflare Pages branch previews
+  (`<branch>.832events.pages.dev`) without rewriting.
 
 ### `tags.json`
 
@@ -57,14 +57,14 @@ the aggregate ICS/RSS for that tag.
   "generated": "2026-04-13T17:00:00.000Z",
   "tags": [
     {
-      "name": "Capitol Hill",
-      "slug": "capitol-hill",
+      "name": "Montrose",
+      "slug": "montrose",
       "category": "Neighborhood",
       "eventCount": 312,
       "calendarCount": 14,
       "links": {
-        "ics":  { "href": "tag-capitol-hill.ics" },
-        "rss":  { "href": "tag-capitol-hill.rss" }
+        "ics":  { "href": "tag-montrose.ics" },
+        "rss":  { "href": "tag-montrose.rss" }
       }
     }
   ]
@@ -127,10 +127,10 @@ No counts, no templating.
 Sketch:
 
 ```
-# 206.events
+# 832.events
 
-> 206.events is a build-time aggregator that pulls events from
-> Seattle-area venues, museums, and community sources and republishes
+> 832.events is a build-time aggregator that pulls events from
+> Houston-area venues, museums, and community sources and republishes
 > them as ICS calendars, RSS feeds, and JSON.
 
 ## Discovery
@@ -156,7 +156,7 @@ feeds for each tag live at /tag-<slug>.ics.
 ## Freshness and caching
 
 The build runs daily. The site is hosted on Cloudflare Pages at
-https://206.events/ and serves with permissive CORS, so browser apps can
+https://832.events/ and serves with permissive CORS, so browser apps can
 fetch these files cross-origin without a proxy.
 
 ## Licensing & attribution
@@ -255,7 +255,7 @@ Two layers:
    - Assert `tags.json` slugs match the existing `tag-<slug>.ics` filenames
      produced by the build (overlaps with `check-missing-urls.ts` but
      catches it earlier and with a clearer error).
-   - Assert every venue with `geo` has lat/lng inside the Pacific Northwest
+   - Assert every venue with `geo` has lat/lng inside the Gulf Coast
      bounding box (sanity — catches swapped lat/lng).
    - Assert `venues.json` is under 100 KB (size budget — same pattern as the
      existing 500 KB warning on `events-index.json`).

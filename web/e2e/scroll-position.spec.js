@@ -8,7 +8,7 @@ import { mockManifest } from './fixtures.js'
 // open an event for details, then hit back to keep browsing. The list should
 // return to where you left off — but today the `.a-content` scroll container
 // carries a `key` that flips between the section view and the event overlay
-// (App206.jsx), so React remounts it on back-nav and the scroll position is
+// (App832.jsx), so React remounts it on back-nav and the scroll position is
 // reset to the top.
 //
 // This test is RED against the current code (restored scrollTop ≈ 0) and turns

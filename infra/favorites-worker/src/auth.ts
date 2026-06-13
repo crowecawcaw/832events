@@ -14,7 +14,7 @@ const SESSION_MAX_AGE = 30 * 24 * 60 * 60 // 30 days in seconds
 
 // Allowed URL prefixes for post-login redirect
 const ALLOWED_RETURN_PREFIXES = [
-  'https://206.events/',
+  'https://832.events/',
   'https://prestomation.github.io/',
   'http://localhost:',
   'http://localhost/',
@@ -23,10 +23,10 @@ const ALLOWED_RETURN_PREFIXES = [
 ]
 
 // Cloudflare Pages preview deployments for this project live under
-// <branch>.206events.pages.dev. Scoped to this exact project subdomain — never
+// <branch>.832events.pages.dev. Scoped to this exact project subdomain — never
 // bare *.pages.dev, which is shared across every Cloudflare account.
-const PREVIEW_PAGES_SUFFIX = '.206events.pages.dev'
-const PREVIEW_PAGES_HOST = '206events.pages.dev'
+const PREVIEW_PAGES_SUFFIX = '.832events.pages.dev'
+const PREVIEW_PAGES_HOST = '832events.pages.dev'
 
 export function isAllowedReturnUrl(url: string): boolean {
   try {

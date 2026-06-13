@@ -17,7 +17,7 @@ The favorites feature (PR #101) currently stores favorites in browser `localStor
 
 1. **Social login** — Users authenticate via OAuth (Google, GitHub, etc.) so their identity persists across devices
 2. **Server-side favorite persistence** — Favorites are stored server-side, keyed to the authenticated user
-3. **Personalized ICS feed URL** — Each user gets a stable, unique URL (e.g. `https://favorites.seattlecalripper.com/feed/<token>.ics`) that aggregates their favorited calendars into a single ICS feed they can subscribe to from any calendar app
+3. **Personalized ICS feed URL** — Each user gets a stable, unique URL (e.g. `https://favorites.832.events/feed/<token>.ics`) that aggregates their favorited calendars into a single ICS feed they can subscribe to from any calendar app
 4. **Backward compatibility** — The site continues to work without login; `localStorage` favorites remain functional for anonymous users
 
 ## 3. High-Level Architecture
@@ -71,7 +71,7 @@ The favorites feature (PR #101) currently stores favorites in browser `localStor
 - **KV is simple** — Favorites are a classic key-value problem: one user → one set of ICS URLs. No relational queries needed
 - **Low cost** — The Workers free tier includes 100K requests/day; KV free tier includes 100K reads/day and 1K writes/day. This project's scale is well within free-tier limits
 - **Fast globally** — KV is eventually consistent with global edge caching, which is fine for favorites that change infrequently
-- **Custom domain** — Workers can be bound to a subdomain (e.g., `favorites.seattlecalripper.com`) for clean feed URLs
+- **Custom domain** — Workers can be bound to a subdomain (e.g., `favorites.832.events`) for clean feed URLs
 
 ### Why not D1 (Cloudflare SQL)?
 
@@ -123,7 +123,7 @@ Start with **Google** only. GitHub can be added later. Google covers the vast ma
 
 ## 5. API Design
 
-Base URL: `https://favorites.seattlecalripper.com` (or `https://cal-ripper-favorites.<account>.workers.dev` during development)
+Base URL: `https://favorites.832.events` (or `https://cal-ripper-favorites.<account>.workers.dev` during development)
 
 ### Auth Endpoints
 
@@ -144,7 +144,7 @@ Base URL: `https://favorites.seattlecalripper.com` (or `https://cal-ripper-favor
     "name": "Jane Doe",
     "picture": "https://lh3.googleusercontent.com/...",
     "feedToken": "a1b2c3d4e5f6...",
-    "feedUrl": "https://favorites.seattlecalripper.com/feed/a1b2c3d4e5f6.ics"
+    "feedUrl": "https://favorites.832.events/feed/a1b2c3d4e5f6.ics"
   }
 }
 ```
@@ -201,8 +201,8 @@ When `/feed/<token>.ics` is requested:
 2. Look up `userId` in `FAVORITES` KV → get list of `icsUrls`
 3. For each favorited ICS URL, fetch the `.ics` file from GitHub Pages (the existing static hosting)
 4. Merge all `VEVENT` components into a single ICS file with:
-   - `X-WR-CALNAME: 206.events — Favorites`
-   - `PRODID:-//206.events//Favorites//EN`
+   - `X-WR-CALNAME: 832.events — Favorites`
+   - `PRODID:-//832.events//Favorites//EN`
    - Deduplicated by `UID` (same event may appear in a tag aggregate and an individual calendar)
 5. Return the merged ICS
 
@@ -364,7 +364,7 @@ Bind the Worker to a custom subdomain via Cloudflare dashboard or `wrangler.toml
 
 ```toml
 routes = [
-  { pattern = "favorites.seattlecalripper.com/*", zone_name = "seattlecalripper.com" }
+  { pattern = "favorites.832.events/*", zone_name = "832.events" }
 ]
 ```
 

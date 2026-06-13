@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # Download the production discovery API data files used by the event-lookup
-# search script. Caches under /tmp/206events/ so repeated invocations are cheap.
+# search script. Caches under /tmp/832events/ so repeated invocations are cheap.
 #
 # Usage:
 #   bash skills/event-lookup/scripts/fetch-data.sh           # refresh if older than 1h
 #   bash skills/event-lookup/scripts/fetch-data.sh --force   # always refresh
 set -euo pipefail
 
-CACHE_DIR="${EVENT_LOOKUP_CACHE_DIR:-/tmp/206events}"
-SITE="${EVENT_LOOKUP_SITE:-https://206.events}"
+CACHE_DIR="${EVENT_LOOKUP_CACHE_DIR:-/tmp/832events}"
+SITE="${EVENT_LOOKUP_SITE:-https://832.events}"
 MAX_AGE_SECONDS=3600
 FORCE=0
 

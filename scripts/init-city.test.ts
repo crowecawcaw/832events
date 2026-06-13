@@ -78,10 +78,10 @@ describe("renderCityConfigTs", () => {
 });
 
 const TABLE_NAMES = [
-    "SEATTLE_NEIGHBORHOOD_CENTROIDS",
-    "SPL_BRANCH_COORDS",
-    "UW_BUILDING_COORDS",
-    "UW_NAMED_LOCATIONS",
+    "NEIGHBORHOOD_CENTROIDS",
+    "LIBRARY_BRANCH_COORDS",
+    "UNIVERSITY_BUILDING_COORDS",
+    "UNIVERSITY_NAMED_LOCATIONS",
     "KNOWN_VENUE_COORDS",
 ];
 
@@ -114,7 +114,7 @@ describe("emptyGeocoderTables", () => {
 
 describe("buildActions", () => {
     /** Synthetic repo layout so the test is independent of whether the
-     *  Seattle content still exists in this checkout. */
+     *  seed content still exists in this checkout. */
     async function makeFixtureRoot(): Promise<string> {
         const root = await mkdtemp(join(tmpdir(), "init-city-test-"));
         await mkdir(join(root, "sources", "some_venue"), { recursive: true });
@@ -148,7 +148,7 @@ describe("buildActions", () => {
         expect(descs).toContain("delete allowed-removals/old.ics");
         expect(descs).toContain("delete .github/workflows/notify-discord.yml");
         expect(descs).toContain("reset event-uncertainty-cache.json to the empty baseline");
-        expect(descs).toContain("empty the Seattle lookup tables in lib/geocoder.ts");
+        expect(descs).toContain("empty the city lookup tables in lib/geocoder.ts");
         // The external/ and recurring/ dirs themselves are never deleted,
         // and the READMEs survive.
         expect(descs.some(d => d === "delete sources/external/" || d === "delete sources/recurring/")).toBe(false);

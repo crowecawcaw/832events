@@ -1,7 +1,7 @@
-# 206.events Source-from-Event
+# 832.events Source-from-Event
 
 Given an **event** — described by a poster image, a text request, or
-both — check whether 206.events already covers it, fix any parser gap
+both — check whether 832.events already covers it, fix any parser gap
 that prevents it from showing up, or add a new source that would cover
 it. The end result is either "already covered, done" or a draft PR
 adding a new source through the usual automated review-and-merge flow.
@@ -9,7 +9,7 @@ adding a new source through the usual automated review-and-merge flow.
 ## When to use
 
 **This skill is the default handler for any image attachment in a
-206.events session** — posters are the only image workflow this repo
+832.events session** — posters are the only image workflow this repo
 has, so any image should be treated as a poster unless clearly
 otherwise.
 
@@ -19,7 +19,7 @@ covered:
 - "please add this event: <name> at <venue> on <date>"
 - "we should cover X"
 - "find a source for this event"
-- "is X already in 206.events? if not add it"
+- "is X already in 832.events? if not add it"
 
 ## Inputs
 
@@ -126,7 +126,7 @@ That skill handles:
 - Flipping the PR to ready, enabling auto-merge, merging on green
 
 **Do not skip the live-fetch validation.** A poster lookup that
-identifies a Seattle band's website as the candidate source is still
+identifies a Houston band's website as the candidate source is still
 just a candidate — the URL needs to actually return event data before
 implementation.
 
@@ -146,7 +146,7 @@ One concise message covering each event in the input. For each:
 
 - **Always search production data first.** Never decide coverage by
   scanning `sources/` in the repo — aggregator rippers (`19hz`,
-  `ticketmaster`, `seattle-showlists`) cover venues the directory
+  `ticketmaster`, `houston-showlists`) cover venues the directory
   listing won't reveal.
 - **Cast a wide net, then read carefully.** The lookup script returns
   fuzzy candidates with score breakdowns. A high score does not mean
@@ -160,7 +160,7 @@ One concise message covering each event in the input. For each:
   park does.
 - **Err on the side of adding** when the venue/promoter clearly hosts
   a continuing series of events. The project's `source-discovery`
-  skill states the goal explicitly: any working Seattle source is
+  skill states the goal explicitly: any working Houston source is
   better than no source.
 - **One source per poster.** If a poster names a venue + promoter +
   three bands, add the most likely *recurring* source — usually the

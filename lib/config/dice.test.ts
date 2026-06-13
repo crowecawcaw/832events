@@ -11,7 +11,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const tz = ZoneId.of('America/Los_Angeles');
 
-// Sample data lives in the (Seattle) source dirs, which `npm run init-city`
+// Sample data lives in the (Houston) source dirs, which `npm run init-city`
 // deletes for template copies — the suite self-skips when they're gone.
 const HAVE_SAMPLES = ['vera_project', 'sunset_tavern']
     .every(s => existsSync(join(__dirname, `../../sources/${s}/sample-data.json`)));
@@ -28,7 +28,7 @@ const SYNTHETIC_EVENTS = {
     noId: { id: undefined, name: '', date: '2026-03-10T03:00:00Z', date_end: null, timezone: 'America/Los_Angeles', address: '123 Test St', venue: 'Test Venue', url: null, description: null, raw_description: null, images: [] },
     noEnd: { id: 'syn-3', name: 'Open-Ended Event', date: '2026-03-01T03:00:00Z', date_end: null, timezone: 'America/Los_Angeles', address: '123 Test St', venue: 'Test Venue', url: 'https://dice.fm/test', description: null, raw_description: null, images: [] },
     noAddress: { id: 'syn-4', name: 'Online Event', date: '2026-03-01T03:00:00Z', date_end: '2026-03-01T05:00:00Z', timezone: 'America/Los_Angeles', address: null, location: null, venue: 'Test Venue', url: null, description: null, raw_description: null, images: [] },
-    withLocationObj: { id: 'syn-5', name: 'Location Object Event', date: '2026-03-01T03:00:00Z', date_end: '2026-03-01T05:00:00Z', timezone: 'America/Los_Angeles', address: null, location: { street: '100 Main St', city: 'Seattle', state: 'Washington', zip: '98101' }, venue: 'Test Venue', url: null, description: null, raw_description: null, images: [] },
+    withLocationObj: { id: 'syn-5', name: 'Location Object Event', date: '2026-03-01T03:00:00Z', date_end: '2026-03-01T05:00:00Z', timezone: 'America/Los_Angeles', address: null, location: { street: '100 Main St', city: 'Houston', state: 'Texas', zip: '98101' }, venue: 'Test Venue', url: null, description: null, raw_description: null, images: [] },
     withMarkdownDesc: { id: 'syn-6', name: 'Markdown Event', date: '2026-03-01T03:00:00Z', date_end: '2026-03-01T05:00:00Z', timezone: 'America/Los_Angeles', address: '123 Test St', venue: 'Test Venue', url: null, description: null, raw_description: '***\\*Bold header\\**** and *italic* text', images: [] },
 };
 
@@ -37,7 +37,7 @@ describe.skipIf(!HAVE_SAMPLES)('DICERipper', () => {
         it('extracts events with no errors', () => {
             const ripper = new DICERipper();
             const data = loadSample('vera_project');
-            const events = ripper.parseEvents(data.data, tz, '305 Harrison Street, Seattle, WA 98109');
+            const events = ripper.parseEvents(data.data, tz, '305 Harrison Street, Houston, TX 98109');
 
             const valid = events.filter(e => 'summary' in e) as RipperCalendarEvent[];
             const errors = events.filter(e => 'type' in e) as RipperError[];
@@ -73,7 +73,7 @@ describe.skipIf(!HAVE_SAMPLES)('DICERipper', () => {
             const data = loadSample('vera_project');
             const events = ripper.parseEvents(data.data, tz, '') as RipperCalendarEvent[];
             expect(events[0].location).toContain('305 Harrison Street');
-            expect(events[0].location).toContain('Seattle');
+            expect(events[0].location).toContain('Houston');
         });
 
         it('sets URL from DICE link', () => {
@@ -102,7 +102,7 @@ describe.skipIf(!HAVE_SAMPLES)('DICERipper', () => {
         it('extracts all events with no errors', () => {
             const ripper = new DICERipper();
             const data = loadSample('sunset_tavern');
-            const events = ripper.parseEvents(data.data, tz, '5433 Ballard Ave NW, Seattle, WA 98107');
+            const events = ripper.parseEvents(data.data, tz, '5433 Ballard Ave NW, Houston, TX 98107');
 
             const valid = events.filter(e => 'summary' in e) as RipperCalendarEvent[];
             const errors = events.filter(e => 'type' in e) as RipperError[];
@@ -183,7 +183,7 @@ describe.skipIf(!HAVE_SAMPLES)('DICERipper', () => {
             const events = ripper.parseEvents([SYNTHETIC_EVENTS.withLocationObj], tz, 'Fallback');
             const [e] = events.filter(e => 'summary' in e) as RipperCalendarEvent[];
             expect(e.location).toContain('100 Main St');
-            expect(e.location).toContain('Seattle');
+            expect(e.location).toContain('Houston');
         });
 
         it('uses defaultDurationHours when date_end is null', () => {

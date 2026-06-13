@@ -56,7 +56,7 @@ mechanism as the source fetch cache):
 - **Backup**: the `geo-cache` artifact (90-day retention) is still
   uploaded every build, so the data survives a cache eviction.
 - **Inspection**: the build mirrors the cache into `output/geo-cache.json`,
-  published read-only at `https://206.events/geo-cache.json`.
+  published read-only at `https://832.events/geo-cache.json`.
 
 ### Cold-start behavior
 

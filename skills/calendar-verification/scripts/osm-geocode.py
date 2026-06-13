@@ -2,7 +2,7 @@
 """Resolve an address or place name via OpenStreetMap Nominatim.
 
 Usage:
-    osm-geocode.py "1108 NW 52nd St, Seattle, WA 98107"
+    osm-geocode.py "1108 Main St, Houston, TX 77002"
 
 Prints "lat,lng" on a single line, or "unresolvable" if no result.
 
@@ -15,7 +15,7 @@ import sys
 import urllib.parse
 import urllib.request
 
-USER_AGENT = "206events-calendar-verification/1.0 (https://206.events)"
+USER_AGENT = "832events-calendar-verification/1.0 (https://832.events)"
 
 
 def geocode(query: str) -> tuple[float, float] | None:

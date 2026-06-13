@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react'
 import { Ico } from './icons.jsx'
-import { useApp206 } from './context.js'
+import { useApp832 } from './context.js'
 import { colorForTag } from './categories.js'
 import { rowFromIndexEvent, provFromAttributions, describeWindow, costLabel, COST_FILTER_OPTIONS } from './viewModels.js'
 import { eventKey } from '../lib/eventKey.js'
@@ -10,7 +10,7 @@ import { bestMapHref } from '../lib/maplink.js'
 import { formatTagLabel } from '../utils/format.js'
 
 export function Brand() {
-  return <div className="a-brand">206<b>.</b>events</div>
+  return <div className="a-brand">832<b>.</b>events</div>
 }
 
 export function CatDot({ tag, color, size = 8 }) {
@@ -40,7 +40,7 @@ export function FollowPill({ on, onClick, labelOff = 'Follow', labelOn = 'Follow
 // image in the lightbox. A load error hides the whole banner so a dead URL
 // leaves no broken-image frame.
 export function BannerImage({ src, alt, height = 160, radius = 14, marginBottom = 14 }) {
-  const app = useApp206()
+  const app = useApp832()
   if (!src) return null
   const open = () => app.openLightbox(src, alt)
   return (
@@ -70,7 +70,7 @@ export function BannerImage({ src, alt, height = 160, radius = 14, marginBottom 
 // posters often carry readable detail (lineups, set times, fine print) that's
 // lost at thumbnail size.
 export function EventThumb({ src, alt, size = 56 }) {
-  const app = useApp206()
+  const app = useApp832()
   if (!src) return null
   return (
     <img
@@ -85,11 +85,11 @@ export function EventThumb({ src, alt, size = 56 }) {
   )
 }
 
-// Full-screen image viewer. Single instance mounted at the App206 root; opened
+// Full-screen image viewer. Single instance mounted at the App832 root; opened
 // from anywhere via app.openLightbox(src, alt). Dismissed by clicking the
 // backdrop, the close button, or Escape. Locks body scroll while open.
 export function Lightbox() {
-  const { lightbox, closeLightbox } = useApp206()
+  const { lightbox, closeLightbox } = useApp832()
   useEffect(() => {
     if (!lightbox) return
     const onKey = (e) => { if (e.key === 'Escape') closeLightbox() }
@@ -188,7 +188,7 @@ export function LocationMapLink({ location, lat, lng, style }) {
 
 // A single day-grouped event row. `event` is an events-index entry.
 export function EventRow({ event, noDate = false, showChip = true, showLoc = false, reason = null }) {
-  const app = useApp206()
+  const app = useApp832()
   const row = rowFromIndexEvent(event)
   const channel = app.channelByIcsUrl.get(event.icsUrl)
   const open = () => app.openEvent(event)
@@ -229,7 +229,7 @@ export function EventRow({ event, noDate = false, showChip = true, showLoc = fal
 // Sticky day-grouped list. `groups` = [{ label, dateSubtitle, events }]. When
 // `withReason`, each event's first attribution renders as a provenance chip.
 export function DayList({ groups, withReason = false }) {
-  const app = useApp206()
+  const app = useApp832()
   if (!groups.length) return null
   return (
     <div>
@@ -264,7 +264,7 @@ export function DayList({ groups, withReason = false }) {
 // pass every *other* active filter but are hidden solely because their price
 // isn't confirmed. Quantifies the strict cost filter at the moment it bites.
 export function ActiveFilters({ costHiddenCount = null }) {
-  const app = useApp206()
+  const app = useApp832()
   const q = app.query.trim()
   const scopeLabel = app.dateWindow !== 'all' ? describeWindow(app.dateWindow).relative : null
   const saved = q && app.searchFilters.some((f) => f.toLowerCase() === q.toLowerCase())

@@ -10,7 +10,7 @@ Users build their personal feed from three distinct criteria types:
 
 A single event can match multiple criteria simultaneously. Example: a Crocodile show could appear because:
 - The user favorited the Crocodile calendar **AND**
-- It matches their geo filter for Capitol Hill **AND**
+- It matches their geo filter for Montrose **AND**
 - It matches their search filter "punk"
 
 ---
@@ -35,7 +35,7 @@ For geo filters, there's no attribution at all. `feed.ts` filters events by dist
 An event should carry **all** the criteria that caused it to be included. If an event matched:
 - Favorited calendar "The Crocodile"
 - Search filter "punk" 
-- Geo filter "Capitol Hill (1km)"
+- Geo filter "Montrose (1km)"
 
 ...then all three attributions should be surfaced, both in the web UI and (optionally) in the ICS feed.
 
@@ -53,7 +53,7 @@ An event should carry **all** the criteria that caused it to be included. If an 
 │ Band Name Live at The Crocodile                  │
 │ 8:00 PM – 11:00 PM                               │
 │                                                  │
-│ [🗓️ The Crocodile] [🔍 "punk"] [📍 Capitol Hill] │
+│ [🗓️ The Crocodile] [🔍 "punk"] [📍 Montrose] │
 │                                                  │
 │ Description text here...                         │
 └──────────────────────────────────────────────────┘
@@ -62,7 +62,7 @@ An event should carry **all** the criteria that caused it to be included. If an 
 Chips are styled distinctly:
 - **🗓️ Calendar** (blue) — shows calendar friendly name
 - **🔍 Search** (green) — shows the filter text that matched
-- **📍 Geo** (purple) — shows the label (e.g., "Capitol Hill") or "within 2km"
+- **📍 Geo** (purple) — shows the label (e.g., "Montrose") or "within 2km"
 
 **Data requirements:**
 - Worker must return attribution metadata per event
@@ -100,7 +100,7 @@ MATCHING "punk"
 • Punk Show at Neumos (7:30 PM)
 
 ────────────────────────────────────────────
-NEAR CAPITOL HILL
+NEAR MONTROSE
 ────────────────────────────────────────────
 • Band Name Live at The Crocodile (8:00 PM)  ← another duplicate!
 • Coffee Meetup at Victrola (10:00 AM)
@@ -171,7 +171,7 @@ Hover/tap for tooltip showing details (e.g., "Matched search filter: punk").
 **How it looks (in calendar apps):**
 
 Most calendar apps display CATEGORIES as tags or labels. The event would show:
-- Categories: `The Crocodile`, `search:punk`, `geo:Capitol Hill`
+- Categories: `The Crocodile`, `search:punk`, `geo:Montrose`
 
 In the raw ICS:
 ```ics
@@ -180,8 +180,8 @@ UID:event-123@calendar-ripper
 SUMMARY:Band Name Live at The Crocodile
 X-CALRIPPER-SOURCE:The Crocodile
 X-CALRIPPER-SEARCH:punk
-X-CALRIPPER-GEO:Capitol Hill
-CATEGORIES:The Crocodile,search:punk,geo:Capitol Hill
+X-CALRIPPER-GEO:Montrose
+CATEGORIES:The Crocodile,search:punk,geo:Montrose
 ...
 END:VEVENT
 ```
@@ -213,7 +213,7 @@ When an event matches multiple criteria, three approaches:
 Event appears once, with chips/icons for every matching criterion.
 
 ```
-[🗓️ The Crocodile] [🔍 "punk"] [📍 Capitol Hill]
+[🗓️ The Crocodile] [🔍 "punk"] [📍 Montrose]
 ```
 
 **Pros:** Complete transparency. Users see exactly why an event is in their feed.
@@ -227,7 +227,7 @@ First match wins. Only show that label.
 Priority: `geo > search > favorites` (or configurable)
 
 ```
-[📍 Capitol Hill]  // even though it also matched favorites + search
+[📍 Montrose]  // even though it also matched favorites + search
 ```
 
 **Pros:** Clean, simple.
@@ -434,7 +434,7 @@ describe('Filter parity: client matches worker behavior', () => {
 
   describe('Geo filters', () => {
     it('includes events within radius', () => {
-      // Capitol Hill center
+      // Montrose center
       const filter = { lat: 47.6143, lng: -122.3197, radiusKm: 1 }
       const matches = FIXTURE_EVENTS.filter(e =>
         e.lat != null && e.lng != null &&
@@ -459,7 +459,7 @@ describe('Filter parity: client matches worker behavior', () => {
       const matches = FIXTURE_EVENTS.filter(e =>
         e.lat == null || haversineKm(filter.lat, filter.lng, e.lat, e.lng) <= filter.radiusKm
       )
-      expect(matches.length).toBe(FIXTURE_EVENTS.length) // all in Seattle, all match
+      expect(matches.length).toBe(FIXTURE_EVENTS.length) // all in Houston, all match
     })
   })
 

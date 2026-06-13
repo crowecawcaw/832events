@@ -1,6 +1,6 @@
-# 206.events Build Report
+# 832.events Build Report
 
-Fetch and analyze the 206.events build health report, fix broken rippers, and post a summary.
+Fetch and analyze the 832.events build health report, fix broken rippers, and post a summary.
 
 ## Steps
 
@@ -12,7 +12,7 @@ Run the build health script:
 python3 skills/build-report/scripts/build-health.py
 ```
 
-This fetches `https://206.events/build-errors.json` and prints a structured summary including:
+This fetches `https://832.events/build-errors.json` and prints a structured summary including:
 - Total error count
 - Config errors, external failures, zero-event calendars
 - expectedEmpty cross-check (flags calendars marked empty that now have events)
@@ -31,7 +31,7 @@ instead:
    and parse it manually (e.g. `python3 -c "import json,sys; print(json.dumps(json.load(open('/tmp/build-errors.json')), indent=2))"`).
 
 The artifact URL pattern is:
-`https://github.com/prestomation/206events/actions/runs/<RUN_ID>/artifacts`
+`https://github.com/crowecawcaw/832events/actions/runs/<RUN_ID>/artifacts`
 
 ### 2. Reply with Build Health Report
 

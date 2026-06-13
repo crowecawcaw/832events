@@ -35,7 +35,7 @@ export function isVagueLocation(location: string): boolean {
   const lower = location.toLowerCase().trim();
   // Match vague location patterns that won't geocode meaningfully
   const vaguePatterns = [
-    /^offsite\b/i,             // "Offsite, Bellevue, WA" etc
+    /^offsite\b/i,             // "Offsite, Katy, TX" etc
     /^tba\b/i,                 // "TBA", "TBA - location TBD"
     /^tbd\b/i,                 // "TBD"
     /^various locations?\b/i,   // "Various locations"
@@ -65,7 +65,7 @@ export function normalizeLocation(location: string): string {
   let normalized = location.replace(/\\,/g, ',');
 
   // Step 2: Check for HTML <br> format with venue on first line and address on second
-  // e.g. "A Resting Place<br>670 S. King St.<br>Seattle, WA 98104"
+  // e.g. "A Resting Place<br>1001 Bissonnet St<br>Houston, TX 77005"
   // We want to extract the address line (starts with a digit)
   const brSegments = normalized.split(/<br\s*\/?>/i);
   if (brSegments.length >= 2) {
@@ -111,7 +111,7 @@ export function normalizeLocationKey(location: string): string {
  * return the address-only portion.  Returns null if no venue prefix is detected.
  *
  * Only `:` or `,` are treated as venue-prefix separators; plain spaces are not,
- * to avoid false positives on bare addresses like "1515 12th Ave, Seattle WA".
+ * to avoid false positives on bare addresses like "1515 Main St, Houston TX".
  */
 export function extractAddressFromVenuePrefix(location: string): string | null {
   // Match "Some Venue Name: 1234 Street..." or "Some Venue Name, 1234 Street..."
@@ -225,37 +225,37 @@ export function stripSuiteFloorSuffixes(location: string): string | null {
 }
 
 // ---------------------------------------------------------------------------
-// Seattle reference content. The lookup tables below (neighborhood centroids,
-// SPL branches, UW buildings, KNOWN_VENUE_COORDS) are city CONTENT, not engine
-// logic: their keys never match locations from another city, so they are
-// harmless for template copies and are stripped/regrown by the Phase 2
+// Local reference content. The lookup tables below (neighborhood centroids,
+// library branches, university buildings, KNOWN_VENUE_COORDS) are city CONTENT,
+// not engine logic: their keys never match locations from another city, so they
+// are harmless for template copies and are stripped/regrown by the Phase 2
 // init-city script. See docs/city-template.md.
 // ---------------------------------------------------------------------------
 
 /**
- * Seattle neighborhood centroid table. Used as a fallback when Nominatim
+ * Neighborhood centroid table. Used as a fallback when Nominatim
  * fails for neighborhood-level location strings.
  */
-const SEATTLE_NEIGHBORHOOD_CENTROIDS: Record<string, GeoCoords> = {
+const NEIGHBORHOOD_CENTROIDS: Record<string, GeoCoords> = {
 };
 
 /**
- * Look up Seattle neighborhood centroid coords from a normalized location string.
- * Matches "<neighborhood> neighborhood, seattle" or "<neighborhood>, seattle"
+ * Look up neighborhood centroid coords from a normalized location string.
+ * Matches "<neighborhood> neighborhood, houston" or "<neighborhood>, houston"
  * (case-insensitive). Returns null if no match.
  */
 export function lookupNeighborhoodCentroid(location: string): GeoCoords | null {
   const lower = location.toLowerCase().trim();
 
-  for (const [neighborhood, coords] of Object.entries(SEATTLE_NEIGHBORHOOD_CENTROIDS)) {
-    // Match "<neighborhood> neighborhood, seattle" or "<neighborhood>, seattle"
+  for (const [neighborhood, coords] of Object.entries(NEIGHBORHOOD_CENTROIDS)) {
+    // Match "<neighborhood> neighborhood, houston" or "<neighborhood>, houston"
     // or just "<neighborhood>" alone
     if (
       lower === neighborhood ||
-      lower === `${neighborhood} neighborhood, seattle` ||
-      lower === `${neighborhood}, seattle` ||
-      lower === `${neighborhood} neighborhood, seattle, wa` ||
-      lower === `${neighborhood}, seattle, wa`
+      lower === `${neighborhood} neighborhood, houston` ||
+      lower === `${neighborhood}, houston` ||
+      lower === `${neighborhood} neighborhood, houston, tx` ||
+      lower === `${neighborhood}, houston, tx`
     ) {
       return coords;
     }
@@ -265,35 +265,35 @@ export function lookupNeighborhoodCentroid(location: string): GeoCoords | null {
 }
 
 /**
- * Seattle Public Library branch coordinates.
+ * Public library branch coordinates.
  */
-const SPL_BRANCH_COORDS: Record<string, GeoCoords> = {
+const LIBRARY_BRANCH_COORDS: Record<string, GeoCoords> = {
 };
 
 /**
- * Look up Seattle Public Library branch coordinates from a normalized location string.
- * Only applies to strings that explicitly mention "seattle public library" or "spl".
+ * Look up public library branch coordinates from a normalized location string.
+ * Only applies to strings that explicitly mention "houston public library" or "hpl".
  * Searches for a branch name substring within the location string (case-insensitive).
  * Returns null if no match.
  */
-export function lookupSPLBranchCoords(location: string): GeoCoords | null {
+export function lookupLibraryBranchCoords(location: string): GeoCoords | null {
   const lower = location.toLowerCase();
 
-  // Only apply to strings that explicitly reference Seattle Public Library or SPL,
+  // Only apply to strings that explicitly reference Houston Public Library or HPL,
   // or that directly name a known branch/central library location.
-  // Avoids false positives (e.g. "Fremont Brewing" → "fremont branch") by requiring
-  // either an explicit SPL reference or a match against a known branch name.
-  const isSPLString =
-    lower.includes('seattle public library') ||
+  // Avoids false positives (e.g. "Heights Brewing" → "heights branch") by requiring
+  // either an explicit HPL reference or a match against a known branch name.
+  const isLibraryString =
+    lower.includes('houston public library') ||
     lower.includes('central library') ||
-    // Match "spl" as a whole word or common SPL prefix patterns (avoid partial matches)
-    /\bspl\b/.test(lower) ||
-    // Match "<branch name> branch" patterns from the SPL_BRANCH_COORDS table
-    Object.keys(SPL_BRANCH_COORDS).some(branch => branch.endsWith(' branch') && lower.includes(branch));
+    // Match "hpl" as a whole word or common HPL prefix patterns (avoid partial matches)
+    /\bhpl\b/.test(lower) ||
+    // Match "<branch name> branch" patterns from the LIBRARY_BRANCH_COORDS table
+    Object.keys(LIBRARY_BRANCH_COORDS).some(branch => branch.endsWith(' branch') && lower.includes(branch));
 
-  if (!isSPLString) return null;
+  if (!isLibraryString) return null;
 
-  for (const [branch, coords] of Object.entries(SPL_BRANCH_COORDS)) {
+  for (const [branch, coords] of Object.entries(LIBRARY_BRANCH_COORDS)) {
     if (lower.includes(branch)) {
       return coords;
     }
@@ -303,33 +303,33 @@ export function lookupSPLBranchCoords(location: string): GeoCoords | null {
 }
 
 /**
- * UW building code → coordinates table.
- * Keys are uppercase building codes (e.g. "HUB", "PAT").
+ * University building code → coordinates table.
+ * Keys are uppercase building codes (e.g. "AH", "SEC").
  */
-const UW_BUILDING_COORDS: Record<string, GeoCoords> = {
+const UNIVERSITY_BUILDING_COORDS: Record<string, GeoCoords> = {
 };
 
 /**
- * UW named-location fallback (no building code in string).
+ * University named-location fallback (no building code in string).
  * Keys are lowercased location strings.
  */
-const UW_NAMED_LOCATIONS: Record<string, GeoCoords> = {
+const UNIVERSITY_NAMED_LOCATIONS: Record<string, GeoCoords> = {
 };
 
 /**
- * Look up UW building coordinates from a location string.
+ * Look up university building coordinates from a location string.
  *
  * Matches:
- * 1. Named UW locations like "anderson hall courtyard" or "uw botanic gardens"
- * 2. Building code in parens: "(HUB)" at end of string or after a comma/space
+ * 1. Named university locations like "cullen performance hall" or "uh botanic gardens"
+ * 2. Building code in parens: "(SEC)" at end of string or after a comma/space
  *
  * Returns null if no match.
  */
-export function lookupUWBuilding(location: string): GeoCoords | null {
+export function lookupUniversityBuilding(location: string): GeoCoords | null {
   const lower = location.toLowerCase().trim();
 
   // Check named locations first
-  for (const [name, coords] of Object.entries(UW_NAMED_LOCATIONS)) {
+  for (const [name, coords] of Object.entries(UNIVERSITY_NAMED_LOCATIONS)) {
     if (lower === name) {
       return coords;
     }
@@ -340,8 +340,8 @@ export function lookupUWBuilding(location: string): GeoCoords | null {
     lower.match(/,\s*\(([a-z0-9]{2,5})\)/i);
   if (match) {
     const code = match[1].toUpperCase();
-    if (code in UW_BUILDING_COORDS) {
-      return UW_BUILDING_COORDS[code];
+    if (code in UNIVERSITY_BUILDING_COORDS) {
+      return UNIVERSITY_BUILDING_COORDS[code];
     }
   }
 
@@ -349,14 +349,14 @@ export function lookupUWBuilding(location: string): GeoCoords | null {
 }
 
 /**
- * Well-known Seattle venue coordinates table.
+ * Well-known local venue coordinates table.
  * Keys are lowercased venue names.
  */
 const KNOWN_VENUE_COORDS: Record<string, GeoCoords> = {
 };
 
 /**
- * Look up a well-known Seattle venue by normalized (lowercased, trimmed) location string.
+ * Look up a well-known local venue by normalized (lowercased, trimmed) location string.
  * If the location *starts with* a known venue name, return that venue's coords
  * even if there's trailing room/floor info after the venue name.
  *
@@ -387,20 +387,17 @@ export function lookupKnownVenue(location: string): GeoCoords | null {
 /**
  * Known venue-area suffix patterns that map to a centroid.
  * Used as a last-resort fallback when Nominatim fails and the location string
- * contains a recognizable area suffix like ", seattle center" or ", south lake union".
+ * contains a recognizable area suffix like ", theater district" or ", midtown".
  *
- * Keys are lowercase area suffixes; values are centroids.
+ * Keys are lowercase area suffixes; values are centroids. City CONTENT — empty
+ * on a fresh template copy and regrown for the local metro.
  */
 const VENUE_AREA_SUFFIX_COORDS: Record<string, GeoCoords> = {
-  'seattle center': { lat: 47.6205, lng: -122.3493 },
-  'south lake union': { lat: 47.6275, lng: -122.3362 },
-  'south lake union, seattle, wa': { lat: 47.6275, lng: -122.3362 },
-  'south lake union, seattle': { lat: 47.6275, lng: -122.3362 },
 };
 
 /**
- * Check if the location ends with a known venue-area suffix (e.g. ", seattle center"
- * or ", south lake union, seattle, wa"). Returns the centroid if matched, null otherwise.
+ * Check if the location ends with a known venue-area suffix (e.g. ", theater district"
+ * or ", midtown, houston, tx"). Returns the centroid if matched, null otherwise.
  *
  * Matches case-insensitively. The area suffix must appear after a comma or space.
  */
@@ -574,11 +571,11 @@ export interface ResolveEventCoordsResult {
  * 3. Cache lookup
  * 4. Nominatim geocoding (with venue-prefix fallback)
  * 5. Neighborhood centroid lookup (if Nominatim fails)
- * 6. SPL branch lookup (if Nominatim fails and location mentions a branch)
- * 7. Known venue-area centroid fallback (Seattle Center, South Lake Union, etc.)
+ * 6. Library branch lookup (if Nominatim fails and location mentions a branch)
+ * 7. Known venue-area centroid fallback (theater district, midtown, etc.)
  * 8. Suite/floor stripping retry (if first Nominatim attempt fails)
- * 9. UW building lookup (building code in parens, or named UW location)
- * 10. Known venue lookup (well-known Seattle venues that Nominatim misses)
+ * 9. University building lookup (building code in parens, or named campus location)
+ * 10. Known venue lookup (well-known local venues that Nominatim misses)
  */
 export async function resolveEventCoords(
   cache: Readonly<GeoCache>,
@@ -667,19 +664,19 @@ export async function resolveEventCoords(
     coords = lookupNeighborhoodCentroid(normalized);
   }
 
-  // Step 4: SPL branch lookup (if Nominatim and neighborhood failed)
+  // Step 4: Library branch lookup (if Nominatim and neighborhood failed)
   if (coords === null) {
-    coords = lookupSPLBranchCoords(normalized);
+    coords = lookupLibraryBranchCoords(normalized);
   }
 
-  // Step 5: Known venue-area centroid fallback (Seattle Center, South Lake Union, etc.)
+  // Step 5: Known venue-area centroid fallback (theater district, midtown, etc.)
   if (coords === null) {
     coords = lookupVenueAreaFallback(normalized);
   }
 
-  // Step 9: UW building lookup (building code in parens, or named UW location)
+  // Step 9: University building lookup (building code in parens, or named campus location)
   if (coords === null) {
-    coords = lookupUWBuilding(normalized);
+    coords = lookupUniversityBuilding(normalized);
   }
 
   // Step 6: Suite/floor stripping retry (if still no coords)

@@ -14,16 +14,16 @@ const FUSE_OPTIONS = { keys: FUSE_KEYS, threshold: FUSE_THRESHOLD, ignoreLocatio
 
 // Shared fixture — a realistic slice of events-index entries
 const FIXTURE_EVENTS = [
-  { icsUrl: 'crocodile-main.ics', summary: 'Punk Night at the Crocodile', description: 'Local punk bands', location: '2505 1st Ave, Seattle', date: '2026-04-01T20:00', lat: 47.6146, lng: -122.3474 },
-  { icsUrl: 'neumos.ics',         summary: 'Jazz Fusion Evening',         description: 'Smooth jazz',       location: '925 E Pike St, Seattle',  date: '2026-04-02T20:00', lat: 47.6143, lng: -122.3197 },
-  { icsUrl: 'mopop.ics',          summary: 'Guitar Exhibit Opening',      description: 'Rock history',       location: '325 5th Ave N, Seattle',  date: '2026-04-03T11:00', lat: 47.6214, lng: -122.3481 },
-  { icsUrl: 'fremont-brewing.ics', summary: 'Trivia Night',               description: 'Beer and trivia',   location: '1050 N 34th St, Seattle', date: '2026-04-04T19:00', lat: 47.6499, lng: -122.3482 },
+  { icsUrl: 'crocodile-main.ics', summary: 'Punk Night at the Crocodile', description: 'Local punk bands', location: '2505 1st Ave, Houston', date: '2026-04-01T20:00', lat: 47.6146, lng: -122.3474 },
+  { icsUrl: 'neumos.ics',         summary: 'Jazz Fusion Evening',         description: 'Smooth jazz',       location: '925 E Pike St, Houston',  date: '2026-04-02T20:00', lat: 47.6143, lng: -122.3197 },
+  { icsUrl: 'mopop.ics',          summary: 'Guitar Exhibit Opening',      description: 'Rock history',       location: '325 5th Ave N, Houston',  date: '2026-04-03T11:00', lat: 47.6214, lng: -122.3481 },
+  { icsUrl: 'fremont-brewing.ics', summary: 'Trivia Night',               description: 'Beer and trivia',   location: '1050 N 34th St, Houston', date: '2026-04-04T19:00', lat: 47.6499, lng: -122.3482 },
   { icsUrl: 'seatoday.ics',        summary: 'Community Meeting',          description: null,                location: null,                       date: '2026-04-05T18:00', lat: null,   lng: null   },
   // Regression fixture: search terms that appear in the MIDDLE/END of the field.
   // With Fuse's default location scoring + threshold 0.1 these never matched
   // (e.g. searching "Elton" or "John" returned nothing; only "choir" near the
   // start matched). ignoreLocation: true fixes this.
-  { icsUrl: 'moore.ics',          summary: 'One Night Without Elton John: A Choir Tribute', description: 'Choir performs Elton John hits', location: '1932 2nd Ave, Seattle', date: '2026-04-06T20:00', lat: 47.6131, lng: -122.3411 },
+  { icsUrl: 'moore.ics',          summary: 'One Night Without Elton John: A Choir Tribute', description: 'Choir performs Elton John hits', location: '1932 2nd Ave, Houston', date: '2026-04-06T20:00', lat: 47.6131, lng: -122.3411 },
 ]
 
 describe('Filter parity: client matches worker behavior', () => {
@@ -105,12 +105,12 @@ describe('Filter parity: client matches worker behavior', () => {
       expect(includedInFeed).toBe(true)
     })
 
-    it('handles large radius (city-wide, 20km) including all Seattle events', () => {
+    it('handles large radius (city-wide, 20km) including all Houston events', () => {
       const filter = { lat: 47.6062, lng: -122.3321, radiusKm: 20 }
       const matches = FIXTURE_EVENTS.filter(e =>
         e.lat == null || haversineKm(filter.lat, filter.lng, e.lat, e.lng) <= filter.radiusKm
       )
-      expect(matches.length).toBe(FIXTURE_EVENTS.length) // all in Seattle, all match
+      expect(matches.length).toBe(FIXTURE_EVENTS.length) // all in Houston, all match
     })
   })
 

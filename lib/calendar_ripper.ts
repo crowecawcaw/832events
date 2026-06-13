@@ -1385,7 +1385,7 @@ END:VCALENDAR`;
   // If a source has 0 events + expectEmpty=true but is NOT in the production manifest,
   // it has never produced events and likely has a wrong URL or ripper type.
   // --- Detect new sources via deployed-site manifest check ---
-  // 206.events is a Cloudflare Pages SPA that returns HTTP 200 with text/html for ANY
+  // 832.events is a Cloudflare Pages SPA that returns HTTP 200 with text/html for ANY
   // path — including non-existent ICS files. A plain HEAD + res.ok check therefore
   // marks every calendar as "already deployed", breaking new-source detection.
   //
@@ -1460,7 +1460,7 @@ END:VCALENDAR`;
   console.log(`${knownDeployed.size} of ${allCalendarNames.length} calendars already deployed; ${allCalendarNames.length - knownDeployed.size} are new.`);
 
   // --- Check new sources for zero events and parse errors ---
-  // A SOURCE is "new" only if NONE of its calendars are deployed to 206.events.
+  // A SOURCE is "new" only if NONE of its calendars are deployed to 832.events.
   // This prevents a new branch (e.g. a new SPL location) from making an existing
   // source appear "new" just because that one calendar ICS is missing.
   const knownDeployedSources = new Set<string>();

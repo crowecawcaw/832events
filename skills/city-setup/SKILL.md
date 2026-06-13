@@ -6,8 +6,8 @@ mechanical work is done by `npm run init-city`; this skill wraps it with the
 judgment calls (geography, neighborhoods, first sources) and walks the
 operator through the external services.
 
-**Do not run this on the reference instance (206.events / Seattle).** If
-`city.config.ts` still says `name: "206.events"` and the user hasn't asked to
+**Do not run this on the reference instance (832.events / Houston).** If
+`city.config.ts` still says `name: "832.events"` and the user hasn't asked to
 re-city the repo, you're in the wrong place.
 
 ## Steps
@@ -47,9 +47,9 @@ npm run init-city -- --answers /tmp/city-answers.json --yes
 ```
 
 This regenerates `city.config.ts`, rebrands `web/src/sw.js` and `README.md`,
-and strips all Seattle content (sources, candidate docs, discovery logs,
+and strips all Houston content (sources, candidate docs, discovery logs,
 uncertainty cache, geocoder lookup tables, `allowed-removals/`, and the
-Seattle-specific Discord notification workflow).
+Houston-specific Discord notification workflow).
 
 ### 3. Tune the derived geography
 
@@ -58,7 +58,7 @@ sanity bbox from the city center. These are rough boxes — open
 `city.config.ts` and tighten them to the real metro shape:
 
 - `map.clampBounds` should hug the populated metro/county (it rejects
-  outliers from the default map fit; Seattle's hugged King County)
+  outliers from the default map fit; Houston's hugged Harris County)
 - `geocoder.nominatimViewbox` slightly larger than the clamp bounds
 - `venueSanityBbox` generous — day-trip radius; CI fails venues outside it
 
@@ -122,7 +122,7 @@ skipped the Q install, rely on human review.
    suggested prompts there. Only the build-error responder needs repo
    secrets (`CLAUDE_ROUTINE_ID`/`CLAUDE_ROUTINE_TOKEN`).
 2. **Optional**: Discord notifications (`init-city` deleted the
-   Seattle-specific workflow — restore `.github/workflows/notify-discord.yml`
+   Houston-specific workflow — restore `.github/workflows/notify-discord.yml`
    from the upstream repo and set `DISCORD_WEBHOOK_CALENDAR` to enable),
    out-of-band proxy (AWS stack in `infra/authenticated-proxy/` — skip
    until a source actually needs it, and don't mark sources

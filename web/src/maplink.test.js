@@ -10,17 +10,17 @@ import { googleMapsUrl, osmFeatureUrl, geoUri, isAndroid, bestMapHref } from './
 const MAPLINK_CASES = [
   {
     name: 'venue with osm identity',
-    input: { lat: 47.61, lng: -122.32, label: 'Neumos, 925 E Pike St, Seattle, WA 98122', osmType: 'way', osmId: 123456 },
-    google: 'https://www.google.com/maps/search/?api=1&query=Neumos%2C%20925%20E%20Pike%20St%2C%20Seattle%2C%20WA%2098122',
+    input: { lat: 47.61, lng: -122.32, label: 'Neumos, 925 E Pike St, Houston, TX 98122', osmType: 'way', osmId: 123456 },
+    google: 'https://www.google.com/maps/search/?api=1&query=Neumos%2C%20925%20E%20Pike%20St%2C%20Houston%2C%20TX%2098122',
     osm: 'https://www.openstreetmap.org/way/123456',
-    geo: 'geo:47.61,-122.32?q=Neumos%2C%20925%20E%20Pike%20St%2C%20Seattle%2C%20WA%2098122',
+    geo: 'geo:47.61,-122.32?q=Neumos%2C%20925%20E%20Pike%20St%2C%20Houston%2C%20TX%2098122',
   },
   {
     name: 'venue without osm identity',
-    input: { lat: 47.6, lng: -122.33, label: 'Some Hall, Seattle' },
-    google: 'https://www.google.com/maps/search/?api=1&query=Some%20Hall%2C%20Seattle',
+    input: { lat: 47.6, lng: -122.33, label: 'Some Hall, Houston' },
+    google: 'https://www.google.com/maps/search/?api=1&query=Some%20Hall%2C%20Houston',
     osm: undefined,
-    geo: 'geo:47.6,-122.33?q=Some%20Hall%2C%20Seattle',
+    geo: 'geo:47.6,-122.33?q=Some%20Hall%2C%20Houston',
   },
   {
     name: 'event with location string only (no label)',
@@ -60,7 +60,7 @@ describe('maplink builders (parity with lib/maplink.ts)', () => {
 })
 
 describe('bestMapHref device selection', () => {
-  const venue = { lat: 47.61, lng: -122.32, label: 'Neumos, Seattle' }
+  const venue = { lat: 47.61, lng: -122.32, label: 'Neumos, Houston' }
 
   it('uses geo: on Android', () => {
     expect(isAndroid('Mozilla/5.0 (Linux; Android 14) AppleWebKit')).toBe(true)

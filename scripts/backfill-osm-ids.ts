@@ -78,12 +78,14 @@ function haversineMeters(lat1: number, lng1: number, lat2: number, lng2: number)
 async function nominatimSearchOnce(query: string, declaredLat: number, declaredLng: number): Promise<NominatimReverseResult | null> {
   await rateLimit();
   const encoded = encodeURIComponent(query);
-  // Use a generous PNW viewbox (matches lib/geocoder.ts) to bias toward
-  // Seattle-area features when the venue name is ambiguous.
+  // Use the city's viewbox (from city.config.ts, matching lib/geocoder.ts) to
+  // bias toward local features when the venue name is ambiguous.
+  const vb = CITY.geocoder.nominatimViewbox;
+  const viewbox = `${vb.west},${vb.south},${vb.east},${vb.north}`;
   const url =
     `https://nominatim.openstreetmap.org/search?q=${encoded}` +
     `&format=json&limit=1&countrycodes=us&addressdetails=0` +
-    `&viewbox=-122.6,47.3,-121.9,47.8`;
+    `&viewbox=${viewbox}`;
   const res = await fetch(url, { headers: { "User-Agent": NOMINATIM_USER_AGENT } });
   if (!res.ok) return null;
   const data = (await res.json()) as NominatimReverseResult[];
@@ -104,7 +106,7 @@ async function nominatimSearchOnce(query: string, declaredLat: number, declaredL
  *
  * Tries three query shapes in order (stopping at the first non-null):
  *   1. The full label string as-is.
- *   2. Just the venue name (everything before the first comma) + ", Seattle, WA".
+ *   2. Just the venue name (everything before the first comma) + ", <city>, <state>".
  *   3. Just the address (everything after the first comma).
  *
  * Mirrors the strategy in lib/geocoder.ts's `resolveEventCoords`.
@@ -119,7 +121,7 @@ async function nominatimSearch(
   if (firstComma > 0) {
     const venueName = query.slice(0, firstComma).trim();
     const address = query.slice(firstComma + 1).trim();
-    if (venueName) attempts.push({ q: `${venueName}, Seattle, WA`, strategy: "name-only" });
+    if (venueName) attempts.push({ q: `${venueName}, ${CITY.city.name}, ${CITY.city.state}`, strategy: "name-only" });
     if (address) attempts.push({ q: address, strategy: "address-only" });
   }
   for (const { q, strategy } of attempts) {

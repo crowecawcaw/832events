@@ -21,7 +21,7 @@ function makeEntry(overrides: Partial<CalendarInventoryEntry>): CalendarInventor
 const mockInventory: CalendarInventory = {
     rippers: [
         makeEntry({ name: "ballard-brewery", friendlyname: "Ballard Brewery", tags: ["Beer", "Ballard"] }),
-        makeEntry({ name: "jazz-club", friendlyname: "Seattle Jazz Club", tags: ["Music", "Downtown"] }),
+        makeEntry({ name: "jazz-club", friendlyname: "Houston Jazz Club", tags: ["Music", "Downtown"] }),
     ],
     external: [
         makeEntry({
@@ -154,14 +154,14 @@ describe.skipIf(SOURCE_DIR_COUNT === 0)("loadCalendarInventory integration", () 
 
     it("includes sub-calendars from multi-calendar sources", async () => {
         const inventory = await loadCalendarInventory(sourcesDir);
-        // Seattle showlists has sub-calendars; they should appear as separate entries
-        const showlistsSubs = inventory.rippers.filter(r => r.parentSource === "seattle-showlists");
+        // Houston showlists has sub-calendars; they should appear as separate entries
+        const showlistsSubs = inventory.rippers.filter(r => r.parentSource === "houston-showlists");
         expect(showlistsSubs.length).toBeGreaterThan(0);
         // Each sub-calendar should have a name, friendlyname, and parentSource
         for (const sub of showlistsSubs) {
             expect(typeof sub.name).toBe("string");
             expect(typeof sub.friendlyname).toBe("string");
-            expect(sub.parentSource).toBe("seattle-showlists");
+            expect(sub.parentSource).toBe("houston-showlists");
             expect(sub.sourceType).toBe("ripper");
         }
     });

@@ -95,8 +95,8 @@ describe('mergeIcsFiles', () => {
 
   it('sets correct calendar name and PRODID', () => {
     const result = mergeIcsFiles([ICS_A])
-    expect(result).toContain('X-WR-CALNAME:206.events')
-    expect(result).toContain('PRODID:-//206.events//Favorites//EN')
+    expect(result).toContain('X-WR-CALNAME:832.events')
+    expect(result).toContain('PRODID:-//832.events//Favorites//EN')
   })
 
   it('injects X-CALRIPPER-SOURCE and CATEGORIES from X-WR-CALNAME', () => {
