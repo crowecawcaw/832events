@@ -237,28 +237,6 @@ export function stripSuiteFloorSuffixes(location: string): string | null {
  * fails for neighborhood-level location strings.
  */
 const SEATTLE_NEIGHBORHOOD_CENTROIDS: Record<string, GeoCoords> = {
-  'belltown': { lat: 47.6132, lng: -122.3473 },
-  'capitol hill': { lat: 47.6253, lng: -122.3222 },
-  'central district': { lat: 47.6097, lng: -122.2953 },
-  'fremont': { lat: 47.6512, lng: -122.3501 },
-  'georgetown': { lat: 47.5477, lng: -122.3226 },
-  'magnolia': { lat: 47.6431, lng: -122.4009 },
-  'wallingford': { lat: 47.6603, lng: -122.3338 },
-  'phinney ridge': { lat: 47.6699, lng: -122.3551 },
-  'greenwood': { lat: 47.6920, lng: -122.3551 },
-  'ballard': { lat: 47.6677, lng: -122.3829 },
-  'south lake union': { lat: 47.6275, lng: -122.3362 },
-  'seattle center': { lat: 47.6205, lng: -122.3493 },
-  'pioneer square': { lat: 47.6007, lng: -122.3321 },
-  'international district': { lat: 47.5983, lng: -122.3237 },
-  'beacon hill': { lat: 47.5674, lng: -122.3076 },
-  'columbia city': { lat: 47.5596, lng: -122.2893 },
-  'rainier valley': { lat: 47.5468, lng: -122.2754 },
-  'west seattle': { lat: 47.5629, lng: -122.3862 },
-  'university district': { lat: 47.6614, lng: -122.3121 },
-  'queen anne': { lat: 47.6374, lng: -122.3569 },
-  'eastlake': { lat: 47.6392, lng: -122.3252 },
-  'lake city': { lat: 47.7190, lng: -122.2976 },
 };
 
 /**
@@ -290,31 +268,6 @@ export function lookupNeighborhoodCentroid(location: string): GeoCoords | null {
  * Seattle Public Library branch coordinates.
  */
 const SPL_BRANCH_COORDS: Record<string, GeoCoords> = {
-  'ballard branch': { lat: 47.6671, lng: -122.3836 },
-  'beacon hill branch': { lat: 47.5689, lng: -122.3014 },
-  'broadview branch': { lat: 47.7377, lng: -122.3560 },
-  'capitol hill branch': { lat: 47.6234, lng: -122.3196 },
-  'central library': { lat: 47.6064, lng: -122.3328 },
-  'columbia branch': { lat: 47.5589, lng: -122.2917 },
-  'delridge branch': { lat: 47.5540, lng: -122.3620 },
-  'douglass-truth branch': { lat: 47.6097, lng: -122.3000 },
-  'fremont branch': { lat: 47.6519, lng: -122.3502 },
-  'green lake branch': { lat: 47.6788, lng: -122.3321 },
-  'greenwood branch': { lat: 47.6960, lng: -122.3557 },
-  'high point branch': { lat: 47.5503, lng: -122.3718 },
-  'international district branch': { lat: 47.5979, lng: -122.3238 },
-  'lake city branch': { lat: 47.7189, lng: -122.2971 },
-  'magnolia branch': { lat: 47.6432, lng: -122.3985 },
-  'montlake branch': { lat: 47.6419, lng: -122.3079 },
-  'newholly branch': { lat: 47.5367, lng: -122.2839 },
-  'northeast branch': { lat: 47.6766, lng: -122.2987 },
-  'northgate branch': { lat: 47.7063, lng: -122.3255 },
-  'queen anne branch': { lat: 47.6374, lng: -122.3569 },
-  'rainier beach branch': { lat: 47.5222, lng: -122.2610 },
-  'south park branch': { lat: 47.5274, lng: -122.3251 },
-  'southwest branch': { lat: 47.5540, lng: -122.3776 },
-  'university branch': { lat: 47.6614, lng: -122.3121 },
-  'west seattle branch': { lat: 47.5629, lng: -122.3862 },
 };
 
 /**
@@ -354,35 +307,6 @@ export function lookupSPLBranchCoords(location: string): GeoCoords | null {
  * Keys are uppercase building codes (e.g. "HUB", "PAT").
  */
 const UW_BUILDING_COORDS: Record<string, GeoCoords> = {
-  HUB: { lat: 47.6557, lng: -122.3050 },
-  PAT: { lat: 47.6532, lng: -122.3115 },
-  KNE: { lat: 47.6561, lng: -122.3088 },
-  MNY: { lat: 47.6556, lng: -122.3073 },
-  MUS: { lat: 47.6553, lng: -122.3060 },
-  ART: { lat: 47.6573, lng: -122.3080 },
-  HAG: { lat: 47.6575, lng: -122.3095 },
-  FAC: { lat: 47.6531, lng: -122.3048 },
-  BRK: { lat: 47.6601, lng: -122.3131 },
-  HSD: { lat: 47.6508, lng: -122.3076 },
-  HSG: { lat: 47.6508, lng: -122.3076 },
-  HRC: { lat: 47.6501, lng: -122.3072 },
-  HSK: { lat: 47.6508, lng: -122.3076 },
-  CHSC: { lat: 47.6589, lng: -122.3037 },
-  CUH: { lat: 47.6601, lng: -122.2898 },
-  OBS: { lat: 47.6601, lng: -122.3131 },
-  PHT: { lat: 47.6561, lng: -122.3088 },
-  SAV: { lat: 47.6565, lng: -122.3088 },
-  THO: { lat: 47.6565, lng: -122.3076 },
-  GWN: { lat: 47.6565, lng: -122.3076 },
-  ALB: { lat: 47.6557, lng: -122.3076 },
-  MGH: { lat: 47.6557, lng: -122.3057 },
-  PAR: { lat: 47.6569, lng: -122.3088 },
-  EGL: { lat: 47.6565, lng: -122.3076 },
-  LSB: { lat: 47.6557, lng: -122.3057 },
-  OAK: { lat: 47.6531, lng: -122.3048 },
-  SFCO: { lat: 47.6610, lng: -122.3145 },
-  EDP: { lat: 47.6515, lng: -122.3011 },
-  SUZ: { lat: 47.6557, lng: -122.3076 },
 };
 
 /**
@@ -390,9 +314,6 @@ const UW_BUILDING_COORDS: Record<string, GeoCoords> = {
  * Keys are lowercased location strings.
  */
 const UW_NAMED_LOCATIONS: Record<string, GeoCoords> = {
-  'anderson hall courtyard': { lat: 47.6553, lng: -122.3035 },
-  'uw botanic gardens': { lat: 47.6601, lng: -122.2898 },
-  'center for urban horticulture': { lat: 47.6601, lng: -122.2898 },
 };
 
 /**
@@ -432,129 +353,6 @@ export function lookupUWBuilding(location: string): GeoCoords | null {
  * Keys are lowercased venue names.
  */
 const KNOWN_VENUE_COORDS: Record<string, GeoCoords> = {
-  'aladdin theater (portland)': { lat: 45.5098, lng: -122.6227 },
-  'arts at king street station': { lat: 47.5983, lng: -122.3303 },
-  'bell street park': { lat: 47.6149, lng: -122.3445 },
-  'belltown yacht club': { lat: 47.6155, lng: -122.3487 },
-  'bitterlake community center': { lat: 47.7201, lng: -122.3473 },
-  'block 41': { lat: 47.6038, lng: -122.3301 },
-  "bubba's roadhouse (sultan)": { lat: 47.8608, lng: -121.8041 },
-  'cap hill (rsvp for details)': { lat: 47.6253, lng: -122.3222 },
-  'center for urban horticulture': { lat: 47.6573, lng: -122.2904 },
-  'central saloon': { lat: 47.6007, lng: -122.3321 },
-  'centennial park, 1130 208th street southeast, bothell, wa': { lat: 47.7610, lng: -122.2218 },
-  'club comedy seattle': { lat: 47.6176, lng: -122.3499 },
-  'culture yard': { lat: 47.6165, lng: -122.3456 },
-  'cwb boathouse': { lat: 47.6259, lng: -122.3392 },
-  'discovery park, north parking lot': { lat: 47.6617, lng: -122.4077 },
-  'duwamish longhouse': { lat: 47.5612, lng: -122.3598 },
-  'fremont studios': { lat: 47.6513746, lng: -122.3556160 },
-  'glasswing shop': { lat: 47.6175, lng: -122.3251 },
-  'gard vintners, 19151 144th ave. ne unit d, woodinville, wa': { lat: 47.7553, lng: -122.1516 },
-  'gorge amphitheatre': { lat: 47.0801, lng: -119.9947 },
-  'gould gallery': { lat: 47.6092, lng: -122.3321 },
-  'green lake community center': { lat: 47.6803, lng: -122.3285 },
-  'hazard factory': { lat: 47.6138, lng: -122.3204 },
-  'husky ballpark': { lat: 47.6515, lng: -122.3011 },
-  'husky softball stadium': { lat: 47.6555, lng: -122.3009 },
-  'husky soccer stadium': { lat: 47.6499, lng: -122.2637 },
-  'husky softball stadium, university of washington': { lat: 47.6555, lng: -122.3009 },
-  'j. rinehart gallery': { lat: 47.5994, lng: -122.3305 },
-  'j rinehart gallery': { lat: 47.5994, lng: -122.3305 },
-  'kangaroo & kiwi': { lat: 47.6689, lng: -122.3834 },
-  'seattle central college': { lat: 47.6163, lng: -122.3219 },
-  'kremwerk': { lat: 47.6202, lng: -122.3374 },
-  'kremwerk-timbre room-cherry complex': { lat: 47.6202, lng: -122.3374 },
-  'kane hall, university of washington, 4069 spokane ln, seattle, 98105, united states': { lat: 47.6566, lng: -122.3092 },
-  'langston hughes performing arts institute': { lat: 47.5969, lng: -122.3165 },
-  'meadowbrook community center': { lat: 47.7133, lng: -122.2989 },
-  'mercury @ machinewerks': { lat: 47.5983, lng: -122.3237 },
-  'mount vernon downtown association': { lat: 48.4206767, lng: -122.337333 },
-  'museum of flight': { lat: 47.5186, lng: -122.2967 },
-  'neumos': { lat: 47.6134, lng: -122.3203 },
-  'neumos & barboza': { lat: 47.6134, lng: -122.3203 },
-  'ohm nightclub': { lat: 47.6134, lng: -122.3203 },
-  'orient express restaurant & lounge': { lat: 47.5983, lng: -122.3237 },
-  'overlake village station pedestrian bridge': { lat: 47.6363, lng: -122.1389 },
-  'pacave pizza (spokane)': { lat: 47.6587, lng: -117.4260 },
-  'peace of mind brewing': { lat: 47.8316011, lng: -122.3053788 },
-  'ravenna-eckstein community center': { lat: 47.6770, lng: -122.3044 },
-  'seattle center armory': { lat: 47.6215, lng: -122.3509 },
-  'shibuya hi-fi': { lat: 47.6134, lng: -122.3203 },
-  'spanish ballroom at mcmenamins elks temple': { lat: 47.6120, lng: -122.3321 },
-  'the church cantina': { lat: 47.6253, lng: -122.3222 },
-  'the astoria (vancouver bc)': { lat: 49.2643, lng: -123.1036 },
-  'the crypt (olympia)': { lat: 47.0449, lng: -122.8986 },
-  'the gorge amphitheatre': { lat: 47.0801, lng: -119.9947 },
-  'the great hall at union station': { lat: 47.6001, lng: -122.3298 },
-  'the moore theatre': { lat: 47.6120, lng: -122.3425 },
-  'the museum of flight': { lat: 47.5186, lng: -122.2967 },
-  'the new frontier lounge': { lat: 47.6677, lng: -122.3829 },
-  'the paramount theatre': { lat: 47.6120, lng: -122.3321 },
-  'the taproom at pike place': { lat: 47.6097, lng: -122.3425 },
-  'twilight cafe & bar': { lat: 45.5886, lng: -122.7319 },
-  'vue lounge': { lat: 47.6134, lng: -122.3203 },
-  'volunteer park amphitheater': { lat: 47.6372, lng: -122.3150 },
-  'wallingford community senior center': { lat: 47.6639, lng: -122.3312 },
-  'worksource north seattle': { lat: 47.7097, lng: -122.3359 },
-  'worksource north seattle computer lab': { lat: 47.7097, lng: -122.3359 },
-  // Seattle University campus buildings (Nominatim doesn't index individual buildings)
-  'redhawk center': { lat: 47.6095, lng: -122.3188 },
-  'student center, student center 160 fr. leroux conference center': { lat: 47.6095, lng: -122.3188 },
-  // Old Rainier Brewery event spaces
-  'the mountain room: bar at the r, 3100 airport way south': { lat: 47.5754764, lng: -122.3207484 },
-  // --- Added known venues for Nominatim failure fallback ---
-  'armistice coffee roosevelt, 6717 roosevelt ave ne, seattle, wa': { lat: 47.6717, lng: -122.3176 },
-  'black panther park, seattle, wa': { lat: 47.5280, lng: -122.2690 },
-  'eastlake performing arts center, sammamish, wa': { lat: 47.5693, lng: -122.0282 },
-  'faye g. allen grand atrium, mohai, 860 terry ave n, seattle, wa, 98109': { lat: 47.6198, lng: -122.3485 },
-  'hilltop ale house, 2129 queen anne ave n, seattle, wa 98109': { lat: 47.6402, lng: -122.3570 },
-  'kane hall, university of washington, seattle, wa': { lat: 47.6566, lng: -122.3092 },
-  'kirkland rotary central station, 1 railroad ave, kirkland, wa': { lat: 47.6768, lng: -122.2057 },
-  'lincoln high school theater, seattle, wa': { lat: 47.6663, lng: -122.3275 },
-  'meridian playground, 4800 meridian ave n, seattle, wa': { lat: 47.6627, lng: -122.3310 },
-  'microsoft lakefront pavilion, mohai, 860 terry ave n, seattle, wa, 98109': { lat: 47.6198, lng: -122.3485 },
-  'mohai': { lat: 47.6198, lng: -122.3485 },
-  'mohai, 860 terry ave n, seattle, wa, 98109': { lat: 47.6198, lng: -122.3485 },
-  'norcliffe conference room, mohai, 860 terry ave n, seattle, wa, 98109': { lat: 47.6198, lng: -122.3485 },
-  'occidental square, 117 s washington st, seattle, wa': { lat: 47.6011, lng: -122.3323 },
-  'oxbow farm & conservation center, 10819 carnation duvall road northeast, carnation, wa': { lat: 47.5699, lng: -121.9010 },
-  'phinney center campus: blue (upper) building, 6532 phinney ave. n., seattle, wa': { lat: 47.6797, lng: -122.3549 },
-  'phinney center campus: brick (lower) building, 6532 phinney ave. n., seattle': { lat: 47.6797, lng: -122.3549 },
-  'everett performing arts center, 2710 wetmore ave, everett, wa 98201': { lat: 47.9815, lng: -122.2075 },
-  'pud auditorium theater, 2320 california st, everett, wa': { lat: 47.9784, lng: -122.2071 },
-  'stottle winery covington tasting room, 16783 southeast 272nd street, covington, wa': { lat: 47.3628, lng: -122.1151 },
-  'the great hall, 1119 eighth avenue, seattle, 98101': { lat: 47.6087, lng: -122.3295 },
-  'the toad house, 1405 northeast mcwilliams road, bremerton, wa': { lat: 47.5824, lng: -122.6229 },
-  'the wyncote nw forum, 1119 8th ave, seattle, 98101': { lat: 47.6087, lng: -122.3295 },
-  'unexpected productions, 1428 post alley, seattle, wa': { lat: 47.6097, lng: -122.3420 },
-  'mill creek city hall north, 15720 main street, mill creek, wa': { lat: 47.8565, lng: -122.2013 },
-  'walls of books, 1025 northwest gilman boulevard, #suite e-3, issaquah, wa': { lat: 47.5446, lng: -122.0535 },
-  'calvary: the hill': { lat: 47.6174, lng: -122.3180 },
-  'town hall, 1119 eighth avenue (at seneca street), seattle, wa': { lat: 47.6090, lng: -122.3299 },
-  'foster school of business, founders hall': { lat: 47.6588, lng: -122.3071 },
-  'northwest african american museum': { lat: 47.5892, lng: -122.3019 },
-  // Seatoday venues not in Nominatim
-  'kent ymca': { lat: 47.3804174, lng: -122.1969249 },
-  'cascadia college': { lat: 47.7608677, lng: -122.1922103 },
-  'newcastle cemetery': { lat: 47.5318872, lng: -122.1673852 },
-  'woodinville sports club': { lat: 47.7393494, lng: -122.1426478 },
-  // Nominatim fails on "Council Chambers, 600 4th Ave., Floor, Seattle, WA" due to truncated "Floor" suffix
-  'council chambers, 600 4th ave., floor, seattle, wa': { lat: 47.6038904, lng: -122.3300986 },
-  // 19hz uses "Church Cantina" and "New Frontier Lounge" without leading "The";
-  // Nominatim returns no results for these short names but they are already known.
-  'church cantina': { lat: 47.6253, lng: -122.3222 },
-  'new frontier lounge': { lat: 47.6677, lng: -122.3829 },
-  // Magnuson Park Building 30 is a historic NOAA/arts building inside Warren G. Magnuson Park
-  'magnuson park building 30 lower conference room, seattle, wa': { lat: 47.6795, lng: -122.2544 },
-  // University of Puget Sound verified address: 1567 N Union Ave, Tacoma, WA 98416
-  'university of puget sound, 1567 north union avenue, tacoma, washington, 98416': { lat: 47.2643, lng: -122.4842 },
-  // Edmonds Bookshop: 111 5th Ave S, Edmonds, WA 98020 (Nominatim found but fails with bare name query)
-  'edmonds bookshop': { lat: 47.8101795, lng: -122.3774160 },
-  // Workhorse Coworking Edmonds: 123 2nd Ave S Suite 230, Edmonds, WA (stripSuiteFloorSuffixes leaves "230" dangling)
-  'workhorse coworking, 123 2nd avenue south, #suite 230, edmonds, wa': { lat: 47.8107897, lng: -122.3809867 },
-  // Seatoday intersection: Nominatim can't parse "Ave. North" suffix — bus stop node confirms coords
-  'west crockett street and queen anne ave. north, seattle, wa': { lat: 47.6368215, lng: -122.3570590 },
 };
 
 /**
