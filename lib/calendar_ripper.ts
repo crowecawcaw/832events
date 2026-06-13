@@ -1225,20 +1225,37 @@ END:VCALENDAR`;
       try {
         const externalEvents = parseExternalCalendarEvents(cachedIcs);
         for (const event of externalEvents) {
-          const result = await resolveEventCoords(geoCache, event.location, `external-${calendar.name}`);
-          geoCache = result.cache;
-
           let lat: number | undefined;
           let lng: number | undefined;
           let osmType: 'node' | 'way' | 'relation' | undefined;
           let osmId: number | undefined;
-          if (result.coords) {
-            lat = result.coords.lat;
-            lng = result.coords.lng;
-            osmType = result.coords.osmType;
-            osmId = result.coords.osmId;
+          let geocodeSource: 'ripper' | 'cached' | 'none' | undefined;
+
+          if (calendar.geo) {
+            // Declared single-venue feed — apply the YAML venue coords to every
+            // event and skip per-event geocoding, mirroring attachEventCoords'
+            // `resolvedGeo` precedence for rippers. The events' own LOCATION
+            // strings (often building names, "Online", or out-of-town strings)
+            // are not geocoded, so a fixed-venue feed never dumps geocode
+            // errors into the build. Feeds with `geo: null` (community /
+            // multi-location calendars) still geocode per-event below.
+            lat = calendar.geo.lat;
+            lng = calendar.geo.lng;
+            osmType = calendar.geo.osmType;
+            osmId = calendar.geo.osmId;
+            geocodeSource = 'ripper';
+          } else {
+            const result = await resolveEventCoords(geoCache, event.location, `external-${calendar.name}`);
+            geoCache = result.cache;
+            if (result.coords) {
+              lat = result.coords.lat;
+              lng = result.coords.lng;
+              osmType = result.coords.osmType;
+              osmId = result.coords.osmId;
+            }
+            if (result.error) geocodeErrors.push(result.error);
+            geocodeSource = result.geocodeSource;
           }
-          if (result.error) geocodeErrors.push(result.error);
 
           eventsIndex.push({
             icsUrl,
@@ -1255,7 +1272,7 @@ END:VCALENDAR`;
             ...(lat !== undefined ? { lat } : {}),
             ...(lng !== undefined ? { lng } : {}),
             ...(osmType !== undefined && osmId !== undefined ? { osmType, osmId } : {}),
-            ...(result.geocodeSource !== undefined ? { geocodeSource: result.geocodeSource } : {}),
+            ...(geocodeSource !== undefined ? { geocodeSource } : {}),
           });
         }
       } catch (error) {
