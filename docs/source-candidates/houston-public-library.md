@@ -1,6 +1,6 @@
 ---
 name: Houston Public Library
-status: candidate
+status: investigating
 platform: LibCal (ICS)
 url: https://calendar.houstonlibrary.org/calendar/events
 tags: [Books, Education, Community]
@@ -9,23 +9,31 @@ lastChecked: 2026-06-13
 pr:
 ---
 
-Houston Public Library system-wide events feed via Springshare LibCal.
-Implemented as `sources/external/houston-public-library.yaml`.
+Houston Public Library system-wide events via Springshare LibCal. High value
+(500-event export across 30+ branches: storytimes, digital-literacy/ESL/
+citizenship workshops, author talks), but the public iCal feed is **not
+usable as-is** and is held for investigation.
 
-- ICS feed: `https://calendar.houstonlibrary.org/ical_subscribe.php?cid=15272`
-  (the `cid` was read off the "subscribe via iCal" widget on the events page).
-- Verified live: feed parses to **500 events** (the LibCal export cap) across
-  30+ branches — Central (Jesse H. Jones), Julia Ideson, Heights, Moody,
-  Freed-Montrose, Young, Vinson, Flores, TECHLink, etc. Programs are real
-  public events: storytimes, digital-literacy/computer classes, ESL and
-  citizenship workshops, author talks.
-- `geo: null` — multi-branch system, so each event geocodes from its own
-  `LOCATION` (branch name) rather than a single venue coordinate.
+Problem: the only public feed found,
+`https://calendar.houstonlibrary.org/ical_subscribe.php?cid=15272` (cid read
+off the events page's "subscribe via iCal" widget), returns a **fixed,
+stale window** — exactly 500 events all dated 2026-05-13 .. 2026-05-21 —
+regardless of `date`/`days`/`src` parameters. As of the real current date
+(2026-06-13, confirmed via server `Date:` headers from Google, Cloudflare,
+and the library host itself), that feed yields **0 future events**, so it
+would trip the new-source "0 events" gate and fail CI. `cid=15272` appears
+to be a featured/saved calendar slice, not the live "all upcoming events"
+aggregate.
 
-Note: the feed serves "upcoming from the server's today, capped at 500."
-Because HPL runs ~50+ events/day, those 500 events only span about a week.
-Verified the full pipeline yields 500 **future** events when the build clock
-matches the feed's window (`faketime` run) — the dev sandbox clock was ~1
-month ahead of the live world, which is why an unmodified local build saw
-them as past. CI runs on real-world UTC (aligned with the feed), so it will
-populate normally.
+(Earlier note in this file claimed a dev-sandbox clock skew — that was
+wrong. The sandbox clock matches real-world UTC; the feed itself is stale.)
+
+Next steps before implementing:
+- Find the live aggregate feed. LibCal's authenticated REST API
+  (`/1.1/events`) returns upcoming events but needs OAuth client
+  credentials the library would have to issue — not public.
+- Look for an alternate public export: a different `cid` for the true
+  system-wide calendar, a per-branch `cid` that serves upcoming events, or
+  a LibCal RSS/JSON widget endpoint the events page calls client-side.
+- Only implement once a feed is confirmed to return events dated after the
+  current date.
