@@ -2,9 +2,9 @@
  * init-city — turn a fresh copy of this template into a new city's instance.
  *
  * Regenerates city.config.ts from your answers, rewrites the files that can't
- * import the config (web/src/sw.js, README.md), and strips the Seattle
- * content (sources, candidate docs, discovery logs, caches, geocoder lookup
- * tables). Deterministic and idempotent — safe to re-run. See
+ * import the config (web/src/sw.js, README.md), and strips the template's
+ * seed content (sources, candidate docs, discovery logs, caches, geocoder
+ * lookup tables). Deterministic and idempotent — safe to re-run. See
  * docs/city-template.md for the full design.
  *
  * Usage:
@@ -217,21 +217,21 @@ export default cityConfig;
 }
 
 // ---------------------------------------------------------------------------
-// Seattle content strip
+// Seed-content strip
 // ---------------------------------------------------------------------------
 
 /**
- * Empty the Seattle lookup tables in lib/geocoder.ts (neighborhood
- * centroids, SPL branches, UW buildings, KNOWN_VENUE_COORDS). The matching
- * logic around them is table-driven, so empty tables are clean no-ops; a
- * new city regrows KNOWN_VENUE_COORDS via the geo-resolver skill.
+ * Empty the city lookup tables in lib/geocoder.ts (neighborhood
+ * centroids, library branches, university buildings, KNOWN_VENUE_COORDS). The
+ * matching logic around them is table-driven, so empty tables are clean no-ops;
+ * a new city regrows KNOWN_VENUE_COORDS via the geo-resolver skill.
  */
 export function emptyGeocoderTables(src: string): string {
     const tables = [
-        "SEATTLE_NEIGHBORHOOD_CENTROIDS",
-        "SPL_BRANCH_COORDS",
-        "UW_BUILDING_COORDS",
-        "UW_NAMED_LOCATIONS",
+        "NEIGHBORHOOD_CENTROIDS",
+        "LIBRARY_BRANCH_COORDS",
+        "UNIVERSITY_BUILDING_COORDS",
+        "UNIVERSITY_NAMED_LOCATIONS",
         "KNOWN_VENUE_COORDS",
     ];
     let out = src;
@@ -353,7 +353,7 @@ export async function buildActions(root: string, cfg: CityConfig): Promise<Strip
         writeFile(join(root, "allowed-removals", ".gitkeep"), ""));
 
     // 6. Caches: uncertainty cache resets to the empty baseline; the
-    // out-of-band report is Seattle data and the build tolerates its absence.
+    // out-of-band report is seed data and the build tolerates its absence.
     add("reset event-uncertainty-cache.json to the empty baseline", () =>
         writeFile(join(root, "event-uncertainty-cache.json"), JSON.stringify({ version: 1, entries: {} }, null, 2) + "\n"));
     add("delete outofband-report.json", () =>
@@ -367,8 +367,8 @@ export async function buildActions(root: string, cfg: CityConfig): Promise<Strip
     add("delete .github/workflows/notify-discord.yml", () =>
         rm(join(root, ".github", "workflows", "notify-discord.yml"), { force: true }));
 
-    // 8. Geocoder Seattle lookup tables → empty stubs
-    add("empty the Seattle lookup tables in lib/geocoder.ts", async () => {
+    // 8. Geocoder city lookup tables → empty stubs
+    add("empty the city lookup tables in lib/geocoder.ts", async () => {
         const path = join(root, "lib", "geocoder.ts");
         await writeFile(path, emptyGeocoderTables(await readFile(path, "utf8")));
     });
@@ -458,7 +458,7 @@ async function main() {
     }
     if (!yes) {
         const rl = createInterface({ input, output });
-        const confirm = (await rl.question("\nThis permanently deletes the Seattle content. Continue? (yes/no): ")).trim().toLowerCase();
+        const confirm = (await rl.question("\nThis permanently deletes the template seed content. Continue? (yes/no): ")).trim().toLowerCase();
         rl.close();
         if (confirm !== "yes" && confirm !== "y") {
             console.log("Aborted — nothing was changed.");

@@ -16,7 +16,7 @@ export interface CalendarInventoryEntry {
     ripperType?: string;
     proxy?: string | false;
     schedule?: string;
-    /** Parent source name (e.g., "seattle-showlists") for sub-calendars. */
+    /** Parent source name (e.g., "houston-showlists") for sub-calendars. */
     parentSource?: string;
 }
 
@@ -52,7 +52,7 @@ export async function loadCalendarInventory(sourcesDir: string): Promise<Calenda
                 ripperType: config.type,
                 proxy: config.proxy,
             });
-            // Add one entry per sub-calendar (for multi-calendar sources like seattle-showlists)
+            // Add one entry per sub-calendar (for multi-calendar sources like houston-showlists)
             for (const cal of config.calendars) {
                 // Skip sub-calendars that are the same as the source (single-calendar rippers)
                 if (cal.name === config.name && !config.disabled) continue;

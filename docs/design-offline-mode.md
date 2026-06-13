@@ -236,7 +236,7 @@ const OFFLINE_HTML = `<!DOCTYPE html>
 <html><head><title>Offline</title></head>
 <body style="font-family:sans-serif;text-align:center;padding:4rem">
   <h1>You're offline</h1>
-  <p>Seattle Community Calendars needs a network connection for the first visit.
+  <p>Houston Community Calendars needs a network connection for the first visit.
      Please reconnect and reload.</p>
 </body></html>`
 ```
@@ -530,8 +530,8 @@ While not strictly required for offline caching, adding a Web App Manifest enabl
 ```json
 // web/src/manifest.webmanifest (copied to output root by the Vite plugin)
 {
-  "name": "Seattle Community Calendars",
-  "short_name": "SEA Calendars",
+  "name": "Houston Community Calendars",
+  "short_name": "HOU Calendars",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#1a1a2e",

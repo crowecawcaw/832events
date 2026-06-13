@@ -51,8 +51,8 @@ npm run init-city -- --answers my-city.json --yes
 ```
 
 This regenerates `city.config.ts` for your city and permanently deletes the
-Seattle content (sources, candidate docs, caches, geocoder lookup tables,
-and the Seattle-specific Discord notification workflow).
+Seed content (sources, candidate docs, caches, geocoder lookup tables,
+and the reference Discord notification workflow).
 Afterwards, open `city.config.ts` and hand-tune the derived geographic
 boxes — `map.clampBounds` should hug your populated metro,
 `geocoder.nominatimViewbox` slightly larger, `venueSanityBbox` a generous
@@ -118,7 +118,7 @@ rung 3 of the proxy ladder — JS-challenge bypass).
 
 ### Discord notifications
 
-`init-city` deletes the Seattle-specific notification workflow. To enable
+`init-city` deletes the reference notification workflow. To enable
 Discord on your copy, restore `.github/workflows/notify-discord.yml` from
 the upstream repo (adjusting the hardcoded role mention), then set the
 `DISCORD_WEBHOOK_CALENDAR` secret to a channel webhook URL. Build results
@@ -192,7 +192,7 @@ git merge upstream/main --allow-unrelated-histories   # first time only
 git merge upstream/main                               # thereafter
 ```
 
-Because your copy deleted the Seattle content once and never recreates the
+Because your copy deleted the seed content once and never recreates the
 same paths, merges touch engine files only; `city.config.ts` conflicts only
 when the schema itself changes.
 

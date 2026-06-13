@@ -9,8 +9,8 @@ them.
 Banner photos (the venue/source header on `ChannelDetail`, and the event photo
 on `EventDetail`) were a single `<img>` at a fixed height with
 `object-fit: cover`. `cover` fills the box by **center-cropping**, so a logo or
-wordmark that doesn't sit dead-center loses its edges — e.g. the "Ballard Brood"
-wordmark showed only its middle.
+wordmark that doesn't sit dead-center loses its edges — e.g. a venue's
+off-center wordmark showed only its middle.
 
 ### Solution: blurred-backdrop "contain" (`BannerImage`)
 

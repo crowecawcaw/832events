@@ -114,8 +114,8 @@ describe('urlHash codec', () => {
   })
 
   it('round-trips a drilled-into health source (drawer open)', () => {
-    expect(roundTrip({ section: 'health', healthSource: 'seattle-showlists' })).toEqual({
-      ...DEFAULTS, section: 'health', healthSource: 'seattle-showlists',
+    expect(roundTrip({ section: 'health', healthSource: 'houston-showlists' })).toEqual({
+      ...DEFAULTS, section: 'health', healthSource: 'houston-showlists',
     })
   })
 

@@ -65,7 +65,7 @@ describe('SquarespaceRipper', () => {
                 location: {
                     addressTitle: 'Example Museum',
                     addressLine1: '123 Main St',
-                    addressLine2: 'Seattle, WA 98101',
+                    addressLine2: 'Houston, TX 98101',
                 },
                 assetUrl: 'https://images.squarespace-cdn.com/content/image.jpg',
             };
@@ -76,7 +76,7 @@ describe('SquarespaceRipper', () => {
             const e = event as RipperCalendarEvent;
             expect(e.id).toBe('abc123');
             expect(e.summary).toBe('Community Art Opening');
-            expect(e.location).toBe('Example Museum, 123 Main St, Seattle, WA 98101');
+            expect(e.location).toBe('Example Museum, 123 Main St, Houston, TX 98101');
             expect(e.url).toBe('https://www.example.org/events/community-art-opening');
             expect(e.description).toBe('Join us for an evening of art and community.');
             expect(e.imageUrl).toBe('https://images.squarespace-cdn.com/content/image.jpg');

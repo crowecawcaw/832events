@@ -126,7 +126,7 @@ That skill handles:
 - Flipping the PR to ready, enabling auto-merge, merging on green
 
 **Do not skip the live-fetch validation.** A poster lookup that
-identifies a Seattle band's website as the candidate source is still
+identifies a Houston band's website as the candidate source is still
 just a candidate — the URL needs to actually return event data before
 implementation.
 
@@ -146,7 +146,7 @@ One concise message covering each event in the input. For each:
 
 - **Always search production data first.** Never decide coverage by
   scanning `sources/` in the repo — aggregator rippers (`19hz`,
-  `ticketmaster`, `seattle-showlists`) cover venues the directory
+  `ticketmaster`, `houston-showlists`) cover venues the directory
   listing won't reveal.
 - **Cast a wide net, then read carefully.** The lookup script returns
   fuzzy candidates with score breakdowns. A high score does not mean
@@ -160,7 +160,7 @@ One concise message covering each event in the input. For each:
   park does.
 - **Err on the side of adding** when the venue/promoter clearly hosts
   a continuing series of events. The project's `source-discovery`
-  skill states the goal explicitly: any working Seattle source is
+  skill states the goal explicitly: any working Houston source is
   better than no source.
 - **One source per poster.** If a poster names a venue + promoter +
   three bands, add the most likely *recurring* source — usually the

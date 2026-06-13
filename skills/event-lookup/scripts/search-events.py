@@ -288,7 +288,7 @@ def best_venue_score(
 def parse_event_date(raw: str) -> dt.date | None:
     if not raw:
         return None
-    # events-index dates look like "2026-06-12T20:00-07:00[America/Los_Angeles]"
+    # events-index dates look like "2026-06-12T20:00-05:00[America/Chicago]"
     m = re.match(r"^(\d{4})-(\d{2})-(\d{2})", raw)
     if not m:
         return None

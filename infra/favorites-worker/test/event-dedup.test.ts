@@ -14,7 +14,7 @@ function makeEvent(overrides: Partial<EventsIndexEntry> & { summary: string; dat
   }
 }
 
-// Approx Seattle coords for testing
+// Approx Houston coords for testing
 const SEA_LAT = 47.6062
 const SEA_LNG = -122.3321
 
@@ -56,7 +56,7 @@ describe('haversineKm', () => {
   })
 
   it('returns correct distance for known points', () => {
-    // Seattle to Bellevue is roughly 5 km
+    // Houston to Katy is roughly 5 km
     const dist = haversineKm(47.6062, -122.3321, 47.6101, -122.2015)
     expect(dist).toBeGreaterThan(4)
     expect(dist).toBeLessThan(12)

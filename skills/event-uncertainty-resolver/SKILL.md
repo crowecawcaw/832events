@@ -125,7 +125,7 @@ In your reply, include:
 |---|---|---|
 | `startTime` | `HH:MM` or `HH:MM:SS` (in the event's local timezone) | `19:30` |
 | `duration` | integer seconds | `10800` (3 hours) |
-| `location` | string (the venue address as you would expect to see in a calendar app) | `123 Main St, Seattle, WA` |
+| `location` | string (the venue address as you would expect to see in a calendar app) | `123 Main St, Houston, TX` |
 | `imageUrl` | URL string | `https://example.com/event.jpg` |
 | `cost` | `--cost-free`, `--cost-min <n>` (USD face value, optional `--cost-max <n>`), or `--cost-paid-unknown` | `--cost-min 15 --cost-max 45` |
 

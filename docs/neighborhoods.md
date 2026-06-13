@@ -9,9 +9,9 @@ neighborhood model.** A "neighborhood" is purely a registered **tag string**.
 
 1. **The registry is the source of truth.** `TAG_CATEGORIES.Neighborhoods`
    in `lib/config/tags.ts` is a hand-maintained flat list of strings that
-   count as neighborhoods (`Ballard`, `Capitol Hill`, `Uptown`, …). It also
-   holds nearby suburbs treated as areas (`Shoreline`, `Vashon`, `Renton`,
-   `Tukwila`, …).
+   count as neighborhoods (`Montrose`, `The Heights`, `Midtown`, …). It also
+   holds nearby suburbs treated as areas (`Sugar Land`, `Katy`, `Pearland`,
+   `Pasadena`, …).
 
 2. **A venue "is in" a neighborhood iff one of its `tags:` is in that list.**
    `categoryFor(tag)` (`lib/config/tags.ts`) returns the tag's category, and
@@ -23,7 +23,7 @@ neighborhood model.** A "neighborhood" is purely a registered **tag string**.
 3. **There is no fallback to the venue address.** A channel's `hood` comes
    **only** from a registered neighborhood tag. We deliberately do *not* fall
    back to the venue's `geo.label`, which is a raw street address
-   (`"2100 6th Ave, Seattle"`) and reads poorly as an area heading. An
+   (`"2100 Main St, Houston"`) and reads poorly as an area heading. An
    untagged venue yields `hood = null` and groups under
    **"Citywide · multiple venues"** instead.
 
@@ -37,7 +37,7 @@ Tags are normally free-form — any string in a source's `tags:` is valid and
 shows under "Other" in the UI. **Neighborhoods are the exception.** For a tag
 to be *recognized as a neighborhood* (and thus produce an area heading), it
 **must be registered** in `TAG_CATEGORIES.Neighborhoods`. Tag a venue
-`"Belltown"` while `"Belltown"` is absent from the registry and
+`"Spring Branch"` while `"Spring Branch"` is absent from the registry and
 `isNeighborhoodTag` returns `false`, so it won't head an area section.
 
 This registration requirement is **enforced for venues** (sources with a
@@ -55,7 +55,7 @@ area sections.
 1. **Register the neighborhood** in `lib/config/tags.ts` →
    `TAG_CATEGORIES.Neighborhoods` if it isn't already there. Follow the
    tag-naming conventions in `AGENTS.md` (natural casing with spaces for
-   neighborhoods: `"Capitol Hill"`, `"West Seattle"`). The slug
+   neighborhoods: `"Montrose"`, `"Museum District"`). The slug
    `tag.toLowerCase().replace(/[^a-z0-9]/g, '-')` becomes the
    `tag-<slug>.ics` aggregate URL, so multi-word names are fine
    (`"Stadium District"` → `tag-stadium-district.ics`).

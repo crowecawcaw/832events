@@ -197,9 +197,9 @@ Or, for a one-off, edit the YAML directly:
 
 ```yaml
 geo:
-  lat: 47.6134
-  lng: -122.3203
-  label: "Venue Name, 123 Main St, Seattle, WA"
+  lat: 29.7604
+  lng: -95.3698
+  label: "Venue Name, 123 Main St, Houston, TX"
   # Brief reason — what came back, why it was wrong.
   osmChecked: "2026-04-24"
 ```

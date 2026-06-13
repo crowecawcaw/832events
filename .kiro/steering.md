@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-832.events is a data-driven web scraping tool that generates iCalendar (.ics) files from various Seattle-area websites. It uses a modular "ripper" architecture to extract event information from different sources and convert them into standardized calendar files, published at https://832.events/.
+832.events is a data-driven web scraping tool that generates iCalendar (.ics) files from various Houston-area websites. It uses a modular "ripper" architecture to extract event information from different sources and convert them into standardized calendar files, published at https://832.events/.
 
 ## Core Architecture
 
@@ -77,7 +77,7 @@ if (daysDiff < -7) {
 
 ### 4. Location Filtering
 For multi-region sources, implement location filtering:
-- Define location keywords (seattle, pacific place, magnuson park, etc.)
+- Define location keywords (houston, downtown, hermann park, etc.)
 - Filter events based on title, location, and description content
 - Only apply if filtering is deterministic and reliable
 - Consider separate calendars for different regions

@@ -57,14 +57,14 @@ the aggregate ICS/RSS for that tag.
   "generated": "2026-04-13T17:00:00.000Z",
   "tags": [
     {
-      "name": "Capitol Hill",
-      "slug": "capitol-hill",
+      "name": "Montrose",
+      "slug": "montrose",
       "category": "Neighborhood",
       "eventCount": 312,
       "calendarCount": 14,
       "links": {
-        "ics":  { "href": "tag-capitol-hill.ics" },
-        "rss":  { "href": "tag-capitol-hill.rss" }
+        "ics":  { "href": "tag-montrose.ics" },
+        "rss":  { "href": "tag-montrose.rss" }
       }
     }
   ]
@@ -130,7 +130,7 @@ Sketch:
 # 832.events
 
 > 832.events is a build-time aggregator that pulls events from
-> Seattle-area venues, museums, and community sources and republishes
+> Houston-area venues, museums, and community sources and republishes
 > them as ICS calendars, RSS feeds, and JSON.
 
 ## Discovery
@@ -255,7 +255,7 @@ Two layers:
    - Assert `tags.json` slugs match the existing `tag-<slug>.ics` filenames
      produced by the build (overlaps with `check-missing-urls.ts` but
      catches it earlier and with a clearer error).
-   - Assert every venue with `geo` has lat/lng inside the Pacific Northwest
+   - Assert every venue with `geo` has lat/lng inside the Gulf Coast
      bounding box (sanity — catches swapped lat/lng).
    - Assert `venues.json` is under 100 KB (size budget — same pattern as the
      existing 500 KB warning on `events-index.json`).

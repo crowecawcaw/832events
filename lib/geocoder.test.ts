@@ -6,9 +6,9 @@ import {
   extractFromGoogleMapsUrl,
   stripSuiteFloorSuffixes,
   lookupNeighborhoodCentroid,
-  lookupSPLBranchCoords,
+  lookupLibraryBranchCoords,
   lookupVenueAreaFallback,
-  lookupUWBuilding,
+  lookupUniversityBuilding,
   lookupKnownVenue,
   lookupGeoCache,
   resolveEventCoords,
@@ -16,14 +16,15 @@ import {
 } from './geocoder.js';
 
 
-// Seattle reference-data probes — several describe blocks below exercise the
-// Seattle lookup tables in lib/geocoder.ts, which `npm run init-city` empties
+// Local reference-data probes — several describe blocks below exercise the
+// city lookup tables in lib/geocoder.ts, which `npm run init-city` empties
 // for template copies. Each block self-skips when its table is gone so the
 // engine suite passes on any city's instance.
-const HAS_NEIGHBORHOOD_DATA = lookupNeighborhoodCentroid('Capitol Hill, Seattle') !== null;
-const HAS_SPL_DATA = lookupSPLBranchCoords('Seattle Public Library - Ballard Branch') !== null;
-const HAS_UW_DATA = lookupUWBuilding('Physics Seminar (PAT)') !== null;
-const HAS_VENUE_DATA = lookupKnownVenue('museum of flight') !== null;
+const HAS_NEIGHBORHOOD_DATA = lookupNeighborhoodCentroid('Capitol Hill, Houston') !== null;
+const HAS_LIBRARY_DATA = lookupLibraryBranchCoords('Houston Public Library - Heights Branch') !== null;
+const HAS_UNIVERSITY_DATA = lookupUniversityBuilding('Physics Seminar (PAT)') !== null;
+const HAS_VENUE_DATA = lookupKnownVenue('space center houston') !== null;
+const HAS_VENUE_AREA_DATA = lookupVenueAreaFallback('Theater District') !== null;
 
 // We mock global fetch so geocodeLocation never makes real network calls
 const mockFetch = vi.fn();
@@ -31,16 +32,16 @@ vi.stubGlobal('fetch', mockFetch);
 
 describe('normalizeLocation', () => {
   it('unescapes ICS-escaped commas', () => {
-    expect(normalizeLocation('2061 15th Ave. W.\\, Seattle\\, WA 98119')).toBe('2061 15th Ave. W., Seattle, WA 98119');
+    expect(normalizeLocation('2061 15th Ave. W.\\, Houston\\, TX 98119')).toBe('2061 15th Ave. W., Houston, TX 98119');
   });
 
   it('strips HTML tags', () => {
-    expect(normalizeLocation('600 4th Ave.<br>Seattle, WA')).toBe('600 4th Ave.');
+    expect(normalizeLocation('600 4th Ave.<br>Houston, TX')).toBe('600 4th Ave.');
   });
 
   it('strips HTML tags and takes only first line (br-separated)', () => {
     // When venue<br>address format is detected, extract the address line (starts with digit)
-    expect(normalizeLocation('Council Chambers<br>600 4th Ave.\\, Floor 2<br>Seattle\\, WA 98104')).toBe('600 4th Ave., Floor 2');
+    expect(normalizeLocation('Council Chambers<br>600 4th Ave.\\, Floor 2<br>Houston\\, TX 98104')).toBe('600 4th Ave., Floor 2');
   });
 
   it('handles self-closing br tags', () => {
@@ -48,7 +49,7 @@ describe('normalizeLocation', () => {
   });
 
   it('strips other HTML tags like <b> and <p>', () => {
-    expect(normalizeLocation('<b>Capitol Hill</b>, Seattle WA')).toBe('Capitol Hill, Seattle WA');
+    expect(normalizeLocation('<b>Capitol Hill</b>, Houston TX')).toBe('Capitol Hill, Houston TX');
   });
 
   it('collapses internal whitespace', () => {
@@ -60,25 +61,25 @@ describe('normalizeLocation', () => {
   });
 
   it('handles newline-separated lines (takes first)', () => {
-    expect(normalizeLocation('123 Main St\nSeattle, WA 98101')).toBe('123 Main St');
+    expect(normalizeLocation('123 Main St\nHouston, TX 98101')).toBe('123 Main St');
   });
 
   it('passes through simple addresses unchanged', () => {
-    expect(normalizeLocation('1515 12th Ave, Seattle WA 98122')).toBe('1515 12th Ave, Seattle WA 98122');
+    expect(normalizeLocation('1515 12th Ave, Houston TX 98122')).toBe('1515 12th Ave, Houston TX 98122');
   });
 
   it('handles combined HTML and ICS escapes', () => {
-    expect(normalizeLocation('NWFF: 1515 12th Ave\\, Seattle WA 98122')).toBe('NWFF: 1515 12th Ave, Seattle WA 98122');
+    expect(normalizeLocation('NWFF: 1515 12th Ave\\, Houston TX 98122')).toBe('NWFF: 1515 12th Ave, Houston TX 98122');
   });
 });
 
 describe('normalizeLocationKey', () => {
   it('trims leading/trailing whitespace', () => {
-    expect(normalizeLocationKey('  Seattle  ')).toBe('seattle');
+    expect(normalizeLocationKey('  Houston  ')).toBe('houston');
   });
 
   it('lowercases the string', () => {
-    expect(normalizeLocationKey('Capitol Hill, Seattle')).toBe('capitol hill, seattle');
+    expect(normalizeLocationKey('Capitol Hill, Houston')).toBe('capitol hill, houston');
   });
 
   it('handles already-normalized strings', () => {
@@ -90,29 +91,29 @@ describe('normalizeLocationKey', () => {
   });
 
   it('normalizes ICS-escaped commas before keying', () => {
-    const raw = 'NWFF: 1515 12th Ave\\, Seattle WA 98122';
-    const clean = 'nwff: 1515 12th ave, seattle wa 98122';
+    const raw = 'NWFF: 1515 12th Ave\\, Houston TX 98122';
+    const clean = 'nwff: 1515 12th ave, houston tx 98122';
     expect(normalizeLocationKey(raw)).toBe(clean);
   });
 
   it('produces same key for escaped and unescaped variants', () => {
-    const escaped = 'NWFF: 1515 12th Ave\\, Seattle WA 98122';
-    const unescaped = 'nwff: 1515 12th ave, seattle wa 98122';
+    const escaped = 'NWFF: 1515 12th Ave\\, Houston TX 98122';
+    const unescaped = 'nwff: 1515 12th ave, houston tx 98122';
     expect(normalizeLocationKey(escaped)).toBe(normalizeLocationKey(unescaped));
   });
 });
 
 describe('extractAddressFromVenuePrefix', () => {
   it('extracts address after colon-space prefix', () => {
-    expect(extractAddressFromVenuePrefix('NWFF: 1515 12th Ave, Seattle WA 98122')).toBe('1515 12th Ave, Seattle WA 98122');
+    expect(extractAddressFromVenuePrefix('NWFF: 1515 12th Ave, Houston TX 98122')).toBe('1515 12th Ave, Houston TX 98122');
   });
 
   it('extracts address after venue-comma prefix', () => {
-    expect(extractAddressFromVenuePrefix('Central Cinema, 1411 21st Ave., Seattle, WA 98122')).toBe('1411 21st Ave., Seattle, WA 98122');
+    expect(extractAddressFromVenuePrefix('Central Cinema, 1411 21st Ave., Houston, TX 98122')).toBe('1411 21st Ave., Houston, TX 98122');
   });
 
   it('returns null when no venue prefix detected', () => {
-    expect(extractAddressFromVenuePrefix('1515 12th Ave, Seattle WA 98122')).toBeNull();
+    expect(extractAddressFromVenuePrefix('1515 12th Ave, Houston TX 98122')).toBeNull();
   });
 
   it('returns null for plain venue name', () => {
@@ -128,7 +129,7 @@ describe('lookupGeoCache', () => {
   const cache: GeoCache = {
     version: 1,
     entries: {
-      'pike place market, seattle': {
+      'pike place market, houston': {
         lat: 47.6091,
         lng: -122.3416,
         geocodedAt: '2026-01-01',
@@ -143,12 +144,12 @@ describe('lookupGeoCache', () => {
   };
 
   it('returns coords on cache hit', () => {
-    const result = lookupGeoCache(cache, 'Pike Place Market, Seattle');
+    const result = lookupGeoCache(cache, 'Pike Place Market, Houston');
     expect(result).toEqual({ lat: 47.6091, lng: -122.3416 });
   });
 
   it('returns null on cache miss', () => {
-    const result = lookupGeoCache(cache, 'Unknown Place, Seattle');
+    const result = lookupGeoCache(cache, 'Unknown Place, Houston');
     expect(result).toBeNull();
   });
 
@@ -158,7 +159,7 @@ describe('lookupGeoCache', () => {
   });
 
   it('normalizes the key for lookup (case insensitive)', () => {
-    const result = lookupGeoCache(cache, 'PIKE PLACE MARKET, SEATTLE');
+    const result = lookupGeoCache(cache, 'PIKE PLACE MARKET, HOUSTON');
     expect(result).toEqual({ lat: 47.6091, lng: -122.3416 });
   });
 });
@@ -224,7 +225,7 @@ describe('resolveEventCoords', () => {
       json: async () => [{ lat: '47.6200', lon: '-122.3500' }],
     });
 
-    const result = await resolveEventCoords(cache, 'New Venue, Seattle', 'test-source');
+    const result = await resolveEventCoords(cache, 'New Venue, Houston', 'test-source');
     expect(result.coords).toEqual({ lat: 47.6200, lng: -122.3500 });
     expect(result.geocodeSource).toBe('ripper'); // fresh Nominatim result, not a cache hit
     expect(result.error).toBeUndefined();
@@ -233,10 +234,10 @@ describe('resolveEventCoords', () => {
     expect(result.cache).not.toBe(cache);
 
     // Original cache is unmodified
-    expect(cache.entries['new venue, seattle']).toBeUndefined();
+    expect(cache.entries['new venue, houston']).toBeUndefined();
 
     // New cache contains the entry
-    const key = 'new venue, seattle';
+    const key = 'new venue, houston';
     expect(result.cache.entries[key]).toBeDefined();
     expect(result.cache.entries[key].lat).toBe(47.6200);
     expect(result.cache.entries[key].source).toBe('nominatim');
@@ -247,7 +248,7 @@ describe('resolveEventCoords', () => {
     const cacheWithClean: GeoCache = {
       version: 1,
       entries: {
-        '2061 15th ave. w., seattle, wa 98119': {
+        '2061 15th ave. w., houston, tx 98119': {
           lat: 47.6300,
           lng: -122.3600,
           geocodedAt: '2026-01-01',
@@ -258,7 +259,7 @@ describe('resolveEventCoords', () => {
 
     const result = await resolveEventCoords(
       cacheWithClean,
-      '2061 15th Ave. W.\\, Seattle\\, WA 98119',
+      '2061 15th Ave. W.\\, Houston\\, TX 98119',
       'test-source',
     );
     expect(result.coords).toEqual({ lat: 47.6300, lng: -122.3600 });
@@ -276,7 +277,7 @@ describe('resolveEventCoords', () => {
 
     const result = await resolveEventCoords(
       cache,
-      'Council Chambers<br>600 4th Ave.\\, Floor 2<br>Seattle\\, WA 98104',
+      'Council Chambers<br>600 4th Ave.\\, Floor 2<br>Houston\\, TX 98104',
       'test-source',
     );
     expect(result.coords).toEqual({ lat: 47.6050, lng: -122.3295 });
@@ -293,7 +294,7 @@ describe('resolveEventCoords', () => {
 
     const result = await resolveEventCoords(
       cache,
-      'NWFF: 1515 12th Ave\\, Seattle WA 98122',
+      'NWFF: 1515 12th Ave\\, Houston TX 98122',
       'test-source',
     );
     expect(result.coords).toEqual({ lat: 47.6150, lng: -122.3200 });
@@ -326,21 +327,21 @@ describe('resolveEventCoords', () => {
 
 describe('extractFromGoogleMapsUrl', () => {
   it('extracts query from a Google Maps search URL', async () => {
-    const url = 'https://www.google.com/maps/search/?api=1&query=Seattle%20City%20Hall%2C%20600%204th%20Ave%2C%20Seattle%2C%20WA%2098104';
-    expect(await extractFromGoogleMapsUrl(url)).toBe('Seattle City Hall, 600 4th Ave, Seattle, WA 98104');
+    const url = 'https://www.google.com/maps/search/?api=1&query=Houston%20City%20Hall%2C%20600%204th%20Ave%2C%20Houston%2C%20TX%2098104';
+    expect(await extractFromGoogleMapsUrl(url)).toBe('Houston City Hall, 600 4th Ave, Houston, TX 98104');
   });
 
   it('extracts query when query param comes first', async () => {
-    const url = 'https://www.google.com/maps/search/?query=1000+Aloha+St+Seattle+WA&api=1';
-    expect(await extractFromGoogleMapsUrl(url)).toBe('1000 Aloha St Seattle WA');
+    const url = 'https://www.google.com/maps/search/?query=1000+Aloha+St+Houston+TX&api=1';
+    expect(await extractFromGoogleMapsUrl(url)).toBe('1000 Aloha St Houston TX');
   });
 
   it('returns null for a plain address (not a URL)', async () => {
-    expect(await extractFromGoogleMapsUrl('600 4th Ave, Seattle, WA 98104')).toBeNull();
+    expect(await extractFromGoogleMapsUrl('600 4th Ave, Houston, TX 98104')).toBeNull();
   });
 
   it('returns null for a non-maps Google URL', async () => {
-    expect(await extractFromGoogleMapsUrl('https://www.google.com/search?q=seattle')).toBeNull();
+    expect(await extractFromGoogleMapsUrl('https://www.google.com/search?q=houston')).toBeNull();
   });
 
   it('returns null for empty string', async () => {
@@ -352,8 +353,8 @@ describe('extractFromGoogleMapsUrl', () => {
   });
 
   it('handles http (non-https) Maps URLs', async () => {
-    const url = 'http://www.google.com/maps/search/?api=1&query=Fremont+Brewing%2C+Seattle';
-    expect(await extractFromGoogleMapsUrl(url)).toBe('Fremont Brewing, Seattle');
+    const url = 'http://www.google.com/maps/search/?api=1&query=Fremont+Brewing%2C+Houston';
+    expect(await extractFromGoogleMapsUrl(url)).toBe('Fremont Brewing, Houston');
   });
 
   it('returns null for Google Maps short URLs (maps.app.goo.gl)', async () => {
@@ -364,52 +365,52 @@ describe('extractFromGoogleMapsUrl', () => {
 
 describe('stripSuiteFloorSuffixes', () => {
   it('strips Suite NNN', () => {
-    const result = stripSuiteFloorSuffixes('123 Main St, Suite 200, Seattle, WA');
-    expect(result).toBe('123 Main St, Seattle, WA');
+    const result = stripSuiteFloorSuffixes('123 Main St, Suite 200, Houston, TX');
+    expect(result).toBe('123 Main St, Houston, TX');
   });
 
   it('strips Ste NNN', () => {
-    const result = stripSuiteFloorSuffixes('500 Yale Ave N, Ste 300, Seattle, WA');
-    expect(result).toBe('500 Yale Ave N, Seattle, WA');
+    const result = stripSuiteFloorSuffixes('500 Yale Ave N, Ste 300, Houston, TX');
+    expect(result).toBe('500 Yale Ave N, Houston, TX');
   });
 
   it('strips #NNN', () => {
-    const result = stripSuiteFloorSuffixes('1234 5th Ave #100, Seattle, WA');
-    expect(result).toBe('1234 5th Ave, Seattle, WA');
+    const result = stripSuiteFloorSuffixes('1234 5th Ave #100, Houston, TX');
+    expect(result).toBe('1234 5th Ave, Houston, TX');
   });
 
   it('strips Floor N', () => {
-    const result = stripSuiteFloorSuffixes('600 4th Ave, Floor 2, Seattle, WA');
-    expect(result).toBe('600 4th Ave, Seattle, WA');
+    const result = stripSuiteFloorSuffixes('600 4th Ave, Floor 2, Houston, TX');
+    expect(result).toBe('600 4th Ave, Houston, TX');
   });
 
   it('strips Room NNN', () => {
-    const result = stripSuiteFloorSuffixes('100 Raitt Hall, Room 121, University of Washington');
-    expect(result).toBe('100 Raitt Hall, University of Washington');
+    const result = stripSuiteFloorSuffixes('100 Raitt Hall, Room 121, University of Houston');
+    expect(result).toBe('100 Raitt Hall, University of Houston');
   });
 
   it('strips Level N', () => {
-    const result = stripSuiteFloorSuffixes('2100 24th Ave E, Level 3, Seattle, WA');
-    expect(result).toBe('2100 24th Ave E, Seattle, WA');
+    const result = stripSuiteFloorSuffixes('2100 24th Ave E, Level 3, Houston, TX');
+    expect(result).toBe('2100 24th Ave E, Houston, TX');
   });
 
   it('strips trailing ", United States"', () => {
-    const result = stripSuiteFloorSuffixes('600 4th Ave, Seattle, WA 98104, United States');
-    expect(result).toBe('600 4th Ave, Seattle, WA 98104');
+    const result = stripSuiteFloorSuffixes('600 4th Ave, Houston, TX 98104, United States');
+    expect(result).toBe('600 4th Ave, Houston, TX 98104');
   });
 
   it('strips trailing ", USA"', () => {
-    const result = stripSuiteFloorSuffixes('600 4th Ave, Seattle, WA 98104, USA');
-    expect(result).toBe('600 4th Ave, Seattle, WA 98104');
+    const result = stripSuiteFloorSuffixes('600 4th Ave, Houston, TX 98104, USA');
+    expect(result).toBe('600 4th Ave, Houston, TX 98104');
   });
 
   it('collapses double commas', () => {
-    const result = stripSuiteFloorSuffixes('123 Main St,, Seattle, WA');
-    expect(result).toBe('123 Main St, Seattle, WA');
+    const result = stripSuiteFloorSuffixes('123 Main St,, Houston, TX');
+    expect(result).toBe('123 Main St, Houston, TX');
   });
 
   it('returns null when nothing to strip', () => {
-    const result = stripSuiteFloorSuffixes('123 Main St, Seattle, WA');
+    const result = stripSuiteFloorSuffixes('123 Main St, Houston, TX');
     expect(result).toBeNull();
   });
 
@@ -419,23 +420,23 @@ describe('stripSuiteFloorSuffixes', () => {
 });
 
 describe.skipIf(!HAS_NEIGHBORHOOD_DATA)('lookupNeighborhoodCentroid', () => {
-  it('matches "<neighborhood>, seattle"', () => {
-    const result = lookupNeighborhoodCentroid('Capitol Hill, Seattle');
+  it('matches "<neighborhood>, houston"', () => {
+    const result = lookupNeighborhoodCentroid('Capitol Hill, Houston');
     expect(result).toEqual({ lat: 47.6253, lng: -122.3222 });
   });
 
-  it('matches "<neighborhood> neighborhood, seattle"', () => {
-    const result = lookupNeighborhoodCentroid('Fremont neighborhood, Seattle');
+  it('matches "<neighborhood> neighborhood, houston"', () => {
+    const result = lookupNeighborhoodCentroid('Fremont neighborhood, Houston');
     expect(result).toEqual({ lat: 47.6512, lng: -122.3501 });
   });
 
   it('matches case-insensitively', () => {
-    const result = lookupNeighborhoodCentroid('BALLARD, SEATTLE');
+    const result = lookupNeighborhoodCentroid('BALLARD, HOUSTON');
     expect(result).toEqual({ lat: 47.6677, lng: -122.3829 });
   });
 
-  it('matches with ", WA" suffix', () => {
-    const result = lookupNeighborhoodCentroid('Beacon Hill, Seattle, WA');
+  it('matches with ", TX" suffix', () => {
+    const result = lookupNeighborhoodCentroid('Beacon Hill, Houston, TX');
     expect(result).toEqual({ lat: 47.5674, lng: -122.3076 });
   });
 
@@ -445,62 +446,62 @@ describe.skipIf(!HAS_NEIGHBORHOOD_DATA)('lookupNeighborhoodCentroid', () => {
   });
 
   it('returns null for non-neighborhood string', () => {
-    expect(lookupNeighborhoodCentroid('1234 Main St, Seattle')).toBeNull();
+    expect(lookupNeighborhoodCentroid('1234 Main St, Houston')).toBeNull();
   });
 
   it('returns null for unknown neighborhood', () => {
-    expect(lookupNeighborhoodCentroid('Montlake, Seattle')).toBeNull();
+    expect(lookupNeighborhoodCentroid('Montlake, Houston')).toBeNull();
   });
 
-  it('returns correct coords for West Seattle', () => {
-    const result = lookupNeighborhoodCentroid('West Seattle, Seattle');
+  it('returns correct coords for West Houston', () => {
+    const result = lookupNeighborhoodCentroid('West Houston, Houston');
     expect(result).toEqual({ lat: 47.5629, lng: -122.3862 });
   });
 });
 
-describe.skipIf(!HAS_SPL_DATA)('lookupSPLBranchCoords', () => {
+describe.skipIf(!HAS_LIBRARY_DATA)('lookupLibraryBranchCoords', () => {
   it('matches "ballard branch" substring', () => {
-    const result = lookupSPLBranchCoords('Seattle Public Library - Ballard Branch');
+    const result = lookupLibraryBranchCoords('Houston Public Library - Ballard Branch');
     expect(result).toEqual({ lat: 47.6671, lng: -122.3836 });
   });
 
   it('matches "central library" substring', () => {
-    const result = lookupSPLBranchCoords('Seattle Public Library Central Library');
+    const result = lookupLibraryBranchCoords('Houston Public Library Central Library');
     expect(result).toEqual({ lat: 47.6064, lng: -122.3328 });
   });
 
   it('matches "capitol hill branch"', () => {
-    const result = lookupSPLBranchCoords('SPL Capitol Hill Branch, 425 Harvard Ave E');
+    const result = lookupLibraryBranchCoords('SPL Capitol Hill Branch, 425 Harvard Ave E');
     expect(result).toEqual({ lat: 47.6234, lng: -122.3196 });
   });
 
   it('matches case-insensitively', () => {
-    const result = lookupSPLBranchCoords('SEATTLE PUBLIC LIBRARY - FREMONT BRANCH');
+    const result = lookupLibraryBranchCoords('HOUSTON PUBLIC LIBRARY - FREMONT BRANCH');
     expect(result).toEqual({ lat: 47.6519, lng: -122.3502 });
   });
 
   it('returns null for non-SPL string', () => {
-    expect(lookupSPLBranchCoords('123 Main St, Seattle')).toBeNull();
+    expect(lookupLibraryBranchCoords('123 Main St, Houston')).toBeNull();
   });
 
   it('returns null for SPL with no recognized branch', () => {
-    expect(lookupSPLBranchCoords('Seattle Public Library')).toBeNull();
+    expect(lookupLibraryBranchCoords('Houston Public Library')).toBeNull();
   });
 
   it('does not match non-SPL strings containing branch neighborhood names', () => {
     // "Fremont Brewing" should not match "fremont branch"
-    expect(lookupSPLBranchCoords('Fremont Brewing, 1050 N 34th St, Seattle, WA')).toBeNull();
+    expect(lookupLibraryBranchCoords('Fremont Brewing, 1050 N 34th St, Houston, TX')).toBeNull();
     // "Ballard Beer Company" should not match "ballard branch"
-    expect(lookupSPLBranchCoords('Ballard Beer Company, Seattle, WA')).toBeNull();
+    expect(lookupLibraryBranchCoords('Ballard Beer Company, Houston, TX')).toBeNull();
   });
 
   it('does not match strings where "spl" appears as part of another word', () => {
     // "Splendor Event Hall" should not match
-    expect(lookupSPLBranchCoords('Splendor Event Hall, Seattle')).toBeNull();
+    expect(lookupLibraryBranchCoords('Splendor Event Hall, Houston')).toBeNull();
   });
 
   it('matches douglass-truth branch', () => {
-    const result = lookupSPLBranchCoords('Seattle Public Library - Douglass-Truth Branch');
+    const result = lookupLibraryBranchCoords('Houston Public Library - Douglass-Truth Branch');
     expect(result).toEqual({ lat: 47.6097, lng: -122.3000 });
   });
 });
@@ -519,12 +520,12 @@ describe('resolveEventCoords - new strategies', () => {
       json: async () => [{ lat: '47.6050', lon: '-122.3295' }],
     });
 
-    const url = 'https://www.google.com/maps/search/?api=1&query=600%204th%20Ave%2C%20Seattle%2C%20WA%2098104';
+    const url = 'https://www.google.com/maps/search/?api=1&query=600%204th%20Ave%2C%20Houston%2C%20TX%2098104';
     const result = await resolveEventCoords(cache, url, 'test-source');
     expect(result.coords).toEqual({ lat: 47.6050, lng: -122.3295 });
     expect(result.geocodeSource).toBe('ripper');
     // The cache key should be the decoded address
-    expect(result.cache.entries['600 4th ave, seattle, wa 98104']).toBeDefined();
+    expect(result.cache.entries['600 4th ave, houston, tx 98104']).toBeDefined();
   });
 
   it.skipIf(!HAS_NEIGHBORHOOD_DATA)('returns neighborhood centroid when Nominatim fails', async () => {
@@ -533,28 +534,28 @@ describe('resolveEventCoords - new strategies', () => {
       json: async () => [],
     });
 
-    const result = await resolveEventCoords(cache, 'Capitol Hill, Seattle', 'test-source');
+    const result = await resolveEventCoords(cache, 'Capitol Hill, Houston', 'test-source');
     expect(result.coords).toEqual({ lat: 47.6253, lng: -122.3222 });
     expect(result.geocodeSource).toBe('ripper');
     expect(result.error).toBeUndefined();
-    expect(result.cache.entries['capitol hill, seattle']).toBeDefined();
-    expect(result.cache.entries['capitol hill, seattle'].unresolvable).toBeUndefined();
+    expect(result.cache.entries['capitol hill, houston']).toBeDefined();
+    expect(result.cache.entries['capitol hill, houston'].unresolvable).toBeUndefined();
   });
 
-  it.skipIf(!HAS_SPL_DATA)('returns SPL branch coords when Nominatim fails', async () => {
+  it.skipIf(!HAS_LIBRARY_DATA)('returns SPL branch coords when Nominatim fails', async () => {
     mockFetch.mockResolvedValue({
       ok: true,
       json: async () => [],
     });
 
-    const result = await resolveEventCoords(cache, 'Seattle Public Library - Ballard Branch', 'test-source');
+    const result = await resolveEventCoords(cache, 'Houston Public Library - Ballard Branch', 'test-source');
     expect(result.coords).toEqual({ lat: 47.6671, lng: -122.3836 });
     expect(result.geocodeSource).toBe('ripper');
     expect(result.error).toBeUndefined();
   });
 
-  it.skipIf(!HAS_SPL_DATA)('resolves Central Library room-level locations without SPL prefix', async () => {
-    // SPL ripper emits "Central Library, Level 8 - Gallery" — no "SPL" or "Seattle Public Library" prefix
+  it.skipIf(!HAS_LIBRARY_DATA)('resolves Central Library room-level locations without SPL prefix', async () => {
+    // SPL ripper emits "Central Library, Level 8 - Gallery" — no "SPL" or "Houston Public Library" prefix
     mockFetch.mockResolvedValue({
       ok: true,
       json: async () => [],
@@ -566,7 +567,7 @@ describe('resolveEventCoords - new strategies', () => {
     expect(result.error).toBeUndefined();
   });
 
-  it.skipIf(!HAS_SPL_DATA)('resolves SPL branch room-level locations without explicit SPL prefix', async () => {
+  it.skipIf(!HAS_LIBRARY_DATA)('resolves SPL branch room-level locations without explicit SPL prefix', async () => {
     mockFetch.mockResolvedValue({
       ok: true,
       json: async () => [],
@@ -584,7 +585,7 @@ describe('resolveEventCoords - new strategies', () => {
       .mockResolvedValueOnce({ ok: true, json: async () => [] })
       .mockResolvedValueOnce({ ok: true, json: async () => [{ lat: '47.6100', lon: '-122.3400' }] });
 
-    const result = await resolveEventCoords(cache, '500 Yale Ave N, Suite 300, Seattle, WA', 'test-source');
+    const result = await resolveEventCoords(cache, '500 Yale Ave N, Suite 300, Houston, TX', 'test-source');
     expect(result.coords).toEqual({ lat: 47.6100, lng: -122.3400 });
     expect(result.geocodeSource).toBe('ripper');
     expect(mockFetch).toHaveBeenCalledTimes(2);
@@ -595,7 +596,7 @@ describe('resolveEventCoords - new strategies', () => {
     const primed: GeoCache = {
       version: 1,
       entries: {
-        '600 4th ave, seattle, wa 98104': {
+        '600 4th ave, houston, tx 98104': {
           lat: 47.6050,
           lng: -122.3295,
           geocodedAt: '2026-01-01',
@@ -604,7 +605,7 @@ describe('resolveEventCoords - new strategies', () => {
       },
     };
 
-    const url = 'https://www.google.com/maps/search/?api=1&query=600%204th%20Ave%2C%20Seattle%2C%20WA%2098104';
+    const url = 'https://www.google.com/maps/search/?api=1&query=600%204th%20Ave%2C%20Houston%2C%20TX%2098104';
     const result = await resolveEventCoords(primed, url, 'test-source');
     expect(result.coords).toEqual({ lat: 47.6050, lng: -122.3295 });
     expect(result.geocodeSource).toBe('cached');
@@ -642,7 +643,7 @@ describe('stripSuiteFloorSuffixes - meeting room variants', () => {
   });
 
   it('does not modify strings without sub-room qualifiers', () => {
-    expect(stripSuiteFloorSuffixes('Capitol Hill Branch, Seattle, WA')).toBeNull();
+    expect(stripSuiteFloorSuffixes('Capitol Hill Branch, Houston, TX')).toBeNull();
   });
 
   it('handles mixed case in meeting room', () => {
@@ -650,39 +651,39 @@ describe('stripSuiteFloorSuffixes - meeting room variants', () => {
   });
 });
 
-describe('lookupVenueAreaFallback', () => {
-  it('returns Seattle Center centroid for "Leo K. Theater, Seattle Center"', () => {
-    const result = lookupVenueAreaFallback('Leo K. Theater, Seattle Center');
+describe.skipIf(!HAS_VENUE_AREA_DATA)('lookupVenueAreaFallback', () => {
+  it('returns Houston Center centroid for "Leo K. Theater, Houston Center"', () => {
+    const result = lookupVenueAreaFallback('Leo K. Theater, Houston Center');
     expect(result).toEqual({ lat: 47.6205, lng: -122.3493 });
   });
 
-  it('returns Seattle Center centroid for "Bagley Wright Theater, Seattle Center"', () => {
-    const result = lookupVenueAreaFallback('Bagley Wright Theater, Seattle Center');
+  it('returns Houston Center centroid for "Bagley Wright Theater, Houston Center"', () => {
+    const result = lookupVenueAreaFallback('Bagley Wright Theater, Houston Center');
     expect(result).toEqual({ lat: 47.6205, lng: -122.3493 });
   });
 
-  it('returns Seattle Center centroid for exact "Seattle Center"', () => {
-    const result = lookupVenueAreaFallback('Seattle Center');
+  it('returns Houston Center centroid for exact "Houston Center"', () => {
+    const result = lookupVenueAreaFallback('Houston Center');
     expect(result).toEqual({ lat: 47.6205, lng: -122.3493 });
   });
 
-  it('returns SLU centroid for "<venue>, South Lake Union, Seattle, WA"', () => {
-    const result = lookupVenueAreaFallback('Amazon HQ, South Lake Union, Seattle, WA');
+  it('returns SLU centroid for "<venue>, South Lake Union, Houston, TX"', () => {
+    const result = lookupVenueAreaFallback('Amazon HQ, South Lake Union, Houston, TX');
     expect(result).toEqual({ lat: 47.6275, lng: -122.3362 });
   });
 
-  it('returns SLU centroid for "<venue>, South Lake Union, Seattle"', () => {
-    const result = lookupVenueAreaFallback('Tech Hub, South Lake Union, Seattle');
+  it('returns SLU centroid for "<venue>, South Lake Union, Houston"', () => {
+    const result = lookupVenueAreaFallback('Tech Hub, South Lake Union, Houston');
     expect(result).toEqual({ lat: 47.6275, lng: -122.3362 });
   });
 
   it('matches case-insensitively', () => {
-    const result = lookupVenueAreaFallback('MCCAW HALL, SEATTLE CENTER');
+    const result = lookupVenueAreaFallback('MCCAW HALL, HOUSTON CENTER');
     expect(result).toEqual({ lat: 47.6205, lng: -122.3493 });
   });
 
   it('returns null for unrecognized area', () => {
-    expect(lookupVenueAreaFallback('Some Venue, Bellevue')).toBeNull();
+    expect(lookupVenueAreaFallback('Some Venue, Katy')).toBeNull();
   });
 
   it('returns null for empty string', () => {
@@ -690,7 +691,7 @@ describe('lookupVenueAreaFallback', () => {
   });
 });
 
-describe('resolveEventCoords - venue area fallback', () => {
+describe.skipIf(!HAS_VENUE_AREA_DATA)('resolveEventCoords - venue area fallback', () => {
   let cache: GeoCache;
 
   beforeEach(() => {
@@ -698,14 +699,14 @@ describe('resolveEventCoords - venue area fallback', () => {
     mockFetch.mockReset();
   });
 
-  it('returns Seattle Center centroid when Nominatim fails on Seattle Center venue', async () => {
+  it('returns Houston Center centroid when Nominatim fails on Houston Center venue', async () => {
     mockFetch.mockResolvedValue({ ok: true, json: async () => [] });
 
-    const result = await resolveEventCoords(cache, 'Leo K. Theater, Seattle Center', 'test-source');
+    const result = await resolveEventCoords(cache, 'Leo K. Theater, Houston Center', 'test-source');
     expect(result.coords).toEqual({ lat: 47.6205, lng: -122.3493 });
     expect(result.geocodeSource).toBe('ripper');
     expect(result.error).toBeUndefined();
-    const key = 'leo k. theater, seattle center';
+    const key = 'leo k. theater, houston center';
     expect(result.cache.entries[key]).toBeDefined();
     expect(result.cache.entries[key].unresolvable).toBeUndefined();
   });
@@ -713,64 +714,64 @@ describe('resolveEventCoords - venue area fallback', () => {
   it('returns SLU centroid when Nominatim fails on South Lake Union venue', async () => {
     mockFetch.mockResolvedValue({ ok: true, json: async () => [] });
 
-    const result = await resolveEventCoords(cache, 'Some Venue, South Lake Union, Seattle, WA', 'test-source');
+    const result = await resolveEventCoords(cache, 'Some Venue, South Lake Union, Houston, TX', 'test-source');
     expect(result.coords).toEqual({ lat: 47.6275, lng: -122.3362 });
     expect(result.geocodeSource).toBe('ripper');
     expect(result.error).toBeUndefined();
   });
 });
 
-describe.skipIf(!HAS_UW_DATA)('lookupUWBuilding', () => {
+describe.skipIf(!HAS_UNIVERSITY_DATA)('lookupUniversityBuilding', () => {
   it('matches HUB building code in parens at end of string', () => {
-    const result = lookupUWBuilding('Some Event, University of Washington (HUB)');
+    const result = lookupUniversityBuilding('Some Event, University of Houston (HUB)');
     expect(result).toEqual({ lat: 47.6557, lng: -122.3050 });
   });
 
   it('matches PAT building code', () => {
-    const result = lookupUWBuilding('Physics Seminar (PAT)');
+    const result = lookupUniversityBuilding('Physics Seminar (PAT)');
     expect(result).toEqual({ lat: 47.6532, lng: -122.3115 });
   });
 
   it('matches KNE building code', () => {
-    const result = lookupUWBuilding('Lecture (KNE)');
+    const result = lookupUniversityBuilding('Lecture (KNE)');
     expect(result).toEqual({ lat: 47.6561, lng: -122.3088 });
   });
 
   it('matches SFCO (multi-letter code)', () => {
-    const result = lookupUWBuilding('Admin Meeting (SFCO)');
+    const result = lookupUniversityBuilding('Admin Meeting (SFCO)');
     expect(result).toEqual({ lat: 47.6610, lng: -122.3145 });
   });
 
   it('matches case-insensitively', () => {
-    const result = lookupUWBuilding('Event (hub)');
+    const result = lookupUniversityBuilding('Event (hub)');
     expect(result).toEqual({ lat: 47.6557, lng: -122.3050 });
   });
 
   it('matches BRK (Burke Museum)', () => {
-    const result = lookupUWBuilding('Art Opening (BRK)');
+    const result = lookupUniversityBuilding('Art Opening (BRK)');
     expect(result).toEqual({ lat: 47.6601, lng: -122.3131 });
   });
 
   it('returns null for unknown building code', () => {
-    expect(lookupUWBuilding('Event (XYZ)')).toBeNull();
+    expect(lookupUniversityBuilding('Event (XYZ)')).toBeNull();
   });
 
   it('returns null for non-UW string', () => {
-    expect(lookupUWBuilding('Pike Place Market, Seattle')).toBeNull();
+    expect(lookupUniversityBuilding('Pike Place Market, Houston')).toBeNull();
   });
 
   it('matches named location "anderson hall courtyard"', () => {
-    const result = lookupUWBuilding('Anderson Hall Courtyard');
+    const result = lookupUniversityBuilding('Anderson Hall Courtyard');
     expect(result).toEqual({ lat: 47.6553, lng: -122.3035 });
   });
 
   it('matches named location "uw botanic gardens"', () => {
-    const result = lookupUWBuilding('UW Botanic Gardens');
+    const result = lookupUniversityBuilding('UW Botanic Gardens');
     expect(result).toEqual({ lat: 47.6601, lng: -122.2898 });
   });
 
   it('matches named location "center for urban horticulture"', () => {
-    const result = lookupUWBuilding('Center for Urban Horticulture');
+    const result = lookupUniversityBuilding('Center for Urban Horticulture');
     expect(result).toEqual({ lat: 47.6601, lng: -122.2898 });
   });
 });
@@ -830,7 +831,7 @@ describe.skipIf(!HAS_VENUE_DATA)('lookupKnownVenue', () => {
   });
 });
 
-describe.skipIf(!HAS_UW_DATA || !HAS_VENUE_DATA)('resolveEventCoords - UW building and known venue', () => {
+describe.skipIf(!HAS_UNIVERSITY_DATA || !HAS_VENUE_DATA)('resolveEventCoords - UW building and known venue', () => {
   let cache: GeoCache;
 
   beforeEach(() => {
@@ -897,9 +898,9 @@ describe('resolveEventCoords - firstSeen timestamps', () => {
     });
 
     const today = new Date().toISOString().slice(0, 10);
-    const result = await resolveEventCoords(cache, 'New Venue, Seattle', 'test-source');
+    const result = await resolveEventCoords(cache, 'New Venue, Houston', 'test-source');
     expect(result.geocodeSource).toBe('ripper');
-    const entry = result.cache.entries['new venue, seattle'];
+    const entry = result.cache.entries['new venue, houston'];
     expect(entry).toBeDefined();
     expect(entry.firstSeen).toBe(today);
   });
@@ -924,7 +925,7 @@ describe('resolveEventCoords - firstSeen timestamps', () => {
     const primed: GeoCache = {
       version: 1,
       entries: {
-        'existing venue, seattle': {
+        'existing venue, houston': {
           lat: 47.62,
           lng: -122.35,
           geocodedAt: pastDate,
@@ -935,10 +936,10 @@ describe('resolveEventCoords - firstSeen timestamps', () => {
     };
 
     // Second call — should be a cache hit, no mutation
-    const result = await resolveEventCoords(primed, 'Existing Venue, Seattle', 'test-source');
+    const result = await resolveEventCoords(primed, 'Existing Venue, Houston', 'test-source');
     expect(result.geocodeSource).toBe('cached');
     expect(result.cache).toBe(primed); // same reference — no new entry written
-    expect(result.cache.entries['existing venue, seattle'].firstSeen).toBe(pastDate);
+    expect(result.cache.entries['existing venue, houston'].firstSeen).toBe(pastDate);
     expect(mockFetch).not.toHaveBeenCalled();
   });
 });

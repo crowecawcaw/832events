@@ -90,15 +90,15 @@ If only the URL is dead but the venue clearly still operates, flag instead — t
 When `location` changes, refresh `geo` by calling Nominatim:
 
 ```bash
-python3 skills/calendar-verification/scripts/osm-geocode.py "1108 NW 52nd St, Seattle, WA 98107"
+python3 skills/calendar-verification/scripts/osm-geocode.py "1108 Main St, Houston, TX 77002"
 ```
 
 Output is `lat,lng` on a single line, or `unresolvable`. Use the result verbatim in the YAML:
 
 ```yaml
 geo:
-  lat: 47.6680
-  lng: -122.3878
+  lat: 29.7604
+  lng: -95.3698
 ```
 
 If `unresolvable`, set `geo: null` and include `geo unresolvable` in the drift-fix note. **Never write coordinates that didn't come from this script.** Training-data coordinates are out of date and silently wrong; the OSM API is the only sanctioned source.

@@ -5,7 +5,7 @@
 Agent skills live in `skills/` in this repo. These define the operational procedures for maintaining 832.events:
 
 - **`skills/build-report/SKILL.md`** — Daily build health check, error fixing, and geo error resolution
-- **`skills/source-discovery/SKILL.md`** — Find, evaluate, and add new Seattle event sources
+- **`skills/source-discovery/SKILL.md`** — Find, evaluate, and add new Houston event sources
 - **`skills/geo-resolver/SKILL.md`** — Resolve geocode errors in the geo-cache and fill OpenStreetMap IDs on venues
 - **`skills/calendar-verification/SKILL.md`** — Verify recurring calendars and `expectEmpty` sources against their live URLs and auto-fix safe drift via PR
 - **`skills/event-uncertainty-resolver/SKILL.md`** — Resolve outstanding `UncertaintyError` entries (typically unknown start times) by investigating the source page and writing values into `event-uncertainty-cache.json`
@@ -14,7 +14,7 @@ Agent skills live in `skills/` in this repo. These define the operational proced
 - **`skills/event-lookup/SKILL.md`** — Fuzzy-search the published `events-index.json` / `manifest.json` / `venues.json` to answer "is this event already in 832.events, and which source covers it?"
 - **`skills/proxy-escalation/SKILL.md`** — Read the non-fatal `pendingProxyVerification` queue and open PRs that climb the proxy ladder (`outofband → browserbase`) after 3 consecutive failures, or retire a source (disable + mark `blocked`) when browserbase is exhausted
 - **`skills/source-from-event/SKILL.md`** — Default handler for any **event poster image** (or text request describing an event the user wants covered). Uses `event-lookup` to check coverage, then either reports it's covered, hands off a parse-gap fix to `build-report`, or hands off a new-source add to `source-discovery`
-- **`skills/city-setup/SKILL.md`** — One-time setup for a fresh copy of this template repo: runs `npm run init-city` (Seattle content strip + `city.config.ts` regeneration), tunes the derived geography, and walks the operator through secrets/services and first sources. Never run on the reference instance
+- **`skills/city-setup/SKILL.md`** — One-time setup for a fresh copy of this template repo: runs `npm run init-city` (seed-content strip + `city.config.ts` regeneration), tunes the derived geography, and walks the operator through secrets/services and first sources. Never run on the reference instance
 
 ## Adding New Calendar Sources
 
@@ -212,7 +212,7 @@ calendars:
     timezone: America/Los_Angeles
     config:
       organizerId: "12345678901"
-      defaultLocation: "123 Main St, Seattle, WA 98101"
+      defaultLocation: "123 Main St, Houston, TX 77002"
       defaultDurationHours: 3   # optional, defaults to 2
 ```
 
@@ -258,16 +258,16 @@ file instead of being split across several files.
 
 ```yaml
 geo:
-  lat: 47.5505915
-  lng: -122.3183935
-  label: "Georgetown Trailer Park Mall, 5805 Airport Way S, Seattle, WA 98108"
-name: georgetown-trailer-park-mall
-friendlyname: Georgetown Trailer Park Mall
-description: Open-air weekend marketplace in Georgetown.
-timezone: America/Los_Angeles
-location: 5805 Airport Way S, Seattle, WA 98108
-url: http://georgetowntrailerparkmall.com/events
-tags: ["MakersMarket", "Georgetown"]
+  lat: 29.8082
+  lng: -95.3661
+  label: "Houston Farmers Market, 2520 Airline Dr, Houston, TX 77009"
+name: houston-farmers-market
+friendlyname: Houston Farmers Market
+description: Open-air weekend marketplace north of Downtown.
+timezone: America/Chicago
+location: 2520 Airline Dr, Houston, TX 77009
+url: https://houstonfarmersmarket.org/events
+tags: ["MakersMarket", "The Heights"]
 schedules:
   - schedule: every Saturday
     start_time: "11:00"
@@ -289,7 +289,7 @@ correct — combine the schedules in a single file instead of duplicating it.
 
 ### Free First Thursday
 
-Many Seattle area museums offer free admission on the first Thursday of each month. There is a catch-all recurring entry (`free-first-thursday`) in `sources/recurring/free-first-thursday.yaml` that covers museums without their own ripper. Museum rippers that **do** exist should also surface this event:
+Many Houston-area museums offer free admission on the first Thursday of each month. There is a catch-all recurring entry (`free-first-thursday`) in `sources/recurring/free-first-thursday.yaml` that covers museums without their own ripper. Museum rippers that **do** exist should also surface this event:
 
 1. If the source website lists a "Free First Thursday" event with a concrete date, include it normally.
 2. If the website lists it with a vague recurring description (e.g., "First Thursday of each month") or doesn't list it at all, the ripper should **synthesize** concrete dated Free First Thursday events for the next few first Thursdays.
@@ -310,11 +310,11 @@ Add `expectEmpty: true` at the **ripper level** (applies to all calendars in tha
 
 ```yaml
 # Ripper-level: all calendars in this ripper may be empty
-name: seattle-barkery
+name: houston-barkery
 expectEmpty: true
 calendars:
   - name: all-events
-    friendlyname: "The Seattle Barkery"
+    friendlyname: "The Houston Barkery"
     timezone: America/Los_Angeles
 ```
 
@@ -363,7 +363,7 @@ Tags drive the aggregate calendar system — each unique tag produces a `tag-<na
 
 ### Tag naming conventions
 
-- Neighborhood tags use natural casing with spaces: `"Capitol Hill"`, `"West Seattle"`, `"Pioneer Square"`
+- Neighborhood tags use natural casing with spaces: `"Montrose"`, `"The Heights"`, `"EaDo"`
 - Activity/type tags use PascalCase without spaces: `"FarmersMarket"`, `"MakersMarket"`
 - Single-word tags are capitalized: `"Music"`, `"Beer"`, `"Dogs"`
 
@@ -714,12 +714,12 @@ plumbed through every surface. Use them as templates.
 The `description` field is used as the `<h2>` section heading on the website for rippers, and as supplementary info for external calendars.
 
 - **`ripper.yaml`** — Use just the name of the venue or organization. The heading should be short and recognizable.
-  - **Good:** `"Stoup Brewing"`, `"BBYC Ballard (Bale Breaker & Yonder Cider)"`, `"Seattle Theatre Group - Paramount, Moore, and Neptune Theatres"`
-  - **Bad:** `"Major Seattle brewery in Fremont with food trucks, beer releases, and community events"`
+  - **Good:** `"Saint Arnold Brewing"`, `"8th Wonder Brewery (EaDo)"`, `"Houston First - Jones Hall, Wortham Theater Center, and Miller Outdoor Theatre"`
+  - **Bad:** `"Major Houston brewery in Montrose with food trucks, beer releases, and community events"`
 
 - **`sources/external/<name>.yaml`** — A sentence or two describing what the source covers is appropriate and encouraged. Help a reader understand what kinds of events to expect.
-  - **Good:** `"GeekWire Events attract thousands of people to network, learn, recruit, and do business across the Pacific Northwest tech community"`
-  - **Good:** `"Seattle's online hub for dance events, classes, and performances - covering contemporary, ballet, hip-hop, and more"`
+  - **Good:** `"Houston Tech Rodeo events attract thousands of people to network, learn, recruit, and do business across the Houston tech community"`
+  - **Good:** `"Houston's online hub for dance events, classes, and performances - covering contemporary, ballet, hip-hop, and more"`
 
 Don't mention APIs, scraping methods, or other implementation details in either case.
 
@@ -859,13 +859,13 @@ https://raw.githubusercontent.com/prestomation/calendar-ripper/gh-pages/preview/
 
 **Fix:** Verify the URL is still valid by testing from multiple sources. If the feed has been removed or permanently blocked, consider deleting the entry's file under `sources/external/` or finding an alternative URL.
 
-#### Unknown Venue Errors (seattle-showlists)
+#### Unknown Venue Errors (houston-showlists)
 
 **Symptom:** `Unknown venue "X" not in VENUE_CONFIG — add it so events are routed to a calendar`
 
 **Fix:**
-1. Add the venue to `VENUE_CONFIG` in `sources/seattle_showlists/ripper.ts` with its address
-2. Add a calendar entry in `sources/seattle_showlists/ripper.yaml` with the correct neighborhood tag
+1. Add the venue to `VENUE_CONFIG` in `sources/houston_showlists/ripper.ts` with its address
+2. Add a calendar entry in `sources/houston_showlists/ripper.yaml` with the correct neighborhood tag
 3. Use `expectEmpty: true` for small or intermittent venues
 
 #### Zero-Event Calendars

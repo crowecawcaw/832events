@@ -44,8 +44,8 @@ The fields are optional. They are absent in a few legitimate cases:
   Nominatim. No lookup, no OSM ID. Run the backfill script to fill them
   in (see below).
 - **Fallback geocode sources** — when Nominatim fails, the resolver
-  falls back to hardcoded tables for Seattle neighborhoods, SPL
-  branches, UW building codes, and well-known venues. These tables only
+  falls back to hardcoded tables for Houston neighborhoods, library
+  branches, university building codes, and well-known venues. These tables only
   store `lat`/`lng`, so the resulting events carry no OSM ID.
 - **Unresolvable events** — community-calendar events with locations
   like "TBA" or "Various locations" never get a coordinate at all.

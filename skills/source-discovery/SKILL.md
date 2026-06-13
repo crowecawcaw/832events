@@ -1,6 +1,6 @@
 # 832.events Source Discovery
 
-Find and add new Seattle event sources to 832.events. Runs after the daily build report when there are no actionable errors to fix.
+Find and add new Houston event sources to 832.events. Runs after the daily build report when there are no actionable errors to fix.
 
 ## When to run
 
@@ -36,27 +36,27 @@ For any source with **0 events for 30+ consecutive days** or returning **404/410
 
 Run 3-5 web searches using varied queries. **Rotate the focus daily** to avoid re-finding the same sources. Pick from these verticals in rotation:
 
-- **Music venues**: `"Seattle live music venue calendar"`, `"Seattle concert calendar"`, `"Capitol Hill music events"`, `"Ballard live music"`
-- **Arts & culture**: `"Seattle art gallery events calendar"`, `"Seattle museum events"`, `"Seattle theater calendar"`
-- **Community**: `"Seattle community center events calendar"`, `"Seattle neighborhood events"`, `"Seattle block party"`
-- **Food & drink**: `"Seattle food festival"`, `"Seattle beer release calendar"`, `"Seattle restaurant events"`
-- **Comedy & nightlife**: `"Seattle comedy club calendar"`, `"Seattle open mic calendar"`, `"Seattle trivia night schedule"`
-- **Outdoors & sports**: `"Seattle outdoor events calendar"`, `"Seattle running events"`, `"Seattle farmers market schedule"`
-- **Bookstores & libraries**: `"Seattle bookstore events calendar"`, `"Seattle author reading"`
-- **Festivals & seasonal**: `"Seattle festival"`, `"Seattle summer events calendar"`, `"Seattle holiday market"`
+- **Music venues**: `"Houston live music venue calendar"`, `"Houston concert calendar"`, `"Montrose music events"`, `"The Heights live music"`
+- **Arts & culture**: `"Houston art gallery events calendar"`, `"Houston museum events"`, `"Houston theater calendar"`
+- **Community**: `"Houston community center events calendar"`, `"Houston neighborhood events"`, `"Houston block party"`
+- **Food & drink**: `"Houston food festival"`, `"Houston beer release calendar"`, `"Houston restaurant events"`
+- **Comedy & nightlife**: `"Houston comedy club calendar"`, `"Houston open mic calendar"`, `"Houston trivia night schedule"`
+- **Outdoors & sports**: `"Houston outdoor events calendar"`, `"Houston running events"`, `"Houston farmers market schedule"`
+- **Bookstores & libraries**: `"Houston bookstore events calendar"`, `"Houston author reading"`
+- **Festivals & seasonal**: `"Houston festival"`, `"Houston summer events calendar"`, `"Houston holiday market"`
 
 Also try discovery-oriented searches:
-- `"site:seattle.gov calendar events"` — city events
-- `"site:eventbrite.com Seattle events organizer"` — Eventbrite sources
-- `"Seattle events ICS subscribe calendar"` — ICS feeds
-- `"Seattle events RSS feed"` — RSS/ICS sources
-- `"new Seattle venue events"` — recently opened venues
+- `"site:houstontx.gov calendar events"` — city events
+- `"site:eventbrite.com Houston events organizer"` — Eventbrite sources
+- `"Houston events ICS subscribe calendar"` — ICS feeds
+- `"Houston events RSS feed"` — RSS/ICS sources
+- `"new Houston venue events"` — recently opened venues
 
 ### 4. Quality gate each candidate
 
-For each search result that looks like a Seattle event source, evaluate:
+For each search result that looks like a Houston event source, evaluate:
 
-1. **Seattle-area?** Must be **Seattle-focused** — primarily serving Seattle audiences. Venues with a few events in nearby cities (Bellevue, Kirkland, etc.) are OK as long as most events are in Seattle proper.
+1. **Houston-area?** Must be **Houston-focused** — primarily serving Houston audiences. Venues with a few events in nearby cities (Sugar Land, Katy, etc.) are OK as long as most events are in Houston proper.
 2. **Has a public events page or feed?** Must have a URL with event listings
 3. **Matches a known ripper type?** Must be one of:
    - ICS/iCal feed (add a file to `sources/external/<name>.yaml`)
@@ -84,7 +84,7 @@ the source of truth — update it as the candidate's situation changes:
 - **Source implemented**: Flip `status: added` and add the PR number to
   the frontmatter (`pr: 271`). Bump `lastChecked`.
 - **Source not viable**: Flip `status: notviable` and write the reason
-  ("no public calendar", "not Seattle", "platform requires browser").
+  ("no public calendar", "not Houston", "platform requires browser").
 - **Source blocked**: Flip `status: blocked` with the reason
   ("Cloudflare bot protection", "needs paid API key").
 - **Source needs a proxy**: `status: proxy` — the source was confirmed working locally but CI blocks it. Note which proxy rung is needed:
@@ -217,7 +217,7 @@ Include a "🔍 Source Discovery" section in the daily report:
 - **Always implement highest-confidence source first** — don't skip to low-confidence custom scrapers when a verified built-in type is available
 - **One source per cycle** — implement, verify, iterate with Q, then report. Don't stack multiple sources in one cycle.
 - **Always delegate to a coding agent** to implement the ripper — do not write code directly
-- **Seattle-focused only** — sources must primarily serve Seattle audiences. A few events outside city limits is OK (e.g., Seattle Uncorked with some Eastside events). Venues entirely outside Seattle (Edmonds, Everett, Kent) are not appropriate.
+- **Houston-focused only** — sources must primarily serve Houston audiences. A few events outside city limits is OK (e.g., a wine-tasting series with some suburban events). Venues entirely outside Houston (Sugar Land, Katy, The Woodlands) are not appropriate.
 - **Rotate search queries** — don't run the same searches every day
 - **Check `docs/source-candidates/` first** — `ls` the directory, look for the slug; read the file's frontmatter to see status and history. Avoid re-proposing evaluated sources.
 - **Flag dead sources** — but don't disable them without human approval
@@ -229,8 +229,8 @@ Include a "🔍 Source Discovery" section in the daily report:
 - **A 404 is not "not viable"** — it means the URL was wrong. Update the candidate to `🔍 Investigating` and keep searching for the correct URL. Only mark `❌ Not Viable` when no working URL can be found after investigation.
 - **Iterate with Q until clean** — don't request human review until Amazon Q has no blocking comments.
 - **Parse methods must never return null** — new custom rippers must have parse methods that return `RipperCalendarEvent | RipperError` (never `null`). Filters and dedup belong in the caller, not the parse method. TypeScript enforces this at compile time. See AGENTS.md "Parse Methods Must Never Return Null" for the required pattern.
-- **Prefer venue websites over showlists** — when a venue has its own website with event listings (e.g., neumos.com, thebarboza.com), use a dedicated ripper for that venue's site instead of relying on the showlists aggregator. Venue websites are the authoritative source for dates, times, ticket links, and images. When adding a dedicated source for a venue that showlists covers, mark it `skip: true` in showlists `VENUE_CONFIG`, remove its calendar entry from the showlists `ripper.yaml`, and add an empty file `allowed-removals/<name>.ics` (e.g., `allowed-removals/seattle-showlists-barboza.ics`) so the missing-URL check passes.
-- **Check showlists sub-calendars** — `loadCalendarInventory()` lists sources (one per `ripper.yaml`), not sub-calendars. Multi-calendar sources like `seattle-showlists` appear as a single entry. Before proposing a "new" venue, check if it's already a sub-calendar inside an existing ripper (e.g., `seattle-showlists/ripper.yaml` calendars section and `VENUE_CONFIG`).
+- **Prefer venue websites over showlists** — when a venue has its own website with event listings (e.g., neumos.com, thebarboza.com), use a dedicated ripper for that venue's site instead of relying on the showlists aggregator. Venue websites are the authoritative source for dates, times, ticket links, and images. When adding a dedicated source for a venue that showlists covers, mark it `skip: true` in showlists `VENUE_CONFIG`, remove its calendar entry from the showlists `ripper.yaml`, and add an empty file `allowed-removals/<name>.ics` (e.g., `allowed-removals/houston-showlists-barboza.ics`) so the missing-URL check passes.
+- **Check showlists sub-calendars** — `loadCalendarInventory()` lists sources (one per `ripper.yaml`), not sub-calendars. Multi-calendar sources like `houston-showlists` appear as a single entry. Before proposing a "new" venue, check if it's already a sub-calendar inside an existing ripper (e.g., `houston-showlists/ripper.yaml` calendars section and `VENUE_CONFIG`).
 - **AXS skin venues support AJAX pagination** — AXS skin websites (`.eventItem` HTML structure) paginate via `{venue_url}/events/events_ajax/{offset}?category=0&venue=0&team=0&per_page=12&came_from_page=event-list-page`. The first page shows 12 events; keep fetching with offset+=12 until 0 events returned. Currently: Neumos (62 events), Barboza (64 events).
 
 ## Goals and Directives

@@ -7,7 +7,7 @@ const baseEvent = {
   startDate: new Date('2026-06-15T19:00:00Z'),
   endDate: new Date('2026-06-15T21:00:00Z'),
   description: 'A test',
-  location: 'Seattle, WA',
+  location: 'Houston, TX',
   url: 'https://example.com/event',
 }
 

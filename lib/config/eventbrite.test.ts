@@ -11,7 +11,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const tz = ZoneId.of('America/Los_Angeles');
 
-// Sample data lives in the (Seattle) source dirs, which `npm run init-city`
+// Sample data lives in the (Houston) source dirs, which `npm run init-city`
 // deletes for template copies — the suite self-skips when they're gone.
 const HAVE_SAMPLES = ['elliott-bay', 'substation']
     .every(s => existsSync(join(__dirname, `../../sources/${s}/sample-data.json`)));
@@ -35,7 +35,7 @@ describe.skipIf(!HAVE_SAMPLES)('EventbriteRipper', () => {
         it('extracts all events with no errors', () => {
             const ripper = new EventbriteRipper();
             const data = loadSample('elliott-bay');
-            const events = ripper.parseEvents(data.events, tz, '1521 10th Ave, Seattle, WA 98122');
+            const events = ripper.parseEvents(data.events, tz, '1521 10th Ave, Houston, TX 98122');
 
             const valid = events.filter(e => 'summary' in e) as RipperCalendarEvent[];
             const errors = events.filter(e => 'type' in e) as RipperError[];
@@ -64,7 +64,7 @@ describe.skipIf(!HAVE_SAMPLES)('EventbriteRipper', () => {
             const [first] = ripper.parseEvents(loadSample('elliott-bay').events, tz, '') as RipperCalendarEvent[];
             expect(first.location).toContain('Elliott Bay Book Company');
             expect(first.location).toContain('1521 10th Avenue');
-            expect(first.location).toContain('Seattle');
+            expect(first.location).toContain('Houston');
         });
 
         it('sets description and URL', () => {
@@ -109,7 +109,7 @@ describe.skipIf(!HAVE_SAMPLES)('EventbriteRipper', () => {
     });
 
     describe('parsing — Substation sample (5 events, late-night shows)', () => {
-        const DEFAULT_LOCATION = '645 NW 45th St, Seattle, WA 98107';
+        const DEFAULT_LOCATION = '645 NW 45th St, Houston, TX 98107';
 
         it('extracts all events with no errors', () => {
             const ripper = new EventbriteRipper();

@@ -253,12 +253,12 @@ describe("toRSS", () => {
 
   it("should include location in description when present", () => {
     const event = makeEvent({
-      location: "The Showbox, Seattle",
+      location: "The Showbox, Houston",
     });
     const calendar = makeCalendar([event]);
     const rss = toRSS(calendar, BASE_OPTIONS);
 
-    expect(rss).toContain("Location: The Showbox, Seattle");
+    expect(rss).toContain("Location: The Showbox, Houston");
   });
 
   it("should format date/time readably in description", () => {

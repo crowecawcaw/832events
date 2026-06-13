@@ -13,7 +13,7 @@ actually a match.
   whether to add a new source.
 - Whenever you need to know what 832.events currently covers, by event
   or by venue. **Searching `sources/` in the repo is the wrong answer**
-  — many sources are aggregators (`seattle-showlists`, `19hz`,
+  — many sources are aggregators (`houston-showlists`, `19hz`,
   `ticketmaster`) that surface events for venues they don't appear to
   "own". The only authoritative answer is the published events index.
 
@@ -114,14 +114,14 @@ date or venue still surfaces strong title matches.
 # Known recurring event — should return 1.0 on every dimension
 bash skills/event-lookup/scripts/fetch-data.sh
 python3 skills/event-lookup/scripts/search-events.py \
-    --title "Ballard Farmers Market" --venue "Ballard" --date 2026-05-17
+    --title "Heights Farmers Market" --venue "The Heights" --date 2026-05-17
 
 # Vision-misread title — should still rank the real event in top 3
 python3 skills/event-lookup/scripts/search-events.py \
-    --title "Balard Farmer's Markt Sunday Edition"
+    --title "Hieghts Farmer's Markt Sunday Edition"
 
-# Venue coverage only — no title, just "is Neumos covered?"
-python3 skills/event-lookup/scripts/search-events.py --venue "Neumos"
+# Venue coverage only — no title, just "is a given venue covered?"
+python3 skills/event-lookup/scripts/search-events.py --venue "a local music venue"
 ```
 
 ## Notes

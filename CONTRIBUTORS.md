@@ -37,7 +37,7 @@ tags: ["Music", "Arts"]      # Optional: Tags for all calendars in this ripper
 calendars:                   # Array of calendars to generate from this source
   - name: calendar1          # Unique identifier for this calendar
     friendlyname: "Calendar 1" # Human-readable name
-    timezone: America/Los_Angeles # IANA timezone identifier
+    timezone: America/Chicago # IANA timezone identifier
     tags: ["Jazz", "Live"]   # Optional: Tags specific to this calendar
     config:                  # Optional: Custom configuration passed to the ripper implementation
       key1: value1
@@ -224,8 +224,8 @@ When the system generates calendars, it will:
 3. Include external calendar events in the appropriate aggregate calendars
 
 For example, if you have:
-- A "NW Metal Calendar" with the tag "Music"
-- A "Seattle Symphony" calendar with the tag "Music"
+- A "Local Metal Calendar" with the tag "Music"
+- A "Houston Symphony" calendar with the tag "Music"
 - An external "Local Bands" calendar with the tag "Music"
 
 The system will generate a "Music" aggregate calendar that includes events from all three sources.
@@ -242,7 +242,7 @@ tags: ["Music", "Entertainment"]  # Ripper-level tags
 calendars:
   - name: jazz
     friendlyname: "Jazz Events"
-    timezone: America/Los_Angeles
+    timezone: America/Chicago
     tags: ["Jazz"]  # Calendar-specific tags
 ```
 

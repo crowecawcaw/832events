@@ -113,7 +113,7 @@ Lives at `geo-cache.json` in the repo root. Checked in. Grows over time as new l
       "geocodedAt": "2026-03-25",
       "source": "nominatim"
     },
-    "some vague rooftop, seattle": {
+    "some vague rooftop, houston": {
       "unresolvable": true,
       "geocodedAt": "2026-03-25"
     }
@@ -147,7 +147,7 @@ export interface GeoFilter {
   lat: number
   lng: number
   radiusKm: number
-  label?: string   // e.g. "Home", "Work", "Capitol Hill"
+  label?: string   // e.g. "Home", "Work", "Montrose"
 }
 
 export interface FavoritesRecord {
@@ -203,7 +203,7 @@ export async function resolveEventCoords(
 
 **Nominatim details:**
 - Endpoint: `https://nominatim.openstreetmap.org/search?q=<encoded>&format=json&limit=1&countrycodes=us&viewbox=-122.6,47.3,-121.9,47.8&bounded=1`
-- Bounding box: Seattle metro (prevents "Seattle St, Kansas City" mismatches)
+- Bounding box: Houston metro (prevents "Houston St, Kansas City" mismatches)
 - Header: `User-Agent: calendar-ripper/1.0 (github.com/prestomation/calendar-ripper)`
 - Rate limit: 1 req/sec enforced in code
 - On failure (network error, empty result, non-2xx): return `null`, mark as `unresolvable` in cache
@@ -277,7 +277,7 @@ Geo and text filters compose: geo filters the full index first; text search runs
 Three flows for setting a geo filter:
 
 1. **"Near me"** — `navigator.geolocation.getCurrentPosition()` + radius slider (default 2 km). Label auto-set to "Current location."
-2. **Named neighborhoods** — pre-set centroids for Capitol Hill, Fremont, Ballard, SLU, etc.
+2. **Named neighborhoods** — pre-set centroids for Montrose, The Heights, Midtown, EaDo, etc.
 3. **Map picker** — drop a pin (Leaflet/MapLibre). Deferred to a future PR.
 
 ---
