@@ -1,11 +1,11 @@
-# 713.events
+# 832.events
 
 Subscribe to Houston-area event calendars in your favorite calendar
 app. This project scrapes event data from local websites, ICS feeds, and
 APIs, then publishes them as standard iCalendar (.ics) files you can add to
 Google Calendar, Apple Calendar, Outlook, or any other calendar application.
 
-**https://713.events/**
+**https://832.events/**
 
 Built from the [206.events city template](https://github.com/prestomation/206events)
 — see `docs/SETUP.md` for the full setup walkthrough, `docs/city-template.md`

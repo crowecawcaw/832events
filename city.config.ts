@@ -26,31 +26,31 @@ const cityConfig = {
     },
     site: {
         // Site/brand name: <title>, PWA manifest, llms.txt, web PRODID.
-        name: "713.events",
+        name: "832.events",
         // <meta name="description"> for the web UI.
         description:
             "Browse event calendars from Houston venues, neighborhoods, and organizations. Subscribe via ICS, add events to Google Calendar, or follow RSS feeds for music, art, markets, community events, and more.",
         // Deployed site origin with trailing slash. Used as the base for
         // RSS/sitemap URLs. The SITE_BASE_URL env var still takes precedence.
-        baseUrl: "https://713.events/",
+        baseUrl: "https://832.events/",
         // Deployed site origin without trailing slash, used for the
         // deployed-site manifest probe (new-source detection) and report
         // fetches. The PRODUCTION_URL env var still takes precedence.
-        productionUrl: "https://713.events",
+        productionUrl: "https://832.events",
         // GitHub owner/repo of this copy — llms.txt source links and the
         // web feedback fallback link.
         repo: "crowecawcaw/713events",
         // Short mark shown in the boot splash and loading screen.
-        bootLogoText: "713",
+        bootLogoText: "832",
     },
     ics: {
         // PRODID identifier stamped into every generated ICS file.
-        prodId: "713.events",
+        prodId: "832.events",
     },
     geocoder: {
         // Nominatim usage policy requires an identifying User-Agent:
         // https://operations.osmfoundation.org/policies/nominatim/
-        nominatimUserAgent: "713.events/1.0 (https://713.events)",
+        nominatimUserAgent: "832.events/1.0 (https://832.events)",
         // Tight box around the metro, sent as `viewbox=…&bounded=1` so
         // ambiguous venue names resolve to the local instance.
         nominatimViewbox: { west: -96.0, south: 29.3, east: -94.8, north: 30.25 },
