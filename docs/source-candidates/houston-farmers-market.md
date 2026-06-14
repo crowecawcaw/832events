@@ -1,12 +1,12 @@
 ---
 name: Houston Farmers Market
-status: candidate
+status: added
 platform: Tribe Events (ICS)
 url: https://www.thehoustonfarmersmarket.com/events/
 tags: [FarmersMarket, MakersMarket, The Heights]
 firstSeen: 2026-06-14
 lastChecked: 2026-06-14
-pr:
+pr: (in progress)
 ---
 
 Permanent open-air market at 2520 Airline Dr, Houston, TX 77009 (The Heights
