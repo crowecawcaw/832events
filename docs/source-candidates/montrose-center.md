@@ -1,12 +1,12 @@
 ---
 name: Montrose Center
-status: candidate
+status: added
 platform: Tribe Events (ICS)
 url: https://montrosecenter.org/events/
 tags: [Montrose, Community]
 firstSeen: 2026-06-14
 lastChecked: 2026-06-14
-pr:
+pr: 10
 ---
 
 LGBTQ+ community center at 401 Branard St, Houston, TX 77006 (Montrose).
