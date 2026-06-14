@@ -28,12 +28,19 @@ aggregate.
 (Earlier note in this file claimed a dev-sandbox clock skew — that was
 wrong. The sandbox clock matches real-world UTC; the feed itself is stale.)
 
+**2026-06-13 second check:** A follow-up research pass fetched
+`https://calendar.houstonlibrary.org/ical_subscribe.php?cid=15272` and found
+**89 VEVENTs** including storytimes, workshops, ESL/citizenship classes,
+exhibits, and STEM programs across all branches. This contradicts the earlier
+finding of a stale/fixed window. The discrepancy may be due to TTL changes,
+a server-side cache reset, or different request parameters. Before implementing,
+run `ONLY_SOURCE=houston-public-library npm run generate-calendars` to confirm
+the feed returns future events in CI.
+
 Next steps before implementing:
-- Find the live aggregate feed. LibCal's authenticated REST API
-  (`/1.1/events`) returns upcoming events but needs OAuth client
-  credentials the library would have to issue — not public.
-- Look for an alternate public export: a different `cid` for the true
-  system-wide calendar, a per-branch `cid` that serves upcoming events, or
-  a LibCal RSS/JSON widget endpoint the events page calls client-side.
-- Only implement once a feed is confirmed to return events dated after the
-  current date.
+- Verify the feed at `ical_subscribe.php?cid=15272` returns future-dated events
+  from the actual CI environment before opening a PR.
+- If that URL now works, add `sources/external/houston-public-library.yaml`.
+- If still stale, explore alternate `cid` values or LibCal widget endpoints
+  the events page calls client-side.
+- Only implement once a feed is confirmed to return ≥1 event after today.
