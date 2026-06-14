@@ -5,7 +5,7 @@ platform: Ticketmaster
 url: https://houston.houseofblues.com/
 tags: [Music, Downtown]
 firstSeen: 2026-06-13
-lastChecked: 2026-06-13
+lastChecked: 2026-06-14
 pr:
 ---
 
