@@ -9,8 +9,8 @@
   for the reference instance; the strip only runs when a template user
   invokes it.
 - **Phase 3 (this PR): docs implemented** — `docs/SETUP.md` (the full
-  from-template walkthrough), the README template pitch, and the Amazon Q
-  carve-out in AGENTS.md. Two steps remain for the repo owner (they can't
+  from-template walkthrough), the README template pitch, and the
+  automated-review carve-out in AGENTS.md. Two steps remain for the repo owner (they can't
   be done from code): enable **Settings → Template repository** on GitHub,
   and set the `CLOUDFLARE_PAGES_PROJECT` / `SITE_URL` repository variables
   on the reference instance so the workflow defaults are exercised either
@@ -221,9 +221,10 @@ by `skills/event-lookup` (`$EVENT_LOOKUP_SITE` env var with a default):
   services → routines.
 - **README split** — template-facing README ("build this for your city")
   with the 832.events instance intro moved to the deployed site/docs.
-- **AGENTS.md** — mark the Amazon Q review steps (`/q review`) as optional:
-  template users likely don't have Q installed; the PR flow degrades to
-  ordinary human review.
+- **AGENTS.md** — the automated PR review (Claude Code Review via
+  `claude-code-action`) is gated on the `CLAUDE_CODE_OAUTH_TOKEN` secret;
+  template users who don't set it get a PR flow that degrades to ordinary
+  human review.
 - **Enable "Template repository"** in GitHub settings (manual, by the
   repo owner).
 - On the reference instance, set repo vars `CLOUDFLARE_PAGES_PROJECT` and
@@ -333,8 +334,10 @@ engine changes should be called out in commit/PR descriptions.
   subsystem (40+ venue `VENUE_CONFIG`); deleted for new cities rather than
   parameterized. Other cities with an equivalent aggregator write their own
   ripper.
-- **Amazon Q review** — AGENTS.md's PR flow assumes `/q review`. Optional
-  for copies; needs a docs carve-out (Phase 3).
+- **Automated PR review** — AGENTS.md's PR flow uses Claude Code Review
+  (`claude-code-action`), gated on the `CLAUDE_CODE_OAUTH_TOKEN` secret.
+  Optional for copies; the docs carve-out (Phase 3) covers the human-review
+  fallback.
 - **Manual console setup** — Cloudflare Pages project + custom domain,
   Google OAuth consent screen, KV namespaces, AWS CloudFormation stack:
   inherently manual, documentation-driven.

@@ -122,7 +122,7 @@ That skill handles:
 - Spawning a coding agent to implement the ripper / add the external
   ICS / configure the built-in type
 - Pushing to a feature branch and opening a **draft PR**
-- Subscribing to PR activity, iterating with Amazon Q until clean
+- Subscribing to PR activity, iterating on Claude Code Review feedback until clean
 - Flipping the PR to ready, enabling auto-merge, merging on green
 
 **Do not skip the live-fetch validation.** A poster lookup that
@@ -138,8 +138,8 @@ One concise message covering each event in the input. For each:
 - **(b)** parse gap: link the build-report PR (or note it was handed off).
 - **(c)** venue covered, event not yet surfaced: name the source.
 - **(d)/(e)** new source being added: link the draft PR and the
-  candidate file path. State that it will auto-merge once CI + Amazon Q
-  pass.
+  candidate file path. State that it will auto-merge once CI + Claude
+  Code Review pass.
 - One-off, no source possible: say so plainly.
 
 ## Important rules
@@ -169,4 +169,4 @@ One concise message covering each event in the input. For each:
   Vision can misread stylized fonts; better to ask once than to add
   the wrong source.
 - **Always open a draft PR**, never push to main. The repo's PR
-  workflow (Amazon Q review → auto-merge on green) handles the rest.
+  workflow (Claude Code Review → auto-merge on green) handles the rest.

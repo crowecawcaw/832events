@@ -113,7 +113,7 @@ for the full format. If you run discovery twice on the same calendar day,
 append a second `## Source discovery:` section to the existing file rather
 than creating a duplicate.
 
-**Then commit and open a PR.** Even though this is reference data (not code), the repo requires all changes via PR. Use a branch like `chore/source-discovery-YYYY-MM-DD`. After CI passes and Amazon Q has no blocking comments, merge the PR. This ensures candidates are always up-to-date before we start implementing.
+**Then commit and open a PR.** Even though this is reference data (not code), the repo requires all changes via PR. Use a branch like `chore/source-discovery-YYYY-MM-DD`. After CI passes and Claude Code Review has no blocking comments, merge the PR. This ensures candidates are always up-to-date before we start implementing.
 
 ### 6. Implement the highest-confidence source
 
@@ -172,28 +172,19 @@ To implement:
    `ONLY_SOURCE` restricts the build to that one source (skipping every other source's fetch+parse and the new-source/deployed-site gates), so iteration is fast and outgoing traffic stays scoped to the source being added. The fetch cache (`docs/fetch-cache.md`) fetches it live only once; re-runs re-parse the cached body with no network, so you can iterate on parsing freely.
 4. **Push and open PR**: `scripts/push_and_pr.sh`
 
-### 7. Verify events and iterate with Q
+### 7. Verify events and iterate with the reviewer
 
 After the PR is open:
 
 1. **Check event count in CI** — Read the PR's GitHub Actions build log. Find the new source's event count. **If 0 events** (and the source was not flagged as proxy-required), keep searching for the correct URL or source format. Update the candidate entry to `🔍 Investigating`. Do not mark `❌ Not Viable` unless you are confident no working URL exists. **Do not add `expectEmpty: true` to a new source with 0 events** — the build intentionally fails in this case to prevent merging unverified pipelines. `expectEmpty` is only appropriate after the pipeline has been confirmed to work at least once.
 
-2. **Trigger Amazon Q review** — Post a top-level PR comment using this template (substituting the actual values):
+2. **Wait for Claude Code Review** — it runs automatically when the PR opens and on every push; there is no comment to post to trigger it. Watch PR activity for its review. (If you want an out-of-band re-review or a targeted question, post a top-level comment mentioning `@claude` — optional.)
 
-   ```
-   /q review
+3. **If the review has blocking comments** → Steer the coding agent to fix them (`subagents(action="steer", message="...")`) → Push fixes. The push automatically re-runs Claude Code Review, so there's no re-trigger to send. **Resolve each addressed review thread** using `mcp__github__resolve_review_thread` after either pushing the fix or posting a reply with clear reasoning why no action will be taken.
 
-   Please review this new calendar source addition:
-   - Verify the source (`<name>`) is not already covered elsewhere in the repo (check `sources/`, `sources/external/`, `sources/recurring/`)
-   - Confirm the tags (`<tags>`) accurately reflect the type of events this source produces
-   - Review the full implementation for correctness, completeness, and consistency with the existing external calendar schema
-   ```
+4. **Repeat** until the review is clean and no blocking comments remain and all review threads are resolved.
 
-3. **If Q has blocking comments** → Steer the coding agent to fix them (`subagents(action="steer", message="...")`) → Push fixes → Re-trigger Q review with the same template → **Resolve each addressed review thread** using `mcp__github__resolve_review_thread` after either pushing the fix or posting a reply with clear reasoning why no action will be taken.
-
-4. **Repeat** until Q is clean and no blocking comments remain and all review threads are resolved.
-
-5. **When Q is clean + events confirmed (>0)** → Flip the candidate's `status:` frontmatter to `added` in `docs/source-candidates/<slug>.md` (and add the `pr:` field) and commit the update to the PR branch.
+5. **When the review is clean + events confirmed (>0)** → Flip the candidate's `status:` frontmatter to `added` in `docs/source-candidates/<slug>.md` (and add the `pr:` field) and commit the update to the PR branch.
 
 ### 8. Report findings and request review
 
@@ -201,21 +192,21 @@ Include a "🔍 Source Discovery" section in the daily report:
 
 ```
 🔍 Source Discovery
-  ✅ Added: venue name — type — N events — PR #XXX (Q clean, ready for review)
+  ✅ Added: venue name — type — N events — PR #XXX (review clean, ready for review)
   💡 Candidate: venue name — type — URL
   ❌ Not viable: venue name — reason
   💀 Dead source flagged: source name — symptom
 ```
 
-**When a source PR is Q-clean with confirmed events**, explicitly tag Preston for review:
-> 🚀 **PR #XXX is ready for review** — [venue name], [type], [N events]. Amazon Q clean, events confirmed in CI.
+**When a source PR is review-clean with confirmed events**, explicitly tag Preston for review:
+> 🚀 **PR #XXX is ready for review** — [venue name], [type], [N events]. Claude Code Review clean, events confirmed in CI.
 
 ## Important rules
 
 - **Always open a PR** for new sources — never push ripper code direct to main
 - **Open a PR for candidate updates** — even reference data changes need a PR (repo requires it). Per-candidate files live under `docs/source-candidates/`.
 - **Always implement highest-confidence source first** — don't skip to low-confidence custom scrapers when a verified built-in type is available
-- **One source per cycle** — implement, verify, iterate with Q, then report. Don't stack multiple sources in one cycle.
+- **One source per cycle** — implement, verify, iterate on review feedback, then report. Don't stack multiple sources in one cycle.
 - **Always delegate to a coding agent** to implement the ripper — do not write code directly
 - **Houston-focused only** — sources must primarily serve Houston audiences. A few events outside city limits is OK (e.g., a wine-tasting series with some suburban events). Venues entirely outside Houston (Sugar Land, Katy, The Woodlands) are not appropriate.
 - **Rotate search queries** — don't run the same searches every day
@@ -227,7 +218,7 @@ Include a "🔍 Source Discovery" section in the daily report:
 - **Never add a source that returns 0 events** — new sources must produce at least 1 event in CI before merging. The build now fails on new sources with 0 events (no `expectEmpty` exemption for brand-new sources). A source with 0 events has no proven data pipeline. Keep as `🔍 Investigating` until the correct URL or data shape is found.
 - **Proxy escalation is one rung at a time** — never skip from `proxy: false` directly to `proxy: "browserbase"`. Try rung 1 (direct fetch), then rung 2 (`proxy: "outofband"`), then rung 3 (`proxy: "browserbase"`). Each escalation is a separate PR so you can observe the failure. If the source is inaccessible even locally (CAPTCHA, Cloudflare, connection refused), record it as `status: blocked` in `docs/source-candidates/<slug>.md` with notes on what you observed, and do not implement it.
 - **A 404 is not "not viable"** — it means the URL was wrong. Update the candidate to `🔍 Investigating` and keep searching for the correct URL. Only mark `❌ Not Viable` when no working URL can be found after investigation.
-- **Iterate with Q until clean** — don't request human review until Amazon Q has no blocking comments.
+- **Iterate until the review is clean** — don't request human review until Claude Code Review has no blocking comments.
 - **Parse methods must never return null** — new custom rippers must have parse methods that return `RipperCalendarEvent | RipperError` (never `null`). Filters and dedup belong in the caller, not the parse method. TypeScript enforces this at compile time. See AGENTS.md "Parse Methods Must Never Return Null" for the required pattern.
 - **Prefer venue websites over showlists** — when a venue has its own website with event listings (e.g., neumos.com, thebarboza.com), use a dedicated ripper for that venue's site instead of relying on the showlists aggregator. Venue websites are the authoritative source for dates, times, ticket links, and images. When adding a dedicated source for a venue that showlists covers, mark it `skip: true` in showlists `VENUE_CONFIG`, remove its calendar entry from the showlists `ripper.yaml`, and add an empty file `allowed-removals/<name>.ics` (e.g., `allowed-removals/houston-showlists-barboza.ics`) so the missing-URL check passes.
 - **Check showlists sub-calendars** — `loadCalendarInventory()` lists sources (one per `ripper.yaml`), not sub-calendars. Multi-calendar sources like `houston-showlists` appear as a single entry. Before proposing a "new" venue, check if it's already a sub-calendar inside an existing ripper (e.g., `houston-showlists/ripper.yaml` calendars section and `VENUE_CONFIG`).

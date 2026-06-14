@@ -68,9 +68,9 @@ npm run generate-calendars   # zero sources — must complete with 0 errors
 
 Content-coupled tests self-skip on a stripped copy; everything else must
 pass. Commit the result on a branch, but **before opening the PR** set up
-Cloudflare (step 4) so the PR preview can deploy, and install Amazon Q
-(step 8) so the PR gets reviewed. Then open and merge it — this is your
-instance's baseline.
+Cloudflare (step 4) so the PR preview can deploy, and set the
+`CLAUDE_CODE_OAUTH_TOKEN` secret (step 8) so the PR gets reviewed. Then
+open and merge it — this is your instance's baseline.
 
 ## 4. Cloudflare Pages (required — this is the site hosting)
 
@@ -173,13 +173,21 @@ Worker** workflow, then set the `FAVORITES_API_URL` repo variable.
 
 ## 8. Code review tooling
 
-The agent workflow in `AGENTS.md` asks Amazon Q Developer for a code
-review on every PR (the `/q review` comments). Install it on your repo —
-ideally before your first PR — from the GitHub Marketplace:
-<https://github.com/marketplace/amazon-q-developer>. If it isn't
-installed, the `/q review` comments are inert; skip those steps and treat
-human review as the gate — everything else in the workflow applies as
-written.
+This repo ships **Claude Code Review** as its automated PR reviewer, via two
+GitHub Actions workflows:
+
+- `.github/workflows/claude-code-review.yml` — reviews every PR
+  automatically on open and on each push (`opened`/`synchronize`/`ready_for_review`/`reopened`).
+  No trigger comment needed.
+- `.github/workflows/claude.yml` — responds to `@claude` mentions in
+  issue/PR comments for on-demand questions or an out-of-band re-review.
+
+Both authenticate with the **`CLAUDE_CODE_OAUTH_TOKEN`** repo secret —
+generate one with `claude setup-token` (or install the Claude GitHub App)
+and add it under Settings → Secrets and variables → Actions, ideally before
+your first PR. If the secret isn't set, the workflows are inert; skip the
+review-iteration steps and treat human review as the gate — everything else
+in the workflow applies as written.
 
 ## 9. Staying current with the upstream engine
 

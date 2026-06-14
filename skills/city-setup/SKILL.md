@@ -80,11 +80,14 @@ the review loop works from day one (the behavior matrix is in
 `docs/city-template.md`, "Secrets, vars, and optional services"; detailed
 steps in `docs/SETUP.md` steps 4–7).
 
-1. **Amazon Q Developer for code reviews** — tell the operator that this
-   workflow asks Amazon Q for a review on every PR (the `/q review`
-   comments in AGENTS.md), and ask them to install it on their repo:
-   <https://github.com/marketplace/amazon-q-developer>. Until it's
-   installed, human review is the gate.
+1. **Claude Code Review for code reviews** — this repo ships two GitHub
+   Actions workflows (`.github/workflows/claude-code-review.yml`, which
+   auto-reviews every PR on open and on each push, and
+   `.github/workflows/claude.yml`, which responds to `@claude` mentions).
+   Both need the **`CLAUDE_CODE_OAUTH_TOKEN`** secret — have the operator
+   generate one with `claude setup-token` (or install the Claude GitHub
+   App) and add it to the repo. Until that secret is set, the workflows
+   are inert and human review is the gate.
 2. **Cloudflare Pages**: have them create a Pages project (custom domain
    is configured in the Cloudflare dashboard), then set the keys below.
 3. **The full key list** — walk through it with the operator so nothing is
@@ -92,6 +95,7 @@ steps in `docs/SETUP.md` steps 4–7).
 
    | Key | Kind | When it's needed |
    |---|---|---|
+   | `CLAUDE_CODE_OAUTH_TOKEN` | secret | **Now** — powers the Claude Code Review + `@claude` workflows |
    | `CLOUDFLARE_API_TOKEN` | secret | **Now** — deploys (token needs Cloudflare Pages edit permission) |
    | `CLOUDFLARE_ACCOUNT_ID` | secret | **Now** — deploys |
    | `CLOUDFLARE_PAGES_PROJECT` | variable | **Now** — the Pages project name |
@@ -110,8 +114,8 @@ steps in `docs/SETUP.md` steps 4–7).
 ### 6. Commit on a branch and open the PR
 
 Follow the Development Workflow in AGENTS.md (branch → PR). With step 5
-done, the PR gets a preview deploy and an Amazon Q review; if the operator
-skipped the Q install, rely on human review.
+done, the PR gets a preview deploy and an automatic Claude Code Review; if
+the operator skipped setting `CLAUDE_CODE_OAUTH_TOKEN`, rely on human review.
 
 ### 7. Set up self-maintenance and optional services
 
@@ -146,7 +150,7 @@ summary. It should cover:
 
 - **Configured vs pending** — each key from the step 5 list (Cloudflare,
   per-source API keys, optional services) marked set or still to do, plus
-  whether Amazon Q is installed
+  whether `CLAUDE_CODE_OAUTH_TOKEN` is set (enables Claude Code Review)
 - **Routines created vs pending** — each of the four hooks in
   `docs/routines.md`, and whether `CLAUDE_ROUTINE_ID`/`CLAUDE_ROUTINE_TOKEN`
   are set for the build-error responder
