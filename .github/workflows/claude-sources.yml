@@ -1,0 +1,85 @@
+name: Claude Source Pipeline
+
+# One daily run that does both halves of the source pipeline in a single
+# session: discover new candidates (skills/source-discovery/SKILL.md steps
+# 1-5) and then implement the highest-confidence one (steps 6-8).
+#
+# The two halves have different merge policies, enforced by the prompt:
+#   - Discovery output is markdown only (candidate files + discovery log) —
+#     it is committed straight to main, no PR.
+#   - Implementation writes real code — it opens a PR for human review and
+#     never self-merges.
+
+on:
+  schedule:
+    - cron: "30 8 * * *" # Daily, morning UTC
+  workflow_dispatch: # Allow manual triggering
+
+concurrency:
+  group: claude-sources
+  cancel-in-progress: false
+
+jobs:
+  sources:
+    # Skips silently on template copies that haven't set the OAuth token.
+    if: ${{ github.repository == 'crowecawcaw/832events' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: read
+      id-token: write
+      actions: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Run Claude Code
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          plugin_marketplaces: 'https://github.com/anthropics/claude-code.git'
+          plugins: 'code-review@claude-code-plugins'
+          # Both halves need web search/fetch (discovery) and Bash for the
+          # dead-source script, npm builds, tests, and git. claude-code-action
+          # denies Bash/WebSearch/WebFetch by default — without this allowlist
+          # the run loops on permission denials and burns tokens.
+          claude_args: '--max-turns 160 --allowedTools "Bash,WebSearch,WebFetch,Read,Edit,Write,Glob,Grep,TodoWrite"'
+          prompt: |
+            You run the full source pipeline in one session: discover new
+            candidates, then implement the best one. The two halves have
+            different merge policies — follow each exactly.
+
+            PHASE 1 — Discovery (skills/source-discovery/SKILL.md steps 1-5).
+            Scan for new sources, quality-gate them, record candidates under
+            docs/source-candidates/, append today's discovery log under
+            docs/discovery-log/, and flag dead sources. This output is
+            markdown reference data only, with no build/test risk. When done,
+            self-review the markdown for accuracy, then commit it and push it
+            DIRECTLY TO main:
+                git add docs/ && git commit -m "..." && git push origin HEAD:main
+            Do NOT open a PR for the markdown. If the push is rejected because
+            main moved, rebase on origin/main and retry. Push this discovery
+            commit to main BEFORE starting Phase 2 so the implementation PR
+            diff contains only code.
+
+            PHASE 2 — Implementation (skills/source-discovery/SKILL.md from
+            step 6). Pick the highest-confidence candidate in
+            docs/source-candidates/ and implement that ONE source. This writes
+            real code, so put it on its own branch and open a PR for HUMAN
+            REVIEW — do NOT push it to main and do NOT self-merge. Because a
+            bot-opened PR does not trigger CI or the automated Claude Code
+            Review, self-validate IN THIS SESSION before opening the PR:
+              1. ONLY_SOURCE=<source> npm run generate-calendars — confirm a
+                 sane number of events with no errors.
+              2. npm run test:all
+              3. /code-review on your working-tree diff; address its findings.
+            Open the PR with a summary of what you validated, then stop. The
+            repo owner reviews and merges it. Do not wait for CI/review or
+            enable auto-merge.
+
+            If there are no candidates worth implementing (none pending in
+            docs/source-candidates/ after Phase 1), finish after pushing the
+            Phase 1 markdown to main — do not open an implementation PR.

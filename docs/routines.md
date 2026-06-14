@@ -17,9 +17,9 @@ action — they live entirely in this repo (`.github/workflows/`) and need
 > routine-fire API call are no longer used.
 
 This catalog documents the automation set the reference instance
-(832.events) actually runs: three scheduled/error-driven workflows, plus
+(832.events) actually runs: two scheduled/error-driven workflows, plus
 the owner-driven interactive workflows (`@claude` mentions and PR review).
-A copy is **self-maintaining** once the three exist — see the operator
+A copy is **self-maintaining** once the two exist — see the operator
 journey in [`city-template.md`](./city-template.md#operator-journey).
 
 The prompts in each workflow are **suggested templates** — adjust wording,
@@ -30,10 +30,9 @@ cadence, and scope to taste by editing the workflow file.
 | Workflow | File | Trigger | Runs |
 |---|---|---|---|
 | [Build-error responder](#1-build-error-responder) | `publish_calendars.yml` (`build-error-responder` job) | After a build with errors (≤ once per 24 h) | `skills/build-report/SKILL.md` |
-| [Daily source discovery](#2-daily-source-discovery) | `claude-source-discovery.yml` | `schedule` (daily) + `workflow_dispatch` | `skills/source-discovery/SKILL.md` steps 1–5 |
-| [Daily source implementation](#3-daily-source-implementation) | `claude-source-implementation.yml` | `schedule` (daily, offset) + `workflow_dispatch` | `skills/source-discovery/SKILL.md` steps 6–8 |
+| [Source pipeline](#2-source-pipeline) | `claude-sources.yml` | `schedule` (daily) + `workflow_dispatch` | `skills/source-discovery/SKILL.md` steps 1–8 |
 
-All three authenticate with the same `CLAUDE_CODE_OAUTH_TOKEN` secret and
+Both authenticate with the same `CLAUDE_CODE_OAUTH_TOKEN` secret and
 skip silently on a copy that hasn't set it (or, on a fork whose
 `github.repository` doesn't match the reference instance).
 
@@ -69,43 +68,42 @@ issue or PR, the owner comments `@claude`.
 
 ## Autonomous PRs: in-session validation, owner merges
 
-The build-error responder and the two scheduled workflows **open PRs from
-inside GitHub Actions using the default `GITHUB_TOKEN`**. GitHub attributes
-those to `github-actions[bot]` and — by design, to prevent recursion —
-**does not start new workflow runs from `GITHUB_TOKEN` events**. So an
-autonomous PR does **not** trigger CI (`pr-preview.yml`, `web-e2e.yml`) or
-the automated `claude-code-review.yml`. (This only affects bot-opened PRs;
-PRs *you* open trigger everything normally.)
+The build-error responder and the source pipeline act from inside GitHub
+Actions using the default `GITHUB_TOKEN`. GitHub attributes those to
+`github-actions[bot]` and — by design, to prevent recursion — **does not
+start new workflow runs from `GITHUB_TOKEN` events**. So a bot push to
+`main`, and any PR a bot opens, does **not** trigger CI (`pr-preview.yml`,
+`web-e2e.yml`) or the automated `claude-code-review.yml`. (This only
+affects bot activity; pushes and PRs *you* make trigger everything
+normally.)
 
 Rather than introduce a privileged App/PAT token to work around the
 recursion guard, these workflows **self-validate in the same session**
-before opening the PR:
-
-- **Implementation / build-error** — build the affected source
-  (`ONLY_SOURCE=<source> npm run generate-calendars`), run `npm run
-  test:all`, and run `/code-review` on the working-tree diff, addressing
-  findings. The `code-review` plugin is loaded into these workflows for this.
-- **Discovery** — only writes markdown candidate/log files, so it just
-  self-reviews those changes.
+before landing anything.
 
 **Merge policy differs by output type:**
 
-- **Discovery self-merges.** Its PR is markdown only (candidate files and
-  the discovery log) — reference data with no build/test risk and nothing
-  for CI to gate — so after self-reviewing the markdown the workflow
-  **squash-merges its own PR**. `main` is unprotected and the default
-  `GITHUB_TOKEN` already carries `contents: write` / `pull-requests:
-  write`, so no extra token is needed.
+- **Discovery output commits straight to `main`, no PR.** The candidate
+  files and discovery log are markdown reference data with no build/test
+  risk and nothing for CI to gate, so the pipeline self-reviews the
+  markdown and pushes it directly to `main` (`git push origin HEAD:main`).
+  `main` is unprotected and the default `GITHUB_TOKEN` already carries
+  `contents: write`, so no PR and no extra token are needed.
 - **Implementation and build-error open a PR for human review.** They
   write real code, which should be validated by a human (and ideally real
-  CI) before landing, so they **do not** self-merge. The PR lands
-  pre-checked with a summary of what was validated, and the **repo owner
-  reviews and merges it**. Their prompts explicitly tell Claude *not* to
-  wait for CI/review or enable auto-merge, since neither will fire on a
-  bot-opened PR.
-If you later want the fully hands-off auto-review/auto-merge loop, give the
-PR-creating workflows a GitHub App or fine-grained PAT as `github_token`
-(so their PRs trigger downstream workflows) and widen the
+  CI) before landing, so they **never** push to `main` or self-merge.
+  Before opening the PR they build the affected source
+  (`ONLY_SOURCE=<source> npm run generate-calendars`), run `npm run
+  test:all`, and run `/code-review` on the working-tree diff, addressing
+  findings (the `code-review` plugin is loaded into these workflows for
+  this). The PR lands pre-checked with a summary of what was validated,
+  and the **repo owner reviews and merges it**. Their prompts explicitly
+  tell Claude *not* to wait for CI/review or enable auto-merge, since
+  neither will fire on a bot-opened PR.
+
+If you later want the fully hands-off auto-review/auto-merge loop for the
+implementation PR, give the pipeline a GitHub App or fine-grained PAT as
+`github_token` (so its PRs trigger downstream workflows) and widen the
 `claude-code-review.yml` gate to that identity.
 
 ## 1. Build-error responder
@@ -139,55 +137,43 @@ silently when the secret is unset.
 if enabled) and run `skills/build-report/SKILL.md` yourself when errors
 appear.
 
-## 2. Daily source discovery
+## 2. Source pipeline
 
-**Purpose:** grow the catalog — scan for new event sources in your city,
-quality-gate them, record candidates under `docs/source-candidates/`, and
-flag dead sources. Output is markdown only, so this workflow
-**self-merges its own PR** after a self-review (see [Autonomous
-PRs](#autonomous-prs-in-session-validation-owner-merges) above).
+**Purpose:** grow the catalog in one daily run that does both halves of
+the source pipeline in a single session:
 
-**Trigger & cadence:** `.github/workflows/claude-source-discovery.yml`,
-`schedule` daily (plus `workflow_dispatch` for a manual run).
+- **Discovery** (`skills/source-discovery/SKILL.md` steps 1–5) — scan for
+  new event sources in your city, quality-gate them, record candidates
+  under `docs/source-candidates/`, append today's discovery log, and flag
+  dead sources. This markdown output is **committed straight to `main`,
+  no PR** (see [Autonomous PRs](#autonomous-prs-in-session-validation-owner-merges)
+  above).
+- **Implementation** (`skills/source-discovery/SKILL.md` steps 6–8) —
+  pick the highest-confidence candidate from `docs/source-candidates/` and
+  implement that one source, following the quality gates. This code lands
+  as a **PR for human review**, self-validated in-session (build + tests +
+  `/code-review`) since CI won't run on a bot PR. The repo owner merges it.
 
-**Prompt (in the workflow):**
+Running both halves in one session means each day's freshly-discovered
+candidates are available to the implementation half immediately, with no
+offset scheduling.
 
-```
-Read skills/source-discovery/SKILL.md and follow steps 1-5 (discovery and
-candidate triage only - do not implement a source). Record new candidates
-under docs/source-candidates/ and append today's discovery log.
-```
-
-**Secrets & repo coupling:** `CLAUDE_CODE_OAUTH_TOKEN`.
-
-**Without it:** the source catalog stops growing and dead sources go
-unflagged until a human runs the skill.
-
-## 3. Daily source implementation
-
-**Purpose:** turn candidates into live calendars — pick the
-highest-confidence candidate from `docs/source-candidates/` and implement
-it as its own PR, following the quality gates. The PR is self-validated
-in-session (build + tests + `/code-review`) since CI won't run on it — see
-[Autonomous PRs](#autonomous-prs-in-session-validation-owner-merges) above.
-
-**Trigger & cadence:**
-`.github/workflows/claude-source-implementation.yml`, `schedule` daily
-(offset a few hours after the discovery workflow so fresh candidates are
-available) plus `workflow_dispatch`.
+**Trigger & cadence:** `.github/workflows/claude-sources.yml`, `schedule`
+daily (plus `workflow_dispatch` for a manual run).
 
 **Prompt (in the workflow):**
 
 ```
-Read skills/source-discovery/SKILL.md and follow it from step 6: pick the
-highest-confidence existing candidate in docs/source-candidates/ and
-implement that one source as a PR. Do not run the discovery scan.
+Phase 1 — discovery (steps 1-5): record candidates + discovery log,
+commit straight to main. Phase 2 — implementation (from step 6):
+implement the highest-confidence candidate as a human-review PR.
 ```
 
 **Secrets & repo coupling:** `CLAUDE_CODE_OAUTH_TOKEN`.
 
-**Without it:** candidates pile up in `docs/source-candidates/`
-unimplemented.
+**Without it:** the source catalog stops growing, dead sources go
+unflagged, and candidates are never implemented until a human runs the
+skill.
 
 ## Issues, PRs, and comments (owner-driven, not automated)
 
