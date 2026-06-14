@@ -1,12 +1,12 @@
 ---
 name: Eureka Heights Brew Co
-status: candidate
+status: added
 platform: Tribe Events (ICS)
 url: https://www.eurekaheights.com/eureka-events/
 tags: [Beer, The Heights]
 firstSeen: 2026-06-14
 lastChecked: 2026-06-14
-pr:
+pr: (in progress)
 ---
 
 Craft brewery and taproom at 2454 Sawyer St, Houston, TX 77007 (The Heights

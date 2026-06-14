@@ -1,12 +1,12 @@
 ---
 name: Houston Heights Association
-status: candidate
+status: added
 platform: Tribe Events (ICS)
 url: https://houstonheights.org/events/
 tags: [The Heights, Community]
 firstSeen: 2026-06-14
 lastChecked: 2026-06-14
-pr:
+pr: (in progress)
 ---
 
 The Houston Heights Association (HHA) is a civic organization serving The
