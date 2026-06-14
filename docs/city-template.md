@@ -295,8 +295,10 @@ Anthropic-account routines or extra secrets. The reference instance runs
    errors, and skips silently when the OAuth token is unset.
 2. **Source pipeline** — `claude-sources.yml`, scheduled daily; one
    session that runs `skills/source-discovery/SKILL.md` steps 1–5
-   (discover + commit candidates straight to `main`), then steps 6–8
-   (implement the highest-confidence candidate as a human-review PR).
+   (discover candidates) and hands them to steps 6–8 (implement the
+   highest-confidence one), landing both the discovery markdown and the
+   new source code in a single human-review PR — nothing is committed to
+   `main` directly.
 
 Issues and PRs are owner-driven, not automated: the owner comments
 `@claude` to act on demand (`claude.yml`), and owner-authored PRs are

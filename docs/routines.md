@@ -81,29 +81,30 @@ Rather than introduce a privileged App/PAT token to work around the
 recursion guard, these workflows **self-validate in the same session**
 before landing anything.
 
-**Merge policy differs by output type:**
+**Everything lands in one human-review PR — nothing is committed to
+`main` directly.**
 
-- **Discovery output commits straight to `main`, no PR.** The candidate
-  files and discovery log are markdown reference data with no build/test
-  risk and nothing for CI to gate, so the pipeline self-reviews the
-  markdown and pushes it directly to `main` (`git push origin HEAD:main`).
-  `main` is unprotected and the default `GITHUB_TOKEN` already carries
-  `contents: write`, so no PR and no extra token are needed.
-- **Implementation and build-error open a PR for human review.** They
-  write real code, which should be validated by a human (and ideally real
-  CI) before landing, so they **never** push to `main` or self-merge.
-  Before opening the PR they build the affected source
-  (`ONLY_SOURCE=<source> npm run generate-calendars`), run `npm run
-  test:all`, and run `/code-review` on the working-tree diff, addressing
-  findings (the `code-review` plugin is loaded into these workflows for
-  this). The PR lands pre-checked with a summary of what was validated,
-  and the **repo owner reviews and merges it**. Their prompts explicitly
-  tell Claude *not* to wait for CI/review or enable auto-merge, since
-  neither will fire on a bot-opened PR.
+- **Discovery hands its markdown to implementation in-session.** Phase 1
+  writes the candidate files and discovery log into the working tree but
+  does **not** commit or push them on their own. Phase 2 carries those
+  changes forward, so the discovery markdown rides into the same PR as the
+  code rather than landing as a separate commit or throwaway PR.
+- **The pipeline opens one PR for human review.** Phase 2 implements the
+  highest-confidence candidate, then opens a single PR containing both the
+  Phase 1 markdown (discovery log + candidate files) and the source code.
+  It writes real code, which should be validated by a human (and ideally
+  real CI) before landing, so it **never** pushes to `main` or self-merges.
+  Before opening the PR it builds the affected source
+  (`ONLY_SOURCE=<source> npm run generate-calendars`), runs `npm run
+  test:all`, and runs `/code-review` on the working-tree diff, addressing
+  findings (the `code-review` plugin is loaded for this). The build-error
+  responder follows the same self-validate-then-PR pattern. Their prompts
+  explicitly tell Claude *not* to wait for CI/review or enable auto-merge,
+  since neither will fire on a bot-opened PR.
 
 If you later want the fully hands-off auto-review/auto-merge loop for the
-implementation PR, give the pipeline a GitHub App or fine-grained PAT as
-`github_token` (so its PRs trigger downstream workflows) and widen the
+pipeline's PR, give it a GitHub App or fine-grained PAT as `github_token`
+(so its PRs trigger downstream workflows) and widen the
 `claude-code-review.yml` gate to that identity.
 
 ## 1. Build-error responder
@@ -143,20 +144,24 @@ appear.
 the source pipeline in a single session:
 
 - **Discovery** (`skills/source-discovery/SKILL.md` steps 1–5) — scan for
-  new event sources in your city, quality-gate them, record candidates
+  new event sources in your city, quality-gate them, write candidates
   under `docs/source-candidates/`, append today's discovery log, and flag
-  dead sources. This markdown output is **committed straight to `main`,
-  no PR** (see [Autonomous PRs](#autonomous-prs-in-session-validation-owner-merges)
+  dead sources. This markdown stays in the working tree and is **handed to
+  the implementation half in-session** — it is never committed to `main`
+  on its own (see [Autonomous PRs](#autonomous-prs-in-session-validation-owner-merges)
   above).
 - **Implementation** (`skills/source-discovery/SKILL.md` steps 6–8) —
-  pick the highest-confidence candidate from `docs/source-candidates/` and
-  implement that one source, following the quality gates. This code lands
-  as a **PR for human review**, self-validated in-session (build + tests +
-  `/code-review`) since CI won't run on a bot PR. The repo owner merges it.
+  pick the highest-confidence candidate and implement that one source,
+  following the quality gates, then open **one PR for human review** that
+  carries both the Phase 1 markdown and the new source code. The PR is
+  self-validated in-session (build + tests + `/code-review`) since CI won't
+  run on a bot PR. The repo owner merges it.
 
 Running both halves in one session means each day's freshly-discovered
-candidates are available to the implementation half immediately, with no
-offset scheduling.
+candidates flow straight into the implementation half, with no offset
+scheduling and no intermediate commit to `main`. If a run turns up nothing
+worth implementing, it opens a markdown-only PR with the discovery
+log / candidate / dead-source updates instead.
 
 **Trigger & cadence:** `.github/workflows/claude-sources.yml`, `schedule`
 daily (plus `workflow_dispatch` for a manual run).
@@ -164,9 +169,10 @@ daily (plus `workflow_dispatch` for a manual run).
 **Prompt (in the workflow):**
 
 ```
-Phase 1 — discovery (steps 1-5): record candidates + discovery log,
-commit straight to main. Phase 2 — implementation (from step 6):
-implement the highest-confidence candidate as a human-review PR.
+Phase 1 — discovery (steps 1-5): write candidates + discovery log to the
+working tree, hand them to Phase 2. Phase 2 — implementation (from step
+6): implement the highest-confidence candidate and open ONE human-review
+PR carrying both the Phase 1 markdown and the source code.
 ```
 
 **Secrets & repo coupling:** `CLAUDE_CODE_OAUTH_TOKEN`.
