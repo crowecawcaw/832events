@@ -12,11 +12,10 @@ Setup lands in tiers — stop at whichever one you want:
 1. **Deployed site** (steps 1–6, about an afternoon): the site is live at
    your `SITE_URL`, the daily build is green, and your first sources are
    merged and publishing events.
-2. **Self-maintaining site** (+ the four Claude Code automation workflows
-   in step 7): broken sources get fixed, new sources get discovered and
-   implemented, and user-filed issues get answered — without you in the
-   loop. The workflow set, with suggested prompts, is catalogued in
-   [`docs/routines.md`](./routines.md).
+2. **Self-maintaining site** (+ the three Claude Code automation workflows
+   in step 7): broken sources get fixed, and new sources get discovered and
+   implemented — without you in the loop. The workflow set, with suggested
+   prompts, is catalogued in [`docs/routines.md`](./routines.md).
 3. **Full product** (+ the remaining step 7 services): Discord build
    notifications, the out-of-band proxy for bot-blocked sources, and
    sign-in/favorites via the Cloudflare Worker.
@@ -132,7 +131,7 @@ workflows are what run them on a schedule. They run as **GitHub Actions**
 (in `.github/workflows/`) using the `anthropics/claude-code-action@v1`
 action and the same `CLAUDE_CODE_OAUTH_TOKEN` secret as the PR-review and
 `@claude`-mention workflows — no Anthropic-account routines or extra
-secrets. The reference instance runs **four**; suggested prompts and
+secrets. The reference instance runs **three**; suggested prompts and
 cadences for each are in [`docs/routines.md`](./routines.md):
 
 - **Build-error responder** — runs `skills/build-report/SKILL.md`; the
@@ -145,11 +144,14 @@ cadences for each are in [`docs/routines.md`](./routines.md):
 - **Daily source implementation** — `claude-source-implementation.yml`,
   scheduled daily; implements the highest-confidence candidate as a PR
   (steps 6–8).
-- **GitHub-issues responder** — `claude-issue-responder.yml`, triggered on
-  newly-opened issues; triages feedback-form and user-filed issues into
-  fixes or new sources.
 
-All four authenticate with `CLAUDE_CODE_OAUTH_TOKEN` and skip silently when
+Issues and PRs are **owner-driven**, not automated: comment `@claude` to
+have it act on demand (`claude.yml`), and owner-authored PRs are
+auto-reviewed (`claude-code-review.yml`). Both are gated to the repo owner;
+there is no workflow that auto-acts on external issues or fork PRs. See the
+access-control section of [`docs/routines.md`](./routines.md).
+
+All three authenticate with `CLAUDE_CODE_OAUTH_TOKEN` and skip silently when
 it (or, for a fork, the matching `github.repository`) isn't present.
 
 ### Out-of-band proxy (AWS — skip until a source actually needs it)

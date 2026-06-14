@@ -245,12 +245,11 @@ and `init-city` itself prints the same pointers when it finishes.
    `CLOUDFLARE_PAGES_PROJECT`/`SITE_URL` vars), first build published,
    first sources merged. *Done when:* the site is live at `SITE_URL`, the
    daily build is green, and at least a handful of sources publish events.
-2. **Self-maintaining site** — the four automation workflows in
+2. **Self-maintaining site** — the three automation workflows in
    `docs/routines.md` run as GitHub Actions (build-error responder, daily
-   source discovery, daily source implementation, GitHub-issues responder),
-   authenticated with `CLAUDE_CODE_OAUTH_TOKEN`. *Done when:* a broken
-   source gets fixed, a new source lands, and a feedback issue gets answered
-   with no human in the loop.
+   source discovery, daily source implementation), authenticated with
+   `CLAUDE_CODE_OAUTH_TOKEN`. *Done when:* a broken source gets fixed and a
+   new source lands with no human in the loop.
 3. **Full product** — the remaining optional services: Discord
    notifications, out-of-band proxy (only once a source needs it), and the
    favorites worker. *Done when:* whichever of these the operator wants is
@@ -266,7 +265,7 @@ and `init-city` itself prints the same pointers when it finishes.
 | **Browserbase** (JS-challenge bypass) | `BROWSERBASE_API_KEY` secret | Per-source | `proxy: browserbase` sources fail; others unaffected |
 | **Out-of-band proxy** (AWS) | `AWS_ROLE_ARN` secret, `OUTOFBAND_BUCKET` var; CloudFormation stack in `infra/authenticated-proxy/` (OIDC subject must be set to the copy's `owner/repo`); a residential-IP runner cron | Optional | Already graceful: the AWS-credentials step is `continue-on-error`, `scripts/download-outofband.ts` exits 0 when S3 is unreachable, and `proxy: outofband` sources sit in the non-fatal `pendingProxyVerification` queue. A copy that never sets this up simply shouldn't mark sources `outofband` |
 | **Discord notifications** | `DISCORD_WEBHOOK_CALENDAR` secret; `init-city` deletes the Seattle-specific `notify-discord.yml` on copies — restore it from upstream to enable | Optional | Reference instance: workflow skips posting when the secret is unset. Copies: no workflow at all until restored |
-| **Claude automation** | `CLAUDE_CODE_OAUTH_TOKEN` secret — powers all four automation workflows in `docs/routines.md` (also used by the PR-review and `@claude`-mention workflows) | Optional | Every Claude workflow skips silently when unset; build-error fixing, discovery, implementation, and issue triage all become manual |
+| **Claude automation** | `CLAUDE_CODE_OAUTH_TOKEN` secret — powers the three automation workflows in `docs/routines.md` plus the owner-gated PR-review and `@claude`-mention workflows | Optional | Every Claude workflow skips silently when unset; build-error fixing, discovery, and implementation become manual |
 | **Favorites** (sign-in, personal feeds) | `FAVORITES_API_URL` var → `VITE_FAVORITES_API_URL`; Cloudflare Worker deploy with KV namespaces + `JWT_SECRET`, `GOOGLE_CLIENT_ID`/`GOOGLE_CLIENT_SECRET`, optional `FEEDBACK_GITHUB_ISSUES_TOKEN` | **Optional, off by default** | Web UI runs in read-only mode (no sign-in, favorites in localStorage); this is the template default |
 
 ### Favorites worker (advanced, opt-in)
@@ -287,7 +286,7 @@ The recurring agent operations run as **GitHub Actions workflows** in
 `.github/workflows/`, using `anthropics/claude-code-action@v1` and the
 `CLAUDE_CODE_OAUTH_TOKEN` secret. They ship with the template — no
 Anthropic-account routines or extra secrets. The reference instance runs
-**four**, catalogued with suggested prompts and cadences in
+**three**, catalogued with suggested prompts and cadences in
 `docs/routines.md`:
 
 1. **Build-error responder** — runs `skills/build-report/SKILL.md`. The
@@ -299,9 +298,13 @@ Anthropic-account routines or extra secrets. The reference instance runs
    scheduled daily.
 3. **Daily source implementation** — `claude-source-implementation.yml`,
    steps 6–8 (implement the highest-confidence candidate), scheduled daily.
-4. **GitHub-issues responder** — `claude-issue-responder.yml`, triages
-   feedback-form and user-filed issues into fixes or new-source PRs,
-   triggered on newly-opened issues.
+
+Issues and PRs are owner-driven, not automated: the owner comments
+`@claude` to act on demand (`claude.yml`), and owner-authored PRs are
+auto-reviewed (`claude-code-review.yml`). All Claude workflows are gated to
+the repo owner (`github.actor` / PR author vs `github.repository_owner`);
+none auto-acts on external issues or fork PRs. See the access-control
+section of `docs/routines.md`.
 
 Template users get the self-maintaining behavior for free once
 `CLAUDE_CODE_OAUTH_TOKEN` is set (the same secret the PR-review and

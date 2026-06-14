@@ -17,9 +17,10 @@ action — they live entirely in this repo (`.github/workflows/`) and need
 > routine-fire API call are no longer used.
 
 This catalog documents the automation set the reference instance
-(832.events) actually runs: four workflows. A copy is **self-maintaining**
-once all four exist — see the operator journey in
-[`city-template.md`](./city-template.md#operator-journey).
+(832.events) actually runs: three scheduled/error-driven workflows, plus
+the owner-driven interactive workflows (`@claude` mentions and PR review).
+A copy is **self-maintaining** once the three exist — see the operator
+journey in [`city-template.md`](./city-template.md#operator-journey).
 
 The prompts in each workflow are **suggested templates** — adjust wording,
 cadence, and scope to taste by editing the workflow file.
@@ -31,12 +32,40 @@ cadence, and scope to taste by editing the workflow file.
 | [Build-error responder](#1-build-error-responder) | `publish_calendars.yml` (`build-error-responder` job) | After a build with errors (≤ once per 24 h) | `skills/build-report/SKILL.md` |
 | [Daily source discovery](#2-daily-source-discovery) | `claude-source-discovery.yml` | `schedule` (daily) + `workflow_dispatch` | `skills/source-discovery/SKILL.md` steps 1–5 |
 | [Daily source implementation](#3-daily-source-implementation) | `claude-source-implementation.yml` | `schedule` (daily, offset) + `workflow_dispatch` | `skills/source-discovery/SKILL.md` steps 6–8 |
-| [GitHub-issues responder](#4-github-issues-responder) | `claude-issue-responder.yml` | `issues: [opened, reopened]` | triage → the matching skill |
 
-All four authenticate with the same `CLAUDE_CODE_OAUTH_TOKEN` secret and
-skip silently on a copy that hasn't set it (or, for the three new
-workflows, on a fork whose `github.repository` doesn't match the reference
-instance).
+All three authenticate with the same `CLAUDE_CODE_OAUTH_TOKEN` secret and
+skip silently on a copy that hasn't set it (or, on a fork whose
+`github.repository` doesn't match the reference instance).
+
+## Access control (who can trigger Claude)
+
+These workflows run Claude with `contents: write` / `pull-requests: write`
+and the `CLAUDE_CODE_OAUTH_TOKEN` secret, so trigger access is restricted
+to the **repo owner**:
+
+- **Scheduled workflows** (discovery, implementation) can't be triggered by
+  outsiders — `schedule` isn't user-initiated and `workflow_dispatch`
+  requires write access. They're additionally fork-guarded by
+  `github.repository`.
+- **Build-error responder** runs inside the publish pipeline (push to
+  `main` / schedule / dispatch), never on PRs.
+- **Interactive workflows** are owner-gated in their job `if:`:
+  `claude.yml` (`@claude` mentions on issues/PRs/reviews) requires
+  `github.actor == github.repository_owner`, and `claude-code-review.yml`
+  only runs for PRs authored by the owner
+  (`github.event.pull_request.user.login == github.repository_owner`).
+
+The gate is on the **triggering actor**, not `author_association` — a
+stranger commenting `@claude` on an issue *you* opened still carries your
+`author_association` on the issue payload, so an actor check is the correct
+signal. There is intentionally **no** workflow that auto-acts on
+externally-opened issues or external/fork PRs. To drive Claude on any
+issue or PR, the owner comments `@claude`.
+
+> If this repo is ever moved under a GitHub **org**, `github.repository_owner`
+> becomes the org name (which no `github.actor` equals), locking everyone
+> out — switch the gates to an explicit login allowlist at that point. The
+> same allowlist is how you'd grant a trusted collaborator access.
 
 ## 1. Build-error responder
 
@@ -114,32 +143,16 @@ implement that one source as a PR. Do not run the discovery scan.
 **Without it:** candidates pile up in `docs/source-candidates/`
 unimplemented.
 
-## 4. GitHub-issues responder
+## Issues, PRs, and comments (owner-driven, not automated)
 
-**Purpose:** act on user feedback. The in-app feedback form files labeled
-GitHub issues automatically (see [`user-feedback.md`](./user-feedback.md)),
-and users also open issues by hand — bug reports, new-source requests,
-stale-calendar reports. This workflow triages them and turns them into PRs.
+There is intentionally **no** workflow that auto-acts on externally-opened
+issues or external/fork PRs — this instance doesn't take external
+contributions, and an agent with write access reacting to stranger input
+is exposure we don't want (see [Access control](#access-control-who-can-trigger-claude)).
 
-**Trigger & cadence:** `.github/workflows/claude-issue-responder.yml`,
-`on: issues: [opened, reopened]`. Issues that explicitly mention `@claude`
-are skipped here and handled by `claude.yml` (the on-demand mention
-handler) instead, so the two don't double-process the same issue.
-
-**Prompt (in the workflow):**
-
-```
-... For a new-source request, follow skills/source-discovery/SKILL.md
-(quality gates included). For a broken or incorrect calendar, follow
-skills/build-report/SKILL.md conventions to fix the ripper. For an event
-poster or "is X covered?" question, follow skills/source-from-event/SKILL.md.
-Open a PR and comment on the issue with the result.
-```
-
-**Secrets & repo coupling:** `CLAUDE_CODE_OAUTH_TOKEN`. (The
-`FEEDBACK_GITHUB_ISSUES_TOKEN` secret mentioned in the favorites-worker
-setup is unrelated — it lets the *feedback form* file issues, not the
-responder read them.)
-
-**Without it:** feedback-form submissions and user issues sit until a
-human triages them.
+To act on an issue or PR, the **owner** drives Claude on demand by
+commenting `@claude` with the request (handled by `claude.yml`, owner-gated).
+For a new-source request follow `skills/source-discovery/SKILL.md`; for a
+broken calendar follow `skills/build-report/SKILL.md`; for an event poster
+or "is X covered?" question follow `skills/source-from-event/SKILL.md`. PRs
+the owner opens are auto-reviewed by `claude-code-review.yml`.

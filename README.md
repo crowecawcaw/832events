@@ -18,10 +18,11 @@ maintenance workflow.
    especially), set up the Cloudflare Pages project and GitHub secrets
    (`docs/SETUP.md` steps 4–5), and add your first sources —
    `skills/source-discovery/SKILL.md`.
-2. **Self-maintain**: the four Claude Code automation workflows catalogued
+2. **Self-maintain**: the three Claude Code automation workflows catalogued
    in `docs/routines.md` (build-error responder, daily source discovery,
-   daily source implementation, GitHub-issues responder) run as GitHub
-   Actions using the `CLAUDE_CODE_OAUTH_TOKEN` secret.
+   daily source implementation) run as GitHub Actions using the
+   `CLAUDE_CODE_OAUTH_TOKEN` secret. Owner-driven `@claude` mentions and PR
+   review are owner-gated.
 3. **Optional services**: Discord notifications, out-of-band proxy,
    favorites/sign-in — `docs/SETUP.md` step 7.
 

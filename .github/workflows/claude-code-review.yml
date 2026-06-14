@@ -12,11 +12,11 @@ on:
 
 jobs:
   claude-review:
-    # Optional: Filter by PR author
-    # if: |
-    #   github.event.pull_request.user.login == 'external-contributor' ||
-    #   github.event.pull_request.user.login == 'new-developer' ||
-    #   github.event.pull_request.author_association == 'FIRST_TIME_CONTRIBUTOR'
+    # Only auto-review PRs authored by the repo owner. External/fork PRs are
+    # ignored (we don't take external contributions, and fork PRs don't get
+    # the OAuth secret anyway). To allow trusted collaborators, replace this
+    # with an explicit login allowlist or an author_association check.
+    if: github.event.pull_request.user.login == github.repository_owner
 
     runs-on: ubuntu-latest
     permissions:
