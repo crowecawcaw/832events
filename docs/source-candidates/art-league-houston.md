@@ -1,11 +1,11 @@
 ---
 name: Art League Houston
-status: candidate
+status: investigating
 platform: Squarespace
 url: https://www.artleaguehouston.org/calendar
 tags: [Art, Montrose]
 firstSeen: 2026-06-13
-lastChecked: 2026-06-13
+lastChecked: 2026-06-14
 pr:
 ---
 
@@ -14,17 +14,21 @@ Houston, TX 77006. Programs include gallery exhibitions, an art school,
 artist talks, fundraiser events (Block Party), and the Texas Artist of the Year
 program.
 
-**Platform:** Squarespace — site confirmed Squarespace (squarespace.com domain
-appeared in search cache for the organization). Calendar at `/calendar` and
-`/upcomingcalendar`.
+**Platform:** Squarespace — site confirmed Squarespace.
 
-**Verification needed:** Fetch `https://www.artleaguehouston.org/events?format=json`
-to confirm the Squarespace `?format=json` endpoint returns future events.
-Check that at least one item in `data.upcoming` or `data.items` has
-`startDate > Date.now()` (milliseconds epoch). If confirmed, proceed with
-the built-in `squarespace` type.
+**Investigation result (2026-06-14):** Fetched `/calendar?format=json` — the
+Squarespace JSON endpoint returns `"itemCount":0` with no events in any array.
+The calendar Squarespace block exists on the page but is empty. The `/events`
+path serves HTML (the Gala 2026 page), not a JSON collection. The site does
+have events (e.g. 78th Anniversary Gala, October 9 2026), but they are not
+surfaced through the standard Squarespace `?format=json` endpoint that the
+built-in `squarespace` ripper type uses.
+
+**Next steps:** Check whether events are listed on Eventbrite under an Art
+League Houston organizer account, or whether the site uses a custom HTML event
+listing that would require a low-confidence HTML scraper.
 
 **Geo:** lat 29.7441, lng -95.3941
 
-**Confidence:** 🟡 Medium — Squarespace is highly probable but `?format=json`
-endpoint not yet verified.
+**Confidence:** 🔴 Low — Squarespace calendar feed confirmed empty; need
+alternative approach.
