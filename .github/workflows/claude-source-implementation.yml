@@ -36,7 +36,11 @@ jobs:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           plugin_marketplaces: 'https://github.com/anthropics/claude-code.git'
           plugins: 'code-review@claude-code-plugins'
-          claude_args: "--max-turns 120"
+          # Implementation needs Bash (ONLY_SOURCE=... npm run generate-calendars,
+          # npm run test:all) and web fetch/search to inspect sources. These are
+          # denied by claude-code-action's default allowlist, so grant them here —
+          # otherwise the run loops on permission denials and wastes tokens.
+          claude_args: '--max-turns 120 --allowedTools "Bash,WebSearch,WebFetch,Read,Edit,Write,Glob,Grep,TodoWrite"'
           prompt: |
             Read skills/source-discovery/SKILL.md and follow it from step 6:
             pick the highest-confidence existing candidate in
