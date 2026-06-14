@@ -12,10 +12,10 @@ Setup lands in tiers — stop at whichever one you want:
 1. **Deployed site** (steps 1–6, about an afternoon): the site is live at
    your `SITE_URL`, the daily build is green, and your first sources are
    merged and publishing events.
-2. **Self-maintaining site** (+ the four Claude Code routines in step 7):
-   broken sources get fixed, new sources get discovered and implemented,
-   and user-filed issues get answered — without you in the loop. The
-   routine set, with suggested prompts, is catalogued in
+2. **Self-maintaining site** (+ the four Claude Code automation workflows
+   in step 7): broken sources get fixed, new sources get discovered and
+   implemented, and user-filed issues get answered — without you in the
+   loop. The workflow set, with suggested prompts, is catalogued in
    [`docs/routines.md`](./routines.md).
 3. **Full product** (+ the remaining step 7 services): Discord build
    notifications, the out-of-band proxy for bot-blocked sources, and
@@ -125,29 +125,32 @@ the upstream repo (adjusting the hardcoded role mention), then set the
 and actionable queues (uncertain events, photo/cost gaps, proxy
 escalations) get posted after each run.
 
-### Claude Code routines (the self-maintaining part)
+### Claude Code automation workflows (the self-maintaining part)
 
-The skills under `skills/` are the operating manual; routines are what run
-them on a schedule. Routines are resources in *your* Anthropic account —
-create them in Claude Code pointing at this repo. The reference instance
-runs **four** automation hooks; suggested prompts and cadences for each are
-in [`docs/routines.md`](./routines.md):
+The skills under `skills/` are the operating manual; the automation
+workflows are what run them on a schedule. They run as **GitHub Actions**
+(in `.github/workflows/`) using the `anthropics/claude-code-action@v1`
+action and the same `CLAUDE_CODE_OAUTH_TOKEN` secret as the PR-review and
+`@claude`-mention workflows — no Anthropic-account routines or extra
+secrets. The reference instance runs **four**; suggested prompts and
+cadences for each are in [`docs/routines.md`](./routines.md):
 
-- **Build-error responder** — runs `skills/build-report/SKILL.md`; fired
-  by the publish workflow when a daily build has errors (rate-limited to
-  once per 24 h; bypass with a manual run and `force_routine=true`). This
-  is the only hook wired to the repo: after creating it, set the
-  `CLAUDE_ROUTINE_ID` and `CLAUDE_ROUTINE_TOKEN` secrets (skipped silently
-  while unset).
-- **Daily source discovery** — scans for new sources and records
-  candidates (`skills/source-discovery/SKILL.md` steps 1–5).
-- **Daily source implementation** — implements the highest-confidence
-  candidate as a PR (steps 6–8).
-- **GitHub-issues responder** — triages feedback-form and user-filed
-  issues into fixes or new sources.
+- **Build-error responder** — runs `skills/build-report/SKILL.md`; the
+  `build-error-responder` job in `publish_calendars.yml` runs after a daily
+  build with errors (rate-limited to once per 24 h; bypass with a manual
+  run and `force_routine=true`).
+- **Daily source discovery** — `claude-source-discovery.yml`, scheduled
+  daily; scans for new sources and records candidates
+  (`skills/source-discovery/SKILL.md` steps 1–5).
+- **Daily source implementation** — `claude-source-implementation.yml`,
+  scheduled daily; implements the highest-confidence candidate as a PR
+  (steps 6–8).
+- **GitHub-issues responder** — `claude-issue-responder.yml`, triggered on
+  newly-opened issues; triages feedback-form and user-filed issues into
+  fixes or new sources.
 
-The last three are account-scheduled only — no repo secrets or workflow
-changes.
+All four authenticate with `CLAUDE_CODE_OAUTH_TOKEN` and skip silently when
+it (or, for a fork, the matching `github.repository`) isn't present.
 
 ### Out-of-band proxy (AWS — skip until a source actually needs it)
 
@@ -210,6 +213,6 @@ when the schema itself changes.
   for build health; every reporting surface reads it.
 - The skills under `skills/` are the operational runbook — `build-report`
   daily, the resolver skills to drain the non-fatal queues, `geo-resolver`
-  to grow `KNOWN_VENUE_COORDS` for your city. The routines in
+  to grow `KNOWN_VENUE_COORDS` for your city. The automation workflows in
   [`docs/routines.md`](./routines.md) run that runbook for you.
 - `AGENTS.md` is the contributor/agent manual for everything else.

@@ -34,7 +34,7 @@
 
 - Multi-city support in a single deployment. One repo copy = one city.
 - A hosted SaaS. Template users run their own GitHub Actions, Cloudflare
-  Pages project, and (optionally) Claude routines.
+  Pages project, and (optionally) the Claude automation workflows.
 - Automatic upstream tracking for template copies (see "Upgrade story").
 - Making every Seattle string disappear in Phase 1. Seattle *content*
   (sources, candidate docs, geocoder lookup tables) stays until the Phase 2
@@ -194,8 +194,8 @@ The judgment layer on top. Orchestrates `init-city`, then:
   confirmation) and picks sensible map bounds.
 - Walks the secrets/vars checklist (below) and the Cloudflare Pages project
   creation.
-- Explains the Claude routine setup (below) and what each recurring skill
-  does.
+- Explains the Claude automation-workflow setup (below) and what each
+  recurring skill does.
 - Runs a first `source-discovery` pass scoped to the new city and opens the
   first source PRs.
 - Verifies the first full build and deploy.
@@ -218,7 +218,7 @@ by `skills/event-lookup` (`$EVENT_LOOKUP_SITE` env var with a default):
 
 - **`docs/SETUP.md`** — the full from-scratch walkthrough: create from
   template → run city-setup → secrets/vars → Cloudflare Pages → optional
-  services → routines.
+  services → automation workflows.
 - **README split** — template-facing README ("build this for your city")
   with the 832.events instance intro moved to the deployed site/docs.
 - **AGENTS.md** — the automated PR review (Claude Code Review via
@@ -245,12 +245,12 @@ and `init-city` itself prints the same pointers when it finishes.
    `CLOUDFLARE_PAGES_PROJECT`/`SITE_URL` vars), first build published,
    first sources merged. *Done when:* the site is live at `SITE_URL`, the
    daily build is green, and at least a handful of sources publish events.
-2. **Self-maintaining site** — the four automation hooks in
-   `docs/routines.md` exist in the operator's Anthropic account
-   (build-error responder, daily source discovery, daily source
-   implementation, GitHub-issues responder). *Done when:* a broken source
-   gets fixed, a new source lands, and a feedback issue gets answered with
-   no human in the loop.
+2. **Self-maintaining site** — the four automation workflows in
+   `docs/routines.md` run as GitHub Actions (build-error responder, daily
+   source discovery, daily source implementation, GitHub-issues responder),
+   authenticated with `CLAUDE_CODE_OAUTH_TOKEN`. *Done when:* a broken
+   source gets fixed, a new source lands, and a feedback issue gets answered
+   with no human in the loop.
 3. **Full product** — the remaining optional services: Discord
    notifications, out-of-band proxy (only once a source needs it), and the
    favorites worker. *Done when:* whichever of these the operator wants is
@@ -266,7 +266,7 @@ and `init-city` itself prints the same pointers when it finishes.
 | **Browserbase** (JS-challenge bypass) | `BROWSERBASE_API_KEY` secret | Per-source | `proxy: browserbase` sources fail; others unaffected |
 | **Out-of-band proxy** (AWS) | `AWS_ROLE_ARN` secret, `OUTOFBAND_BUCKET` var; CloudFormation stack in `infra/authenticated-proxy/` (OIDC subject must be set to the copy's `owner/repo`); a residential-IP runner cron | Optional | Already graceful: the AWS-credentials step is `continue-on-error`, `scripts/download-outofband.ts` exits 0 when S3 is unreachable, and `proxy: outofband` sources sit in the non-fatal `pendingProxyVerification` queue. A copy that never sets this up simply shouldn't mark sources `outofband` |
 | **Discord notifications** | `DISCORD_WEBHOOK_CALENDAR` secret; `init-city` deletes the Seattle-specific `notify-discord.yml` on copies — restore it from upstream to enable | Optional | Reference instance: workflow skips posting when the secret is unset. Copies: no workflow at all until restored |
-| **Claude routines** | `CLAUDE_ROUTINE_ID`, `CLAUDE_ROUTINE_TOKEN` secrets — these gate **only** the webhook-fired build-error responder; the other three hooks in `docs/routines.md` live wholly in the operator's account | Optional | The trigger step in `publish_calendars.yml` skips when unset; build-error fixing becomes manual |
+| **Claude automation** | `CLAUDE_CODE_OAUTH_TOKEN` secret — powers all four automation workflows in `docs/routines.md` (also used by the PR-review and `@claude`-mention workflows) | Optional | Every Claude workflow skips silently when unset; build-error fixing, discovery, implementation, and issue triage all become manual |
 | **Favorites** (sign-in, personal feeds) | `FAVORITES_API_URL` var → `VITE_FAVORITES_API_URL`; Cloudflare Worker deploy with KV namespaces + `JWT_SECRET`, `GOOGLE_CLIENT_ID`/`GOOGLE_CLIENT_SECRET`, optional `FEEDBACK_GITHUB_ISSUES_TOKEN` | **Optional, off by default** | Web UI runs in read-only mode (no sign-in, favorites in localStorage); this is the template default |
 
 ### Favorites worker (advanced, opt-in)
@@ -281,31 +281,33 @@ This is deliberately documentation-driven rather than templated — every
 value is instance-specific and the worker is independent of the calendar
 build.
 
-## Claude routines (the automation outside the repo)
+## Claude automation workflows (in-repo)
 
-The recurring agent operations run as **Claude Code routines** — resources
-created in the user's Anthropic account, not shippable repo files. The
-reference instance runs **four hooks**, catalogued with suggested prompts
-and cadences in `docs/routines.md`:
+The recurring agent operations run as **GitHub Actions workflows** in
+`.github/workflows/`, using `anthropics/claude-code-action@v1` and the
+`CLAUDE_CODE_OAUTH_TOKEN` secret. They ship with the template — no
+Anthropic-account routines or extra secrets. The reference instance runs
+**four**, catalogued with suggested prompts and cadences in
+`docs/routines.md`:
 
 1. **Build-error responder** — runs `skills/build-report/SKILL.md`. The
-   repo's only routine coupling is here: the trigger step in
-   `publish_calendars.yml` fires
-   `POST /v1/claude_code/routines/{CLAUDE_ROUTINE_ID}/fire` (rate-limited
-   to once per 24 h) when a build has errors, and skips silently when the
-   secrets are unset.
-2. **Daily source discovery** — `skills/source-discovery/SKILL.md`
-   steps 1–5 (candidates only), account-scheduled.
-3. **Daily source implementation** — steps 6–8 (implement the
-   highest-confidence candidate), account-scheduled.
-4. **GitHub-issues responder** — triages feedback-form and user-filed
-   issues into fixes or new-source PRs, issue-driven.
+   `build-error-responder` job in `publish_calendars.yml` runs the action
+   (rate-limited to once per 24 h via the Actions cache) when a build has
+   errors, and skips silently when the OAuth token is unset.
+2. **Daily source discovery** — `claude-source-discovery.yml`,
+   `skills/source-discovery/SKILL.md` steps 1–5 (candidates only),
+   scheduled daily.
+3. **Daily source implementation** — `claude-source-implementation.yml`,
+   steps 6–8 (implement the highest-confidence candidate), scheduled daily.
+4. **GitHub-issues responder** — `claude-issue-responder.yml`, triages
+   feedback-form and user-filed issues into fixes or new-source PRs,
+   triggered on newly-opened issues.
 
-Template users who want the self-maintaining behavior create their own
-copies of these from the catalog; only the build-error responder requires
-storing the routine id/token as the two repo secrets. Everything the
-routines need inside the repo — the skills, AGENTS.md conventions, the
-`build-errors.json` contract — ships with the template.
+Template users get the self-maintaining behavior for free once
+`CLAUDE_CODE_OAUTH_TOKEN` is set (the same secret the PR-review and
+`@claude` workflows already use). Everything these workflows need inside
+the repo — the skills, AGENTS.md conventions, the `build-errors.json`
+contract — ships with the template.
 
 ## Upgrade story (honest)
 

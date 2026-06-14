@@ -104,7 +104,7 @@ steps in `docs/SETUP.md` steps 4–7).
    | `EVENTBRITE_TOKEN` | secret | When the first `type: eventbrite` source lands |
    | `DICE_API_KEY` | secret | When the first `type: dice` source lands |
    | `BROWSERBASE_API_KEY` | secret | When the first `proxy: browserbase` source lands |
-   | `CLAUDE_ROUTINE_ID` / `CLAUDE_ROUTINE_TOKEN` | secrets | With the build-error responder routine (step 7) |
+   | `CLAUDE_CODE_OAUTH_TOKEN` | secret | Powers all four Claude automation workflows (step 7) and PR review |
    | `AWS_ROLE_ARN` / `OUTOFBAND_BUCKET` | secret / variable | Only if the out-of-band proxy is ever deployed |
    | `FAVORITES_API_URL` | variable | Only if the favorites worker is ever deployed |
 
@@ -119,12 +119,12 @@ the operator skipped setting `CLAUDE_CODE_OAUTH_TOKEN`, rely on human review.
 
 ### 7. Set up self-maintenance and optional services
 
-1. **Self-maintenance**: the four Claude Code routines catalogued in
-   `docs/routines.md` (build-error responder, daily source discovery,
-   daily source implementation, GitHub-issues responder) — walk the
-   operator through creating them in their Anthropic account using the
-   suggested prompts there. Only the build-error responder needs repo
-   secrets (`CLAUDE_ROUTINE_ID`/`CLAUDE_ROUTINE_TOKEN`).
+1. **Self-maintenance**: the four Claude Code automation workflows
+   catalogued in `docs/routines.md` (build-error responder, daily source
+   discovery, daily source implementation, GitHub-issues responder) ship in
+   `.github/workflows/` and run automatically once `CLAUDE_CODE_OAUTH_TOKEN`
+   is set — the same secret used for PR review. Confirm that secret is set;
+   no Anthropic-account routines are needed.
 2. **Optional**: Discord notifications (`init-city` deleted the
    Houston-specific workflow — restore `.github/workflows/notify-discord.yml`
    from the upstream repo and set `DISCORD_WEBHOOK_CALENDAR` to enable),
@@ -151,9 +151,9 @@ summary. It should cover:
 - **Configured vs pending** — each key from the step 5 list (Cloudflare,
   per-source API keys, optional services) marked set or still to do, plus
   whether `CLAUDE_CODE_OAUTH_TOKEN` is set (enables Claude Code Review)
-- **Routines created vs pending** — each of the four hooks in
-  `docs/routines.md`, and whether `CLAUDE_ROUTINE_ID`/`CLAUDE_ROUTINE_TOKEN`
-  are set for the build-error responder
+- **Automation workflows active vs pending** — the four workflows in
+  `docs/routines.md` are in `.github/workflows/`; note whether
+  `CLAUDE_CODE_OAUTH_TOKEN` is set (they skip silently until it is)
 - **Tier reached** — deployed / self-maintaining / full product, per the
   "What done looks like" tiers in `docs/SETUP.md`, and what's left to reach
   the next one

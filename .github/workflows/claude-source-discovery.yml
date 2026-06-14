@@ -1,0 +1,43 @@
+name: Claude Source Discovery
+
+# Replaces the account-scheduled "Daily source discovery" routine.
+# Runs skills/source-discovery/SKILL.md steps 1-5 (discovery + candidate
+# triage only) and records candidates under docs/source-candidates/.
+
+on:
+  schedule:
+    - cron: "30 8 * * *" # Daily, morning UTC
+  workflow_dispatch: # Allow manual triggering
+
+concurrency:
+  group: claude-source-discovery
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    # Skips silently on template copies that haven't set the OAuth token.
+    if: ${{ github.repository == 'crowecawcaw/832events' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: read
+      id-token: write
+      actions: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Run Claude Code
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          claude_args: "--max-turns 80"
+          prompt: |
+            Read skills/source-discovery/SKILL.md and follow steps 1-5
+            (discovery and candidate triage only - do not implement a source).
+            Record new candidates under docs/source-candidates/ and append
+            today's discovery log under docs/discovery-log/. Open a PR with
+            your changes following the AGENTS.md development workflow.

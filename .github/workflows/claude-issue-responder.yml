@@ -1,0 +1,48 @@
+name: Claude Issue Responder
+
+# Replaces the account-scheduled / issue-driven "GitHub-issues responder"
+# routine. Triages newly-opened issues (feedback-form submissions and
+# user-filed issues) into a fix or new-source PR.
+#
+# Issues that explicitly mention @claude are left to claude.yml (the
+# on-demand mention handler) to avoid double-processing.
+
+on:
+  issues:
+    types: [opened, reopened]
+
+jobs:
+  triage:
+    if: >-
+      ${{ github.repository == 'crowecawcaw/832events' &&
+          !contains(github.event.issue.body, '@claude') &&
+          !contains(github.event.issue.title, '@claude') }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      id-token: write
+      actions: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Run Claude Code
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          claude_args: "--max-turns 80"
+          prompt: |
+            A GitHub issue (#${{ github.event.issue.number }}) was just opened
+            on this repo. Decide whether it is actionable, and if so, act on it:
+            for a new-source request, follow skills/source-discovery/SKILL.md
+            (quality gates included); for a broken or incorrect calendar,
+            follow skills/build-report/SKILL.md conventions to fix the ripper;
+            for an event poster or "is X covered?" question, follow
+            skills/source-from-event/SKILL.md. Open a PR following the
+            AGENTS.md development workflow and comment on the issue with the
+            result. If the issue is not actionable, comment briefly explaining
+            why and stop.
