@@ -1,12 +1,12 @@
 ---
 name: Theatre Under The Stars (TUTS)
-status: candidate
+status: added
 platform: Tribe Events (ICS)
 url: https://www.tuts.org/shows/
 tags: [Theatre, Music, Downtown]
 firstSeen: 2026-06-14
 lastChecked: 2026-06-14
-pr:
+pr: (in progress)
 ---
 
 Theatre Under The Stars (TUTS) is a Houston nonprofit musical theater company
