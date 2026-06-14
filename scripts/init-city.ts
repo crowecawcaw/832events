@@ -269,9 +269,10 @@ maintenance workflow.
    especially), set up the Cloudflare Pages project and GitHub secrets
    (\`docs/SETUP.md\` steps 4–5), and add your first sources —
    \`skills/source-discovery/SKILL.md\`.
-2. **Self-maintain**: create the four Claude Code routines catalogued in
-   \`docs/routines.md\` (build-error responder, daily source discovery,
-   daily source implementation, GitHub-issues responder).
+2. **Self-maintain**: the three Claude Code automation workflows catalogued
+   in \`docs/routines.md\` (build-error responder, daily source discovery,
+   daily source implementation) run as GitHub Actions using the
+   \`CLAUDE_CODE_OAUTH_TOKEN\` secret.
 3. **Optional services**: Discord notifications, out-of-band proxy,
    favorites/sign-in — \`docs/SETUP.md\` step 7.
 
@@ -474,8 +475,9 @@ async function main() {
   2. npm run typecheck && npm run test:all
   3. Follow docs/SETUP.md — or run skills/city-setup/SKILL.md in Claude Code
      — for secrets, Cloudflare Pages, and your first sources.
-  4. To make the site self-maintaining, create the Claude Code routines
-     catalogued in docs/routines.md.`);
+  4. To make the site self-maintaining, set the CLAUDE_CODE_OAUTH_TOKEN
+     secret — it powers the Claude automation workflows catalogued in
+     docs/routines.md.`);
 }
 
 // Only run the CLI when executed directly (not when imported by tests).
