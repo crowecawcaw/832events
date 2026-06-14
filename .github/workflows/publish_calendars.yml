@@ -162,14 +162,26 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          plugin_marketplaces: 'https://github.com/anthropics/claude-code.git'
+          plugins: 'code-review@claude-code-plugins'
           claude_args: "--max-turns 120"
           prompt: |
             A daily build finished with ${{ needs.build.outputs.error-count }}
             error(s) (commit ${{ github.sha }}, run
             ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}).
             Read skills/build-report/SKILL.md and follow it completely to
-            triage and fix the errors, opening PR(s) per the AGENTS.md
-            development workflow.
+            triage and fix the errors, opening PR(s) as the skill directs.
+
+            IMPORTANT — any PR you open here is autonomous: opened from GitHub
+            Actions with the default token, it will NOT trigger CI or the
+            automated Claude Code Review (github-actions[bot] events don't
+            start new workflow runs). Self-validate IN THIS SESSION before
+            opening each PR — re-run the affected source build
+            (ONLY_SOURCE=<source> npm run generate-calendars) to confirm the
+            fix, run npm run test:all, and run /code-review on your diff and
+            address findings. Do NOT wait for CI/review or enable auto-merge;
+            the repo owner reviews and merges. (Geo-cache / uncertainty-cache
+            data-only PRs still just need the build to pass in-session.)
 
       - name: Record new last-run timestamp
         if: steps.fire.outcome == 'success'

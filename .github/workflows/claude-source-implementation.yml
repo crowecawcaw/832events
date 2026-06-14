@@ -34,10 +34,28 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          plugin_marketplaces: 'https://github.com/anthropics/claude-code.git'
+          plugins: 'code-review@claude-code-plugins'
           claude_args: "--max-turns 120"
           prompt: |
             Read skills/source-discovery/SKILL.md and follow it from step 6:
             pick the highest-confidence existing candidate in
             docs/source-candidates/ and implement that one source as a PR. Do
-            not run the discovery scan. Follow the quality gates and the
-            AGENTS.md development workflow.
+            not run the discovery scan. Follow the quality gates in the skill.
+
+            IMPORTANT — this is an autonomous PR. Because it is opened from
+            inside GitHub Actions with the default token, it will NOT trigger
+            CI or the automated Claude Code Review (github-actions[bot] events
+            don't start new workflow runs). So you must self-validate IN THIS
+            SESSION before opening the PR, and you must NOT wait for CI/review
+            or enable auto-merge — the repo owner reviews and merges it.
+
+            Before opening the PR:
+              1. Build just the new source:
+                 ONLY_SOURCE=<source> npm run generate-calendars
+                 and confirm it produces a sane number of events with no errors.
+              2. Run the unit tests: npm run test:all
+              3. Run /code-review on your working-tree diff and address its
+                 findings.
+            Open the PR with a summary that lists what you validated.
+

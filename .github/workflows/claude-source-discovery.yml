@@ -39,5 +39,10 @@ jobs:
             Read skills/source-discovery/SKILL.md and follow steps 1-5
             (discovery and candidate triage only - do not implement a source).
             Record new candidates under docs/source-candidates/ and append
-            today's discovery log under docs/discovery-log/. Open a PR with
-            your changes following the AGENTS.md development workflow.
+            today's discovery log under docs/discovery-log/, then open a PR.
+
+            This is an autonomous PR (opened from GitHub Actions with the
+            default token), so it will NOT trigger CI or the automated Claude
+            Code Review. Review your own markdown changes before opening the
+            PR, write a clear summary, and do not wait for CI/review or enable
+            auto-merge — the repo owner reviews and merges it.

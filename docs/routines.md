@@ -67,6 +67,35 @@ issue or PR, the owner comments `@claude`.
 > out — switch the gates to an explicit login allowlist at that point. The
 > same allowlist is how you'd grant a trusted collaborator access.
 
+## Autonomous PRs: in-session validation, owner merges
+
+The build-error responder and the two scheduled workflows **open PRs from
+inside GitHub Actions using the default `GITHUB_TOKEN`**. GitHub attributes
+those to `github-actions[bot]` and — by design, to prevent recursion —
+**does not start new workflow runs from `GITHUB_TOKEN` events**. So an
+autonomous PR does **not** trigger CI (`pr-preview.yml`, `web-e2e.yml`) or
+the automated `claude-code-review.yml`. (This only affects bot-opened PRs;
+PRs *you* open trigger everything normally.)
+
+Rather than introduce a privileged App/PAT token to work around the
+recursion guard, these workflows **self-validate in the same session**
+before opening the PR:
+
+- **Implementation / build-error** — build the affected source
+  (`ONLY_SOURCE=<source> npm run generate-calendars`), run `npm run
+  test:all`, and run `/code-review` on the working-tree diff, addressing
+  findings. The `code-review` plugin is loaded into these workflows for this.
+- **Discovery** — only writes markdown candidate/log files, so it just
+  self-reviews those changes.
+
+The PR lands pre-checked with a summary of what was validated, and the
+**repo owner reviews and merges it**. The prompts explicitly tell Claude
+*not* to wait for CI/review or enable auto-merge, since neither will fire.
+If you later want the fully hands-off auto-review/auto-merge loop, give the
+PR-creating workflows a GitHub App or fine-grained PAT as `github_token`
+(so their PRs trigger downstream workflows) and widen the
+`claude-code-review.yml` gate to that identity.
+
 ## 1. Build-error responder
 
 **Purpose:** drain `build-errors.json` — fix broken sources, resolve
@@ -81,7 +110,8 @@ dispatch — never on PRs, since that workflow doesn't trigger on PRs). It is
 rate-limited to at most once per rolling 24 h window via the Actions cache;
 a `workflow_dispatch` run with `force_routine=true` bypasses the limit. The
 job runs `anthropics/claude-code-action@v1` with the build-report prompt
-and opens PR(s) with its fixes.
+and opens PR(s) with its fixes, self-validated in-session (see
+[Autonomous PRs](#autonomous-prs-in-session-validation-owner-merges) above).
 
 **Prompt (in the workflow):**
 
@@ -123,7 +153,9 @@ unflagged until a human runs the skill.
 
 **Purpose:** turn candidates into live calendars — pick the
 highest-confidence candidate from `docs/source-candidates/` and implement
-it as its own PR, following the quality gates.
+it as its own PR, following the quality gates. The PR is self-validated
+in-session (build + tests + `/code-review`) since CI won't run on it — see
+[Autonomous PRs](#autonomous-prs-in-session-validation-owner-merges) above.
 
 **Trigger & cadence:**
 `.github/workflows/claude-source-implementation.yml`, `schedule` daily
