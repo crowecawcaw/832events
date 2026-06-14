@@ -286,18 +286,19 @@ The recurring agent operations run as **GitHub Actions workflows** in
 `.github/workflows/`, using `anthropics/claude-code-action@v1` and the
 `CLAUDE_CODE_OAUTH_TOKEN` secret. They ship with the template — no
 Anthropic-account routines or extra secrets. The reference instance runs
-**three**, catalogued with suggested prompts and cadences in
+**two**, catalogued with suggested prompts and cadences in
 `docs/routines.md`:
 
 1. **Build-error responder** — runs `skills/build-report/SKILL.md`. The
    `build-error-responder` job in `publish_calendars.yml` runs the action
    (rate-limited to once per 24 h via the Actions cache) when a build has
    errors, and skips silently when the OAuth token is unset.
-2. **Daily source discovery** — `claude-source-discovery.yml`,
-   `skills/source-discovery/SKILL.md` steps 1–5 (candidates only),
-   scheduled daily.
-3. **Daily source implementation** — `claude-source-implementation.yml`,
-   steps 6–8 (implement the highest-confidence candidate), scheduled daily.
+2. **Source pipeline** — `claude-sources.yml`, scheduled daily; one
+   session that runs `skills/source-discovery/SKILL.md` steps 1–5
+   (discover candidates) and hands them to steps 6–8 (implement the
+   highest-confidence one), landing both the discovery markdown and the
+   new source code in a single human-review PR — nothing is committed to
+   `main` directly.
 
 Issues and PRs are owner-driven, not automated: the owner comments
 `@claude` to act on demand (`claude.yml`), and owner-authored PRs are

@@ -131,19 +131,18 @@ workflows are what run them on a schedule. They run as **GitHub Actions**
 (in `.github/workflows/`) using the `anthropics/claude-code-action@v1`
 action and the same `CLAUDE_CODE_OAUTH_TOKEN` secret as the PR-review and
 `@claude`-mention workflows — no Anthropic-account routines or extra
-secrets. The reference instance runs **three**; suggested prompts and
+secrets. The reference instance runs **two**; suggested prompts and
 cadences for each are in [`docs/routines.md`](./routines.md):
 
 - **Build-error responder** — runs `skills/build-report/SKILL.md`; the
   `build-error-responder` job in `publish_calendars.yml` runs after a daily
   build with errors (rate-limited to once per 24 h; bypass with a manual
   run and `force_routine=true`).
-- **Daily source discovery** — `claude-source-discovery.yml`, scheduled
-  daily; scans for new sources and records candidates
-  (`skills/source-discovery/SKILL.md` steps 1–5).
-- **Daily source implementation** — `claude-source-implementation.yml`,
-  scheduled daily; implements the highest-confidence candidate as a PR
-  (steps 6–8).
+- **Source pipeline** — `claude-sources.yml`, scheduled daily; one session
+  that discovers new sources (`skills/source-discovery/SKILL.md` steps 1–5)
+  and hands the candidates to the implementation half, which builds the
+  highest-confidence one and opens a single human-review PR carrying both
+  the discovery markdown and the new source code (steps 6–8).
 
 Issues and PRs are **owner-driven**, not automated: comment `@claude` to
 have it act on demand (`claude.yml`), and owner-authored PRs are
@@ -151,7 +150,7 @@ auto-reviewed (`claude-code-review.yml`). Both are gated to the repo owner;
 there is no workflow that auto-acts on external issues or fork PRs. See the
 access-control section of [`docs/routines.md`](./routines.md).
 
-All three authenticate with `CLAUDE_CODE_OAUTH_TOKEN` and skip silently when
+Both authenticate with `CLAUDE_CODE_OAUTH_TOKEN` and skip silently when
 it (or, for a fork, the matching `github.repository`) isn't present.
 
 ### Out-of-band proxy (AWS — skip until a source actually needs it)
