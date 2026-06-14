@@ -6,7 +6,7 @@ url: https://www.thehobbycenter.org/events
 tags: [Theatre, Music, Downtown]
 firstSeen: 2026-06-14
 lastChecked: 2026-06-14
-pr: TBD
+pr: 13
 ---
 
 Major downtown performing arts center at 800 Bagby St, Houston, TX 77002.
