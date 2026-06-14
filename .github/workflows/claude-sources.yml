@@ -46,7 +46,7 @@ jobs:
           # denies Bash/WebSearch/WebFetch by default — without this allowlist
           # the run loops on permission denials and burns tokens. Task lets
           # the orchestrator delegate each phase to a sub-agent.
-          claude_args: '--max-turns 200 --allowedTools "Task,Bash,WebSearch,WebFetch,Read,Edit,Write,Glob,Grep,TodoWrite"'
+          claude_args: '--max-turns 200 --model haiku --allowedTools "Task,Bash,WebSearch,WebFetch,Read,Edit,Write,Glob,Grep,TodoWrite"'
           prompt: |
             You are the ORCHESTRATOR for the source pipeline. You do NOT do
             the discovery or implementation work yourself — you delegate each

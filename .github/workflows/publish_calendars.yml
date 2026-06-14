@@ -164,7 +164,7 @@ jobs:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           plugin_marketplaces: 'https://github.com/anthropics/claude-code.git'
           plugins: 'code-review@claude-code-plugins'
-          claude_args: "--max-turns 120"
+          claude_args: "--max-turns 120 --model haiku"
           prompt: |
             A daily build finished with ${{ needs.build.outputs.error-count }}
             error(s) (commit ${{ github.sha }}, run
