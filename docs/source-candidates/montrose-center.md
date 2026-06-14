@@ -1,6 +1,6 @@
 ---
 name: Montrose Center
-status: candidate
+status: added
 platform: Tribe Events (ICS)
 url: https://montrosecenter.org/events/
 tags: [Montrose, Community]
