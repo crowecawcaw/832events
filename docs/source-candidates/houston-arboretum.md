@@ -1,12 +1,12 @@
 ---
 name: Houston Arboretum & Nature Center
-status: candidate
+status: added
 platform: Tribe Events (ICS)
 url: https://houstonarboretum.org/events/
-tags: [Parks, Community, Memorial]
+tags: [Parks, Memorial]
 firstSeen: 2026-06-14
 lastChecked: 2026-06-14
-pr:
+pr: claude/zen-cray-gch1y6
 ---
 
 Non-profit urban nature sanctuary at 4501 Woodway Dr, Houston, TX 77024
