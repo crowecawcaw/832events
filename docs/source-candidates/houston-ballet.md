@@ -3,7 +3,7 @@ name: Houston Ballet
 status: candidate
 platform: Ticketmaster
 url: https://www.houstonballet.org/seasontickets/calendar/
-tags: [Music, Downtown]
+tags: [Dance, Downtown]
 firstSeen: 2026-06-14
 lastChecked: 2026-06-14
 pr:
@@ -21,5 +21,8 @@ Ticketmaster is their primary sales channel:
 - Use built-in `ticketmaster` ripper with `attractionId: "803870"`
 - Medium confidence — Ticketmaster integration well-supported; season has ~30–50 performances/year
 - Clean implementation with the built-in ripper type
+
+Note: houstonballet.org returns HTTP 403 from agent environments; implementation
+and verification should be done from a non-agent IP or with `proxy: "outofband"`.
 
 Geo: lat 29.7560, lng -95.3671 (501 Texas Ave, Houston, TX 77002 — Wortham Theater Center)
