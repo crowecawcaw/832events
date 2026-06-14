@@ -45,8 +45,15 @@ jobs:
             Record new candidates under docs/source-candidates/ and append
             today's discovery log under docs/discovery-log/, then open a PR.
 
-            This is an autonomous PR (opened from GitHub Actions with the
-            default token), so it will NOT trigger CI or the automated Claude
-            Code Review. Review your own markdown changes before opening the
-            PR, write a clear summary, and do not wait for CI/review or enable
-            auto-merge — the repo owner reviews and merges it.
+            This run produces ONLY markdown (candidate files and the
+            discovery log) — reference data with no build or test risk. So
+            this PR is self-merging: review your own markdown changes
+            carefully for accuracy, write a clear PR summary, then
+            SQUASH-MERGE the PR yourself. Do not wait for CI or human review
+            (neither runs on this PR anyway — it is opened from GitHub Actions
+            with the default token). If you cannot merge for any reason, leave
+            the PR open with a summary and stop; do not force it.
+
+            Note: this self-merge applies to discovery ONLY because the output
+            is markdown. The source-implementation workflow, which writes real
+            code, still opens a PR for human review and must NOT self-merge.

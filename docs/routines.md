@@ -88,9 +88,21 @@ before opening the PR:
 - **Discovery** — only writes markdown candidate/log files, so it just
   self-reviews those changes.
 
-The PR lands pre-checked with a summary of what was validated, and the
-**repo owner reviews and merges it**. The prompts explicitly tell Claude
-*not* to wait for CI/review or enable auto-merge, since neither will fire.
+**Merge policy differs by output type:**
+
+- **Discovery self-merges.** Its PR is markdown only (candidate files and
+  the discovery log) — reference data with no build/test risk and nothing
+  for CI to gate — so after self-reviewing the markdown the workflow
+  **squash-merges its own PR**. `main` is unprotected and the default
+  `GITHUB_TOKEN` already carries `contents: write` / `pull-requests:
+  write`, so no extra token is needed.
+- **Implementation and build-error open a PR for human review.** They
+  write real code, which should be validated by a human (and ideally real
+  CI) before landing, so they **do not** self-merge. The PR lands
+  pre-checked with a summary of what was validated, and the **repo owner
+  reviews and merges it**. Their prompts explicitly tell Claude *not* to
+  wait for CI/review or enable auto-merge, since neither will fire on a
+  bot-opened PR.
 If you later want the fully hands-off auto-review/auto-merge loop, give the
 PR-creating workflows a GitHub App or fine-grained PAT as `github_token`
 (so their PRs trigger downstream workflows) and widen the
@@ -131,7 +143,9 @@ appear.
 
 **Purpose:** grow the catalog — scan for new event sources in your city,
 quality-gate them, record candidates under `docs/source-candidates/`, and
-flag dead sources.
+flag dead sources. Output is markdown only, so this workflow
+**self-merges its own PR** after a self-review (see [Autonomous
+PRs](#autonomous-prs-in-session-validation-owner-merges) above).
 
 **Trigger & cadence:** `.github/workflows/claude-source-discovery.yml`,
 `schedule` daily (plus `workflow_dispatch` for a manual run).
