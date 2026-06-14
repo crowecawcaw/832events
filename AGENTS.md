@@ -18,7 +18,7 @@ Agent skills live in `skills/` in this repo. These define the operational proced
 
 ## Adding New Calendar Sources
 
-**Always follow `skills/source-discovery/SKILL.md`** when adding a new calendar source — do not do it ad-hoc. The skill includes a mandatory quality-gate checklist (step 4) that checks whether the source already exists under `sources/external/`, `sources/recurring/`, or `sources/*/ripper.yaml`. Skipping the skill risks duplicating existing sources, missing the "check existing sources" step, and bypassing other guardrails (event volume verification, Amazon Q iteration, etc.).
+**Always follow `skills/source-discovery/SKILL.md`** when adding a new calendar source — do not do it ad-hoc. The skill includes a mandatory quality-gate checklist (step 4) that checks whether the source already exists under `sources/external/`, `sources/recurring/`, or `sources/*/ripper.yaml`. Skipping the skill risks duplicating existing sources, missing the "check existing sources" step, and bypassing other guardrails (event volume verification, code-review iteration, etc.).
 
 **When adding or fixing a single source, always build just that source with `ONLY_SOURCE`** — never run a full all-sources build while iterating:
 
@@ -68,7 +68,19 @@ The steering file provides essential context for making informed decisions about
 
 ### Development Workflow
 
-> **Note for template copies:** steps that mention Amazon Q (`/q review`, waiting for Q's pass, the re-review template) apply only when Amazon Q Developer is installed on the repository. On a copy without Q, skip those steps and treat human review as the gate — everything else below applies as written.
+> **Automated PR review:** This repo uses **Claude Code Review** (the
+> `anthropics/claude-code-action` GitHub Action in
+> `.github/workflows/claude-code-review.yml`) as its automated reviewer. It
+> runs **automatically** on every PR — on open and on every push
+> (`opened`, `synchronize`, `ready_for_review`, `reopened`) — and posts its
+> review as PR comments. There is **no trigger comment to send**. A second
+> workflow (`.github/workflows/claude.yml`) responds to `@claude` mentions
+> in issue/PR comments for on-demand questions or an out-of-band re-review.
+> Both require the `CLAUDE_CODE_OAUTH_TOKEN` secret.
+>
+> **Template copies:** a fresh copy without these workflows (or without the
+> secret) has no automated reviewer — skip the review-iteration steps and
+> treat human review as the gate. Everything else below applies as written.
 
 **NEVER push directly to main branch.** Always:
 1. Create a feature branch for changes
@@ -90,17 +102,17 @@ The steering file provides essential context for making informed decisions about
    review comments). If the branch is already up to date, skip the rebase.
 4. Open a Pull Request — the harness creates it as a **draft** by default; that's fine
 5. Immediately subscribe to PR activity: `mcp__github__subscribe_pr_activity`
-6. **Immediately post a top-level `/q review` comment** with the explicit feedback-ask template below — do **not** rely on Q's auto-review-on-PR-open. Q's first-pass review is submitted with `state: COMMENTED`, which sometimes doesn't trigger the PR-activity webhook, so the session sits idle waiting for a review that already landed. Posting an explicit `/q review` reliably wakes the session when Q replies. The same template applies on the first pass and every follow-up — see the "Re-review template" section below.
-7. Monitor `<github-webhook-activity>` events for CI results and Amazon Q review:
-   - If Q has **blocking comments**: address each one, push fixes, re-trigger Q (see re-review template below), and wait for Q's next pass
-   - Once Q gives **all ✅** and all comments are confidently addressed, do the following **immediately, in the same turn** — do not wait for the build to finish first:
+6. **Claude Code Review runs automatically — you do not trigger it.** The `claude-code-review.yml` workflow fires on PR open and on every push (`opened`/`synchronize`/`ready_for_review`/`reopened`) and posts its review as PR comments; there is nothing to post to kick it off. Just wait for its review to arrive via PR activity. If you want an out-of-band re-review (without a new commit) or want to ask the reviewer a specific question, post a top-level comment that mentions `@claude` (handled by `claude.yml`) — but for the normal flow the per-push auto-review is enough.
+7. Monitor `<github-webhook-activity>` events for CI results and the Claude Code Review:
+   - If the review has **blocking comments**: address each one and push fixes. The push (`synchronize`) automatically re-runs Claude Code Review against the new commits, so there's no re-trigger to send — just wait for its next pass.
+   - Once the review comes back **clean** (no blocking comments) and all comments are confidently addressed, do the following **immediately, in the same turn** — do not wait for the build to finish first:
      a. Resolve all open review threads using `mcp__github__pull_request_review_write` with `method: resolve_thread` (requires the thread's `PRRT_...` node ID — see note below)
      b. Convert draft → ready: `mcp__github__update_pull_request` with `draft: false`
      c. **Decide whether the PR is auto-merge-eligible** (see "Auto-merge eligibility" below). If not eligible, leave it ready-for-review for a human to merge, post a brief top-level PR comment (via `mcp__github__add_issue_comment`) saying it's green and awaiting manual merge, and stop. Do **not** call `enable_pr_auto_merge` or `merge_pull_request`.
      d. **If eligible and CI is still running** → enable auto-merge: `mcp__github__enable_pr_auto_merge` (squash). It will fire automatically when checks go green.
      e. **If eligible and CI already passed** → merge directly: `mcp__github__merge_pull_request` (squash)
 
-   **Why "immediately, in the same turn":** the webhook subscription only fires on CI **failures and review comments** — a green build produces no event. If you wait for CI to confirm green before enabling auto-merge, you'll be waiting forever; the PR just sits ready-but-unmerged until something else wakes the session. Flip to ready and (when eligible) enable auto-merge the moment Q is green, and let the checks prove you wrong rather than waiting for them to prove you right.
+   **Why "immediately, in the same turn":** the webhook subscription only fires on CI **failures and review comments** — a green build produces no event. If you wait for CI to confirm green before enabling auto-merge, you'll be waiting forever; the PR just sits ready-but-unmerged until something else wakes the session. Flip to ready and (when eligible) enable auto-merge the moment the review is clean, and let the checks prove you wrong rather than waiting for them to prove you right.
 
    **Auto-merge eligibility — auto-merge calendar content, sources, and fixes; require manual merge for infrastructure/UI/schema changes.**
 
@@ -120,37 +132,19 @@ The steering file provides essential context for making informed decisions about
 
 **Note on resolving review threads:** `mcp__github__pull_request_review_write` with `resolve_thread` requires a `PRRT_...` GraphQL node ID. These IDs are not currently returned by `get_review_comments` — if you can't obtain the ID, skip this step and proceed; unresolved threads may block auto-merge, in which case fall back to direct merge.
 
-### Re-review template
+### Responding to review feedback
 
-**On every push to a PR — both the initial push that opens the PR and every follow-up push — you MUST post a top-level PR comment that explicitly triggers Amazon Q with concrete feedback asks.** Two reasons it's not optional:
+**Claude Code Review runs automatically on every push** — both the initial push that opens the PR and every follow-up push (`synchronize`). You do **not** post a comment to trigger it, and there is **no re-review template to send**: each push re-runs the review against the latest commits, so your fixes are always evaluated against the current diff rather than anchored to a stale commit.
 
-1. **Webhook coverage gap on first pass.** Q's first-pass review submitted automatically when a PR opens is filed with `state: COMMENTED`, and that classification has been observed not to trigger a `<github-webhook-activity>` event. The session then sits waiting for a review that already landed (and that already has blocking inline comments). Posting an explicit `/q review` produces a separate top-level PR comment when Q replies, which reliably wakes the session.
-2. **Anchoring on stale commits.** Without an explicit re-review trigger after follow-up commits, Q's review stays anchored to the original commit and you'll never know whether your fixes addressed its feedback.
+If you want an out-of-band review — to re-run the reviewer without a new commit, or to ask it a targeted question — post a top-level PR comment that mentions **`@claude`**; the `claude.yml` workflow picks that up. This is optional; the per-push auto-review covers the normal flow.
 
-The bare `/q review` trigger has proven unreliable on its own — Q sometimes parses it as a non-command. Always include a concrete prompt asking Q to evaluate the commits against the following dimensions:
+The reviewer (the `code-review` plugin) evaluates each push against:
 
-- Repository standards (conventions documented in AGENTS.md, CLAUDE.md, and `.kiro/steering.md`)
+- Repository standards (conventions in AGENTS.md, CLAUDE.md, and `.kiro/steering.md`)
 - Correctness (logic bugs, edge cases, off-by-one, missing null checks)
 - Security (input validation, auth, secrets handling, injection, supply-chain)
 - Performance (hot loops, N+1s, unnecessary allocations, bundle size)
 - Maintainability (clarity, naming, separation of concerns, test coverage)
-- Anything else the contributor thinks Q should weigh in on (call this out by name)
-
-Template:
-
-```
-/q review
-
-Please review (or re-review) this PR with feedback on:
-- Repository standards (AGENTS.md / CLAUDE.md / steering)
-- Correctness
-- Security
-- Performance
-- Maintainability
-- <any PR-specific area worth highlighting>
-```
-
-Use the same template on the first push (immediately after opening the PR) and on every follow-up push.
 
 **After addressing a review comment**, reply to the thread with your reasoning (fix pushed or explanation of why no action is needed), then resolve the thread using `mcp__github__pull_request_review_write` with `method: resolve_thread`. Leaving threads open after they've been addressed creates noise and may block auto-merge.
 

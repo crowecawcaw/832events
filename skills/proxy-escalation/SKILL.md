@@ -142,8 +142,8 @@ For each PR:
 1. Branch off latest `origin/main` (rebase before pushing).
 2. Open the PR (draft by default is fine).
 3. Subscribe: `mcp__github__subscribe_pr_activity`.
-4. Post the `/q review` re-review template (see AGENTS.md).
-5. Address Q feedback, resolve threads.
+4. Claude Code Review runs automatically on PR open and every push — no trigger comment needed (see AGENTS.md).
+5. Address review feedback, resolve threads.
 6. **Promotion PRs** (`promote-to-browserbase`) are broken-source repairs —
    auto-merge-eligible once green. **Retirement PRs** (`retire`) are **not** —
    convert to ready and leave for human merge.

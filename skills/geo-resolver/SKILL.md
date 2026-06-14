@@ -53,7 +53,7 @@ Make the appropriate change to `lib/geocoder.ts` based on the fix type:
 | Add entry to `lookupKnownVenue()` | ✅ Yes | String→coords mapping, no logic |
 | Add SPL branch / UW building lookup entry | ✅ Yes | Lookup table entry |
 
-For data-only changes: commit and push direct to main with a message like `fix(geo): add <venue> to KNOWN_VENUE_COORDS`. No PR, no Q review needed.
+For data-only changes: commit and push direct to main with a message like `fix(geo): add <venue> to KNOWN_VENUE_COORDS`. No PR, no review needed.
 
 **Logic changes → open a PR:**
 
@@ -63,7 +63,7 @@ For data-only changes: commit and push direct to main with a message like `fix(g
 | Changes to `stripSuiteFloorSuffixes()` etc | ✅ Yes | Normalization logic affects all lookups |
 | New fallback chain or reordering | ✅ Yes | Changes resolution for all venues |
 
-For logic changes: cut a feature branch, open a PR, iterate with Q. See the **Merge gate** section below.
+For logic changes: cut a feature branch, open a PR, iterate on Claude Code Review feedback. See the **Merge gate** section below.
 
 ### 5. Re-trigger build
 
@@ -87,7 +87,7 @@ Summarize:
 When implementing a **logic change** to `lib/geocoder.ts` (new strategy, normalization improvement, etc.) that goes through a PR, **do not merge on green CI alone**. The merge condition is:
 
 1. ✅ All CI checks pass
-2. ✅ Amazon Q has no blocking comments, and all review threads are resolved (use `mcp__github__resolve_review_thread` after pushing a fix or after posting a clear reply explaining why no action will be taken)
+2. ✅ Claude Code Review has no blocking comments, and all review threads are resolved (use `mcp__github__resolve_review_thread` after pushing a fix or after posting a clear reply explaining why no action will be taken)
 3. ✅ **Geo hit rate in the PR preview build is higher than before the change**
 
 Check geo coverage from the PR preview:
