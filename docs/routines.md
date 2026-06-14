@@ -84,11 +84,13 @@ before landing anything.
 **Everything lands in one human-review PR — nothing is committed to
 `main` directly.**
 
-- **Discovery hands its markdown to implementation in-session.** Phase 1
-  writes the candidate files and discovery log into the working tree but
-  does **not** commit or push them on their own. Phase 2 carries those
-  changes forward, so the discovery markdown rides into the same PR as the
-  code rather than landing as a separate commit or throwaway PR.
+- **Discovery hands its markdown to implementation in-session.** An
+  orchestrator agent runs a discovery sub-agent (writes the candidate files
+  and discovery log into the working tree, reports its top pick) and then an
+  implementation sub-agent (builds that candidate). Neither sub-agent
+  commits or pushes; the markdown stays in the working tree and rides into
+  the same PR as the code rather than landing as a separate commit or
+  throwaway PR.
 - **The pipeline opens one PR for human review.** Phase 2 implements the
   highest-confidence candidate, then opens a single PR containing both the
   Phase 1 markdown (discovery log + candidate files) and the source code.
@@ -140,8 +142,9 @@ appear.
 
 ## 2. Source pipeline
 
-**Purpose:** grow the catalog in one daily run that does both halves of
-the source pipeline in a single session:
+**Purpose:** grow the catalog in one daily run. An **orchestrator agent**
+delegates each half to its own sub-agent (the `Task` tool) so the two
+phases keep separate context while sharing one working tree:
 
 - **Discovery** (`skills/source-discovery/SKILL.md` steps 1–5) — scan for
   new event sources in your city, quality-gate them, write candidates

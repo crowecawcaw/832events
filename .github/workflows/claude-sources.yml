@@ -1,13 +1,14 @@
 name: Claude Source Pipeline
 
 # One daily run that does both halves of the source pipeline in a single
-# session: discover new candidates (skills/source-discovery/SKILL.md steps
-# 1-5) and then implement the highest-confidence one (steps 6-8).
-#
-# Discovery hands its markdown to the implementation half in-session —
-# nothing is committed to main directly, and there is no throwaway PR. The
-# whole run produces ONE human-review PR that carries the discovery markdown
-# (candidate files + discovery log) alongside the source code.
+# session. An orchestrator agent delegates each half to its own sub-agent
+# (Task tool): a discovery sub-agent (skills/source-discovery/SKILL.md steps
+# 1-5) writes candidate markdown to the working tree and reports back its
+# top pick, which the orchestrator hands to an implementation sub-agent
+# (steps 6-8). The sub-agents share the working tree but keep separate
+# context. Nothing is committed to main directly, and there is no throwaway
+# PR — the orchestrator opens ONE human-review PR carrying the discovery
+# markdown (candidate files + discovery log) alongside the source code.
 
 on:
   schedule:
@@ -44,37 +45,49 @@ jobs:
           # Both halves need web search/fetch (discovery) and Bash for the
           # dead-source script, npm builds, tests, and git. claude-code-action
           # denies Bash/WebSearch/WebFetch by default — without this allowlist
-          # the run loops on permission denials and burns tokens.
-          claude_args: '--max-turns 160 --allowedTools "Bash,WebSearch,WebFetch,Read,Edit,Write,Glob,Grep,TodoWrite"'
+          # the run loops on permission denials and burns tokens. Task lets
+          # the orchestrator delegate each phase to a sub-agent.
+          claude_args: '--max-turns 200 --allowedTools "Task,Bash,WebSearch,WebFetch,Read,Edit,Write,Glob,Grep,TodoWrite"'
           prompt: |
-            You run the full source pipeline in one session and hand the
-            result of each phase to the next. Nothing is committed to main
-            directly and there is no throwaway PR — the whole run produces
-            ONE PR for human review.
+            You are the ORCHESTRATOR for the source pipeline. You do NOT do
+            the discovery or implementation work yourself — you delegate each
+            phase to a sub-agent via the Task tool, pass the result of one to
+            the next, and open the final PR. The sub-agents share your working
+            tree. Nothing is committed to main directly and there is no
+            throwaway PR — the run produces ONE human-review PR carrying the
+            discovery markdown and the source code.
 
-            PHASE 1 — Discovery (skills/source-discovery/SKILL.md steps 1-5).
-            Scan for new sources, quality-gate them, write candidate files
-            under docs/source-candidates/, append today's discovery log under
-            docs/discovery-log/, and flag dead sources. Leave these markdown
-            changes in the working tree — do NOT commit or push them on their
-            own. Carry the candidates you found forward into Phase 2.
+            STEP 1 — Discovery sub-agent. Launch a general-purpose sub-agent
+            (Task) with this assignment: "Follow skills/source-discovery/
+            SKILL.md steps 1-5. Scan for new Houston sources, quality-gate
+            them, write candidate files under docs/source-candidates/, append
+            today's discovery log under docs/discovery-log/, and flag dead
+            sources. Leave ALL markdown in the working tree — do NOT commit,
+            push, or open a PR. Report back the candidate files you wrote and
+            which single candidate is the highest-confidence one to implement
+            next." Capture its report.
 
-            PHASE 2 — Implementation (skills/source-discovery/SKILL.md from
-            step 6). Pick the highest-confidence candidate from Phase 1 (or an
-            existing pending candidate) and implement that ONE source,
-            flipping its candidate file's status frontmatter. Because a
-            bot-opened PR does not trigger CI or the automated Claude Code
-            Review, self-validate IN THIS SESSION before opening the PR:
-              1. ONLY_SOURCE=<source> npm run generate-calendars — confirm a
-                 sane number of events with no errors.
-              2. npm run test:all
-              3. /code-review on your working-tree diff; address its findings.
-            Then open ONE PR for HUMAN REVIEW that contains BOTH the Phase 1
-            markdown (discovery log + all candidate files) AND the source
-            code. Do NOT push to main and do NOT self-merge; the repo owner
-            reviews and merges it. Write a summary listing what you
-            discovered and what you validated.
+            STEP 2 — Implementation sub-agent. Launch a second general-purpose
+            sub-agent (Task), passing it the candidate the discovery sub-agent
+            recommended (fall back to a pending candidate in
+            docs/source-candidates/ if discovery found none). Assignment:
+            "Follow skills/source-discovery/SKILL.md from step 6 for THIS ONE
+            candidate: <name>. Implement the source, flip its candidate file's
+            status frontmatter, then validate: ONLY_SOURCE=<name> npm run
+            generate-calendars (confirm a sane event count and no errors) and
+            npm run test:all. Leave ALL changes in the working tree — do NOT
+            commit, push, or open a PR. Report what you built and the
+            validation results." Capture its report.
 
-            If Phase 1 turns up nothing worth implementing and no pending
-            candidate exists, open a markdown-only PR with the discovery
-            log / candidate / dead-source updates for human review, then stop.
+            STEP 3 — Review and open the PR (you, the orchestrator). Run
+            /code-review on the working-tree diff and address its findings
+            (delegate substantial fixes back to a sub-agent). Then open ONE
+            PR for HUMAN REVIEW containing BOTH the discovery markdown
+            (discovery log + candidate files) AND the source code. Do NOT push
+            to main and do NOT self-merge; the repo owner reviews and merges.
+            Write a summary covering what was discovered, what was
+            implemented, and what you validated.
+
+            If the discovery sub-agent finds nothing worth implementing and no
+            pending candidate exists, skip Step 2 and open a markdown-only PR
+            with the discovery updates for human review, then stop.
