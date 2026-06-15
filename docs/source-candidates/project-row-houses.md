@@ -7,6 +7,11 @@ tags: [Art, Community]
 firstSeen: 2026-06-14
 lastChecked: 2026-06-14
 pr:
+impl:
+  type: eventbrite
+  organizerId: "8766639900"   # https://www.eventbrite.com/o/project-row-houses-8766639900
+  observedEventCount: 8   # from the Eventbrite organizer page; the `eventbrite` ripper needs EVENTBRITE_TOKEN (CI-only secret) — NOT verifiable locally, only in CI
+  geo: { lat: 29.7319, lng: -95.3653, label: "Project Row Houses, 2521 Holman St, Houston, TX 77004" }
 ---
 
 Third Ward arts and cultural institution founded in 1993. Presents visual art
