@@ -26,11 +26,15 @@ concurrency:
   group: claude-discovery
   cancel-in-progress: false
 
-# Job-level minimum: write contents (to push markdown to main) and nothing
-# else. No pull-requests / issues scope — discovery is structurally incapable
-# of opening a PR or issue, regardless of what the agent attempts.
+# Minimum scope: contents:write (to push markdown to main) plus id-token:write,
+# which claude-code-action@v1 requires to mint its OIDC auth token (without it
+# the action fails before running). Deliberately NO pull-requests / issues
+# scope — discovery is structurally incapable of opening a PR or issue,
+# regardless of what the agent attempts. id-token grants only an OIDC token,
+# never PR/issue/file powers, so the markdown-only guarantee is unaffected.
 permissions:
   contents: write
+  id-token: write
 
 jobs:
   discovery:
@@ -39,6 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      id-token: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
