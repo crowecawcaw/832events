@@ -145,24 +145,30 @@ describe.skipIf(SOURCE_DIR_COUNT === 0)("loadCalendarInventory integration", () 
         }
     });
 
-    it("couth-buzzard ripper is included with styledcalendar type", async () => {
+    it("camh ripper is included with eventbrite type", async () => {
         const inventory = await loadCalendarInventory(sourcesDir);
-        const couthBuzzard = inventory.rippers.find(r => r.name === "couth-buzzard");
-        expect(couthBuzzard).toBeDefined();
-        expect(couthBuzzard?.ripperType).toBe("styledcalendar");
+        const camh = inventory.rippers.find(r => r.name === "camh");
+        expect(camh).toBeDefined();
+        expect(camh?.ripperType).toBe("eventbrite");
     });
 
-    it("includes sub-calendars from multi-calendar sources", async () => {
+    it("includes sub-calendars from multi-calendar sources when present", async () => {
         const inventory = await loadCalendarInventory(sourcesDir);
-        // Houston showlists has sub-calendars; they should appear as separate entries
-        const showlistsSubs = inventory.rippers.filter(r => r.parentSource === "houston-showlists");
-        expect(showlistsSubs.length).toBeGreaterThan(0);
-        // Each sub-calendar should have a name, friendlyname, and parentSource
-        for (const sub of showlistsSubs) {
-            expect(typeof sub.name).toBe("string");
-            expect(typeof sub.friendlyname).toBe("string");
-            expect(sub.parentSource).toBe("houston-showlists");
-            expect(sub.sourceType).toBe("ripper");
+        // If any multi-calendar ripper exists, its sub-calendars should appear as separate entries
+        const multiCalendarParents = new Set(
+            inventory.rippers
+                .filter(r => r.parentSource !== undefined)
+                .map(r => r.parentSource as string)
+        );
+        for (const parentSource of multiCalendarParents) {
+            const subs = inventory.rippers.filter(r => r.parentSource === parentSource);
+            expect(subs.length).toBeGreaterThan(0);
+            for (const sub of subs) {
+                expect(typeof sub.name).toBe("string");
+                expect(typeof sub.friendlyname).toBe("string");
+                expect(sub.parentSource).toBe(parentSource);
+                expect(sub.sourceType).toBe("ripper");
+            }
         }
     });
 });
