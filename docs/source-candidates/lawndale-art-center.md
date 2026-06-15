@@ -1,30 +1,27 @@
 ---
 name: Lawndale Art Center
 status: investigating
-platform: WordPress (custom HTML)
+platform: WordPress + Tribe Events (custom HTML only)
 url: https://lawndaleartcenter.org/events/
-tags: [Art, Midtown]
+tags: [Art, "Museum District"]
 firstSeen: 2026-06-14
-lastChecked: 2026-06-14
+lastChecked: 2026-06-15
 pr:
 ---
 
 Contemporary art center in Midtown Houston presenting exhibitions, performances,
 readings, and community programs. Founded 1979, located at 4912 Main St, Houston TX 77002.
 
-**Platform:** WordPress with a custom calendar implementation. No Tribe Events
-ICS feed detected — the `/?ical=1` endpoint returns HTML, not iCal data. No
-Eventbrite embed found.
+**Platform Details:**
+- WordPress with Tribe Events plugin
+- No public ICS feed: `/feed/ical/`, `/?ical=1`, `/events.ics` all return HTML
+- Tribe Events REST API blocked (`/wp-json/tribe/events/v1/events` returns 404; general `/wp-json/wp/v2/posts` restricted by Solid Security)
+- Individual event pages DO have structured iCal data in DTSTART/DTEND format (visible in "Add to Calendar" data: URI links)
 
-Events are displayed on the site at /events/ with WordPress-style URL slugs
-(e.g., `https://lawndaleartcenter.org/event/the-big-slide-show-12/`).
+**Event URLs:** `/events/` lists upcoming. Individual event pages at `https://lawndaleartcenter.org/event/<slug>/` carry date/time in structured form.
 
-2 upcoming events visible as of 2026-06-14 (The Big Slide Show — July 18 and
-August 1). Volume may be low in summer. The site runs 6+ exhibitions per year
-with associated events (openings, artist talks, performances).
+**Implementation path:** Custom HTMLRipper required — scrape `/events/` listing page + individual event pages to extract structured date data. Event volume: 2 visible as of 2026-06-15 (The Big Slide Show on July 18 and August 1). Capacity appears low in summer; the site runs ~6+ exhibitions/year with openings, artist talks, performances.
 
-**Implementation path:** Custom HTMLRipper parsing the /events/ listing page.
-Low priority compared to ICS/API sources. Consider investigating whether their
-WordPress REST API (`/wp-json/tribe/events/v1/events`) is available.
+**Next steps:** Either accept HTML-scraping complexity, or check with venue whether they can expose Tribe Events ICS feed (may require plugin reconfiguration on their end).
 
-Geo: 4912 Main St, Houston, TX 77002 (Midtown)
+Geo: lat 29.7185, lng -95.3895, label "Lawndale Art Center, 4912 Main St, Houston, TX 77002"
