@@ -1,0 +1,17 @@
+name: project-row-houses
+type: eventbrite
+description: "Project Row Houses"
+url: https://projectrowhouses.org/
+friendlyLink: https://projectrowhouses.org/visit/calendar/
+tags: [Art, Community]
+geo:
+  lat: 29.7319
+  lng: -95.3653
+  label: "Project Row Houses, 2521 Holman St, Houston, TX 77004"
+calendars:
+  - name: project-row-houses
+    friendlyname: "Project Row Houses"
+    timezone: America/Chicago
+    config:
+      organizerId: "8766639900"
+      defaultLocation: "Project Row Houses, 2521 Holman St, Houston, TX 77004"

@@ -1,0 +1,18 @@
+name: white-oak-music-hall
+type: ticketmaster
+description: "White Oak Music Hall"
+url: https://www.whiteoakmusichall.com/
+friendlyLink: https://www.whiteoakmusichall.com/shows
+tags: [Music]
+geo:
+  lat: 29.7906
+  lng: -95.3640
+  label: "White Oak Music Hall, 2915 N Main St, Houston, TX 77009"
+calendars:
+  - name: white-oak-music-hall
+    friendlyname: "White Oak Music Hall"
+    timezone: America/Chicago
+    config:
+      venueId: "476183"
+      venueName: "White Oak Music Hall"
+      venueAddress: "2915 N Main St, Houston, TX 77009"

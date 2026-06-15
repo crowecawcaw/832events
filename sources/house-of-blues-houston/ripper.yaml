@@ -1,0 +1,18 @@
+name: house-of-blues-houston
+type: ticketmaster
+description: "House of Blues Houston"
+url: https://houston.houseofblues.com/
+friendlyLink: https://houston.houseofblues.com/
+tags: [Music, Downtown]
+geo:
+  lat: 29.7527
+  lng: -95.3678
+  label: "House of Blues Houston, 1204 Caroline St, Houston, TX 77002"
+calendars:
+  - name: house-of-blues-houston
+    friendlyname: "House of Blues Houston"
+    timezone: America/Chicago
+    config:
+      venueId: "475902"
+      venueName: "House of Blues Houston"
+      venueAddress: "1204 Caroline St, Houston, TX 77002"

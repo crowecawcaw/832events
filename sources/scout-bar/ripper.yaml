@@ -1,0 +1,20 @@
+name: scout-bar
+type: axs
+proxy: "outofband"
+description: "Scout Bar"
+url: https://www.axs.com/venues/130538/scout-bar-houston
+friendlyLink: https://scoutbar.com/calendar/
+tags: [Music]
+geo:
+  lat: 29.5699
+  lng: -95.1248
+  label: "Scout Bar, 18307 Egret Bay Blvd, Houston, TX 77058"
+calendars:
+  - name: scout-bar
+    friendlyname: "Scout Bar"
+    timezone: America/Chicago
+    config:
+      venueId: 130538
+      venueSlug: "scout-bar-houston"
+      venueName: "Scout Bar"
+      venueAddress: "18307 Egret Bay Blvd, Houston, TX 77058"
