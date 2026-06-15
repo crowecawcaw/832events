@@ -1,29 +1,21 @@
 ---
 name: Urban Harvest
-status: candidate
-platform: Tribe Events (ICS)
+status: added
+platform: Recurring YAML (Saturday market)
 url: https://www.urbanharvest.org/events/
-tags: [FarmersMarket, Community, Midtown]
+tags: [FarmersMarket, Upper Kirby]
 firstSeen: 2026-06-14
-lastChecked: 2026-06-14
+lastChecked: 2026-06-15
 pr:
 ---
 
-Houston's largest farmers market operator, running two weekly markets:
-- **Eastside Farmers Market** at 3000 Richmond Ave, Houston, TX 77098
-  (every Saturday, year-round, 100+ local vendors)
-- **Urban Harvest Farmers Market** at a second location (Eastside Saturdays
-  are the primary draw)
+Houston farmers market operator running the Saturday market at 2752 Buffalo Speedway (year-round, 8am–12pm, 100+ local vendors) plus seasonal events and garden workshops.
 
-Also runs seasonal events, garden workshops, and community programming.
-WordPress + The Events Calendar (Tribe Events) site.
-Reported ICS feed: `https://www.urbanharvest.org/?post_type=tribe_events&ical=1&eventDisplay=list`
-(standard Tribe endpoint — verify before implementing).
+**Implementation:** Recurring YAML (`sources/recurring/urban-harvest.yaml`) for the weekly Saturday market.
 
-**Implementation note:** The weekly Saturday market could be implemented as
-a `sources/recurring/` YAML for reliability. The full events page (workshops,
-special markets) is better served by the ICS feed. Prefer the ICS approach
-to capture all programming automatically.
+**ICS feed testing (2026-06-15):**
+- `https://www.urbanharvest.org/?post_type=tribe_events&ical=1&eventDisplay=list` → returns HTML, not ICS
+- `https://www.urbanharvest.org/events/?ical=1` → returns HTML, not ICS
+- No calendar subscription links found in page source
 
-Verify the Tribe ICS endpoint returns future events; fall back to recurring
-YAML for the market schedule if the feed is unreliable.
+**Decision:** The Tribe Events ICS endpoints are not functional (returning HTML instead of ICS). Implemented as a recurring calendar for the known, reliable Saturday market schedule instead. Market runs year-round every Saturday, 8:00 AM–12:00 PM.

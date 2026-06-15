@@ -1,0 +1,15 @@
+name: urban-harvest
+friendlyname: Urban Harvest Farmers Market
+description: Nonprofit Saturday farmers market with local produce, food, and garden vendors.
+timezone: America/Chicago
+location: "2752 Buffalo Speedway, Houston, TX 77098"
+url: https://www.urbanharvest.org/events/
+tags: ["FarmersMarket", "Upper Kirby"]
+geo:
+  lat: 29.7345
+  lng: -95.4232
+  label: "Urban Harvest Saturday Farmers Market, 2752 Buffalo Speedway, Houston, TX 77098"
+schedules:
+  - schedule: every Saturday
+    start_time: "08:00"
+    duration: PT4H

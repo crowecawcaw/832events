@@ -1,26 +1,34 @@
 ---
-name: InPrint Houston
+name: inprint-houston
 status: candidate
-platform: The Events Calendar (WordPress)
-url: https://inprinthouston.org/
+platform: The Events Calendar (Tribe Events plugin)
+url: https://inprinthouston.org/calendar/
+tags:
+  - Books
+  - Museum District
 firstSeen: 2026-06-15
 lastChecked: 2026-06-15
 impl:
-  feedUrl: https://inprinthouston.org/calendar/?ical=1
-  observedEventCount: 15+
-  timezone: America/Chicago
-  geo: null
-notes: |
-  Houston-based nonprofit literary arts organization offering book clubs, author reading series, poetry events, and literary workshops. Calendar powered by The Events Calendar WordPress plugin with functional ICS export.
-  
-  **Feed verification:** https://inprinthouston.org/calendar/?ical=1 returns valid VCALENDAR format with events scheduled through 2026.
-  
-  **Coverage:** Includes Inprint Book Club, BCM HEAL Book Club, Margarett Root Brown Reading Series, Cool Brains! Reading Series, Escritores en la casa, First Fridays poetry, Poetry Buskers, and community literary events.
-  
-  **Location:** Houston-based nonprofit, covers Houston metro literary community.
-  
-  **Platform confidence:** High - verified ICS feed working, minimal maintenance expected from stable WordPress plugin.
-tags:
-  - Literature
-  - Arts
-  - Community
+  type: external
+  icsUrl: https://inprinthouston.org/?post_type=tribe_events&ical=1&eventDisplay=list
+  infoUrl: https://inprinthouston.org/calendar/
+  observedEventCount: 6
+  geo: { lat: 29.7280, lng: -95.3960, label: "Inprint Houston, 1520 W Main St, Houston, TX 77006" }
+---
+
+## Implementation
+
+Implemented as `sources/external/inprint-houston.yaml`. Verified locally
+(`ONLY_SOURCE=inprint-houston` build → 6 future events, 0 errors).
+
+Inprint Houston is a literary nonprofit that produces the Margarett Root Brown
+Reading Series and hosts book clubs and writing workshops, in the Museum
+District. The site runs The Events Calendar (Tribe Events) plugin.
+
+**Feed used:** `https://inprinthouston.org/?post_type=tribe_events&ical=1&eventDisplay=list`
+— HTTP 200, valid `BEGIN:VCALENDAR`, 6 VEVENTs all dated after 2026-06-15.
+
+**To reconcile:** the daily-cron discovery reported an alternate feed
+`https://inprinthouston.org/calendar/?ical=1` with a higher count (15+). If that
+endpoint returns a fuller set, switch `icsUrl` to it. Compare the two feeds on a
+future pass before flipping to `added`.
