@@ -1,6 +1,6 @@
 ---
 name: Murder By The Book
-status: investigating
+status: candidate
 platform: Drupal 11 + IndieCommerce (HTML-only)
 url: https://www.murderbooks.com/events
 tags: [Books, "West University"]
@@ -46,7 +46,22 @@ Tech stack: **Drupal 11** + **Commerce 3** (via Generator meta tag).
 5. Parse full event details by fetching detail page (href in title link)
 6. Fixed location: 2342 Bissonnet St, Houston, TX 77005
 
-**Related sources:** Blue Willow Bookshop and Brazos Bookstore also use 
+**Related sources:** Blue Willow Bookshop and Brazos Bookstore also use
 Drupal + IndieCommerce — a shared ripper pattern could cover all three.
 
-**Confidence: Low → Out of scope (HTML scraper not targeted this cycle)**
+## Custom Ripper Implemented
+
+Custom HTML ripper written at `sources/murder-by-the-book/`. Unit tests
+pass with **10 events** from the live-fetched `sample-data.html` (June 2026
+sample). Status set to `candidate` — awaiting CI confirmation of >0 events
+before flipping to `added`.
+
+**Selectors used:**
+- Event articles: `article.event-list`
+- Title: `h3.event-list__title a` (text + href)
+- Date: `.event-list__details--item` text after "Date: " label — format `Wed, 6/3/2026`
+- Time: `.event-list__details--item` text after "Time: " label — format `6:30pm` or `6:30pm - 8:00pm`
+- Description: `.event-list__body` text (truncated)
+- Image: `.event-list__second--top .event-list__image img[src]`
+
+**Stable ID:** `slugify(title)-YYYY-MM-DD`

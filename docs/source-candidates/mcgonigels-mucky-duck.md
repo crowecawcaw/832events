@@ -1,12 +1,18 @@
 ---
 name: McGonigel's Mucky Duck
-status: investigating
+status: candidate
 platform: WordPress (Tessera Events) - custom HTML
 url: https://www.mcgonigels.com/
 tags: [Music, Upper Kirby]
 firstSeen: 2026-06-14
 lastChecked: 2026-06-15
 pr:
+impl:
+  type: custom
+  ripper: sources/mcgonigels-mucky-duck/ripper.ts
+  extractionPath: eventObjects.push({...}) regex on homepage HTML
+  eventCount: 98 (unit test on 2026-06-15 sample)
+  sampleDate: 2026-06-15
 ---
 
 Beloved Houston folk/Americana/Irish music pub with live music nearly every night,
@@ -52,7 +58,7 @@ markup across all show cards observed. Sample from 2026-06-15 shows high volume 
 event data from embedded `eventObjects` JavaScript. Duration defaultable or extracted from
 time range in title (e.g., "6-9:30" = 3.5 hours). No API, no ticketing platform integration.
 
-**Ready for custom ripper once higher-priority ICS/API sources exhausted.**
+**Custom ripper implemented** at `sources/mcgonigels-mucky-duck/` with unit tests (8/8 passing). Parses `eventObjects.push({...})` blocks via regex on the server-rendered homepage HTML. Only visible cards (no `class="col d-none"`) are included to exclude duplicate recurring-event entries. Unit test on 2026-06-15 sample: **98 events, 0 parse errors**. Pending central build run to confirm integration (do not flip to `added` until that completes).
 
 Geo: 2425 Norfolk St, Houston, TX 77098 (Upper Kirby)  
 Coords: 29.7326, -95.4171
