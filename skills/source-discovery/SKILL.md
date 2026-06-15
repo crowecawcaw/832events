@@ -71,6 +71,13 @@ For each search result that looks like a Houston event source, evaluate:
 5. **Not already in candidates?** Check `docs/source-candidates/` — `ls` the directory and look for the slug.
 6. **Sufficient event volume?** Should have at least a few events, not a one-off
 7. **Not a religious source?** Do not add sources that are primarily religious organizations (churches, synagogues, mosques, religious federations, etc.). Secular community organizations (Urban League, NAACP, etc.) are fine. Cultural events hosted at religious venues are OK if the organization itself is secular.
+8. **Not an enrollment-style course?** Skip events that are structured as academic courses — multi-session, enrollment-based classes offered by a college, university, or community college when paid. One-off workshops, single classes, short series at studios or community orgs, and lectures are always fine. The test: "Is this *attending an event* or *enrolling in a class at a school*?"
+   - ✅ One-time pottery class or workshop anywhere
+   - ✅ Free class at a university (open to the public)
+   - ✅ Paid 6-week pottery series at a community studio
+   - ✅ Business lecture or panel at a university
+   - ❌ Paid semester-long "POTTERY 101" at a university or community college
+   - ❌ Paid multi-session course with enrollment at an educational institution
 
 ### 5. Update candidate files and push to main
 
