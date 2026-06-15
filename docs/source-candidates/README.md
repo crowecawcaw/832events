@@ -59,6 +59,7 @@ implementer has a ballpark to verify against:
 impl:
   type: external            # external | axs | eventbrite | ticketmaster | dice | squarespace | custom
   icsUrl: https://example.org/events-calendar/?ical=1   # the FEED url that actually returns VEVENTs, not the page
+  infoUrl: https://example.org/calendar/                # human-facing events page (external sources should set this for the site link)
   observedEventCount: 35    # how many events you saw in the feed/page at lastChecked
   geo: { lat: 29.7327, lng: -95.4233, label: "Levy Park, 3801 Eagle St, Houston, TX 77098" }
   # for built-in venue types instead of icsUrl:

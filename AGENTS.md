@@ -233,7 +233,12 @@ calendars:
       venueAddress: "123 Main St, Houston, TX 77002"
 ```
 
-> **AXS and other bot-blocked platforms:** AXS bot-blocks data-center IPs, so the `axs` ripper returns HTTP 403 from CI **and** from most residential fetches. Do **not** preemptively add `proxy: "outofband"` off a local `curl` 403 — start at `proxy: false`, let the build/CI demonstrate the 403, and let the proxy-escalation ladder (`skills/proxy-escalation/SKILL.md`) climb one rung at a time. If you do add a proxy because volume can't be confirmed in-PR, say so explicitly — **"event volume unverified, pending proxy"** is the honest headline, not "looks correct."
+> **AXS and other bot-blocked platforms:** AXS bot-blocks data-center IPs, so the `axs` ripper returns HTTP 403 from CI (and from most residential fetches). Two things follow, and they're easy to get backwards:
+>
+> 1. **A `type: axs` source is a known hard-blocker — add `proxy: "outofband"` from the start.** This is rung 2 of the ladder, and going `false → outofband` directly is allowed (you must never *skip* to `browserbase`, but outofband is the correct first rung for a platform you already know blocks CI). Why it's required and not optional: a brand-new source left at `proxy: false` that produces 0 events (which AXS will, via the 403) trips the **fatal "new source produced 0 events" gate** and the PR can't merge. Marking it `proxy: "outofband"` exempts it from that gate, routes it to the out-of-band runner for real verification, and lands it in the non-fatal `pendingProxyVerification` queue. Set the candidate doc `status: proxy`.
+> 2. **Never claim the volume is verified.** The browser-observed count (e.g. AXS "109 events") is **not** reproducible in-PR. The honest headline is **"event volume unverified, pending proxy"** — never "looks correct" or a high-confidence number. Verification happens later, when the out-of-band runner fetches it from a residential IP.
+>
+> The genuine anti-pattern (what *not* to do) is reaching for a proxy off a single local `curl` and then declaring the source confidently correct, or jumping straight to `browserbase` without first observing `outofband` fail. Choosing `outofband` for a known blocker like AXS is correct; overstating confidence about its volume is not.
 
 Tests for built-in rippers live alongside the implementation in `lib/config/` (e.g., `lib/config/eventbrite.test.ts`) and draw on sample data from the source directories they were developed against.
 

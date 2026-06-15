@@ -16,3 +16,6 @@ web/.playwright/
 .env
 .env.local
 .env.*.local
+
+# Claude Code harness (agent worktrees, local state)
+.claude/
