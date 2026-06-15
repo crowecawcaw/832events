@@ -30,7 +30,8 @@ cadence, and scope to taste by editing the workflow file.
 | Workflow | File | Trigger | Runs |
 |---|---|---|---|
 | [Build-error responder](#1-build-error-responder) | `publish_calendars.yml` (`build-error-responder` job) | After a build with errors (≤ once per 24 h) | `skills/build-report/SKILL.md` |
-| [Source pipeline](#2-source-pipeline) | `claude-sources.yml` | `schedule` (daily) + `workflow_dispatch` | `skills/source-discovery/SKILL.md` steps 1–8 |
+| [Source discovery](#2-source-pipeline) | `claude-discovery.yml` | `schedule` (daily 08:30 UTC) + `workflow_dispatch` | `skills/source-discovery/SKILL.md` steps 1–5 |
+| [Source implementation](#2-source-pipeline) | `claude-implementation.yml` | `schedule` (daily 09:30 UTC) + `workflow_dispatch` | `skills/source-discovery/SKILL.md` steps 6–8 |
 
 Both authenticate with the same `CLAUDE_CODE_OAUTH_TOKEN` secret and
 skip silently on a copy that hasn't set it (or, on a fork whose
@@ -142,41 +143,40 @@ appear.
 
 ## 2. Source pipeline
 
-**Purpose:** grow the catalog in one daily run. An **orchestrator agent**
-delegates each half to its own sub-agent (the `Task` tool) so the two
-phases keep separate context while sharing one working tree:
+**Purpose:** grow the catalog. This runs as **two separate workflows** so the
+halves scale independently — discovery routinely runs many candidates ahead of
+implementation, so welding them at one-source-per-day guarantees an
+ever-growing backlog. Splitting them lets implementation drain the queue faster
+than discovery fills it:
 
-- **Discovery** (`skills/source-discovery/SKILL.md` steps 1–5) — scan for
-  new event sources in your city, quality-gate them, write candidates
-  under `docs/source-candidates/`, append today's discovery log, and flag
-  dead sources. This markdown stays in the working tree and is **handed to
-  the implementation half in-session** — it is never committed to `main`
-  on its own (see [Autonomous PRs](#autonomous-prs-in-session-validation-owner-merges)
-  above).
-- **Implementation** (`skills/source-discovery/SKILL.md` steps 6–8) —
-  pick the highest-confidence candidate and implement that one source,
-  following the quality gates, then open **one PR for human review** that
-  carries both the Phase 1 markdown and the new source code. The PR is
-  self-validated in-session (build + tests + `/code-review`) since CI won't
-  run on a bot PR. The repo owner merges it.
+- **Discovery** (`claude-discovery.yml`, `skills/source-discovery/SKILL.md`
+  steps 1–5) — scan for new event sources in your city, quality-gate them,
+  write candidates under `docs/source-candidates/`, append today's discovery
+  log, and flag dead sources. This run is **markdown-only** and **pushes
+  straight to `main`**; it writes no source code and opens no PR. Markdown-only
+  is enforced in two layers (GitHub token scopes can't target file paths): the
+  job has `contents: write` and nothing else (no PR/issue powers), and the
+  agent only edits the working tree while a workflow-owned guard step
+  hard-fails the push if anything outside `docs/source-candidates/**.md` or
+  `docs/discovery-log/**.md` changed.
+- **Implementation** (`claude-implementation.yml`,
+  `skills/source-discovery/SKILL.md` steps 6–8) — runs **one hour after
+  discovery**, checks out `main` (so it sees the candidates discovery just
+  pushed), and implements **up to 5** pending candidates — cheapest/highest
+  volume first (external ICS + built-in platform rippers). It opens **one PR
+  for human review** carrying all the successfully-built sources and their
+  candidate `status` flips. The PR is self-validated in-session (per-source
+  `ONLY_SOURCE` build + tests + `/code-review`) since CI won't run on a bot PR.
+  The repo owner merges it.
 
-Running both halves in one session means each day's freshly-discovered
-candidates flow straight into the implementation half, with no offset
-scheduling and no intermediate commit to `main`. If a run turns up nothing
-worth implementing, it opens a markdown-only PR with the discovery
-log / candidate / dead-source updates instead.
+Offset scheduling (08:30 → 09:30 UTC) means each morning's freshly-discovered
+candidates are already on `main` when implementation starts. If discovery turns
+up nothing, it commits nothing; if implementation finds no valid candidates, it
+opens no PR.
 
-**Trigger & cadence:** `.github/workflows/claude-sources.yml`, `schedule`
-daily (plus `workflow_dispatch` for a manual run).
-
-**Prompt (in the workflow):**
-
-```
-Phase 1 — discovery (steps 1-5): write candidates + discovery log to the
-working tree, hand them to Phase 2. Phase 2 — implementation (from step
-6): implement the highest-confidence candidate and open ONE human-review
-PR carrying both the Phase 1 markdown and the source code.
-```
+**Trigger & cadence:** `.github/workflows/claude-discovery.yml` (`schedule`
+daily 08:30 UTC) and `.github/workflows/claude-implementation.yml` (`schedule`
+daily 09:30 UTC); both also support `workflow_dispatch` for a manual run.
 
 **Secrets & repo coupling:** `CLAUDE_CODE_OAUTH_TOKEN`.
 
