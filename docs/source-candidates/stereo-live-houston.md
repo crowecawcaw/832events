@@ -1,15 +1,16 @@
 ---
 name: Stereo Live Houston
-status: candidate
+status: added
 platform: Eventbrite
 url: https://www.stereolivehouston.com/
 tags: [Music, Nightlife, Downtown]
 firstSeen: 2026-06-15
 lastChecked: 2026-06-15
+pr: pending
 impl:
   type: eventbrite
   organizerId: "3006970476"
-  observedEventCount: "unknown"
+  observedEventCount: "0"
 ---
 
 Stereo Live Houston is a music and nightlife venue in downtown Houston.

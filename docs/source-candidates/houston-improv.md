@@ -1,12 +1,12 @@
 ---
 name: Houston Improv
-status: candidate
+status: added
 platform: AXS
 url: https://improvtx.com/houston/
 tags: [Comedy]
 firstSeen: 2026-06-13
 lastChecked: 2026-06-13
-pr:
+pr: pending
 impl:
   type: axs
   venueId: 130678
