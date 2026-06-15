@@ -1,11 +1,12 @@
 ---
 name: Levy Park Houston
-status: candidate
+status: added
 platform: ICS/iCal Feed
 url: https://www.levyparkhouston.org/calendar/
 tags: [Parks, Community, Upper Kirby, Outdoor Recreation]
 firstSeen: 2026-06-15
 lastChecked: 2026-06-15
+pr: TBD
 ---
 
 Levy Park is an urban community space in the Upper Kirby District with free and paid programming including fitness classes, family events, movie nights, dog park activities, and cultural programming.

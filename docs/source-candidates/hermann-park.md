@@ -1,11 +1,12 @@
 ---
 name: Hermann Park Conservancy
-status: candidate
+status: added
 platform: ICS/iCal Feed
 url: https://www.hermannpark.org/events/
 tags: [Parks, Outdoor Recreation, Museums, Hermann Park]
 firstSeen: 2026-06-15
 lastChecked: 2026-06-15
+pr: TBD
 ---
 
 Hermann Park is a major 445-acre urban park in Houston with extensive programming including concerts, cultural events, educational programming, and community activities.

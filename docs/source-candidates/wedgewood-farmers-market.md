@@ -1,12 +1,12 @@
 ---
 name: Wedgewood Houston Farmers' Market
-status: candidate
+status: added
 platform: Recurring YAML
 url: https://www.wedgewoodhoustonfarmersmarket.com/schedule
 tags: [FarmersMarket]
 firstSeen: 2026-06-14
 lastChecked: 2026-06-14
-pr:
+pr: TBD
 ---
 
 Seasonal mid-week farmers market in the Wedgewood area of Houston.
