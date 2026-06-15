@@ -1,7 +1,7 @@
 ---
 name: Midtown Houston Management District
-status: candidate
-platform: Community Calendar (HTML/API unverified)
+status: investigating
+platform: The Events Calendar (Cloudflare-protected)
 url: https://midtownhouston.com/explore/events/
 tags: [Community, Arts, Midtown]
 firstSeen: 2026-06-15
@@ -13,21 +13,27 @@ Midtown Houston Management District promotes events and programming in the Midto
 ## Details
 
 - **Events Page**: https://midtownhouston.com/explore/events/
-- **Calendar Support**: Website indicates calendar subscription options available
+- **Calendar Platform**: The Events Calendar (Tribe Events plugin)
 - **Event Categories**: Arts + Culture, Parks (Bagby Park, Baldwin Park, Glover Park, Midtown Park), Community Events, Committee Meetings, Family Activities
 - **Estimated Volume**: 20+ events/month
-- **Confidence Tier**: 🟡 Medium — active calendar confirmed, but specific feed URL not yet identified
 
-## Investigation Needed
+## Investigation Results (2026-06-15)
 
-1. Visit https://midtownhouston.com/explore/events/ and look for calendar subscription/export options
-2. Check if calendar supports ICS export or has API
-3. Determine underlying calendar platform
+### ICS Feed URLs Tested
+1. `https://midtownhouston.com/?post_type=tribe_events&ical=1&eventDisplay=list` → HTTP 403 (Cloudflare block)
+2. `https://midtownhouston.com/explore/events/?ical=1` → HTTP 403 (Cloudflare block)
+3. Main events page: `https://midtownhouston.com/explore/events/` → HTTP 403 (Cloudflare block)
 
-## Sample Events
+### Findings
 
-Super Soccer Sunday Fest (June 14, 2026, 12 PM - 9 PM, Midtown Park), committee meetings, fitness classes, park programming.
+- **Status**: All requests blocked by Cloudflare WAF
+- **No direct curl access** from CI/local environments
+- **No visible BEGIN:VEVENT** in captured responses (all returned Cloudflare error pages)
+- **Confirmed platform**: Website uses The Events Calendar plugin (tribe_events post type visible in attempted URL)
+- **Recommendation**: Requires `proxy: "outofband"` or `proxy: "browserbase"` to fetch successfully
 
-## Notes
+## Next Steps
 
-Midtown Houston is a well-organized district with consistent programming. Good candidate if ICS feed is available.
+Requires proxy-escalation flow. Either:
+1. Mark as `proxy: "outofband"` and allow out-of-band runner to verify feed validity, or
+2. Confirm via manual browser visit that ICS feed works before implementation

@@ -1,6 +1,6 @@
 ---
 name: Houston Rockets
-status: candidate
+status: investigating
 platform: NBA.com / CalendarLabs
 url: https://www.nba.com/rockets/schedule
 tags: [Sports, Basketball, NBA]
@@ -10,25 +10,25 @@ lastChecked: 2026-06-15
 
 Houston Rockets National Basketball Association team schedule and events. Games are played at Toyota Center.
 
+## Investigation Results
+
+**Feed discovered:** https://ics.calendarlabs.com/1898/03876826/Houston_Rockets_Schedule.ics
+- ✓ Valid ICS format (43 VEVENT entries)
+- ✗ All events are from completed 2025-26 season (Feb-June 2026)
+- ✗ Latest event date: 2026-06-01 (before current date 2026-06-15)
+- **Status:** 2026-27 schedule not yet published by NBA/CalendarLabs
+
+## Next Steps
+
+- Return in fall 2026 when the 2026-27 NBA schedule is published
+- CalendarLabs feed will auto-update with new season games once announced
+- Feed URL is stable and verified, ready for implementation once future events are available
+
 ## Details
 
 - **Official Website**: https://www.nba.com/rockets
 - **Schedule Page**: https://www.nba.com/rockets/schedule
-- **ICS Availability**: https://www.calendarlabs.com/ical-calendar/sports-basketball/houston-rockets-schedule-1898/ (CalendarLabs provides subscription)
+- **ICS Feed**: https://ics.calendarlabs.com/1898/03876826/Houston_Rockets_Schedule.ics (CalendarLabs)
 - **Event Type**: Sports - basketball games
-- **2026 Season**: Active (currently mid-season in June 2026)
-- **Confidence Tier**: 🔥 High — verified ICS feed available via CalendarLabs
-
-## CalendarLabs
-
-CalendarLabs provides ICS calendar subscriptions for Houston Rockets that work with Outlook, Google Calendar, iOS, Android, and Mac iCal.
-
-## Implementation Options
-
-1. **Via CalendarLabs**: Use the CalendarLabs ICS URL as external calendar source
-2. **Via NBA.com**: Check if NBA.com offers direct ICS subscription
-3. **Via Built-in Ripper**: If CalendarLabs URL is stable, add as `sources/external/houston-rockets.yaml` with the ICS feed URL
-
-## Notes
-
-Consider grouping with other Houston sports teams (Astros, Texans) if they all use same ICS approach.
+- **Venue**: Toyota Center, Houston, TX
+- **Confidence Tier**: High — ICS feed verified but schedule not yet published for next season

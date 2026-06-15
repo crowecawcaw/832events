@@ -1,29 +1,32 @@
 ---
 name: Ion District
-status: candidate
-platform: Community Calendar (HTML/API unverified)
+status: investigating
+platform: Community Calendar (Tribe Events - WPEngine hosted)
 url: https://iondistrict.com/events/
-tags: [Community, Tech, Innovation, Downtown]
+tags: [Community, Tech, Innovation, Midtown]
 firstSeen: 2026-06-15
 lastChecked: 2026-06-15
 ---
 
-Ion District is Houston's technology and innovation hub (downtown location). Their website features community events including tech meetups, family festivals, and cultural programming.
+Ion District is Houston's technology and innovation hub in Midtown (4201 Main St, Houston, TX 77002). Their website features community events including tech meetups, family festivals, and cultural programming.
 
 ## Details
 
 - **Events Page**: https://iondistrict.com/events/
-- **Calendar Support**: Appears to support Google Calendar, iCalendar, Outlook 365, and Outlook Live based on standard web calendar UI
-- **Estimated Volume**: Moderate (10-15 events/month based on search results)
-- **Platform**: Unknown - needs investigation for ICS feed URL or API
-- **Confidence Tier**: 🟡 Medium — calendar confirmed, but specific feed URL not yet identified
+- **Platform**: Tribe Events (hosted on WPEngine)
+- **Estimated Volume**: Moderate (10-15 events/month)
+- **Blocker**: Cloudflare challenge blocks automated requests to entire iondistrict.com domain
+- **HTTP Status**: 403 Forbidden from CI IPs
 
-## Investigation Needed
+## Investigation Results (2026-06-15)
 
-1. Visit https://iondistrict.com/events/ and look for calendar subscription/export options
-2. Check page source for hidden feed URLs or API endpoints
-3. Determine if platform is Tribe Events, Eventbrite, or custom calendar solution
+Attempted to locate ICS feed via:
+1. `https://iondistrict.com/?post_type=tribe_events&ical=1&eventDisplay=list` → Cloudflare blocked (403)
+2. `https://iondistrict.com/events/?ical=1` → Cloudflare blocked (403)
+3. Main events page HTML inspection → All requests blocked by Cloudflare
 
-## Sample Events
+The entire domain is protected by Cloudflare and blocks data-center IPs. The website uses Tribe Events (inferred from WPEngine hosting), which typically supports ICS feed at the patterns above, but we cannot verify the feed exists without bypassing Cloudflare.
 
-Ion Family Tech Festival, NASA Office Hours, community events in June 2026.
+## Recommendation
+
+Set `proxy: "outofband"` if proceeding — standard Tribe Events feed URL likely exists, but cannot be verified from CI. Out-of-band runner should be able to fetch it from residential IP.

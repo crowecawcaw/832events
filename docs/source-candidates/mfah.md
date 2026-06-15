@@ -1,12 +1,14 @@
 ---
 name: Museum of Fine Arts Houston
 status: investigating
-platform: Unknown (possibly ICS / custom)
+platform: Unknown (Cloudflare-blocked; per-event iCalendar export only)
 url: https://www.mfah.org/events
 tags: [Art, Museums, Museum District]
 firstSeen: 2026-06-13
-lastChecked: 2026-06-13
+lastChecked: 2026-06-15
 pr:
+impl:
+  note: "Cloudflare WAF blocks all bot requests. No subscribable ICS feed found via curl, JSON endpoint, or direct /events.ics probes. Site exports individual event .ics files only. Platform is custom CMS (not Tribe Events, Eventbrite, Squarespace, Ticketmaster, or Localist). Requires either: (1) outofband residential IP fetch to locate feed URL, or (2) custom ripper with JS execution (browserbase) to parse events. High-value source; defer pending proxy verification."
 ---
 
 One of the largest art museums in the US, at 1001 Bissonnet St, Houston, TX 77005
@@ -20,15 +22,19 @@ Outlook Live on per-event pages), but no standalone ICS feed URL has been
 confirmed. The site may generate per-event .ics downloads rather than a
 subscribable feed.
 
-**Investigation needed:**
-1. Fetch `https://www.mfah.org/events?format=json` — check if Squarespace
-2. Look for `<link rel="alternate" type="text/calendar">` in page source
-3. Check `https://www.mfah.org/events.ics` or similar
-4. Check for `/api/events` or `/events.json` in the Network tab
-5. Check if Ticketmaster/Eventbrite/Localist is the backend
-   (the mfah.org domain suggests custom CMS, possibly Kentico or Sitecore)
+**Cloudflare WAF blocking (2026-06-15):** All curl requests to mfah.org hit Cloudflare
+challenge pages. Tested:
+- `https://www.mfah.org/?post_type=tribe_events&ical=1&eventDisplay=list` → HTTP 403
+- `https://www.mfah.org/events/?ical=1` → HTTP 403
+- `https://www.mfah.org/events?format=json` → HTTP 403
+- `https://www.mfah.org/events.ics` → HTTP 403
+- Other standard ICS endpoints → HTTP 403
 
-**Geo:** lat 29.7260, lng -95.3910
+No Tribe Events ICS endpoint pattern detected. Likely custom CMS (Kentico, Sitecore, or proprietary).
 
-**Confidence:** 🔍 Investigating — high value source, platform unknown. Do not
-implement until a feed URL is confirmed to return future events.
+**Recommendation:** Mark as `status: proxy` with `proxy: "outofband"` or `"browserbase"`.
+The out-of-band residential fetch may locate a feed URL, or JS execution may be needed.
+
+**Geo:** lat 29.7259, lng -95.3905
+
+**Confidence:** 🚫 Blocked by Cloudflare WAF. High-value source; proxy required to proceed.

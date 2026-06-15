@@ -5,7 +5,7 @@ platform: Ticketmaster
 url: https://whiteoakmusichall.com/
 tags: [Music, The Heights]
 firstSeen: 2026-06-13
-lastChecked: 2026-06-13
+lastChecked: 2026-06-15
 pr:
 ---
 
@@ -20,8 +20,13 @@ Ticketmaster venue IDs (from ticketmaster.com):
 - `476313` — White Oak Music Hall — Upstairs
 - `476314` — White Oak Music Hall — Downstairs
 
-Blocked on `TICKETMASTER_API_KEY`, which is not yet set in the repo (see the
-city-setup key list). Once the key lands, add a `type: ticketmaster` ripper
-and verify event counts in CI before merging. Not implemented yet because
-the Discovery API can't be queried locally without the key, and the skill
-forbids implementing an unverifiable source.
+**Investigation summary (2026-06-15):**
+- No public ICS feed found via common Ticketmaster feed URLs (`.ics` endpoints return 400)
+- No alternative calendar APIs exposed by their website (event-discovery plugin)
+- Ticketmaster website uses JavaScript rendering — events not in initial HTML fetch
+- RSS feed exists (`/feed/`) but is stale (last update 2023-03-20)
+
+**Blocked on `TICKETMASTER_API_KEY`**, which is not yet set in the repo (see the
+city-setup key list). Once the key is configured, implement as `type: ticketmaster` 
+ripper with the four venue IDs above and verify event counts in CI before merging.
+Cannot be implemented in CI today without the API key.
