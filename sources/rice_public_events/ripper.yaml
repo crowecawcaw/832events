@@ -1,0 +1,13 @@
+name: rice-public-events
+description: "Rice University"
+url: "https://events.rice.edu/live/ical/events/category/Open%20to%20the%20Public"
+friendlyLink: "https://events.rice.edu/"
+tags: ["Education", "Art", "Museum District"]
+geo:
+  lat: 29.7174
+  lng: -95.4018
+  label: "Rice University, 6100 Main St, Houston, TX 77005"
+calendars:
+  - name: rice-public-events
+    friendlyname: "Rice University - Open to the Public"
+    timezone: America/Chicago
