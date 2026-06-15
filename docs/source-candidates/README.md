@@ -45,6 +45,32 @@ pr:                        # optional, set when implementation is in flight
 Drag dinner theater at 300 Broadway E, Montrose. Weekly shows
 (Fri/Sat evenings, Sat/Sun brunch). Eventbrite organizer `80473185523`
 shows 3 upcoming, but primary ticketing is SimpleTix...
+
+### Recording resolved implementation handles (`impl:`)
+
+Discovery is the right time to resolve the exact handles an implementer
+needs — the **resolved feed URL**, built-in `type`, IDs, and `geo` — so
+implementation is a near-instant copy job rather than a second round of
+investigation. When you've verified them, record them in an optional
+`impl:` frontmatter block **and state the observed event count** so the
+implementer has a ballpark to verify against:
+
+```yaml
+impl:
+  type: external            # external | axs | eventbrite | ticketmaster | dice | squarespace | custom
+  icsUrl: https://example.org/events-calendar/?ical=1   # the FEED url that actually returns VEVENTs, not the page
+  observedEventCount: 35    # how many events you saw in the feed/page at lastChecked
+  geo: { lat: 29.7327, lng: -95.4233, label: "Levy Park, 3801 Eagle St, Houston, TX 77098" }
+  # for built-in venue types instead of icsUrl:
+  # venueId: 130538
+  # venueSlug: scout-bar-houston    # MUST match the slug in the live AXS/venue URL
+```
+
+Only record a handle once you've **confirmed it live** (the `icsUrl`
+actually returns `BEGIN:VEVENT`, the `venueSlug` is the real one in the
+venue URL). An unverified handle in `impl:` is worse than none — it looks
+authoritative and gets copied verbatim. If you couldn't confirm it, leave
+it out and say so in the prose.
 ```
 
 ### Status values

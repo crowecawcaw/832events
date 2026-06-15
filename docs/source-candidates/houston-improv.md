@@ -7,6 +7,12 @@ tags: [Comedy]
 firstSeen: 2026-06-13
 lastChecked: 2026-06-13
 pr:
+impl:
+  type: axs
+  venueId: 130678
+  venueSlug: houston-improv-houston-tickets   # the slug in https://www.axs.com/venues/130678/houston-improv-houston-tickets
+  observedEventCount: 109   # AXS bot-blocks data-center + most residential IPs (HTTP 403); count is from a browser, NOT verifiable in CI
+  geo: { lat: 29.7695, lng: -95.4975, label: "Houston Improv, 7620 Katy Freeway, Houston, TX 77024" }
 ---
 
 Comedy club at 7620 Katy Freeway, Houston, TX 77024. Seats ~300; dinner-theater

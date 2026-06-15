@@ -182,7 +182,7 @@ If no ICS feed exists, look for a public API:
 
 **Built-in rippers for common platforms:**
 
-If the site uses one of these platforms, use the corresponding `type` in `ripper.yaml` instead of writing a custom ripper:
+If the site uses one of these platforms, use the corresponding `type` in `ripper.yaml` instead of writing a custom ripper. **A built-in-`type:` source needs only a `ripper.yaml`** — no `ripper.ts`, no `sample-data`. Create `sources/<name>/ripper.yaml` and you're done; the loader (`lib/config/loader.ts`) maps the `type:` to the shared implementation in `lib/config/<type>.ts`. The per-type config fields and exact fetch behavior are documented at the top of that file (e.g. `lib/config/axs.ts`) — read it if a field is unclear.
 
 | Platform | `type` value | Config fields (per calendar) |
 |---|---|---|
@@ -209,6 +209,31 @@ calendars:
       defaultLocation: "123 Main St, Houston, TX 77002"
       defaultDurationHours: 3   # optional, defaults to 2
 ```
+
+Example `ripper.yaml` for an **AXS** venue (note: `geo` is **required** on every ripper — see the Discovery API section — and the `axs` ripper fetches `https://www.axs.com/venues/<venueId>/<venueSlug>`, so the **`venueSlug` must be exactly the slug AXS uses in that URL** or it silently returns 0 events; verify it by opening the URL in a browser):
+```yaml
+name: my-venue
+type: axs
+description: "My Venue"
+url: "https://www.axs.com/venues/130538/my-venue-houston"   # the real AXS venue URL
+friendlyLink: https://www.my-venue.com/calendar/
+tags: ["Music"]
+geo:
+  lat: 29.5699
+  lng: -95.1248
+  label: "My Venue, 123 Main St, Houston, TX 77002"
+calendars:
+  - name: my-venue
+    friendlyname: "My Venue"
+    timezone: America/Chicago
+    config:
+      venueId: 130538
+      venueSlug: "my-venue-houston"
+      venueName: "My Venue"
+      venueAddress: "123 Main St, Houston, TX 77002"
+```
+
+> **AXS and other bot-blocked platforms:** AXS bot-blocks data-center IPs, so the `axs` ripper returns HTTP 403 from CI **and** from most residential fetches. Do **not** preemptively add `proxy: "outofband"` off a local `curl` 403 — start at `proxy: false`, let the build/CI demonstrate the 403, and let the proxy-escalation ladder (`skills/proxy-escalation/SKILL.md`) climb one rung at a time. If you do add a proxy because volume can't be confirmed in-PR, say so explicitly — **"event volume unverified, pending proxy"** is the honest headline, not "looks correct."
 
 Tests for built-in rippers live alongside the implementation in `lib/config/` (e.g., `lib/config/eventbrite.test.ts`) and draw on sample data from the source directories they were developed against.
 
