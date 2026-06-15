@@ -1,11 +1,11 @@
 ---
 name: Discovery Green
 status: investigating
-platform: Tribe Events (ICS — unconfirmed)
+platform: Tribe Events (ICS broken — returns HTML)
 url: https://www.discoverygreen.com/events
 tags: [Downtown, Parks, Community]
 firstSeen: 2026-06-14
-lastChecked: 2026-06-14
+lastChecked: 2026-06-15
 pr:
 ---
 
@@ -14,11 +14,16 @@ Houston, TX 77010). High-volume free programming: concerts, outdoor movies,
 yoga, fitness classes, festivals, and community events. Approximately 50+
 events/month.
 
-Uses WordPress, and the site's Tribe Events ICS endpoint has been reported
-as returning HTML instead of ICS calendar data — the standard
-`?post_type=tribe_events&ical=1` URL may not be enabled or may be broken.
+Uses WordPress with Tribe Events plugin. **Tribe ICS endpoints all broken:**
+- `/?post_type=tribe_events&ical=1&eventDisplay=list` → HTTP 200, returns HTML page (not ICS)
+- `/events/?ical=1` → HTTP 200, returns HTML page
+- `/?ical=1` → HTTP 200, returns HTML page
+- `/calendar/?ical=1` → HTTP 200, returns HTML page
 
-**Next step:** Verify whether a working ICS export exists at a different
-URL path, or whether the site uses a different events plugin. Check the
-events page source for `<link rel="alternate" type="text/calendar">` or
-other calendar export hints. If no ICS exists, evaluate custom HTML scraping.
+WordPress REST API available (`/wp-json/`), but no Tribe Events REST route.
+Site has Elementor/theplus frontend (custom JS rendering, not JSON data in page).
+No Eventbrite integration detected on site.
+
+**Next step:** Either (a) find an undocumented ICS or API endpoint, (b) detect
+if they offer a hidden Eventbrite organizer ID, or (c) implement HTML scraping
+if event markup is reliably parseable from the Elementor frontend.

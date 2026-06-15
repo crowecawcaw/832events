@@ -1,7 +1,7 @@
 ---
 name: Houston Texans
-status: candidate
-platform: NFL / Ticketmaster
+status: investigating
+platform: Ticketmaster (only known source)
 url: https://www.houstontexans.com/schedule/
 tags: [Sports, Football, NFL]
 firstSeen: 2026-06-15
@@ -17,20 +17,35 @@ Houston Texans National Football League team schedule and events. Games are play
 - **Ticketing**: Ticketmaster integration (presented by Ticketmaster)
 - **Event Type**: Sports - football games (NFL)
 - **2026 Season**: Upcoming (NFL season Sept-Jan in NFL calendar)
-- **Confidence Tier**: 🟡 Medium — Ticketmaster integration confirmed, but ICS feed not yet verified
+- **Confidence Tier**: 🟡 Medium — requires Ticketmaster API integration
 
-## Investigation Needed
+## Investigation Results (2026-06-15)
 
-1. Check if CalendarLabs provides Houston Texans ICS feed (like Rockets/Astros)
-2. Check if Ticketmaster integration provides ICS export
-3. Check if NFL.com provides direct ICS feed for Houston Texans games
+### ICS Feed Search (UNSUCCESSFUL)
 
-## Implementation Options
+Tested the following ICS feed URL patterns — none returned valid Texans schedule data:
 
-1. **Via CalendarLabs**: If available, use CalendarLabs ICS URL like other Houston sports teams
-2. **Via Ticketmaster**: Potentially build a Ticketmaster-based ripper if no ICS feed exists
-3. **Via Built-in Ripper**: Use existing Ticketmaster ripper if available in codebase
+1. **CalendarLabs URLs** (tested pattern used for other Houston teams):
+   - `https://ics.calendarlabs.com/145/Houston_Texans/Houston_Texans_schedule.ics` → 403 / File not found
+   - `https://ics.calendarlabs.com/76/Houston_Texans/Houston_Texans.ics` → returned US Holidays (wrong calendar)
 
-## Notes
+2. **NFL Official**:
+   - `https://www.nfl.com/feeds/site/teamsites/houston-texans/schedule.ics` → 404 HTML page
+   - `https://feeds.nfl.com/teams/hou/schedule` → deprecated (API-only, requires credentials)
 
-Currently in off-season (June 2026). Season games would be Sept-Jan. Preseason likely in August.
+3. **ESPN**:
+   - `https://www.espn.com/nfl/team/schedule/_/name/hou/ical` → 200 HTML (not ICS)
+
+4. **Yahoo Sports, Google Calendar, iCalShare, other aggregators**: No working endpoints found
+
+### Conclusion
+
+No direct ICS feed exists for Houston Texans. Implementation requires Ticketmaster API.
+
+## Next Steps
+
+1. **Find NRG Stadium Ticketmaster venue ID** — needed for `type: ticketmaster` config
+2. **Verify future games exist** via Ticketmaster API search (Sep-Jan 2026 season)
+3. Create `sources/houston-texans/ripper.yaml` with Ticketmaster config
+
+Currently in off-season (June 2026). Season games would be Sep-Jan. Preseason likely in August.
