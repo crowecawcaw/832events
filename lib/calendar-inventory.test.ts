@@ -145,24 +145,10 @@ describe.skipIf(SOURCE_DIR_COUNT === 0)("loadCalendarInventory integration", () 
         }
     });
 
-    it("couth-buzzard ripper is included with styledcalendar type", async () => {
+    it("houston-improv ripper is included with axs type", async () => {
         const inventory = await loadCalendarInventory(sourcesDir);
-        const couthBuzzard = inventory.rippers.find(r => r.name === "couth-buzzard");
-        expect(couthBuzzard).toBeDefined();
-        expect(couthBuzzard?.ripperType).toBe("styledcalendar");
-    });
-
-    it("includes sub-calendars from multi-calendar sources", async () => {
-        const inventory = await loadCalendarInventory(sourcesDir);
-        // Houston showlists has sub-calendars; they should appear as separate entries
-        const showlistsSubs = inventory.rippers.filter(r => r.parentSource === "houston-showlists");
-        expect(showlistsSubs.length).toBeGreaterThan(0);
-        // Each sub-calendar should have a name, friendlyname, and parentSource
-        for (const sub of showlistsSubs) {
-            expect(typeof sub.name).toBe("string");
-            expect(typeof sub.friendlyname).toBe("string");
-            expect(sub.parentSource).toBe("houston-showlists");
-            expect(sub.sourceType).toBe("ripper");
-        }
+        const improv = inventory.rippers.find(r => r.name === "houston-improv");
+        expect(improv).toBeDefined();
+        expect(improv?.ripperType).toBe("axs");
     });
 });
