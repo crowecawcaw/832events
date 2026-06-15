@@ -19,8 +19,10 @@ impl:
 > events are listed on AXS (`axs.com/venues/126004/stereo-live-houston-houston-tickets`),
 > so it's now `type: axs` with `proxy: "outofband"` (AXS bot-blocks CI). Event
 > volume is **unverified, pending proxy**. Also corrected the location: this is
-> 6400 Richmond Ave (Westchase), not Downtown — dropped the `Downtown` tag and
-> set a real `geo`.
+> 6400 Richmond Ave (Mid-West / Hillcroft area), not Downtown — dropped the
+> `Downtown` tag. `geo` is left null because the address doesn't map to a
+> registered neighborhood (which would fail the venues.json neighborhood-tag
+> check once integrated); the accurate address lives in `venueAddress`.
 
 
 Stereo Live Houston is a music and nightlife venue in downtown Houston.
