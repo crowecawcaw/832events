@@ -1,12 +1,12 @@
 ---
 name: Buffalo Bayou Partnership
-status: candidate
+status: added
 platform: Tribe Events (ICS)
 url: https://buffalobayou.org/events/
 tags: [Parks, Downtown]
 firstSeen: 2026-06-13
 lastChecked: 2026-06-13
-pr:
+pr: TBD
 ---
 
 Outdoor recreation and cultural programming along Buffalo Bayou.
