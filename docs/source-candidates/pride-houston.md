@@ -6,7 +6,7 @@ url: https://www.eventbrite.com/o/pride-houston-19231282193
 tags: [Community]
 firstSeen: 2026-06-14
 lastChecked: 2026-06-15
-pr: TBD
+pr: "25"
 ---
 
 Pride Houston 365 organizes the official Houston LGBT Pride Celebration® and

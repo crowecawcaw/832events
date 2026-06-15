@@ -6,7 +6,7 @@ url: https://www.stereolivehouston.com/
 tags: [Music, Nightlife, Downtown]
 firstSeen: 2026-06-15
 lastChecked: 2026-06-15
-pr: TBD
+pr: "25"
 impl:
   type: eventbrite
   organizerId: "3006970476"

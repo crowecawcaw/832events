@@ -7,7 +7,7 @@ tags: [Music, The Heights]
 firstSeen: 2026-06-14
 lastChecked: 2026-06-15
 ticketmasterId: "476164"
-pr: TBD
+pr: "25"
 ---
 
 Historic 1926 theater restored as a concert venue at 339 W 19th St, The Heights.
