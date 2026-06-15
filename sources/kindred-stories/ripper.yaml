@@ -1,0 +1,17 @@
+name: kindred-stories
+type: eventbrite
+description: "Kindred Stories"
+url: https://kindredstorieshtx.com/
+friendlyLink: https://kindredstorieshtx.com/pages/events
+tags: [Books, "Third Ward"]
+geo:
+  lat: 29.7280
+  lng: -95.3640
+  label: "Kindred Stories, 2304 Stuart St, Houston, TX 77004"
+calendars:
+  - name: kindred-stories
+    friendlyname: "Kindred Stories"
+    timezone: America/Chicago
+    config:
+      organizerId: "556771203279"
+      defaultLocation: "Kindred Stories, 2304 Stuart St, Houston, TX 77004"

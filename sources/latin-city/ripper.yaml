@@ -1,0 +1,14 @@
+name: latin-city
+type: eventbrite
+description: "Latin City"
+url: https://www.ourlatincity.com/
+friendlyLink: https://latincity.eventbrite.com
+tags: [Food, FoodFestival]
+geo: null
+calendars:
+  - name: latin-city
+    friendlyname: "Latin City"
+    timezone: America/Chicago
+    config:
+      organizerId: "1098215067"
+      defaultLocation: "Houston, TX"

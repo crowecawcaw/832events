@@ -1,0 +1,17 @@
+name: the-secret-group
+type: eventbrite
+description: "The Secret Group"
+url: https://www.thesecretgrouphtx.com/
+friendlyLink: https://www.thesecretgrouphtx.com/
+tags: [Comedy, EaDo]
+geo:
+  lat: 29.7480
+  lng: -95.3490
+  label: "The Secret Group, 2101 Polk St, Houston, TX 77003"
+calendars:
+  - name: the-secret-group
+    friendlyname: "The Secret Group"
+    timezone: America/Chicago
+    config:
+      organizerId: "20138725138"
+      defaultLocation: "The Secret Group, 2101 Polk St, Houston, TX 77003"

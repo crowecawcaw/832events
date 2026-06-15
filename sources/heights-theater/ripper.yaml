@@ -1,0 +1,18 @@
+name: heights-theater
+type: ticketmaster
+description: "The Heights Theater"
+url: https://theheightstheater.com/
+friendlyLink: https://theheightstheater.com/
+tags: [Music, The Heights]
+geo:
+  lat: 29.8027
+  lng: -95.4110
+  label: "The Heights Theater, 339 W 19th St, Houston, TX 77008"
+calendars:
+  - name: heights-theater
+    friendlyname: "The Heights Theater"
+    timezone: America/Chicago
+    config:
+      venueId: "476164"
+      venueName: "The Heights Theater"
+      venueAddress: "339 W 19th St, Houston, TX 77008"
