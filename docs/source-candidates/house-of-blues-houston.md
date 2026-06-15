@@ -6,7 +6,7 @@ url: https://houston.houseofblues.com/
 tags: [Music, Downtown]
 firstSeen: 2026-06-13
 lastChecked: 2026-06-14
-pr: pending
+pr: 28
 ---
 
 Major live-music venue at 1204 Caroline St, Downtown Houston, TX 77002
