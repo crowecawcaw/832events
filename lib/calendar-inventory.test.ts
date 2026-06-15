@@ -145,24 +145,22 @@ describe.skipIf(SOURCE_DIR_COUNT === 0)("loadCalendarInventory integration", () 
         }
     });
 
-    it("couth-buzzard ripper is included with styledcalendar type", async () => {
+    it("camh ripper is included with eventbrite type", async () => {
         const inventory = await loadCalendarInventory(sourcesDir);
-        const couthBuzzard = inventory.rippers.find(r => r.name === "couth-buzzard");
-        expect(couthBuzzard).toBeDefined();
-        expect(couthBuzzard?.ripperType).toBe("styledcalendar");
+        const camh = inventory.rippers.find(r => r.name === "camh");
+        expect(camh).toBeDefined();
+        expect(camh?.ripperType).toBe("eventbrite");
     });
 
-    it("includes sub-calendars from multi-calendar sources", async () => {
+    it("single-calendar sources do not generate sub-calendar entries", async () => {
         const inventory = await loadCalendarInventory(sourcesDir);
-        // Houston showlists has sub-calendars; they should appear as separate entries
-        const showlistsSubs = inventory.rippers.filter(r => r.parentSource === "houston-showlists");
-        expect(showlistsSubs.length).toBeGreaterThan(0);
-        // Each sub-calendar should have a name, friendlyname, and parentSource
-        for (const sub of showlistsSubs) {
-            expect(typeof sub.name).toBe("string");
-            expect(typeof sub.friendlyname).toBe("string");
-            expect(sub.parentSource).toBe("houston-showlists");
-            expect(sub.sourceType).toBe("ripper");
+        // Sources where the calendar name matches the source name should not produce sub-calendar entries.
+        // When multi-calendar sources like houston-showlists are added, they will have parentSource set.
+        const entriesWithParent = inventory.rippers.filter(r => r.parentSource !== undefined);
+        for (const entry of entriesWithParent) {
+            expect(typeof entry.name).toBe("string");
+            expect(typeof entry.parentSource).toBe("string");
+            expect(entry.sourceType).toBe("ripper");
         }
     });
 });

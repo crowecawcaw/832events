@@ -1,6 +1,7 @@
 import { describe, expect, test } from 'vitest';
 import { RipperLoader, loadRipper } from './loader.js';
-import { SquarespaceRipper } from './squarespace.js';
+import { EventbriteRipper } from './eventbrite.js';
+import { TicketmasterRipper } from './ticketmaster.js';
 
 import { readdirSync } from 'fs';
 
@@ -18,27 +19,22 @@ describe.skipIf(SOURCE_DIR_COUNT === 0)('Config Load', () => {
             expect(errors).toEqual([]);
 
             // Sanity check: verify a known config loads correctly
-            const siff = configs.filter(c => c.config.name == "siff")[0];
-            expect(siff.config.url.toString()).toEqual("https://www.siff.net/calendar?view=grid&date={yyyy-MM-dd}")
+            const camh = configs.filter(c => c.config.name == "camh")[0];
+            expect(camh.config.url.toString()).toEqual("https://camh.org/")
     });
 
-    test('loads squarespace sources via type field without ripper.ts', async () => {
+    test('loads eventbrite and ticketmaster sources via type field without ripper.ts', async () => {
             const loader = new RipperLoader("sources/");
             const [configs, _errors] = await loader.loadConfigs();
 
-            const jcccw = configs.find(c => c.config.name === "jcccw");
-            expect(jcccw).toBeDefined();
-            expect(jcccw!.config.type).toBe("squarespace");
-            expect(jcccw!.ripperImpl).toBeInstanceOf(SquarespaceRipper);
+            const camh = configs.find(c => c.config.name === "camh");
+            expect(camh).toBeDefined();
+            expect(camh!.config.type).toBe("eventbrite");
+            expect(camh!.ripperImpl).toBeInstanceOf(EventbriteRipper);
 
-            const naam = configs.find(c => c.config.name === "naam");
-            expect(naam).toBeDefined();
-            expect(naam!.config.type).toBe("squarespace");
-            expect(naam!.ripperImpl).toBeInstanceOf(SquarespaceRipper);
-
-            const wingLuke = configs.find(c => c.config.name === "wing-luke");
-            expect(wingLuke).toBeDefined();
-            expect(wingLuke!.config.type).toBe("squarespace");
-            expect(wingLuke!.ripperImpl).toBeInstanceOf(SquarespaceRipper);
+            const whiteOak = configs.find(c => c.config.name === "white-oak-music-hall");
+            expect(whiteOak).toBeDefined();
+            expect(whiteOak!.config.type).toBe("ticketmaster");
+            expect(whiteOak!.ripperImpl).toBeInstanceOf(TicketmasterRipper);
     });
 });
