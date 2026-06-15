@@ -1,12 +1,12 @@
 ---
 name: Holocaust Museum Houston
-status: candidate
+status: added
 platform: Tribe Events (ICS)
 url: https://hmh.org/events/
 tags: [Museum District, Museums, Community]
 firstSeen: 2026-06-14
 lastChecked: 2026-06-14
-pr:
+pr: (pending)
 ---
 
 Education and remembrance museum at 5401 Caroline St, Houston, TX 77004
