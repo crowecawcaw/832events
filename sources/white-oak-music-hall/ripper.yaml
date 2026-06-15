@@ -3,7 +3,7 @@ type: ticketmaster
 description: "White Oak Music Hall"
 url: https://www.whiteoakmusichall.com/
 friendlyLink: https://www.whiteoakmusichall.com/shows
-tags: [Music]
+tags: [Music, "Near Northside"]
 geo:
   lat: 29.7906
   lng: -95.3640
@@ -13,6 +13,12 @@ calendars:
     friendlyname: "White Oak Music Hall"
     timezone: America/Chicago
     config:
-      venueId: "476183"
+      # White Oak Music Hall spreads shows across three Ticketmaster Discovery
+      # venues — Downstairs, Upstairs, and the outdoor Lawn. The numeric
+      # ticketmaster.com website id (476183) is NOT a Discovery API id and
+      # returns 0 events; these are the alphanumeric Discovery venue ids, passed
+      # comma-separated (the API treats multiple venueIds as an OR filter) so a
+      # single calendar covers all three rooms.
+      venueId: "KovZ917AiGZ,KovZ917Ai5U,KovZ917Ata1"
       venueName: "White Oak Music Hall"
       venueAddress: "2915 N Main St, Houston, TX 77009"

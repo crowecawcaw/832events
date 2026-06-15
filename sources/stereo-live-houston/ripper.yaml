@@ -1,14 +1,22 @@
 name: stereo-live-houston
-type: eventbrite
+type: axs
+proxy: "outofband"
 description: "Stereo Live Houston"
 url: https://www.stereolivehouston.com/
 friendlyLink: https://www.stereolivehouston.com/
-tags: [Music, Nightlife, Downtown]
+tags: [Music, Nightlife]
+# geo intentionally null: 6400 Richmond Ave (Mid-West / Hillcroft area) doesn't
+# map to a registered neighborhood, and this is a proxy: outofband source skipped
+# in the main build. Keeping geo null avoids a venues.json neighborhood-tag
+# failure when the out-of-band runner later integrates it; the accurate address
+# still lives in venueAddress below for per-event location fallback.
 geo: null
 calendars:
   - name: stereo-live-houston
     friendlyname: "Stereo Live Houston"
     timezone: America/Chicago
     config:
-      organizerId: "3006970476"
-      defaultLocation: "Downtown Houston, TX"
+      venueId: 126004
+      venueSlug: "stereo-live-houston-houston-tickets"
+      venueName: "Stereo Live Houston"
+      venueAddress: "6400 Richmond Ave, Houston, TX 77057"

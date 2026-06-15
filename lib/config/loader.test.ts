@@ -34,10 +34,10 @@ describe.skipIf(SOURCE_DIR_COUNT === 0)('Config Load', () => {
             expect(camh!.config.type).toBe("eventbrite");
             expect(camh!.ripperImpl).toBeInstanceOf(EventbriteRipper);
 
-            const heightsTheater = configs.find(c => c.config.name === "heights-theater");
-            expect(heightsTheater).toBeDefined();
-            expect(heightsTheater!.config.type).toBe("ticketmaster");
-            expect(heightsTheater!.ripperImpl).toBeInstanceOf(TicketmasterRipper);
+            const houseOfBlues = configs.find(c => c.config.name === "house-of-blues-houston");
+            expect(houseOfBlues).toBeDefined();
+            expect(houseOfBlues!.config.type).toBe("ticketmaster");
+            expect(houseOfBlues!.ripperImpl).toBeInstanceOf(TicketmasterRipper);
 
             const houstonImprov = configs.find(c => c.config.name === "houston-improv");
             expect(houstonImprov).toBeDefined();

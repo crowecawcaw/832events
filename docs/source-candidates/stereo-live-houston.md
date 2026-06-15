@@ -1,17 +1,29 @@
 ---
 name: Stereo Live Houston
-status: added
-platform: Eventbrite
+status: proxy
+platform: AXS
 url: https://www.stereolivehouston.com/
-tags: [Music, Nightlife, Downtown]
+tags: [Music, Nightlife]
 firstSeen: 2026-06-15
 lastChecked: 2026-06-15
 pr: 28
 impl:
-  type: eventbrite
-  organizerId: "3006970476"
-  observedEventCount: "0"
+  type: axs
+  axsVenueId: "126004"
+  axsVenueSlug: "stereo-live-houston-houston-tickets"
 ---
+
+> **2026-06-15 — switched Eventbrite → AXS.** The `type: eventbrite`
+> implementation (organizer `3006970476`) returned 0 events: that organizer is
+> real but its Eventbrite page shows "Nothing planned right now." The venue's
+> events are listed on AXS (`axs.com/venues/126004/stereo-live-houston-houston-tickets`),
+> so it's now `type: axs` with `proxy: "outofband"` (AXS bot-blocks CI). Event
+> volume is **unverified, pending proxy**. Also corrected the location: this is
+> 6400 Richmond Ave (Mid-West / Hillcroft area), not Downtown — dropped the
+> `Downtown` tag. `geo` is left null because the address doesn't map to a
+> registered neighborhood (which would fail the venues.json neighborhood-tag
+> check once integrated); the accurate address lives in `venueAddress`.
+
 
 Stereo Live Houston is a music and nightlife venue in downtown Houston.
 

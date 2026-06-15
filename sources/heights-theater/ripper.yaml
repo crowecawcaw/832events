@@ -1,5 +1,6 @@
 name: heights-theater
-type: ticketmaster
+type: axs
+proxy: "outofband"
 description: "The Heights Theater"
 url: https://theheightstheater.com/
 friendlyLink: https://theheightstheater.com/
@@ -13,6 +14,7 @@ calendars:
     friendlyname: "The Heights Theater"
     timezone: America/Chicago
     config:
-      venueId: "476164"
+      venueId: 126116
+      venueSlug: "the-heights-theater-houston-tickets"
       venueName: "The Heights Theater"
       venueAddress: "339 W 19th St, Houston, TX 77008"

@@ -92,6 +92,8 @@ const cityConfig = {
         "Sharpstown",
         "Garden Oaks",
         "Wedgewood",
+        "Upper Kirby",
+        "Near Northside",
     ],
     // GoatCounter analytics. Set to null to disable analytics entirely
     // (no snippet is injected into index.html).
