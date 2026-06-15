@@ -7,6 +7,12 @@ tags: [Music]
 firstSeen: 2026-06-14
 lastChecked: 2026-06-14
 pr:
+impl:
+  type: axs
+  venueId: 130538
+  venueSlug: scout-bar-houston   # slug in https://www.axs.com/venues/130538/scout-bar-houston
+  observedEventCount: null   # AXS bot-blocks (HTTP 403) — NOT verifiable in CI or locally; see AGENTS.md AXS guidance
+  geo: { lat: 29.5699, lng: -95.1248, label: "Scout Bar, 18307 Egret Bay Blvd, Houston, TX 77058" }
 ---
 
 Scout Bar is a live music venue at 18307 Egret Bay Blvd, Houston, TX 77058
