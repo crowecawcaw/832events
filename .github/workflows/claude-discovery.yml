@@ -88,6 +88,14 @@ jobs:
             workflow will simply commit nothing.
 
       - name: Enforce markdown-only and push to main
+        env:
+          # GITHUB_TOKEN carries this job's contents:write scope. We push with
+          # it explicitly because claude-code-action revokes its own GitHub App
+          # token at the end of its step but leaves git's persisted
+          # http.extraheader pointing at that now-dead token — reusing it gives
+          # "Invalid username or token". Clearing the stale header and pushing
+          # with a fresh token URL sidesteps that.
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git add -A
           # File-path allowlist — the real enforcement of "markdown only".
@@ -107,4 +115,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "chore: daily source discovery $(date -u +%Y-%m-%d)"
-          git push origin HEAD:main
+          # Drop the stale credential claude-code-action left behind, then push
+          # with a fresh token URL.
+          git config --local --unset-all http.https://github.com/.extraheader 2>/dev/null || true
+          git push "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:main
