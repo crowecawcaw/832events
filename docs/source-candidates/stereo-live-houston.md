@@ -1,11 +1,12 @@
 ---
 name: Stereo Live Houston
-status: candidate
+status: added
 platform: Eventbrite
 url: https://www.stereolivehouston.com/
 tags: [Music, Nightlife, Downtown]
 firstSeen: 2026-06-15
 lastChecked: 2026-06-15
+pr: TBD
 impl:
   type: eventbrite
   organizerId: "3006970476"

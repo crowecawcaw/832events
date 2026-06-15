@@ -1,9 +1,9 @@
 name: pride-houston
 type: eventbrite
 description: "Pride Houston 365"
-url: https://www.pridehouston.org/
-friendlyLink: https://www.pridehouston.org/
-tags: [Community]
+url: https://www.eventbrite.com/o/pride-houston-19231282193
+friendlyLink: https://www.eventbrite.com/o/pride-houston-19231282193
+tags: ["Community"]
 geo: null
 calendars:
   - name: pride-houston
@@ -11,4 +11,4 @@ calendars:
     timezone: America/Chicago
     config:
       organizerId: "19231282193"
-      defaultLocation: "Houston, TX"
+      defaultDurationHours: 3

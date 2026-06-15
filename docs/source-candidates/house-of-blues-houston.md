@@ -1,12 +1,12 @@
 ---
 name: House of Blues Houston
-status: candidate
+status: added
 platform: Ticketmaster
 url: https://houston.houseofblues.com/
 tags: [Music, Downtown]
 firstSeen: 2026-06-13
 lastChecked: 2026-06-14
-pr:
+pr: TBD
 ---
 
 Major live-music venue at 1204 Caroline St, Downtown Houston, TX 77002

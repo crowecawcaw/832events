@@ -1,0 +1,18 @@
+name: stereo-live-houston
+type: eventbrite
+description: "Stereo Live Houston"
+url: https://www.stereolivehouston.com/
+friendlyLink: https://www.stereolivehouston.com/
+tags: ["Music", "Nightlife", "Downtown"]
+geo:
+  lat: 29.7525
+  lng: -95.3698
+  label: "Stereo Live Houston, Downtown Houston, TX"
+calendars:
+  - name: stereo-live-houston
+    friendlyname: "Stereo Live Houston"
+    timezone: America/Chicago
+    config:
+      organizerId: "3006970476"
+      defaultLocation: "Downtown Houston, TX"
+      defaultDurationHours: 3

@@ -1,13 +1,13 @@
 ---
 name: The Heights Theater
-status: candidate
+status: added
 platform: Ticketmaster (secondary listing)
 url: https://theheightstheater.com/
 tags: [Music, The Heights]
 firstSeen: 2026-06-14
 lastChecked: 2026-06-15
 ticketmasterId: "476164"
-pr:
+pr: TBD
 ---
 
 Historic 1926 theater restored as a concert venue at 339 W 19th St, The Heights.

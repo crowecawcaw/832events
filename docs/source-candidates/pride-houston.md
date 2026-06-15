@@ -1,12 +1,12 @@
 ---
 name: Pride Houston 365
-status: candidate
+status: added
 platform: Eventbrite
 url: https://www.eventbrite.com/o/pride-houston-19231282193
 tags: [Community]
 firstSeen: 2026-06-14
 lastChecked: 2026-06-15
-pr:
+pr: TBD
 ---
 
 Pride Houston 365 organizes the official Houston LGBT Pride Celebration® and
