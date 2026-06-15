@@ -72,6 +72,15 @@ actually returns `BEGIN:VEVENT`, the `venueSlug` is the real one in the
 venue URL). An unverified handle in `impl:` is worse than none — it looks
 authoritative and gets copied verbatim. If you couldn't confirm it, leave
 it out and say so in the prose.
+
+**Implementers: copy `impl:` handles VERBATIM.** These values are already
+resolved and verified — do **not** re-geocode, "improve", or substitute
+your own. In particular, **use the `geo` exactly as written**; re-deriving
+coordinates from the address reintroduces the geocoding error this block
+exists to eliminate (an agent that overrode a correct `geo: {29.7264,
+-95.3915}` with its own `{29.7368, -95.3937}` placed the venue ~1.2 km off).
+If a handle looks wrong, fix it in the candidate doc and explain why — don't
+silently diverge in the `ripper.yaml`.
 ```
 
 ### Status values
@@ -88,6 +97,16 @@ it out and say so in the prose.
 
 When you flip a status, also bump `lastChecked`. The frontmatter is the
 source of truth; don't restate the status emoji in the prose.
+
+**`added` means *verified and merged*, not *config written*.** Only flip to
+`added` once the source has actually produced events (>0, confirmed in CI)
+and the PR has merged. If you wrote the `ripper.yaml` but couldn't confirm
+events — because the build needs a secret you don't have locally (e.g.
+`EVENTBRITE_TOKEN`), or it's a proxy-pending bot-blocker — do **not** mark
+`added`. Use `proxy` for proxy-pending sources, otherwise leave it
+`candidate`/`investigating` with a note that it's implemented and awaiting
+CI verification. Marking an unverified source `added` hides it from the next
+discovery run as if it were done.
 
 ## Conventions
 

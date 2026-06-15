@@ -130,6 +130,7 @@ From the 💡 Candidate list, **always pick the source with the highest confiden
 **🔴 Low does not mean "not viable".** The repo has many custom scrapers (frye_art_museum, royal_room, cobys_cafe, seatoday, etc.). A 🔴 Low source is still worth implementing — it just takes more work and should be prioritized after higher-tier candidates. Only mark a source `❌ Not Viable` if it truly can't be scraped (no structured data at all, JS-rendered with no API, requires browser automation we don't have).
 
 To implement:
+0. **Use the candidate's `impl:` block if present.** If `docs/source-candidates/<slug>.md` has an `impl:` frontmatter block (resolved feed URL / venue IDs / `geo` / observed event count), copy those handles **verbatim** into the `ripper.yaml` — discovery already resolved and verified them. Do **not** re-geocode or substitute your own `geo`. Treat `impl.observedEventCount` as the ballpark to verify the build against (see step 7). Do not flip `status: added` until events are actually confirmed (>0) — see the status rules in `docs/source-candidates/README.md`.
 1. **Cut a feature branch**: `scripts/new_feature_branch.sh`
 2. **Pre-implementation fetch validation** — Before writing a line of parser code, attempt a live fetch of the source URL:
    ```bash
