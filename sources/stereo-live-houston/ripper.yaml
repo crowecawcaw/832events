@@ -1,14 +1,20 @@
 name: stereo-live-houston
-type: eventbrite
+type: axs
+proxy: "outofband"
 description: "Stereo Live Houston"
 url: https://www.stereolivehouston.com/
 friendlyLink: https://www.stereolivehouston.com/
-tags: [Music, Nightlife, Downtown]
-geo: null
+tags: [Music, Nightlife]
+geo:
+  lat: 29.7333
+  lng: -95.4965
+  label: "Stereo Live Houston, 6400 Richmond Ave, Houston, TX 77057"
 calendars:
   - name: stereo-live-houston
     friendlyname: "Stereo Live Houston"
     timezone: America/Chicago
     config:
-      organizerId: "3006970476"
-      defaultLocation: "Downtown Houston, TX"
+      venueId: 126004
+      venueSlug: "stereo-live-houston-houston-tickets"
+      venueName: "Stereo Live Houston"
+      venueAddress: "6400 Richmond Ave, Houston, TX 77057"

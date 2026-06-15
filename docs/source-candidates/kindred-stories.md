@@ -1,10 +1,18 @@
 ---
-status: candidate
+status: added
 platform: Eventbrite
 firstSeen: 2026-06-15
 lastChecked: 2026-06-15
 implementationPR: null
 ---
+
+> **2026-06-15 — organizer id corrected.** The first implementation used
+> `556771203279`, which is **not** the Eventbrite organizer id — the API 404'd
+> it (0 events + 1 parse error). The real organizer is
+> `eventbrite.com/o/kindred-stories-34094451143` → organizer id `34094451143`
+> (3 upcoming events confirmed: A Pair of Aces 6/30, The Missed Connection 7/2,
+> Daggermouth 7/31). Note events are hosted at partner venues (Eldorado
+> Ballroom, Holy Family HTX), not the bookstore, so per-event locations vary.
 
 # Kindred Stories
 
@@ -18,7 +26,7 @@ Independent bookstore in Third Ward specializing in Black and Brown authors, lit
 
 ## Implementation Notes
 
-- **Eventbrite Organizer ID:** 556771203279 (confirmed)
+- **Eventbrite Organizer ID:** 34094451143 (corrected 2026-06-15; the earlier `556771203279` was wrong and 404'd)
 - **Events URL:** https://kindredstorieshtx.com/pages/events (links to 8 Eventbrite events)
 - **Verified Events:** Upcoming live events confirmed on Eventbrite:
   - "A Pair of Aces with Victoria Christopher Murray and Marie Benedict" (1984645765911) - July 1, 2026 - Status: live

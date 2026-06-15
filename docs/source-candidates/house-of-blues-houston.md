@@ -5,9 +5,16 @@ platform: Ticketmaster
 url: https://houston.houseofblues.com/
 tags: [Music, Downtown]
 firstSeen: 2026-06-13
-lastChecked: 2026-06-14
+lastChecked: 2026-06-15
 pr: 28
 ---
+
+> **2026-06-15 — venue id corrected.** The first implementation used the numeric
+> ticketmaster.com **website** id `475902`, which is not a Discovery API v2 venue
+> id, so the build returned 0 events. Replaced with the Discovery API venue id
+> `KovZpZAE6k1A` (from the Live Nation venue URL
+> `livenation.com/venue/KovZpZAE6k1A/house-of-blues-houston-events`).
+
 
 Major live-music venue at 1204 Caroline St, Downtown Houston, TX 77002
 (GreenStreet complex). Capacity ~2,500. Hosts rock, metal, R&B, hip-hop,
