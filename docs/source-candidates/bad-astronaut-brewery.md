@@ -1,6 +1,7 @@
 ---
 name: Bad Astronaut Brewery
-status: candidate
+status: added
+pr: 27
 platform: The Events Calendar (WordPress)
 url: https://badastronautbeer.com/
 firstSeen: 2026-06-15
