@@ -1,11 +1,17 @@
 ---
 name: Houston Rockets
-status: candidate
+status: added
 platform: NBA.com / CalendarLabs
 url: https://www.nba.com/rockets/schedule
 tags: [Sports, Basketball, NBA]
 firstSeen: 2026-06-15
 lastChecked: 2026-06-15
+pr: implementation-cycle-2026-06-15
+impl:
+  type: external
+  icsUrl: https://ics.calendarlabs.com/1898/b41aa298/Houston_Rockets_Schedule.ics
+  observedEventCount: 43
+  geo: null
 ---
 
 Houston Rockets National Basketball Association team schedule and events. Games are played at Toyota Center.

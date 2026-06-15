@@ -1,11 +1,17 @@
 ---
 name: Houston Texans
-status: candidate
+status: added
 platform: NFL / Ticketmaster
 url: https://www.houstontexans.com/schedule/
 tags: [Sports, Football, NFL]
 firstSeen: 2026-06-15
 lastChecked: 2026-06-15
+pr: implementation-cycle-2026-06-15
+impl:
+  type: external
+  icsUrl: https://ics.calendarlabs.com/1984/1984/Houston_Texans_Schedule.ics
+  observedEventCount: 4
+  geo: null
 ---
 
 Houston Texans National Football League team schedule and events. Games are played at NRG Stadium.

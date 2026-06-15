@@ -1,13 +1,14 @@
 ---
 name: InPrint Houston
-status: candidate
+status: added
 platform: The Events Calendar (WordPress)
 url: https://inprinthouston.org/
 firstSeen: 2026-06-15
 lastChecked: 2026-06-15
+pr: implementation-cycle-2026-06-15
 impl:
   feedUrl: https://inprinthouston.org/calendar/?ical=1
-  observedEventCount: 15+
+  observedEventCount: 6
   timezone: America/Chicago
   geo: null
 notes: |

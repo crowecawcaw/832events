@@ -1,12 +1,12 @@
 ---
 name: Houston Improv
-status: candidate
+status: proxy
 platform: AXS
 url: https://improvtx.com/houston/
 tags: [Comedy]
 firstSeen: 2026-06-13
-lastChecked: 2026-06-13
-pr:
+lastChecked: 2026-06-15
+pr: implementation-cycle-2026-06-15
 impl:
   type: axs
   venueId: 130678

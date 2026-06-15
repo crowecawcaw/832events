@@ -1,11 +1,17 @@
 ---
 name: Houston Astros
-status: candidate
+status: added
 platform: MLB.com / CalendarLabs
 url: https://www.mlb.com/astros/schedule
 tags: [Sports, Baseball, MLB]
 firstSeen: 2026-06-15
 lastChecked: 2026-06-15
+pr: implementation-cycle-2026-06-15
+impl:
+  type: external
+  icsUrl: https://ics.calendarlabs.com/31/b23ce88a/Houston_Astros_-_MLB.ics
+  observedEventCount: 185
+  geo: null
 ---
 
 Houston Astros Major League Baseball team schedule and events. Games are played at Minute Maid Park.

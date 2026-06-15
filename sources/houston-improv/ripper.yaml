@@ -1,0 +1,20 @@
+name: houston-improv
+type: axs
+description: "Houston Improv"
+url: https://improvtx.com/houston/
+proxy: "outofband"
+friendlyLink: https://improvtx.com/houston/
+tags: [Comedy]
+geo:
+  lat: 29.7695
+  lng: -95.4975
+  label: "Houston Improv, 7620 Katy Freeway, Houston, TX 77024"
+calendars:
+  - name: houston-improv
+    friendlyname: "Houston Improv"
+    timezone: America/Chicago
+    config:
+      venueId: 130678
+      venueSlug: "houston-improv-houston-tickets"
+      venueName: "Houston Improv"
+      venueAddress: "7620 Katy Freeway, Houston, TX 77024"
