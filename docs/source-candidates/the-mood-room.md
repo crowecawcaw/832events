@@ -5,7 +5,7 @@ platform: Squarespace
 url: https://www.themoodroomhouston.com/
 firstSeen: 2026-06-15
 lastChecked: 2026-06-16
-pr:
+pr: 37
 impl:
   feedUrl: https://www.themoodroomhouston.com/events
   observedEventCount: 8
