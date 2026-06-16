@@ -10,7 +10,7 @@ impl:
   type: custom
   observedEventCount: 16
   geo: { lat: 29.7809, lng: -95.3200, label: "Saint Arnold Brewing Company, 2000 Lyons Ave, Houston, TX 77020" }
-pr:
+pr: 38
 ---
 
 Houston's oldest brewery in East End. Free brewery tours, seasonal beer releases, and community events. Events listed as static HTML cards on their "Happenings" page.

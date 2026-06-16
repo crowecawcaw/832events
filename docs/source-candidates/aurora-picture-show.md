@@ -10,7 +10,7 @@ impl:
   type: custom
   observedEventCount: 30
   geo: { lat: 29.7195, lng: -95.3122, label: "Aurora Picture Show, 5601A Navigation Blvd, Houston, TX 77011" }
-pr:
+pr: 38
 ---
 
 Independent cinema in East End showing art films, documentaries, and retrospectives. Squarespace-based with per-event calendar links.
