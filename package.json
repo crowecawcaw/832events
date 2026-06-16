@@ -10,6 +10,7 @@
     "test:watch": "vitest",
     "test:web": "cd web && npx vitest run",
     "test:e2e": "cd web && npx playwright test",
+    "validate": "tsx scripts/validate-config.ts",
     "test:all": "npm run test && npm run test:web",
     "typecheck": "tsc --noEmit -p tsconfig.typecheck.json",
     "generate-calendars": "tsx index.ts",
