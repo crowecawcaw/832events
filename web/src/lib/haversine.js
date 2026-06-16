@@ -1,10 +1,6 @@
 /**
  * Haversine distance formula — shared between App.jsx, EventsMap.jsx, and filter-parity tests.
- * NOTE: The Cloudflare Worker (infra/favorites-worker/src/feed.ts) maintains its own copy
- * as a separate deploy target, but this file is the single source of truth for all
- * client-side usage.
- *
- * This function MUST stay byte-for-byte identical to infra/favorites-worker/src/feed.ts haversineKm.
+ * Single source of truth for all client-side geo-distance usage.
  */
 export function haversineKm(lat1, lng1, lat2, lng2) {
   const R = 6371

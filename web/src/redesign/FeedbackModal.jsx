@@ -1,9 +1,7 @@
 // FeedbackModal — a small dialog for sending feedback, reporting a problem with
 // a source, or suggesting a new source. Driven by the app context: opened via
-// app.openFeedback(prefill) and closed via app.closeFeedback(). Submissions POST
-// to the favorites worker's /feedback route, which files them as GitHub issues.
-// When no backend is configured (local/preview), it falls back to opening the
-// GitHub "new issue" page.
+// app.openFeedback(prefill) and closed via app.closeFeedback(). There is no
+// backend; submitting opens the GitHub "new issue" page.
 
 import { useState, useEffect } from 'react'
 import { useApp832 } from './context.js'
@@ -36,17 +34,16 @@ export function FeedbackModal() {
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState('')
 
-  // Each open resets the form to the (possibly new) prefill. Signed-in users get
-  // their account email pre-filled but editable — it's only sent if they keep it.
+  // Each open resets the form to the (possibly new) prefill.
   useEffect(() => {
     if (!prefill) return
     setType(prefill.type || 'general')
     setMessage('')
-    setEmail(app.authUser?.email || '')
+    setEmail('')
     setWebsite('')
     setError('')
     setSubmitting(false)
-  }, [prefill, app.authUser])
+  }, [prefill])
 
   // Esc to close + lock body scroll while open (mirrors Lightbox).
   useEffect(() => {
@@ -60,50 +57,22 @@ export function FeedbackModal() {
 
   if (!open) return null
 
-  // Defense-in-depth: only forward known string-typed context fields, so a
-  // malformed prefill can never send unexpected types/nested objects upstream
-  // (the worker also validates these).
+  // Only surface known string-typed context fields in the dialog (e.g. the
+  // "About <source>" line).
   const rawContext = prefill.context || {}
   const context = {}
   for (const key of ['sourceName', 'icsUrl', 'pageUrl']) {
     if (typeof rawContext[key] === 'string' && rawContext[key]) context[key] = rawContext[key]
   }
 
-  const submit = async () => {
+  const submit = () => {
     const msg = message.trim()
     if (!msg) { setError('Please enter a message.'); return }
 
-    // No backend (local/preview): hand off to GitHub's new-issue page. The
-    // noopener,noreferrer features prevent the opened tab from reaching back
-    // through window.opener.
-    if (!app.API_URL) {
-      window.open(GITHUB_NEW_ISSUE, '_blank', 'noopener,noreferrer')
-      app.closeFeedback()
-      return
-    }
-
-    setSubmitting(true)
-    setError('')
-    try {
-      const res = await fetch(`${app.API_URL}/feedback`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        credentials: 'include',
-        body: JSON.stringify({
-          type,
-          message: msg,
-          email: email.trim() || undefined,
-          context,
-          website, // honeypot
-        }),
-      })
-      if (!res.ok) throw new Error(`HTTP ${res.status}`)
-      app.flash('Thanks — feedback sent ✓')
-      app.closeFeedback()
-    } catch {
-      setError('Sorry, something went wrong. Please try again.')
-      setSubmitting(false)
-    }
+    // No backend: hand off to GitHub's new-issue page. The noopener,noreferrer
+    // features prevent the opened tab from reaching back through window.opener.
+    window.open(GITHUB_NEW_ISSUE, '_blank', 'noopener,noreferrer')
+    app.closeFeedback()
   }
 
   return (

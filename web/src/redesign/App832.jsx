@@ -19,8 +19,8 @@ import { deserializeHash } from './urlHash.js'
 import { useUrlState } from './useUrlState.js'
 
 const FUSE_THRESHOLD = 0.1
-// Search the entire field, not just its first ~10 characters — see App.jsx /
-// event-search.ts for the full rationale (favorites filter parity).
+// Search the entire field, not just its first ~10 characters — see App.jsx
+// for the full rationale. Keep these FUSE_* constants in sync with App.jsx.
 const FUSE_IGNORE_LOCATION = true
 
 // Desktop map-column resize bounds. RAIL_W mirrors the 84px rail column in the
@@ -42,8 +42,7 @@ export function App832(props) {
     geoFilters, addGeoFilter, deleteGeoFilter, editGeoFilter,
     eventAttributions, calendarTagsByIcsUrl, calendarNameByIcsUrl, eventCountByIcsUrl,
     followingGroups,
-    lists, activeListId, activeList, setActiveList, createList, renameList, deleteList, canCreateList, uatMode,
-    authUser, handleLogin, handleLogout, API_URL,
+    activeList,
     isMobile,
     channelEvents, channelEventsLoading, channelEventsError, onSelectChannel,
     createWebcalUrl, createGoogleCalendarUrl, createHttpsUrl,
@@ -304,12 +303,9 @@ export function App832(props) {
     if (!was) {
       const ch = channelByIcsUrl.get(icsUrl)
       const name = ch ? ch.name : 'calendar'
-      // With more than one list, name the destination so it's clear where the
-      // follow landed (matches the top-bar "Saving to" switcher).
-      const multi = (lists?.length || 0) > 1
-      flash(multi ? `Added “${name}” to ${activeList?.name || 'your list'}` : `Following ${name}`)
+      flash(`Following ${name}`)
     }
-  }, [favoritesSet, toggleFavorite, channelByIcsUrl, flash, lists, activeList])
+  }, [favoritesSet, toggleFavorite, channelByIcsUrl, flash])
 
   // "Save this area" turns whatever is currently framed on the map into a
   // location filter: center = map center, radius = distance from the center to
@@ -340,8 +336,7 @@ export function App832(props) {
     searchFilters, addSearchFilter, removeSearchFilter,
     geoFilters, addGeoFilter, deleteGeoFilter, editGeoFilter,
     eventAttributions, calendarTagsByIcsUrl, calendarNameByIcsUrl,
-    lists, activeListId, activeList, setActiveList, createList, renameList, deleteList, canCreateList, uatMode,
-    authUser, handleLogin, handleLogout, API_URL, isMobile,
+    activeList, isMobile,
     channelEvents, channelEventsLoading, channelEventsError,
     createWebcalUrl, createGoogleCalendarUrl, createHttpsUrl,
     calendarAddMode, setCalendarAddMode,

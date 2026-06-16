@@ -6,8 +6,8 @@ import { deduplicateEvents } from './lib/event-dedup.js'
 import { isMappable } from './components/EventsMap.jsx'
 
 const FUSE_THRESHOLD = 0.1
-// Must match the worker (infra/favorites-worker/src/event-search.ts) and App.jsx.
-// ignoreLocation lets a term match anywhere in the field, not just near its start.
+// Must match App.jsx. ignoreLocation lets a term match anywhere in the field,
+// not just near its start.
 const FUSE_IGNORE_LOCATION = true
 const FUSE_KEYS = ['summary', 'description', 'location']
 const FUSE_OPTIONS = { keys: FUSE_KEYS, threshold: FUSE_THRESHOLD, ignoreLocation: FUSE_IGNORE_LOCATION }
@@ -26,7 +26,7 @@ const FIXTURE_EVENTS = [
   { icsUrl: 'moore.ics',          summary: 'One Night Without Elton John: A Choir Tribute', description: 'Choir performs Elton John hits', location: '1932 2nd Ave, Houston', date: '2026-04-06T20:00', lat: 47.6131, lng: -122.3411 },
 ]
 
-describe('Filter parity: client matches worker behavior', () => {
+describe('Filter correctness: client filtering (Fuse + haversine)', () => {
   describe('Search filters', () => {
     it('matches "punk" to the right event', () => {
       const fuse = new Fuse(FIXTURE_EVENTS, FUSE_OPTIONS)
@@ -97,7 +97,7 @@ describe('Filter parity: client matches worker behavior', () => {
     })
 
     it('null-coord events are still included in geo-filtered feed (pass-through)', () => {
-      // Worker behavior: events with no coords pass through geo filters (not excluded)
+      // Events with no coords pass through geo filters (not excluded).
       const nullCoordEvent = FIXTURE_EVENTS.find(e => e.lat == null)
       const filter = { lat: 47.6062, lng: -122.3321, radiusKm: 1 }
       const includedInFeed = nullCoordEvent.lat == null || nullCoordEvent.lng == null ||
@@ -178,56 +178,36 @@ describe('Map feedOnly scoping: favorites view shows only feed events', () => {
   })
 })
 
-describe('Per-list parity: client(active list) === server(list by token)', () => {
-  // Two lists with distinct filters. The client filters using the ACTIVE list's
-  // arrays; the worker (feed.ts) resolves the SAME list via the feed token's
-  // listId and runs the identical Fuse/haversine logic. This asserts the per-list
-  // resolution wiring feeds both sides the same filter arrays → same matches.
-  const LISTS = [
-    { id: 'default', name: 'My Favorites', feedToken: 'tok-default', searchFilters: ['jazz'], geoFilters: [] },
-    { id: 'date-night', name: 'Date Night', feedToken: 'tok-date', searchFilters: ['punk'], geoFilters: [{ lat: 47.6499, lng: -122.3482, radiusKm: 0.5 }] },
-  ]
-  // Worker-style token → {userId, listId} reverse lookup (see feed.ts).
-  const TOKENS = { 'tok-default': { listId: 'default' }, 'tok-date': { listId: 'date-night' } }
-  const resolveList = (listId) => LISTS.find((l) => l.id === listId) || LISTS[0]
-
-  // Shared matching used by BOTH sides (mirrors App.jsx + event-search.ts/feed.ts).
-  const matchKeys = (list) => {
+describe('Filter set correctness: distinct filter arrays → distinct matched sets', () => {
+  // Distinct search/geo filter arrays must produce distinct matched sets. The
+  // client filters using the single local list's arrays with the same
+  // Fuse/haversine logic exercised above.
+  const matchKeys = (filters) => {
     const keys = new Set()
     const fuse = new Fuse(FIXTURE_EVENTS, FUSE_OPTIONS)
-    for (const f of list.searchFilters) for (const r of fuse.search(f)) keys.add(eventKey(r.item))
+    for (const f of filters.searchFilters) for (const r of fuse.search(f)) keys.add(eventKey(r.item))
     for (const e of FIXTURE_EVENTS) {
       if (e.lat == null || e.lng == null) continue
-      for (const g of list.geoFilters) {
+      for (const g of filters.geoFilters) {
         if (haversineKm(g.lat, g.lng, e.lat, e.lng) <= g.radiusKm) keys.add(eventKey(e))
       }
     }
     return keys
   }
 
-  it('each list resolves to a distinct matched set', () => {
-    const def = matchKeys(resolveList('default'))
-    const date = matchKeys(resolveList('date-night'))
-    // 'jazz' list matches neumos; 'punk' + Fremont geo matches crocodile + fremont.
-    expect([...def]).toContain('Jazz Fusion Evening|2026-04-02T20:00')
-    expect([...def]).not.toContain('Punk Night at the Crocodile|2026-04-01T20:00')
-    expect([...date]).toContain('Punk Night at the Crocodile|2026-04-01T20:00')
-    expect([...date]).toContain('Trivia Night|2026-04-04T19:00') // Fremont geo match
-    expect([...date]).not.toContain('Jazz Fusion Evening|2026-04-02T20:00')
-  })
-
-  it('client(active list) and server(list by token) produce identical sets', () => {
-    for (const token of Object.keys(TOKENS)) {
-      const serverList = resolveList(TOKENS[token].listId)        // worker side
-      const clientList = LISTS.find((l) => l.feedToken === token) // active list on client
-      const serverKeys = [...matchKeys(serverList)].sort()
-      const clientKeys = [...matchKeys(clientList)].sort()
-      expect(clientKeys).toEqual(serverKeys)
-    }
+  it('different filter arrays resolve to distinct matched sets', () => {
+    const jazz = matchKeys({ searchFilters: ['jazz'], geoFilters: [] })
+    const punkAndFremont = matchKeys({ searchFilters: ['punk'], geoFilters: [{ lat: 47.6499, lng: -122.3482, radiusKm: 0.5 }] })
+    // 'jazz' matches neumos; 'punk' + Fremont geo matches crocodile + fremont.
+    expect([...jazz]).toContain('Jazz Fusion Evening|2026-04-02T20:00')
+    expect([...jazz]).not.toContain('Punk Night at the Crocodile|2026-04-01T20:00')
+    expect([...punkAndFremont]).toContain('Punk Night at the Crocodile|2026-04-01T20:00')
+    expect([...punkAndFremont]).toContain('Trivia Night|2026-04-04T19:00') // Fremont geo match
+    expect([...punkAndFremont]).not.toContain('Jazz Fusion Evening|2026-04-02T20:00')
   })
 })
 
-describe('Dedup parity: client matches worker behavior', () => {
+describe('Dedup correctness: deduplicateEvents behavior', () => {
   // Two events that ARE duplicates: same date, same coords (within 50m), similar title, different icsUrl
   const DUPE_A = {
     icsUrl: 'source-a.ics',
@@ -304,13 +284,11 @@ describe('Dedup parity: client matches worker behavior', () => {
     expect(result).toHaveLength(2)
   })
 
-  it('client and worker produce same result (they are the same implementation)', () => {
+  it('is deterministic across repeated runs (same input → same output)', () => {
     const fixture = [DUPE_A, DUPE_B, DIFFERENT_SHOW_A, DIFFERENT_SHOW_B]
-    // Both client and worker use deduplicateEvents — same JS logic, same result
-    const clientResult = deduplicateEvents(fixture)
-    // Re-run to simulate "worker" result — identical function, identical output
-    const workerResult = deduplicateEvents(fixture)
-    expect(clientResult.map(e => e.icsUrl)).toEqual(workerResult.map(e => e.icsUrl))
-    expect(clientResult).toHaveLength(3) // DUPE_A suppressed, others survive
+    const first = deduplicateEvents(fixture)
+    const second = deduplicateEvents(fixture)
+    expect(first.map(e => e.icsUrl)).toEqual(second.map(e => e.icsUrl))
+    expect(first).toHaveLength(3) // DUPE_A suppressed, others survive
   })
 })

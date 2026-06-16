@@ -23,17 +23,13 @@ const FUSE_THRESHOLD = 0.1
 // location-based scoring (location:0, distance:100) combined with our strict
 // threshold otherwise rejects any term that isn't near the START of the field —
 // e.g. "Elton"/"John" in "One Night Without Elton John" never matched while
-// "choir" did. Must stay in sync with infra/favorites-worker/src/event-search.ts
-// (favorites filter parity).
+// "choir" did. Keep in sync with the FUSE_* constants in redesign/App832.jsx.
 const FUSE_IGNORE_LOCATION = true
 
-// Multiple favorites lists. Anonymous users get a single synthetic list backed
-// by the original localStorage keys (so their experience is unchanged). Signed-in
-// users get server-sourced lists, each with its own ICS feed URL.
+// Favorites, saved searches, and geo filters are a single implicit list stored
+// in localStorage on this device/browser. There is no backend, sign-in, or
+// multiple lists.
 const LOCAL_LIST_ID = 'local'
-// Per-user list cap. Mirrors MAX_LISTS in infra/favorites-worker/src/lists.ts —
-// the worker is the source of truth; this only gates the "New list" control.
-const MAX_LISTS = 10
 const LS_FAVORITES = 'calendar-ripper-favorites'
 const LS_SEARCH = 'calendar-ripper-search-filters'
 const LS_GEO = 'calendar-ripper-geo-filters'
@@ -42,65 +38,15 @@ function readLs(key) {
   try { const s = localStorage.getItem(key); return s ? JSON.parse(s) : [] } catch { return [] }
 }
 
-// The anonymous single list, hydrated from localStorage.
+// The single local list, hydrated from localStorage.
 function loadLocalList() {
   return {
     id: LOCAL_LIST_ID,
     name: 'My Favorites',
-    feedUrl: null,
     icsUrls: readLs(LS_FAVORITES),
     searchFilters: readLs(LS_SEARCH),
     geoFilters: readLs(LS_GEO),
   }
-}
-
-// Coerce a server list payload into the client shape (arrays always present).
-function normalizeServerList(l) {
-  return {
-    id: l.id,
-    name: l.name,
-    feedUrl: l.feedUrl || null,
-    icsUrls: Array.isArray(l.icsUrls) ? l.icsUrls : [],
-    searchFilters: Array.isArray(l.searchFilters) ? l.searchFilters : [],
-    geoFilters: Array.isArray(l.geoFilters) ? l.geoFilters : [],
-  }
-}
-
-// ----- Local UAT/demo mode -----
-// The signed-in multi-list UI needs an OAuth backend, which static preview
-// deploys don't have. Visiting any deploy with `?uat=1` fakes a signed-in
-// session and keeps all lists in localStorage (no network), so the full
-// multi-list UI is previewable. The flag is read from the URL on load and is
-// NOT persisted — reload without `?uat=1` returns to normal logged-out mode.
-const UAT_LISTS_KEY = 'calendar-ripper-uat-lists'
-const UAT_USER = { name: 'UAT Tester', email: 'Demo session (browser-only)', picture: '', feedToken: 'uat', feedUrl: null }
-
-function readUatFlag() {
-  try { return new URLSearchParams(window.location.search).get('uat') === '1' } catch { return false }
-}
-function uatFeedUrl(id) {
-  try { return `${window.location.origin}/feed/uat-${id}.ics` } catch { return `/feed/uat-${id}.ics` }
-}
-function uatList(id, name) {
-  return { id, name, feedUrl: uatFeedUrl(id), icsUrls: [], searchFilters: [], geoFilters: [] }
-}
-function loadUatLists() {
-  try {
-    const s = localStorage.getItem(UAT_LISTS_KEY)
-    if (s) {
-      const arr = JSON.parse(s)
-      if (Array.isArray(arr) && arr.length) return arr.map(normalizeServerList)
-    }
-  } catch {}
-  return [uatList('default', 'My Favorites')]
-}
-function uatNewId(name, existing) {
-  const base = (name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 40) || 'list'
-  const taken = new Set(existing.map(l => l.id))
-  if (base !== 'default' && !taken.has(base)) return base
-  let i = 2
-  while (taken.has(`${base}-${i}`)) i++
-  return `${base}-${i}`
 }
 
 function localeDateMaybeYear(date, options) {
@@ -109,9 +55,6 @@ function localeDateMaybeYear(date, options) {
 }
 
 function App() {
-  // Read once per load; available to the useState initializers below.
-  const uatMode = readUatFlag()
-
   const [calendars, setCalendars] = useState([])
 
   const [manifest, setManifest] = useState(null)
@@ -139,16 +82,11 @@ function App() {
   const [tagsCollapsed, setTagsCollapsed] = useState(false)
   const [isOffline, setIsOffline] = useState(typeof navigator !== 'undefined' ? !navigator.onLine : false)
   const [dataRefreshed, setDataRefreshed] = useState(false)
-  // Lists model. `favorites` / `searchFilters` / `geoFilters` are derived from
-  // the active list so all the downstream memoized parity logic keeps operating
-  // on a single set of arrays, unchanged.
-  const [lists, setLists] = useState(() => uatMode ? loadUatLists() : [loadLocalList()])
-  const [activeListId, setActiveListId] = useState(() => uatMode ? (loadUatLists()[0]?.id || 'default') : LOCAL_LIST_ID)
-
-  const activeList = useMemo(
-    () => lists.find(l => l.id === activeListId) || lists[0] || loadLocalList(),
-    [lists, activeListId]
-  )
+  // Single implicit favorites list, stored on this device/browser in
+  // localStorage. `favorites` / `searchFilters` / `geoFilters` are derived from
+  // it so all the downstream memoized parity logic keeps operating on a single
+  // set of arrays, unchanged.
+  const [activeList, setActiveListState] = useState(() => loadLocalList())
   const favorites = activeList.icsUrls
   const searchFilters = activeList.searchFilters
   const geoFilters = activeList.geoFilters
@@ -172,39 +110,18 @@ function App() {
   const [showMapView, setShowMapView] = useState(false)
   const [showFavoritesMap, setShowFavoritesMap] = useState(false)
 
-  // Auth state. In UAT mode we fake a signed-in user so the multi-list UI shows.
-  const [authUser, setAuthUser] = useState(() => uatMode ? UAT_USER : null)
-  const [authLoading, setAuthLoading] = useState(() => !uatMode)
-
-  const API_URL = import.meta.env.VITE_FAVORITES_API_URL || ''
-
-  // Mutate the active list in place. `mutate(list)` returns the changed array
-  // fields (or null/undefined to no-op); `sync(list, next)` fires the matching
-  // persistence call. Local list → localStorage; server list → per-list API.
-  // In UAT mode no sync runs here — the whole lists array is persisted to
-  // localStorage by the effect below.
-  const mutateActiveList = useCallback((mutate, syncLocal, syncServer) => {
-    setLists(prev => prev.map(l => {
-      if (l.id !== activeListId) return l
-      const patch = mutate(l)
-      if (!patch) return l
-      const next = { ...l, ...patch }
-      if (uatMode) {
-        // persisted by the [lists] effect
-      } else if (l.id === LOCAL_LIST_ID) {
-        syncLocal?.(next)
-      } else if (API_URL && authUser) {
-        syncServer?.(l, next)
-      }
+  // Mutate the single local list and persist the relevant key to localStorage.
+  // `mutate(list)` returns the changed array fields (or null/undefined to no-op);
+  // `syncLocal(next)` writes the matching localStorage key.
+  const mutateActiveList = useCallback((mutate, syncLocal) => {
+    setActiveListState(prev => {
+      const patch = mutate(prev)
+      if (!patch) return prev
+      const next = { ...prev, ...patch }
+      syncLocal?.(next)
       return next
-    }))
-  }, [activeListId, authUser, API_URL, uatMode])
-
-  // UAT mode: persist the whole lists array to localStorage on any change.
-  useEffect(() => {
-    if (!uatMode) return
-    try { localStorage.setItem(UAT_LISTS_KEY, JSON.stringify(lists)) } catch {}
-  }, [uatMode, lists])
+    })
+  }, [])
 
   const toggleFavorite = useCallback((icsUrl) => {
     mutateActiveList(
@@ -213,15 +130,8 @@ function App() {
         return { icsUrls: isFav ? l.icsUrls.filter(u => u !== icsUrl) : [...l.icsUrls, icsUrl] }
       },
       (next) => { try { localStorage.setItem(LS_FAVORITES, JSON.stringify(next.icsUrls)) } catch {} },
-      (l, next) => {
-        // Added ⇒ POST, removed ⇒ DELETE (derive from the new array).
-        const method = next.icsUrls.includes(icsUrl) ? 'POST' : 'DELETE'
-        fetch(`${API_URL}/lists/${encodeURIComponent(l.id)}/favorites/${encodeURIComponent(icsUrl)}`, {
-          method, credentials: 'include',
-        }).catch(() => {})
-      },
     )
-  }, [mutateActiveList, API_URL])
+  }, [mutateActiveList])
 
   const addSearchFilter = useCallback((filter) => {
     const trimmed = filter.trim()
@@ -233,212 +143,37 @@ function App() {
         return { searchFilters: [...l.searchFilters, trimmed] }
       },
       (next) => { try { localStorage.setItem(LS_SEARCH, JSON.stringify(next.searchFilters)) } catch {} },
-      (l) => {
-        fetch(`${API_URL}/lists/${encodeURIComponent(l.id)}/search-filters`, {
-          method: 'POST', credentials: 'include',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ filter: trimmed }),
-        }).catch(() => {})
-      },
     )
-  }, [mutateActiveList, API_URL])
+  }, [mutateActiveList])
 
   const removeSearchFilter = useCallback((filter) => {
     mutateActiveList(
       (l) => ({ searchFilters: l.searchFilters.filter(f => f.toLowerCase() !== filter.toLowerCase()) }),
       (next) => { try { localStorage.setItem(LS_SEARCH, JSON.stringify(next.searchFilters)) } catch {} },
-      (l) => {
-        fetch(`${API_URL}/lists/${encodeURIComponent(l.id)}/search-filters/${encodeURIComponent(filter)}`, {
-          method: 'DELETE', credentials: 'include',
-        }).catch(() => {})
-      },
     )
-  }, [mutateActiveList, API_URL])
+  }, [mutateActiveList])
 
   // Geo filter CRUD
   const addGeoFilter = useCallback((filter) => {
     mutateActiveList(
       (l) => (l.geoFilters.length >= 10 ? null : { geoFilters: [...l.geoFilters, filter] }),
       (next) => { try { localStorage.setItem(LS_GEO, JSON.stringify(next.geoFilters)) } catch {} },
-      (l) => {
-        fetch(`${API_URL}/lists/${encodeURIComponent(l.id)}/geo-filters`, {
-          method: 'POST', credentials: 'include',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(filter),
-        }).catch(() => {})
-      },
     )
-  }, [mutateActiveList, API_URL])
+  }, [mutateActiveList])
 
   const deleteGeoFilter = useCallback((index) => {
     mutateActiveList(
       (l) => ({ geoFilters: l.geoFilters.filter((_, i) => i !== index) }),
       (next) => { try { localStorage.setItem(LS_GEO, JSON.stringify(next.geoFilters)) } catch {} },
-      // Send the full updated array (not index) to avoid races when local and
-      // server state are out of sync.
-      (l, next) => {
-        fetch(`${API_URL}/lists/${encodeURIComponent(l.id)}/geo-filters`, {
-          method: 'PUT', credentials: 'include',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(next.geoFilters),
-        }).catch(() => {})
-      },
     )
-  }, [mutateActiveList, API_URL])
+  }, [mutateActiveList])
 
   const editGeoFilter = useCallback((index, filter) => {
     mutateActiveList(
       (l) => ({ geoFilters: l.geoFilters.map((f, i) => i === index ? filter : f) }),
       (next) => { try { localStorage.setItem(LS_GEO, JSON.stringify(next.geoFilters)) } catch {} },
-      (l, next) => {
-        fetch(`${API_URL}/lists/${encodeURIComponent(l.id)}/geo-filters`, {
-          method: 'PUT', credentials: 'include',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(next.geoFilters),
-        }).catch(() => {})
-      },
     )
-  }, [mutateActiveList, API_URL])
-
-  // ----- list management (signed-in only) -----
-  const setActiveList = useCallback((id) => setActiveListId(id), [])
-
-  const createList = useCallback(async (name) => {
-    const trimmed = (name || '').trim()
-    if (!trimmed) return null
-    if (uatMode) {
-      let nl = null
-      setLists(prev => {
-        nl = uatList(uatNewId(trimmed, prev), trimmed)
-        return [...prev, nl]
-      })
-      if (nl) setActiveListId(nl.id)
-      return nl
-    }
-    if (!API_URL || !authUser) return null
-    try {
-      const res = await fetch(`${API_URL}/lists`, {
-        method: 'POST', credentials: 'include',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: trimmed }),
-      })
-      if (!res.ok) return null
-      const data = await res.json()
-      const nl = normalizeServerList(data.list)
-      setLists(prev => [...prev, nl])
-      setActiveListId(nl.id)
-      return nl
-    } catch { return null }
-  }, [API_URL, authUser, uatMode])
-
-  const renameList = useCallback((id, name) => {
-    const trimmed = (name || '').trim()
-    if (!trimmed) return
-    setLists(prev => prev.map(l => l.id === id ? { ...l, name: trimmed } : l))
-    if (!uatMode && API_URL && authUser && id !== LOCAL_LIST_ID) {
-      fetch(`${API_URL}/lists/${encodeURIComponent(id)}`, {
-        method: 'PATCH', credentials: 'include',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: trimmed }),
-      }).catch(() => {})
-    }
-  }, [API_URL, authUser, uatMode])
-
-  const deleteList = useCallback((id) => {
-    setLists(prev => {
-      if (prev.length <= 1) return prev
-      const next = prev.filter(l => l.id !== id)
-      setActiveListId(cur => (cur === id ? next[0].id : cur))
-      return next
-    })
-    if (!uatMode && API_URL && authUser && id !== LOCAL_LIST_ID) {
-      fetch(`${API_URL}/lists/${encodeURIComponent(id)}`, {
-        method: 'DELETE', credentials: 'include',
-      }).catch(() => {})
-    }
-  }, [API_URL, authUser, uatMode])
-
-  // Check auth on mount
-  useEffect(() => {
-    if (uatMode) return // demo session already set
-    if (!API_URL) { setAuthLoading(false); return }
-    fetch(`${API_URL}/auth/me`, { credentials: 'include' })
-      .then(res => res.ok ? res.json() : null)
-      .then(data => { if (data?.user) setAuthUser(data.user) })
-      .catch(() => {})
-      .finally(() => setAuthLoading(false))
-  }, [])
-
-  const handleLogin = () => {
-    if (API_URL) {
-      const returnTo = encodeURIComponent(window.location.href)
-      window.location.href = `${API_URL}/auth/login?provider=google&return_to=${returnTo}`
-    }
-  }
-
-  const handleLogout = async () => {
-    if (!uatMode && API_URL) {
-      await fetch(`${API_URL}/auth/logout`, { method: 'POST', credentials: 'include' })
-    }
-    setAuthUser(null)
-    // Revert to the anonymous single list (backed by localStorage).
-    setLists([loadLocalList()])
-    setActiveListId(LOCAL_LIST_ID)
-  }
-
-  // Sync lists on login. Fetch all server lists; on first login, migrate any
-  // anonymous localStorage data into the (empty) default list so nothing is lost.
-  useEffect(() => {
-    if (uatMode) return // demo lists live in localStorage, not the API
-    if (!authUser || !API_URL) return
-    let cancelled = false
-
-    fetch(`${API_URL}/lists`, { credentials: 'include' })
-      .then(res => res.ok ? res.json() : null)
-      .then(data => {
-        if (cancelled || !data?.lists) return
-        const serverLists = data.lists.map(normalizeServerList)
-        const def = serverLists[0]
-
-        // First-login migration: push anonymous localStorage state into the
-        // default list when that list is still empty.
-        const local = loadLocalList()
-        const localHasData = local.icsUrls.length || local.searchFilters.length || local.geoFilters.length
-        const defEmpty = def && !def.icsUrls.length && !def.searchFilters.length && !def.geoFilters.length
-        if (def && defEmpty && localHasData) {
-          if (local.icsUrls.length) {
-            fetch(`${API_URL}/lists/${encodeURIComponent(def.id)}/favorites`, {
-              method: 'PUT', credentials: 'include',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ favorites: local.icsUrls }),
-            }).catch(() => {})
-          }
-          if (local.searchFilters.length) {
-            fetch(`${API_URL}/lists/${encodeURIComponent(def.id)}/search-filters`, {
-              method: 'PUT', credentials: 'include',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ searchFilters: local.searchFilters }),
-            }).catch(() => {})
-          }
-          if (local.geoFilters.length) {
-            fetch(`${API_URL}/lists/${encodeURIComponent(def.id)}/geo-filters`, {
-              method: 'PUT', credentials: 'include',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify(local.geoFilters),
-            }).catch(() => {})
-          }
-          def.icsUrls = local.icsUrls
-          def.searchFilters = local.searchFilters
-          def.geoFilters = local.geoFilters
-        }
-
-        setLists(serverLists)
-        setActiveListId(prev => serverLists.some(l => l.id === prev) ? prev : (def?.id || prev))
-      })
-      .catch(() => {})
-
-    return () => { cancelled = true }
-  }, [authUser])
+  }, [mutateActiveList])
 
   // Load calendar metadata from JSON manifest
   const loadCalendars = useCallback(async () => {
@@ -1108,7 +843,7 @@ function App() {
       }
     }
 
-    // 3. Geo filters — haversine formula matching infra/favorites-worker/src/feed.ts exactly
+    // 3. Geo filters — haversine distance against each saved geo filter
     if (geoFilters.length) {
       for (const event of eventsIndex) {
         if (event.lat == null || event.lng == null) continue
@@ -1216,7 +951,6 @@ function App() {
       })
 
     // Deduplicate cross-source events (same date + location + title)
-    // Mirrors the dedup logic in infra/favorites-worker/src/feed.ts
     upcoming = deduplicateEvents(upcoming)
 
     if (searchTerm) {
@@ -1658,19 +1392,7 @@ function App() {
       calendarNameByIcsUrl={calendarNameByIcsUrl}
       eventCountByIcsUrl={eventCountByIcsUrl}
       followingGroups={followingGroups}
-      lists={lists}
-      activeListId={activeListId}
       activeList={activeList}
-      setActiveList={setActiveList}
-      createList={createList}
-      renameList={renameList}
-      deleteList={deleteList}
-      canCreateList={lists.length < MAX_LISTS}
-      uatMode={uatMode}
-      authUser={authUser}
-      handleLogin={handleLogin}
-      handleLogout={handleLogout}
-      API_URL={API_URL}
       isMobile={isMobile}
       channelEvents={events}
       channelEventsLoading={eventsLoading}
