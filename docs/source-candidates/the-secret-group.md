@@ -6,7 +6,7 @@ url: https://www.thesecretgrouphtx.com/
 tags: [Comedy, Music, EaDo]
 firstSeen: 2026-06-15
 lastChecked: 2026-06-16
-pr: (pending)
+pr: 34
 builtEventCount: 96
 ---
 

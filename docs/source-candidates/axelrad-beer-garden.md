@@ -6,7 +6,7 @@ url: https://www.axelradhouston.com/
 tags: [Music, Montrose]
 firstSeen: 2026-06-16
 lastChecked: 2026-06-16
-pr: (pending)
+pr: 34
 impl:
   type: external
   icsUrl: https://calendar.google.com/calendar/ical/r90785d3i81770k8r28jov6b9g%40group.calendar.google.com/public/basic.ics

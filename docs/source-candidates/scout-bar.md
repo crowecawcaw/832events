@@ -6,7 +6,7 @@ url: https://scoutbar.com/calendar/
 tags: [Music, South Houston]
 firstSeen: 2026-06-14
 lastChecked: 2026-06-16
-pr: (pending)
+pr: 34
 impl:
   type: axs
   venueId: 130538

@@ -6,7 +6,7 @@ url: https://projectrowhouses.org/
 tags: [Art, Community, Third Ward]
 firstSeen: 2026-06-14
 lastChecked: 2026-06-16
-pr: (pending)
+pr: 34
 impl:
   type: eventbrite
   organizerId: "8766639900"   # https://www.eventbrite.com/o/project-row-houses-8766639900
