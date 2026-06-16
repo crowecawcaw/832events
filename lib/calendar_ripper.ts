@@ -1402,15 +1402,12 @@ END:VCALENDAR`;
   // If a source has 0 events + expectEmpty=true but is NOT in the production manifest,
   // it has never produced events and likely has a wrong URL or ripper type.
   // --- Detect new sources via deployed-site manifest check ---
-  // 832.events is a Cloudflare Pages SPA that returns HTTP 200 with text/html for ANY
-  // path — including non-existent ICS files. A plain HEAD + res.ok check therefore
-  // marks every calendar as "already deployed", breaking new-source detection.
-  //
-  // Strategy: fetch the production manifest.json (a real data file, not an SPA route)
-  // to get the set of currently-deployed calendar ICS URLs. Then, for any calendar not
-  // in the manifest (e.g. a calendar that exists but has no future events right now),
-  // fall back to a content-type HEAD check: actual ICS files are served as
-  // "text/calendar"; the SPA catch-all always returns "text/html".
+  // Strategy: fetch the production manifest.json (a real data file) to get the set of
+  // currently-deployed calendar ICS URLs. Then, for any calendar not in the manifest
+  // (e.g. a calendar that exists but has no future events right now), fall back to a
+  // content-type HEAD check: actual ICS files are served as "text/calendar". A missing
+  // file 404s (res.ok is false) and the SPA fallback page is "text/html", so the
+  // combined res.ok + content-type guard only marks real, deployed ICS files.
   const knownDeployed = new Set<string>();
   const productionUrl = process.env.PRODUCTION_URL || CITY.site.productionUrl;
   const allCalendarNames = eventCounts.map(c => c.name);
@@ -1463,8 +1460,8 @@ END:VCALENDAR`;
       calendarsNotInManifest.map(async (name) => {
         try {
           const res = await fetch(`${productionUrl}/${name}.ics`, { method: "HEAD", signal: AbortSignal.timeout(5000) });
-          // SPA catch-all returns text/html for any path; real ICS files are text/calendar.
-          // Only mark as deployed if the content-type confirms it's a real calendar file.
+          // Missing files 404 and any SPA fallback page is text/html; real ICS files
+          // are text/calendar. Only mark as deployed if the content-type confirms it.
           if (res.ok && res.headers.get("content-type")?.includes("text/calendar")) {
             knownDeployed.add(name);
           }

@@ -72,7 +72,7 @@ all carry a `generated` ISO-8601 timestamp so you can check freshness.
   preview origin).
 - There is no versioning scheme. Schemas are stable; additive changes
   are expected, breaking changes would be announced via the commit log.
-- The site is a static deployment on Cloudflare Pages. There is no API
+- The site is a static deployment on GitHub Pages. There is no API
   rate limit, but please cache results rather than re-fetching on every
   request.
 

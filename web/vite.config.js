@@ -69,7 +69,12 @@ export default defineConfig({
       }
     }
   ],
-  base: '/',
+  // Served from the apex domain (832.events) at the root in production, but PR
+  // previews live under /preview/<PR>/ on the gh-pages branch. The deploy
+  // workflow passes VITE_BASE_PATH so the bundled asset URLs resolve under the
+  // preview subpath; data files are fetched with relative './' so they work in
+  // both layouts.
+  base: process.env.VITE_BASE_PATH || '/',
   build: {
     outDir: '../output',
     manifest: true,
