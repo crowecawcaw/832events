@@ -78,6 +78,7 @@ For each search result that looks like a Houston event source, evaluate:
    - ✅ Business lecture or panel at a university
    - ❌ Paid semester-long "POTTERY 101" at a university or community college
    - ❌ Paid multi-session course with enrollment at an educational institution
+9. **Not a support group?** Do not add sources whose primary purpose is support group meetings — 12-step programs (AA, NA, Al-Anon), grief groups, mental health support groups, addiction recovery meetings, and similar. These are private or semi-private recurring meetings, not public events. Also exclude sources (like community center ICS feeds) where support group meetings make up a substantial portion of the feed and cannot be filtered out. General-interest programming at community centers (arts, wellness classes, social events) is fine as long as support group meetings are not surfaced.
 
 ### 5. Update candidate files and push to main
 
