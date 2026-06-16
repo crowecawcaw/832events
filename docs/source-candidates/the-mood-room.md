@@ -1,17 +1,18 @@
 ---
 name: The Mood Room
-status: candidate
+status: added
 platform: Squarespace
 url: https://www.themoodroomhouston.com/
 firstSeen: 2026-06-15
-lastChecked: 2026-06-15
+lastChecked: 2026-06-16
+pr:
 impl:
   feedUrl: https://www.themoodroomhouston.com/events
-  observedEventCount: 10+
+  observedEventCount: 8
   timezone: America/Chicago
   geo:
-    lat: 29.7396
-    lng: -95.3896
+    lat: 29.7446648
+    lng: -95.33906570
     label: "The Mood Room, 711 Milby St, Houston, TX 77023"
 notes: |
   Houston comedy venue and bar hosting open mic comedy events, special performances, and entertainment programming. Weekly Thursday open mics (8PM-10PM, free admission 21+).
