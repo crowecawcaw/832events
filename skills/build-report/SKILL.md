@@ -76,24 +76,12 @@ If the error looks transient (network timeout, temporary 5xx):
 - Do nothing, it'll resolve on its own
 
 #### 🚫 HTTP 403 / Persistent Fetch Failures
-If a source returns 403 or consistently fails to fetch, follow the proxy escalation ladder:
+If a source returns 403 or consistently fails to fetch from CI:
 
-| Rung | Config | When |
-|------|--------|------|
-| 1 | `proxy: false` (default) | Source works from GitHub Actions |
-| 2 | `proxy: "outofband"` | Source works from home IP but CI 403s it |
-| 3 | `proxy: "browserbase"` | JS challenge (e.g. SiteGround sgcaptcha) blocks even residential IP |
+1. **No proxy yet?** → Add `proxy: true` in a PR. This fetches the source live through Browserbase in the main build (Browserbase executes JS and bypasses most bot detection).
+2. **Already `proxy: true` and still failing?** → Set `disabled: true` and flag in the report for human review. The source may need a custom ripper or an alternative URL.
 
-**Escalation is one rung at a time, one PR at a time:**
-1. **No proxy yet and CI 403s it?** → Add `proxy: "outofband"` in a PR. The out-of-band runner fetches from a residential IP.
-2. **Already `proxy: outofband` and still failing?** → Escalate to `proxy: "browserbase"` in a follow-up PR. Browserbase executes JS to bypass bot detection.
-3. **Already `proxy: browserbase` and still failing?** → Flag in the report for human review. The source may need a custom ripper or alternative URL.
-
-**Never skip escalation steps.** Each step requires its own PR so the failure is observable.
-
-**For sources that ALREADY carry a proxy (`outofband` or `browserbase`), you do not escalate them here.** Their failures are tracked automatically in the `pendingProxyVerification` queue (see step 5.5), and the **proxy-escalation skill** — run by the out-of-band job — drives them up the ladder after 3 consecutive failures (and retires them after browserbase fails 3 times). Your job for those is to *report* the queue, not act on it. Rung 1 (no proxy yet → add `outofband`) is the only step still done by hand here, because a `proxy: false` source isn't in the queue yet.
-
-- Do NOT disable the ripper without human approval (the proxy-escalation skill handles browserbase-exhausted retirement automatically)
+- Do NOT disable the ripper without human approval unless `proxy: true` has already been tried and still fails.
 
 #### ❌ Only Disable if Source is Clearly Gone
 Disable a ripper only if:

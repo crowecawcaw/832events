@@ -147,12 +147,10 @@ cadences for each are in [`docs/routines.md`](./routines.md):
   `build-error-responder` job in `publish_calendars.yml` runs after a daily
   build with errors (rate-limited to once per 24 h; bypass with a manual
   run and `force_routine=true`).
-- **Source pipeline** — two scheduled workflows. `claude-discovery.yml`
-  (daily 08:30 UTC) discovers new sources (`skills/source-discovery/SKILL.md`
-  steps 1–5) and pushes the discovery markdown directly to `main`
-  (markdown-only, no PR). `claude-implementation.yml` (daily 09:30 UTC) builds
-  up to 5 of the pending candidates and opens a single human-review PR with
-  the new source code (steps 6–8).
+- **Source pipeline** — one scheduled workflow, `claude-sources.yml` (daily
+  08:30 UTC). It discovers new sources, records them in
+  `docs/source-candidates.json`, builds up to 5 pending candidates, and opens a
+  single human-review PR (`skills/source-discovery/SKILL.md`).
 
 Issues and PRs are **owner-driven**, not automated: comment `@claude` to
 have it act on demand (`claude.yml`), and owner-authored PRs are
