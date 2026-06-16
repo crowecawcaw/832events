@@ -230,18 +230,13 @@ describe('externalCalendarSchema', () => {
     expect(parsed.proxy).toBe(false);
   });
 
-  it('accepts proxy: "outofband"', () => {
-    const parsed = externalCalendarSchema.parse({ ...base, proxy: 'outofband' });
-    expect(parsed.proxy).toBe('outofband');
+  it('accepts proxy: true', () => {
+    const parsed = externalCalendarSchema.parse({ ...base, proxy: true });
+    expect(parsed.proxy).toBe(true);
   });
 
-  it('rejects unknown proxy values', () => {
-    const result = externalCalendarSchema.safeParse({ ...base, proxy: 'lambda' });
-    expect(result.success).toBe(false);
-  });
-
-  it('rejects proxy: true', () => {
-    const result = externalCalendarSchema.safeParse({ ...base, proxy: true });
+  it('rejects non-boolean proxy values', () => {
+    const result = externalCalendarSchema.safeParse({ ...base, proxy: 'outofband' });
     expect(result.success).toBe(false);
   });
 

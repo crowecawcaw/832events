@@ -39,18 +39,9 @@ describe("getFetchForConfig", () => {
         expect(mockFetch).toHaveBeenCalledWith("https://example.com/", undefined);
     });
 
-    it('returns direct fetch for "outofband" proxy', async () => {
-        const fetchFn = getFetchForConfig({ proxy: "outofband" });
-        mockFetch.mockResolvedValueOnce(fakeResponse("ok"));
-
-        await fetchFn("https://example.com/");
-
-        expect(mockFetch).toHaveBeenCalledWith("https://example.com/", undefined);
-    });
-
-    it('returns browserbase fetch for "browserbase" proxy', async () => {
+    it('returns browserbase fetch when proxy is true', async () => {
         process.env.BROWSERBASE_API_KEY = "test-key";
-        const fetchFn = getFetchForConfig({ proxy: "browserbase" });
+        const fetchFn = getFetchForConfig({ proxy: true });
 
         mockFetch.mockResolvedValueOnce(fakeResponse(JSON.stringify({
             statusCode: 200,

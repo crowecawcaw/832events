@@ -1,16 +1,15 @@
 /**
  * Proxy-aware, cache-aware fetch utility.
  *
- * Proxy types:
- *   - "outofband": runs on a home server with a residential IP, uses direct fetch
- *   - "browserbase": routes through Browserbase's Fetch API for JS-challenge bypass
- *   - false: direct fetch (default)
+ *   - proxy: true  → route through Browserbase's Fetch API (executes JS,
+ *                    follows redirects, bypasses bot detection)
+ *   - proxy: false → direct fetch (default)
  *
  * Every fetch function returned here is wrapped in `withCache`, so when the
  * build has injected a fetch cache (initFetchCache) each request is served from
  * cache while fresh and only hits the network at most once per TTL window. When
- * no cache is injected (unit tests, single-ripper runs, the out-of-band runner)
- * `withCache` is a transparent pass-through. See lib/fetch-cache.ts and
+ * no cache is injected (unit tests, single-ripper runs) `withCache` is a
+ * transparent pass-through. See lib/fetch-cache.ts and
  * docs/fetch-cache.md.
  *
  * Usage in rippers:
@@ -26,8 +25,6 @@ import {
     storeEntry,
     recordStaleServe,
 } from "../fetch-cache.js";
-
-export type ProxyType = "outofband" | "browserbase" | false;
 
 export type FetchFn = (url: string | URL, init?: RequestInit) => Promise<Response>;
 
@@ -48,8 +45,8 @@ const directFetch: FetchFn = (url, init) => fetch(url, init);
  */
 export function withCache(liveFetch: FetchFn): FetchFn {
     return async (url: string | URL, init?: RequestInit) => {
-        // No cache injected (unit tests, single-ripper runs, the out-of-band
-        // runner) → transparent pass-through. We must not touch the response
+        // No cache injected (unit tests, single-ripper runs) → transparent
+        // pass-through. We must not touch the response
         // body here so callers/mocks that return a partial Response shape keep
         // working exactly as before.
         if (getFetchCache() === null) {
@@ -114,11 +111,10 @@ export function withCache(liveFetch: FetchFn): FetchFn {
  * Returns a fetch function appropriate for the ripper/calendar config, wrapped
  * in the shared fetch cache.
  */
-export function getFetchForConfig(config: { proxy?: ProxyType }): FetchFn {
-    if (config.proxy === "browserbase") {
+export function getFetchForConfig(config: { proxy?: boolean }): FetchFn {
+    if (config.proxy) {
         return withCache(browserbaseFetchFn);
     }
-    // outofband and false → direct fetch
     return withCache(directFetch);
 }
 
