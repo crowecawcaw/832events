@@ -8,10 +8,9 @@ critical path. This makes the caches editable from web sessions (which
 have no AWS access) and removes a class of "works in CI, fails for the
 agent" friction.
 
-The **out-of-band runner** (`scripts/generate-outofband.ts`) is the only
-remaining S3 consumer. It is intentionally out of scope here and keeps
-using S3 for its `.ics` artifacts, report, proxy-verification counters,
-and its own geo/uncertainty caches.
+S3 and the out-of-band runner have been removed entirely — the main build
+no longer touches S3. Sources that block GitHub Actions IPs set
+`proxy: true` and are fetched live through Browserbase.
 
 ## `event-uncertainty-cache.json` — committed file is the cache
 
@@ -83,20 +82,7 @@ don't edit `geo-cache.json` directly. Instead:
   coordinate, so bump the cache key version (`geo-cache-v1-` →
   `geo-cache-v2-`) in `build-calendars.yml` to force a cold re-geocode.
 
-## AWS credentials in the main build
-
-The `Configure AWS credentials` step remains because the out-of-band
-*download* (`npm run download-outofband`) still reads from S3. But that
-download is graceful (exits 0 if the bucket is unreachable), so the
-credentials step is now `continue-on-error: true` — a credential failure
-no longer fails the build. Fork PRs and credential hiccups simply build
-without out-of-band calendars.
-
 ## What did NOT change
 
-- The out-of-band runner and its S3 usage (`generate-outofband.ts`,
-  `download-outofband.ts`, `docs/outofband.md`,
-  `infra/authenticated-proxy/`).
-- The proxy escalation ladder and `pendingProxyVerification` queue.
-- The Browserbase live-fetch path.
+- The Browserbase live-fetch path (`proxy: true`).
 - The source fetch cache (already GitHub-Actions-Cache-backed).

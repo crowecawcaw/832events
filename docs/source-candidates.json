@@ -592,7 +592,7 @@
         "lng": -95.396,
         "label": "Inprint Houston, 1520 W Main St, Houston, TX 77006"
       },
-      "proxy": "outofband"
+      "proxy": true
     }
   },
   {
@@ -810,7 +810,7 @@
     "firstSeen": "2026-06-13",
     "lastChecked": "2026-06-15",
     "impl": {
-      "note": "Cloudflare WAF blocks all bot requests. No subscribable ICS feed found via curl, JSON endpoint, or direct /events.ics probes. Site exports individual event .ics files only. Platform is custom CMS (not Tribe Events, Eventbrite, Squarespace, Ticketmaster, or Localist). Requires either: (1) outofband residential IP fetch to locate feed URL, or (2) custom ripper with JS execution (browserbase) to parse events. High-value source; defer pending proxy verification."
+      "note": "Cloudflare WAF blocks all bot requests. No subscribable ICS feed found via curl, JSON endpoint, or direct /events.ics probes. Site exports individual event .ics files only. Platform is custom CMS (not Tribe Events, Eventbrite, Squarespace, Ticketmaster, or Localist). Would need a custom ripper with proxy: true (live Browserbase fetch) to parse events. High-value source; defer until that is verified."
     }
   },
   {

@@ -48,9 +48,9 @@ deleted and regrown for the new city.**
 
 | Bucket | What | Paths |
 |---|---|---|
-| **ENGINE** | City-agnostic code and automation | `lib/` (except noted tables), `scripts/`, `web/`, `skills/`, `.github/workflows/`, `infra/`, `index.ts` |
+| **ENGINE** | City-agnostic code and automation | `lib/` (except noted tables), `scripts/`, `web/`, `skills/`, `.github/workflows/`, `index.ts` |
 | **CONFIG** | The single edit surface for a new city | `city.config.ts` (repo root) |
-| **CITY CONTENT** | Seattle data a new city deletes and regrows | ~160 source dirs under `sources/`, ~95 `sources/recurring/*.yaml`, `sources/external/*.yaml`, `sources/houston_showlists/` (incl. its `VENUE_CONFIG`), `docs/source-candidates/` (~180 files), `docs/discovery-log/` (~50 files), `event-uncertainty-cache.json` (~920 KB of Seattle resolutions), `allowed-removals/`, Seattle entries in `ideas.md`, Seattle lookup tables in `lib/geocoder.ts` (`NEIGHBORHOOD_CENTROIDS`, `LIBRARY_BRANCH_COORDS`, `UNIVERSITY_BUILDING_COORDS`, `UNIVERSITY_NAMED_LOCATIONS`, `KNOWN_VENUE_COORDS`) |
+| **CITY CONTENT** | Seattle data a new city deletes and regrows | ~160 source dirs under `sources/`, ~95 `sources/recurring/*.yaml`, `sources/external/*.yaml`, `sources/houston_showlists/` (incl. its `VENUE_CONFIG`), `docs/source-candidates.json`, `event-uncertainty-cache.json` (~920 KB of Seattle resolutions), `allowed-removals/`, Seattle entries in `ideas.md`, Seattle lookup tables in `lib/geocoder.ts` (`NEIGHBORHOOD_CENTROIDS`, `LIBRARY_BRANCH_COORDS`, `UNIVERSITY_BUILDING_COORDS`, `UNIVERSITY_NAMED_LOCATIONS`, `KNOWN_VENUE_COORDS`) |
 
 `geo-cache.json` and `fetch-cache.json` are already committed as empty
 cold-start baselines and need no template treatment.
@@ -96,7 +96,7 @@ this file is the template's primary UX surface.
 | `city.timezone` | Default timezone for new-source docs and the Phase 2 init script (existing source YAMLs declare their own) | IANA zone, e.g. `America/New_York` |
 | `site.name` | `<title>`, PWA manifest, llms.txt, web "add to calendar" PRODID | e.g. `503.events` |
 | `site.description` | `<meta name="description">` | One sentence |
-| `site.baseUrl` / `site.productionUrl` | RSS/sitemap URL base and deployed-site probe in `lib/calendar_ripper.ts` (env vars `SITE_BASE_URL` / `PRODUCTION_URL` still take precedence), out-of-band report fetch | The deployed site origin |
+| `site.baseUrl` / `site.productionUrl` | RSS/sitemap URL base and deployed-site probe in `lib/calendar_ripper.ts` (env vars `SITE_BASE_URL` / `PRODUCTION_URL` still take precedence) | The deployed site origin |
 | `site.repo` | llms.txt source/issue links, web feedback fallback link | `owner/repo` of the copy |
 | `site.bootLogoText` | Pre-paint boot splash + loading screen mark | Short mark, e.g. area code |
 | `ics.prodId` | ICS `PRODID` in generated calendars (`lib/config/schema.ts`) and error calendars | Usually same as `site.name` |
@@ -118,8 +118,7 @@ Migrations, all behavior-neutral for the Seattle config:
   (`productId`), `lib/geocoder.ts` (user-agent, viewbox),
   `lib/config/ticketmaster.ts` (city/state fallbacks),
   `scripts/check-discovery-api.ts` (venue bbox),
-  `scripts/backfill-osm-ids.ts` (user-agent),
-  `scripts/generate-outofband.ts` (build-errors URL).
+  `scripts/backfill-osm-ids.ts` (user-agent).
 - **Web side** (imports raw `city.config.ts`): `EventsMap.jsx`
   (center/zoom/clamp bounds; `isWithinKingCounty` renamed
   `isWithinClampBounds`), `web/index.html` (placeholders substituted by a
@@ -150,9 +149,6 @@ Migrations, all behavior-neutral for the Seattle config:
 - `web/src/redesign/App832.jsx` and the `app832`/`useApp832` names —
   internal identifiers with 9+ import sites; renaming is churn with no
   user-facing benefit. Optional cosmetic cleanup later.
-- `infra/authenticated-proxy/` — see "Optional services" below; opt-in and
-  carries instance-specific values (S3 bucket, OIDC subject) that belong to
-  whoever deploys it.
 - `README.md` / `AGENTS.md` prose — reworded in Phase 3 alongside the
   template/instance README split.
 
@@ -172,10 +168,9 @@ Deterministic, idempotent, no LLM required. Prompts for the config values
    `web/src/sw.js`, plus generated `README.md` and `ideas.md`.
 3. **Strips Seattle content**: deletes `sources/*` ripper dirs (including
    `houston_showlists/`), `sources/recurring/*`, `sources/external/*`
-   (keeping both dirs via `.gitkeep`), `docs/source-candidates/*` and
-   `docs/discovery-log/*` (keeping each README), `allowed-removals/*`;
+   (keeping both dirs via `.gitkeep`), resets `docs/source-candidates.json`
+   to empty, `allowed-removals/*`;
    resets `event-uncertainty-cache.json` to `{"version":1,"entries":{}}`;
-   deletes `outofband-report.json` (the build tolerates its absence);
    prunes the five Seattle lookup tables in `lib/geocoder.ts` to empty
    stubs (the surrounding matching logic is table-driven, so empty tables
    are clean no-ops).
@@ -252,7 +247,7 @@ and `init-city` itself prints the same pointers when it finishes.
    `CLAUDE_CODE_OAUTH_TOKEN`. *Done when:* a broken source gets fixed and a
    new source lands with no human in the loop.
 3. **Full product** — the remaining optional services: Discord
-   notifications and the out-of-band proxy (only once a source needs it).
+   notifications and the Browserbase proxy (only once a source needs it).
    *Done when:* whichever of these the operator wants is live; all of them
    degrade gracefully when absent (see the matrix below). (Favorites need no
    service — they live in the browser's localStorage.)
@@ -264,8 +259,7 @@ and `init-city` itself prints the same pointers when it finishes.
 | **GitHub Pages** (site hosting) | Enable Pages with source = `gh-pages` branch; `publish_calendars.yml` deploys via `peaceiris/actions-gh-pages` (uses the built-in `GITHUB_TOKEN`); custom domain via the `CNAME` the workflow writes + a DNS record | **Required** | Build succeeds but nothing serves until Pages is enabled for the branch |
 | **Site URL** | `SITE_URL` var (Discord workflow), `SITE_BASE_URL`/`PRODUCTION_URL` env overrides | Defaults from `city.config.ts` | Falls back to config values |
 | **Platform APIs** | `TICKETMASTER_API_KEY`, `EVENTBRITE_TOKEN`, `DICE_API_KEY` secrets | Per-source | Only sources of that type fail; isolated parse errors |
-| **Browserbase** (JS-challenge bypass) | `BROWSERBASE_API_KEY` secret | Per-source | `proxy: browserbase` sources fail; others unaffected |
-| **Out-of-band proxy** (AWS) | `AWS_ROLE_ARN` secret, `OUTOFBAND_BUCKET` var; CloudFormation stack in `infra/authenticated-proxy/` (OIDC subject must be set to the copy's `owner/repo`); a residential-IP runner cron | Optional | Already graceful: the AWS-credentials step is `continue-on-error`, `scripts/download-outofband.ts` exits 0 when S3 is unreachable, and `proxy: outofband` sources sit in the non-fatal `pendingProxyVerification` queue. A copy that never sets this up simply shouldn't mark sources `outofband` |
+| **Browserbase proxy** (bot-block / JS-challenge bypass) | `BROWSERBASE_API_KEY` secret; sources opt in with `proxy: true` (no AWS/S3/CloudFormation/cron) | Per-source | `proxy: true` sources fail; others unaffected. A copy that never sets this up simply shouldn't mark sources `proxy: true` |
 | **Discord notifications** | `DISCORD_WEBHOOK_CALENDAR` secret; `init-city` deletes the Seattle-specific `notify-discord.yml` on copies — restore it from upstream to enable | Optional | Reference instance: workflow skips posting when the secret is unset. Copies: no workflow at all until restored |
 | **Claude automation** | `CLAUDE_CODE_OAUTH_TOKEN` secret — powers the three automation workflows in `docs/routines.md` plus the owner-gated PR-review and `@claude`-mention workflows | Optional | Every Claude workflow skips silently when unset; build-error fixing, discovery, and implementation become manual |
 | **Favorites** | None | n/a | Favorites are stored only in the browser's localStorage — no backend, sign-in, multi-device sync, or personal ICS feed. Nothing to configure |
@@ -342,9 +336,8 @@ engine changes should be called out in commit/PR descriptions.
   (`claude-code-action`), gated on the `CLAUDE_CODE_OAUTH_TOKEN` secret.
   Optional for copies; the docs carve-out (Phase 3) covers the human-review
   fallback.
-- **Manual console setup** — enabling GitHub Pages + custom-domain DNS,
-  AWS CloudFormation stack (out-of-band proxy): inherently manual,
-  documentation-driven.
+- **Manual console setup** — enabling GitHub Pages + custom-domain DNS:
+  inherently manual, documentation-driven.
 - **Event volume expectations** — gates like the new-source 0-events check
   and discovery budgets were tuned for a large metro; small cities may want
   `expectEmpty` more aggressively. Documented, not changed.

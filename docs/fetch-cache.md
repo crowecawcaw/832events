@@ -51,9 +51,9 @@ function returned by `getFetchForConfig` is wrapped in `withCache`
 3. **Live failure with a stale copy present** → serve the stale copy so events
    aren't lost, and record a *stale serve* (see Reporting below).
 
-When no cache is injected (unit tests, single-ripper runs, the out-of-band
-runner) `withCache` is a **transparent pass-through** — it returns the
-underlying response untouched, so nothing changes for those callers.
+When no cache is injected (unit tests, single-ripper runs) `withCache` is a
+**transparent pass-through** — it returns the underlying response untouched,
+so nothing changes for those callers.
 
 Because the cached payload is **re-parsed on every build** (external ICS is
 parsed normally; rippers re-run against cached page HTML/JSON), the events index
@@ -139,6 +139,5 @@ through every surface: the step summary and console summary
 (`skills/build-report/SKILL.md`).
 
 A single transient blip clears itself on the next successful fetch. A source
-that keeps serving stale should be investigated; for a browserbase source that
-Browserbase can no longer reach, retire it via `skills/proxy-escalation/SKILL.md`
-(browserbase is the last proxy rung).
+that keeps serving stale should be investigated; if Browserbase can no longer
+reach a source, set `disabled: true` on it.
