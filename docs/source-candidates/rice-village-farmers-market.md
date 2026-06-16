@@ -1,11 +1,12 @@
 ---
 name: Rice Village Farmers Market
-status: candidate
+status: added
 platform: Recurring
 url: https://ricefarmersmarket.org/
 tags: [FarmersMarket, Community, The Heights]
 firstSeen: 2026-06-15
-lastChecked: 2026-06-15
+lastChecked: 2026-06-16
+pr:
 ---
 
 Rice Village Farmers Market is a community farmers market held in The Heights area on a recurring schedule.
