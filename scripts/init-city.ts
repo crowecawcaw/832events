@@ -287,7 +287,7 @@ export function renderIdeasMd(cfg: CityConfig): string {
     return `# ${cfg.site.name} Feature Ideas
 
 Non-source feature ideas and improvements for ${cfg.site.name}. Source
-candidates live in \`docs/source-candidates/\` (one file per candidate).
+candidates live in \`docs/source-candidates.json\`.
 `;
 }
 
@@ -335,15 +335,9 @@ export async function buildActions(root: string, cfg: CityConfig): Promise<Strip
         add(`keep sources/${sub}/ via .gitkeep`, () => writeFile(join(root, "sources", sub, ".gitkeep"), ""));
     }
 
-    // 4. Source-candidate docs and discovery log (keep each README.md)
-    for (const sub of ["docs/source-candidates", "docs/discovery-log"]) {
-        const files = (await listDir(join(root, sub))).filter(f => f !== "README.md");
-        for (const f of files) {
-            add(`delete ${sub}/${f}`, () => rm(join(root, sub, f), { force: true, recursive: true }));
-        }
-    }
-    add("delete legacy docs/source-candidates.md (if present)", () =>
-        rm(join(root, "docs", "source-candidates.md"), { force: true }));
+    // 4. Source candidates: reset the tracking file to an empty array.
+    add("reset docs/source-candidates.json to an empty list", () =>
+        writeFile(join(root, "docs", "source-candidates.json"), "[]\n"));
 
     // 5. allowed-removals/ markers (keep the dir via .gitkeep)
     const removals = (await listDir(join(root, "allowed-removals"))).filter(f => f !== ".gitkeep");
