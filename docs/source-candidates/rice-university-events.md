@@ -1,11 +1,11 @@
 ---
 name: Rice University Events
-status: added
+status: proxy
 platform: LiveWhale (ICS)
 url: https://events.rice.edu/
 tags: [Education, Art, Museum District]
 firstSeen: 2026-06-13
-lastChecked: 2026-06-13
+lastChecked: 2026-06-16
 pr: claude/832events-sources-fixes-4nd5e8
 ---
 
@@ -31,3 +31,11 @@ with a feed-level `geo` set, those are not per-event geocoded (the feed
 inherits the campus venue coords), so the source contributes no geocode
 errors. See the external-calendar `geo` precedence fix in
 `lib/calendar_ripper.ts`.
+
+**Proxy (2026-06-16):** the LiveWhale feed intermittently blocks GitHub
+Actions runner IPs. CI run 27636803391 hit a non-200 on a cold fetch-cache,
+so the ripper threw (0 events + 1 parse error) and tripped the fatal
+new-source zero-event/parse gate. The same feed returns HTTP 200 with ~177
+VEVENTs from a residential IP, so the source was escalated to
+`proxy: "outofband"` (rung 2) — it now fetches via the out-of-band runner
+and lands in the non-fatal `pendingProxyVerification` queue.
