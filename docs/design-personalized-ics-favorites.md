@@ -1,5 +1,7 @@
 # Design: Personalized ICS Favorites with Server-Side Persistence
 
+> **Obsolete (2026-06):** The Cloudflare favorites worker was removed; favorites are now stored only in the browser's `localStorage` and there is no backend API or server-generated personal feed. Retained for historical context. See `docs/github-pages-hosting.md`.
+
 ## Status: Draft
 ## Date: 2026-02-22
 

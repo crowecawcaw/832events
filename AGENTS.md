@@ -787,12 +787,12 @@ Every build writes `output/build-errors.json` with a consolidated report of all 
 PR previews are deployed to the `gh-pages` branch under `/preview/{PR_NUMBER}/`. Given a PR number, fetch the errors file at:
 
 ```
-https://raw.githubusercontent.com/prestomation/calendar-ripper/gh-pages/preview/{PR_NUMBER}/build-errors.json
+https://raw.githubusercontent.com/crowecawcaw/832events/gh-pages/preview/{PR_NUMBER}/build-errors.json
 ```
 
 For example, PR #42:
 ```
-https://raw.githubusercontent.com/prestomation/calendar-ripper/gh-pages/preview/42/build-errors.json
+https://raw.githubusercontent.com/crowecawcaw/832events/gh-pages/preview/42/build-errors.json
 ```
 
 ### Schema
@@ -848,7 +848,7 @@ https://832.events/build-errors.json
 
 For PR previews, use:
 ```
-https://raw.githubusercontent.com/prestomation/calendar-ripper/gh-pages/preview/{PR_NUMBER}/build-errors.json
+https://raw.githubusercontent.com/crowecawcaw/832events/gh-pages/preview/{PR_NUMBER}/build-errors.json
 ```
 
 ### Common Error Patterns and Fixes
@@ -911,35 +911,25 @@ https://raw.githubusercontent.com/prestomation/calendar-ripper/gh-pages/preview/
 
 **Reporting:** Aggregate errors are intentionally excluded from `totalErrors`, `errorCount.txt`, and `build-errors.json#sources`. The per-aggregate `<calendar>-errors.txt` file is still written if you want the raw list, but the headline error count tracks only the upstream rippers that need fixing.
 
-## Favorites Filter Parity Rule
+## Favorites Filtering (client-only)
 
-The personal ICS feed is assembled **server-side** in the Cloudflare Worker (`infra/favorites-worker/src/feed.ts`). The web UI performs the **same filtering client-side** using `events-index.json` — for live preview, the "Happening Soon" view, attribution chips, and the events map.
+Favorites, saved searches, and geo filters are stored **only in the browser's
+`localStorage`** — there is no backend, no sign-in, and no server-generated
+personal ICS feed. (The Cloudflare favorites worker that previously assembled a
+per-user feed was removed; see `docs/github-pages-hosting.md`.) All filtering —
+search (Fuse.js), geo (haversine), and dedup — runs entirely in the web UI over
+`events-index.json`, powering the favorites view, the "Happening Soon" view,
+attribution chips, and the events map.
 
-**Filters are resolved per-list.** A signed-in user can have multiple favorites lists (see `docs/multiple-favorites-lists.md`), each with its own `icsUrls` / `searchFilters` / `geoFilters` and its own ICS feed token. The worker picks the list via the feed token's `listId` (falling back to the default/first list when absent); the client filters using the **active list's** arrays. Only the *source* of the filter arrays is per-list — the shared Fuse config, haversine formula, and dedup are unchanged, so the parity contract below still holds for whichever list is being resolved.
+**Keep the two client entry points in sync.** The search/geo filter logic is
+used from both `web/src/App.jsx` and `web/src/redesign/App832.jsx`. Any change
+to the Fuse.js threshold/keys/matching or the haversine formula must be applied
+consistently across them and the shared helpers (`web/src/lib/haversine.js`,
+`web/src/lib/event-dedup.js`).
 
-**These two implementations must stay in sync.** Any change to filtering logic must be applied to both:
-
-| Concern | Server (Worker) | Client (Web UI) |
-|---|---|---|
-| Search filters | Fuse.js in `event-search.ts` | Fuse.js in `App.jsx` (`searchFilterMatchSummaries`) |
-| Geo filters | Haversine in `feed.ts` | Haversine in `App.jsx` (`geoFilterMatchMap`) |
-| Deduplication | UID-based in `ics-merge.ts` | UID-based in display logic |
-| List resolution | `resolveList` by token `listId` in `feed.ts` | active list (`activeList`) in `App.jsx` |
-
-### Keeping them in sync
-
-- The Fuse.js threshold, keys, and matching logic must be identical between `event-search.ts` and `App.jsx`
-- The haversine formula must be identical between `feed.ts` and `App.jsx`
-- When changing either implementation, always update the other in the same PR
-
-### Tests for alignment
-
-`web/src/App.test.jsx` (or a dedicated `web/src/filter-parity.test.jsx`) must include tests that:
-1. Run the same filter input through both the client-side and server-side logic using shared fixtures
-2. Assert that the resulting matched event sets are identical
-3. Cover: search filter matches, geo filter matches, multi-match events, edge cases (no location, null coords)
-
-These tests are the contract that prevents silent divergence.
+`web/src/filter-parity.test.js` is the regression contract: it exercises the
+search and geo filtering over shared fixtures (including edge cases like events
+with no location / null coords) so the behavior can't silently drift.
 
 ## Documentation Convention
 

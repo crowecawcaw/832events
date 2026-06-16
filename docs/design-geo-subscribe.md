@@ -1,5 +1,7 @@
 # Design: Geographic Subscribe (Geo-Filtered ICS Feed)
 
+> **Obsolete (2026-06):** The server-side geo-filtered ICS feed was removed with the Cloudflare favorites worker. Geo filters still work, but client-side only over `localStorage` (no subscribable feed). Retained for historical context. See `docs/github-pages-hosting.md`.
+
 ## Status: In Progress
 ## Date: 2026-03-25
 

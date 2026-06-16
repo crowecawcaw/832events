@@ -76,5 +76,5 @@ link, since opening the overlay wrote the hash. This is distinct from the existi
 ## Out of scope
 
 Social/Open Graph previews are not implemented: the site is a static SPA, so
-per-event `og:` meta tags would require server-side rendering (a Cloudflare Pages
-Function). Shared links work and unfurl with the generic site card.
+per-event `og:` meta tags would require server-side rendering, which a static
+GitHub Pages site can't do. Shared links work and unfurl with the generic site card.

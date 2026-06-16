@@ -99,9 +99,9 @@ resolved inline in the events-index loop). Aggregate (`tag-*`) calendars
 inherit the attached coordinates because the aggregator spreads the source
 event objects.
 
-The personal favorites feed (`infra/favorites-worker`) assembles its ICS
-by merging already-generated calendar text, so `GEO` flows through the
-line-based merge with no worker change.
+Favorites are filtered client-side from the already-generated calendar data,
+so `GEO` flows through unchanged. (There is no longer a server-side favorites
+feed; the Cloudflare worker was removed.)
 
 ### Discovery API (`venues.json`)
 Each venue entry gains a `map: { web, osm? }` object built from its `geo`.

@@ -1,5 +1,7 @@
 # Personalized ICS Favorites Implementation Plan
 
+> **Obsolete (2026-06):** This plan's feature (a Cloudflare worker with server-side favorites and a personal ICS feed) was removed. Favorites are now browser-local only. Retained for historical context. See `docs/github-pages-hosting.md`.
+
 > **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
 
 **Goal:** Add server-side persistence and personalized ICS feed generation for user favorites via Cloudflare Workers, with Google OAuth login.
