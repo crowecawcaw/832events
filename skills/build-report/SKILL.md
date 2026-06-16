@@ -139,37 +139,13 @@ These are not build failures — they are todos for an LLM to investigate. The
 `totalErrors` count includes them; the resolver's job is to drain that queue
 across builds.
 
-### 5.5. Proxy Verification Check
-
-Check `pendingProxyVerification` in the build health output. This is the queue
-of sources that need a proxy to be fetched at all, still climbing the
-`outofband → browserbase → disabled` ladder. It is **non-fatal** — a brand-new
-proxy source can't be proven in CI, so it's tracked here instead of failing the
-build.
-
-**If the queue is empty:**
-```
-🪜 Proxy verification: 0 pending ✅
-```
-
-**If entries exist**, report each with its `rung`, `consecutiveFailures`, and
-`recommendation`. If any entry has a recommendation of `promote-to-browserbase`
-or `retire`, read `skills/proxy-escalation/SKILL.md` and follow it to open the
-escalation PR(s). Entries with recommendation `verifying` are still within the
-3-failure budget — just report them, no action needed.
-
-```
-🪜 Proxy verification: N pending — M ready to escalate
-  - <source> (<rung>, <consecutiveFailures> fails) → <recommendation>
-```
-
-### 5.55. Stale-Serve Check
+### 5.5. Stale-Serve Check
 
 Check `proxyStaleServes` in the build health output. Each entry is a source
 whose **live fetch failed this build** and was satisfied from a cached copy
 older than the TTL (so events weren't lost, but the source is not actually
 being refreshed). These **count toward `totalErrors`** — a persistent stale
-serve means the source (or, for a browserbase source, Browserbase itself) is
+serve means the source (or, for a `proxy: true` source, Browserbase itself) is
 broken. See `docs/fetch-cache.md`.
 
 **If the list is empty:**
@@ -180,9 +156,8 @@ broken. See `docs/fetch-cache.md`.
 **If entries exist**, report each with its `source` (or `url`), `ageHours`, and
 `error`. A single transient blip clears itself on the next build; a source that
 keeps serving stale needs investigation — verify the source URL still works and,
-if Browserbase can no longer fetch it, follow `skills/proxy-escalation/SKILL.md`
-to retire it (disable + candidate doc `status: blocked`), since browserbase is
-the last proxy rung.
+if Browserbase can no longer fetch it, set `disabled: true` and flag it for
+human review.
 
 ```
 🕒 Browserbase stale serves: N

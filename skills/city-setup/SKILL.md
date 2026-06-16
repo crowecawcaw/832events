@@ -103,9 +103,8 @@ steps in `docs/SETUP.md` steps 4–7).
    | `TICKETMASTER_API_KEY` | secret | When the first `type: ticketmaster` source lands |
    | `EVENTBRITE_TOKEN` | secret | When the first `type: eventbrite` source lands |
    | `DICE_API_KEY` | secret | When the first `type: dice` source lands |
-   | `BROWSERBASE_API_KEY` | secret | When the first `proxy: browserbase` source lands |
+   | `BROWSERBASE_API_KEY` | secret | When the first `proxy: true` source lands (fetched live through Browserbase) |
    | `CLAUDE_CODE_OAUTH_TOKEN` | secret | Powers the three Claude automation workflows (step 7) and owner-gated PR review / `@claude` |
-   | `AWS_ROLE_ARN` / `OUTOFBAND_BUCKET` | secret / variable | Only if the out-of-band proxy is ever deployed |
    | `FAVORITES_API_URL` | variable | Only if the favorites worker is ever deployed |
 
    The four Cloudflare entries are the only ones required before the PR;
@@ -129,11 +128,10 @@ the operator skipped setting `CLAUDE_CODE_OAUTH_TOKEN`, rely on human review.
 2. **Optional**: Discord notifications (`init-city` deleted the
    Houston-specific workflow — restore `.github/workflows/notify-discord.yml`
    from the upstream repo and set `DISCORD_WEBHOOK_CALENDAR` to enable),
-   out-of-band proxy (AWS stack in `infra/authenticated-proxy/` — skip
-   until a source actually needs it, and don't mark sources
-   `proxy: outofband` before then), favorites worker
-   (`infra/favorites-worker/` — advanced; the site runs read-only without
-   it).
+   Browserbase proxy (set `BROWSERBASE_API_KEY` only once a source needs
+   `proxy: true`; don't mark sources `proxy: true` before then), favorites
+   worker (`infra/favorites-worker/` — advanced; the site runs read-only
+   without it).
 
 ### 8. Add the first sources
 
