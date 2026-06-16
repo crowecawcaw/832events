@@ -7,7 +7,7 @@ tags: [Arts, Photography, Montrose]
 firstSeen: 2026-06-16
 lastChecked: 2026-06-16
 eventCount: 32
-pr: (pending)
+pr: 36
 impl:
   type: custom
   geo: { lat: 29.7389, lng: -95.4214, label: "Houston Center for Photography, 1441 W Alabama St, Houston, TX 77006" }

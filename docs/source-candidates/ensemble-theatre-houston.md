@@ -7,7 +7,7 @@ tags: [Theater, Midtown]
 firstSeen: 2026-06-16
 lastChecked: 2026-06-16
 eventCount: 6
-pr: (pending)
+pr: 36
 impl:
   type: custom
   geo: { lat: 29.7301, lng: -95.4105, label: "Ensemble Theatre Houston, 3535 Main St, Houston, TX 77002" }
