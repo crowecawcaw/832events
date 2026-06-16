@@ -135,7 +135,7 @@ export default class EnsembleTheatreHoustonRipper implements IRipper {
             // Convert slug to title case for display (e.g., "the-bluest-eye" → "The Bluest Eye")
             const title = showSlug
                 .split("-")
-                .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
                 .join(" ");
 
             // The next sibling should be the date range in an h2 with class thumbnail-date
