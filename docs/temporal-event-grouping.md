@@ -23,7 +23,7 @@ A pure, **client-side, map-display-only** transform. No build or schema change:
 it derives groups from the existing `events-index.json` at render time.
 
 It runs **after `isMappable`** in `EventsMap.jsx` — the predicate that owns
-filter/feed/date-window membership and the favorites-worker parity contract — so
+filter/feed/date-window membership — so
 it never changes *which* events are in scope, only *how* the already-filtered
 instances are drawn. A welcome consequence: because grouping sees only the
 post-filter (in-window) set, a group's date count/list **automatically reflects

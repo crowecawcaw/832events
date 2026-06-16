@@ -1,5 +1,7 @@
 # Custom Search Filters — Implementation Plan
 
+> **Obsolete (2026-06):** The server-side parts of this plan (favorites worker routes) were removed. Custom search filters still exist, but client-side only over `localStorage`. Retained for historical context.
+
 ## Overview
 
 Users can add free-form text search filters on their favorites page. Their personalized ICS feed will search all events using these filters and merge matching events into their favorites stream (deduped by UID). The search algorithm is shared between website and feed endpoint, tightened from threshold 0.2 → 0.1.

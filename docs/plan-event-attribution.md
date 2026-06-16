@@ -377,7 +377,7 @@ The personal ICS feed itself does NOT need to change for the web UI. If we ever 
 
 ## 5. Filter Parity Tests
 
-The web UI and the Cloudflare Worker implement the same filtering logic independently. These must stay in sync. A dedicated test file `web/src/filter-parity.test.jsx` should verify this contract.
+The two web entry points (`App.jsx` and `redesign/App832.jsx`) must apply the same client-side filtering logic. `web/src/filter-parity.test.js` verifies this contract. (Historically this also covered a server-side Cloudflare Worker, since removed — filtering is now client-only over `localStorage`.)
 
 ### What to test
 

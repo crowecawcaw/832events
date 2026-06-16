@@ -306,7 +306,7 @@ function GeoFilterForm({ initialFilter, onSave, onCancel, isMobile }) {
 /**
  * The full Geo Filters section shown in the You view.
  */
-export function GeoFiltersSection({ authUser, geoFilters, onAdd, onDelete, onEdit, isMobile }) {
+export function GeoFiltersSection({ geoFilters, onAdd, onDelete, onEdit, isMobile }) {
   const [isAdding, setIsAdding] = useState(false)
   const [editingIndex, setEditingIndex] = useState(null)
 

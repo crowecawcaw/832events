@@ -1,5 +1,7 @@
 # Multiple Favorites Lists
 
+> **Obsolete (2026-06):** This feature was removed with the Cloudflare favorites worker. Favorites are now a single, browser-local list in `localStorage` — no sign-in, no multiple lists, no backend. Retained for historical context. See `docs/github-pages-hosting.md`.
+
 Signed-in users can maintain several themed favorites lists (e.g. "Date Night",
 "Kids", "Work"), each producing its **own ICS subscription URL**, so different
 lists can be subscribed into different calendars. Anonymous (localStorage) users

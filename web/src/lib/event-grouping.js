@@ -5,9 +5,9 @@
 // show) into a single map marker whose drill-down lists every date.
 //
 // This is a pure, map-DISPLAY-only transform. It runs AFTER `isMappable` in
-// EventsMap (which owns filter/feed/date-window membership and the
-// favorites-worker parity contract), so it never changes which events are in
-// scope — only how the already-filtered instances are rendered. Because it
+// EventsMap (which owns filter/feed/date-window membership), so it never changes
+// which events are in scope — only how the already-filtered instances are
+// rendered. Because it
 // operates on the post-filter set, a group's `count`/date-list automatically
 // reflects the active date window with no extra date logic.
 //

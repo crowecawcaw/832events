@@ -1,5 +1,7 @@
 # In-App User Feedback
 
+> **Obsolete (2026-06):** The Cloudflare worker that received feedback was removed. The in-app feedback button now opens a prefilled GitHub issue directly; there is no backend endpoint or Turnstile. Retained for historical context.
+
 Lets anyone on 832.events send feedback, report a problem with a source, or
 suggest a new source from inside the app. Each submission is filed as a
 **GitHub issue** on `crowecawcaw/832events` — the same surface where bug

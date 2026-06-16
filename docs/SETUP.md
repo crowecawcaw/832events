@@ -17,8 +17,9 @@ Setup lands in tiers — stop at whichever one you want:
    implemented — without you in the loop. The workflow set, with suggested
    prompts, is catalogued in [`docs/routines.md`](./routines.md).
 3. **Full product** (+ the remaining step 7 services): Discord build
-   notifications, the out-of-band proxy for bot-blocked sources, and
-   sign-in/favorites via the Cloudflare Worker.
+   notifications and the out-of-band proxy for bot-blocked sources.
+   (Favorites are stored only in the browser's localStorage — there is no
+   backend, sign-in, or multi-device sync to set up.)
 
 ## 1. Create your repository
 
@@ -66,27 +67,35 @@ npm run generate-calendars   # zero sources — must complete with 0 errors
 ```
 
 Content-coupled tests self-skip on a stripped copy; everything else must
-pass. Commit the result on a branch, but **before opening the PR** set up
-Cloudflare (step 4) so the PR preview can deploy, and set the
+pass. Commit the result on a branch, but **before opening the PR** enable
+GitHub Pages (step 4) so the PR preview can deploy, and set the
 `CLAUDE_CODE_OAUTH_TOKEN` secret (step 8) so the PR gets reviewed. Then
 open and merge it — this is your instance's baseline.
 
-## 4. Cloudflare Pages (required — this is the site hosting)
+## 4. GitHub Pages (required — this is the site hosting)
 
-1. Create a Pages project: dashboard → Workers & Pages → Create → Pages, or
-   `npx wrangler pages project create <project-name>`.
-2. In your GitHub repo settings, add **secrets**:
-   - `CLOUDFLARE_API_TOKEN` — API token with Cloudflare Pages edit permission
-   - `CLOUDFLARE_ACCOUNT_ID` — from the Cloudflare dashboard
-3. Add **repository variables** (Settings → Secrets and variables → Actions
+The site is built and published by
+`.github/workflows/publish_calendars.yml`, which deploys the `output/`
+artifact to the `gh-pages` branch via
+[`peaceiris/actions-gh-pages`](https://github.com/peaceiris/actions-gh-pages).
+PR previews land on the same branch under `preview/<PR>/`.
+
+1. In your GitHub repo settings → **Pages**, set the source to **Deploy
+   from a branch**, branch `gh-pages`, folder `/ (root)`. (The first
+   deploy creates the branch; you may need to revisit this page once it
+   exists.)
+2. Add **repository variables** (Settings → Secrets and variables → Actions
    → Variables):
-   - `CLOUDFLARE_PAGES_PROJECT` — the Pages project name
    - `SITE_URL` — `https://<your-domain>` (no trailing slash)
-4. Custom domain: attach it to the Pages project in the Cloudflare
-   dashboard. Until then the site serves from
-   `https://<project>.pages.dev` — if you start there, use that URL as
-   `SITE_URL` and in `city.config.ts` (`site.baseUrl`/`site.productionUrl`),
-   and update both when the real domain is live.
+3. Custom domain: the deploy workflow writes a `CNAME` file into the
+   `gh-pages` branch so GitHub Pages serves the site at your custom
+   domain. Point a DNS record for that domain at GitHub Pages (a `CNAME`
+   to `<owner>.github.io`, or the GitHub Pages `A`/`AAAA` apex records),
+   then confirm the domain under Settings → Pages. Until the custom domain
+   resolves, the site serves from `https://<owner>.github.io/<repo>/` — if
+   you start there, use that URL as `SITE_URL` and in `city.config.ts`
+   (`site.baseUrl`/`site.productionUrl`), and update both when the real
+   domain is live.
 
 ## 5. First deploy
 
@@ -100,8 +109,8 @@ URL check skips itself, and the geo/fetch caches cold-start empty.
 Follow [`skills/source-discovery/SKILL.md`](../skills/source-discovery/SKILL.md).
 Start with a handful of high-volume, reliable sources — the city's biggest
 venues, the library system, a community calendar. One source per PR; every
-PR gets a preview at `https://pr-<n>.<project>.pages.dev` with a build
-report comment.
+PR gets a preview at `https://<your-domain>/preview/<n>/` (on the
+`gh-pages` branch under `preview/<n>/`) with a build report comment.
 
 ## 7. Optional services
 
@@ -164,17 +173,11 @@ set the `AWS_ROLE_ARN` secret and `OUTOFBAND_BUCKET` variable, and run
 `npm run generate-outofband` on a cron from a residential-IP machine. See
 `docs/outofband.md`.
 
-### Favorites / sign-in (Cloudflare Worker — advanced)
+### Favorites
 
-The site runs read-only without it (favorites in localStorage, no
-sign-in). To enable: create the four KV namespaces, edit
-`infra/favorites-worker/wrangler.toml` (worker name, route/custom domain,
-KV ids, `SITE_URL`, `GITHUB_REPO`) and the CORS allowlist in
-`infra/favorites-worker/src/index.ts`, create a Google OAuth client with
-your callback URL, set the worker secrets (`JWT_SECRET`,
-`GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, optionally
-`FEEDBACK_GITHUB_ISSUES_TOKEN`), deploy via the **Deploy Favorites
-Worker** workflow, then set the `FAVORITES_API_URL` repo variable.
+Favorites are stored entirely in the browser's `localStorage` — there is
+no backend, no sign-in, no multi-device sync, and no personal subscribable
+ICS feed. Nothing to set up.
 
 ## 8. Code review tooling
 

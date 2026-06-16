@@ -1,5 +1,7 @@
 # Future Idea: Staging Cloudflare Worker for PR Previews
 
+> **Obsolete (2026-06):** Cloudflare is no longer used — the site is on GitHub Pages and there is no favorites worker. Retained for historical context. See `docs/github-pages-hosting.md`.
+
 ## Problem
 
 PR previews currently share the production Cloudflare Worker (favorites API). This means:

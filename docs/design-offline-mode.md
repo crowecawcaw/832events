@@ -506,14 +506,13 @@ async function pruneStaleIcsCache() {
 
 ## 11. Interaction with Existing Features
 
-### Favorites API (from personalized ICS design)
+### Favorites (localStorage)
 
-The favorites API (`VITE_FAVORITES_API_URL`) requires network connectivity. Offline behavior:
-
-- `toggleFavorite()` updates `localStorage` immediately (works offline)
-- The fire-and-forget API call will silently fail (existing `catch(() => {})`)
-- On next online visit, `GET /auth/me` and `GET /favorites` re-sync from the server
-- No changes needed to the favorites implementation — its existing error handling is sufficient
+Favorites, saved searches, and geo filters live entirely in `localStorage`, so
+they work fully offline with no special handling — `toggleFavorite()` and the
+filter mutations read/write `localStorage` synchronously and never touch the
+network. (There is no favorites backend; the Cloudflare worker was removed —
+see `docs/github-pages-hosting.md`.)
 
 ### GoatCounter Analytics
 

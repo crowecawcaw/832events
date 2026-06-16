@@ -191,10 +191,10 @@ Event IDs") for any source whose cost is cache-resolved.
 - Persist the selection in the URL hash alongside category/neighborhood
   (`urlHash.js` / `useUrlState.js`).
 - **Favorites parity rule is not triggered**: Discover filters are
-  client-only and are not part of a list's `searchFilters`/`geoFilters`,
-  so the Cloudflare worker is unchanged. If cost ever becomes a
-  favorites-list filter, that is a parity-bound change to both
-  `infra/favorites-worker/src/feed.ts` and `web/src/App.jsx` in one PR.
+  client-only and are not part of the favorites `searchFilters`/`geoFilters`.
+  (Favorites filtering is itself client-only now — the Cloudflare worker was
+  removed — so any cross-cutting filter change just needs `App.jsx` and
+  `redesign/App832.jsx` kept consistent.)
 
 ## Sequencing
 

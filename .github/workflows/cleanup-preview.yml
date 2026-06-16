@@ -4,11 +4,51 @@ on:
   pull_request:
     types: [closed]
 
-# Preview deployments are now managed by Cloudflare Pages.
-# CF Pages automatically cleans up preview deployments when the
-# associated branch is deleted. No gh-pages cleanup needed.
+# Remove the closed PR's preview directory (preview/<PR>/) from the gh-pages
+# branch so stale previews don't accumulate. GitHub Pages serves from a branch,
+# so this is a plain git delete + push.
+concurrency:
+  # Same lane as the main publish and preview deploys — never push to gh-pages
+  # concurrently.
+  group: gh-pages-deploy
+  cancel-in-progress: false
+
 jobs:
-  skip:
+  cleanup:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - run: echo "Preview cleanup handled by Cloudflare Pages"
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+        continue-on-error: true
+        id: checkout
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Remove preview directory
+        if: steps.checkout.outcome == 'success'
+        env:
+          PR_NUMBER: ${{ github.event.number }}
+        run: |
+          cd gh-pages
+          if [ ! -d "preview/${PR_NUMBER}" ]; then
+            echo "No preview directory for PR #${PR_NUMBER}; nothing to clean up."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git rm -r --quiet "preview/${PR_NUMBER}"
+          git commit -m "Remove preview for closed PR #${PR_NUMBER}"
+          # Retry against concurrent gh-pages pushes from the deploy lane.
+          for i in 1 2 3 4; do
+            if git push origin gh-pages; then
+              exit 0
+            fi
+            echo "Push failed (attempt $i); rebasing and retrying..."
+            git pull --rebase origin gh-pages || true
+            sleep $((2 ** i))
+          done
+          echo "::error::Failed to push preview cleanup for PR #${PR_NUMBER}"
+          exit 1

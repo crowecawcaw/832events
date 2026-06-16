@@ -1,5 +1,5 @@
 // web/src/lib/event-dedup.js
-// Ported from infra/favorites-worker/src/event-dedup.ts — keep in sync!
+// Client-side cross-source event deduplication for the favorites/map views.
 
 /** Jaccard token similarity between two strings */
 export function titleSimilarity(a, b) {
@@ -13,7 +13,7 @@ export function titleSimilarity(a, b) {
 
 /**
  * Haversine distance in km.
- * Keep in sync with web/src/lib/haversine.js and infra/favorites-worker/src/event-dedup.ts
+ * Keep in sync with web/src/lib/haversine.js
  */
 export function haversineKm(lat1, lng1, lat2, lng2) {
   const R = 6371

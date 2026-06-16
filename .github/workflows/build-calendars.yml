@@ -8,6 +8,11 @@ on:
         required: false
         default: "github-pages"
         type: string
+      base-path:
+        description: "Vite base path for the web bundle (e.g. '/preview/42/' for PR previews). Defaults to root."
+        required: false
+        default: "/"
+        type: string
     outputs:
       error-count:
         description: "Number of errors during calendar generation"
@@ -190,7 +195,9 @@ jobs:
     - name: Build web interface
       run: npm run web:build
       env:
-        VITE_FAVORITES_API_URL: ${{ vars.FAVORITES_API_URL }}
+        # Favorites are stored locally in the browser — there is no backend API.
+        # base-path lets PR previews build under /preview/<PR>/ (default '/').
+        VITE_BASE_PATH: ${{ inputs.base-path }}
 
     - name: Get GitHub Pages URL
       id: get-pages-url
