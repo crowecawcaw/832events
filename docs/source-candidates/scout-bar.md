@@ -1,12 +1,12 @@
 ---
 name: Scout Bar
-status: candidate
+status: proxy
 platform: AXS
 url: https://scoutbar.com/calendar/
-tags: [Music]
+tags: [Music, South Houston]
 firstSeen: 2026-06-14
-lastChecked: 2026-06-14
-pr:
+lastChecked: 2026-06-16
+pr: 34
 impl:
   type: axs
   venueId: 130538

@@ -1,16 +1,19 @@
 ---
 name: Axelrad Beer Garden
-status: candidate
+status: added
 platform: Google Calendar (ICS export)
 url: https://www.axelradhouston.com/
 tags: [Music, Montrose]
 firstSeen: 2026-06-16
 lastChecked: 2026-06-16
+pr: 34
 impl:
   type: external
-  icsUrl: https://calendar.google.com/calendar/ical/axelradhouston%40gmail.com/public/basic.ics
+  icsUrl: https://calendar.google.com/calendar/ical/r90785d3i81770k8r28jov6b9g%40group.calendar.google.com/public/basic.ics
   infoUrl: https://www.axelradhouston.com/calendar
-  observedEventCount: 10
+  observedEventCount: 306
+  builtEventCount: 306
+  note: "Correct calendar ID found in website embedded viewer; 306 upcoming events in lookahead window"
   geo: { lat: 29.7272, lng: -95.3447, label: "Axelrad Beer Garden, 1517 Alabama St, Houston, TX 77010" }
 ---
 
