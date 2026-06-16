@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-16T17:49:09.644Z",
+  "generated": "2026-06-16T17:51:40.804Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -773,6 +773,41 @@
             },
             "rss": {
               "href": "rice-public-events-rice-public-events.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "the-mood-room",
+      "friendlyName": "The Mood Room",
+      "description": "The Mood Room",
+      "url": "https://www.themoodroomhouston.com/events",
+      "tags": [
+        "Comedy",
+        "EaDo"
+      ],
+      "geo": {
+        "lat": 29.7446648,
+        "lng": -95.3390657,
+        "label": "The Mood Room, 711 Milby St, Houston, TX 77023"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=The%20Mood%20Room%2C%20711%20Milby%20St%2C%20Houston%2C%20TX%2077023"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "the-mood-room",
+          "friendlyName": "The Mood Room",
+          "links": {
+            "ics": {
+              "href": "the-mood-room-the-mood-room.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "the-mood-room-the-mood-room.rss",
               "type": "application/rss+xml"
             }
           }
