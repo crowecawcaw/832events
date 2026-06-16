@@ -24,7 +24,6 @@
     "check-discovery-api": "tsx scripts/check-discovery-api.ts"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.1009.0",
     "@js-joda/core": "^5.5.3",
     "@js-joda/locale_en-us": "^4.11.0",
     "@js-joda/timezone": "^2.18.0",
