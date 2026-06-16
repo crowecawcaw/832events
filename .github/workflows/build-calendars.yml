@@ -69,19 +69,6 @@ jobs:
     - name: Run unit tests
       run: npm run test:all
 
-    - name: Configure AWS credentials
-      # The only remaining S3 consumer in this build is the out-of-band
-      # calendar download below, which is itself graceful (exits 0 if the
-      # bucket is unreachable). So a credentials failure must NOT fail the
-      # build — fork PRs and credential hiccups simply skip out-of-band
-      # calendars. The geo-cache and event-uncertainty-cache no longer use
-      # S3 (see docs/github-native-caches.md).
-      continue-on-error: true
-      uses: aws-actions/configure-aws-credentials@v4
-      with:
-        role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
-        aws-region: us-west-2
-
     - name: Restore geo-cache
       # geo-cache.json is persisted via the GitHub Actions Cache, not S3.
       # The committed file is an empty cold-start baseline; an immutable
@@ -95,11 +82,6 @@ jobs:
         key: geo-cache-v1-${{ github.run_id }}
         restore-keys: |
           geo-cache-v1-
-
-    - name: Download out-of-band calendars
-      env:
-        OUTOFBAND_BUCKET: ${{ vars.OUTOFBAND_BUCKET }}
-      run: npm run download-outofband
 
     - name: Restore source fetch cache
       # Throttles every source (rippers, external ICS, platform APIs) to one live

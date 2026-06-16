@@ -57,10 +57,8 @@ const CONTENT_FILES = new Set([
     "event-uncertainty-cache.json",
     "geo-cache.json",
     "fetch-cache.json",
-    "outofband-report.json",
     "ideas.md",
     "todo.md",
-    "disabled-sources-plan.md",
     "README.md",
     "CONTRIBUTORS.md",
 ]);

@@ -273,8 +273,8 @@ maintenance workflow.
    in \`docs/routines.md\` (build-error responder, daily source discovery,
    daily source implementation) run as GitHub Actions using the
    \`CLAUDE_CODE_OAUTH_TOKEN\` secret.
-3. **Optional services**: Discord notifications, out-of-band proxy,
-   favorites/sign-in — \`docs/SETUP.md\` step 7.
+3. **Optional services**: Discord notifications, Browserbase proxy —
+   \`docs/SETUP.md\` step 7.
 
 ## Request a new calendar
 
@@ -353,12 +353,9 @@ export async function buildActions(root: string, cfg: CityConfig): Promise<Strip
     add("keep allowed-removals/ via .gitkeep", () =>
         writeFile(join(root, "allowed-removals", ".gitkeep"), ""));
 
-    // 6. Caches: uncertainty cache resets to the empty baseline; the
-    // out-of-band report is seed data and the build tolerates its absence.
+    // 6. Caches: uncertainty cache resets to the empty baseline.
     add("reset event-uncertainty-cache.json to the empty baseline", () =>
         writeFile(join(root, "event-uncertainty-cache.json"), JSON.stringify({ version: 1, entries: {} }, null, 2) + "\n"));
-    add("delete outofband-report.json", () =>
-        rm(join(root, "outofband-report.json"), { force: true }));
     // The upstream-feature-sync ledger resets to the empty baseline; the copy's
     // first `npm run feature-sync` establishes its own baseline against upstream.
     add("reset feature-sync.json to the empty baseline", () =>

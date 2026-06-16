@@ -47,9 +47,6 @@ const buildErrors = {
     { source: 'good-source', event: { summary: 'Mystery Show', date: '2026-05-10', url: 'https://e.com' }, unknownFields: ['startTime'] },
   ],
   uncertaintyStats: { outstanding: 1, resolvedFromCache: 0, acknowledgedUnresolvable: 0 },
-  pendingProxyVerification: [
-    { name: 'el-centro-de-la-raza', rung: 'outofband', consecutiveFailures: 3, lastError: 'HTTP 403', lastAttempt: '2026-06-03', proven: false, recommendation: 'promote-to-browserbase' },
-  ],
   geoStats: { totalEvents: 12, eventsWithGeo: 11, geocodeErrors: 1 },
   photoStats: { eventsWithImage: 9, totalEvents: 12, venuesWithImage: 1, totalVenues: 3, unresolvable: 0 },
   photoGaps: {
@@ -105,11 +102,6 @@ describe('HealthDashboard', () => {
 
     fireEvent.click(screen.getByRole('tab', { name: /Uncertain/ }))
     expect(screen.getByText(/Mystery Show/)).toBeTruthy()
-
-    fireEvent.click(screen.getByRole('tab', { name: /Proxy/ }))
-    expect(screen.getByText(/Proxy Verification Queue/)).toBeTruthy()
-    expect(screen.getByText('el-centro-de-la-raza')).toBeTruthy()
-    expect(screen.getByText('promote-to-browserbase')).toBeTruthy()
   })
 
   it('renders URL entity errors in the Errors tab and a summary card', () => {

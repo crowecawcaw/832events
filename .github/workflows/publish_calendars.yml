@@ -26,7 +26,6 @@ jobs:
     if: always() && (needs.jitter.result == 'success' || needs.jitter.result == 'skipped')
     uses: ./.github/workflows/build-calendars.yml
     permissions:
-      id-token: write    # OIDC token for AWS proxy authentication
       contents: read
     secrets: inherit
 
