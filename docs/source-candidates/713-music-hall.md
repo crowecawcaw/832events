@@ -1,11 +1,12 @@
 ---
 name: 713 Music Hall
-status: candidate
+status: added
 platform: Ticketmaster
 url: https://www.713musichall.com/
 tags: [Music, Nightlife, Downtown]
 firstSeen: 2026-06-15
-lastChecked: 2026-06-15
+lastChecked: 2026-06-16
+pr: (pending)
 ---
 
 713 Music Hall is a music venue and nightlife destination in downtown Houston.

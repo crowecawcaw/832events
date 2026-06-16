@@ -1,14 +1,15 @@
 ---
 name: Ensemble Theatre Houston
-status: candidate
-platform: Salesforce Ticketing (HTML scraper)
+status: added
+platform: Custom HTML ripper
 url: https://www.ensemblehouston.com/
 tags: [Theater, Midtown]
 firstSeen: 2026-06-16
 lastChecked: 2026-06-16
+eventCount: 6
+pr: (pending)
 impl:
   type: custom
-  observedEventCount: 6
   geo: { lat: 29.7301, lng: -95.4105, label: "Ensemble Theatre Houston, 3535 Main St, Houston, TX 77002" }
 ---
 

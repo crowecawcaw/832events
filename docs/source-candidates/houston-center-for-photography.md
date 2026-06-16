@@ -1,14 +1,15 @@
 ---
 name: Houston Center for Photography
-status: candidate
-platform: Squarespace (HTML/per-event ICS)
-url: https://www.hcponline.org/
+status: added
+platform: Custom HTML ripper (Squarespace)
+url: https://www.edu.hcponline.org/events
 tags: [Arts, Photography, Montrose]
 firstSeen: 2026-06-16
 lastChecked: 2026-06-16
+eventCount: 32
+pr: (pending)
 impl:
   type: custom
-  observedEventCount: 8
   geo: { lat: 29.7389, lng: -95.4214, label: "Houston Center for Photography, 1441 W Alabama St, Houston, TX 77006" }
 ---
 
