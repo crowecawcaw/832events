@@ -1244,9 +1244,11 @@ END:VCALENDAR`;
   // Skipped under ONLY_SOURCE — a single-source build isn't a complete manifest,
   // so new-source detection (and its deployed-site probe) doesn't apply.
   const manifestDeployedIcsUrls = new Set<string>();
+  let manifestFetchSucceeded = false;
   if (!onlySourceActive) try {
     const manifestRes = await fetch(`${productionUrl}/manifest.json`, { signal: AbortSignal.timeout(10000) });
     if (manifestRes.ok) {
+      manifestFetchSucceeded = true;
       const manifest = await manifestRes.json() as {
         rippers?: Array<{ calendars: Array<{ icsUrl: string }> }>;
         recurringCalendars?: Array<{ icsUrl: string }>;
@@ -1301,6 +1303,24 @@ END:VCALENDAR`;
   }
   console.log(`${knownDeployed.size} of ${allCalendarNames.length} calendars already deployed; ${allCalendarNames.length - knownDeployed.size} are new.`);
 
+  // Robustness guard: if we couldn't reach production at all — the manifest
+  // fetch failed AND no HEAD check confirmed a single deployed calendar — then
+  // we have no snapshot to compare against. Treating every source as "new" in
+  // that case turns ordinary parse errors (a ripper's partial pages, a proxy
+  // source's blocked fetch) into fatal new-source failures and nukes the build
+  // on a transient outage. When production is unverifiable, skip the new-source
+  // gates entirely (a genuinely new broken source is caught the next time
+  // production is reachable). A reachable production with a truly-new source
+  // still gates normally, because manifestFetchSucceeded / knownDeployed is set.
+  const productionUnreachable =
+    !onlySourceActive && !manifestFetchSucceeded && knownDeployed.size === 0 && allCalendarNames.length > 0;
+  if (productionUnreachable) {
+    console.warn(
+      `::warning::Production site unreachable (no manifest, 0 calendars confirmed via HEAD) — ` +
+      `skipping new-source gates this build so a transient outage doesn't fail CI.`,
+    );
+  }
+
   // --- Check new sources for zero events and parse errors ---
   // A SOURCE is "new" only if NONE of its calendars are deployed to 832.events.
   // This prevents a new branch (e.g. a new SPL location) from making an existing
@@ -1312,7 +1332,7 @@ END:VCALENDAR`;
     }
   }
   const newSources = new Set<string>();
-  if (!onlySourceActive) for (const cal of eventCounts) {
+  if (!onlySourceActive && !productionUnreachable) for (const cal of eventCounts) {
     if (!knownDeployedSources.has(cal.source) && cal.type !== "Aggregate") {
       newSources.add(cal.source);
     }
@@ -1355,11 +1375,15 @@ END:VCALENDAR`;
     console.log(`Found ${newZeroEventSources.length} new zero-event calendar(s) in this build`);
   }
 
-  // New source with parse errors → fail build (can't merge half-parsed sources)
+  // New source with parse errors → fail build (can't merge half-parsed sources).
+  // Proxy sources are exempt: their live Browserbase fetch can be blocked from
+  // CI (JS challenge, missing key), which surfaces as a fetch/parse error rather
+  // than 0 events — same "unprovable from CI" situation as the zero-event gate
+  // above, so it must not be fatal either.
   for (const entry of buildErrors) {
     const calName = entry.type === "Recurring" ? `recurring-${entry.calendar}` : `${entry.source}-${entry.calendar}`;
     const calEntry = eventCounts.find(c => c.name === calName);
-    if (calEntry && newSources.has(calEntry.source)) {
+    if (calEntry && newSources.has(calEntry.source) && !proxySourceNames.has(calEntry.source)) {
       const parseErrors = entry.errors.filter(e => e.type === "ParseError" || e.type === "InvalidDateError");
       if (parseErrors.length > 0) {
         console.log(`::error::New source "${entry.source}" calendar "${entry.calendar}" has ${parseErrors.length} parse error(s). Fix the ripper or external config before merging.`);
