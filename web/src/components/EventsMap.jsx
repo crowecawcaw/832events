@@ -20,18 +20,27 @@ L.Icon.Default.mergeOptions({
   shadowUrl: markerShadow,
 })
 
-const MAP_CENTER = [cityConfig.map.center.lat, cityConfig.map.center.lng]
-const DEFAULT_ZOOM = cityConfig.map.defaultZoom
-
 // Width (px) of the drill-down side panel on desktop. Kept in sync with the
 // `.event-group-panel` width in index.css so the map can pan a clicked marker
 // out from behind it.
 const PANEL_WIDTH = 340
 
 // Populated metro extent used to reject distant outliers from the default map
-// fit. Configured per city in city.config.ts (Houston's box hugs Harris County
+// fit. Configured per city in city.config.ts (Seattle's box hugs King County
 // — see the comments there for how its edges were chosen).
 const CLAMP_BOUNDS = cityConfig.map.clampBounds
+
+// Initial viewport, framed at the metro extent (CLAMP_BOUNDS) the moment the
+// map mounts — before any event data has loaded. This lets Leaflet pick the
+// final-ish zoom and start fetching tiles immediately, instead of opening at
+// the city-center zoom and then animating out to frame events once the (heavy)
+// events index resolves. FitBounds still snaps to the real event distribution
+// when events arrive, but from this starting point that adjustment is a small
+// pan rather than a jarring zoom-out, and no city-center tiles are wasted.
+const INITIAL_BOUNDS = [
+  [CLAMP_BOUNDS.south, CLAMP_BOUNDS.west],
+  [CLAMP_BOUNDS.north, CLAMP_BOUNDS.east],
+]
 
 export function isWithinClampBounds(lat, lng) {
   return (
@@ -42,10 +51,10 @@ export function isWithinClampBounds(lat, lng) {
 
 // Fraction of events trimmed off each tail (per axis) before framing the default
 // view, and the minimum point count before trimming kicks in. The dense mass of
-// events sits in the Houston inner-loop core; a sparse handful of legitimate but
-// far-flung Harris County events (a lone Katy or Kingwood listing) would
+// events sits in the Seattle/Eastside core; a sparse handful of legitimate but
+// far-flung King County events (a lone Federal Way or Issaquah listing) would
 // otherwise stretch the default zoom out far enough that — given the map panel's
-// aspect ratio — neighbouring Galveston/Conroe markers fall into view. Trimming the
+// aspect ratio — neighbouring Tacoma/Everett markers fall into view. Trimming the
 // sparsest tails frames the metro mass instead. Filtered views (a single
 // calendar/tag) stay below the threshold and are framed in full, untrimmed.
 const FIT_TRIM_QUANTILE = 0.02
@@ -88,7 +97,7 @@ export function collectFitPoints(events, geoFilters) {
   for (const gf of geoFilters) {
     // Longitude degrees shrink with latitude (1° lng ≈ 111·cos(lat) km), so the
     // east-west offset needs the cos(lat) correction or the bounds under-frame
-    // the circle (~13% short at Houston's ~29.8°).
+    // the circle (~33% short at Seattle's ~47.6°).
     const latDeg = gf.radiusKm / 111
     const lngDeg = gf.radiusKm / (111 * Math.cos(gf.lat * Math.PI / 180))
     points.push([gf.lat + latDeg, gf.lng + lngDeg])
@@ -360,8 +369,8 @@ function EventsMapInner({
   return (
     <div className="events-map-container" data-testid="events-map">
       <MapContainer
-        center={MAP_CENTER}
-        zoom={DEFAULT_ZOOM}
+        bounds={INITIAL_BOUNDS}
+        boundsOptions={{ padding: [0, 0] }}
         style={{ height: '100%', width: '100%' }}
         className="events-map"
       >
