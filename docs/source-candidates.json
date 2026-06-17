@@ -600,17 +600,27 @@
   },
   {
     "name": "Ion District",
-    "status": "investigating",
-    "platform": "Community Calendar (Tribe Events - WPEngine hosted)",
+    "status": "added",
+    "platform": "Tribe Events (ICS)",
     "url": "https://iondistrict.com/events/",
     "tags": [
       "Community",
       "Tech",
-      "Innovation",
       "Midtown"
     ],
     "firstSeen": "2026-06-15",
-    "lastChecked": "2026-06-15"
+    "lastChecked": "2026-06-17",
+    "impl": {
+      "type": "external",
+      "icsUrl": "https://iondistrict.com/events/?ical=1",
+      "infoUrl": "https://iondistrict.com/events/",
+      "observedEventCount": 13,
+      "geo": {
+        "lat": 29.7240,
+        "lng": -95.3905,
+        "label": "Ion District, 4201 Main St, Houston, TX 77002"
+      }
+    }
   },
   {
     "name": "Kindred Stories",
