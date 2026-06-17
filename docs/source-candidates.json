@@ -207,7 +207,7 @@
   },
   {
     "name": "Contemporary Arts Museum Houston",
-    "status": "candidate",
+    "status": "added",
     "platform": "Eventbrite",
     "url": "https://camh.org/event-calendar/",
     "tags": [
@@ -216,11 +216,14 @@
       "Museum District"
     ],
     "firstSeen": "2026-06-13",
-    "lastChecked": "2026-06-15",
+    "lastChecked": "2026-06-17",
+    "pr": 44,
     "impl": {
       "type": "eventbrite",
       "organizerId": "5365268811",
       "observedEventCount": 6,
+      "builtEventCount": 4,
+      "note": "Built 4 events; 2 fewer than originally observed (likely due to date window or event timing)",
       "geo": {
         "lat": 29.7261,
         "lng": -95.3905,
