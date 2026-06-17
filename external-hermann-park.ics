@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Hermann Park Conservancy - ECPv6.16.3//NONSGML v1.0//EN
+PRODID:-//Hermann Park Conservancy - ECPv6.16.4//NONSGML v1.0//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Hermann Park Conservancy
@@ -51,7 +51,7 @@ END:VTIMEZONE
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260612T000000
 DTEND;TZID=America/Chicago:20260705T235959
-DTSTAMP:20260616T124643
+DTSTAMP:20260616T233243
 CREATED:20260511T144456Z
 LAST-MODIFIED:20260616T154532Z
 UID:26573-1781222400-1783295999@hermannpark.org
@@ -62,22 +62,9 @@ LOCATION:The Commons
 ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2026/05/Kicking-it-at-the-Commons-Square.jpg
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260616T183000
-DTEND;TZID=America/Chicago:20260616T200000
-DTSTAMP:20260616T124643
-CREATED:20260609T195334Z
-LAST-MODIFIED:20260616T154432Z
-UID:27793-1781634600-1781640000@hermannpark.org
-SUMMARY:Wellness Walk (CANCELED DUE TO WEATHER)
-DESCRIPTION:THIS EVENT HAS BEEN CANCELED DUE TO THE WEATHER. \nJoin Laura Conely of Urban Paths for a fun evening as we explore the trails and beauty of Hermann Park on a guided 3-mile experience. All are invited to this conversationally paced walk; friendly pups on leash are welcome too! \nThis event is free\, but registration is required and space is limited. Sign up HERE. Participants will meet outside the McGovern Centennial Gardens\, located at 1500 Hermann Drive\, with parking available in adjacent Lot C. \nLaura Conely is the founder of Urban Paths\, a walking wellness company. As a certified teacher and coach\, she leads guided Wellness Walks that bring individuals of all ages and fitness levels together to experience the profound health benefits of: Nature\, Art\, Movement\, and Connection.
-URL:https://hermannpark.org/event/wellness-walk-7/
-LOCATION:McGovern Centennial Gardens\, 1500 Hermann Drive\, Houston\, TX\, 77004\, United States
-ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2026/04/P1010158-Voltz-Photography-scaled.jpg
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260617T083000
 DTEND;TZID=America/Chicago:20260617T113000
-DTSTAMP:20260616T124643
+DTSTAMP:20260616T233243
 CREATED:20260611T132441Z
 LAST-MODIFIED:20260616T154445Z
 UID:27824-1781685000-1781695800@hermannpark.org
@@ -90,7 +77,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260618T090000
 DTEND;TZID=America/Chicago:20260618T120000
-DTSTAMP:20260616T124643
+DTSTAMP:20260616T233243
 CREATED:20260504T151738Z
 LAST-MODIFIED:20260615T153427Z
 UID:26522-1781773200-1781784000@hermannpark.org
@@ -103,7 +90,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260620T203000
 DTEND;TZID=America/Chicago:20260620T223000
-DTSTAMP:20260616T124643
+DTSTAMP:20260616T233243
 CREATED:20260519T200135Z
 LAST-MODIFIED:20260610T132652Z
 UID:26646-1781987400-1781994600@hermannpark.org
@@ -116,7 +103,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260621T180000
 DTEND;TZID=America/Chicago:20260621T190000
-DTSTAMP:20260616T124643
+DTSTAMP:20260616T233243
 CREATED:20260316T145352Z
 LAST-MODIFIED:20260609T172019Z
 UID:24746-1782064800-1782068400@hermannpark.org
@@ -129,7 +116,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260621T190000
 DTEND;TZID=America/Chicago:20260621T200000
-DTSTAMP:20260616T124643
+DTSTAMP:20260616T233243
 CREATED:20260316T145500Z
 LAST-MODIFIED:20260609T171936Z
 UID:24748-1782068400-1782072000@hermannpark.org
@@ -142,20 +129,19 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260623T183000
 DTEND;TZID=America/Chicago:20260623T200000
-DTSTAMP:20260616T124643
+DTSTAMP:20260616T233243
 CREATED:20260609T195415Z
 LAST-MODIFIED:20260609T195415Z
 UID:27794-1782239400-1782244800@hermannpark.org
 SUMMARY:Wellness Walk
 DESCRIPTION:Join Laura Conely of Urban Paths for a fun evening as we explore the trails and beauty of Hermann Park on a guided 3-mile experience. All are invited to this conversationally paced walk; friendly pups on leash are welcome too! \nThis event is free\, but registration is required and space is limited. Sign up HERE. Participants will meet outside the McGovern Centennial Gardens\, located at 1500 Hermann Drive\, with parking available in adjacent Lot C. \nLaura Conely is the founder of Urban Paths\, a walking wellness company. As a certified teacher and coach\, she leads guided Wellness Walks that bring individuals of all ages and fitness levels together to experience the profound health benefits of: Nature\, Art\, Movement\, and Connection.
 URL:https://hermannpark.org/event/wellness-walk-8/
-LOCATION:TX
 ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2026/04/P1010158-Voltz-Photography-scaled.jpg
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260624T083000
 DTEND;TZID=America/Chicago:20260624T113000
-DTSTAMP:20260616T124643
+DTSTAMP:20260616T233243
 CREATED:20260611T132525Z
 LAST-MODIFIED:20260611T132525Z
 UID:27826-1782289800-1782300600@hermannpark.org
@@ -168,7 +154,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260625T090000
 DTEND;TZID=America/Chicago:20260625T120000
-DTSTAMP:20260616T124643
+DTSTAMP:20260616T233243
 CREATED:20260615T153510Z
 LAST-MODIFIED:20260615T153614Z
 UID:27850-1782378000-1782388800@hermannpark.org
@@ -181,7 +167,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260627T203000
 DTEND;TZID=America/Chicago:20260627T223000
-DTSTAMP:20260616T124643
+DTSTAMP:20260616T233243
 CREATED:20260519T200311Z
 LAST-MODIFIED:20260610T132650Z
 UID:26648-1782592200-1782599400@hermannpark.org
@@ -194,7 +180,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260701T083000
 DTEND;TZID=America/Chicago:20260701T113000
-DTSTAMP:20260616T124643
+DTSTAMP:20260616T233243
 CREATED:20260611T132626Z
 LAST-MODIFIED:20260611T132626Z
 UID:27828-1782894600-1782905400@hermannpark.org
@@ -207,7 +193,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260702T090000
 DTEND;TZID=America/Chicago:20260702T120000
-DTSTAMP:20260616T124643
+DTSTAMP:20260616T233243
 CREATED:20260615T153609Z
 LAST-MODIFIED:20260615T153609Z
 UID:27852-1782982800-1782993600@hermannpark.org
@@ -220,7 +206,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260703T203000
 DTEND;TZID=America/Chicago:20260703T223000
-DTSTAMP:20260616T124643
+DTSTAMP:20260616T233243
 CREATED:20260519T200419Z
 LAST-MODIFIED:20260610T132649Z
 UID:26651-1783110600-1783117800@hermannpark.org
@@ -231,9 +217,22 @@ LOCATION:The Commons
 ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2026/05/P1011987-scaled-e1779221087349.jpg
 END:VEVENT
 BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260704T203000
+DTEND;TZID=America/Chicago:20260704T223000
+DTSTAMP:20260616T233243
+CREATED:20260616T221436Z
+LAST-MODIFIED:20260616T221841Z
+UID:27880-1783197000-1783204200@hermannpark.org
+SUMMARY:Red\, White & Cruise
+DESCRIPTION:Join us for Red\, White & Cruise where you can watch Miller Outdoor Theatre’s fireworks show light up the sky from the peaceful waters of Hermann Park\, with a special pedal boat rental from 8:30–10:30 p.m. on Saturday\, July 4! 🎇 \nAs we celebrate 250 years of American independence\, gather your crew and watch the sky come alive with fireworks while cruising across the lake in your own pedal boat under the stars. 🌟  \nSaturday\, July 4\n8:30 – 10:30 p.m.  \n🎟️ $150 per boat (up to 4 people) includes:\n🕘 Boat rental up to 2 hours\n🍿 Drinks & snacks\n🎊 Festive accessories\n🅿️ Reserved parking in Lot I near Lake Plaza\n⛵ Board anytime between 8:30–9:30 p.m. and enjoy the show from the water (fireworks begin at approximately 9:45 p.m.\, boats must return once fireworks finish) \nBOOK YOUR BOAT HERE!  \n🚨 Important Info: \n\nOne rider per boat must be 18+\nAll riders 18+ must sign a digital waiver before boarding\nAt least one rider must be 18+\, with a physical government ID\, and sign a waiver before boarding\nTickets are non-refundable\nEvent is rain or shine per Miller Outdoor Theatre’s plan\nIn the event of lightning\, pedal boats will close\, and refunds will be issued \n\nThe purchase of a ticket includes an up-to 2-hour pedal boat ride for up to 4 people to enjoy the sight of Miller Outdoor Theatre’s fireworks show\, drinks\, snacks\, festive treats\, and a reserved parking spot in Lot I near Lott Hall by Lake Plaza (starting at 8 p.m.). Only one ticket purchase of $150 is needed for a 4-person boat (i.e. it is the cost per boat\, not per rider).  \nA reminder that at least one rider per boat must be 18 years or older.  All riders 18 years or older must sign a digital waiver before boarding. Tickets are non-refundable. We are following Miller Outdoor Theatre’s plan for their event and fireworks show which is rain or shine. If there is lightning in the area\, we will close the pedal boats and ticket holders will receive a refund.  \nPlease arrive early to allow time to park in Lot I as roads in the Park will be closed by HPD and closures are subject to change based on their purview.  
+URL:https://hermannpark.org/event/red-white-cruise-2/
+LOCATION:Lake Plaza
+ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2026/06/Red-White-Cruise-2026.jpg
+END:VEVENT
+BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260708T083000
 DTEND;TZID=America/Chicago:20260708T113000
-DTSTAMP:20260616T124643
+DTSTAMP:20260616T233243
 CREATED:20260611T132659Z
 LAST-MODIFIED:20260611T132659Z
 UID:27830-1783499400-1783510200@hermannpark.org
@@ -246,7 +245,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260709T090000
 DTEND;TZID=America/Chicago:20260709T120000
-DTSTAMP:20260616T124643
+DTSTAMP:20260616T233243
 CREATED:20260615T153710Z
 LAST-MODIFIED:20260615T153710Z
 UID:27854-1783587600-1783598400@hermannpark.org

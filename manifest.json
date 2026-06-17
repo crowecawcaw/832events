@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T17:51:35.943Z",
+  "lastUpdated": "2026-06-17T04:34:16.913Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -192,19 +192,19 @@
       ]
     },
     {
-      "name": "rice-public-events",
-      "description": "Rice University",
-      "friendlyLink": "https://events.rice.edu/",
+      "name": "saint-arnold-brewing-company",
+      "description": "Saint Arnold Brewing Company",
+      "friendlyLink": "https://www.saintarnold.com/happenings/",
       "calendars": [
         {
-          "name": "rice-public-events",
-          "friendlyName": "Rice University - Open to the Public",
-          "icsUrl": "rice-public-events-rice-public-events.ics",
-          "rssUrl": "rice-public-events-rice-public-events.rss",
+          "name": "saint-arnold-brewing-company",
+          "friendlyName": "Saint Arnold Brewing Company",
+          "icsUrl": "saint-arnold-brewing-company-saint-arnold-brewing-company.ics",
+          "rssUrl": "saint-arnold-brewing-company-saint-arnold-brewing-company.rss",
           "tags": [
-            "Education",
-            "Art",
-            "Museum District"
+            "Beer",
+            "Nightlife",
+            "Montrose"
           ]
         }
       ]
@@ -262,6 +262,16 @@
     }
   ],
   "recurringCalendars": [
+    {
+      "name": "rice-village-farmers-market",
+      "friendlyName": "Rice Village Farmers Market",
+      "icsUrl": "recurring-rice-village-farmers-market.ics",
+      "rssUrl": "recurring-rice-village-farmers-market.rss",
+      "tags": [
+        "FarmersMarket",
+        "The Heights"
+      ]
+    },
     {
       "name": "urban-harvest",
       "friendlyName": "Urban Harvest Farmers Market",
@@ -334,16 +344,6 @@
       ]
     },
     {
-      "name": "eureka-heights-brew-co",
-      "friendlyName": "Eureka Heights Brewery",
-      "icsUrl": "external-eureka-heights-brew-co.ics",
-      "originalIcsUrl": "https://www.eurekaheights.com/?post_type=tribe_events&ical=1&eventDisplay=list",
-      "tags": [
-        "Beer",
-        "The Heights"
-      ]
-    },
-    {
       "name": "hermann-park",
       "friendlyName": "Hermann Park Conservancy",
       "description": "Hermann Park Conservancy",
@@ -355,19 +355,6 @@
         "Community",
         "Hermann Park",
         "Museum District"
-      ]
-    },
-    {
-      "name": "hobby-center",
-      "friendlyName": "Hobby Center for the Performing Arts",
-      "description": "Houston's premier performing arts center hosting Broadway touring productions, concerts, comedy, and dance performances in Downtown Houston.",
-      "icsUrl": "external-hobby-center.ics",
-      "originalIcsUrl": "https://www.thehobbycenter.org/?post_type=tribe_events&ical=1&eventDisplay=list",
-      "infoUrl": "https://www.thehobbycenter.org/events/",
-      "tags": [
-        "Arts",
-        "Downtown",
-        "Music"
       ]
     },
     {
@@ -416,20 +403,6 @@
       ]
     },
     {
-      "name": "levy-park-houston",
-      "friendlyName": "Levy Park Houston",
-      "description": "Levy Park Houston",
-      "icsUrl": "external-levy-park-houston.ics",
-      "originalIcsUrl": "https://www.levyparkhouston.org/events-calendar/?ical=1",
-      "infoUrl": "https://www.levyparkhouston.org/calendar/",
-      "tags": [
-        "Parks",
-        "Community",
-        "Upper Kirby",
-        "Outdoor Recreation"
-      ]
-    },
-    {
       "name": "tuts",
       "friendlyName": "Theatre Under The Stars",
       "description": "Broadway-style musical theater productions at the Hobby Center (Sarofim Hall) in Downtown Houston",
@@ -452,7 +425,6 @@
     "Community",
     "Downtown",
     "EaDo",
-    "Education",
     "FarmersMarket",
     "Food",
     "FoodFestival",
@@ -466,7 +438,6 @@
     "Music",
     "Near Northside",
     "Nightlife",
-    "Outdoor Recreation",
     "Parks",
     "Photography",
     "The Heights",

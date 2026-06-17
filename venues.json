@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-16T17:51:40.804Z",
+  "generated": "2026-06-17T04:34:27.033Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -214,40 +214,6 @@
       ]
     },
     {
-      "name": "eureka-heights-brew-co",
-      "friendlyName": "Eureka Heights Brewery",
-      "description": "Eureka Heights Brewery",
-      "tags": [
-        "Beer",
-        "The Heights"
-      ],
-      "geo": {
-        "lat": 29.7823,
-        "lng": -95.4181,
-        "label": "Eureka Heights Brewery, 2454 Sawyer St, Houston, TX 77007"
-      },
-      "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=Eureka%20Heights%20Brewery%2C%202454%20Sawyer%20St%2C%20Houston%2C%20TX%2077007"
-      },
-      "kind": "external",
-      "calendars": [
-        {
-          "name": "eureka-heights-brew-co",
-          "friendlyName": "Eureka Heights Brewery",
-          "links": {
-            "ics": {
-              "href": "external-eureka-heights-brew-co.ics",
-              "type": "text/calendar"
-            },
-            "rss": {
-              "href": "external-eureka-heights-brew-co.rss",
-              "type": "application/rss+xml"
-            }
-          }
-        }
-      ]
-    },
-    {
       "name": "hermann-park",
       "friendlyName": "Hermann Park Conservancy",
       "description": "Hermann Park Conservancy",
@@ -278,42 +244,6 @@
             },
             "rss": {
               "href": "external-hermann-park.rss",
-              "type": "application/rss+xml"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "name": "hobby-center",
-      "friendlyName": "Hobby Center for the Performing Arts",
-      "description": "Houston's premier performing arts center hosting Broadway touring productions, concerts, comedy, and dance performances in Downtown Houston.",
-      "url": "https://www.thehobbycenter.org/events/",
-      "tags": [
-        "Arts",
-        "Downtown",
-        "Music"
-      ],
-      "geo": {
-        "lat": 29.7563,
-        "lng": -95.3717,
-        "label": "Hobby Center for the Performing Arts, 800 Bagby St, Houston, TX 77002"
-      },
-      "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=Hobby%20Center%20for%20the%20Performing%20Arts%2C%20800%20Bagby%20St%2C%20Houston%2C%20TX%2077002"
-      },
-      "kind": "external",
-      "calendars": [
-        {
-          "name": "hobby-center",
-          "friendlyName": "Hobby Center for the Performing Arts",
-          "links": {
-            "ics": {
-              "href": "external-hobby-center.ics",
-              "type": "text/calendar"
-            },
-            "rss": {
-              "href": "external-hobby-center.rss",
               "type": "application/rss+xml"
             }
           }
@@ -601,43 +531,6 @@
       ]
     },
     {
-      "name": "levy-park-houston",
-      "friendlyName": "Levy Park Houston",
-      "description": "Levy Park Houston",
-      "url": "https://www.levyparkhouston.org/calendar/",
-      "tags": [
-        "Parks",
-        "Community",
-        "Upper Kirby",
-        "Outdoor Recreation"
-      ],
-      "geo": {
-        "lat": 29.7419,
-        "lng": -95.4169,
-        "label": "Levy Park, 3801 Main St, Houston, TX 77002"
-      },
-      "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=Levy%20Park%2C%203801%20Main%20St%2C%20Houston%2C%20TX%2077002"
-      },
-      "kind": "external",
-      "calendars": [
-        {
-          "name": "levy-park-houston",
-          "friendlyName": "Levy Park Houston",
-          "links": {
-            "ics": {
-              "href": "external-levy-park-houston.ics",
-              "type": "text/calendar"
-            },
-            "rss": {
-              "href": "external-levy-park-houston.rss",
-              "type": "application/rss+xml"
-            }
-          }
-        }
-      ]
-    },
-    {
       "name": "mcgonigels-mucky-duck",
       "friendlyName": "McGonigel's Mucky Duck",
       "description": "McGonigel's Mucky Duck",
@@ -744,35 +637,70 @@
       ]
     },
     {
-      "name": "rice-public-events",
-      "friendlyName": "Rice University",
-      "description": "Rice University",
-      "url": "https://events.rice.edu/",
+      "name": "rice-village-farmers-market",
+      "friendlyName": "Rice Village Farmers Market",
+      "description": "Community farmers market featuring local produce, artisan goods, and specialty foods.",
+      "url": "https://www.ricevillagehouston.com/",
       "tags": [
-        "Education",
-        "Art",
-        "Museum District"
+        "FarmersMarket",
+        "The Heights"
       ],
       "geo": {
-        "lat": 29.7174,
-        "lng": -95.4018,
-        "label": "Rice University, 6100 Main St, Houston, TX 77005"
+        "lat": 29.7428,
+        "lng": -95.4091,
+        "label": "Rice Village Farmers Market, Rice Village, Houston, TX 77005"
       },
       "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=Rice%20University%2C%206100%20Main%20St%2C%20Houston%2C%20TX%2077005"
+        "web": "https://www.google.com/maps/search/?api=1&query=Rice%20Village%20Farmers%20Market%2C%20Rice%20Village%2C%20Houston%2C%20TX%2077005"
+      },
+      "kind": "recurring",
+      "calendars": [
+        {
+          "name": "rice-village-farmers-market",
+          "friendlyName": "Rice Village Farmers Market",
+          "links": {
+            "ics": {
+              "href": "recurring-rice-village-farmers-market.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "recurring-rice-village-farmers-market.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "saint-arnold-brewing-company",
+      "friendlyName": "Saint Arnold Brewing Company",
+      "description": "Saint Arnold Brewing Company",
+      "url": "https://www.saintarnold.com/happenings/",
+      "tags": [
+        "Beer",
+        "Nightlife",
+        "Montrose"
+      ],
+      "geo": {
+        "lat": 29.7809,
+        "lng": -95.32,
+        "label": "Saint Arnold Brewing Company, 2000 Lyons Ave, Houston, TX 77020"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Saint%20Arnold%20Brewing%20Company%2C%202000%20Lyons%20Ave%2C%20Houston%2C%20TX%2077020"
       },
       "kind": "ripper",
       "calendars": [
         {
-          "name": "rice-public-events",
-          "friendlyName": "Rice University - Open to the Public",
+          "name": "saint-arnold-brewing-company",
+          "friendlyName": "Saint Arnold Brewing Company",
           "links": {
             "ics": {
-              "href": "rice-public-events-rice-public-events.ics",
+              "href": "saint-arnold-brewing-company-saint-arnold-brewing-company.ics",
               "type": "text/calendar"
             },
             "rss": {
-              "href": "rice-public-events-rice-public-events.rss",
+              "href": "saint-arnold-brewing-company-saint-arnold-brewing-company.rss",
               "type": "application/rss+xml"
             }
           }
