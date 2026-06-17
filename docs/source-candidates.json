@@ -691,8 +691,8 @@
   },
   {
     "name": "MATCH Houston",
-    "status": "candidate",
-    "platform": "Tribe Events (ICS, unverified)",
+    "status": "added",
+    "platform": "Custom HTML (Drupal)",
     "url": "https://matchouston.org/calendar",
     "tags": [
       "Theater",
@@ -700,7 +700,17 @@
       "Midtown"
     ],
     "firstSeen": "2026-06-16",
-    "lastChecked": "2026-06-16"
+    "lastChecked": "2026-06-17",
+    "pr": "pending",
+    "impl": {
+      "type": "custom",
+      "observedEventCount": 112,
+      "geo": {
+        "lat": 29.7250,
+        "lng": -95.3866,
+        "label": "MATCH Houston, 3400 Main St, Houston, TX 77002"
+      }
+    }
   },
   {
     "name": "McGonigel's Mucky Duck",
@@ -1191,5 +1201,117 @@
     ],
     "firstSeen": "2026-06-13",
     "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Stages Repertory Theatre",
+    "status": "investigating",
+    "platform": "Ticketmaster/Custom",
+    "url": "https://www.stagestheatre.com",
+    "tags": ["Theater", "Downtown"],
+    "firstSeen": "2026-06-17",
+    "lastChecked": "2026-06-17"
+  },
+  {
+    "name": "Catastrophic Theatre",
+    "status": "investigating",
+    "platform": "Custom/Ticketing",
+    "url": "https://www.catastrophic.org",
+    "tags": ["Theater", "Midtown"],
+    "firstSeen": "2026-06-17",
+    "lastChecked": "2026-06-17"
+  },
+  {
+    "name": "Mildred's Umbrella",
+    "status": "investigating",
+    "platform": "Custom/Ticketing",
+    "url": "https://www.mildredsumbrella.org",
+    "tags": ["Theater", "Montrose"],
+    "firstSeen": "2026-06-17",
+    "lastChecked": "2026-06-17"
+  },
+  {
+    "name": "Glassell School of Art",
+    "status": "investigating",
+    "platform": "Tribe Events/Custom",
+    "url": "https://www.glassellschoolofart.org",
+    "tags": ["Art", "Education", "Museum District"],
+    "firstSeen": "2026-06-17",
+    "lastChecked": "2026-06-17"
+  },
+  {
+    "name": "Houston Audubon Society",
+    "status": "added",
+    "platform": "Custom HTML (Firespring CMS)",
+    "url": "https://houstonaudubon.org",
+    "tags": ["Nature", "Education", "Community"],
+    "firstSeen": "2026-06-17",
+    "lastChecked": "2026-06-17",
+    "pr": "pending",
+    "impl": {
+      "type": "custom",
+      "observedEventCount": 22,
+      "geo": {
+        "lat": 29.8113,
+        "lng": -95.4700,
+        "label": "Houston Audubon Society, 6407 Westcott St, Houston, TX 77005"
+      }
+    }
+  },
+  {
+    "name": "Houston Botanic Garden",
+    "status": "added",
+    "platform": "REST API",
+    "url": "https://hbg.org/events/",
+    "tags": ["Nature", "Parks", "Gardens", "Braeswood"],
+    "firstSeen": "2026-06-17",
+    "lastChecked": "2026-06-17",
+    "pr": "pending",
+    "impl": {
+      "type": "custom",
+      "observedEventCount": 310,
+      "geo": {
+        "lat": 29.8265,
+        "lng": -95.3970,
+        "label": "Houston Botanic Garden, 346 New York Ave, Houston, TX 77003"
+      }
+    }
+  },
+  {
+    "name": "Armand Bayou Nature Preserve",
+    "status": "investigating",
+    "platform": "Tribe Events",
+    "url": "https://www.armandbayou.org",
+    "tags": ["Parks", "Nature", "Education"],
+    "firstSeen": "2026-06-17",
+    "lastChecked": "2026-06-17"
+  },
+  {
+    "name": "Treble Brewery",
+    "status": "investigating",
+    "platform": "Google Calendar",
+    "url": "https://www.treblebrewery.com",
+    "tags": ["Beer", "Montrose"],
+    "firstSeen": "2026-06-17",
+    "lastChecked": "2026-06-17"
+  },
+  {
+    "name": "Karbach Brewing Company",
+    "status": "added",
+    "platform": "Custom HTML",
+    "url": "https://karbachbrewing.com",
+    "tags": ["Beer", "Brewery", "Montrose"],
+    "firstSeen": "2026-06-17",
+    "lastChecked": "2026-06-17",
+    "pr": "pending",
+    "impl": {
+      "type": "custom",
+      "platform": "WordPress events grid with age-gate",
+      "proxy": true,
+      "geo": {
+        "lat": 29.8050,
+        "lng": -95.5028,
+        "label": "Karbach Brewing Company, 2032 Karbach St, Houston, TX 77092"
+      }
+    }
   }
 ]
