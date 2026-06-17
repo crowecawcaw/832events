@@ -1,0 +1,17 @@
+name: contemporary-arts-museum
+type: eventbrite
+description: "Contemporary Arts Museum Houston"
+url: https://camh.org/event-calendar/
+friendlyLink: https://camh.org/event-calendar/
+tags: [Art, Museums, Museum District]
+geo:
+  lat: 29.7261
+  lng: -95.3905
+  label: "Contemporary Arts Museum Houston, 5216 Montrose Blvd, Houston, TX 77006"
+calendars:
+  - name: contemporary-arts-museum
+    friendlyname: "Contemporary Arts Museum Houston"
+    timezone: America/Chicago
+    config:
+      organizerId: "5365268811"
+      defaultLocation: "5216 Montrose Blvd, Houston, TX 77006"
