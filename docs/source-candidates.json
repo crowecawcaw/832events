@@ -1,0 +1,1192 @@
+[
+  {
+    "name": "713 Music Hall",
+    "status": "added",
+    "platform": "Ticketmaster",
+    "url": "https://www.713musichall.com/",
+    "tags": [
+      "Music",
+      "Nightlife",
+      "Downtown"
+    ],
+    "firstSeen": "2026-06-15",
+    "lastChecked": "2026-06-16",
+    "pr": 36
+  },
+  {
+    "name": "Alley Theatre",
+    "status": "candidate",
+    "platform": "Ticketmaster",
+    "url": "https://www.alleytheatre.org/",
+    "tags": [
+      "Theater",
+      "Downtown"
+    ],
+    "firstSeen": "2026-06-16",
+    "lastChecked": "2026-06-16"
+  },
+  {
+    "name": "Anderson Fair",
+    "status": "candidate",
+    "platform": "Squarespace + Bandsintown",
+    "url": "https://www.andersonfair.net/",
+    "tags": [
+      "Music",
+      "Folk",
+      "Community",
+      "Montrose"
+    ],
+    "firstSeen": "2026-06-15",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Art League Houston",
+    "status": "investigating",
+    "platform": "Squarespace (endpoint disabled) — custom HTMLRipper",
+    "url": "https://www.artleaguehouston.org/events",
+    "tags": [
+      "Art",
+      "Montrose"
+    ],
+    "firstSeen": "2026-06-13",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Aurora Picture Show",
+    "status": "added",
+    "platform": "Squarespace (HTML/per-event ICS)",
+    "url": "https://www.aurorapictureshow.org/",
+    "tags": [
+      "Film",
+      "Arts",
+      "EaDo"
+    ],
+    "firstSeen": "2026-06-16",
+    "lastChecked": "2026-06-16",
+    "pr": 38,
+    "impl": {
+      "type": "custom",
+      "observedEventCount": 30,
+      "geo": {
+        "lat": 29.7195,
+        "lng": -95.3122,
+        "label": "Aurora Picture Show, 5601A Navigation Blvd, Houston, TX 77011"
+      }
+    }
+  },
+  {
+    "name": "Axelrad Beer Garden",
+    "status": "added",
+    "platform": "Google Calendar (ICS export)",
+    "url": "https://www.axelradhouston.com/",
+    "tags": [
+      "Music",
+      "Montrose"
+    ],
+    "firstSeen": "2026-06-16",
+    "lastChecked": "2026-06-16",
+    "pr": 34,
+    "impl": {
+      "type": "external",
+      "icsUrl": "https://calendar.google.com/calendar/ical/r90785d3i81770k8r28jov6b9g%40group.calendar.google.com/public/basic.ics",
+      "infoUrl": "https://www.axelradhouston.com/calendar",
+      "observedEventCount": 306,
+      "builtEventCount": 306,
+      "note": "Correct calendar ID found in website embedded viewer; 306 upcoming events in lookahead window",
+      "geo": {
+        "lat": 29.7272,
+        "lng": -95.3447,
+        "label": "Axelrad Beer Garden, 1517 Alabama St, Houston, TX 77010"
+      }
+    }
+  },
+  {
+    "name": "Bad Astronaut Brewery",
+    "status": "added",
+    "platform": "The Events Calendar (WordPress)",
+    "url": "https://badastronautbeer.com/",
+    "tags": [
+      "Beer",
+      "Brewery",
+      "Montrose"
+    ],
+    "firstSeen": "2026-06-15",
+    "lastChecked": "2026-06-15",
+    "pr": 27,
+    "impl": {
+      "feedUrl": "https://badastronautbeer.com/?tribe-events-list=&tribe-bar-date=2026-06-15",
+      "observedEventCount": "35+",
+      "timezone": "America/Chicago",
+      "geo": {
+        "lat": 29.7683,
+        "lng": -95.3628,
+        "label": "Bad Astronaut Brewery, Houston, TX"
+      }
+    }
+  },
+  {
+    "name": "Basket Books & Art",
+    "status": "candidate",
+    "platform": "Eventbrite (with custom site listings)",
+    "url": "https://www.basket-books.com/",
+    "tags": [
+      "Books",
+      "Arts",
+      "Montrose"
+    ],
+    "firstSeen": "2026-06-16",
+    "lastChecked": "2026-06-16",
+    "impl": {
+      "type": "custom",
+      "observedEventCount": 4,
+      "geo": {
+        "lat": 29.7323,
+        "lng": -95.4054,
+        "label": "Basket Books & Art, 115 Hyde Park Blvd, Houston, TX 77006"
+      }
+    }
+  },
+  {
+    "name": "Blue Willow Bookshop",
+    "status": "investigating",
+    "platform": "Drupal 11 + Commerce 3 (IndieCommerce) — server-rendered",
+    "url": "https://www.bluewillowbookshop.com/events",
+    "tags": [
+      "Books"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-15",
+    "impl": {
+      "scrapable": "Yes (server-rendered HTML) — no JavaScript rendering required",
+      "selectors": "Event cards in structured HTML list; title, date, time, description visible in page source",
+      "feedAttempted": "/?ical=1, /events/feed, .json endpoints — all blocked by SiteGround Obolus antibot challenge"
+    }
+  },
+  {
+    "name": "Brazos Bookstore",
+    "status": "investigating",
+    "platform": "Drupal 11 + Commerce 3 (IndieCommerce) — server-rendered",
+    "url": "https://www.brazosbookstore.com/events",
+    "tags": [
+      "Books",
+      "West University"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-15",
+    "impl": {
+      "scrapable": "Yes (server-rendered HTML) — no JavaScript rendering required",
+      "selectors": "Event cards in structured HTML list; title, date, time, description visible in page source",
+      "feedAttempted": "/?ical=1, /events/feed, .json endpoints — all blocked by SiteGround Obolus antibot challenge"
+    }
+  },
+  {
+    "name": "Buffalo Bayou Partnership",
+    "status": "added",
+    "platform": "Tribe Events (ICS)",
+    "url": "https://buffalobayou.org/events/",
+    "tags": [
+      "Parks",
+      "Downtown"
+    ],
+    "firstSeen": "2026-06-13",
+    "lastChecked": "2026-06-13",
+    "pr": "TBD"
+  },
+  {
+    "name": "Cactus Music",
+    "status": "dead",
+    "platform": "Unknown (domain sold)",
+    "url": "https://cactusmusic.com/",
+    "tags": [
+      "Music",
+      "Montrose"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-14",
+    "notes": "Legendary Houston independent record store at 2110 Portsmouth St (Montrose), in"
+  },
+  {
+    "name": "Contemporary Arts Museum Houston",
+    "status": "candidate",
+    "platform": "Eventbrite",
+    "url": "https://camh.org/event-calendar/",
+    "tags": [
+      "Art",
+      "Museums",
+      "Museum District"
+    ],
+    "firstSeen": "2026-06-13",
+    "lastChecked": "2026-06-15",
+    "impl": {
+      "type": "eventbrite",
+      "organizerId": "5365268811",
+      "observedEventCount": 6,
+      "geo": {
+        "lat": 29.7261,
+        "lng": -95.3905,
+        "label": "Contemporary Arts Museum Houston, 5216 Montrose Blvd, Houston, TX 77006"
+      }
+    }
+  },
+  {
+    "name": "Dan Electro's Guitar Bar",
+    "status": "candidate",
+    "platform": "Custom HTML",
+    "url": "https://danelectrosguitar.com/",
+    "tags": [
+      "Music",
+      "Rock",
+      "Blues",
+      "The Heights"
+    ],
+    "firstSeen": "2026-06-15",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Discovery Green",
+    "status": "investigating",
+    "platform": "Tribe Events (ICS broken — returns HTML)",
+    "url": "https://www.discoverygreen.com/events",
+    "tags": [
+      "Downtown",
+      "Parks",
+      "Community"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "DiverseWorks",
+    "status": "added",
+    "platform": "Tribe Events (ICS)",
+    "url": "https://diverseworks.org/event-calendar/",
+    "tags": [
+      "Art",
+      "Midtown"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-14"
+  },
+  {
+    "name": "Doc's Houston",
+    "status": "candidate",
+    "platform": "Custom / TurnTable",
+    "url": "https://docshouston.com/",
+    "tags": [
+      "Music",
+      "Jazz",
+      "Montrose"
+    ],
+    "firstSeen": "2026-06-15",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Eldorado Ballroom",
+    "status": "candidate",
+    "platform": "Custom",
+    "url": "https://www.eldoradoballroom.com/",
+    "tags": [
+      "Music",
+      "Jazz",
+      "Community",
+      "Third Ward"
+    ],
+    "firstSeen": "2026-06-15",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Ensemble Theatre Houston",
+    "status": "added",
+    "platform": "Custom HTML ripper",
+    "url": "https://www.ensemblehouston.com/",
+    "tags": [
+      "Theater",
+      "Midtown"
+    ],
+    "firstSeen": "2026-06-16",
+    "lastChecked": "2026-06-16",
+    "pr": 36,
+    "impl": {
+      "type": "custom",
+      "geo": {
+        "lat": 29.7301,
+        "lng": -95.4105,
+        "label": "Ensemble Theatre Houston, 3535 Main St, Houston, TX 77002"
+      }
+    }
+  },
+  {
+    "name": "Eureka Heights Brew Co",
+    "status": "added",
+    "platform": "Tribe Events (ICS)",
+    "url": "https://www.eurekaheights.com/eureka-events/",
+    "tags": [
+      "Beer",
+      "The Heights"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-14",
+    "pr": "(in progress)"
+  },
+  {
+    "name": "Good on Paper Bookshop",
+    "status": "candidate",
+    "platform": "IndieCommerce / Custom",
+    "url": "https://www.goodonpaperbookshop.com/",
+    "tags": [
+      "Books",
+      "Community",
+      "The Heights"
+    ],
+    "firstSeen": "2026-06-15",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Hermann Park Conservancy",
+    "status": "added",
+    "platform": "ICS/iCal Feed",
+    "url": "https://www.hermannpark.org/events/",
+    "tags": [
+      "Parks",
+      "Outdoor Recreation",
+      "Museums",
+      "Hermann Park"
+    ],
+    "firstSeen": "2026-06-15",
+    "lastChecked": "2026-06-15",
+    "pr": "TBD"
+  },
+  {
+    "name": "Holocaust Museum Houston",
+    "status": "added",
+    "platform": "Tribe Events (ICS)",
+    "url": "https://hmh.org/events/",
+    "tags": [
+      "Museum District",
+      "Museums",
+      "Community"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-14",
+    "pr": "(pending)"
+  },
+  {
+    "name": "House of Blues Houston",
+    "status": "added",
+    "platform": "Ticketmaster",
+    "url": "https://houston.houseofblues.com/",
+    "tags": [
+      "Music",
+      "Downtown"
+    ],
+    "firstSeen": "2026-06-13",
+    "lastChecked": "2026-06-15",
+    "pr": 28
+  },
+  {
+    "name": "Houston Arboretum & Nature Center",
+    "status": "added",
+    "platform": "Tribe Events (ICS)",
+    "url": "https://houstonarboretum.org/events/",
+    "tags": [
+      "Parks",
+      "Memorial"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-14",
+    "pr": "claude/zen-cray-gch1y6"
+  },
+  {
+    "name": "Houston Astros",
+    "status": "investigating",
+    "platform": "MLB.com / CalendarLabs",
+    "url": "https://www.mlb.com/astros/schedule",
+    "tags": [
+      "Sports",
+      "Baseball",
+      "MLB"
+    ],
+    "firstSeen": "2026-06-15",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Houston Ballet",
+    "status": "investigating",
+    "platform": "Ticketmaster (attraction-only)",
+    "url": "https://www.houstonballet.org/seasontickets/calendar/",
+    "tags": [
+      "Dance",
+      "Downtown"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Houston Botanic Garden",
+    "status": "candidate",
+    "platform": "Tribe Events (ICS, unverified)",
+    "url": "https://hbg.org/events/",
+    "tags": [
+      "Nature",
+      "Parks",
+      "Gardens",
+      "Braeswood"
+    ],
+    "firstSeen": "2026-06-16",
+    "lastChecked": "2026-06-16"
+  },
+  {
+    "name": "Houston Center for Photography",
+    "status": "added",
+    "platform": "Custom HTML ripper (Squarespace)",
+    "url": "https://www.edu.hcponline.org/events",
+    "tags": [
+      "Arts",
+      "Photography",
+      "Montrose"
+    ],
+    "firstSeen": "2026-06-16",
+    "lastChecked": "2026-06-16",
+    "pr": 36,
+    "impl": {
+      "type": "custom",
+      "geo": {
+        "lat": 29.7389,
+        "lng": -95.4214,
+        "label": "Houston Center for Photography, 1441 W Alabama St, Houston, TX 77006"
+      }
+    }
+  },
+  {
+    "name": "Houston Farmers Market",
+    "status": "added",
+    "platform": "Tribe Events (ICS)",
+    "url": "https://www.thehoustonfarmersmarket.com/events/",
+    "tags": [
+      "FarmersMarket",
+      "MakersMarket",
+      "The Heights"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-14",
+    "pr": "(in progress)"
+  },
+  {
+    "name": "Houston Heights Association",
+    "status": "added",
+    "platform": "Tribe Events (ICS)",
+    "url": "https://houstonheights.org/events/",
+    "tags": [
+      "The Heights",
+      "Community"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-14",
+    "pr": "(in progress)"
+  },
+  {
+    "name": "Houston Improv",
+    "status": "added",
+    "platform": "AXS",
+    "url": "https://improvtx.com/houston/",
+    "tags": [
+      "Comedy"
+    ],
+    "firstSeen": "2026-06-13",
+    "lastChecked": "2026-06-13",
+    "pr": 28,
+    "impl": {
+      "type": "axs",
+      "venueId": 130678,
+      "venueSlug": "houston-improv-houston-tickets",
+      "observedEventCount": 109,
+      "geo": {
+        "lat": 29.7695,
+        "lng": -95.4975,
+        "label": "Houston Improv, 7620 Katy Freeway, Houston, TX 77024"
+      }
+    }
+  },
+  {
+    "name": "Houston Museum of Natural Science",
+    "status": "notviable",
+    "platform": "Tessitura (no public feed)",
+    "url": "https://www.hmns.org/events/",
+    "tags": [
+      "Museum District",
+      "Museums"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-14",
+    "notes": "Major natural history museum at 5555 Hermann Park Dr, Houston, TX 77030"
+  },
+  {
+    "name": "Houston Public Library",
+    "status": "investigating",
+    "platform": "LibCal (RSS only, no usable ICS)",
+    "url": "https://calendar.houstonlibrary.org/calendar/events",
+    "tags": [
+      "Books",
+      "Education",
+      "Community"
+    ],
+    "firstSeen": "2026-06-13",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Houston Rockets",
+    "status": "investigating",
+    "platform": "NBA.com / CalendarLabs",
+    "url": "https://www.nba.com/rockets/schedule",
+    "tags": [
+      "Sports",
+      "Basketball",
+      "NBA"
+    ],
+    "firstSeen": "2026-06-15",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Houston Symphony",
+    "status": "investigating",
+    "platform": "Ticketmaster",
+    "url": "https://houstonsymphony.org/performance-calendar/",
+    "tags": [
+      "Music",
+      "Downtown"
+    ],
+    "firstSeen": "2026-06-13",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Houston Texans",
+    "status": "investigating",
+    "platform": "Ticketmaster (only known source)",
+    "url": "https://www.houstontexans.com/schedule/",
+    "tags": [
+      "Sports",
+      "Football",
+      "NFL"
+    ],
+    "firstSeen": "2026-06-15",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "inprint-houston",
+    "status": "added",
+    "platform": "The Events Calendar (Tribe Events plugin)",
+    "url": "https://inprinthouston.org/calendar/",
+    "tags": [
+      "Books",
+      "Museum District"
+    ],
+    "firstSeen": "2026-06-15",
+    "lastChecked": "2026-06-16",
+    "impl": {
+      "type": "external",
+      "icsUrl": "https://inprinthouston.org/?post_type=tribe_events&ical=1&eventDisplay=list",
+      "infoUrl": "https://inprinthouston.org/calendar/",
+      "observedEventCount": 6,
+      "geo": {
+        "lat": 29.728,
+        "lng": -95.396,
+        "label": "Inprint Houston, 1520 W Main St, Houston, TX 77006"
+      },
+      "proxy": true
+    }
+  },
+  {
+    "name": "Ion District",
+    "status": "investigating",
+    "platform": "Community Calendar (Tribe Events - WPEngine hosted)",
+    "url": "https://iondistrict.com/events/",
+    "tags": [
+      "Community",
+      "Tech",
+      "Innovation",
+      "Midtown"
+    ],
+    "firstSeen": "2026-06-15",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Kindred Stories",
+    "status": "added",
+    "platform": "Eventbrite",
+    "url": "https://kindredstorieshtx.com/",
+    "firstSeen": "2026-06-15",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Lake Houston Brewery",
+    "status": "candidate",
+    "platform": "Wix (HTML scraper)",
+    "url": "https://www.lakehoustonbrew.com/",
+    "tags": [
+      "Beer",
+      "Music",
+      "Northside"
+    ],
+    "firstSeen": "2026-06-16",
+    "lastChecked": "2026-06-16",
+    "impl": {
+      "type": "custom",
+      "observedEventCount": 25,
+      "geo": {
+        "lat": 30.0654,
+        "lng": -95.1242,
+        "label": "Lake Houston Brewery, 10614 FM 1960 W, Humble, TX 77338"
+      }
+    }
+  },
+  {
+    "name": "Latin City",
+    "status": "candidate",
+    "platform": "Eventbrite",
+    "url": "https://latincity.eventbrite.com",
+    "firstSeen": "2026-06-15",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Lawndale Art Center",
+    "status": "candidate",
+    "platform": "WordPress + custom HTML (no ICS/API available)",
+    "url": "https://lawndaleartcenter.org/events/",
+    "tags": [
+      "Art",
+      "Museum District"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Levy Park Houston",
+    "status": "added",
+    "platform": "ICS/iCal Feed",
+    "url": "https://www.levyparkhouston.org/calendar/",
+    "tags": [
+      "Parks",
+      "Community",
+      "Upper Kirby",
+      "Outdoor Recreation"
+    ],
+    "firstSeen": "2026-06-15",
+    "lastChecked": "2026-06-15",
+    "pr": "TBD"
+  },
+  {
+    "name": "Main Street Theater",
+    "status": "investigating",
+    "platform": "Easy-Ware Ticketing (custom)",
+    "url": "https://mainstreettheater.com/",
+    "tags": [
+      "Theatre",
+      "Midtown"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-14"
+  },
+  {
+    "name": "MATCH Houston",
+    "status": "candidate",
+    "platform": "Tribe Events (ICS, unverified)",
+    "url": "https://matchouston.org/calendar",
+    "tags": [
+      "Theater",
+      "Art",
+      "Midtown"
+    ],
+    "firstSeen": "2026-06-16",
+    "lastChecked": "2026-06-16"
+  },
+  {
+    "name": "McGonigel's Mucky Duck",
+    "status": "candidate",
+    "platform": "WordPress (Tessera Events) - custom HTML",
+    "url": "https://www.mcgonigels.com/",
+    "tags": [
+      "Music",
+      "Upper Kirby"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-15",
+    "impl": {
+      "type": "custom",
+      "ripper": "sources/mcgonigels-mucky-duck/ripper.ts",
+      "extractionPath": "eventObjects.push({...}) regex on homepage HTML",
+      "eventCount": "98 (unit test on 2026-06-15 sample)",
+      "sampleDate": "2026-06-15"
+    }
+  },
+  {
+    "name": "Menil Collection",
+    "status": "notviable",
+    "platform": "Custom (no public feed)",
+    "url": "https://www.menil.org/calendar",
+    "tags": [
+      "Museum District",
+      "Museums",
+      "Art"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-14",
+    "notes": "World-class free art museum at 1533 Sul Ross St, Houston, TX 77006 (Montrose /"
+  },
+  {
+    "name": "Midtown Houston Management District",
+    "status": "investigating",
+    "platform": "The Events Calendar (Cloudflare-protected)",
+    "url": "https://midtownhouston.com/explore/events/",
+    "tags": [
+      "Community",
+      "Arts",
+      "Midtown"
+    ],
+    "firstSeen": "2026-06-15",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Miller Outdoor Theatre",
+    "status": "investigating",
+    "platform": "Custom HTML",
+    "url": "https://www.milleroutdoortheatre.com/performances/",
+    "tags": [
+      "Theatre",
+      "Music",
+      "Museum District"
+    ],
+    "firstSeen": "2026-06-13",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Montrose Center",
+    "status": "notviable",
+    "platform": "Tribe Events (ICS)",
+    "url": "https://montrosecenter.org/events/",
+    "tags": [
+      "Montrose",
+      "Community"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-16",
+    "pr": 10,
+    "notes": "LGBTQ+ community center at 401 Branard St, Houston, TX 77006 (Montrose)."
+  },
+  {
+    "name": "Mossrose Bookshop",
+    "status": "candidate",
+    "platform": "Shopify",
+    "url": "https://www.mossrosebooks.com/",
+    "tags": [
+      "Books",
+      "Community",
+      "EaDo"
+    ],
+    "firstSeen": "2026-06-15",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Murder By The Book",
+    "status": "candidate",
+    "platform": "Drupal 11 + IndieCommerce (HTML-only)",
+    "url": "https://www.murderbooks.com/events",
+    "tags": [
+      "Books",
+      "West University"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Museum of Fine Arts Houston",
+    "status": "investigating",
+    "platform": "Unknown (Cloudflare-blocked; per-event iCalendar export only)",
+    "url": "https://www.mfah.org/events",
+    "tags": [
+      "Art",
+      "Museums",
+      "Museum District"
+    ],
+    "firstSeen": "2026-06-13",
+    "lastChecked": "2026-06-15",
+    "impl": {
+      "note": "Cloudflare WAF blocks all bot requests. No subscribable ICS feed found via curl, JSON endpoint, or direct /events.ics probes. Site exports individual event .ics files only. Platform is custom CMS (not Tribe Events, Eventbrite, Squarespace, Ticketmaster, or Localist). Would need a custom ripper with proxy: true (live Browserbase fetch) to parse events. High-value source; defer until that is verified."
+    }
+  },
+  {
+    "name": "NOTO Houston",
+    "status": "investigating",
+    "url": "https://notohtx.com",
+    "firstSeen": "2026-06-15",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Notsuoh",
+    "status": "candidate",
+    "platform": "Squarespace (HTML)",
+    "url": "http://notsuoh.com/",
+    "tags": [
+      "Music",
+      "Nightlife",
+      "Arts",
+      "Downtown"
+    ],
+    "firstSeen": "2026-06-16",
+    "lastChecked": "2026-06-16",
+    "impl": {
+      "type": "custom",
+      "observedEventCount": 8,
+      "geo": {
+        "lat": 29.7603,
+        "lng": -95.3866,
+        "label": "Notsuoh, 314 Main St, Houston, TX 77002"
+      }
+    }
+  },
+  {
+    "name": "Pearl Bar Houston",
+    "status": "candidate",
+    "platform": "Squarespace",
+    "url": "https://www.pearlhouston.com/calendar",
+    "tags": [
+      "Nightlife",
+      "LGBTQ",
+      "Washington Avenue"
+    ],
+    "firstSeen": "2026-06-16",
+    "lastChecked": "2026-06-16"
+  },
+  {
+    "name": "Performing Arts Houston",
+    "status": "investigating",
+    "platform": "Unknown (calendar subscription page exists)",
+    "url": "https://performingartshouston.org/events/",
+    "tags": [
+      "Music",
+      "Theater",
+      "Art",
+      "Downtown"
+    ],
+    "firstSeen": "2026-06-16",
+    "lastChecked": "2026-06-16"
+  },
+  {
+    "name": "Pride Houston 365",
+    "status": "added",
+    "platform": "Eventbrite",
+    "url": "https://www.eventbrite.com/o/pride-houston-19231282193",
+    "tags": [
+      "Community"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-15",
+    "pr": 28
+  },
+  {
+    "name": "Project Row Houses",
+    "status": "added",
+    "platform": "Eventbrite",
+    "url": "https://projectrowhouses.org/",
+    "tags": [
+      "Art",
+      "Community",
+      "Third Ward"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-16",
+    "pr": 34,
+    "impl": {
+      "type": "eventbrite",
+      "organizerId": "8766639900",
+      "observedEventCount": 8,
+      "builtEventCount": 410,
+      "note": "410 events includes recurring weekly lessons and performances expanded across event window",
+      "geo": {
+        "lat": 29.7319,
+        "lng": -95.3653,
+        "label": "Project Row Houses, 2521 Holman St, Houston, TX 77004"
+      }
+    }
+  },
+  {
+    "name": "Punch Line Comedy Club",
+    "status": "candidate",
+    "platform": "Ticketmaster",
+    "url": "https://www.punchlinecomedyclub.com/",
+    "tags": [
+      "Comedy",
+      "Entertainment",
+      "Downtown"
+    ],
+    "firstSeen": "2026-06-15",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Rice University Events",
+    "status": "added",
+    "platform": "LiveWhale (ICS)",
+    "url": "https://events.rice.edu/",
+    "tags": [
+      "Education",
+      "Art",
+      "Museum District"
+    ],
+    "firstSeen": "2026-06-13",
+    "lastChecked": "2026-06-16",
+    "pr": "claude/832events-sources-fixes-4nd5e8"
+  },
+  {
+    "name": "Rice Village Farmers Market",
+    "status": "added",
+    "platform": "Recurring",
+    "url": "https://ricefarmersmarket.org/",
+    "tags": [
+      "FarmersMarket",
+      "Community",
+      "The Heights"
+    ],
+    "firstSeen": "2026-06-15",
+    "lastChecked": "2026-06-16",
+    "pr": 38
+  },
+  {
+    "name": "Saint Arnold Brewing Company",
+    "status": "added",
+    "platform": "Custom HTML",
+    "url": "https://www.saintarnold.com/",
+    "tags": [
+      "Beer",
+      "Food",
+      "EastEnd"
+    ],
+    "firstSeen": "2026-06-16",
+    "lastChecked": "2026-06-16",
+    "pr": 38,
+    "impl": {
+      "type": "custom",
+      "observedEventCount": 16,
+      "geo": {
+        "lat": 29.7809,
+        "lng": -95.32,
+        "label": "Saint Arnold Brewing Company, 2000 Lyons Ave, Houston, TX 77020"
+      }
+    }
+  },
+  {
+    "name": "Sawyer Yards / Silver Street Studios",
+    "status": "investigating",
+    "platform": "ctycms (custom CMS)",
+    "url": "https://www.sawyeryards.com/events/upcoming-events",
+    "tags": [
+      "Art",
+      "First Ward"
+    ],
+    "firstSeen": "2026-06-15",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Scout Bar",
+    "status": "added",
+    "platform": "AXS",
+    "url": "https://scoutbar.com/calendar/",
+    "tags": [
+      "Music",
+      "South Houston"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-16",
+    "pr": 34,
+    "impl": {
+      "type": "axs",
+      "venueId": 130538,
+      "venueSlug": "scout-bar-houston",
+      "observedEventCount": null,
+      "geo": {
+        "lat": 29.5699,
+        "lng": -95.1248,
+        "label": "Scout Bar, 18307 Egret Bay Blvd, Houston, TX 77058"
+      }
+    }
+  },
+  {
+    "name": "South Beach Houston",
+    "status": "candidate",
+    "platform": "Eventbrite",
+    "url": "https://www.southbeachhouston.com/",
+    "tags": [
+      "Nightlife",
+      "LGBTQ",
+      "Midtown"
+    ],
+    "firstSeen": "2026-06-16",
+    "lastChecked": "2026-06-16"
+  },
+  {
+    "name": "Station Theater",
+    "status": "investigating",
+    "platform": "Squarespace + CrowdWork",
+    "url": "https://stationtheater.com/",
+    "tags": [
+      "Comedy",
+      "First Ward"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Stereo Live Houston",
+    "status": "added",
+    "platform": "AXS",
+    "url": "https://www.stereolivehouston.com/",
+    "tags": [
+      "Music",
+      "Nightlife"
+    ],
+    "firstSeen": "2026-06-15",
+    "lastChecked": "2026-06-15",
+    "pr": 28,
+    "impl": {
+      "type": "axs",
+      "axsVenueId": "126004",
+      "axsVenueSlug": "stereo-live-houston-houston-tickets"
+    }
+  },
+  {
+    "name": "The Heights Theater",
+    "status": "added",
+    "platform": "AXS",
+    "url": "https://theheightstheater.com/",
+    "tags": [
+      "Music",
+      "The Heights"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "The Hobby Center for the Performing Arts",
+    "status": "added",
+    "platform": "Tribe Events (ICS)",
+    "url": "https://www.thehobbycenter.org/events",
+    "tags": [
+      "Theatre",
+      "Music",
+      "Downtown"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-14",
+    "pr": 13
+  },
+  {
+    "name": "The Mood Room",
+    "status": "added",
+    "platform": "Squarespace",
+    "url": "https://www.themoodroomhouston.com/",
+    "tags": [
+      "Comedy",
+      "Entertainment",
+      "EaDo"
+    ],
+    "firstSeen": "2026-06-15",
+    "lastChecked": "2026-06-16",
+    "pr": 37,
+    "impl": {
+      "feedUrl": "https://www.themoodroomhouston.com/events",
+      "observedEventCount": 8,
+      "timezone": "America/Chicago",
+      "geo": {
+        "lat": 29.7446648,
+        "lng": -95.3390657,
+        "label": "The Mood Room, 711 Milby St, Houston, TX 77023"
+      }
+    }
+  },
+  {
+    "name": "The Riot Houston",
+    "status": "investigating",
+    "platform": "StandUpTix (unknown)",
+    "url": "https://www.theriothtx.com/",
+    "tags": [
+      "Comedy",
+      "Montrose"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-14"
+  },
+  {
+    "name": "The Secret Group",
+    "status": "added",
+    "platform": "Eventbrite",
+    "url": "https://www.thesecretgrouphtx.com/",
+    "tags": [
+      "Comedy",
+      "Music",
+      "EaDo"
+    ],
+    "firstSeen": "2026-06-15",
+    "lastChecked": "2026-06-16",
+    "pr": 34
+  },
+  {
+    "name": "Theatre Under The Stars (TUTS)",
+    "status": "added",
+    "platform": "Tribe Events (ICS)",
+    "url": "https://www.tuts.org/shows/",
+    "tags": [
+      "Theatre",
+      "Music",
+      "Downtown"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-14",
+    "pr": "(in progress)"
+  },
+  {
+    "name": "Urban Harvest",
+    "status": "added",
+    "platform": "Recurring YAML (Saturday market)",
+    "url": "https://www.urbanharvest.org/events/",
+    "tags": [
+      "FarmersMarket",
+      "Upper Kirby"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Warehouse Live",
+    "status": "investigating",
+    "platform": "WordPress + SeeTickets embed (custom HTML only)",
+    "url": "https://warehouselivemidtown.com/calendar/",
+    "tags": [
+      "Music",
+      "EaDo"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Wedgewood Houston Farmers' Market",
+    "status": "added",
+    "platform": "Recurring YAML",
+    "url": "https://www.wedgewoodhoustonfarmersmarket.com/schedule",
+    "tags": [
+      "FarmersMarket"
+    ],
+    "firstSeen": "2026-06-14",
+    "lastChecked": "2026-06-14",
+    "pr": "TBD"
+  },
+  {
+    "name": "White Oak Music Hall",
+    "status": "added",
+    "platform": "Ticketmaster",
+    "url": "https://whiteoakmusichall.com/",
+    "tags": [
+      "Music",
+      "The Heights"
+    ],
+    "firstSeen": "2026-06-13",
+    "lastChecked": "2026-06-15"
+  }
+]

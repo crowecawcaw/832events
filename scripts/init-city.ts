@@ -273,8 +273,8 @@ maintenance workflow.
    in \`docs/routines.md\` (build-error responder, daily source discovery,
    daily source implementation) run as GitHub Actions using the
    \`CLAUDE_CODE_OAUTH_TOKEN\` secret.
-3. **Optional services**: Discord notifications, out-of-band proxy,
-   favorites/sign-in — \`docs/SETUP.md\` step 7.
+3. **Optional services**: Discord notifications, Browserbase proxy —
+   \`docs/SETUP.md\` step 7.
 
 ## Request a new calendar
 
@@ -287,7 +287,7 @@ export function renderIdeasMd(cfg: CityConfig): string {
     return `# ${cfg.site.name} Feature Ideas
 
 Non-source feature ideas and improvements for ${cfg.site.name}. Source
-candidates live in \`docs/source-candidates/\` (one file per candidate).
+candidates live in \`docs/source-candidates.json\`.
 `;
 }
 
@@ -335,15 +335,9 @@ export async function buildActions(root: string, cfg: CityConfig): Promise<Strip
         add(`keep sources/${sub}/ via .gitkeep`, () => writeFile(join(root, "sources", sub, ".gitkeep"), ""));
     }
 
-    // 4. Source-candidate docs and discovery log (keep each README.md)
-    for (const sub of ["docs/source-candidates", "docs/discovery-log"]) {
-        const files = (await listDir(join(root, sub))).filter(f => f !== "README.md");
-        for (const f of files) {
-            add(`delete ${sub}/${f}`, () => rm(join(root, sub, f), { force: true, recursive: true }));
-        }
-    }
-    add("delete legacy docs/source-candidates.md (if present)", () =>
-        rm(join(root, "docs", "source-candidates.md"), { force: true }));
+    // 4. Source candidates: reset the tracking file to an empty array.
+    add("reset docs/source-candidates.json to an empty list", () =>
+        writeFile(join(root, "docs", "source-candidates.json"), "[]\n"));
 
     // 5. allowed-removals/ markers (keep the dir via .gitkeep)
     const removals = (await listDir(join(root, "allowed-removals"))).filter(f => f !== ".gitkeep");
@@ -353,12 +347,9 @@ export async function buildActions(root: string, cfg: CityConfig): Promise<Strip
     add("keep allowed-removals/ via .gitkeep", () =>
         writeFile(join(root, "allowed-removals", ".gitkeep"), ""));
 
-    // 6. Caches: uncertainty cache resets to the empty baseline; the
-    // out-of-band report is seed data and the build tolerates its absence.
+    // 6. Caches: uncertainty cache resets to the empty baseline.
     add("reset event-uncertainty-cache.json to the empty baseline", () =>
         writeFile(join(root, "event-uncertainty-cache.json"), JSON.stringify({ version: 1, entries: {} }, null, 2) + "\n"));
-    add("delete outofband-report.json", () =>
-        rm(join(root, "outofband-report.json"), { force: true }));
     // The upstream-feature-sync ledger resets to the empty baseline; the copy's
     // first `npm run feature-sync` establishes its own baseline against upstream.
     add("reset feature-sync.json to the empty baseline", () =>

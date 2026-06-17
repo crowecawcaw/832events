@@ -18,13 +18,12 @@ maintenance workflow.
    especially), enable GitHub Pages (source: the `gh-pages` branch) and set
    the custom-domain DNS + GitHub secrets (`docs/SETUP.md`), and add your
    first sources — `skills/source-discovery/SKILL.md`.
-2. **Self-maintain**: the three Claude Code automation workflows catalogued
-   in `docs/routines.md` (build-error responder, daily source discovery,
-   daily source implementation) run as GitHub Actions using the
-   `CLAUDE_CODE_OAUTH_TOKEN` secret. Owner-driven `@claude` mentions and PR
-   review are owner-gated.
-3. **Optional services**: Discord notifications, out-of-band proxy,
-   favorites/sign-in — `docs/SETUP.md` step 7.
+2. **Self-maintain**: the Claude Code automation workflows catalogued in
+   `docs/routines.md` (build-error responder, daily source pipeline) run as
+   GitHub Actions using the `CLAUDE_CODE_OAUTH_TOKEN` secret. Owner-driven
+   `@claude` mentions and PR review are owner-gated.
+3. **Optional services**: Discord notifications, Browserbase proxy —
+   `docs/SETUP.md` step 7.
 
 ## Request a new calendar
 

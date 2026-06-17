@@ -31,11 +31,10 @@ describe("classifyPath", () => {
         }
     });
 
-    it("treats top-level design docs as engine but candidate/discovery docs as content", () => {
+    it("treats top-level design docs as engine but the candidates file as content", () => {
         expect(classifyPath("docs/upstream-feature-sync.md")).toBe("engine");
         expect(classifyPath("docs/plans/something.md")).toBe("engine");
-        expect(classifyPath("docs/source-candidates/foo.md")).toBe("content");
-        expect(classifyPath("docs/discovery-log/2026-01-01.md")).toBe("content");
+        expect(classifyPath("docs/source-candidates.json")).toBe("content");
     });
 
     it("treats per-city content as content", () => {

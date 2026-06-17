@@ -17,7 +17,7 @@ Setup lands in tiers — stop at whichever one you want:
    implemented — without you in the loop. The workflow set, with suggested
    prompts, is catalogued in [`docs/routines.md`](./routines.md).
 3. **Full product** (+ the remaining step 7 services): Discord build
-   notifications and the out-of-band proxy for bot-blocked sources.
+   notifications and the Browserbase proxy for bot-blocked sources.
    (Favorites are stored only in the browser's localStorage — there is no
    backend, sign-in, or multi-device sync to set up.)
 
@@ -121,8 +121,9 @@ need it. The full behavior matrix is in
 ### Per-source API keys (repo secrets)
 
 Add only when you add a source of that type: `TICKETMASTER_API_KEY`,
-`EVENTBRITE_TOKEN`, `DICE_API_KEY`, `BROWSERBASE_API_KEY` (Browserbase is
-rung 3 of the proxy ladder — JS-challenge bypass).
+`EVENTBRITE_TOKEN`, `DICE_API_KEY`, `BROWSERBASE_API_KEY` (Browserbase
+fetches bot-blocked / JS-challenge sources live — see the Browserbase
+proxy section below).
 
 ### Discord notifications
 
@@ -130,8 +131,8 @@ rung 3 of the proxy ladder — JS-challenge bypass).
 Discord on your copy, restore `.github/workflows/notify-discord.yml` from
 the upstream repo (adjusting the hardcoded role mention), then set the
 `DISCORD_WEBHOOK_CALENDAR` secret to a channel webhook URL. Build results
-and actionable queues (uncertain events, photo/cost gaps, proxy
-escalations) get posted after each run.
+and actionable queues (uncertain events, photo/cost gaps) get posted after
+each run.
 
 ### Claude Code automation workflows (the self-maintaining part)
 
@@ -147,12 +148,10 @@ cadences for each are in [`docs/routines.md`](./routines.md):
   `build-error-responder` job in `publish_calendars.yml` runs after a daily
   build with errors (rate-limited to once per 24 h; bypass with a manual
   run and `force_routine=true`).
-- **Source pipeline** — two scheduled workflows. `claude-discovery.yml`
-  (daily 08:30 UTC) discovers new sources (`skills/source-discovery/SKILL.md`
-  steps 1–5) and pushes the discovery markdown directly to `main`
-  (markdown-only, no PR). `claude-implementation.yml` (daily 09:30 UTC) builds
-  up to 5 of the pending candidates and opens a single human-review PR with
-  the new source code (steps 6–8).
+- **Source pipeline** — one scheduled workflow, `claude-sources.yml` (daily
+  08:30 UTC). It discovers new sources, records them in
+  `docs/source-candidates.json`, builds up to 5 pending candidates, and opens a
+  single human-review PR (`skills/source-discovery/SKILL.md`).
 
 Issues and PRs are **owner-driven**, not automated: comment `@claude` to
 have it act on demand (`claude.yml`), and owner-authored PRs are
@@ -163,15 +162,14 @@ access-control section of [`docs/routines.md`](./routines.md).
 Both authenticate with `CLAUDE_CODE_OAUTH_TOKEN` and skip silently when
 it (or, for a fork, the matching `github.repository`) isn't present.
 
-### Out-of-band proxy (AWS — skip until a source actually needs it)
+### Browserbase proxy (skip until a source actually needs it)
 
-Some sites block GitHub Actions IPs (rung 2 of the proxy ladder). Don't set
-this up preemptively, and don't mark sources `proxy: "outofband"` before it
-exists. When needed: deploy `infra/authenticated-proxy/template.yaml`
-(CloudFormation) **after changing the OIDC subject to your `owner/repo`**,
-set the `AWS_ROLE_ARN` secret and `OUTOFBAND_BUCKET` variable, and run
-`npm run generate-outofband` on a cron from a residential-IP machine. See
-`docs/outofband.md`.
+Some sites block GitHub Actions IPs or gate content behind a JS challenge.
+Don't set this up preemptively, and don't mark sources `proxy: true` before
+the secret exists. When needed: set the `BROWSERBASE_API_KEY` secret and add
+`proxy: true` to the blocked source. Those sources are then fetched live
+through Browserbase during the build — no AWS, S3, CloudFormation, or
+residential cron.
 
 ### Favorites
 

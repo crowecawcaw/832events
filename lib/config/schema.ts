@@ -81,11 +81,11 @@ export const externalCalendarSchema = z.object({
     disabled: z.boolean().default(false),
     expectEmpty: z.boolean().default(false),
     tags: z.array(z.string()).optional(),
-    // When set to "outofband", the ICS feed is fetched by the out-of-band
-    // runner (home server with a residential IP) instead of GitHub Actions,
-    // for feeds that block GHA IPs. The main build skips its live fetch and
-    // picks up the pre-fetched .ics via the outofband report.
-    proxy: z.enum(["outofband", "browserbase"]).or(z.literal(false)).default(false),
+    // When true, the feed is fetched live through Browserbase (executes JS,
+    // follows redirects, bypasses bot detection) instead of a direct fetch.
+    // Use it for feeds that block GitHub Actions runner IPs. Requires the
+    // BROWSERBASE_API_KEY secret.
+    proxy: z.boolean().default(false),
     // Required: every external calendar must explicitly state whether it is
     // a single-location venue (geo object) or not (null). Single-venue feeds
     // like a brewery's Google Calendar are venues; multi-location feeds
@@ -111,7 +111,9 @@ export const configSchema = z.object({
     url: z.string().transform(u => new URL(u)),
     friendlyLink: z.string(),
     disabled: z.boolean().default(false),
-    proxy: z.enum(["outofband", "browserbase"]).or(z.literal(false)).default(false),
+    // Fetch live through Browserbase (bot-detection bypass). See the external
+    // calendar `proxy` field above. Requires the BROWSERBASE_API_KEY secret.
+    proxy: z.boolean().default(false),
     needsBrowser: z.boolean().default(false),
     expectEmpty: z.boolean().default(false),
     type: z.enum(BUILTIN_RIPPER_TYPES).optional(),

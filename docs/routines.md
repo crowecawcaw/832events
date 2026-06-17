@@ -30,8 +30,7 @@ cadence, and scope to taste by editing the workflow file.
 | Workflow | File | Trigger | Runs |
 |---|---|---|---|
 | [Build-error responder](#1-build-error-responder) | `publish_calendars.yml` (`build-error-responder` job) | After a build with errors (≤ once per 24 h) | `skills/build-report/SKILL.md` |
-| [Source discovery](#2-source-pipeline) | `claude-discovery.yml` | `schedule` (daily 08:30 UTC) + `workflow_dispatch` | `skills/source-discovery/SKILL.md` steps 1–5 |
-| [Source implementation](#2-source-pipeline) | `claude-implementation.yml` | `schedule` (daily 09:30 UTC) + `workflow_dispatch` | `skills/source-discovery/SKILL.md` steps 6–8 |
+| [Source pipeline](#2-source-pipeline) | `claude-sources.yml` | `schedule` (daily 08:30 UTC) + `workflow_dispatch` | `skills/source-discovery/SKILL.md` |
 
 Both authenticate with the same `CLAUDE_CODE_OAUTH_TOKEN` secret and
 skip silently on a copy that hasn't set it (or, on a fork whose
@@ -143,40 +142,24 @@ appear.
 
 ## 2. Source pipeline
 
-**Purpose:** grow the catalog. This runs as **two separate workflows** so the
-halves scale independently — discovery routinely runs many candidates ahead of
-implementation, so welding them at one-source-per-day guarantees an
-ever-growing backlog. Splitting them lets implementation drain the queue faster
-than discovery fills it:
+**Purpose:** grow the catalog. A single daily workflow discovers new sources
+and implements the best ones in one run:
 
-- **Discovery** (`claude-discovery.yml`, `skills/source-discovery/SKILL.md`
-  steps 1–5) — scan for new event sources in your city, quality-gate them,
-  write candidates under `docs/source-candidates/`, append today's discovery
-  log, and flag dead sources. This run is **markdown-only** and **pushes
-  straight to `main`**; it writes no source code and opens no PR. Markdown-only
-  is enforced in two layers (GitHub token scopes can't target file paths): the
-  job has `contents: write` and nothing else (no PR/issue powers), and the
-  agent only edits the working tree while a workflow-owned guard step
-  hard-fails the push if anything outside `docs/source-candidates/**.md` or
-  `docs/discovery-log/**.md` changed.
-- **Implementation** (`claude-implementation.yml`,
-  `skills/source-discovery/SKILL.md` steps 6–8) — runs **one hour after
-  discovery**, checks out `main` (so it sees the candidates discovery just
-  pushed), and implements **up to 5** pending candidates — cheapest/highest
-  volume first (external ICS + built-in platform rippers). It opens **one PR
-  for human review** carrying all the successfully-built sources and their
-  candidate `status` flips. The PR is self-validated in-session (per-source
-  `ONLY_SOURCE` build + tests + `/code-review`) since CI won't run on a bot PR.
-  The repo owner merges it.
+- **Discover** (`skills/source-discovery/SKILL.md` steps 1–5) — scan for new
+  event sources in your city, quality-gate them, and record candidates in
+  `docs/source-candidates.json` (git history is the log). Flag dead sources.
+- **Implement** (`skills/source-discovery/SKILL.md` steps 6–8) — build **up to
+  5** pending candidates, cheapest/highest volume first (external ICS + built-in
+  platform rippers), validating each in-session (`npm run validate`, per-source
+  `ONLY_SOURCE` build, `npm run test:all`, `/code-review`). It opens **one PR
+  for human review** with all successfully-built sources plus the
+  `docs/source-candidates.json` updates. Since CI won't run on a bot-authored
+  PR, in-session validation is the gate; the repo owner merges.
 
-Offset scheduling (08:30 → 09:30 UTC) means each morning's freshly-discovered
-candidates are already on `main` when implementation starts. If discovery turns
-up nothing, it commits nothing; if implementation finds no valid candidates, it
-opens no PR.
+If discovery turns up nothing and no candidates are implementable, it opens no PR.
 
-**Trigger & cadence:** `.github/workflows/claude-discovery.yml` (`schedule`
-daily 08:30 UTC) and `.github/workflows/claude-implementation.yml` (`schedule`
-daily 09:30 UTC); both also support `workflow_dispatch` for a manual run.
+**Trigger & cadence:** `.github/workflows/claude-sources.yml` (`schedule` daily
+08:30 UTC); also supports `workflow_dispatch` for a manual run.
 
 **Secrets & repo coupling:** `CLAUDE_CODE_OAUTH_TOKEN`.
 

@@ -84,7 +84,7 @@ function extractEventLinks(html: string): Map<string, string> {
  *   Date range format like "Thursday, June 11" with time following
  *   Plain text patterns without strong tags
  */
-function parseEventDatesFromContent(html: string, title: string): RipperCalendarEvent[] {
+function parseEventDatesFromContent(html: string, title: string): (RipperCalendarEvent | RipperError)[] {
     const root = parse(html);
     const article = root.querySelector("article");
     if (!article) {

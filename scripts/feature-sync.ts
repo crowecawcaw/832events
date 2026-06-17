@@ -47,8 +47,6 @@ export type PathClass = "engine" | "content" | "config" | "skip";
 /** Prefixes that are city-specific content a copy deletes and regrows. */
 const CONTENT_PREFIXES = [
     "sources/",
-    "docs/source-candidates/",
-    "docs/discovery-log/",
     "allowed-removals/",
 ];
 
@@ -57,10 +55,9 @@ const CONTENT_FILES = new Set([
     "event-uncertainty-cache.json",
     "geo-cache.json",
     "fetch-cache.json",
-    "outofband-report.json",
+    "docs/source-candidates.json",
     "ideas.md",
     "todo.md",
-    "disabled-sources-plan.md",
     "README.md",
     "CONTRIBUTORS.md",
 ]);
@@ -97,7 +94,7 @@ export function classifyPath(path: string): PathClass {
     for (const p of CONTENT_PREFIXES) if (path.startsWith(p)) return "content";
 
     // docs/ is mixed: top-level design docs (docs/foo.md, docs/plans/*) are
-    // engine; the candidate/discovery subtrees were already caught above.
+    // engine; the candidates file was already caught above as content.
     if (path.startsWith("docs/") && path.endsWith(".md")) return "engine";
 
     if (ENGINE_FILES.has(path)) return "engine";

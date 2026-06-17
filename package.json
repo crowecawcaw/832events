@@ -10,6 +10,7 @@
     "test:watch": "vitest",
     "test:web": "cd web && npx vitest run",
     "test:e2e": "cd web && npx playwright test",
+    "validate": "tsx scripts/validate-config.ts",
     "test:all": "npm run test && npm run test:web",
     "typecheck": "tsc --noEmit -p tsconfig.typecheck.json",
     "generate-calendars": "tsx index.ts",
@@ -20,12 +21,9 @@
     "web:preview": "cd web && vite preview",
     "build": "npm run generate-calendars && npm run web:build",
     "check-missing-urls": "tsx scripts/check-missing-urls.ts",
-    "check-discovery-api": "tsx scripts/check-discovery-api.ts",
-    "generate-outofband": "tsx scripts/generate-outofband.ts",
-    "download-outofband": "tsx scripts/download-outofband.ts"
+    "check-discovery-api": "tsx scripts/check-discovery-api.ts"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.1009.0",
     "@js-joda/core": "^5.5.3",
     "@js-joda/locale_en-us": "^4.11.0",
     "@js-joda/timezone": "^2.18.0",

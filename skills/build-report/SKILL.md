@@ -76,24 +76,12 @@ If the error looks transient (network timeout, temporary 5xx):
 - Do nothing, it'll resolve on its own
 
 #### 🚫 HTTP 403 / Persistent Fetch Failures
-If a source returns 403 or consistently fails to fetch, follow the proxy escalation ladder:
+If a source returns 403 or consistently fails to fetch from CI:
 
-| Rung | Config | When |
-|------|--------|------|
-| 1 | `proxy: false` (default) | Source works from GitHub Actions |
-| 2 | `proxy: "outofband"` | Source works from home IP but CI 403s it |
-| 3 | `proxy: "browserbase"` | JS challenge (e.g. SiteGround sgcaptcha) blocks even residential IP |
+1. **No proxy yet?** → Add `proxy: true` in a PR. This fetches the source live through Browserbase in the main build (Browserbase executes JS and bypasses most bot detection).
+2. **Already `proxy: true` and still failing?** → Set `disabled: true` and flag in the report for human review. The source may need a custom ripper or an alternative URL.
 
-**Escalation is one rung at a time, one PR at a time:**
-1. **No proxy yet and CI 403s it?** → Add `proxy: "outofband"` in a PR. The out-of-band runner fetches from a residential IP.
-2. **Already `proxy: outofband` and still failing?** → Escalate to `proxy: "browserbase"` in a follow-up PR. Browserbase executes JS to bypass bot detection.
-3. **Already `proxy: browserbase` and still failing?** → Flag in the report for human review. The source may need a custom ripper or alternative URL.
-
-**Never skip escalation steps.** Each step requires its own PR so the failure is observable.
-
-**For sources that ALREADY carry a proxy (`outofband` or `browserbase`), you do not escalate them here.** Their failures are tracked automatically in the `pendingProxyVerification` queue (see step 5.5), and the **proxy-escalation skill** — run by the out-of-band job — drives them up the ladder after 3 consecutive failures (and retires them after browserbase fails 3 times). Your job for those is to *report* the queue, not act on it. Rung 1 (no proxy yet → add `outofband`) is the only step still done by hand here, because a `proxy: false` source isn't in the queue yet.
-
-- Do NOT disable the ripper without human approval (the proxy-escalation skill handles browserbase-exhausted retirement automatically)
+- Do NOT disable the ripper without human approval unless `proxy: true` has already been tried and still fails.
 
 #### ❌ Only Disable if Source is Clearly Gone
 Disable a ripper only if:
@@ -151,37 +139,13 @@ These are not build failures — they are todos for an LLM to investigate. The
 `totalErrors` count includes them; the resolver's job is to drain that queue
 across builds.
 
-### 5.5. Proxy Verification Check
-
-Check `pendingProxyVerification` in the build health output. This is the queue
-of sources that need a proxy to be fetched at all, still climbing the
-`outofband → browserbase → disabled` ladder. It is **non-fatal** — a brand-new
-proxy source can't be proven in CI, so it's tracked here instead of failing the
-build.
-
-**If the queue is empty:**
-```
-🪜 Proxy verification: 0 pending ✅
-```
-
-**If entries exist**, report each with its `rung`, `consecutiveFailures`, and
-`recommendation`. If any entry has a recommendation of `promote-to-browserbase`
-or `retire`, read `skills/proxy-escalation/SKILL.md` and follow it to open the
-escalation PR(s). Entries with recommendation `verifying` are still within the
-3-failure budget — just report them, no action needed.
-
-```
-🪜 Proxy verification: N pending — M ready to escalate
-  - <source> (<rung>, <consecutiveFailures> fails) → <recommendation>
-```
-
-### 5.55. Stale-Serve Check
+### 5.5. Stale-Serve Check
 
 Check `proxyStaleServes` in the build health output. Each entry is a source
 whose **live fetch failed this build** and was satisfied from a cached copy
 older than the TTL (so events weren't lost, but the source is not actually
 being refreshed). These **count toward `totalErrors`** — a persistent stale
-serve means the source (or, for a browserbase source, Browserbase itself) is
+serve means the source (or, for a `proxy: true` source, Browserbase itself) is
 broken. See `docs/fetch-cache.md`.
 
 **If the list is empty:**
@@ -192,9 +156,8 @@ broken. See `docs/fetch-cache.md`.
 **If entries exist**, report each with its `source` (or `url`), `ageHours`, and
 `error`. A single transient blip clears itself on the next build; a source that
 keeps serving stale needs investigation — verify the source URL still works and,
-if Browserbase can no longer fetch it, follow `skills/proxy-escalation/SKILL.md`
-to retire it (disable + candidate doc `status: blocked`), since browserbase is
-the last proxy rung.
+if Browserbase can no longer fetch it, set `disabled: true` and flag it for
+human review.
 
 ```
 🕒 Browserbase stale serves: N

@@ -1,6 +1,5 @@
 import { RipperLoader } from "./config/loader.js";
 import { writeFile, mkdir, readFile, appendFile } from "fs/promises";
-import { existsSync } from "fs";
 import {
   RipperConfig,
   RipperError,
@@ -51,7 +50,6 @@ import {
 } from "./tag_aggregator.js";
 import { RecurringEventProcessor } from "./config/recurring.js";
 import { loadYamlDir } from "./config/dir-loader.js";
-import { PendingProxyVerificationItem } from "./proxy-verification.js";
 import { LocalDate } from "@js-joda/core";
 import { detectTagDuplicates } from "./config/tags.js";
 import { CITY } from "./config/city.js";
@@ -406,51 +404,6 @@ export const main = async () => {
     }
   }
 
-  // Load the out-of-band report (downloaded from S3 by download-outofband.ts).
-  // It carries pre-built ripper outputs and pre-fetched external ICS files
-  // for sources marked `proxy: "outofband"`. Loaded once here and reused
-  // throughout main() for externals registration, manifest building, and
-  // error count merging.
-  interface OutOfBandReport {
-    buildTime: string;
-    totalErrors: number;
-    sources: Array<{
-      source: string;
-      friendlyName: string;
-      description: string;
-      friendlyLink: string;
-      tags: string[];
-      calendars: Array<{
-        name: string;
-        friendlyName: string;
-        icsFile: string;
-        events: number;
-        hasFutureEvents: boolean;
-        errors: string[];
-        tags: string[];
-      }>;
-    }>;
-    externalCalendars?: Array<{
-      name: string;
-      icsFile: string;
-      events: number;
-      hasFutureEvents: boolean;
-      fetchError?: string;
-    }>;
-    // Proxy escalation-ladder verification queue, computed by the out-of-band
-    // runner (sole writer of proxy-verification.json). Surfaced here so the
-    // main build can report it; see lib/proxy-verification.ts and
-    // docs/proxy-verification.md.
-    pendingProxyVerification?: PendingProxyVerificationItem[];
-  }
-  let outofbandReport: OutOfBandReport | null = null;
-  try {
-    const reportRaw = await readFile("outofband-report.json", "utf-8");
-    outofbandReport = JSON.parse(reportRaw) as OutOfBandReport;
-  } catch (err: any) {
-    console.warn(`[outofband] Warning: could not read outofband-report.json: ${err?.message ?? err} — skipping out-of-band calendars`);
-  }
-
   // Load recurring events from sources/recurring/<name>.yaml
   let recurringCalendars: RipperCalendar[] = [];
   let recurringProcessor: RecurringEventProcessor | null = null;
@@ -619,13 +572,11 @@ export const main = async () => {
   }
   await Promise.all(recurringWritePromises);
 
-  // Separate enabled from disabled/outofband configs
-  const enabledConfigs = configs.filter(c => !c.config.disabled && c.config.proxy !== "outofband");
+  // Separate enabled from disabled configs. Proxy sources (`proxy: true`) are
+  // fetched live in-build through Browserbase like any other source.
+  const enabledConfigs = configs.filter(c => !c.config.disabled);
   for (const config of configs.filter(c => c.config.disabled)) {
     console.log(`Skipping disabled ripper: ${config.config.name}`);
-  }
-  for (const config of configs.filter(c => !c.config.disabled && c.config.proxy === "outofband")) {
-    console.log(`Skipping out-of-band ripper: ${config.config.name}`);
   }
 
   // Propagate ripper tags to their calendars before parallel execution
@@ -636,23 +587,7 @@ export const main = async () => {
     }
   }
 
-  // Split externals into live (fetched here) vs. out-of-band (fetched by the
-  // outofband runner; the ICS file is already on disk via download-outofband).
-  // An outofband external is included only when the report has a corresponding
-  // entry — mirrors how outofband rippers are skipped when the report is absent.
-  const outofbandExternalEntries = new Map(
-    (outofbandReport?.externalCalendars ?? []).map(e => [e.name, e])
-  );
-  const liveExternalCalendars = externalCalendars.filter(
-    (cal) => !cal.disabled && cal.proxy !== "outofband"
-  );
-  const outofbandExternalCalendars = externalCalendars.filter(
-    (cal) => !cal.disabled && cal.proxy === "outofband" && outofbandExternalEntries.has(cal.name)
-  );
-  for (const cal of externalCalendars.filter(c => !c.disabled && c.proxy === "outofband" && !outofbandExternalEntries.has(c.name))) {
-    console.log(`[outofband] Skipping external calendar ${cal.name} — no entry in outofband-report.json`);
-  }
-  const activeExternalCalendars = [...liveExternalCalendars, ...outofbandExternalCalendars];
+  const activeExternalCalendars = externalCalendars.filter(cal => !cal.disabled);
 
   // --- PARALLEL PHASE: Rip all calendars + fetch all external calendars concurrently ---
   interface ExternalFetchResult {
@@ -666,7 +601,7 @@ export const main = async () => {
     parallelMap(
       enabledConfigs,
       async (config) => {
-        const proxyLabel = config.config.proxy ? ` with proxy ${config.config.proxy}` : '';
+        const proxyLabel = config.config.proxy ? ` (via proxy)` : '';
         console.log(`Ripping ${config.config.name}${proxyLabel}`);
         let calendars: RipperCalendar[];
         try {
@@ -686,13 +621,12 @@ export const main = async () => {
       },
       CONCURRENCY
     ),
-    // Fetch all live external calendars with bounded concurrency.
-    // Outofband externals are merged in below from pre-fetched files on disk.
+    // Fetch all external calendars with bounded concurrency.
     parallelMap(
-      liveExternalCalendars,
+      activeExternalCalendars,
       async (calendar): Promise<ExternalFetchResult> => {
         try {
-          console.log(`Fetching external calendar: ${calendar.friendlyname}${calendar.proxy ? ` (proxy: ${calendar.proxy})` : ''}`);
+          console.log(`Fetching external calendar: ${calendar.friendlyname}${calendar.proxy ? ` (via proxy)` : ''}`);
           const fetchFn = getFetchForConfig(calendar);
           const response = await fetchFn(calendar.icsUrl, {
             headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36' }
@@ -709,26 +643,6 @@ export const main = async () => {
       CONCURRENCY
     )
   ]);
-
-  // Merge outofband externals into externalFetchResults by reading the
-  // pre-fetched ICS file from disk (downloaded by download-outofband.ts).
-  for (const calendar of outofbandExternalCalendars) {
-    const reportEntry = outofbandExternalEntries.get(calendar.name)!;
-    if (reportEntry.fetchError) {
-      console.error(`  - [outofband] ${calendar.friendlyname}: ${reportEntry.fetchError}`);
-      externalFetchResults.push({ calendar, icsContent: null, error: reportEntry.fetchError });
-      continue;
-    }
-    try {
-      const icsContent = await readFile(join("output", reportEntry.icsFile), "utf-8");
-      console.log(`[outofband] Loaded pre-fetched external calendar: ${calendar.friendlyname}`);
-      externalFetchResults.push({ calendar, icsContent, error: null });
-    } catch (err: any) {
-      const message = `Pre-fetched ICS missing: ${err?.message ?? err}`;
-      console.error(`  - [outofband] ${calendar.friendlyname}: ${message}`);
-      externalFetchResults.push({ calendar, icsContent: null, error: message });
-    }
-  }
 
   // Build ICS content cache from external fetch results
   const externalIcsCache = new Map<string, string>();
@@ -1020,7 +934,7 @@ END:VCALENDAR`;
 
   // Log calendars excluded from manifest due to no future events
   const allCalendarIcsUrls: string[] = [];
-  for (const ripper of configs.filter(r => !r.config.disabled && r.config.proxy !== "outofband")) {
+  for (const ripper of configs.filter(r => !r.config.disabled)) {
     for (const cal of ripper.config.calendars) {
       allCalendarIcsUrls.push(`${ripper.config.name}-${cal.name}.ics`);
     }
@@ -1032,64 +946,6 @@ END:VCALENDAR`;
     allCalendarIcsUrls.push(`external-${cal.name}.ics`);
   }
 
-  // --- Out-of-band calendars: register entries from the report loaded earlier ---
-  // The report (downloaded from S3 by download-outofband.ts) is the single source of truth:
-  // it already knows which calendars have future events, error counts, and all metadata.
-  interface OutOfBandManifestEntry {
-    ripperName: string;
-    friendlyName: string;
-    description: string;
-    friendlyLink: string;
-    tags: string[];
-    calendars: Array<{
-      name: string;
-      friendlyName: string;
-      icsUrl: string;
-      rssUrl: string;
-      tags: string[];
-    }>;
-  }
-  const outofbandManifestEntries: OutOfBandManifestEntry[] = [];
-
-  if (outofbandReport) {
-    console.log(`[outofband] Report from ${outofbandReport.buildTime}: ${outofbandReport.sources.length} source(s), ${outofbandReport.externalCalendars?.length ?? 0} external(s), ${outofbandReport.totalErrors} error(s)`);
-
-    for (const source of outofbandReport.sources) {
-      const calendarEntries: OutOfBandManifestEntry["calendars"] = [];
-      for (const cal of source.calendars) {
-        allCalendarIcsUrls.push(cal.icsFile);
-        if (cal.hasFutureEvents) {
-          const icsOnDisk = existsSync(`output/${cal.icsFile}`);
-          if (icsOnDisk) {
-            calendarsWithFutureEvents.add(cal.icsFile);
-            calendarEntries.push({
-              name: cal.name,
-              friendlyName: cal.friendlyName,
-              icsUrl: cal.icsFile,
-              rssUrl: cal.icsFile.replace(".ics", ".rss"),
-              tags: cal.tags,
-            });
-            console.log(`[outofband] Registered ${cal.icsFile} (${cal.events} events)`);
-          } else {
-            console.log(`[outofband] Skipping ${cal.icsFile} — ICS file missing from output/ (S3 download unavailable)`);
-          }
-        } else {
-          console.log(`[outofband] Skipping ${cal.icsFile} — no future events (${cal.errors.length} error(s))`);
-        }
-      }
-      if (calendarEntries.length > 0) {
-        outofbandManifestEntries.push({
-          ripperName: source.source,
-          friendlyName: source.friendlyName,
-          description: source.description,
-          friendlyLink: source.friendlyLink,
-          tags: source.tags,
-          calendars: calendarEntries,
-        });
-      }
-    }
-  }
-
   const excludedFromManifest = allCalendarIcsUrls.filter(url => !calendarsWithFutureEvents.has(url));
   if (excludedFromManifest.length > 0) {
     console.log(`\nExcluding ${excludedFromManifest.length} calendar(s) with no future events from manifest: ${excludedFromManifest.join(', ')}`);
@@ -1099,7 +955,7 @@ END:VCALENDAR`;
   const manifest = {
     lastUpdated: new Date().toISOString(),
     rippers: [
-      ...configs.filter(ripper => !ripper.config.disabled && ripper.config.proxy !== "outofband").map(ripper => ({
+      ...configs.filter(ripper => !ripper.config.disabled).map(ripper => ({
         name: ripper.config.name,
         friendlyName: ripper.config.friendlyname,
         description: ripper.config.description,
@@ -1114,13 +970,6 @@ END:VCALENDAR`;
             tags: [...new Set([...(ripper.config.tags || []), ...(calendar.tags || [])])]
           }))
       })).filter(ripper => ripper.calendars.length > 0),
-      ...outofbandManifestEntries.map(entry => ({
-        name: entry.ripperName,
-        friendlyName: entry.friendlyName,
-        description: entry.description,
-        friendlyLink: entry.friendlyLink,
-        calendars: entry.calendars,
-      })),
     ],
     recurringCalendars: recurringCalendars
       .filter(calendar => calendarsWithFutureEvents.has(`recurring-${calendar.name}.ics`))
@@ -1375,28 +1224,7 @@ END:VCALENDAR`;
   }
   totalErrorCount += urlEntityErrors.length;
 
-  // Merge outofband error count from the report (loaded earlier).
-  // Only count errors from calendars with hasFutureEvents: true — stale calendars
-  // (no future events) are excluded from the manifest and their errors are not actionable.
-  // Outofband external-fetch failures already show up in externalCalendarFailures
-  // via the synthesized fetch result; don't double-count them here.
-  let finalErrorCount = totalErrorCount;
-  if (outofbandReport) {
-    let activeOutofbandErrors = 0;
-    for (const source of outofbandReport.sources) {
-      for (const cal of source.calendars) {
-        if (cal.hasFutureEvents) {
-          activeOutofbandErrors += cal.errors.length;
-        }
-      }
-    }
-    if (activeOutofbandErrors > 0) {
-      finalErrorCount += activeOutofbandErrors;
-      console.log(`Merged ${activeOutofbandErrors} out-of-band error(s) into total (total: ${finalErrorCount})`);
-    } else if (outofbandReport.totalErrors > 0) {
-      console.log(`Skipped ${outofbandReport.totalErrors} out-of-band error(s) from calendars without future events`);
-    }
-  }
+  const finalErrorCount = totalErrorCount;
 
   // Check for new sources with expectEmpty=true that have never appeared in production.
   // If a source has 0 events + expectEmpty=true but is NOT in the production manifest,
@@ -1495,21 +1323,17 @@ END:VCALENDAR`;
   const newZeroEventSources: string[] = [];
   const newSourceParseErrors: Array<{ source: string; calendar: string; errorCount: number }> = [];
 
-  // Sources that need a proxy to be fetched at all (`outofband`/`browserbase`).
-  // An unproven proxy source CANNOT be proven in the PR/main build — the
-  // out-of-band runner hasn't fetched it (outofband), or a JS challenge may
-  // block even the live browserbase fetch — so the fatal "new source produced
-  // 0 events" gate below would red-flag a source that's still legitimately
-  // under verification. We exempt them from the gate and track them in the
-  // non-fatal pendingProxyVerification queue instead. Direct (`proxy: false`)
-  // sources keep the strict rule: they're fetched in CI and zero is fatal.
-  // See lib/proxy-verification.ts and docs/proxy-verification.md.
+  // Sources that need a proxy to be fetched at all (`proxy: true`). The live
+  // Browserbase fetch can still be blocked (JS challenge, missing API key), so
+  // the fatal "new source produced 0 events" gate would red-flag a source that
+  // legitimately can't be proven from CI. Exempt proxy sources from that gate
+  // (non-fatal); direct (`proxy: false`) sources keep the strict rule.
   const proxySourceNames = new Set<string>();
   for (const r of configs) {
-    if (r.config.proxy === "outofband" || r.config.proxy === "browserbase") proxySourceNames.add(r.config.name);
+    if (r.config.proxy) proxySourceNames.add(r.config.name);
   }
   for (const c of externalCalendars) {
-    if (c.proxy === "outofband" || c.proxy === "browserbase") proxySourceNames.add(c.name);
+    if (c.proxy) proxySourceNames.add(c.name);
   }
 
   // New source with 0 events → fail build (no proven data pipeline).
@@ -1518,7 +1342,7 @@ END:VCALENDAR`;
   const newZeroEvent = newCalendarEntries.filter(c => c.events === 0);
   for (const cal of newZeroEvent) {
     if (proxySourceNames.has(cal.source)) {
-      console.log(`::notice::New proxy source "${cal.source}" calendar "${cal.name}" has 0 events — under proxy-ladder verification (non-fatal). Tracked in pendingProxyVerification; the proxy-escalation skill drives it up the ladder.`);
+      console.log(`::notice::New proxy source "${cal.source}" calendar "${cal.name}" has 0 events — proxy fetch unproven from CI (non-fatal).`);
       continue;
     }
     const expectEmptyNote = cal.expectEmpty
@@ -1766,13 +1590,6 @@ END:VCALENDAR`;
       }))
   );
 
-  // Proxy escalation-ladder verification queue (computed by the out-of-band
-  // runner, carried in the report). Non-fatal — surfaced so the
-  // proxy-escalation skill and humans can see which proxy sources are still
-  // being verified, due for promotion to browserbase, or due for retirement.
-  const pendingProxyVerification: PendingProxyVerificationItem[] =
-    outofbandReport?.pendingProxyVerification ?? [];
-
   // Write consolidated build errors JSON for programmatic access
   const buildErrorsReport = {
     buildTime: new Date().toISOString(),
@@ -1813,7 +1630,6 @@ END:VCALENDAR`;
     // Sources served from a stale (>TTL) cached copy because the live fetch
     // failed. Counted in totalErrors. See docs/fetch-cache.md.
     proxyStaleServes,
-    pendingProxyVerification,
     newZeroEventSources,
     newSourceParseErrors,
     // HTML entities (&amp; etc.) found in URL fields. Fatal: an entity in a
@@ -1941,11 +1757,6 @@ END:VCALENDAR`;
   if (uncertaintyTotals.resolved + uncertaintyTotals.acknowledgedUnresolvable + uncertaintyTotals.outstanding > 0) {
     console.log(`  ❓ Uncertainty: ${uncertaintyTotals.outstanding} outstanding, ${uncertaintyTotals.resolved} resolved from cache, ${uncertaintyTotals.acknowledgedUnresolvable} unresolvable`);
   }
-  if (pendingProxyVerification.length > 0) {
-    const promote = pendingProxyVerification.filter(p => p.recommendation === "promote-to-browserbase").length;
-    const retire = pendingProxyVerification.filter(p => p.recommendation === "retire").length;
-    console.log(`  🪜 Proxy verification: ${pendingProxyVerification.length} pending (${promote} due to promote to browserbase, ${retire} due to retire)`);
-  }
   if (urlEntityErrors.length > 0) {
     console.log(`  🔗 ${urlEntityErrors.length} URL field(s) with HTML entities (fatal): ${urlEntityErrors.map(e => `${e.source}/${e.field}`).join(", ")}`);
   }
@@ -2014,18 +1825,6 @@ END:VCALENDAR`;
       summaryLines.push("");
       summaryLines.push(`> 💲 **Cost coverage:** ${costStats.eventsWithCost} / ${costStats.totalEvents} events (${costPct}%), ${costStats.freeEvents} free` +
         (costGaps.length > 0 ? ` — ${costGaps.length} missing. Run the cost-resolver skill.` : " — ✅ fully covered."));
-    }
-    if (pendingProxyVerification.length > 0) {
-      summaryLines.push("");
-      summaryLines.push("### 🪜 Proxy verification queue");
-      summaryLines.push("");
-      summaryLines.push("Proxy sources still climbing the `outofband → browserbase → disabled` ladder. Non-fatal; the proxy-escalation skill drives them up a rung after 3 consecutive failures.");
-      summaryLines.push("");
-      summaryLines.push("| Source | Rung | Consecutive failures | Recommendation | Last error |");
-      summaryLines.push("|--------|------|----------------------|----------------|------------|");
-      for (const p of pendingProxyVerification) {
-        summaryLines.push(`| ${p.name} | ${p.rung} | ${p.consecutiveFailures} | ${p.recommendation} | ${p.lastError ?? "—"} |`);
-      }
     }
     await appendFile(process.env.GITHUB_STEP_SUMMARY, summaryLines.join("\n") + "\n");
   }

@@ -14,7 +14,7 @@ export interface CalendarInventoryEntry {
     disabled: boolean;
     sourceType: "ripper" | "external" | "recurring";
     ripperType?: string;
-    proxy?: string | false;
+    proxy?: boolean;
     schedule?: string;
     /** Parent source name (e.g., "houston-showlists") for sub-calendars. */
     parentSource?: string;

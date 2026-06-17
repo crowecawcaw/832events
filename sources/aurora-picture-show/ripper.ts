@@ -117,7 +117,7 @@ export default class AuroraPictureShowRipper implements IRipper {
 
         for (const article of eventArticles) {
             const result = this.parseEvent(article, tz, ripper.config.url.toString());
-            if (result.type === "ParseError") {
+            if ("type" in result) {
                 errors.push(result);
             } else {
                 events.push(result);
