@@ -1,0 +1,18 @@
+name: punch-line-comedy-club
+type: ticketmaster
+description: "Punch Line Comedy Club"
+url: https://www.punchlinecomedyclub.com/
+friendlyLink: https://www.punchlinecomedyclub.com/
+tags: [Comedy, Entertainment, Downtown]
+geo:
+  lat: 29.7645
+  lng: -95.3813
+  label: "Punch Line Comedy Club, 713 Prairie St, Houston, TX 77002"
+calendars:
+  - name: punch-line-comedy-club
+    friendlyname: "Punch Line Comedy Club"
+    timezone: America/Chicago
+    config:
+      venueId: "476361"
+      venueName: "Punch Line Comedy Club"
+      venueAddress: "713 Prairie St, Houston, TX 77002"

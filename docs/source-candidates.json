@@ -15,7 +15,7 @@
   },
   {
     "name": "Alley Theatre",
-    "status": "candidate",
+    "status": "added",
     "platform": "Ticketmaster",
     "url": "https://www.alleytheatre.org/",
     "tags": [
@@ -23,7 +23,8 @@
       "Downtown"
     ],
     "firstSeen": "2026-06-16",
-    "lastChecked": "2026-06-16"
+    "lastChecked": "2026-06-17",
+    "pr": "TBD"
   },
   {
     "name": "Anderson Fair",
@@ -126,8 +127,8 @@
   },
   {
     "name": "Basket Books & Art",
-    "status": "candidate",
-    "platform": "Eventbrite (with custom site listings)",
+    "status": "added",
+    "platform": "Custom HTML (Wix-based)",
     "url": "https://www.basket-books.com/",
     "tags": [
       "Books",
@@ -135,7 +136,8 @@
       "Montrose"
     ],
     "firstSeen": "2026-06-16",
-    "lastChecked": "2026-06-16",
+    "lastChecked": "2026-06-17",
+    "pr": "TBD",
     "impl": {
       "type": "custom",
       "observedEventCount": 4,
@@ -423,8 +425,8 @@
   },
   {
     "name": "Houston Botanic Garden",
-    "status": "candidate",
-    "platform": "Tribe Events (ICS, unverified)",
+    "status": "investigating",
+    "platform": "Unknown (ICS endpoints return HTML, not VCALENDAR)",
     "url": "https://hbg.org/events/",
     "tags": [
       "Nature",
@@ -433,7 +435,8 @@
       "Braeswood"
     ],
     "firstSeen": "2026-06-16",
-    "lastChecked": "2026-06-16"
+    "lastChecked": "2026-06-17",
+    "notes": "ICS external feed created but site does not have Tribe Events installed. Standard Tribe Events ICS endpoints return HTML instead of calendar data. Needs custom HTML ripper or contact with site to enable ICS export."
   },
   {
     "name": "Houston Center for Photography",
@@ -619,8 +622,8 @@
   },
   {
     "name": "Lake Houston Brewery",
-    "status": "candidate",
-    "platform": "Wix (HTML scraper)",
+    "status": "added",
+    "platform": "Custom HTML (Wix)",
     "url": "https://www.lakehoustonbrew.com/",
     "tags": [
       "Beer",
@@ -628,7 +631,8 @@
       "Northside"
     ],
     "firstSeen": "2026-06-16",
-    "lastChecked": "2026-06-16",
+    "lastChecked": "2026-06-17",
+    "pr": "TBD",
     "impl": {
       "type": "custom",
       "observedEventCount": 25,
@@ -910,7 +914,7 @@
   },
   {
     "name": "Punch Line Comedy Club",
-    "status": "candidate",
+    "status": "added",
     "platform": "Ticketmaster",
     "url": "https://www.punchlinecomedyclub.com/",
     "tags": [
@@ -919,7 +923,8 @@
       "Downtown"
     ],
     "firstSeen": "2026-06-15",
-    "lastChecked": "2026-06-15"
+    "lastChecked": "2026-06-17",
+    "pr": "TBD"
   },
   {
     "name": "Rice University Events",

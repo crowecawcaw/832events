@@ -1,0 +1,14 @@
+name: lake-houston-brewery
+description: "Lake Houston Brewery"
+url: https://www.lakehoustonbrew.com/events
+friendlyLink: https://www.lakehoustonbrew.com/
+tags: [Beer, Music, Northside]
+proxy: true
+geo:
+  lat: 30.0654
+  lng: -95.1242
+  label: "Lake Houston Brewery, 10614 FM 1960 W, Humble, TX 77338"
+calendars:
+  - name: lake-houston-brewery
+    friendlyname: "Lake Houston Brewery"
+    timezone: America/Chicago

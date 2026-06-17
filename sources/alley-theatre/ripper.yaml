@@ -1,0 +1,18 @@
+name: alley-theatre
+type: ticketmaster
+description: "Alley Theatre"
+url: https://www.alleytheatre.org/
+friendlyLink: https://www.alleytheatre.org/
+tags: [Theater, Downtown]
+geo:
+  lat: 29.7594
+  lng: -95.3630
+  label: "Alley Theatre, 615 Texas Ave, Houston, TX 77002"
+calendars:
+  - name: alley-theatre
+    friendlyname: "Alley Theatre"
+    timezone: America/Chicago
+    config:
+      venueId: "Zkr9jZAdeL"
+      venueName: "Alley Theatre"
+      venueAddress: "615 Texas Ave, Houston, TX 77002"
