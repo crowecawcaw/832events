@@ -75,6 +75,21 @@
     }
   },
   {
+    "name": "Avant Garden Houston",
+    "status": "candidate",
+    "platform": "Custom (Django)",
+    "url": "https://www.avantgardenhouston.com/",
+    "tags": [
+      "Music",
+      "Nightlife",
+      "Arts",
+      "Montrose"
+    ],
+    "firstSeen": "2026-06-17",
+    "lastChecked": "2026-06-17",
+    "notes": "Artist collective / bar / lounge at 411 Westheimer Rd, Montrose. Three performance stages (indoor + outdoor). Confirmed live events: jazz jams, music open mics, poetry open mics, live bands, burlesque. 37+ events listed on calendar. Custom Django web app (/static/themes/t7-base/). No ICS link found — would need custom HTML ripper."
+  },
+  {
     "name": "Axelrad Beer Garden",
     "status": "added",
     "platform": "Google Calendar (ICS export)",
@@ -345,6 +360,20 @@
     "lastChecked": "2026-06-15"
   },
   {
+    "name": "Heritage Society Houston",
+    "status": "investigating",
+    "platform": "Squarespace (0 upcoming events in production calendar)",
+    "url": "https://www.heritagesociety.org/calendar",
+    "tags": [
+      "Community",
+      "Education",
+      "Downtown"
+    ],
+    "firstSeen": "2026-06-17",
+    "lastChecked": "2026-06-17",
+    "notes": "Historic preservation org at Sam Houston Park, 1100 Bagby St, Downtown. Confirmed Squarespace site (server: Squarespace). Production /calendar?format=json returns 0 items. The squarespace.com subdomain returns 10 items but those appear to be aggregated city events, not their own. May use a different page slug for event listings."
+  },
+  {
     "name": "Hermann Park Conservancy",
     "status": "added",
     "platform": "ICS/iCal Feed",
@@ -426,8 +455,8 @@
   },
   {
     "name": "Houston Botanic Garden",
-    "status": "candidate",
-    "platform": "Tribe Events (ICS, unverified)",
+    "status": "investigating",
+    "platform": "WordPress (Tribe Events ICS broken — returns HTML)",
     "url": "https://hbg.org/events/",
     "tags": [
       "Nature",
@@ -436,7 +465,8 @@
       "Braeswood"
     ],
     "firstSeen": "2026-06-16",
-    "lastChecked": "2026-06-16"
+    "lastChecked": "2026-06-17",
+    "notes": "Tribe Events plugin installed but ICS export broken: both /?ical=1 and /events/?ical=1 redirect to homepage HTML. Same issue as Discovery Green. Would need custom HTML ripper or alternative data source."
   },
   {
     "name": "Houston Center for Photography",
@@ -459,6 +489,19 @@
         "label": "Houston Center for Photography, 1441 W Alabama St, Houston, TX 77006"
       }
     }
+  },
+  {
+    "name": "Houston Contemporary Dance Company",
+    "status": "investigating",
+    "platform": "Squarespace (0 upcoming events from ?format=json)",
+    "url": "https://www.houstoncontemporary.org/events",
+    "tags": [
+      "Dance",
+      "Arts"
+    ],
+    "firstSeen": "2026-06-17",
+    "lastChecked": "2026-06-17",
+    "notes": "Confirmed Squarespace site. /events?format=json returns valid JSON but 0 upcoming events in the collection. May be off-season or events are structured as blog posts rather than a calendar collection. Hosts performances at the Hobby Center. Worth re-checking when their next season is announced."
   },
   {
     "name": "Houston Farmers Market",
@@ -691,16 +734,17 @@
   },
   {
     "name": "MATCH Houston",
-    "status": "candidate",
-    "platform": "Tribe Events (ICS, unverified)",
+    "status": "investigating",
+    "platform": "Drupal 7 (custom calendar, no ICS found)",
     "url": "https://matchouston.org/calendar",
     "tags": [
-      "Theater",
+      "Theatre",
       "Art",
       "Midtown"
     ],
     "firstSeen": "2026-06-16",
-    "lastChecked": "2026-06-16"
+    "lastChecked": "2026-06-17",
+    "notes": "Midtown Arts & Theatre Center Houston at 3400 Main St. Drupal 7 site. Calendar uses /calendar/day-list/YYYY-MM-DD URL structure. No ICS/ical/subscribe links found on the calendar page — Tribe Events ICS endpoint (?ical=1) returns HTML. Would need custom HTML ripper. High-value venue hosting diverse performing arts."
   },
   {
     "name": "McGonigel's Mucky Duck",
@@ -922,7 +966,13 @@
       "Downtown"
     ],
     "firstSeen": "2026-06-15",
-    "lastChecked": "2026-06-15"
+    "lastChecked": "2026-06-17",
+    "impl": {
+      "venueId": "KovZ917ARGO",
+      "venueName": "Punch Line Houston",
+      "venueAddress": "1204 Caroline St, Houston, TX 77002",
+      "notes": "Live Nation URL confirms KovZ917ARGO venue ID. Downtown comedy club. Needs geo and implementation."
+    }
   },
   {
     "name": "Rice University Events",
@@ -1010,6 +1060,21 @@
         "label": "Scout Bar, 18307 Egret Bay Blvd, Houston, TX 77058"
       }
     }
+  },
+  {
+    "name": "Social Beer Garden HTX",
+    "status": "candidate",
+    "platform": "Custom (Wix)",
+    "url": "https://www.socialbeergardenhtx.com/food-truck-calendar",
+    "tags": [
+      "Beer",
+      "Food",
+      "Midtown",
+      "Community"
+    ],
+    "firstSeen": "2026-06-17",
+    "lastChecked": "2026-06-17",
+    "notes": "Midtown beer garden at 3101 San Jacinto St with rotating food truck schedule. Wix-based site (parastorage.com / Pepyaka server). No ICS endpoint. Would need custom HTML ripper. Regular food truck + event programming."
   },
   {
     "name": "South Beach Houston",
