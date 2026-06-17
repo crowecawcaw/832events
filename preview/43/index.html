@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#faf8f4" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#17150f" media="(prefers-color-scheme: dark)" />
+    <meta name="description" content="Browse event calendars from Houston venues, neighborhoods, and organizations. Subscribe via ICS, add events to Google Calendar, or follow RSS feeds for music, art, markets, community events, and more." />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="llms-txt" href="/preview/43/llms.txt" />
+    <title>832.events</title>
+    <!-- Pre-paint boot screen: styled inline so it appears on first paint,
+         before the JS bundle parses and the app's CSS is applied. React's
+         createRoot replaces #root's children on mount, removing it. -->
+    <style>
+      html, body { margin: 0; }
+      body { background: #faf8f4; }
+      .boot-loader {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        background: #faf8f4;
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      }
+      .boot-logo {
+        width: 56px;
+        height: 56px;
+        border-radius: 16px;
+        background: #1a1a2e;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 20px;
+        letter-spacing: -0.02em;
+        animation: boot-breathe 1.8s ease-in-out infinite;
+      }
+      .boot-bar {
+        position: relative;
+        width: 120px;
+        height: 3px;
+        border-radius: 3px;
+        background: rgba(26, 26, 46, 0.15);
+        overflow: hidden;
+      }
+      .boot-bar::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 40%;
+        border-radius: 3px;
+        background: #1366d6;
+        animation: boot-slide 1.3s ease-in-out infinite;
+      }
+      @keyframes boot-breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+      @keyframes boot-slide { 0% { left: -40%; } 100% { left: 100%; } }
+      @media (prefers-color-scheme: dark) {
+        body, .boot-loader { background: #17150f; }
+        .boot-logo { background: #ece6d8; color: #17150f; }
+        .boot-bar { background: rgba(236, 230, 216, 0.18); }
+        .boot-bar::after { background: #4dabf7; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .boot-logo { animation: none; }
+        .boot-bar::after { animation: none; left: 0; width: 100%; }
+      }
+    </style>
+    <script type="module" crossorigin src="/preview/43/assets/index-CknevU_o.js"></script>
+    <link rel="stylesheet" crossorigin href="/preview/43/assets/index-XpYcz3uk.css">
+  </head>
+  <body>
+    <div id="root">
+      <div class="boot-loader" role="status" aria-label="Loading 832.events">
+        <div class="boot-logo">832</div>
+        <div class="boot-bar"></div>
+      </div>
+    </div>
+    <!-- Analytics snippet (if configured in city.config.ts) is injected at
+         build time by the city-config plugin in vite.config.js -->
+  </body>
+</html>
