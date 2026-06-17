@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-17T06:34:44.167Z",
+  "generated": "2026-06-17T16:34:39.848Z",
   "tags": [
     {
       "name": "Art",
@@ -107,8 +107,8 @@
       "name": "Community",
       "slug": "community",
       "category": "Community",
-      "eventCount": 450,
-      "calendarCount": 4,
+      "eventCount": 463,
+      "calendarCount": 5,
       "links": {
         "ics": {
           "href": "tag-community.ics",
@@ -260,8 +260,8 @@
       "name": "Midtown",
       "slug": "midtown",
       "category": "Neighborhoods",
-      "eventCount": 8,
-      "calendarCount": 2,
+      "eventCount": 21,
+      "calendarCount": 3,
       "links": {
         "ics": {
           "href": "tag-midtown.ics",
@@ -405,6 +405,23 @@
         },
         "rss": {
           "href": "tag-photography.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Tech",
+      "slug": "tech",
+      "category": "Activities",
+      "eventCount": 13,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-tech.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-tech.rss",
           "type": "application/rss+xml"
         }
       }
