@@ -9,12 +9,12 @@
   for the reference instance; the strip only runs when a template user
   invokes it.
 - **Phase 3 (this PR): docs implemented** — `docs/SETUP.md` (the full
-  from-template walkthrough), the README template pitch, and the
-  automated-review carve-out in AGENTS.md. Two steps remain for the repo owner (they can't
+  from-template walkthrough), the README template pitch, and the Amazon Q
+  carve-out in AGENTS.md. Two steps remain for the repo owner (they can't
   be done from code): enable **Settings → Template repository** on GitHub,
-  enable **GitHub Pages** (source = `gh-pages` branch), and set the
-  `SITE_URL` repository variable on the reference instance so the workflow
-  defaults are exercised either way.
+  and set the `CLOUDFLARE_PAGES_PROJECT` / `SITE_URL` repository variables
+  on the reference instance so the workflow defaults are exercised either
+  way.
 
 ## Goals
 
@@ -23,18 +23,18 @@
   values (name, domain, timezone, map center/bounds, neighborhoods),
   configure the required GitHub secrets, and get a working
   agent-maintained event calendar site.
-- **This repo is the template.** 832.events remains the reference instance
+- **This repo is the template.** 206.events remains the reference instance
   living on `main`. There is no separate scaffold repo to keep in sync — the
   engine and the template are the same code, so engine improvements land in
   the template automatically.
 - Seattle behavior never changes during the refactor. Every migration PR
-  must produce byte-identical output for the 832.events configuration.
+  must produce byte-identical output for the 206.events configuration.
 
 ## Non-goals
 
 - Multi-city support in a single deployment. One repo copy = one city.
-- A hosted SaaS. Template users run their own GitHub Actions, GitHub Pages
-  site, and (optionally) the Claude automation workflows.
+- A hosted SaaS. Template users run their own GitHub Actions, Cloudflare
+  Pages project, and (optionally) Claude routines.
 - Automatic upstream tracking for template copies (see "Upgrade story").
 - Making every Seattle string disappear in Phase 1. Seattle *content*
   (sources, candidate docs, geocoder lookup tables) stays until the Phase 2
@@ -48,9 +48,9 @@ deleted and regrown for the new city.**
 
 | Bucket | What | Paths |
 |---|---|---|
-| **ENGINE** | City-agnostic code and automation | `lib/` (except noted tables), `scripts/`, `web/`, `skills/`, `.github/workflows/`, `index.ts` |
+| **ENGINE** | City-agnostic code and automation | `lib/` (except noted tables), `scripts/`, `web/`, `skills/`, `.github/workflows/`, `infra/`, `index.ts` |
 | **CONFIG** | The single edit surface for a new city | `city.config.ts` (repo root) |
-| **CITY CONTENT** | Seattle data a new city deletes and regrows | ~160 source dirs under `sources/`, ~95 `sources/recurring/*.yaml`, `sources/external/*.yaml`, `sources/houston_showlists/` (incl. its `VENUE_CONFIG`), `docs/source-candidates.json`, `event-uncertainty-cache.json` (~920 KB of Seattle resolutions), `allowed-removals/`, Seattle entries in `ideas.md`, Seattle lookup tables in `lib/geocoder.ts` (`NEIGHBORHOOD_CENTROIDS`, `LIBRARY_BRANCH_COORDS`, `UNIVERSITY_BUILDING_COORDS`, `UNIVERSITY_NAMED_LOCATIONS`, `KNOWN_VENUE_COORDS`) |
+| **CITY CONTENT** | Seattle data a new city deletes and regrows | ~160 source dirs under `sources/`, ~95 `sources/recurring/*.yaml`, `sources/external/*.yaml`, `sources/seattle_showlists/` (incl. its `VENUE_CONFIG`), `docs/source-candidates/` (~180 files), `docs/discovery-log/` (~50 files), `event-uncertainty-cache.json` (~920 KB of Seattle resolutions), `allowed-removals/`, Seattle entries in `ideas.md`, Seattle lookup tables in `lib/geocoder.ts` (`SEATTLE_NEIGHBORHOOD_CENTROIDS`, `SPL_BRANCH_COORDS`, `UW_BUILDING_COORDS`, `UW_NAMED_LOCATIONS`, `KNOWN_VENUE_COORDS`) |
 
 `geo-cache.json` and `fetch-cache.json` are already committed as empty
 cold-start baselines and need no template treatment.
@@ -96,7 +96,7 @@ this file is the template's primary UX surface.
 | `city.timezone` | Default timezone for new-source docs and the Phase 2 init script (existing source YAMLs declare their own) | IANA zone, e.g. `America/New_York` |
 | `site.name` | `<title>`, PWA manifest, llms.txt, web "add to calendar" PRODID | e.g. `503.events` |
 | `site.description` | `<meta name="description">` | One sentence |
-| `site.baseUrl` / `site.productionUrl` | RSS/sitemap URL base and deployed-site probe in `lib/calendar_ripper.ts` (env vars `SITE_BASE_URL` / `PRODUCTION_URL` still take precedence) | The deployed site origin |
+| `site.baseUrl` / `site.productionUrl` | RSS/sitemap URL base and deployed-site probe in `lib/calendar_ripper.ts` (env vars `SITE_BASE_URL` / `PRODUCTION_URL` still take precedence), out-of-band report fetch | The deployed site origin |
 | `site.repo` | llms.txt source/issue links, web feedback fallback link | `owner/repo` of the copy |
 | `site.bootLogoText` | Pre-paint boot splash + loading screen mark | Short mark, e.g. area code |
 | `ics.prodId` | ICS `PRODID` in generated calendars (`lib/config/schema.ts`) and error calendars | Usually same as `site.name` |
@@ -118,7 +118,8 @@ Migrations, all behavior-neutral for the Seattle config:
   (`productId`), `lib/geocoder.ts` (user-agent, viewbox),
   `lib/config/ticketmaster.ts` (city/state fallbacks),
   `scripts/check-discovery-api.ts` (venue bbox),
-  `scripts/backfill-osm-ids.ts` (user-agent).
+  `scripts/backfill-osm-ids.ts` (user-agent),
+  `scripts/generate-outofband.ts` (build-errors URL).
 - **Web side** (imports raw `city.config.ts`): `EventsMap.jsx`
   (center/zoom/clamp bounds; `isWithinKingCounty` renamed
   `isWithinClampBounds`), `web/index.html` (placeholders substituted by a
@@ -129,9 +130,9 @@ Migrations, all behavior-neutral for the Seattle config:
   `LoadingScreen.jsx`.
 - **Shared**: `lib/config/tags.ts` `Neighborhoods` comes from the config
   (raw import — web-reachable module).
-- **Workflows**: site published to the `gh-pages` branch by
-  `publish_calendars.yml` (via `peaceiris/actions-gh-pages`); Discord
-  workflow site URL via `${{ vars.SITE_URL || 'https://832.events' }}`.
+- **Workflows**: Cloudflare Pages project name via
+  `${{ vars.CLOUDFLARE_PAGES_PROJECT || '206events' }}`; Discord workflow
+  site URL via `${{ vars.SITE_URL || 'https://206.events' }}`.
 - **Templates**: `lib/templates/llms.txt` tokenized
   (`{{SITE_NAME}}`, `{{SITE_URL}}`, `{{CITY_NAME}}`, `{{REPO}}`), replaced
   at copy time in `lib/calendar_ripper.ts`.
@@ -142,13 +143,17 @@ Migrations, all behavior-neutral for the Seattle config:
   engine logic, harmless for other cities (their keys simply never match),
   and get stripped by the Phase 2 init script. Header comments mark them as
   Seattle reference content.
-- `sources/houston_showlists/` — a whole Seattle subsystem; deleted (not
+- `sources/seattle_showlists/` — a whole Seattle subsystem; deleted (not
   parameterized) for new cities.
 - `web/src/sw.js` — copied raw into `output/`, so it cannot import the
   config. Its strings are a Phase 2 init-script rewrite target.
-- `web/src/redesign/App832.jsx` and the `app832`/`useApp832` names —
+- `web/src/redesign/App206.jsx` and the `app206`/`useApp206` names —
   internal identifiers with 9+ import sites; renaming is churn with no
   user-facing benefit. Optional cosmetic cleanup later.
+- `infra/favorites-worker/` and `infra/authenticated-proxy/` — see
+  "Optional services" below; both are opt-in and carry instance-specific
+  values (KV namespace ids, routes, OIDC subject) that belong to whoever
+  deploys them.
 - `README.md` / `AGENTS.md` prose — reworded in Phase 3 alongside the
   template/instance README split.
 
@@ -167,10 +172,11 @@ Deterministic, idempotent, no LLM required. Prompts for the config values
 2. **Rewrites the non-importable files**: the brand strings in
    `web/src/sw.js`, plus generated `README.md` and `ideas.md`.
 3. **Strips Seattle content**: deletes `sources/*` ripper dirs (including
-   `houston_showlists/`), `sources/recurring/*`, `sources/external/*`
-   (keeping both dirs via `.gitkeep`), resets `docs/source-candidates.json`
-   to empty, `allowed-removals/*`;
+   `seattle_showlists/`), `sources/recurring/*`, `sources/external/*`
+   (keeping both dirs via `.gitkeep`), `docs/source-candidates/*` and
+   `docs/discovery-log/*` (keeping each README), `allowed-removals/*`;
    resets `event-uncertainty-cache.json` to `{"version":1,"entries":{}}`;
+   deletes `outofband-report.json` (the build tolerates its absence);
    prunes the five Seattle lookup tables in `lib/geocoder.ts` to empty
    stubs (the surrounding matching logic is table-driven, so empty tables
    are clean no-ops).
@@ -186,17 +192,17 @@ The judgment layer on top. Orchestrates `init-city`, then:
 
 - Seeds `neighborhoods` for the new city (model knowledge + user
   confirmation) and picks sensible map bounds.
-- Walks the secrets/vars checklist (below) and enabling GitHub Pages
-  (source = `gh-pages` branch) plus the custom-domain DNS record.
-- Explains the Claude automation-workflow setup (below) and what each
-  recurring skill does.
+- Walks the secrets/vars checklist (below) and the Cloudflare Pages project
+  creation.
+- Explains the Claude routine setup (below) and what each recurring skill
+  does.
 - Runs a first `source-discovery` pass scoped to the new city and opens the
   first source PRs.
 - Verifies the first full build and deploy.
 
 ### Genericizing skills
 
-Skill prose and scripts reference `https://832.events` and "Seattle" in ~78
+Skill prose and scripts reference `https://206.events` and "Seattle" in ~78
 places across 18 files. The pattern to migrate them is already established
 by `skills/event-lookup` (`$EVENT_LOOKUP_SITE` env var with a default):
 
@@ -211,19 +217,17 @@ by `skills/event-lookup` (`$EVENT_LOOKUP_SITE` env var with a default):
 ## Phase 3: docs + flip the bit
 
 - **`docs/SETUP.md`** — the full from-scratch walkthrough: create from
-  template → run city-setup → secrets/vars → GitHub Pages → optional
-  services → automation workflows.
+  template → run city-setup → secrets/vars → Cloudflare Pages → optional
+  services → routines.
 - **README split** — template-facing README ("build this for your city")
-  with the 832.events instance intro moved to the deployed site/docs.
-- **AGENTS.md** — the automated PR review (Claude Code Review via
-  `claude-code-action`) is gated on the `CLAUDE_CODE_OAUTH_TOKEN` secret;
-  template users who don't set it get a PR flow that degrades to ordinary
-  human review.
+  with the 206.events instance intro moved to the deployed site/docs.
+- **AGENTS.md** — mark the Amazon Q review steps (`/q review`) as optional:
+  template users likely don't have Q installed; the PR flow degrades to
+  ordinary human review.
 - **Enable "Template repository"** in GitHub settings (manual, by the
   repo owner).
-- Enable **GitHub Pages** (source = `gh-pages` branch) and, on the
-  reference instance, set the `SITE_URL` repo var explicitly so the
-  expression defaults are exercised either way.
+- On the reference instance, set repo vars `CLOUDFLARE_PAGES_PROJECT` and
+  `SITE_URL` explicitly so the expression defaults are exercised either way.
 
 ## Operator journey
 
@@ -236,64 +240,71 @@ the template README's "Build this for your own city" section →
 and `init-city` itself prints the same pointers when it finishes.
 
 1. **Deployed site** — repo created from template, `init-city` run,
-   geography hand-tuned, GitHub Pages enabled (source = `gh-pages` branch,
-   `SITE_URL` var set, custom-domain DNS pointed at GitHub Pages), first
-   build published, first sources merged. *Done when:* the site is live at
-   `SITE_URL`, the daily build is green, and at least a handful of sources
-   publish events.
-2. **Self-maintaining site** — the three automation workflows in
-   `docs/routines.md` run as GitHub Actions (build-error responder, daily
-   source discovery, daily source implementation), authenticated with
-   `CLAUDE_CODE_OAUTH_TOKEN`. *Done when:* a broken source gets fixed and a
-   new source lands with no human in the loop.
+   geography hand-tuned, Cloudflare Pages wired (`CLOUDFLARE_*` secrets,
+   `CLOUDFLARE_PAGES_PROJECT`/`SITE_URL` vars), first build published,
+   first sources merged. *Done when:* the site is live at `SITE_URL`, the
+   daily build is green, and at least a handful of sources publish events.
+2. **Self-maintaining site** — the four automation hooks in
+   `docs/routines.md` exist in the operator's Anthropic account
+   (build-error responder, daily source discovery, daily source
+   implementation, GitHub-issues responder). *Done when:* a broken source
+   gets fixed, a new source lands, and a feedback issue gets answered with
+   no human in the loop.
 3. **Full product** — the remaining optional services: Discord
-   notifications and the Browserbase proxy (only once a source needs it).
-   *Done when:* whichever of these the operator wants is live; all of them
-   degrade gracefully when absent (see the matrix below). (Favorites need no
-   service — they live in the browser's localStorage.)
+   notifications, out-of-band proxy (only once a source needs it), and the
+   favorites worker. *Done when:* whichever of these the operator wants is
+   live; all of them degrade gracefully when absent (see the matrix below).
 
 ## Secrets, vars, and optional services
 
 | Service | Secrets / vars | Required? | Behavior when absent |
 |---|---|---|---|
-| **GitHub Pages** (site hosting) | Enable Pages with source = `gh-pages` branch; `publish_calendars.yml` deploys via `peaceiris/actions-gh-pages` (uses the built-in `GITHUB_TOKEN`); custom domain via the `CNAME` the workflow writes + a DNS record | **Required** | Build succeeds but nothing serves until Pages is enabled for the branch |
+| **Cloudflare Pages** (site hosting) | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID` secrets; `CLOUDFLARE_PAGES_PROJECT` var | **Required** | Build succeeds, deploy step fails — nothing publishes |
 | **Site URL** | `SITE_URL` var (Discord workflow), `SITE_BASE_URL`/`PRODUCTION_URL` env overrides | Defaults from `city.config.ts` | Falls back to config values |
-| **Platform APIs** | `TICKETMASTER_API_KEY`, `EVENTBRITE_TOKEN`, `DICE_API_KEY` secrets | Per-source | Only sources of that type fail; isolated parse errors |
-| **Browserbase proxy** (bot-block / JS-challenge bypass) | `BROWSERBASE_API_KEY` secret; sources opt in with `proxy: true` (no AWS/S3/CloudFormation/cron) | Per-source | `proxy: true` sources fail; others unaffected. A copy that never sets this up simply shouldn't mark sources `proxy: true` |
+| **Platform APIs** | `TICKETMASTER_API_KEY` (Ticketmaster app's **Consumer Key**), `EVENTBRITE_TOKEN` (Eventbrite app's **Private token**), `DICE_API_KEY` secrets | Per-source | Only sources of that type fail; isolated parse errors |
+| **Browserbase** (JS-challenge bypass) | `BROWSERBASE_API_KEY` secret | Per-source | `proxy: browserbase` sources fail; others unaffected |
+| **Out-of-band proxy** (AWS) | `AWS_ROLE_ARN` secret, `OUTOFBAND_BUCKET` var; CloudFormation stack in `infra/authenticated-proxy/` (OIDC subject must be set to the copy's `owner/repo`); a residential-IP runner cron | Optional | Already graceful: the AWS-credentials step is `continue-on-error`, `scripts/download-outofband.ts` exits 0 when S3 is unreachable, and `proxy: outofband` sources sit in the non-fatal `pendingProxyVerification` queue. A copy that never sets this up simply shouldn't mark sources `outofband` |
 | **Discord notifications** | `DISCORD_WEBHOOK_CALENDAR` secret; `init-city` deletes the Seattle-specific `notify-discord.yml` on copies — restore it from upstream to enable | Optional | Reference instance: workflow skips posting when the secret is unset. Copies: no workflow at all until restored |
-| **Claude automation** | `CLAUDE_CODE_OAUTH_TOKEN` secret — powers the three automation workflows in `docs/routines.md` plus the owner-gated PR-review and `@claude`-mention workflows | Optional | Every Claude workflow skips silently when unset; build-error fixing, discovery, and implementation become manual |
-| **Favorites** | None | n/a | Favorites are stored only in the browser's localStorage — no backend, sign-in, multi-device sync, or personal ICS feed. Nothing to configure |
+| **Claude routines** | `CLAUDE_ROUTINE_ID`, `CLAUDE_ROUTINE_TOKEN` secrets — these gate **only** the webhook-fired build-error responder; the other three hooks in `docs/routines.md` live wholly in the operator's account | Optional | The trigger step in `publish_calendars.yml` skips when unset; build-error fixing becomes manual |
+| **Favorites** (sign-in, personal feeds) | `FAVORITES_API_URL` var → `VITE_FAVORITES_API_URL`; Cloudflare Worker deploy with KV namespaces + `JWT_SECRET`, `GOOGLE_CLIENT_ID`/`GOOGLE_CLIENT_SECRET`, optional `FEEDBACK_GITHUB_ISSUES_TOKEN` | **Optional, off by default** | Web UI runs in read-only mode (no sign-in, favorites in localStorage); this is the template default |
 
-## Claude automation workflows (in-repo)
+### Favorites worker (advanced, opt-in)
 
-The recurring agent operations run as **GitHub Actions workflows** in
-`.github/workflows/`, using `anthropics/claude-code-action@v1` and the
-`CLAUDE_CODE_OAUTH_TOKEN` secret. They ship with the template — no
-Anthropic-account routines or extra secrets. The reference instance runs
-**two**, catalogued with suggested prompts and cadences in
-`docs/routines.md`:
+Enabling favorites for a copy means: create four KV namespaces, edit
+`infra/favorites-worker/wrangler.toml` (worker name, route/custom domain,
+KV ids, `SITE_URL`, `GITHUB_REPO`), update the CORS allowlist in
+`infra/favorites-worker/src/index.ts`, create a Google OAuth client with the
+copy's callback URL, set the worker secrets, deploy via
+`deploy-favorites-worker.yml`, then set the `FAVORITES_API_URL` repo var.
+This is deliberately documentation-driven rather than templated — every
+value is instance-specific and the worker is independent of the calendar
+build.
+
+## Claude routines (the automation outside the repo)
+
+The recurring agent operations run as **Claude Code routines** — resources
+created in the user's Anthropic account, not shippable repo files. The
+reference instance runs **four hooks**, catalogued with suggested prompts
+and cadences in `docs/routines.md`:
 
 1. **Build-error responder** — runs `skills/build-report/SKILL.md`. The
-   `build-error-responder` job in `publish_calendars.yml` runs the action
-   (rate-limited to once per 24 h via the Actions cache) when a build has
-   errors, and skips silently when the OAuth token is unset.
-2. **Source pipeline** — one scheduled workflow, `claude-sources.yml` (daily
-   08:30 UTC). It runs `skills/source-discovery/SKILL.md`: discovers new
-   sources, records them in `docs/source-candidates.json`, builds up to 5
-   pending candidates, and opens a single human-review PR.
+   repo's only routine coupling is here: the trigger step in
+   `publish_calendars.yml` fires
+   `POST /v1/claude_code/routines/{CLAUDE_ROUTINE_ID}/fire` (rate-limited
+   to once per 24 h) when a build has errors, and skips silently when the
+   secrets are unset.
+2. **Daily source discovery** — `skills/source-discovery/SKILL.md`
+   steps 1–5 (candidates only), account-scheduled.
+3. **Daily source implementation** — steps 6–8 (implement the
+   highest-confidence candidate), account-scheduled.
+4. **GitHub-issues responder** — triages feedback-form and user-filed
+   issues into fixes or new-source PRs, issue-driven.
 
-Issues and PRs are owner-driven, not automated: the owner comments
-`@claude` to act on demand (`claude.yml`), and owner-authored PRs are
-auto-reviewed (`claude-code-review.yml`). All Claude workflows are gated to
-the repo owner (`github.actor` / PR author vs `github.repository_owner`);
-none auto-acts on external issues or fork PRs. See the access-control
-section of `docs/routines.md`.
-
-Template users get the self-maintaining behavior for free once
-`CLAUDE_CODE_OAUTH_TOKEN` is set (the same secret the PR-review and
-`@claude` workflows already use). Everything these workflows need inside
-the repo — the skills, AGENTS.md conventions, the `build-errors.json`
-contract — ships with the template.
+Template users who want the self-maintaining behavior create their own
+copies of these from the catalog; only the build-error responder requires
+storing the routine id/token as the two repo secrets. Everything the
+routines need inside the repo — the skills, AGENTS.md conventions, the
+`build-errors.json` contract — ships with the template.
 
 ## Upgrade story (honest)
 
@@ -328,15 +339,14 @@ engine changes should be called out in commit/PR descriptions.
 - **`lib/geocoder.ts` lookup tables** — ~100 Seattle entries interleaved
   with matching logic. Phase 2 prunes them; a new city regrows
   `KNOWN_VENUE_COORDS` organically via the geo-resolver skill.
-- **`sources/houston_showlists/`** — a Seattle-specific aggregation
+- **`sources/seattle_showlists/`** — a Seattle-specific aggregation
   subsystem (40+ venue `VENUE_CONFIG`); deleted for new cities rather than
   parameterized. Other cities with an equivalent aggregator write their own
   ripper.
-- **Automated PR review** — AGENTS.md's PR flow uses Claude Code Review
-  (`claude-code-action`), gated on the `CLAUDE_CODE_OAUTH_TOKEN` secret.
-  Optional for copies; the docs carve-out (Phase 3) covers the human-review
-  fallback.
-- **Manual console setup** — enabling GitHub Pages + custom-domain DNS:
+- **Amazon Q review** — AGENTS.md's PR flow assumes `/q review`. Optional
+  for copies; needs a docs carve-out (Phase 3).
+- **Manual console setup** — Cloudflare Pages project + custom domain,
+  Google OAuth consent screen, KV namespaces, AWS CloudFormation stack:
   inherently manual, documentation-driven.
 - **Event volume expectations** — gates like the new-source 0-events check
   and discovery budgets were tuned for a large metro; small cities may want

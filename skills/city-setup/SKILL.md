@@ -6,8 +6,8 @@ mechanical work is done by `npm run init-city`; this skill wraps it with the
 judgment calls (geography, neighborhoods, first sources) and walks the
 operator through the external services.
 
-**Do not run this on the reference instance (832.events / Houston).** If
-`city.config.ts` still says `name: "832.events"` and the user hasn't asked to
+**Do not run this on the reference instance (206.events / Seattle).** If
+`city.config.ts` still says `name: "206.events"` and the user hasn't asked to
 re-city the repo, you're in the wrong place.
 
 ## Steps
@@ -47,9 +47,9 @@ npm run init-city -- --answers /tmp/city-answers.json --yes
 ```
 
 This regenerates `city.config.ts`, rebrands `web/src/sw.js` and `README.md`,
-and strips all Houston content (sources, candidate docs, discovery logs,
+and strips all Seattle content (sources, candidate docs, discovery logs,
 uncertainty cache, geocoder lookup tables, `allowed-removals/`, and the
-Houston-specific Discord notification workflow).
+Seattle-specific Discord notification workflow).
 
 ### 3. Tune the derived geography
 
@@ -58,7 +58,7 @@ sanity bbox from the city center. These are rough boxes — open
 `city.config.ts` and tighten them to the real metro shape:
 
 - `map.clampBounds` should hug the populated metro/county (it rejects
-  outliers from the default map fit; Houston's hugged Harris County)
+  outliers from the default map fit; Seattle's hugged King County)
 - `geocoder.nominatimViewbox` slightly larger than the clamp bounds
 - `venueSanityBbox` generous — day-trip radius; CI fails venues outside it
 
@@ -80,14 +80,11 @@ the review loop works from day one (the behavior matrix is in
 `docs/city-template.md`, "Secrets, vars, and optional services"; detailed
 steps in `docs/SETUP.md` steps 4–7).
 
-1. **Claude Code Review for code reviews** — this repo ships two GitHub
-   Actions workflows (`.github/workflows/claude-code-review.yml`, which
-   auto-reviews every PR on open and on each push, and
-   `.github/workflows/claude.yml`, which responds to `@claude` mentions).
-   Both need the **`CLAUDE_CODE_OAUTH_TOKEN`** secret — have the operator
-   generate one with `claude setup-token` (or install the Claude GitHub
-   App) and add it to the repo. Until that secret is set, the workflows
-   are inert and human review is the gate.
+1. **Amazon Q Developer for code reviews** — tell the operator that this
+   workflow asks Amazon Q for a review on every PR (the `/q review`
+   comments in AGENTS.md), and ask them to install it on their repo:
+   <https://github.com/marketplace/amazon-q-developer>. Until it's
+   installed, human review is the gate.
 2. **Cloudflare Pages**: have them create a Pages project (custom domain
    is configured in the Cloudflare dashboard), then set the keys below.
 3. **The full key list** — walk through it with the operator so nothing is
@@ -95,16 +92,16 @@ steps in `docs/SETUP.md` steps 4–7).
 
    | Key | Kind | When it's needed |
    |---|---|---|
-   | `CLAUDE_CODE_OAUTH_TOKEN` | secret | **Now** — powers the Claude Code Review + `@claude` workflows |
    | `CLOUDFLARE_API_TOKEN` | secret | **Now** — deploys (token needs Cloudflare Pages edit permission) |
    | `CLOUDFLARE_ACCOUNT_ID` | secret | **Now** — deploys |
    | `CLOUDFLARE_PAGES_PROJECT` | variable | **Now** — the Pages project name |
    | `SITE_URL` | variable | **Now** — `https://<domain>`, no trailing slash |
-   | `TICKETMASTER_API_KEY` | secret | When the first `type: ticketmaster` source lands |
-   | `EVENTBRITE_TOKEN` | secret | When the first `type: eventbrite` source lands |
+   | `TICKETMASTER_API_KEY` | secret | When the first `type: ticketmaster` source lands (the app's **Consumer Key**, not the secret) |
+   | `EVENTBRITE_TOKEN` | secret | When the first `type: eventbrite` source lands (the app's **Private token**) |
    | `DICE_API_KEY` | secret | When the first `type: dice` source lands |
-   | `BROWSERBASE_API_KEY` | secret | When the first `proxy: true` source lands (fetched live through Browserbase) |
-   | `CLAUDE_CODE_OAUTH_TOKEN` | secret | Powers the three Claude automation workflows (step 7) and owner-gated PR review / `@claude` |
+   | `BROWSERBASE_API_KEY` | secret | When the first `proxy: browserbase` source lands |
+   | `CLAUDE_ROUTINE_ID` / `CLAUDE_ROUTINE_TOKEN` | secrets | With the build-error responder routine (step 7) |
+   | `AWS_ROLE_ARN` / `OUTOFBAND_BUCKET` | secret / variable | Only if the out-of-band proxy is ever deployed |
    | `FAVORITES_API_URL` | variable | Only if the favorites worker is ever deployed |
 
    The four Cloudflare entries are the only ones required before the PR;
@@ -113,25 +110,25 @@ steps in `docs/SETUP.md` steps 4–7).
 ### 6. Commit on a branch and open the PR
 
 Follow the Development Workflow in AGENTS.md (branch → PR). With step 5
-done, the PR gets a preview deploy and an automatic Claude Code Review; if
-the operator skipped setting `CLAUDE_CODE_OAUTH_TOKEN`, rely on human review.
+done, the PR gets a preview deploy and an Amazon Q review; if the operator
+skipped the Q install, rely on human review.
 
 ### 7. Set up self-maintenance and optional services
 
-1. **Self-maintenance**: the three Claude Code automation workflows
-   catalogued in `docs/routines.md` (build-error responder, daily source
-   discovery, daily source implementation) ship in `.github/workflows/` and
-   run automatically once `CLAUDE_CODE_OAUTH_TOKEN` is set — the same secret
-   used for PR review. Confirm that secret is set; no Anthropic-account
-   routines are needed. Issues/PRs are owner-driven via `@claude` (all
-   Claude workflows are gated to the repo owner — see `docs/routines.md`).
+1. **Self-maintenance**: the four Claude Code routines catalogued in
+   `docs/routines.md` (build-error responder, daily source discovery,
+   daily source implementation, GitHub-issues responder) — walk the
+   operator through creating them in their Anthropic account using the
+   suggested prompts there. Only the build-error responder needs repo
+   secrets (`CLAUDE_ROUTINE_ID`/`CLAUDE_ROUTINE_TOKEN`).
 2. **Optional**: Discord notifications (`init-city` deleted the
-   Houston-specific workflow — restore `.github/workflows/notify-discord.yml`
+   Seattle-specific workflow — restore `.github/workflows/notify-discord.yml`
    from the upstream repo and set `DISCORD_WEBHOOK_CALENDAR` to enable),
-   Browserbase proxy (set `BROWSERBASE_API_KEY` only once a source needs
-   `proxy: true`; don't mark sources `proxy: true` before then), favorites
-   worker (`infra/favorites-worker/` — advanced; the site runs read-only
-   without it).
+   out-of-band proxy (AWS stack in `infra/authenticated-proxy/` — skip
+   until a source actually needs it, and don't mark sources
+   `proxy: outofband` before then), favorites worker
+   (`infra/favorites-worker/` — advanced; the site runs read-only without
+   it).
 
 ### 8. Add the first sources
 
@@ -149,10 +146,10 @@ summary. It should cover:
 
 - **Configured vs pending** — each key from the step 5 list (Cloudflare,
   per-source API keys, optional services) marked set or still to do, plus
-  whether `CLAUDE_CODE_OAUTH_TOKEN` is set (enables Claude Code Review)
-- **Automation workflows active vs pending** — the three workflows in
-  `docs/routines.md` are in `.github/workflows/`; note whether
-  `CLAUDE_CODE_OAUTH_TOKEN` is set (they skip silently until it is)
+  whether Amazon Q is installed
+- **Routines created vs pending** — each of the four hooks in
+  `docs/routines.md`, and whether `CLAUDE_ROUTINE_ID`/`CLAUDE_ROUTINE_TOKEN`
+  are set for the build-error responder
 - **Tier reached** — deployed / self-maintaining / full product, per the
   "What done looks like" tiers in `docs/SETUP.md`, and what's left to reach
   the next one
