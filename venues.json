@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-17T04:34:27.033Z",
+  "generated": "2026-06-17T06:34:44.160Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -144,6 +144,42 @@
       ]
     },
     {
+      "name": "contemporary-arts-museum",
+      "friendlyName": "Contemporary Arts Museum Houston",
+      "description": "Contemporary Arts Museum Houston",
+      "url": "https://camh.org/event-calendar/",
+      "tags": [
+        "Art",
+        "Museums",
+        "Museum District"
+      ],
+      "geo": {
+        "lat": 29.7261,
+        "lng": -95.3905,
+        "label": "Contemporary Arts Museum Houston, 5216 Montrose Blvd, Houston, TX 77006"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Contemporary%20Arts%20Museum%20Houston%2C%205216%20Montrose%20Blvd%2C%20Houston%2C%20TX%2077006"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "contemporary-arts-museum",
+          "friendlyName": "Contemporary Arts Museum Houston",
+          "links": {
+            "ics": {
+              "href": "contemporary-arts-museum-contemporary-arts-museum.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "contemporary-arts-museum-contemporary-arts-museum.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "diverseworks",
       "friendlyName": "DiverseWorks",
       "description": "Interdisciplinary arts organization presenting experimental visual art, performance, music, and community programs in Houston. Programs include multi-week exhibitions, artist talks, and immersive events.",
@@ -207,6 +243,40 @@
             },
             "rss": {
               "href": "ensemble-theatre-houston-ensemble-theatre-houston.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "eureka-heights-brew-co",
+      "friendlyName": "Eureka Heights Brewery",
+      "description": "Eureka Heights Brewery",
+      "tags": [
+        "Beer",
+        "The Heights"
+      ],
+      "geo": {
+        "lat": 29.7823,
+        "lng": -95.4181,
+        "label": "Eureka Heights Brewery, 2454 Sawyer St, Houston, TX 77007"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Eureka%20Heights%20Brewery%2C%202454%20Sawyer%20St%2C%20Houston%2C%20TX%2077007"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "eureka-heights-brew-co",
+          "friendlyName": "Eureka Heights Brewery",
+          "links": {
+            "ics": {
+              "href": "external-eureka-heights-brew-co.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-eureka-heights-brew-co.rss",
               "type": "application/rss+xml"
             }
           }

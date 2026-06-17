@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-17T04:34:16.913Z",
+  "lastUpdated": "2026-06-17T06:34:38.369Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -31,6 +31,24 @@
           "rssUrl": "camh-camh.rss",
           "tags": [
             "Art",
+            "Museum District"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "contemporary-arts-museum",
+      "description": "Contemporary Arts Museum Houston",
+      "friendlyLink": "https://camh.org/event-calendar/",
+      "calendars": [
+        {
+          "name": "contemporary-arts-museum",
+          "friendlyName": "Contemporary Arts Museum Houston",
+          "icsUrl": "contemporary-arts-museum-contemporary-arts-museum.ics",
+          "rssUrl": "contemporary-arts-museum-contemporary-arts-museum.rss",
+          "tags": [
+            "Art",
+            "Museums",
             "Museum District"
           ]
         }
@@ -341,6 +359,16 @@
       "tags": [
         "Art",
         "Midtown"
+      ]
+    },
+    {
+      "name": "eureka-heights-brew-co",
+      "friendlyName": "Eureka Heights Brewery",
+      "icsUrl": "external-eureka-heights-brew-co.ics",
+      "originalIcsUrl": "https://www.eurekaheights.com/?post_type=tribe_events&ical=1&eventDisplay=list",
+      "tags": [
+        "Beer",
+        "The Heights"
       ]
     },
     {
