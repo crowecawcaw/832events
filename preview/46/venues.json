@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-17T06:39:45.635Z",
+  "generated": "2026-06-18T02:54:49.147Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -524,6 +524,42 @@
             },
             "rss": {
               "href": "external-houston-heights-association.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ion-district",
+      "friendlyName": "Ion District",
+      "description": "Ion District community calendar",
+      "url": "https://iondistrict.com/events/",
+      "tags": [
+        "Community",
+        "Tech",
+        "Midtown"
+      ],
+      "geo": {
+        "lat": 29.724,
+        "lng": -95.3905,
+        "label": "Ion District, 4201 Main St, Houston, TX 77002"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Ion%20District%2C%204201%20Main%20St%2C%20Houston%2C%20TX%2077002"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "ion-district",
+          "friendlyName": "Ion District",
+          "links": {
+            "ics": {
+              "href": "external-ion-district.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-ion-district.rss",
               "type": "application/rss+xml"
             }
           }

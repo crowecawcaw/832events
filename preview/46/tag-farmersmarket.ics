@@ -6,30 +6,14 @@ METHOD:PUBLISH
 X-WR-CALNAME:FarmersMarket Events
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:eqgO_c50eVyBPe6earJwY
-SUMMARY:Wedgewood Houston Farmers' Market
-DTSTAMP:20260617T063931Z
-DTSTART;TZID=America/Chicago:20260617T090000
-DESCRIPTION:Weekly farmers market in the Wedgewood neighborhood\, May throu
-	gh October.\n\nhttps://www.wedgewoodhoustonfarmersmarket.com/schedule\n\nF
-	rom Wedgewood Houston Farmers' Market
-URL:https://www.wedgewoodhoustonfarmersmarket.com/schedule
-LOCATION:Wedgewood area\, Houston\, TX
-X-CALRIPPER-SOURCE:wedgewood-farmers-market
-CATEGORIES:Wedgewood Houston Farmers' Market
-TRANSP:TRANSPARENT
-RRULE:FREQ=YEARLY;BYDAY=WE;BYMONTH=5,6,7,8,9,10
-DURATION:PT3H
-END:VEVENT
-BEGIN:VEVENT
 IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  arket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:FweAAhck2mJM8uPsrwURX
+UID:o9XdckPUk1Vmvs8XVMTwX
 SUMMARY:Shop Local Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART;TZID=America/Chicago:20260620T080000
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -43,9 +27,9 @@ TRANSP:TRANSPARENT
 DURATION:PT7H
 END:VEVENT
 BEGIN:VEVENT
-UID:QtVbR3muSQYmcqvmu4ROj
+UID:hiRP0Jjrmj9fwtg689o2P
 SUMMARY:Urban Harvest Farmers Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART;TZID=America/Chicago:20260621T090000
 DESCRIPTION:Nonprofit Saturday farmers market with local produce\, food\, a
 	nd garden vendors.\n\nhttps://www.urbanharvest.org/events/\n\nFrom Urban H
@@ -65,10 +49,10 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:M0V4oPAK7WcX-08J8Ak8f
+UID:Q2RQfz5NemcED4eE79h-s
 SUMMARY:Shop Local Market
-DTSTAMP:20260617T063931Z
-DTSTART:20260621T100000Z
+DTSTAMP:20260618T025433Z
+DTSTART;TZID=America/Chicago:20260624T090000
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
 	\n\nhttps://thehoustonfarmersmarket.com/event/shop-local-market/2026-06-21
@@ -81,9 +65,9 @@ TRANSP:TRANSPARENT
 DURATION:PT7H
 END:VEVENT
 BEGIN:VEVENT
-UID:3E4iH0oTYgDs2Bg3nCAOZ
+UID:G8WCg0oHwVdOynRGjDd0m
 SUMMARY:Rice Village Farmers Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260621T140000Z
 DESCRIPTION:Community farmers market featuring local produce\, artisan good
 	s\, and specialty foods.\n\nhttps://www.ricevillagehouston.com/\n\nFrom Ri
@@ -98,14 +82,30 @@ RRULE:FREQ=MONTHLY;BYDAY=1SU,3SU
 DURATION:PT4H
 END:VEVENT
 BEGIN:VEVENT
+UID:m4l2S9pjdT92k5hlg94iZ
+SUMMARY:Wedgewood Houston Farmers' Market
+DTSTAMP:20260618T025433Z
+DTSTART:20260624T140000Z
+DESCRIPTION:Weekly farmers market in the Wedgewood neighborhood\, May throu
+	gh October.\n\nhttps://www.wedgewoodhoustonfarmersmarket.com/schedule\n\nF
+	rom Wedgewood Houston Farmers' Market
+URL:https://www.wedgewoodhoustonfarmersmarket.com/schedule
+LOCATION:Wedgewood area\, Houston\, TX
+X-CALRIPPER-SOURCE:wedgewood-farmers-market
+CATEGORIES:Wedgewood Houston Farmers' Market
+TRANSP:TRANSPARENT
+RRULE:FREQ=YEARLY;BYDAY=WE;BYMONTH=5,6,7,8,9,10
+DURATION:PT3H
+END:VEVENT
+BEGIN:VEVENT
 IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  arket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:3E7nb0XMBDexVu0PFM3sx
+UID:b_zRzT5QZYfhQb0d1TBh6
 SUMMARY:Shop Local Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260627T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -124,9 +124,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:2zdkjbUqNPBhuW4ZzaS65
+UID:fFNNwpCQOcOeFe_LmQvL1
 SUMMARY:Shop Local Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260628T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -145,9 +145,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-Apr25-145-scaled-e1753461453830.jpg
-UID:sKvuJibuVispcE7pPa1z3
+UID:OSf9tg1n15-kqGklxhU61
 SUMMARY:Mariachi at the Market with Alamo Tamales
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260628T120000Z
 DESCRIPTION:Enjoy live mariachi music at the Houston Farmers Market on the 
 	last Sunday of every month from 12–2 PM\, presented in partnership with Al
@@ -168,9 +168,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:04aLwngTvX1uZNdSvMrcC
+UID:zPfF6-h7dw_0gwy6piB_N
 SUMMARY:Shop Local Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260704T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -189,9 +189,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:ENJqfE97pCdc2PpKVwMbo
+UID:82w2Q0IFmHemHNiFPRma8
 SUMMARY:Shop Local Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260705T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -210,9 +210,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:7FSBWxFa9sKbpDfa69qcn
+UID:HMbcWZAieNuMxWS-6AU6b
 SUMMARY:Shop Local Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260711T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -231,9 +231,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:8pgi8kBU_zHHhZeW3BJTo
+UID:bHmqIpz0GwMoPOhK5qZws
 SUMMARY:Shop Local Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260712T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -252,9 +252,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:zmyY709ScY6xgiJsjF0kk
+UID:b3vFTBzx_ifBYYYGxpN9H
 SUMMARY:Shop Local Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260718T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -273,9 +273,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:4EboVm4JRXD9bMHLR5DlU
+UID:ugddlX1IqTAwC7hliK-yF
 SUMMARY:Shop Local Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260719T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -294,9 +294,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:aWDBxymdlzG3n7SOFPOeD
+UID:vPSlJPGaHq4QEHKwflJ3d
 SUMMARY:Shop Local Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260725T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -315,9 +315,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:B0X-TTSo3i3ksN9UFve1Q
+UID:_gQ9bP_4dVd3v323LTp8I
 SUMMARY:Shop Local Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260726T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -336,9 +336,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-Apr25-145-scaled-e1753461453830.jpg
-UID:Jz4If_4-hUlyIOP4tY0RJ
+UID:AOHPui5_MitAdA21erChn
 SUMMARY:Mariachi at the Market with Alamo Tamales
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260726T120000Z
 DESCRIPTION:Enjoy live mariachi music at the Houston Farmers Market on the 
 	last Sunday of every month from 12–2 PM\, presented in partnership with Al
@@ -359,9 +359,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:eaf20wQeBNkavvQEjy-RP
+UID:lGyx4uuag1GtvzWerDRUq
 SUMMARY:Shop Local Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260801T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -380,9 +380,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:fQmfMrxhM27yKyYo-NY2K
+UID:q2xTBb6wdIWhMh5fFM0-D
 SUMMARY:Shop Local Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260802T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -401,9 +401,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:iJPSln_oOMzmIIzjxkVjz
+UID:Iw8zuvh56pxL_X5vZTn97
 SUMMARY:Shop Local Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260808T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -422,9 +422,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:l5rMgq_l_PGDIx9P_Nhwy
+UID:8_GAdoEjYhhlCIg_3LsBO
 SUMMARY:Shop Local Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260809T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -443,9 +443,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:RubLsaIWgc2rJHLxUwy7V
+UID:yyaq7uEBHOqjaEjmNAbRM
 SUMMARY:Shop Local Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260815T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -464,9 +464,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:kHc7Lt5rt3IrqyJLGfhOL
+UID:WP2EM9cdR_8shkxY14tT3
 SUMMARY:Shop Local Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260816T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -485,9 +485,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:xa0d4Uz1qRRKKWoJyjpCZ
+UID:9eFV0eHQmHKjp7dmt46Ty
 SUMMARY:Shop Local Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260822T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -506,9 +506,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:U-GJ_N7H52RhpvfQVkFDK
+UID:jN5f7lT-_bfq6VrV9vhzB
 SUMMARY:Shop Local Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260823T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -527,9 +527,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:2pa1w29xk1ME401HVVBm5
+UID:CzHy2zoz6zkPXQNvDuUd9
 SUMMARY:Shop Local Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260829T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -548,9 +548,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:V7AcRz-YVo9BFIGmUZnQL
+UID:F5AwP7A1MOfjJwciAytFE
 SUMMARY:Shop Local Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260830T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -569,9 +569,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-Apr25-145-scaled-e1753461453830.jpg
-UID:lxmBLlHGDiv1tqTwMKpXU
+UID:lIyBplnwxQ3PV95UouzI1
 SUMMARY:Mariachi at the Market with Alamo Tamales
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260830T120000Z
 DESCRIPTION:Enjoy live mariachi music at the Houston Farmers Market on the 
 	last Sunday of every month from 12–2 PM\, presented in partnership with Al
@@ -592,9 +592,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:s_IgpGsMkEOyalucOcf8q
+UID:V-cB7XdNKOaoOY0ZrGkHY
 SUMMARY:Shop Local Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260905T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -613,9 +613,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:3JclWXu8E3L_cSCjmYVcV
+UID:bNuW1ngQmRcKP6W5Ydmvy
 SUMMARY:Shop Local Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260906T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -634,9 +634,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:SqKHGT-u_BJhPEG7LCXhL
+UID:fVMNJQXm3Jd9Kn1ht9YoS
 SUMMARY:Shop Local Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260912T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -655,9 +655,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:AVMg7AFflOiImnVGBR05Q
+UID:dpI-NXIWGFeFkczvzqjJS
 SUMMARY:Shop Local Market
-DTSTAMP:20260617T063931Z
+DTSTAMP:20260618T025433Z
 DTSTART:20260913T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!

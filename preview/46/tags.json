@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-17T06:39:45.641Z",
+  "generated": "2026-06-18T02:54:49.154Z",
   "tags": [
     {
       "name": "Art",
@@ -56,7 +56,7 @@
       "name": "Books",
       "slug": "books",
       "category": "Activities",
-      "eventCount": 9,
+      "eventCount": 13,
       "calendarCount": 2,
       "links": {
         "ics": {
@@ -107,8 +107,8 @@
       "name": "Community",
       "slug": "community",
       "category": "Community",
-      "eventCount": 450,
-      "calendarCount": 4,
+      "eventCount": 462,
+      "calendarCount": 5,
       "links": {
         "ics": {
           "href": "tag-community.ics",
@@ -124,7 +124,7 @@
       "name": "Downtown",
       "slug": "downtown",
       "category": "Neighborhoods",
-      "eventCount": 120,
+      "eventCount": 123,
       "calendarCount": 4,
       "links": {
         "ics": {
@@ -260,8 +260,8 @@
       "name": "Midtown",
       "slug": "midtown",
       "category": "Neighborhoods",
-      "eventCount": 8,
-      "calendarCount": 2,
+      "eventCount": 21,
+      "calendarCount": 3,
       "links": {
         "ics": {
           "href": "tag-midtown.ics",
@@ -277,7 +277,7 @@
       "name": "Montrose",
       "slug": "montrose",
       "category": "Neighborhoods",
-      "eventCount": 349,
+      "eventCount": 347,
       "calendarCount": 3,
       "links": {
         "ics": {
@@ -294,7 +294,7 @@
       "name": "Museum District",
       "slug": "museum-district",
       "category": "Neighborhoods",
-      "eventCount": 29,
+      "eventCount": 33,
       "calendarCount": 5,
       "links": {
         "ics": {
@@ -328,7 +328,7 @@
       "name": "Music",
       "slug": "music",
       "category": "Activities",
-      "eventCount": 573,
+      "eventCount": 575,
       "calendarCount": 6,
       "links": {
         "ics": {
@@ -345,7 +345,7 @@
       "name": "Near Northside",
       "slug": "near-northside",
       "category": "Neighborhoods",
-      "eventCount": 101,
+      "eventCount": 102,
       "calendarCount": 2,
       "links": {
         "ics": {
@@ -362,7 +362,7 @@
       "name": "Nightlife",
       "slug": "nightlife",
       "category": "Activities",
-      "eventCount": 25,
+      "eventCount": 26,
       "calendarCount": 2,
       "links": {
         "ics": {
@@ -379,7 +379,7 @@
       "name": "Parks",
       "slug": "parks",
       "category": "Community",
-      "eventCount": 78,
+      "eventCount": 77,
       "calendarCount": 3,
       "links": {
         "ics": {
@@ -405,6 +405,23 @@
         },
         "rss": {
           "href": "tag-photography.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Tech",
+      "slug": "tech",
+      "category": "Activities",
+      "eventCount": 13,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-tech.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-tech.rss",
           "type": "application/rss+xml"
         }
       }
@@ -481,7 +498,7 @@
       "name": "Upper Kirby",
       "slug": "upper-kirby",
       "category": "Neighborhoods",
-      "eventCount": 108,
+      "eventCount": 107,
       "calendarCount": 2,
       "links": {
         "ics": {
