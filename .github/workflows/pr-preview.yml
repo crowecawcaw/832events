@@ -22,9 +22,10 @@ jobs:
     secrets: inherit
     with:
       artifact-name: pr-preview-${{ github.event.number }}
-      # Previews are served from https://832.events/preview/<PR>/, so the web
-      # bundle must be built with that base path for its asset URLs to resolve.
-      base-path: /preview/${{ github.event.number }}/
+      # Previews are served from
+      # https://crowecawcaw.github.io/832events/preview/<PR>/. The web bundle's
+      # relative Vite base ('./') resolves asset URLs against that directory on
+      # its own, so no absolute base-path is needed here.
 
   deploy-preview:
     runs-on: ubuntu-latest
@@ -56,7 +57,7 @@ jobs:
           publish_branch: gh-pages
           # Publish into preview/<PR>/ only. With destination_dir set, peaceiris
           # replaces just that subtree and leaves the production site and other
-          # PRs' previews untouched (and keeps the root CNAME).
+          # PRs' previews untouched.
           destination_dir: preview/${{ github.event.number }}
           keep_files: false
           user_name: "github-actions[bot]"
@@ -64,7 +65,7 @@ jobs:
           commit_message: "Deploy PR #${{ github.event.number }} preview"
 
       - name: Compute preview URL
-        run: echo "deployment-url=https://832.events/preview/${{ github.event.number }}/" >> "$GITHUB_OUTPUT"
+        run: echo "deployment-url=https://crowecawcaw.github.io/832events/preview/${{ github.event.number }}/" >> "$GITHUB_OUTPUT"
         id: deploy-url
 
       - name: Comment PR with preview link
