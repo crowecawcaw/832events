@@ -1,6 +1,6 @@
 # Privacy & Consent Posture
 
-206.events runs **without a cookie-consent banner**, by design. This document
+832.events runs **without a cookie-consent banner**, by design. This document
 records *why* that's compliant and what the site is and isn't allowed to do so
 it stays that way. The design rule that enforces this lives in `AGENTS.md`
 ("Privacy & Consent by Design"); this file is the rationale and the inventory.
