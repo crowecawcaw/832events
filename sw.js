@@ -1,11 +1,11 @@
 // Service Worker for 832.events
 // Provides offline support via cache-first (app shell) and stale-while-revalidate (data)
 
-const APP_SHELL_CACHE = 'app-shell-v56cc10e2'
+const APP_SHELL_CACHE = 'app-shell-vc7d65dd5'
 const DATA_CACHE = 'data-v1'
 
 // Populated at build time by scripts/inject-sw-assets.mjs
-const APP_SHELL_URLS = ["./assets/index-CknevU_o.js","./assets/index-XpYcz3uk.css","./index.html","./"]
+const APP_SHELL_URLS = ["./assets/index-5pVsf0vT.js","./assets/index-XpYcz3uk.css","./index.html","./"]
 
 const DATA_URL_PATTERNS = [
   /manifest\.json$/,
