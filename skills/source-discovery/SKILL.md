@@ -143,6 +143,16 @@ To implement:
    ```
 
    `ONLY_SOURCE` restricts the build to that one source (skipping every other source's fetch+parse and the new-source/deployed-site gates), so iteration is fast and outgoing traffic stays scoped to the source being added. The fetch cache (`docs/fetch-cache.md`) fetches it live only once; re-runs re-parse the cached body with no network, so you can iterate on parsing freely.
+
+   **Before pushing, gate the new source locally:** `npm run check-new-sources`.
+   Because `ONLY_SOURCE` skips the new-source gates, the build above will NOT
+   fail on a zero-event source — only CI will. `check-new-sources` reproduces
+   CI's verdict locally: it builds the sources you added vs `origin/main` and
+   fails if any non-`proxy` one yields 0 events. **If it fails, do not open the
+   PR** — fix the URL/format until the source produces events, or leave it as a
+   `status: investigating` candidate and don't commit the source. A new source
+   confirmed at 0 events is not "experimental, ready to debug in the PR" — it's
+   a build failure; keep it out of the PR.
 4. **Push and open PR**: `scripts/push_and_pr.sh`
 
 ### 7. Verify events and iterate with the reviewer
