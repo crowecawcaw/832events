@@ -9,9 +9,9 @@ on:
         default: "github-pages"
         type: string
       base-path:
-        description: "Vite base path for the web bundle (e.g. '/preview/42/' for PR previews). Defaults to root."
+        description: "Vite base path for the web bundle. Defaults to relative './' so bundled asset URLs resolve under the GitHub Pages project subpath (/832events/) and any preview subpath without pinning an absolute path."
         required: false
-        default: "/"
+        default: "./"
         type: string
     outputs:
       error-count:
@@ -178,7 +178,8 @@ jobs:
       run: npm run web:build
       env:
         # Favorites are stored locally in the browser — there is no backend API.
-        # base-path lets PR previews build under /preview/<PR>/ (default '/').
+        # base-path sets the Vite base; defaults to relative './' so asset URLs
+        # resolve under the GitHub Pages /832events/ (and preview) subpaths.
         VITE_BASE_PATH: ${{ inputs.base-path }}
 
     - name: Get GitHub Pages URL
