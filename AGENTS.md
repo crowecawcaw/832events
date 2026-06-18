@@ -43,6 +43,17 @@ ONLY_SOURCE=<name> npm run generate-calendars
 sources, skipping every other fetch/parse plus the new-source gates. The fetch
 cache (`docs/fetch-cache.md`) makes each source fetch live at most once.
 
+**When you ADD a source, also run `npm run check-new-sources` before the PR.**
+Because `ONLY_SOURCE` *skips the new-source gates*, an `ONLY_SOURCE` build never
+fails on a zero-event source — and `validate`/`typecheck`/`test:all` can't know
+event counts (they don't fetch). So a brand-new source that produces 0 events
+passes every other local check and only fails in CI (which hard-fails: a new
+source must produce ≥1 event before merge). `check-new-sources` closes that
+gap — it finds the sources you added vs `origin/main`, builds just those, and
+fails if any non-`proxy` one yields 0 events. Never open a PR with a new source
+you've seen return 0 events; keep it as a candidate (`status: investigating`)
+and don't commit the source until it produces events.
+
 ## Adding a calendar source
 
 Always follow `skills/source-discovery/SKILL.md` (it has the mandatory
