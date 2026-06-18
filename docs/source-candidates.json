@@ -426,7 +426,7 @@
   },
   {
     "name": "Houston Botanic Garden",
-    "status": "candidate",
+    "status": "investigating",
     "platform": "Tribe Events (ICS, unverified)",
     "url": "https://hbg.org/events/",
     "tags": [
@@ -436,7 +436,12 @@
       "Braeswood"
     ],
     "firstSeen": "2026-06-16",
-    "lastChecked": "2026-06-16"
+    "lastChecked": "2026-06-18",
+    "notes": "External ICS feed created at sources/external/houston-botanic-garden.yaml. Live fetch of Tribe Events ICS endpoint returned 0 events. Verify ICS URL: https://hbg.org/?post_type=tribe_events&ical=1&eventDisplay=list",
+    "impl": {
+      "icsUrl": "https://hbg.org/?post_type=tribe_events&ical=1&eventDisplay=list",
+      "builtEventCount": 0
+    }
   },
   {
     "name": "Houston Center for Photography",
@@ -632,7 +637,7 @@
   },
   {
     "name": "Lake Houston Brewery",
-    "status": "candidate",
+    "status": "added",
     "platform": "Wix (HTML scraper)",
     "url": "https://www.lakehoustonbrew.com/",
     "tags": [
@@ -641,10 +646,13 @@
       "Northside"
     ],
     "firstSeen": "2026-06-16",
-    "lastChecked": "2026-06-16",
+    "lastChecked": "2026-06-18",
+    "pr": "claude/source-pipeline-2026-06-18",
     "impl": {
       "type": "custom",
       "observedEventCount": 25,
+      "builtEventCount": 18,
+      "note": "Custom Wix HTML ripper, 18 events extracted from Sunday Brunch series",
       "geo": {
         "lat": 30.0654,
         "lng": -95.1242,
@@ -654,15 +662,23 @@
   },
   {
     "name": "Latin City",
-    "status": "candidate",
+    "status": "added",
     "platform": "Eventbrite",
     "url": "https://latincity.eventbrite.com",
     "firstSeen": "2026-06-15",
-    "lastChecked": "2026-06-15"
+    "lastChecked": "2026-06-18",
+    "pr": "claude/source-pipeline-2026-06-18",
+    "impl": {
+      "type": "eventbrite",
+      "organizerId": "1098215067",
+      "observedEventCount": 23,
+      "builtEventCount": 23,
+      "note": "Eventbrite built-in type, 23 events from organization"
+    }
   },
   {
     "name": "Lawndale Art Center",
-    "status": "candidate",
+    "status": "added",
     "platform": "WordPress + custom HTML (no ICS/API available)",
     "url": "https://lawndaleartcenter.org/events/",
     "tags": [
@@ -670,7 +686,13 @@
       "Museum District"
     ],
     "firstSeen": "2026-06-14",
-    "lastChecked": "2026-06-15"
+    "lastChecked": "2026-06-18",
+    "pr": "claude/source-pipeline-2026-06-18",
+    "impl": {
+      "type": "custom",
+      "builtEventCount": 2,
+      "note": "Custom HTML ripper for WordPress events"
+    }
   },
   {
     "name": "Levy Park Houston",
@@ -701,7 +723,7 @@
   },
   {
     "name": "MATCH Houston",
-    "status": "candidate",
+    "status": "investigating",
     "platform": "Tribe Events (ICS, unverified)",
     "url": "https://matchouston.org/calendar",
     "tags": [
@@ -710,11 +732,16 @@
       "Midtown"
     ],
     "firstSeen": "2026-06-16",
-    "lastChecked": "2026-06-16"
+    "lastChecked": "2026-06-18",
+    "notes": "External ICS feed created at sources/external/match-houston.yaml. Live fetch of Tribe Events ICS endpoint returned 0 events. Verify ICS URL: https://matchouston.org/?post_type=tribe_events&ical=1&eventDisplay=list",
+    "impl": {
+      "icsUrl": "https://matchouston.org/?post_type=tribe_events&ical=1&eventDisplay=list",
+      "builtEventCount": 0
+    }
   },
   {
     "name": "McGonigel's Mucky Duck",
-    "status": "candidate",
+    "status": "added",
     "platform": "WordPress (Tessera Events) - custom HTML",
     "url": "https://www.mcgonigels.com/",
     "tags": [
@@ -722,13 +749,14 @@
       "Upper Kirby"
     ],
     "firstSeen": "2026-06-14",
-    "lastChecked": "2026-06-15",
+    "lastChecked": "2026-06-18",
+    "pr": "claude/source-pipeline-2026-06-18",
     "impl": {
       "type": "custom",
       "ripper": "sources/mcgonigels-mucky-duck/ripper.ts",
       "extractionPath": "eventObjects.push({...}) regex on homepage HTML",
-      "eventCount": "98 (unit test on 2026-06-15 sample)",
-      "sampleDate": "2026-06-15"
+      "builtEventCount": 104,
+      "note": "Custom HTML ripper, 104 events extracted"
     }
   },
   {
@@ -800,7 +828,7 @@
   },
   {
     "name": "Murder By The Book",
-    "status": "candidate",
+    "status": "added",
     "platform": "Drupal 11 + IndieCommerce (HTML-only)",
     "url": "https://www.murderbooks.com/events",
     "tags": [
@@ -808,7 +836,13 @@
       "West University"
     ],
     "firstSeen": "2026-06-14",
-    "lastChecked": "2026-06-15"
+    "lastChecked": "2026-06-18",
+    "pr": "claude/source-pipeline-2026-06-18",
+    "impl": {
+      "type": "custom",
+      "builtEventCount": 6,
+      "note": "Custom HTML ripper for Drupal bookstore events"
+    }
   },
   {
     "name": "Museum of Fine Arts Houston",
@@ -835,7 +869,7 @@
   },
   {
     "name": "Notsuoh",
-    "status": "candidate",
+    "status": "investigating",
     "platform": "Squarespace (HTML)",
     "url": "http://notsuoh.com/",
     "tags": [
@@ -845,10 +879,12 @@
       "Downtown"
     ],
     "firstSeen": "2026-06-16",
-    "lastChecked": "2026-06-16",
+    "lastChecked": "2026-06-18",
+    "notes": "Custom HTML ripper implemented and tested locally (8 events in unit tests), but live fetch returns 0 events. Squarespace selectors may need adjustment or site structure changed. Ripper code exists at sources/notsuoh/ripper.ts, ready for debugging.",
     "impl": {
       "type": "custom",
       "observedEventCount": 8,
+      "builtEventCount": 0,
       "geo": {
         "lat": 29.7603,
         "lng": -95.3866,
