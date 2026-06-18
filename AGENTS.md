@@ -77,6 +77,12 @@ events in museum rippers that list it vaguely (e.g. `sources/sam/ripper.ts`).
 - **`geo` is required** on every ripper, external calendar, and recurring event:
   either `{lat, lng, label?}` (a fixed venue → appears in `venues.json`) or
   `null` (community/multi-location). No default; the build fails if it's missing.
+- **A fixed venue (`geo` set) must carry a neighborhood tag** — at least one tag
+  from `city.config.ts` `neighborhoods` (the `Neighborhoods` category). Without
+  it the homepage drops the venue into "Citywide". `npm run validate` enforces
+  this statically (no build), so it fails before push — not just in CI's
+  post-build `check-discovery-api`. If the venue's area isn't listed, add it to
+  `city.config.ts`; if the source is genuinely distributed, use `geo: null`.
 - **Stable event ids:** `RipperCalendarEvent.id` must derive deterministically
   from source content (e.g. `slug(title)-date`), never from timestamps, indices,
   or randomness — the id is the join key for the uncertainty cache and dedup.

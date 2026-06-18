@@ -15,7 +15,7 @@ import { RipperLoader } from "../lib/config/loader.js";
 import { externalConfigSchema } from "../lib/config/schema.js";
 import { loadYamlDir } from "../lib/config/dir-loader.js";
 import { RecurringEventProcessor } from "../lib/config/recurring.js";
-import { detectTagDuplicates } from "../lib/config/tags.js";
+import { detectTagDuplicates, categoryFor } from "../lib/config/tags.js";
 
 async function main(): Promise<void> {
   const problems: string[] = [];
@@ -33,12 +33,14 @@ async function main(): Promise<void> {
   }
 
   // 2. External ICS feeds (sources/external/*.yaml).
+  let externals: Array<{ name: string; geo: unknown; tags?: string[]; disabled?: boolean }> = [];
   try {
     const entries = await loadYamlDir("sources/external");
     const result = externalConfigSchema.safeParse(entries);
     if (!result.success) {
       problems.push(`[external] ${result.error.message}`);
     } else {
+      externals = result.data;
       result.data.forEach(c => c.tags?.forEach(t => allTags.add(t)));
     }
   } catch (e: any) {
@@ -56,7 +58,54 @@ async function main(): Promise<void> {
     problems.push(`[recurring] ${e?.message ?? e}`);
   }
 
-  // 4. Tag near-duplicates (divergent ICS URLs, almost always a typo).
+  // 4. Neighborhood-tag coverage for venues (single-location sources).
+  //    Mirrors the post-build rule in scripts/check-discovery-api.ts: every
+  //    source that resolves to a fixed venue (non-null `geo`) must carry at
+  //    least one registered Neighborhoods tag, otherwise the homepage drops it
+  //    into "Citywide" instead of its real area. That rule used to fire ONLY in
+  //    CI (it reads output/venues.json, which needs a full build), so a missing
+  //    neighborhood tag slipped past `npm run validate`/`typecheck`/`test:all`
+  //    and only failed after the PR was open. We enforce it statically here —
+  //    no build, no fetch — so the gap is caught before pushing.
+  //
+  //    Venue grouping below follows lib/discovery.ts buildVenuesJson():
+  //    a ripper with ripper-level geo and no per-calendar geo is one venue
+  //    (tags = ripper ∪ all calendars); otherwise each calendar that resolves
+  //    to a non-null geo is its own venue (tags = ripper ∪ that calendar).
+  const hasNeighborhood = (tags: Iterable<string>) =>
+    [...tags].some(t => categoryFor(t) === "Neighborhoods");
+  const noNeighborhoodMsg = (label: string, tags: string[]) =>
+    `[neighborhood] ${label} resolves to a fixed venue (geo set) but has no ` +
+    `registered neighborhood tag (tags: ${JSON.stringify(tags)}). Add a tag from ` +
+    `TAG_CATEGORIES.Neighborhoods (lib/config/tags.ts) — register a new one if ` +
+    `needed — or set geo: null if the source is distributed (not a single venue).`;
+
+  for (const { config } of rippers) {
+    const ripperTags = config.tags ?? [];
+    const anyCalendarHasOwnGeo = config.calendars.some(
+      c => c.geo !== undefined && c.geo !== null,
+    );
+    if (config.geo && !anyCalendarHasOwnGeo) {
+      const tags = [...ripperTags, ...config.calendars.flatMap(c => c.tags ?? [])];
+      if (!hasNeighborhood(tags)) problems.push(noNeighborhoodMsg(config.name, tags));
+    } else {
+      for (const calendar of config.calendars) {
+        const resolvedGeo = calendar.geo !== undefined ? calendar.geo : config.geo;
+        if (!resolvedGeo) continue;
+        const tags = [...ripperTags, ...(calendar.tags ?? [])];
+        if (!hasNeighborhood(tags)) {
+          problems.push(noNeighborhoodMsg(`${config.name}-${calendar.name}`, tags));
+        }
+      }
+    }
+  }
+  for (const ext of externals) {
+    if (ext.disabled || !ext.geo) continue;
+    const tags = ext.tags ?? [];
+    if (!hasNeighborhood(tags)) problems.push(noNeighborhoodMsg(`external-${ext.name}`, tags));
+  }
+
+  // 5. Tag near-duplicates (divergent ICS URLs, almost always a typo).
   for (const dup of detectTagDuplicates(allTags)) {
     problems.push(`[tags] near-duplicate spellings: ${dup.spellings.join(" / ")}`);
   }
