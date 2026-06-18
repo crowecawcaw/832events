@@ -68,7 +68,7 @@ all carry a `generated` ISO-8601 timestamp so you can check freshness.
 ## Usage notes
 
 - Every href in `index.json`, `tags.json`, and `venues.json` is relative
-  to the site root. Resolve against `https://832.events/` (or the PR
+  to the site root. Resolve against `https://crowecawcaw.github.io/832events/` (or the PR
   preview origin).
 - There is no versioning scheme. Schemas are stable; additive changes
   are expected, breaking changes would be announced via the commit log.
