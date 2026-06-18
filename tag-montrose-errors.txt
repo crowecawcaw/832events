@@ -1,5 +1,10 @@
 [
   {
+    "type": "ParseError",
+    "reason": "Failed to fetch events from Squarespace: Error: BROWSERBASE_API_KEY not set — required for browserbase proxy",
+    "context": "https://andersonfair.net/events"
+  },
+  {
     "error": true,
     "type": "ParseError",
     "reason": "No dated events found in content",

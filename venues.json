@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-18T04:47:26.785Z",
+  "generated": "2026-06-18T14:44:31.535Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -744,6 +744,42 @@
       ]
     },
     {
+      "name": "mossrose-bookshop",
+      "friendlyName": "Mossrose Bookshop",
+      "description": "Mossrose Bookshop",
+      "url": "https://www.mossrosebooks.com/pages/upcoming-events",
+      "tags": [
+        "Books",
+        "Community",
+        "EaDo"
+      ],
+      "geo": {
+        "lat": 29.7415,
+        "lng": -95.3765,
+        "label": "Mossrose Bookshop, 5441 Almeda Rd, Houston, TX 77004"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Mossrose%20Bookshop%2C%205441%20Almeda%20Rd%2C%20Houston%2C%20TX%2077004"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "mossrose-bookshop",
+          "friendlyName": "Mossrose Bookshop",
+          "links": {
+            "ics": {
+              "href": "mossrose-bookshop-mossrose-bookshop.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "mossrose-bookshop-mossrose-bookshop.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "murder-by-the-book",
       "friendlyName": "Murder By The Book",
       "description": "Murder By The Book",
@@ -808,6 +844,42 @@
             },
             "rss": {
               "href": "project-row-houses-project-row-houses.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "punch-line-comedy-club",
+      "friendlyName": "Punch Line Comedy Club",
+      "description": "Punch Line Comedy Club",
+      "url": "https://www.punchlinecomedyclub.com/",
+      "tags": [
+        "Comedy",
+        "Entertainment",
+        "Downtown"
+      ],
+      "geo": {
+        "lat": 29.7534,
+        "lng": -95.364,
+        "label": "Punch Line Houston, 1204 Caroline Street, Houston, TX 77002"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Punch%20Line%20Houston%2C%201204%20Caroline%20Street%2C%20Houston%2C%20TX%2077002"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "punch-line-comedy-club",
+          "friendlyName": "Punch Line Comedy Club",
+          "links": {
+            "ics": {
+              "href": "punch-line-comedy-club-punch-line-comedy-club.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "punch-line-comedy-club-punch-line-comedy-club.rss",
               "type": "application/rss+xml"
             }
           }

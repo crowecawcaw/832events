@@ -1,6 +1,11 @@
 [
   {
     "type": "ParseError",
+    "reason": "Failed to fetch events from Squarespace: Error: BROWSERBASE_API_KEY not set — required for browserbase proxy",
+    "context": "https://andersonfair.net/events"
+  },
+  {
+    "type": "ParseError",
     "reason": "Failed to fetch Eventbrite events for organizer 19231282193: Error: BROWSERBASE_API_KEY not set — required for browserbase proxy",
     "context": "pride-houston"
   }

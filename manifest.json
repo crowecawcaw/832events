@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-18T04:47:22.498Z",
+  "lastUpdated": "2026-06-18T14:44:26.087Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -193,6 +193,24 @@
       ]
     },
     {
+      "name": "mossrose-bookshop",
+      "description": "Mossrose Bookshop",
+      "friendlyLink": "https://www.mossrosebooks.com/pages/upcoming-events",
+      "calendars": [
+        {
+          "name": "mossrose-bookshop",
+          "friendlyName": "Mossrose Bookshop",
+          "icsUrl": "mossrose-bookshop-mossrose-bookshop.ics",
+          "rssUrl": "mossrose-bookshop-mossrose-bookshop.rss",
+          "tags": [
+            "Books",
+            "Community",
+            "EaDo"
+          ]
+        }
+      ]
+    },
+    {
       "name": "murder-by-the-book",
       "description": "Murder By The Book",
       "friendlyLink": "https://www.murderbooks.com/events",
@@ -223,6 +241,24 @@
             "Art",
             "Community",
             "Third Ward"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "punch-line-comedy-club",
+      "description": "Punch Line Comedy Club",
+      "friendlyLink": "https://www.punchlinecomedyclub.com/",
+      "calendars": [
+        {
+          "name": "punch-line-comedy-club",
+          "friendlyName": "Punch Line Comedy Club",
+          "icsUrl": "punch-line-comedy-club-punch-line-comedy-club.ics",
+          "rssUrl": "punch-line-comedy-club-punch-line-comedy-club.rss",
+          "tags": [
+            "Comedy",
+            "Entertainment",
+            "Downtown"
           ]
         }
       ]
@@ -497,6 +533,7 @@
     "Community",
     "Downtown",
     "EaDo",
+    "Entertainment",
     "FarmersMarket",
     "Food",
     "FoodFestival",

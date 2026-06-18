@@ -1,34 +1,59 @@
 [
   {
-    "source": "lake-houston-brewery",
-    "calendar": "lake-houston-brewery-lake-houston-brewery",
+    "source": "anderson-fair",
+    "calendar": "anderson-fair-anderson-fair",
     "type": "Ripper",
-    "eventCount": 18,
+    "eventCount": 0,
+    "sampleEvents": []
+  },
+  {
+    "source": "mossrose-bookshop",
+    "calendar": "mossrose-bookshop-mossrose-bookshop",
+    "type": "Ripper",
+    "eventCount": 2,
     "sampleEvents": [
       {
-        "summary": "Sunday Brunch!",
-        "date": "2026-06-21T11:00-05:00[America/Chicago]",
-        "location": "10614 FM 1960 W, Humble, TX 77338"
+        "summary": "Author Signings",
+        "date": "2026-06-20T14:00-05:00[America/Chicago]",
+        "location": "Mossrose Bookshop, 5441 Almeda Rd, Houston, TX 77004"
       },
       {
-        "summary": "Sunday Brunch!",
-        "date": "2026-06-28T11:00-05:00[America/Chicago]",
-        "location": "10614 FM 1960 W, Humble, TX 77338"
+        "summary": "Mossrose Book Club",
+        "date": "2026-06-25T19:00-05:00[America/Chicago]",
+        "location": "Mossrose Bookshop, 5441 Almeda Rd, Houston, TX 77004"
+      }
+    ]
+  },
+  {
+    "source": "punch-line-comedy-club",
+    "calendar": "punch-line-comedy-club-punch-line-comedy-club",
+    "type": "Ripper",
+    "eventCount": 88,
+    "sampleEvents": [
+      {
+        "summary": "SHE SAID WHAT?! All-Female Comedy Revue",
+        "date": "2026-06-18T19:30-05:00[America/Chicago]",
+        "location": "Punch Line Houston, 1204 Caroline Street, Houston, TX"
       },
       {
-        "summary": "Sunday Brunch!",
-        "date": "2026-07-05T11:00-05:00[America/Chicago]",
-        "location": "10614 FM 1960 W, Humble, TX 77338"
+        "summary": "Angelo Colina (En Español)",
+        "date": "2026-06-19T19:00-05:00[America/Chicago]",
+        "location": "Punch Line Houston, 1204 Caroline Street, Houston, TX"
       },
       {
-        "summary": "Sunday Brunch!",
-        "date": "2026-07-12T11:00-05:00[America/Chicago]",
-        "location": "10614 FM 1960 W, Humble, TX 77338"
+        "summary": "Angelo Colina (En Español)",
+        "date": "2026-06-19T21:15-05:00[America/Chicago]",
+        "location": "Punch Line Houston, 1204 Caroline Street, Houston, TX"
       },
       {
-        "summary": "Sunday Brunch!",
-        "date": "2026-07-19T11:00-05:00[America/Chicago]",
-        "location": "10614 FM 1960 W, Humble, TX 77338"
+        "summary": "Cynthia Lee Fontaine Presents: Drag Brunch at the Punch",
+        "date": "2026-06-20T12:00-05:00[America/Chicago]",
+        "location": "Punch Line Houston, 1204 Caroline Street, Houston, TX"
+      },
+      {
+        "summary": "Angelo Colina (En Español)",
+        "date": "2026-06-20T19:00-05:00[America/Chicago]",
+        "location": "Punch Line Houston, 1204 Caroline Street, Houston, TX"
       }
     ]
   }
