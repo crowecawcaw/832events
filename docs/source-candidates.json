@@ -15,7 +15,7 @@
   },
   {
     "name": "Alley Theatre",
-    "status": "candidate",
+    "status": "investigating",
     "platform": "Ticketmaster",
     "url": "https://www.alleytheatre.org/",
     "tags": [
@@ -23,11 +23,12 @@
       "Downtown"
     ],
     "firstSeen": "2026-06-16",
-    "lastChecked": "2026-06-16"
+    "lastChecked": "2026-06-18",
+    "notes": "Ticketmaster venue exists (ID: KovZpZAJJAvA) but has 0 upcoming events in feed. Re-check periodically."
   },
   {
     "name": "Anderson Fair",
-    "status": "candidate",
+    "status": "added",
     "platform": "Squarespace + Bandsintown",
     "url": "https://www.andersonfair.net/",
     "tags": [
@@ -37,7 +38,13 @@
       "Montrose"
     ],
     "firstSeen": "2026-06-15",
-    "lastChecked": "2026-06-15"
+    "lastChecked": "2026-06-18",
+    "pr": "claude/source-pipeline-2026-06-18",
+    "impl": {
+      "type": "squarespace",
+      "proxy": true,
+      "note": "Calendar is client-side rendered; uses proxy:true for Browserbase JS execution in CI"
+    }
   },
   {
     "name": "Art League Houston",
@@ -126,8 +133,8 @@
   },
   {
     "name": "Basket Books & Art",
-    "status": "candidate",
-    "platform": "Eventbrite (with custom site listings)",
+    "status": "notviable",
+    "platform": "BookManager (not Eventbrite)",
     "url": "https://www.basket-books.com/",
     "tags": [
       "Books",
@@ -135,16 +142,8 @@
       "Montrose"
     ],
     "firstSeen": "2026-06-16",
-    "lastChecked": "2026-06-16",
-    "impl": {
-      "type": "custom",
-      "observedEventCount": 4,
-      "geo": {
-        "lat": 29.7323,
-        "lng": -95.4054,
-        "label": "Basket Books & Art, 115 Hyde Park Blvd, Houston, TX 77006"
-      }
-    }
+    "lastChecked": "2026-06-18",
+    "notes": "Uses BookManager platform with dynamic event loading; no Eventbrite account found. Would require custom scraper with proxy:true for JS rendering."
   },
   {
     "name": "Blue Willow Bookshop",
@@ -233,7 +232,7 @@
   },
   {
     "name": "Dan Electro's Guitar Bar",
-    "status": "candidate",
+    "status": "investigating",
     "platform": "Custom HTML",
     "url": "https://danelectrosguitar.com/",
     "tags": [
@@ -243,7 +242,8 @@
       "The Heights"
     ],
     "firstSeen": "2026-06-15",
-    "lastChecked": "2026-06-15"
+    "lastChecked": "2026-06-18",
+    "notes": "Custom HTML ripper fully implemented but website unreachable from CI. Ripper code is ready; will produce events when site becomes accessible. Consider setting proxy:true if needed."
   },
   {
     "name": "Discovery Green",
@@ -556,15 +556,16 @@
   },
   {
     "name": "Houston Symphony",
-    "status": "investigating",
-    "platform": "Ticketmaster",
+    "status": "notviable",
+    "platform": "Proprietary ticketing (not Ticketmaster)",
     "url": "https://houstonsymphony.org/performance-calendar/",
     "tags": [
       "Music",
       "Downtown"
     ],
     "firstSeen": "2026-06-13",
-    "lastChecked": "2026-06-15"
+    "lastChecked": "2026-06-18",
+    "notes": "Uses proprietary ticketing system (cart.houstonsymphony.org), not Ticketmaster. No public ICS feed available."
   },
   {
     "name": "Houston Texans",
@@ -815,7 +816,7 @@
   },
   {
     "name": "Mossrose Bookshop",
-    "status": "candidate",
+    "status": "added",
     "platform": "Shopify",
     "url": "https://www.mossrosebooks.com/",
     "tags": [
@@ -824,7 +825,19 @@
       "EaDo"
     ],
     "firstSeen": "2026-06-15",
-    "lastChecked": "2026-06-15"
+    "lastChecked": "2026-06-18",
+    "pr": "claude/source-pipeline-2026-06-18",
+    "impl": {
+      "type": "custom",
+      "observedEventCount": 2,
+      "builtEventCount": 2,
+      "note": "Custom ripper for WBS Pro Calendar plugin; extracts events from embedded JSON",
+      "geo": {
+        "lat": 29.7415,
+        "lng": -95.3765,
+        "label": "Mossrose Bookshop, 5441 Almeda Rd, Houston, TX 77004"
+      }
+    }
   },
   {
     "name": "Murder By The Book",
@@ -894,8 +907,8 @@
   },
   {
     "name": "Pearl Bar Houston",
-    "status": "candidate",
-    "platform": "Squarespace",
+    "status": "notviable",
+    "platform": "Wix (not Squarespace)",
     "url": "https://www.pearlhouston.com/calendar",
     "tags": [
       "Nightlife",
@@ -903,7 +916,8 @@
       "Washington Avenue"
     ],
     "firstSeen": "2026-06-16",
-    "lastChecked": "2026-06-16"
+    "lastChecked": "2026-06-18",
+    "notes": "Uses Wix.com Website Builder, not Squarespace. Would require custom Wix scraper with JS rendering."
   },
   {
     "name": "Performing Arts Houston",
@@ -959,7 +973,7 @@
   },
   {
     "name": "Punch Line Comedy Club",
-    "status": "candidate",
+    "status": "added",
     "platform": "Ticketmaster",
     "url": "https://www.punchlinecomedyclub.com/",
     "tags": [
@@ -968,7 +982,19 @@
       "Downtown"
     ],
     "firstSeen": "2026-06-15",
-    "lastChecked": "2026-06-15"
+    "lastChecked": "2026-06-18",
+    "pr": "claude/source-pipeline-2026-06-18",
+    "impl": {
+      "type": "ticketmaster",
+      "venueId": "KovZ917ARGO",
+      "observedEventCount": 88,
+      "builtEventCount": 88,
+      "geo": {
+        "lat": 29.7534,
+        "lng": -95.3640,
+        "label": "Punch Line Comedy Club, 1204 Caroline Street, Houston, TX 77002"
+      }
+    }
   },
   {
     "name": "Rice University Events",
@@ -1059,8 +1085,8 @@
   },
   {
     "name": "South Beach Houston",
-    "status": "candidate",
-    "platform": "Eventbrite",
+    "status": "notviable",
+    "platform": "Unknown (parked domain)",
     "url": "https://www.southbeachhouston.com/",
     "tags": [
       "Nightlife",
@@ -1068,7 +1094,8 @@
       "Midtown"
     ],
     "firstSeen": "2026-06-16",
-    "lastChecked": "2026-06-16"
+    "lastChecked": "2026-06-18",
+    "notes": "Website is a parking/redirect page; no events page or Eventbrite account found"
   },
   {
     "name": "Station Theater",

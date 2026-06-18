@@ -1,0 +1,18 @@
+name: anderson-fair
+type: squarespace
+proxy: true
+description: "Anderson Fair"
+url: https://andersonfair.net/events
+friendlyLink: https://andersonfair.net/
+tags: [Music, Folk, Community, Montrose]
+geo:
+  lat: 29.7447
+  lng: -95.4034
+  label: "Anderson Fair, 2007 Grant St, Houston, TX 77006"
+# Note: Anderson Fair's Squarespace site uses client-side rendered calendar.
+# proxy: true enables Browserbase fetching which executes JavaScript to load
+# the calendar data. The SquarespaceRipper will then parse the ?format=json endpoint.
+calendars:
+  - name: anderson-fair
+    friendlyname: "Anderson Fair"
+    timezone: America/Chicago
