@@ -26,7 +26,7 @@ L.Icon.Default.mergeOptions({
 const PANEL_WIDTH = 340
 
 // Populated metro extent used to reject distant outliers from the default map
-// fit. Configured per city in city.config.ts (Seattle's box hugs King County
+// fit. Configured per city in city.config.ts (Houston's box hugs Harris County
 // — see the comments there for how its edges were chosen).
 const CLAMP_BOUNDS = cityConfig.map.clampBounds
 
@@ -51,12 +51,13 @@ export function isWithinClampBounds(lat, lng) {
 
 // Fraction of events trimmed off each tail (per axis) before framing the default
 // view, and the minimum point count before trimming kicks in. The dense mass of
-// events sits in the Seattle/Eastside core; a sparse handful of legitimate but
-// far-flung King County events (a lone Federal Way or Issaquah listing) would
-// otherwise stretch the default zoom out far enough that — given the map panel's
-// aspect ratio — neighbouring Tacoma/Everett markers fall into view. Trimming the
-// sparsest tails frames the metro mass instead. Filtered views (a single
-// calendar/tag) stay below the threshold and are framed in full, untrimmed.
+// events sits in the inner loop and first-ring suburbs; a sparse handful of
+// legitimate but far-flung Harris County events (a lone Katy or League City
+// listing) would otherwise stretch the default zoom out far enough that —
+// given the map panel's aspect ratio — neighbouring Galveston/Conroe markers
+// fall into view. Trimming the sparsest tails frames the metro mass instead.
+// Filtered views (a single calendar/tag) stay below the threshold and are
+// framed in full, untrimmed.
 const FIT_TRIM_QUANTILE = 0.02
 const FIT_TRIM_MIN_POINTS = 50
 
@@ -71,7 +72,7 @@ function quantile(sortedAsc, q) {
 // — don't stretch the zoom; outliers still render as markers. Smaller sets
 // (filtered views) are framed in full. Geo-filter circles are user-chosen and
 // always folded in untrimmed. Falls back to ALL event markers when none are
-// in-county, so the map never ends up empty.
+// in-Harris-County, so the map never ends up empty.
 export function collectFitPoints(events, geoFilters) {
   const all = []
   const inCounty = []
@@ -154,8 +155,8 @@ function FitBounds({ events, geoFilters, fitKey }) {
   // filters are still folded into the bounds on the runs that do fire.
   useEffect(() => {
     if (!hasEvents) return
-    // In-county event markers (distant outliers like the Gorge are excluded so
-    // they don't stretch the default zoom) plus any geo-filter circles.
+    // In-county event markers (distant outliers like the Woodlands or Galveston
+    // are excluded so they don't stretch the default zoom) plus any geo-filter circles.
     const points = collectFitPoints(eventsRef.current, geoRef.current)
     if (points.length > 0) {
       map.fitBounds(points, { padding: [40, 40], maxZoom: 15 })

@@ -17,19 +17,19 @@ function futureJoda(days, hour = 19) {
   return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:00:00${sign}${pad(Math.floor(a / 60))}:${pad(a % 60)}`
 }
 
-const NEUMOS = { lat: 47.61, lng: -122.32 }
-const BELLEVUE = { lat: 47.6101, lng: -122.2015 } // ~9km east, won't spatially cluster with Neumos
+const WHITE_OAK = { lat: 29.78, lng: -95.38 }
+const NRG = { lat: 29.68, lng: -95.41 } // ~11km south, won't spatially cluster with White Oak
 
-// One conceptual event running three nights at Neumos (-> a single badged group
-// marker) plus a one-off in Bellevue (-> a plain marker), both geocoded.
+// One conceptual event running three nights at White Oak Music Hall (-> a single
+// badged group marker) plus a one-off at NRG Stadium (-> a plain marker), both geocoded.
 const mapEvents = [
   ...[2, 3, 4].map((d) => ({
-    icsUrl: 'test-ripper-cal1.ics', summary: 'Long Run Musical', location: 'Neumos, Capitol Hill',
-    date: futureJoda(d), url: `https://example.com/run/${d}`, ...NEUMOS,
+    icsUrl: 'test-ripper-cal1.ics', summary: 'Long Run Musical', location: 'White Oak Music Hall, The Heights',
+    date: futureJoda(d), url: `https://example.com/run/${d}`, ...WHITE_OAK,
   })),
   {
-    icsUrl: 'test-ripper-cal1.ics', summary: 'One Night Only', location: 'Bellevue',
-    date: futureJoda(5), url: 'https://example.com/one', ...BELLEVUE,
+    icsUrl: 'test-ripper-cal1.ics', summary: 'One Night Only', location: 'NRG Stadium',
+    date: futureJoda(5), url: 'https://example.com/one', ...NRG,
   },
 ]
 
@@ -55,7 +55,7 @@ test.afterEach(async ({ page }) => {
 // query is scoped to the visible container to avoid strict-mode ambiguity.
 async function openMap(page) {
   await page.goto('/')
-  await expect(page.getByText('Neumos')).toBeVisible()
+  await expect(page.getByText('White Oak Music Hall')).toBeVisible()
   const mapTab = page.getByRole('button', { name: 'Map' })
   if (await mapTab.count() && await mapTab.first().isVisible()) await mapTab.first().click()
   const map = page.locator('.events-map-container:visible').first()
