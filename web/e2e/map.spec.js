@@ -55,7 +55,7 @@ test.afterEach(async ({ page }) => {
 // query is scoped to the visible container to avoid strict-mode ambiguity.
 async function openMap(page) {
   await page.goto('/')
-  await expect(page.getByText('White Oak Music Hall')).toBeVisible()
+  await expect(page.getByText('Neumos')).toBeVisible()
   const mapTab = page.getByRole('button', { name: 'Map' })
   if (await mapTab.count() && await mapTab.first().isVisible()) await mapTab.first().click()
   const map = page.locator('.events-map-container:visible').first()
