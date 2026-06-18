@@ -266,7 +266,7 @@ maintenance workflow.
 ## Getting started
 
 1. **Deploy**: edit \`city.config.ts\` if any value needs tuning (map bounds
-   especially), set up the Cloudflare Pages project and GitHub secrets
+   especially), enable GitHub Pages and set the \`SITE_URL\` variable
    (\`docs/SETUP.md\` steps 4–5), and add your first sources —
    \`skills/source-discovery/SKILL.md\`.
 2. **Self-maintain**: the three Claude Code automation workflows catalogued
@@ -472,7 +472,7 @@ async function main() {
   1. Review the diff, especially city.config.ts (tune the derived map bounds).
   2. npm run typecheck && npm run test:all
   3. Follow docs/SETUP.md — or run skills/city-setup/SKILL.md in Claude Code
-     — for secrets, Cloudflare Pages, and your first sources.
+     — for secrets, enabling GitHub Pages, and your first sources.
   4. To make the site self-maintaining, set the CLAUDE_CODE_OAUTH_TOKEN
      secret — it powers the Claude automation workflows catalogued in
      docs/routines.md.`);

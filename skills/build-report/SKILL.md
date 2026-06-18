@@ -21,9 +21,9 @@ This fetches `https://832.events/build-errors.json` and prints a structured summ
 - `urlEntityErrors` — URL fields containing HTML entities (`&amp;`, `&#38;`, …). **Fatal** — see below
 - Build timestamp
 
-**If the script returns HTTP 403** (the cloud sandbox IP may be blocked by
-Cloudflare Pages), fall back to downloading from the GitHub Actions artifact
-instead:
+**If the script returns HTTP 403** (the cloud sandbox IP may be blocked or
+rate-limited by GitHub Pages), fall back to downloading from the GitHub
+Actions artifact instead:
 1. Use `mcp__github__actions_list` to find the latest `build-calendars.yml` run.
 2. Use `mcp__github__actions_get` or list artifacts to find the `build-errors`
    artifact ID for that run.
