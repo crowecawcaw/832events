@@ -17,19 +17,19 @@ function futureJoda(days, hour = 19) {
   return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:00:00${sign}${pad(Math.floor(a / 60))}:${pad(a % 60)}`
 }
 
-const NEUMOS = { lat: 47.61, lng: -122.32 }
-const BELLEVUE = { lat: 47.6101, lng: -122.2015 } // ~9km east, won't spatially cluster with Neumos
+const WHITE_OAK = { lat: 29.78, lng: -95.38 }
+const NRG = { lat: 29.68, lng: -95.41 } // ~11km south, won't spatially cluster with White Oak
 
-// One conceptual event running three nights at Neumos (-> a single badged group
-// marker) plus a one-off in Bellevue (-> a plain marker), both geocoded.
+// One conceptual event running three nights at White Oak Music Hall (-> a single
+// badged group marker) plus a one-off at NRG Stadium (-> a plain marker), both geocoded.
 const mapEvents = [
   ...[2, 3, 4].map((d) => ({
-    icsUrl: 'test-ripper-cal1.ics', summary: 'Long Run Musical', location: 'Neumos, Capitol Hill',
-    date: futureJoda(d), url: `https://example.com/run/${d}`, ...NEUMOS,
+    icsUrl: 'test-ripper-cal1.ics', summary: 'Long Run Musical', location: 'White Oak Music Hall, The Heights',
+    date: futureJoda(d), url: `https://example.com/run/${d}`, ...WHITE_OAK,
   })),
   {
-    icsUrl: 'test-ripper-cal1.ics', summary: 'One Night Only', location: 'Bellevue',
-    date: futureJoda(5), url: 'https://example.com/one', ...BELLEVUE,
+    icsUrl: 'test-ripper-cal1.ics', summary: 'One Night Only', location: 'NRG Stadium',
+    date: futureJoda(5), url: 'https://example.com/one', ...NRG,
   },
 ]
 
@@ -62,6 +62,41 @@ async function openMap(page) {
   await expect(map.locator('.events-map')).toBeVisible()
   return map
 }
+
+// Issue #653: the map frames its initial viewport at the metro extent
+// (city.config clampBounds) the moment it mounts, so OSM tiles for the right
+// zoom load immediately — instead of the map opening at the city-center default
+// zoom (12) and then animating out to frame events once they arrive. OSM tile
+// urls embed the zoom as `/{z}/{x}/{y}.png`; we capture every tile request and
+// assert the map requested wide metro-extent tiles (zoom <= 11) at mount. The
+// old city-center start never requested those: it began at zoom 12 and FitBounds
+// only ever zooms *in* to frame the (clustered, nearby) test markers.
+test('requests metro-extent tiles at mount (no city-center zoom-in animation)', async ({ page }) => {
+  // Record the zoom of every OSM tile request, in order. The *first* request
+  // reveals the map's mount viewport before FitBounds adjusts to the events.
+  const tileZooms = []
+  page.on('request', (req) => {
+    const m = req.url().match(/tile\.openstreetmap\.org\/(\d+)\/\d+\/\d+\.png/)
+    if (m) tileZooms.push(parseInt(m[1], 10))
+  })
+
+  const map = await openMap(page)
+  // Markers still render (the events fit happens on top of the initial frame).
+  await expect(map.locator('.event-group-marker')).toHaveCount(1)
+
+  // Wait for the first tile request to land, then assert the map mounted framed
+  // at the wide metro extent (zoom <= 11) rather than the old city-center zoom
+  // (12). On the old code this first request was zoom 12 — extra tiles that were
+  // then thrown away when FitBounds animated the zoom to frame the events.
+  await expect.poll(() => tileZooms.length, {
+    message: 'expected at least one OSM tile request',
+    timeout: 5000,
+  }).toBeGreaterThan(0)
+  expect(tileZooms[0], 'first tile request should be a metro-extent zoom (<= 11)')
+    .toBeLessThanOrEqual(11)
+
+  await map.screenshot({ path: 'e2e/screenshots/map-initial-bounds.png' })
+})
 
 test('renders group and plain markers on the map', async ({ page }) => {
   const map = await openMap(page)
