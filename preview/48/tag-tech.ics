@@ -3,81 +3,16 @@ VERSION:2.0
 CALSCALE:GREGORIAN
 PRODID:832.events
 METHOD:PUBLISH
-X-WR-CALNAME:Midtown Events
+X-WR-CALNAME:Tech Events
 X-PUBLISHED-TTL:PT1H
-BEGIN:VEVENT
-UID:hhfMG--4_f3UFN6jDloXt
-SUMMARY:Akeelah And The Bee
-DTSTAMP:20260618T025416Z
-DTSTART:20250920T000000Z
-DESCRIPTION:From Ensemble Theatre Houston
-GEO:29.7301;-95.4105
-LOCATION:3535 Main St\, Houston\, TX 77002
-X-CALRIPPER-SOURCE:ensemble-theatre-houston
-CATEGORIES:Ensemble Theatre Houston
-TRANSP:TRANSPARENT
-DURATION:PT3H
-END:VEVENT
-BEGIN:VEVENT
-UID:1-PgFAqxBKxMmtcQ6b-Ws
-SUMMARY:Take The Soul Train To Christmas
-DTSTAMP:20260618T025416Z
-DTSTART:20251115T010000Z
-DESCRIPTION:From Ensemble Theatre Houston
-GEO:29.7301;-95.4105
-LOCATION:3535 Main St\, Houston\, TX 77002
-X-CALRIPPER-SOURCE:ensemble-theatre-houston
-CATEGORIES:Ensemble Theatre Houston
-TRANSP:TRANSPARENT
-DURATION:PT3H
-END:VEVENT
-BEGIN:VEVENT
-UID:HpsR6MqH0UhYmu8QsElqK
-SUMMARY:The Bluest Eye
-DTSTAMP:20260618T025416Z
-DTSTART:20260124T010000Z
-DESCRIPTION:From Ensemble Theatre Houston
-GEO:29.7301;-95.4105
-LOCATION:3535 Main St\, Houston\, TX 77002
-X-CALRIPPER-SOURCE:ensemble-theatre-houston
-CATEGORIES:Ensemble Theatre Houston
-TRANSP:TRANSPARENT
-DURATION:PT3H
-END:VEVENT
-BEGIN:VEVENT
-UID:ZICrAYoGyxwXleORjX2rT
-SUMMARY:Choir Boy
-DTSTAMP:20260618T025416Z
-DTSTART:20260321T000000Z
-DESCRIPTION:From Ensemble Theatre Houston
-GEO:29.7301;-95.4105
-LOCATION:3535 Main St\, Houston\, TX 77002
-X-CALRIPPER-SOURCE:ensemble-theatre-houston
-CATEGORIES:Ensemble Theatre Houston
-TRANSP:TRANSPARENT
-DURATION:PT3H
-END:VEVENT
-BEGIN:VEVENT
-UID:2Ek2uUzCj-635d9nepGUG
-SUMMARY:Who All Over There
-DTSTAMP:20260618T025416Z
-DTSTART:20260509T000000Z
-DESCRIPTION:From Ensemble Theatre Houston
-GEO:29.7301;-95.4105
-LOCATION:3535 Main St\, Houston\, TX 77002
-X-CALRIPPER-SOURCE:ensemble-theatre-houston
-CATEGORIES:Ensemble Theatre Houston
-TRANSP:TRANSPARENT
-DURATION:PT3H
-END:VEVENT
 BEGIN:VEVENT
 IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://iondistrict.com/wp
  -content/uploads/2024/12/DSC_8090-scaled.jpg
 ATTACH;FMTTYPE=image/jpeg:https://iondistrict.com/wp-content/uploads/2024/1
  2/DSC_8090-scaled.jpg
-UID:OwksBhNtNY3AE0q2tUqOb
+UID:W9P8-EouumtufZ45m6cbU
 SUMMARY:Perfecting Your Pitch
-DTSTAMP:20260618T025416Z
+DTSTAMP:20260618T025418Z
 DTSTART:20260617T173000Z
 DESCRIPTION:Whether you’re a budding entrepreneur\, a visionary startup own
 	er\, or a tech aficionado\, this event is tailor-made for you. Join us and
@@ -117,9 +52,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://iondistrict.com/wp-
  content/uploads/2026/06/HLUG_Crest.png
 ATTACH;FMTTYPE=image/png:https://iondistrict.com/wp-content/uploads/2026/06
  /HLUG_Crest.png
-UID:F8ZwCyiWfymC58VqtIPtx
+UID:-ga7LLMb3HOIFTT9krg8T
 SUMMARY:Houston Linux User Group
-DTSTAMP:20260618T025416Z
+DTSTAMP:20260618T025418Z
 DTSTART:20260618T180000Z
 DESCRIPTION:Are you interested or already invested in the Linux Operating S
 	ystem?\nJoin us at the Houston Linux User Group\, one of the oldest user g
@@ -152,9 +87,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/webp:https://iondistrict.com/wp
  -content/uploads/2026/06/ENRG-June.webp
 ATTACH;FMTTYPE=image/webp:https://iondistrict.com/wp-content/uploads/2026/0
  6/ENRG-June.webp
-UID:nZF-Q9PzrNrksEUIanV1S
+UID:uErLbtbBusSxgYG-Zn0UG
 SUMMARY:ENRG HTX - June 2026
-DTSTAMP:20260618T025416Z
+DTSTAMP:20260618T025418Z
 DTSTART:20260619T083000Z
 DESCRIPTION:Register here: https://www.eventbrite.com/e/enrg-htx-june-2026-
 	tickets-1990513456331 \nENRG (Entrepreneurial Networking Resource Group) i
@@ -187,9 +122,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://iondistrict.com/wp
  -content/uploads/2024/07/CoJ1.jpg
 ATTACH;FMTTYPE=image/jpeg:https://iondistrict.com/wp-content/uploads/2024/0
  7/CoJ1.jpg
-UID:ViGLFwneshNKrEuZP5azs
+UID:cQW2xBG26ZsK99oxF-evv
 SUMMARY:Ion Networking with Cup of Joey
-DTSTAMP:20260618T025416Z
+DTSTAMP:20260618T025418Z
 DTSTART:20260619T083000Z
 DESCRIPTION:What is the purpose of Cup of Joey? It is to create a connected
 	 culture of coffee shop-open networking across our region. Every Friday mo
@@ -211,9 +146,9 @@ TRANSP:TRANSPARENT
 DURATION:PT2H
 END:VEVENT
 BEGIN:VEVENT
-UID:I468BLB3DBJOA_dE49K5i
+UID:dK7hRa7Fjjam87AV_vmGA
 SUMMARY:Rice Tech Transfer Office Hours
-DTSTAMP:20260618T025416Z
+DTSTAMP:20260618T025418Z
 DTSTART:20260619T100000Z
 DESCRIPTION:Have an idea\, startup\, or company looking for innovative tech
 	nology? Meet with the Rice University Office of Technology Transfer during
@@ -245,9 +180,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://iondistrict.com/wp
  -content/uploads/2026/01/Startup-Circle-Houston.jpeg
 ATTACH;FMTTYPE=image/jpeg:https://iondistrict.com/wp-content/uploads/2026/0
  1/Startup-Circle-Houston.jpeg
-UID:TIHtelBrp60bg4VRfdIwy
+UID:5p_IfSHkmDRR6gUCjWfQf
 SUMMARY:Startup Circle Houston 💫
-DTSTAMP:20260618T025416Z
+DTSTAMP:20260618T025418Z
 DTSTART:20260619T103000Z
 DESCRIPTION:Startup Circle Houston 💫 brings together founders\, teammates\,
 	 experts and newbies of startups in Greater Houston! Past topics include: 
@@ -271,9 +206,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://iondistrict.com/wp
  -content/uploads/2025/03/321A7871-Edit-scaled.jpg
 ATTACH;FMTTYPE=image/jpeg:https://iondistrict.com/wp-content/uploads/2025/0
  3/321A7871-Edit-scaled.jpg
-UID:JmrymIkQZRhitukClQlwH
+UID:araq_fWCZmCetLJA20Au9
 SUMMARY:Houston Methodist Office Hours
-DTSTAMP:20260618T025416Z
+DTSTAMP:20260618T025418Z
 DTSTART:20260619T103000Z
 DESCRIPTION:Join us at the Houston Methodist Tech Hub at Ion on select Frid
 	ay mornings for Office Hours to meet with the Center for Innovation team. 
@@ -294,9 +229,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://iondistrict.com/wp-
  content/uploads/2026/06/RiceHackathonFlyer-1.pdf.png
 ATTACH;FMTTYPE=image/png:https://iondistrict.com/wp-content/uploads/2026/06
  /RiceHackathonFlyer-1.pdf.png
-UID:SniGdJmTL2MmwlnV43pvR
+UID:wBtFDnnr2xcZIrzo-NlKl
 SUMMARY:Rice World Cup Cities Hack
-DTSTAMP:20260618T025416Z
+DTSTAMP:20260618T025418Z
 DTSTART:20260623T000000Z
 DESCRIPTION:The Rice World Cup Cities Hack is a sustainability-focused virt
 	ual data hackathon tied to the FIFA World Cup 2026. Teams will work with r
@@ -322,9 +257,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://iondistrict.com/wp
  -content/uploads/2025/12/DSC_0352-scaled.jpg
 ATTACH;FMTTYPE=image/jpeg:https://iondistrict.com/wp-content/uploads/2025/1
  2/DSC_0352-scaled.jpg
-UID:-BEQUw0SjQiTfyGQYI6Ck
+UID:AgDfQTxwlhfYMH6ICQI_o
 SUMMARY:NASA Tech Talks: NASA Education Highlights
-DTSTAMP:20260618T025416Z
+DTSTAMP:20260618T025418Z
 DTSTART:20260625T170000Z
 DESCRIPTION:We want HOU! Join us to discover NASA’s toughest tech challenge
 	s—and apply your skills and ex-pertise to solve them.This month we’re goin
@@ -488,9 +423,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://iondistrict.com/wp
  -content/uploads/2024/07/CoJ1.jpg
 ATTACH;FMTTYPE=image/jpeg:https://iondistrict.com/wp-content/uploads/2024/0
  7/CoJ1.jpg
-UID:fOZMpS_SzzJ7NYe4SWGvX
+UID:KVV0QUtlRzTt_bpTVQPxh
 SUMMARY:Ion Networking with Cup of Joey
-DTSTAMP:20260618T025416Z
+DTSTAMP:20260618T025419Z
 DTSTART:20260626T083000Z
 DESCRIPTION:What is the purpose of Cup of Joey? It is to create a connected
 	 culture of coffee shop-open networking across our region. Every Friday mo
@@ -516,9 +451,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://iondistrict.com/wp
  -content/uploads/2023/05/6H1A1559-HDR-Edit-scaled.jpg
 ATTACH;FMTTYPE=image/jpeg:https://iondistrict.com/wp-content/uploads/2023/0
  5/6H1A1559-HDR-Edit-scaled.jpg
-UID:QUR0UeBJHAVlP99XfOXgr
+UID:XhlelVkGDcUj2p_dXbdMa
 SUMMARY:SCORE Office Hours
-DTSTAMP:20260618T025416Z
+DTSTAMP:20260618T025419Z
 DTSTART:20260626T100000Z
 DESCRIPTION:About SCORE Office Hours \nSCORE is the nation’s largest networ
 	k of volunteer\, expert business mentors. Since 1964\, SCORE has helped mo
@@ -540,9 +475,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://iondistrict.com/wp
  -content/uploads/2026/01/Startup-Circle-Houston.jpeg
 ATTACH;FMTTYPE=image/jpeg:https://iondistrict.com/wp-content/uploads/2026/0
  1/Startup-Circle-Houston.jpeg
-UID:XsIg16hGUs8cat1AHavbt
+UID:l2L37-rs2IKRtja3IQHzf
 SUMMARY:Startup Circle Houston 💫
-DTSTAMP:20260618T025416Z
+DTSTAMP:20260618T025419Z
 DTSTART:20260626T103000Z
 DESCRIPTION:Startup Circle Houston 💫 brings together founders\, teammates\,
 	 experts and newbies of startups in Greater Houston! Past topics include: 
@@ -562,26 +497,13 @@ TRANSP:TRANSPARENT
 DURATION:PT1H
 END:VEVENT
 BEGIN:VEVENT
-UID:H36X75TAypPlrf7dzIh9g
-SUMMARY:Get Ready
-DTSTAMP:20260618T025416Z
-DTSTART:20260627T000000Z
-DESCRIPTION:From Ensemble Theatre Houston
-GEO:29.7301;-95.4105
-LOCATION:3535 Main St\, Houston\, TX 77002
-X-CALRIPPER-SOURCE:ensemble-theatre-houston
-CATEGORIES:Ensemble Theatre Houston
-TRANSP:TRANSPARENT
-DURATION:PT3H
-END:VEVENT
-BEGIN:VEVENT
 IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://iondistrict.com/wp-
  content/uploads/2026/06/Screenshot-2026-06-08-at-12.28.29-PM.png
 ATTACH;FMTTYPE=image/png:https://iondistrict.com/wp-content/uploads/2026/06
  /Screenshot-2026-06-08-at-12.28.29-PM.png
-UID:z876NJd6maGEipr-DD5Ed
+UID:2MaWRo84mA9alNNgRA0dA
 SUMMARY:Industrious Coworking Day: Summer Series
-DTSTAMP:20260618T025416Z
+DTSTAMP:20260618T025419Z
 DTSTART:20260630T083000Z
 DESCRIPTION:Register here: https://luma.com/lpkh8qjc \n​Spend the day worki
 	ng from Industrious at the ion. \n​Join us for a free coworking day and ex
@@ -607,120 +529,5 @@ X-CALRIPPER-SOURCE:ion-district
 CATEGORIES:Ion District
 TRANSP:TRANSPARENT
 DURATION:PT9H
-END:VEVENT
-BEGIN:VEVENT
-IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://diverseworks.org/wp
- -content/uploads/2026/04/Calendar-size-169.png
-ATTACH;FMTTYPE=image/png:https://diverseworks.org/wp-content/uploads/2026/0
- 4/Calendar-size-169.png
-UID:ERZXGouJ8MWf69KgtNkJV
-SUMMARY:Art + Climate CONVERSATIONS: Emily Johnson
-DTSTAMP:20260618T025416Z
-DTSTART:20260729T183000Z
-DESCRIPTION:Presented by DW Art + Climate Partners\n6:30 pm\, Wednesday\, J
-	uly 29\, 2026\nSuggested Ticket Price: $25 (pay-what-you-wish) Get Tickets
-	\n10% of ticket sales will be donated to the Texas Tribal Buffalo Project\
-	n\nThe DiverseWorks Art + Climate Partners present Emily Johnson as the in
-	augural speaker for Art + Climate CONVERSATIONS. Join Houstonians\, climat
-	e advocates\, dance and art enthusiasts\, and artists alike on the evening
-	 of July 29th for a talk by Johnson\, a Yu’pik multi-disciplinary artist\,
-	 choreographer\, land and water protector\, and organizer for justice\, so
-	vereignty and well-being. In October 2026\, Johnson’s Overflow Radio will 
-	be presented at DiverseWorks. \nArt + Climate CONVERSATIONS highlights art
-	ists and creatives that are leading the way on addressing climate-related 
-	issues through their work. The DW Art + Climate Partners support and advis
-	e on climate programming and future projects. DiverseWorks’ Art + Climate 
-	program began in 2023-24 and consists of a climate action plan that guides
-	 the organization\; programming that increases awareness of the effects of
-	 climate change\; support for artists to develop environmentally sustainab
-	le practices\; and the development of a new\, climate-forward facility for
-	 artists\, community members\, and other non-profit organizations to share
-	. \nSpeaker Bio\nEmily Johnson is a Bessie Award-winning choreographer\, G
-	uggenheim\, Native Arts and Cultures Foundation\, and United States Artist
-	s Fellow\, and recipient of the Doris Duke Artist Award. She is based in L
-	enapehoking / New York City. Emily is of the Yup’ik Nation\, and since 199
-	8 has created work that considers the experience of sensing and seeing per
-	formance. Her dances function as portals and care processions\, they engag
-	e audienceship within and through space\, time\, and environment — interac
-	ting with a place’s architecture\, peoples\, history and role in building 
-	futures. Emily is trying to make a world where performance is part of life
-	\; where performance is an integral part of our connection to each other\,
-	 our environment\, our stories\, our past\, present and future. \nHer chor
-	eography and gatherings have been presented across what is currently calle
-	d the United States and Australia. Her large-scale project\, Then a Cunnin
-	g Voice and A Night We Spend Gazing at Stars is an all-night outdoor perfo
-	rmance gathering taking place amongst 84 community-hand-made quilts. It pr
-	emiered in Lenapehoking (NYC) in 2017\, and was presented in Zhigaagoong (
-	Chicago) in 2019. She choreographed the Santa Fe Opera production of Docto
-	r Atomic\, directed by Peter Sellars in 2018. Being Future Being\, premier
-	ed on Tongva Land in Los Angeles in 2022. In 2011\, DiverseWorks presented
-	 her performance The Thank-You Bar in conjunction with the exhibition This
-	 is Displacement: Native Artists Consider the Relationship Between Land an
-	d Identity (co-curated by Johnson and Diné visual artist Carolyn Lee Ander
-	son).  \nEmily’s writing has been published and commissioned by The Open S
-	ociety University Network’s Center for Human Rights and the Arts\, ArtsLin
-	k Australia\, unMagazine\, Dance Research Journal (University of Cambridge
-	 Press)\; SFMOMA\; Transmotion Journal\, University of Kent\; Movement Res
-	earch Journal\; Pew Center for Arts and Heritage\; and the compilation Ima
-	gined Theaters: Writing for a Theoretical Stage (Routledge). \nEmily hosts
-	 monthly ceremonial fires on Mannahatta in partnership with Abrons Arts Ce
-	nter and Kai Recollet. She was the Pueblo Opera Cultural Council Diplomat 
-	at Santa Fe Opera 2018-2020\, and a lead organizer of First Nations Dialog
-	ues. She was a co-compiler of the documents\, Creating New Futures: Guidel
-	ines for Ethics and Equity in the Performing Arts and Notes for Equitable 
-	Funding\, was a member of Creative Time’s inaugural Think Tank\, and serve
-	s as a working consortium member for First Nations Performing Arts.\n\nhtt
-	ps://diverseworks.org/event/art-climate-conversations-emily-johnson/\n\nFr
-	om DiverseWorks
-URL:https://diverseworks.org/event/art-climate-conversations-emily-johnson/
-LOCATION:DiverseWorks – MATCHBOX 2\, 3400 Main Street\, Houston\, TX\, 7700
-	2\, United States
-X-CALRIPPER-SOURCE:diverseworks
-CATEGORIES:DiverseWorks
-TRANSP:TRANSPARENT
-DURATION:PT2H
-END:VEVENT
-BEGIN:VEVENT
-IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://diverseworks.org/wp
- -content/uploads/2026/04/Calendar-size-169-1.png
-ATTACH;FMTTYPE=image/png:https://diverseworks.org/wp-content/uploads/2026/0
- 4/Calendar-size-169-1.png
-UID:cs74hochiSnJtkUp8bzG6
-SUMMARY:Jesus Benavente: NUESTROWORLD
-DTSTAMP:20260618T025416Z
-DTSTART:20260813T000000Z
-DESCRIPTION:Jesus Benavente\, A life\, A Home and A Horse Named Triste\, 20
-	21\, courtesy of the artist.\n Opening Thursday\, August 13\, 2026 | 6 – 8
-	 PM\n Gallery Hours: Thurs – Sat 12 – 6 PM\nNUESTROWORLD is a satirical so
-	lo exhibition by Brooklyn-based artist Jesus Benavente\, conceived of as a
-	 visual album and immersive “amusement park.” This project features interc
-	onnected works unfolding across the gallery and city\, collectively highli
-	ghting Houston’s cyclical history of ambition\, folly\, and heartbreak. Th
-	e title NUESTROWORLD is a play on Astroworld and uses Spanglish to create 
-	the phrase “The World Is Ours.” The project draws inspiration from popular
-	 events that mark specific eras of Houston’s history\, such as the opening
-	 of the world-famous Astrodome and Astroworld Park in the late 60’s\, Sele
-	na’s iconic Rodeo performances in the 90’s\, and the folklore surrounding 
-	the 1836 capture of Santa Anna during the Battle of San Jacinto as part of
-	 the Texas Revolution. Together\, they build a story\, a world developed o
-	ver time that underscores sacrifice\, instills resilience\, and highlights
-	 a Texas attitude of “come and take it.”  \nARTIST BIO:\nJesus Benavente i
-	s a visual artist based in Brooklyn\, New York. Jesus earned an MFA from R
-	utgers University and attended Skowhegan School of Painting and Sculpture.
-	 Recent exhibitions and performances include the Whitney Museum of America
-	n Art\, New York\; Queens Museum\, Queens\; LTD Los Angeles\, Los Angeles\
-	; Performa 13\, New York\; Acre Projects\, Chicago\; Chinati Foundation\, 
-	Marfa\; the Neuberger Museum of Art\, Purchase\, NY\; Shin Museum of Art\,
-	 South Korea\; Vox Populi\, Philadelphia\; Socrates Sculpture Park\, New Y
-	ork\; and Austin Museum of Art. Benavente was born in San Antonio\, Texas.
-	 \n \n\nhttps://diverseworks.org/event/jesus-benavente-nuestroworld/\n\nFr
-	om DiverseWorks
-URL:https://diverseworks.org/event/jesus-benavente-nuestroworld/
-LOCATION:DiverseWorks\, @ 5601 B Navigation Blvd & Various Locations\, 5601
-	 B Navigation Blvd\, Houston\, TX\, 77011\, United States
-X-CALRIPPER-SOURCE:diverseworks
-CATEGORIES:DiverseWorks
-TRANSP:TRANSPARENT
-DURATION:PT744H
 END:VEVENT
 END:VCALENDAR
