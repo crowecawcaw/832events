@@ -32,11 +32,13 @@ const cityConfig = {
             "Browse event calendars from Houston venues, neighborhoods, and organizations. Subscribe via ICS, add events to Google Calendar, or follow RSS feeds for music, art, markets, community events, and more.",
         // Deployed site origin with trailing slash. Used as the base for
         // RSS/sitemap URLs. The SITE_BASE_URL env var still takes precedence.
-        baseUrl: "https://832.events/",
+        // This copy is served from its GitHub Pages project site (no custom
+        // domain), so the subpath is part of the origin.
+        baseUrl: "https://crowecawcaw.github.io/832events/",
         // Deployed site origin without trailing slash, used for the
         // deployed-site manifest probe (new-source detection) and report
         // fetches. The PRODUCTION_URL env var still takes precedence.
-        productionUrl: "https://832.events",
+        productionUrl: "https://crowecawcaw.github.io/832events",
         // GitHub owner/repo of this copy — llms.txt source links and the
         // web feedback fallback link.
         repo: "crowecawcaw/832events",

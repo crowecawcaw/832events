@@ -69,12 +69,15 @@ export default defineConfig({
       }
     }
   ],
-  // Served from the apex domain (832.events) at the root in production, but PR
-  // previews live under /preview/<PR>/ on the gh-pages branch. The deploy
-  // workflow passes VITE_BASE_PATH so the bundled asset URLs resolve under the
-  // preview subpath; data files are fetched with relative './' so they work in
-  // both layouts.
-  base: process.env.VITE_BASE_PATH || '/',
+  // Served from a GitHub Pages project site under /<repo>/ (e.g.
+  // crowecawcaw.github.io/832events/), with PR previews nested further under
+  // /preview/<PR>/. A *relative* base ('./') makes every bundled asset URL
+  // resolve against whatever directory index.html is served from, so the same
+  // build works at the repo root, the preview subpath, or an apex domain
+  // without knowing the path ahead of time. Data files and the service worker
+  // already use relative './' for the same reason. VITE_BASE_PATH still wins if
+  // a workflow needs to pin an absolute base.
+  base: process.env.VITE_BASE_PATH || './',
   build: {
     outDir: '../output',
     manifest: true,

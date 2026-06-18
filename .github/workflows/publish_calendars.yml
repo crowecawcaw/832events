@@ -82,9 +82,12 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./output
           publish_branch: gh-pages
-          # Custom apex domain. peaceiris writes/keeps this CNAME at the root so
-          # GitHub Pages serves the site at https://832.events.
-          cname: 832.events
+          # No custom domain: this copy is served directly from its GitHub Pages
+          # project site (https://crowecawcaw.github.io/832events/). Writing a
+          # CNAME for a domain this fork doesn't control made Pages 301-redirect
+          # to a dead host, so the site never loaded. The relative Vite base lets
+          # the bundle work under the /832events/ subpath. To re-enable a custom
+          # domain, set `cname:` here AND the domain in repo Settings → Pages.
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
           commit_message: "Deploy site from ${{ github.sha }}"
