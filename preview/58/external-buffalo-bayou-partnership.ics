@@ -1,0 +1,480 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Buffalo Bayou Partnership - ECPv6.16.4//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Buffalo Bayou Partnership
+X-ORIGINAL-URL:https://buffalobayou.org
+X-WR-CALDESC:Events for Buffalo Bayou Partnership
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-Robots-Tag:noindex
+X-PUBLISHED-TTL:PT1H
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20250309T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20251102T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20260308T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20261101T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20270314T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20271107T070000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:UTC
+BEGIN:STANDARD
+TZOFFSETFROM:+0000
+TZOFFSETTO:+0000
+TZNAME:UTC
+DTSTART:20250101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260618T192000
+DTEND;TZID=America/Chicago:20260618T205000
+DTSTAMP:20260617T234213
+CREATED:20260604T193317Z
+LAST-MODIFIED:20260604T193317Z
+UID:10004194-1781810400-1781815800@buffalobayou.org
+SUMMARY:Buffalo Bayou Cruise: Bats
+DESCRIPTION:Sail the scenic waterway on a 90-minute\, guided tour from downtown to Waugh Drive Bridge and back to watch the emergence of the 250\,000+ Mexican free-tailed bats that live under the bridge. \nOur knowledgeable guide will share details about the bats’ eating patterns\, behavior and contributions to the bayou’s ecosystem. Space is limited\, and boat tours fill up fast. Boat departs 45 minutes before sunset. \nCost\nStarting at $30/person \nDuration\n90 minutes \nDeparture location\n Allen’s Landing (1019 Commerce St.) \nPlease note\, children must be at least four years old to board the pontoon boat. \n  \nPURCHASE TICKETS
+URL:https://buffalobayou.org/event/june-2026-buffalo-bayou-cruise-bats-48-3/
+LOCATION:ALLEN’S LANDING\, 1001 Commerce Street\, Houston\, TX\, 77002\, United States
+CATEGORIES:Bat Colony Tours
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2023/04/bat.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260619T192000
+DTEND;TZID=America/Chicago:20260619T205000
+DTSTAMP:20260617T234213
+CREATED:20260604T193343Z
+LAST-MODIFIED:20260604T193343Z
+UID:10004195-1781896800-1781902200@buffalobayou.org
+SUMMARY:Buffalo Bayou Cruise: Bats
+DESCRIPTION:Sail the scenic waterway on a 90-minute\, guided tour from downtown to Waugh Drive Bridge and back to watch the emergence of the 250\,000+ Mexican free-tailed bats that live under the bridge. \nOur knowledgeable guide will share details about the bats’ eating patterns\, behavior and contributions to the bayou’s ecosystem. Space is limited\, and boat tours fill up fast. Boat departs 45 minutes before sunset. \nCost\nStarting at $30/person \nDuration\n90 minutes \nDeparture location\n Allen’s Landing (1019 Commerce St.) \nPlease note\, children must be at least four years old to board the pontoon boat. \n  \nPURCHASE TICKETS
+URL:https://buffalobayou.org/event/june-2026-buffalo-bayou-cruise-bats-48-4/
+LOCATION:ALLEN’S LANDING\, 1001 Commerce Street\, Houston\, TX\, 77002\, United States
+CATEGORIES:Bat Colony Tours
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2023/04/bat.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260619T193000
+DTEND;TZID=America/Chicago:20260619T203000
+DTSTAMP:20260617T234213
+CREATED:20260518T160958Z
+LAST-MODIFIED:20260518T160958Z
+UID:10004154-1781897400-1781901000@buffalobayou.org
+SUMMARY:Bat Chat
+DESCRIPTION:Stroll to Waugh Drive Bridge for a Bat Chat with the Houston Area Bat Team and see the bat colony up close! \nDid you know? These population of Mexican Free-tailed Bats at the Waugh Bridge can reach a peak of approximately 300\,000 in the summer months! Around sunset\, the colony leaves the crevices beneath the bridge and create a whirlwind-like formation as they emerge. Join the Houston Area Bat Team to learn and discover as they share fun\, educational facts and insights about these miniature\, flying mammals! \nInvite your family and friends\, bring a picnic blanket\, wear your bug spray\, and admire this unique phenomena. \n\n\n\nBat Chats are held every Friday evening from May to August as part of our Summer Species series\, starting 30 minutes before sunset. \n  \nCost\nFree \nTime\n7:30 – 8:30pm (30 minutes before sunset) \nMeeting Location\nWaugh Bridge Bat Colony Observation Deck (along Allen Parkway) \nREGISTRATION
+URL:https://buffalobayou.org/event/2026-june-bat-chat-3/
+LOCATION:Waugh Drive Bat Bridge\, 1
+CATEGORIES:Bat Colony Tours,Free Event
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2023/04/Waugh-Bridge-Bat-Colony-1-1.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260620T100000
+DTEND;TZID=America/Chicago:20260620T104500
+DTSTAMP:20260617T234213
+CREATED:20260205T190630Z
+LAST-MODIFIED:20260209T220007Z
+UID:10004082-1781949600-1781952300@buffalobayou.org
+SUMMARY:Sound Healing Meditation
+DESCRIPTION:Step into a deeper stillness inside the spacious and tranquil Buffalo Bayou Park Cistern. \nOffered in collaboration with UNIONisCREATION™\, this meditation and sound experience invites guests into a space of resonance\, restoration\, and inner alignment. Through gentle vibrations of singing bowls\, wind chimes\, and a gong\, along with guided awareness\, participants are supported in reconnecting body and mind. \nThis series is more than meditation – it is a practice of listening\, feeling\, and returning to center within one of Houston’s most iconic\, immersive spaces. Each session unfolds as a shared moment of reflection\, connection\, and sound-guided stillness. \nGuests should bring their own cushions or mats. No food or drinks are allowed inside the Cistern. \nCost: $20 \nPURCHASE TICKETS
+URL:https://buffalobayou.org/event/sound-healing-meditation-283/
+LOCATION:BUFFALO BAYOU PARK CISTERN\, 105 Sabine Street\, Houston\, TX\, 77007\, United States
+CATEGORIES:Cistern
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2023/04/sound-bath-high-res-crop-scaled-1.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260620T170000
+DTEND;TZID=America/Chicago:20260620T183000
+DTSTAMP:20260617T234213
+CREATED:20260511T151441Z
+LAST-MODIFIED:20260511T151441Z
+UID:10004143-1781974800-1781980200@buffalobayou.org
+SUMMARY:Buffalo Bayou Cruise: History
+DESCRIPTION:Look back at Houston’s history while cruising Buffalo Bayou on a 90-minute tour with a local historian. Your guide will share stories of the Allen brothers and provide historical information about the people\, places\, and events along the bayou that helped shape Houston. \n  \nCost \n\nAdults: $40\nChildren: $32 (ages 4-12)\n\n  \nDeparture Location\nAllen’s Landing (1019 Commerce St.) \nWeather permitting. Reservations Required. Children under the age of 4 are not permitted on the pontoon boat. \n  \nPURCHASE TICKETS
+URL:https://buffalobayou.org/event/2026-buffalo-bayou-cruise-history-16-3/
+LOCATION:ALLEN’S LANDING\, 1001 Commerce Street\, Houston\, TX\, 77002\, United States
+CATEGORIES:History Tours
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2023/04/Copy-of-AllensLanding-SS-Coffee.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260620T190000
+DTEND;TZID=UTC:20260620T210000
+DTSTAMP:20260617T234213
+CREATED:20260422T200511Z
+LAST-MODIFIED:20260527T185326Z
+UID:10004133-1781982000-1781989200@buffalobayou.org
+SUMMARY:Bikes & Bats
+DESCRIPTION:Join Buffalo Bayou Partnership and BikeHouston for a batty good time with a bike ride to the Waugh Bridge Bat Colony! \nBring your bike for an evening ride along Buffalo Bayou to the Waugh Drive Bridge\, where you’ll witness an unforgettable sight—more than 300\,000 Mexican free-tailed bats emerging at sunset. Along the way\, bat expert DeAndra Ramsey will share insights about these fascinating and important creatures—affectionately known as “sky puppies.” Spots are limited\, so reserve yours today! \nCost\n$10 \nDuration\n2 hours / 3 miles \nMeeting Location\nThe Water Works in Buffalo Bayou Park (105-B Sabine St) \nTICKETS
+URL:https://buffalobayou.org/event/2026-bikes-and-bats-2/
+LOCATION:THE WATER WORKS\, 105 Sabine Street\, Houston\, TX\, 77007\, United States
+CATEGORIES:Bat Colony Tours,Bike Tour,Nature Event
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2026/04/IMG_0961.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260620T192000
+DTEND;TZID=America/Chicago:20260620T205000
+DTSTAMP:20260617T234213
+CREATED:20260511T152931Z
+LAST-MODIFIED:20260511T152931Z
+UID:10004146-1781983200-1781988600@buffalobayou.org
+SUMMARY:Buffalo Bayou Cruise: Bats
+DESCRIPTION:Sail the scenic waterway on a 90-minute\, guided tour from downtown to Waugh Drive Bridge and back to watch the emergence of the 250\,000+ Mexican free-tailed bats that live under the bridge. \nOur knowledgeable guide will share details about the bats’ eating patterns\, behavior and contributions to the bayou’s ecosystem. Space is limited\, and boat tours fill up fast. Boat departs 45 minutes before sunset. \nCost\nStarting at $30/person \nDuration\n90 minutes \nDeparture location\n Allen’s Landing (1019 Commerce St.) \nPlease note\, children must be at least four years old to board the pontoon boat. \n  \nPURCHASE TICKETS
+URL:https://buffalobayou.org/event/2026-june-buffalo-bayou-cruise-bats-30-3/
+LOCATION:ALLEN’S LANDING\, 1001 Commerce Street\, Houston\, TX\, 77002\, United States
+CATEGORIES:Bat Colony Tours
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2023/04/boat.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260621T100000
+DTEND;TZID=America/Chicago:20260621T104500
+DTSTAMP:20260617T234213
+CREATED:20260205T190654Z
+LAST-MODIFIED:20260209T220029Z
+UID:10004083-1782036000-1782038700@buffalobayou.org
+SUMMARY:Sound Healing Meditation
+DESCRIPTION:Step into a deeper stillness inside the spacious and tranquil Buffalo Bayou Park Cistern. \nOffered in collaboration with UNIONisCREATION™\, this meditation and sound experience invites guests into a space of resonance\, restoration\, and inner alignment. Through gentle vibrations of singing bowls\, wind chimes\, and a gong\, along with guided awareness\, participants are supported in reconnecting body and mind. \nThis series is more than meditation – it is a practice of listening\, feeling\, and returning to center within one of Houston’s most iconic\, immersive spaces. Each session unfolds as a shared moment of reflection\, connection\, and sound-guided stillness. \nGuests should bring their own cushions or mats. No food or drinks are allowed inside the Cistern. \nCost: $20 \nPURCHASE TICKETS
+URL:https://buffalobayou.org/event/sound-healing-meditation-284/
+LOCATION:BUFFALO BAYOU PARK CISTERN\, 105 Sabine Street\, Houston\, TX\, 77007\, United States
+CATEGORIES:Cistern
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2023/04/sound-bath-high-res-crop-scaled-1.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260621T170000
+DTEND;TZID=America/Chicago:20260621T190000
+DTSTAMP:20260617T234213
+CREATED:20260604T155115Z
+LAST-MODIFIED:20260604T155115Z
+UID:10004183-1782061200-1782068400@buffalobayou.org
+SUMMARY:Buffalo Bayou Cruise
+DESCRIPTION:These 45-minute boat rides are a great way to spend time with your family and friends. Escape the bustle of the city and enjoy the cool breeze as you glide along Buffalo Bayou\, through the heart of downtown Houston. Look for graceful herons\, turtles\, fish\, and even an occasional alligator on the banks. \nTours leave promptly on the hour beginning at 5 PM. \n  \nCost \n\nAdults: $20\nChildren: $16 (ages 4-12)\n\n  \nDeparture Location\nAllen’s Landing (1019 Commerce St.) \nWeather permitting. Reservations Required. Children under the age of 4 are not permitted on the pontoon boat. \n  \nPURCHASE TICKETS
+URL:https://buffalobayou.org/event/june-2026-buffalo-bayou-cruise-12-5/
+LOCATION:ALLEN’S LANDING\, 1001 Commerce Street\, Houston\, TX\, 77002\, United States
+CATEGORIES:Boat Tour,Buffalo Bayou Boat Tours
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2023/04/boat.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260624T170000
+DTEND;TZID=America/Chicago:20260624T190000
+DTSTAMP:20260617T234213
+CREATED:20260604T155458Z
+LAST-MODIFIED:20260604T155458Z
+UID:10004184-1782320400-1782327600@buffalobayou.org
+SUMMARY:Buffalo Bayou Cruise
+DESCRIPTION:These 45-minute boat rides are a great way to spend time with your family and friends. Escape the bustle of the city and enjoy the cool breeze as you glide along Buffalo Bayou\, through the heart of downtown Houston. Look for graceful herons\, turtles\, fish\, and even an occasional alligator on the banks. \nTours leave promptly on the hour beginning at 5 PM. \n  \nCost \n\nAdults: $20\nChildren: $16 (ages 4-12)\n\n  \nDeparture Location\nAllen’s Landing (1019 Commerce St.) \nWeather permitting. Reservations Required. Children under the age of 4 are not permitted on the pontoon boat. \n  \nPURCHASE TICKETS
+URL:https://buffalobayou.org/event/june-2026-buffalo-bayou-cruise-12-6/
+LOCATION:ALLEN’S LANDING\, 1001 Commerce Street\, Houston\, TX\, 77002\, United States
+CATEGORIES:Boat Tour,Buffalo Bayou Boat Tours
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2023/04/boat.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260624T183000
+DTEND;TZID=UTC:20260624T200000
+DTSTAMP:20260617T234213
+CREATED:20260406T163156Z
+LAST-MODIFIED:20260406T163156Z
+UID:10004121-1782325800-1782331200@buffalobayou.org
+SUMMARY:Buffalo Bayou Park Wellness Walk
+DESCRIPTION:Join Buffalo Bayou Partnership on a free Wellness Walk led by Laura Conely\, founder of Urban Paths. Anyone and everyone is invited to walk through the paths of Buffalo Bayou Park while discussing topics including mental and physical health as well as the benefits of being exposed to nature. \nEn Español\nEl primer miércoles de cada mes\, la traductora Marcella Cabrera se unirá al grupo para ofrecer la caminata guiada en español. \nCost\nFree \nDuration\n90 minutes / 3 miles \nMeeting Location\nThe Water Works in Buffalo Bayou Park (105-B Sabine St) \nFREE REGISTRATION
+URL:https://buffalobayou.org/event/buffalo-bayou-park-wellness-walk-105/
+LOCATION:THE WATER WORKS\, 105 Sabine Street\, Houston\, TX\, 77007\, United States
+CATEGORIES:Walking Tour,Wellness
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2024/09/Buffalo-Bayou-Park_Summer-Series-Butterfly-Nature-Walk_5.18.2024_Photographer-Melissa-Taylor-115-scaled.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260625T170000
+DTEND;TZID=America/Chicago:20260625T190000
+DTSTAMP:20260617T234213
+CREATED:20260604T160140Z
+LAST-MODIFIED:20260604T160140Z
+UID:10004185-1782406800-1782414000@buffalobayou.org
+SUMMARY:Buffalo Bayou Cruise
+DESCRIPTION:These 45-minute boat rides are a great way to spend time with your family and friends. Escape the bustle of the city and enjoy the cool breeze as you glide along Buffalo Bayou\, through the heart of downtown Houston. Look for graceful herons\, turtles\, fish\, and even an occasional alligator on the banks. \nTours leave promptly on the hour beginning at 5 PM. \n  \nCost \n\nAdults: $20\nChildren: $16 (ages 4-12)\n\n  \nDeparture Location\nAllen’s Landing (1019 Commerce St.) \nWeather permitting. Reservations Required. Children under the age of 4 are not permitted on the pontoon boat. \n  \nPURCHASE TICKETS
+URL:https://buffalobayou.org/event/june-2026-buffalo-bayou-cruise-12-7/
+LOCATION:ALLEN’S LANDING\, 1001 Commerce Street\, Houston\, TX\, 77002\, United States
+CATEGORIES:Boat Tour,Buffalo Bayou Boat Tours
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2023/04/boat.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260626T192000
+DTEND;TZID=America/Chicago:20260626T205000
+DTSTAMP:20260617T234213
+CREATED:20260526T155431Z
+LAST-MODIFIED:20260526T155431Z
+UID:10004170-1782501600-1782507000@buffalobayou.org
+SUMMARY:Buffalo Bayou Cruise: Bats
+DESCRIPTION:Sail the scenic waterway on a 90-minute\, guided tour from downtown to Waugh Drive Bridge and back to watch the emergence of the 250\,000+ Mexican free-tailed bats that live under the bridge. \nOur knowledgeable guide will share details about the bats’ eating patterns\, behavior and contributions to the bayou’s ecosystem. Space is limited\, and boat tours fill up fast. Boat departs 45 minutes before sunset. \nCost\nStarting at $30/person \nDuration\n90 minutes \nDeparture location\n Allen’s Landing (1019 Commerce St.) \nPlease note\, children must be at least four years old to board the pontoon boat. \n  \nPURCHASE TICKETS
+URL:https://buffalobayou.org/event/buffalo-bayou-cruise-bats-47/
+LOCATION:ALLEN’S LANDING\, 1001 Commerce Street\, Houston\, TX\, 77002\, United States
+CATEGORIES:Bat Colony Tours
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2023/04/boat.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260626T193000
+DTEND;TZID=America/Chicago:20260626T203000
+DTSTAMP:20260617T234213
+CREATED:20260518T161323Z
+LAST-MODIFIED:20260518T161323Z
+UID:10004155-1782502200-1782505800@buffalobayou.org
+SUMMARY:Bat Chat
+DESCRIPTION:Stroll to Waugh Drive Bridge for a Bat Chat with the Houston Area Bat Team and see the bat colony up close! \nDid you know? These population of Mexican Free-tailed Bats at the Waugh Bridge can reach a peak of approximately 300\,000 in the summer months! Around sunset\, the colony leaves the crevices beneath the bridge and create a whirlwind-like formation as they emerge. Join the Houston Area Bat Team to learn and discover as they share fun\, educational facts and insights about these miniature\, flying mammals! \nInvite your family and friends\, bring a picnic blanket\, wear your bug spray\, and admire this unique phenomena. \n\n\n\nBat Chats are held every Friday evening from May to August as part of our Summer Species series\, starting 30 minutes before sunset. \n  \nCost\nFree \nTime\n7:30 – 8:30pm (30 minutes before sunset) \nMeeting Location\nWaugh Bridge Bat Colony Observation Deck (along Allen Parkway) \nREGISTRATION
+URL:https://buffalobayou.org/event/2026-june-bat-chat-4/
+LOCATION:Waugh Drive Bat Bridge\, 1
+CATEGORIES:Bat Colony Tours,Free Event
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2023/04/Waugh-Bridge-Bat-Colony-1-1.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260627T100000
+DTEND;TZID=America/Chicago:20260627T104500
+DTSTAMP:20260617T234213
+CREATED:20260205T190722Z
+LAST-MODIFIED:20260209T220052Z
+UID:10004084-1782554400-1782557100@buffalobayou.org
+SUMMARY:Sound Healing Meditation
+DESCRIPTION:Step into a deeper stillness inside the spacious and tranquil Buffalo Bayou Park Cistern. \nOffered in collaboration with UNIONisCREATION™\, this meditation and sound experience invites guests into a space of resonance\, restoration\, and inner alignment. Through gentle vibrations of singing bowls\, wind chimes\, and a gong\, along with guided awareness\, participants are supported in reconnecting body and mind. \nThis series is more than meditation – it is a practice of listening\, feeling\, and returning to center within one of Houston’s most iconic\, immersive spaces. Each session unfolds as a shared moment of reflection\, connection\, and sound-guided stillness. \nGuests should bring their own cushions or mats. No food or drinks are allowed inside the Cistern. \nCost: $20 \nPURCHASE TICKETS
+URL:https://buffalobayou.org/event/sound-healing-meditation-285/
+LOCATION:BUFFALO BAYOU PARK CISTERN\, 105 Sabine Street\, Houston\, TX\, 77007\, United States
+CATEGORIES:Cistern
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2023/04/sound-bath-high-res-crop-scaled-1.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260627T170000
+DTEND;TZID=America/Chicago:20260627T190000
+DTSTAMP:20260617T234213
+CREATED:20260604T160232Z
+LAST-MODIFIED:20260604T160232Z
+UID:10004186-1782579600-1782586800@buffalobayou.org
+SUMMARY:Buffalo Bayou Cruise
+DESCRIPTION:These 45-minute boat rides are a great way to spend time with your family and friends. Escape the bustle of the city and enjoy the cool breeze as you glide along Buffalo Bayou\, through the heart of downtown Houston. Look for graceful herons\, turtles\, fish\, and even an occasional alligator on the banks. \nTours leave promptly on the hour beginning at 5 PM. \n  \nCost \n\nAdults: $20\nChildren: $16 (ages 4-12)\n\n  \nDeparture Location\nAllen’s Landing (1019 Commerce St.) \nWeather permitting. Reservations Required. Children under the age of 4 are not permitted on the pontoon boat. \n  \nPURCHASE TICKETS
+URL:https://buffalobayou.org/event/june-2026-buffalo-bayou-cruise-12-8/
+LOCATION:ALLEN’S LANDING\, 1001 Commerce Street\, Houston\, TX\, 77002\, United States
+CATEGORIES:Boat Tour,Buffalo Bayou Boat Tours
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2023/04/boat.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260627T192000
+DTEND;TZID=America/Chicago:20260627T205000
+DTSTAMP:20260617T234213
+CREATED:20260512T162759Z
+LAST-MODIFIED:20260512T162759Z
+UID:10004148-1782588000-1782593400@buffalobayou.org
+SUMMARY:Buffalo Bayou Cruise: Bats
+DESCRIPTION:Sail the scenic waterway on a 90-minute\, guided tour from downtown to Waugh Drive Bridge and back to watch the emergence of the 250\,000+ Mexican free-tailed bats that live under the bridge. \nOur knowledgeable guide will share details about the bats’ eating patterns\, behavior and contributions to the bayou’s ecosystem. Space is limited\, and boat tours fill up fast. Boat departs 45 minutes before sunset. \nCost\nStarting at $30/person \nDuration\n90 minutes \nDeparture location\n Allen’s Landing (1019 Commerce St.) \nPlease note\, children must be at least four years old to board the pontoon boat. \n  \nPURCHASE TICKETS
+URL:https://buffalobayou.org/event/buffalo-bayou-cruise-bats-30/
+LOCATION:ALLEN’S LANDING\, 1001 Commerce Street\, Houston\, TX\, 77002\, United States
+CATEGORIES:Bat Colony Tours
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2023/04/bat.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260628T100000
+DTEND;TZID=America/Chicago:20260628T104500
+DTSTAMP:20260617T234213
+CREATED:20260205T190754Z
+LAST-MODIFIED:20260209T220113Z
+UID:10004085-1782640800-1782643500@buffalobayou.org
+SUMMARY:Sound Healing Meditation
+DESCRIPTION:Step into a deeper stillness inside the spacious and tranquil Buffalo Bayou Park Cistern. \nOffered in collaboration with UNIONisCREATION™\, this meditation and sound experience invites guests into a space of resonance\, restoration\, and inner alignment. Through gentle vibrations of singing bowls\, wind chimes\, and a gong\, along with guided awareness\, participants are supported in reconnecting body and mind. \nThis series is more than meditation – it is a practice of listening\, feeling\, and returning to center within one of Houston’s most iconic\, immersive spaces. Each session unfolds as a shared moment of reflection\, connection\, and sound-guided stillness. \nGuests should bring their own cushions or mats. No food or drinks are allowed inside the Cistern. \nCost: $20 \nPURCHASE TICKETS
+URL:https://buffalobayou.org/event/sound-healing-meditation-286/
+LOCATION:BUFFALO BAYOU PARK CISTERN\, 105 Sabine Street\, Houston\, TX\, 77007\, United States
+CATEGORIES:Cistern
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2023/04/sound-bath-high-res-crop-scaled-1.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260701T170000
+DTEND;TZID=America/Chicago:20260701T190000
+DTSTAMP:20260617T234213
+CREATED:20260604T160909Z
+LAST-MODIFIED:20260604T160909Z
+UID:10004187-1782925200-1782932400@buffalobayou.org
+SUMMARY:Buffalo Bayou Cruise
+DESCRIPTION:These 45-minute boat rides are a great way to spend time with your family and friends. Escape the bustle of the city and enjoy the cool breeze as you glide along Buffalo Bayou\, through the heart of downtown Houston. Look for graceful herons\, turtles\, fish\, and even an occasional alligator on the banks. \nTours leave promptly on the hour beginning at 5 PM. \n  \nCost \n\nAdults: $20\nChildren: $16 (ages 4-12)\n\n  \nDeparture Location\nAllen’s Landing (1019 Commerce St.) \nWeather permitting. Reservations Required. Children under the age of 4 are not permitted on the pontoon boat. \n  \nPURCHASE TICKETS
+URL:https://buffalobayou.org/event/july-2026-buffalo-bayou-cruise-12/
+LOCATION:ALLEN’S LANDING\, 1001 Commerce Street\, Houston\, TX\, 77002\, United States
+CATEGORIES:Boat Tour,Buffalo Bayou Boat Tours
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2023/04/boat.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260701T183000
+DTEND;TZID=UTC:20260701T200000
+DTSTAMP:20260617T234213
+CREATED:20260520T185121Z
+LAST-MODIFIED:20260520T185352Z
+UID:10004159-1782930600-1782936000@buffalobayou.org
+SUMMARY:Buffalo Bayou Park Wellness Walk
+DESCRIPTION:Join Buffalo Bayou Partnership on a free Wellness Walk led by Laura Conely\, founder of Urban Paths. Anyone and everyone is invited to walk through the paths of Buffalo Bayou while discussing topics including mental and physical health as well as the benefits of being exposed to nature. \nEn Español\nEl primer miércoles de cada mes\, la traductora Marcella Cabrera se unirá al grupo para ofrecer la caminata guiada en español. \nCost\nFree \nDuration\n90 minutes / 3 miles \nMeeting Location \nAllen’s Landing Park (1005 Commerce St.) \nFREE REGISTRATION
+URL:https://buffalobayou.org/event/2026-july-buffalo-bayou-park-wellness-walk-106/
+LOCATION:ALLEN’S LANDING\, 1001 Commerce Street\, Houston\, TX\, 77002\, United States
+CATEGORIES:Walking Tour,Wellness
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2026/05/IMG_4296.jpeg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260702T170000
+DTEND;TZID=America/Chicago:20260702T180000
+DTSTAMP:20260617T234213
+CREATED:20260604T161007Z
+LAST-MODIFIED:20260604T161007Z
+UID:10004188-1783011600-1783015200@buffalobayou.org
+SUMMARY:Buffalo Bayou Cruise
+DESCRIPTION:These 45-minute boat rides are a great way to spend time with your family and friends. Escape the bustle of the city and enjoy the cool breeze as you glide along Buffalo Bayou\, through the heart of downtown Houston. Look for graceful herons\, turtles\, fish\, and even an occasional alligator on the banks. \nTours leave promptly on the hour beginning at 5 PM. \n  \nCost \n\nAdults: $20\nChildren: $16 (ages 4-12)\n\n  \nDeparture Location\nAllen’s Landing (1019 Commerce St.) \nWeather permitting. Reservations Required. Children under the age of 4 are not permitted on the pontoon boat. \n  \nPURCHASE TICKETS
+URL:https://buffalobayou.org/event/july-2026-buffalo-bayou-cruise-12-2/
+LOCATION:ALLEN’S LANDING\, 1001 Commerce Street\, Houston\, TX\, 77002\, United States
+CATEGORIES:Boat Tour,Buffalo Bayou Boat Tours
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2023/04/boat.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260703T192000
+DTEND;TZID=America/Chicago:20260703T205000
+DTSTAMP:20260617T234213
+CREATED:20260604T193409Z
+LAST-MODIFIED:20260604T193409Z
+UID:10004196-1783106400-1783111800@buffalobayou.org
+SUMMARY:Buffalo Bayou Cruise: Bats
+DESCRIPTION:Sail the scenic waterway on a 90-minute\, guided tour from downtown to Waugh Drive Bridge and back to watch the emergence of the 250\,000+ Mexican free-tailed bats that live under the bridge. \nOur knowledgeable guide will share details about the bats’ eating patterns\, behavior and contributions to the bayou’s ecosystem. Space is limited\, and boat tours fill up fast. Boat departs 45 minutes before sunset. \nCost\nStarting at $30/person \nDuration\n90 minutes \nDeparture location\n Allen’s Landing (1019 Commerce St.) \nPlease note\, children must be at least four years old to board the pontoon boat. \n  \nPURCHASE TICKETS
+URL:https://buffalobayou.org/event/july-2026-buffalo-bayou-cruise-bats-48/
+LOCATION:ALLEN’S LANDING\, 1001 Commerce Street\, Houston\, TX\, 77002\, United States
+CATEGORIES:Bat Colony Tours
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2023/04/bat.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260703T193000
+DTEND;TZID=America/Chicago:20260703T203000
+DTSTAMP:20260617T234213
+CREATED:20260603T143653Z
+LAST-MODIFIED:20260603T143653Z
+UID:10004174-1783107000-1783110600@buffalobayou.org
+SUMMARY:Bat Chat
+DESCRIPTION:Stroll to Waugh Drive Bridge for a Bat Chat with the Houston Area Bat Team and see the bat colony up close! \nDid you know? These population of Mexican Free-tailed Bats at the Waugh Bridge can reach a peak of approximately 300\,000 in the summer months! Around sunset\, the colony leaves the crevices beneath the bridge and create a whirlwind-like formation as they emerge. Join the Houston Area Bat Team to learn and discover as they share fun\, educational facts and insights about these miniature\, flying mammals! \nInvite your family and friends\, bring a picnic blanket\, wear your bug spray\, and admire this unique phenomena. \n\n\n\nBat Chats are held every Friday evening from May to August as part of our Summer Species series\, starting 30 minutes before sunset. \n  \nCost\nFree \nTime\n7:30 – 8:30pm (30 minutes before sunset) \nMeeting Location\nWaugh Bridge Bat Colony Observation Deck (along Allen Parkway) \nFREE REGISTRATION
+URL:https://buffalobayou.org/event/2026-july-bat-chat/
+LOCATION:Waugh Drive Bat Bridge\, 1
+CATEGORIES:Bat Colony Tours,Free Event
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2023/04/Waugh-Bridge-Bat-Colony-1-1.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260704T200000
+DTEND;TZID=UTC:20260704T220000
+DTSTAMP:20260617T234213
+CREATED:20250507T194724Z
+LAST-MODIFIED:20260601T192320Z
+UID:10003865-1783195200-1783202400@buffalobayou.org
+SUMMARY:Bubbles and Fireworks Boat Tour
+DESCRIPTION:Hop aboard BBP’s pontoon boat for perfect views of Houston’s spectacular fireworks show! \nAvoid the crowds and view the city’s fireworks extravaganza while floating along Buffalo Bayou and enjoying bubbly\, beer\, wine and light bites. We can only accommodate 21 lucky guests\, so register now! \nBoat tours leave from Allen’s Landing (1005 Commerce Street). \nCost: $150 per person \nNote: Children under the age of 4 are not allowed on the pontoon boat. \nPURCHASE TICKETS
+URL:https://buffalobayou.org/event/2026-bubbles-and-fireworks-boat-tour/
+LOCATION:ALLEN’S LANDING\, 1001 Commerce Street\, Houston\, TX\, 77002\, United States
+CATEGORIES:Boat Tour,Seasonal Cruises
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2023/06/bluebayou_7492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260708T183000
+DTEND;TZID=UTC:20260708T200000
+DTSTAMP:20260617T234213
+CREATED:20260520T190237Z
+LAST-MODIFIED:20260520T190237Z
+UID:10004160-1783535400-1783540800@buffalobayou.org
+SUMMARY:Buffalo Bayou Park Wellness Walk
+DESCRIPTION:Join Buffalo Bayou Partnership on a free Wellness Walk led by Laura Conely\, founder of Urban Paths. Anyone and everyone is invited to walk through the paths of Buffalo Bayou Park while discussing topics including mental and physical health as well as the benefits of being exposed to nature. \nEn Español\nEl primer miércoles de cada mes\, la traductora Marcella Cabrera se unirá al grupo para ofrecer la caminata guiada en español. \nCost\nFree \nDuration\n90 minutes / 3 miles \nMeeting Location\nThe Water Works in Buffalo Bayou Park (105-B Sabine St) \nFREE REGISTRATION
+URL:https://buffalobayou.org/event/2026-july-buffalo-bayou-park-wellness-walk-106-2/
+LOCATION:THE WATER WORKS\, 105 Sabine Street\, Houston\, TX\, 77007\, United States
+CATEGORIES:Walking Tour,Wellness
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2024/09/Buffalo-Bayou-Park_Summer-Series-Butterfly-Nature-Walk_5.18.2024_Photographer-Melissa-Taylor-115-scaled.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260710T192000
+DTEND;TZID=America/Chicago:20260710T205000
+DTSTAMP:20260617T234213
+CREATED:20260604T193830Z
+LAST-MODIFIED:20260604T193830Z
+UID:10004197-1783711200-1783716600@buffalobayou.org
+SUMMARY:Buffalo Bayou Cruise: Bats
+DESCRIPTION:Sail the scenic waterway on a 90-minute\, guided tour from downtown to Waugh Drive Bridge and back to watch the emergence of the 250\,000+ Mexican free-tailed bats that live under the bridge. \nOur knowledgeable guide will share details about the bats’ eating patterns\, behavior and contributions to the bayou’s ecosystem. Space is limited\, and boat tours fill up fast. Boat departs 45 minutes before sunset. \nCost\nStarting at $30/person \nDuration\n90 minutes \nDeparture location\n Allen’s Landing (1019 Commerce St.) \nPlease note\, children must be at least four years old to board the pontoon boat. \n  \nPURCHASE TICKETS
+URL:https://buffalobayou.org/event/july-2026-buffalo-bayou-cruise-bats-48-2/
+LOCATION:ALLEN’S LANDING\, 1001 Commerce Street\, Houston\, TX\, 77002\, United States
+CATEGORIES:Bat Colony Tours
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2023/04/bat.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260710T193000
+DTEND;TZID=America/Chicago:20260710T203000
+DTSTAMP:20260617T234213
+CREATED:20260603T143802Z
+LAST-MODIFIED:20260603T143802Z
+UID:10004175-1783711800-1783715400@buffalobayou.org
+SUMMARY:Bat Chat
+DESCRIPTION:Stroll to Waugh Drive Bridge for a Bat Chat with the Houston Area Bat Team and see the bat colony up close! \nDid you know? These population of Mexican Free-tailed Bats at the Waugh Bridge can reach a peak of approximately 300\,000 in the summer months! Around sunset\, the colony leaves the crevices beneath the bridge and create a whirlwind-like formation as they emerge. Join the Houston Area Bat Team to learn and discover as they share fun\, educational facts and insights about these miniature\, flying mammals! \nInvite your family and friends\, bring a picnic blanket\, wear your bug spray\, and admire this unique phenomena. \n\n\n\nBat Chats are held every Friday evening from May to August as part of our Summer Species series\, starting 30 minutes before sunset. \n  \nCost\nFree \nTime\n7:30 – 8:30pm (30 minutes before sunset) \nMeeting Location\nWaugh Bridge Bat Colony Observation Deck (along Allen Parkway) \nFREE REGISTRATION
+URL:https://buffalobayou.org/event/2026-july-bat-chat-2/
+LOCATION:Waugh Drive Bat Bridge\, 1
+CATEGORIES:Bat Colony Tours,Free Event
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2023/04/Waugh-Bridge-Bat-Colony-1-1.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260711T100000
+DTEND;TZID=America/Chicago:20260711T104500
+DTSTAMP:20260617T234213
+CREATED:20260522T153849Z
+LAST-MODIFIED:20260522T154642Z
+UID:10004164-1783764000-1783766700@buffalobayou.org
+SUMMARY:Sound Healing Meditation
+DESCRIPTION:Step into a deeper stillness inside the spacious and tranquil Buffalo Bayou Park Cistern. \nOffered in collaboration with UNIONisCREATION™\, this meditation and sound experience invites guests into a space of resonance\, restoration\, and inner alignment. Through gentle vibrations of singing bowls\, wind chimes\, and a gong\, along with guided awareness\, participants are supported in reconnecting body and mind. \nThis series is more than meditation – it is a practice of listening\, feeling\, and returning to center within one of Houston’s most iconic\, immersive spaces. Each session unfolds as a shared moment of reflection\, connection\, and sound-guided stillness. \nGuests should bring their own cushions or mats. No food or drinks are allowed inside the Cistern. \nCost: $20 \nPURCHASE TICKETS
+URL:https://buffalobayou.org/event/2026-july-sound-healing-meditation-290/
+LOCATION:BUFFALO BAYOU PARK CISTERN\, 105 Sabine Street\, Houston\, TX\, 77007\, United States
+CATEGORIES:Cistern
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2023/04/sound-bath-high-res-crop-scaled-1.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260711T192000
+DTEND;TZID=America/Chicago:20260711T205000
+DTSTAMP:20260617T234213
+CREATED:20260604T193852Z
+LAST-MODIFIED:20260604T193852Z
+UID:10004198-1783797600-1783803000@buffalobayou.org
+SUMMARY:Buffalo Bayou Cruise: Bats
+DESCRIPTION:Sail the scenic waterway on a 90-minute\, guided tour from downtown to Waugh Drive Bridge and back to watch the emergence of the 250\,000+ Mexican free-tailed bats that live under the bridge. \nOur knowledgeable guide will share details about the bats’ eating patterns\, behavior and contributions to the bayou’s ecosystem. Space is limited\, and boat tours fill up fast. Boat departs 45 minutes before sunset. \nCost\nStarting at $30/person \nDuration\n90 minutes \nDeparture location\n Allen’s Landing (1019 Commerce St.) \nPlease note\, children must be at least four years old to board the pontoon boat. \n  \nPURCHASE TICKETS
+URL:https://buffalobayou.org/event/july-2026-buffalo-bayou-cruise-bats-48-3/
+LOCATION:ALLEN’S LANDING\, 1001 Commerce Street\, Houston\, TX\, 77002\, United States
+CATEGORIES:Bat Colony Tours
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2023/04/bat.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260712T100000
+DTEND;TZID=America/Chicago:20260712T104500
+DTSTAMP:20260617T234213
+CREATED:20260522T153956Z
+LAST-MODIFIED:20260522T154631Z
+UID:10004165-1783850400-1783853100@buffalobayou.org
+SUMMARY:Sound Healing Meditation
+DESCRIPTION:Step into a deeper stillness inside the spacious and tranquil Buffalo Bayou Park Cistern. \nOffered in collaboration with UNIONisCREATION™\, this meditation and sound experience invites guests into a space of resonance\, restoration\, and inner alignment. Through gentle vibrations of singing bowls\, wind chimes\, and a gong\, along with guided awareness\, participants are supported in reconnecting body and mind. \nThis series is more than meditation – it is a practice of listening\, feeling\, and returning to center within one of Houston’s most iconic\, immersive spaces. Each session unfolds as a shared moment of reflection\, connection\, and sound-guided stillness. \nGuests should bring their own cushions or mats. No food or drinks are allowed inside the Cistern. \nCost: $20 \nPURCHASE TICKETS
+URL:https://buffalobayou.org/event/2026-july-sound-healing-meditation-290-2/
+LOCATION:BUFFALO BAYOU PARK CISTERN\, 105 Sabine Street\, Houston\, TX\, 77007\, United States
+CATEGORIES:Cistern,Wellness
+ATTACH;FMTTYPE=image/jpeg:https://buffalobayou.org/wp-content/uploads/2023/04/sound-bath-high-res-crop-scaled-1.jpg
+END:VEVENT
+END:VCALENDAR
