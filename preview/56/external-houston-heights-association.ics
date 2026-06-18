@@ -1,0 +1,451 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Houston Heights Association - ECPv6.16.4//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Houston Heights Association
+X-ORIGINAL-URL:https://houstonheights.org
+X-WR-CALDESC:Events for Houston Heights Association
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-Robots-Tag:noindex
+X-PUBLISHED-TTL:PT1H
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20250309T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20251102T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20260308T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20261101T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20270314T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20271107T070000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260618
+DTEND;VALUE=DATE:20260619
+DTSTAMP:20260617T234448
+CREATED:20260121T040659Z
+LAST-MODIFIED:20260304T030655Z
+UID:22736-1781740800-1781827199@houstonheights.org
+SUMMARY:Gabage and Recycle Pick Up
+DESCRIPTION:
+URL:https://houstonheights.org/event/gabage-and-recycle-pick-up-4/
+CATEGORIES:Garbage Pick-Up,Recycling pick-up
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/Garbage-Recyle-Icons.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260630T140000
+DTEND;TZID=America/Chicago:20260630T200000
+DTSTAMP:20260617T234448
+CREATED:20260505T164624Z
+LAST-MODIFIED:20260615T172001Z
+UID:24508-1782828000-1782849600@houstonheights.org
+SUMMARY:BATTLE OF THE BADGES
+DESCRIPTION:? BATTLE OF THE BADGES — JUNE 30\, 2:00PM–8:00PM \nCome donate blood and cast your vote — HPD or HFD\, who will win? The Battle of the Badges blood drive takes place Tuesday\, June 30 from 2:00–8:00pm at the Historic Houston Heights Fire Station (107 W. 12th St) as part of the city-wide competition running June 28–July 5. Every successful donor receives a special edition baseball cap and a FREE $25 Donor Rewards Store gift card! Use sponsor code HHA8 when scheduling. Click below to sign up and help your team win! \n  \nhttps://www.commitforlife.org/donor/schedules/drive_schedule/416139
+URL:https://houstonheights.org/event/battle-of-the-badges/
+CATEGORIES:Blood Drive
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/05/Artboard-1.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260702
+DTEND;VALUE=DATE:20260703
+DTSTAMP:20260617T234448
+CREATED:20260121T040915Z
+LAST-MODIFIED:20260304T030502Z
+UID:22738-1782950400-1783036799@houstonheights.org
+SUMMARY:Gabage and Recycle Pick Up
+DESCRIPTION:
+URL:https://houstonheights.org/event/gabage-and-recycle-pick-up-5/
+CATEGORIES:Garbage Pick-Up,Recycling pick-up
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/Garbage-Recyle-Icons.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260709
+DTEND;VALUE=DATE:20260710
+DTSTAMP:20260617T234448
+CREATED:20260121T041256Z
+LAST-MODIFIED:20260304T030419Z
+UID:22740-1783555200-1783641599@houstonheights.org
+SUMMARY:Gabage Pick Up
+DESCRIPTION:
+URL:https://houstonheights.org/event/gabage-and-recycle-pick-up-6/
+CATEGORIES:Garbage Pick-Up
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/GarbageIcon.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260713T183000
+DTEND;TZID=America/Chicago:20260713T203000
+DTSTAMP:20260617T234448
+CREATED:20260121T033446Z
+LAST-MODIFIED:20260304T030141Z
+UID:22712-1783967400-1783974600@houstonheights.org
+SUMMARY:July 2026 General Meeting
+DESCRIPTION:
+URL:https://houstonheights.org/event/july-2026-general-meeting/
+LOCATION:Houston Heights City Hall & Fire Station\, 107 W. 12th Street\, Houston\, TX\, 77008\, United States
+CATEGORIES:General Meeting
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/July-Place-Holder-ARt.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260713T183000
+DTEND;TZID=America/Chicago:20260713T203000
+DTSTAMP:20260617T234448
+CREATED:20260609T182338Z
+LAST-MODIFIED:20260609T182338Z
+UID:25144-1783967400-1783974600@houstonheights.org
+SUMMARY:July 2026 General Meeting
+DESCRIPTION:
+URL:https://houstonheights.org/event/july-2026-general-meeting-2/
+LOCATION:Houston Heights City Hall & Fire Station\, 107 W. 12th Street\, Houston\, TX\, 77008\, United States
+CATEGORIES:General Meeting
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/July-Place-Holder-ARt-1.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260716
+DTEND;VALUE=DATE:20260717
+DTSTAMP:20260617T234448
+CREATED:20260121T041433Z
+LAST-MODIFIED:20260304T030018Z
+UID:22742-1784160000-1784246399@houstonheights.org
+SUMMARY:Gabage and Recycle Pick Up
+DESCRIPTION:
+URL:https://houstonheights.org/event/gabage-and-recycle-pick-up-7/
+CATEGORIES:Garbage Pick-Up,Recycling pick-up
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/Garbage-Recyle-Icons.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260723
+DTEND;VALUE=DATE:20260724
+DTSTAMP:20260617T234448
+CREATED:20260121T041554Z
+LAST-MODIFIED:20260304T025846Z
+UID:22744-1784764800-1784851199@houstonheights.org
+SUMMARY:Gabage Pick Up
+DESCRIPTION:
+URL:https://houstonheights.org/event/gabage-pick-up-3/
+CATEGORIES:Garbage Pick-Up
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/GarbageIcon.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260730
+DTEND;VALUE=DATE:20260731
+DTSTAMP:20260617T234448
+CREATED:20260121T041735Z
+LAST-MODIFIED:20260304T025712Z
+UID:22746-1785369600-1785455999@houstonheights.org
+SUMMARY:Gabage and Recycle Pick Up
+DESCRIPTION:
+URL:https://houstonheights.org/event/gabage-and-recycle-pick-up-8/
+CATEGORIES:Garbage Pick-Up,Recycling pick-up
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/Garbage-Recyle-Icons.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260806
+DTEND;VALUE=DATE:20260807
+DTSTAMP:20260617T234448
+CREATED:20260121T041948Z
+LAST-MODIFIED:20260304T025602Z
+UID:22748-1785974400-1786060799@houstonheights.org
+SUMMARY:Gabage Pick Up
+DESCRIPTION:
+URL:https://houstonheights.org/event/gabage-pick-up-4/
+CATEGORIES:Garbage Pick-Up
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/GarbageIcon.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260810T183000
+DTEND;TZID=America/Chicago:20260810T203000
+DTSTAMP:20260617T234448
+CREATED:20260121T033621Z
+LAST-MODIFIED:20260304T025457Z
+UID:22714-1786386600-1786393800@houstonheights.org
+SUMMARY:August 2026 General Meeting
+DESCRIPTION:
+URL:https://houstonheights.org/event/august-2026-general-meeting/
+LOCATION:Houston Heights City Hall & Fire Station\, 107 W. 12th Street\, Houston\, TX\, 77008\, United States
+CATEGORIES:General Meeting
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/August-Place-Holder-ARt.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260810T183000
+DTEND;TZID=America/Chicago:20260810T203000
+DTSTAMP:20260617T234448
+CREATED:20260609T182338Z
+LAST-MODIFIED:20260609T182338Z
+UID:25145-1786386600-1786393800@houstonheights.org
+SUMMARY:August 2026 General Meeting
+DESCRIPTION:
+URL:https://houstonheights.org/event/august-2026-general-meeting-2/
+LOCATION:Houston Heights City Hall & Fire Station\, 107 W. 12th Street\, Houston\, TX\, 77008\, United States
+CATEGORIES:General Meeting
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/August-Place-Holder-ARt-1.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260813
+DTEND;VALUE=DATE:20260814
+DTSTAMP:20260617T234448
+CREATED:20260121T042131Z
+LAST-MODIFIED:20260304T025341Z
+UID:22750-1786579200-1786665599@houstonheights.org
+SUMMARY:Gabage and Recycle Pick Up
+DESCRIPTION:
+URL:https://houstonheights.org/event/gabage-and-recycle-pick-up-9/
+CATEGORIES:Garbage Pick-Up,Recycling pick-up
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/Garbage-Recyle-Icons.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260820
+DTEND;VALUE=DATE:20260821
+DTSTAMP:20260617T234448
+CREATED:20260121T042249Z
+LAST-MODIFIED:20260304T025221Z
+UID:22752-1787184000-1787270399@houstonheights.org
+SUMMARY:Gabage Pick Up
+DESCRIPTION:
+URL:https://houstonheights.org/event/gabage-pick-up-5/
+CATEGORIES:Garbage Pick-Up
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/GarbageIcon.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260827
+DTEND;VALUE=DATE:20260828
+DTSTAMP:20260617T234448
+CREATED:20260121T042401Z
+LAST-MODIFIED:20260304T025037Z
+UID:22754-1787788800-1787875199@houstonheights.org
+SUMMARY:Gabage and Recycle Pick Up
+DESCRIPTION:
+URL:https://houstonheights.org/event/gabage-and-recycle-pick-up-10/
+CATEGORIES:Garbage Pick-Up,Recycling pick-up
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/Garbage-Recyle-Icons.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260903
+DTEND;VALUE=DATE:20260904
+DTSTAMP:20260617T234448
+CREATED:20260121T042532Z
+LAST-MODIFIED:20260304T024807Z
+UID:22756-1788393600-1788479999@houstonheights.org
+SUMMARY:Gabage Pick Up
+DESCRIPTION:
+URL:https://houstonheights.org/event/gabage-pick-up-6/
+CATEGORIES:Garbage Pick-Up
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/GarbageIcon.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260914T183000
+DTEND;TZID=America/Chicago:20260914T203000
+DTSTAMP:20260617T234448
+CREATED:20260121T033943Z
+LAST-MODIFIED:20260304T024643Z
+UID:22716-1789410600-1789417800@houstonheights.org
+SUMMARY:September 2026 General Meeting
+DESCRIPTION:
+URL:https://houstonheights.org/event/september-2026-general-meeting/
+LOCATION:Houston Heights City Hall & Fire Station\, 107 W. 12th Street\, Houston\, TX\, 77008\, United States
+CATEGORIES:General Meeting
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/September-Place-Holder-ARt.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260914T183000
+DTEND;TZID=America/Chicago:20260914T203000
+DTSTAMP:20260617T234448
+CREATED:20260609T182338Z
+LAST-MODIFIED:20260609T182338Z
+UID:25146-1789410600-1789417800@houstonheights.org
+SUMMARY:September 2026 General Meeting
+DESCRIPTION:
+URL:https://houstonheights.org/event/september-2026-general-meeting-2/
+LOCATION:Houston Heights City Hall & Fire Station\, 107 W. 12th Street\, Houston\, TX\, 77008\, United States
+CATEGORIES:General Meeting
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/September-Place-Holder-ARt-1.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260917
+DTEND;VALUE=DATE:20260918
+DTSTAMP:20260617T234448
+CREATED:20260121T042714Z
+LAST-MODIFIED:20260304T024451Z
+UID:22758-1789603200-1789689599@houstonheights.org
+SUMMARY:Gabage Pick Up
+DESCRIPTION:
+URL:https://houstonheights.org/event/gabage-pick-up-7/
+CATEGORIES:Garbage Pick-Up
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/GarbageIcon.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+DTSTAMP:20260617T234448
+CREATED:20260121T042831Z
+LAST-MODIFIED:20260304T024234Z
+UID:22760-1790208000-1790294399@houstonheights.org
+SUMMARY:Gabage and Recycle Pick Up
+DESCRIPTION:
+URL:https://houstonheights.org/event/gabage-and-recycle-pick-up-11/
+CATEGORIES:Garbage Pick-Up,Recycling pick-up
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/Garbage-Recyle-Icons.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+DTSTAMP:20260617T234448
+CREATED:20260121T043045Z
+LAST-MODIFIED:20260304T024013Z
+UID:22762-1790812800-1790899199@houstonheights.org
+SUMMARY:Gabage Pick Up
+DESCRIPTION:
+URL:https://houstonheights.org/event/gabage-pick-up-8/
+CATEGORIES:Garbage Pick-Up
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/GarbageIcon.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+DTSTAMP:20260617T234448
+CREATED:20260121T043224Z
+LAST-MODIFIED:20260304T023736Z
+UID:22764-1791417600-1791503999@houstonheights.org
+SUMMARY:Gabage and Recycle Pick Up
+DESCRIPTION:
+URL:https://houstonheights.org/event/gabage-and-recycle-pick-up-12/
+CATEGORIES:Garbage Pick-Up,Recycling pick-up
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/Garbage-Recyle-Icons.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261012T183000
+DTEND;TZID=America/Chicago:20261012T203000
+DTSTAMP:20260617T234448
+CREATED:20260121T034549Z
+LAST-MODIFIED:20260303T232307Z
+UID:22718-1791829800-1791837000@houstonheights.org
+SUMMARY:October 2026 General Meeting
+DESCRIPTION:
+URL:https://houstonheights.org/event/october-2026-general-meeting/
+LOCATION:Houston Heights City Hall & Fire Station\, 107 W. 12th Street\, Houston\, TX\, 77008\, United States
+CATEGORIES:General Meeting
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/October-Place-Holder-ARt.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261012T183000
+DTEND;TZID=America/Chicago:20261012T203000
+DTSTAMP:20260617T234448
+CREATED:20260609T182338Z
+LAST-MODIFIED:20260609T182338Z
+UID:25147-1791829800-1791837000@houstonheights.org
+SUMMARY:October 2026 General Meeting
+DESCRIPTION:
+URL:https://houstonheights.org/event/october-2026-general-meeting-2/
+LOCATION:Houston Heights City Hall & Fire Station\, 107 W. 12th Street\, Houston\, TX\, 77008\, United States
+CATEGORIES:General Meeting
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/October-Place-Holder-ARt-1.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+DTSTAMP:20260617T234448
+CREATED:20260121T043357Z
+LAST-MODIFIED:20260303T231944Z
+UID:22766-1792022400-1792108799@houstonheights.org
+SUMMARY:Gabage Pick Up
+DESCRIPTION:
+URL:https://houstonheights.org/event/gabage-pick-up-9/
+CATEGORIES:Garbage Pick-Up
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/GarbageIcon.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+DTSTAMP:20260617T234448
+CREATED:20260121T043623Z
+LAST-MODIFIED:20260303T231731Z
+UID:22768-1792627200-1792713599@houstonheights.org
+SUMMARY:Gabage and Recycle Pick Up
+DESCRIPTION:
+URL:https://houstonheights.org/event/gabage-and-recycle-pick-up-13/
+CATEGORIES:Garbage Pick-Up,Recycling pick-up
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/Garbage-Recyle-Icons.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+DTSTAMP:20260617T234448
+CREATED:20260121T043750Z
+LAST-MODIFIED:20260303T231540Z
+UID:22770-1793232000-1793318399@houstonheights.org
+SUMMARY:Gabage Pick Up
+DESCRIPTION:
+URL:https://houstonheights.org/event/gabage-pick-up-10/
+CATEGORIES:Garbage Pick-Up
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/GarbageIcon.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+DTSTAMP:20260617T234448
+CREATED:20260121T043921Z
+LAST-MODIFIED:20260303T231105Z
+UID:22772-1793836800-1793923199@houstonheights.org
+SUMMARY:Gabage and Recycle Pick Up
+DESCRIPTION:
+URL:https://houstonheights.org/event/gabage-and-recycle-pick-up-14/
+CATEGORIES:Garbage Pick-Up,Recycling pick-up
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/Garbage-Recyle-Icons.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261109T183000
+DTEND;TZID=America/Chicago:20261109T203000
+DTSTAMP:20260617T234448
+CREATED:20260121T034741Z
+LAST-MODIFIED:20260303T230945Z
+UID:22720-1794249000-1794256200@houstonheights.org
+SUMMARY:November 2026 General Meeting
+DESCRIPTION:
+URL:https://houstonheights.org/event/november-2026-general-meeting/
+LOCATION:Houston Heights City Hall & Fire Station\, 107 W. 12th Street\, Houston\, TX\, 77008\, United States
+CATEGORIES:General Meeting
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/November-Place-Holder-ARt.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261109T183000
+DTEND;TZID=America/Chicago:20261109T203000
+DTSTAMP:20260617T234448
+CREATED:20260609T182338Z
+LAST-MODIFIED:20260609T182338Z
+UID:25148-1794249000-1794256200@houstonheights.org
+SUMMARY:November 2026 General Meeting
+DESCRIPTION:
+URL:https://houstonheights.org/event/november-2026-general-meeting-2/
+LOCATION:Houston Heights City Hall & Fire Station\, 107 W. 12th Street\, Houston\, TX\, 77008\, United States
+CATEGORIES:General Meeting
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/November-Place-Holder-ARt-1.webp
+END:VEVENT
+END:VCALENDAR
