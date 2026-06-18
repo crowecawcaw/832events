@@ -19,7 +19,8 @@ Ask the user for (or confirm values they already gave):
 - **City name and state/region code** — e.g. `Portland`, `OR`
 - **IANA timezone** — e.g. `America/Los_Angeles`
 - **Site domain** — the domain they'll serve from, e.g. `503.events`
-  (they need to own it, or use the `<project>.pages.dev` domain initially)
+  (they need to own it, or use the default GitHub Pages URL
+  `<owner>.github.io/<repo>` initially)
 - **Site name** — usually the domain; **boot logo text** — a short mark
   (area codes work well)
 - **GitHub repo** — `owner/name` of their template copy
@@ -88,27 +89,29 @@ steps in `docs/SETUP.md` steps 4–7).
    generate one with `claude setup-token` (or install the Claude GitHub
    App) and add it to the repo. Until that secret is set, the workflows
    are inert and human review is the gate.
-2. **Cloudflare Pages**: have them create a Pages project (custom domain
-   is configured in the Cloudflare dashboard), then set the keys below.
+2. **GitHub Pages**: in the repo's Settings → Pages, set the source to
+   **Deploy from a branch**, branch `gh-pages`, folder `/ (root)`. The
+   first deploy creates the branch (`.github/workflows/publish_calendars.yml`
+   pushes the built site there via `peaceiris/actions-gh-pages`), so you may
+   need to revisit this page once it exists. A custom domain is served via
+   the `CNAME` file the deploy writes into `gh-pages` — point DNS at GitHub
+   Pages and confirm the domain under Settings → Pages. No deploy secrets
+   are required; the workflow uses the built-in `GITHUB_TOKEN`.
 3. **The full key list** — walk through it with the operator so nothing is
    discovered missing later:
 
    | Key | Kind | When it's needed |
    |---|---|---|
    | `CLAUDE_CODE_OAUTH_TOKEN` | secret | **Now** — powers the Claude Code Review + `@claude` workflows |
-   | `CLOUDFLARE_API_TOKEN` | secret | **Now** — deploys (token needs Cloudflare Pages edit permission) |
-   | `CLOUDFLARE_ACCOUNT_ID` | secret | **Now** — deploys |
-   | `CLOUDFLARE_PAGES_PROJECT` | variable | **Now** — the Pages project name |
    | `SITE_URL` | variable | **Now** — `https://<domain>`, no trailing slash |
    | `TICKETMASTER_API_KEY` | secret | When the first `type: ticketmaster` source lands |
    | `EVENTBRITE_TOKEN` | secret | When the first `type: eventbrite` source lands |
    | `DICE_API_KEY` | secret | When the first `type: dice` source lands |
    | `BROWSERBASE_API_KEY` | secret | When the first `proxy: true` source lands (fetched live through Browserbase) |
-   | `CLAUDE_CODE_OAUTH_TOKEN` | secret | Powers the three Claude automation workflows (step 7) and owner-gated PR review / `@claude` |
-   | `FAVORITES_API_URL` | variable | Only if the favorites worker is ever deployed |
 
-   The four Cloudflare entries are the only ones required before the PR;
-   confirm they're set before moving on.
+   Deployment itself needs no extra secrets — only enabling GitHub Pages
+   (step 5.2) and the `SITE_URL` variable. Set `SITE_URL` and enable Pages
+   before the PR so the preview can deploy.
 
 ### 6. Commit on a branch and open the PR
 
@@ -129,9 +132,8 @@ the operator skipped setting `CLAUDE_CODE_OAUTH_TOKEN`, rely on human review.
    Houston-specific workflow — restore `.github/workflows/notify-discord.yml`
    from the upstream repo and set `DISCORD_WEBHOOK_CALENDAR` to enable),
    Browserbase proxy (set `BROWSERBASE_API_KEY` only once a source needs
-   `proxy: true`; don't mark sources `proxy: true` before then), favorites
-   worker (`infra/favorites-worker/` — advanced; the site runs read-only
-   without it).
+   `proxy: true`; don't mark sources `proxy: true` before then). Favorites
+   are localStorage-only in the browser — there is no backend to deploy.
 
 ### 8. Add the first sources
 
@@ -147,9 +149,10 @@ calendar). Each source lands as its own PR per the normal workflow.
 Leave the operator a written set-vs-pending checklist, not just a verbal
 summary. It should cover:
 
-- **Configured vs pending** — each key from the step 5 list (Cloudflare,
-  per-source API keys, optional services) marked set or still to do, plus
-  whether `CLAUDE_CODE_OAUTH_TOKEN` is set (enables Claude Code Review)
+- **Configured vs pending** — GitHub Pages enabled and `SITE_URL` set, plus
+  each key from the step 5 list (per-source API keys, optional services)
+  marked set or still to do, plus whether `CLAUDE_CODE_OAUTH_TOKEN` is set
+  (enables Claude Code Review)
 - **Automation workflows active vs pending** — the three workflows in
   `docs/routines.md` are in `.github/workflows/`; note whether
   `CLAUDE_CODE_OAUTH_TOKEN` is set (they skip silently until it is)
