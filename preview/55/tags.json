@@ -1,0 +1,549 @@
+{
+  "generated": "2026-06-18T03:53:00.375Z",
+  "tags": [
+    {
+      "name": "Art",
+      "slug": "art",
+      "category": "Activities",
+      "eventCount": 422,
+      "calendarCount": 5,
+      "links": {
+        "ics": {
+          "href": "tag-art.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-art.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Arts",
+      "slug": "arts",
+      "category": "Activities",
+      "eventCount": 63,
+      "calendarCount": 2,
+      "links": {
+        "ics": {
+          "href": "tag-arts.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-arts.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Beer",
+      "slug": "beer",
+      "category": "Activities",
+      "eventCount": 60,
+      "calendarCount": 3,
+      "links": {
+        "ics": {
+          "href": "tag-beer.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-beer.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Books",
+      "slug": "books",
+      "category": "Activities",
+      "eventCount": 13,
+      "calendarCount": 2,
+      "links": {
+        "ics": {
+          "href": "tag-books.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-books.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Brewery",
+      "slug": "brewery",
+      "category": "Other",
+      "eventCount": 30,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-brewery.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-brewery.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Comedy",
+      "slug": "comedy",
+      "category": "Activities",
+      "eventCount": 128,
+      "calendarCount": 2,
+      "links": {
+        "ics": {
+          "href": "tag-comedy.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-comedy.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Community",
+      "slug": "community",
+      "category": "Community",
+      "eventCount": 462,
+      "calendarCount": 5,
+      "links": {
+        "ics": {
+          "href": "tag-community.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-community.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Downtown",
+      "slug": "downtown",
+      "category": "Neighborhoods",
+      "eventCount": 123,
+      "calendarCount": 5,
+      "links": {
+        "ics": {
+          "href": "tag-downtown.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-downtown.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "EaDo",
+      "slug": "eado",
+      "category": "Neighborhoods",
+      "eventCount": 158,
+      "calendarCount": 2,
+      "links": {
+        "ics": {
+          "href": "tag-eado.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-eado.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "FarmersMarket",
+      "slug": "farmersmarket",
+      "category": "Markets",
+      "eventCount": 32,
+      "calendarCount": 4,
+      "links": {
+        "ics": {
+          "href": "tag-farmersmarket.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-farmersmarket.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Food",
+      "slug": "food",
+      "category": "Activities",
+      "eventCount": 23,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-food.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-food.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "FoodFestival",
+      "slug": "foodfestival",
+      "category": "Other",
+      "eventCount": 23,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-foodfestival.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-foodfestival.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Hermann Park",
+      "slug": "hermann-park",
+      "category": "Other",
+      "eventCount": 16,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-hermann-park.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-hermann-park.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "MakersMarket",
+      "slug": "makersmarket",
+      "category": "Markets",
+      "eventCount": 29,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-makersmarket.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-makersmarket.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Memorial",
+      "slug": "memorial",
+      "category": "Neighborhoods",
+      "eventCount": 30,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-memorial.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-memorial.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Midtown",
+      "slug": "midtown",
+      "category": "Neighborhoods",
+      "eventCount": 21,
+      "calendarCount": 3,
+      "links": {
+        "ics": {
+          "href": "tag-midtown.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-midtown.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Montrose",
+      "slug": "montrose",
+      "category": "Neighborhoods",
+      "eventCount": 347,
+      "calendarCount": 3,
+      "links": {
+        "ics": {
+          "href": "tag-montrose.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-montrose.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Museum District",
+      "slug": "museum-district",
+      "category": "Neighborhoods",
+      "eventCount": 33,
+      "calendarCount": 5,
+      "links": {
+        "ics": {
+          "href": "tag-museum-district.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-museum-district.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Museums",
+      "slug": "museums",
+      "category": "Activities",
+      "eventCount": 7,
+      "calendarCount": 2,
+      "links": {
+        "ics": {
+          "href": "tag-museums.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-museums.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Music",
+      "slug": "music",
+      "category": "Activities",
+      "eventCount": 575,
+      "calendarCount": 7,
+      "links": {
+        "ics": {
+          "href": "tag-music.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-music.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Near Northside",
+      "slug": "near-northside",
+      "category": "Neighborhoods",
+      "eventCount": 102,
+      "calendarCount": 2,
+      "links": {
+        "ics": {
+          "href": "tag-near-northside.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-near-northside.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Nightlife",
+      "slug": "nightlife",
+      "category": "Activities",
+      "eventCount": 26,
+      "calendarCount": 2,
+      "links": {
+        "ics": {
+          "href": "tag-nightlife.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-nightlife.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Parks",
+      "slug": "parks",
+      "category": "Community",
+      "eventCount": 77,
+      "calendarCount": 3,
+      "links": {
+        "ics": {
+          "href": "tag-parks.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-parks.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Photography",
+      "slug": "photography",
+      "category": "Other",
+      "eventCount": 33,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-photography.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-photography.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Tech",
+      "slug": "tech",
+      "category": "Activities",
+      "eventCount": 13,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-tech.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-tech.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "The Heights",
+      "slug": "the-heights",
+      "category": "Neighborhoods",
+      "eventCount": 70,
+      "calendarCount": 4,
+      "links": {
+        "ics": {
+          "href": "tag-the-heights.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-the-heights.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Theater",
+      "slug": "theater",
+      "category": "Other",
+      "eventCount": 6,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-theater.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-theater.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Theatre",
+      "slug": "theatre",
+      "category": "Activities",
+      "eventCount": 1,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-theatre.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-theatre.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Third Ward",
+      "slug": "third-ward",
+      "category": "Neighborhoods",
+      "eventCount": 413,
+      "calendarCount": 2,
+      "links": {
+        "ics": {
+          "href": "tag-third-ward.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-third-ward.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Upper Kirby",
+      "slug": "upper-kirby",
+      "category": "Neighborhoods",
+      "eventCount": 107,
+      "calendarCount": 2,
+      "links": {
+        "ics": {
+          "href": "tag-upper-kirby.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-upper-kirby.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Wedgewood",
+      "slug": "wedgewood",
+      "category": "Neighborhoods",
+      "eventCount": 1,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-wedgewood.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-wedgewood.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "West University",
+      "slug": "west-university",
+      "category": "Neighborhoods",
+      "eventCount": 6,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-west-university.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-west-university.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    }
+  ]
+}
