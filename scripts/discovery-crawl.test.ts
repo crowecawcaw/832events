@@ -170,6 +170,15 @@ describe("buildShortlist", () => {
         };
         expect(buildShortlist(entries).map(s => s.domain)).toEqual(["b.com", "a.com"]);
     });
+    it("dedups by registrable domain, keeping the best entry", () => {
+        const entries: Record<string, LedgerEntry> = {
+            a: mkEntry({ domain: "v.com", url: "https://v.com/a", platformGuess: "axs", queries: ["1"] }),
+            b: mkEntry({ domain: "v.com", url: "https://v.com/b", icsUrl: "https://v.com/f.ics", queries: ["1"] }),
+        };
+        const sl = buildShortlist(entries);
+        expect(sl).toHaveLength(1);
+        expect(sl[0].tier).toBe(1); // kept the tier-1 feed entry
+    });
     it("respects the cap", () => {
         const entries: Record<string, LedgerEntry> = {};
         for (let i = 0; i < 30; i++) entries[`e${i}`] = mkEntry({ domain: `e${i}.com`, platformGuess: "axs" });

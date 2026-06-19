@@ -422,7 +422,11 @@ export function buildShortlist(
         a.tier - b.tier ||
         b.queryHits - a.queryHits ||
         (a.firstSeen < b.firstSeen ? 1 : a.firstSeen > b.firstSeen ? -1 : 0));
-    return items.slice(0, cap);
+    // One entry per registrable domain (the sort already put the best first),
+    // so the implement job never evaluates the same venue twice.
+    const seen = new Set<string>();
+    const deduped = items.filter(i => (seen.has(i.domain) ? false : seen.add(i.domain)));
+    return deduped.slice(0, cap);
 }
 
 // ---------------------------------------------------------------------------
