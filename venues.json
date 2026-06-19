@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-19T04:47:57.315Z",
+  "generated": "2026-06-19T04:52:11.744Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -314,6 +314,42 @@
             },
             "rss": {
               "href": "external-hermann-park.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "hobby-center",
+      "friendlyName": "Hobby Center for the Performing Arts",
+      "description": "Houston's premier performing arts center hosting Broadway touring productions, concerts, comedy, and dance performances in Downtown Houston.",
+      "url": "https://www.thehobbycenter.org/events/",
+      "tags": [
+        "Arts",
+        "Downtown",
+        "Music"
+      ],
+      "geo": {
+        "lat": 29.7563,
+        "lng": -95.3717,
+        "label": "Hobby Center for the Performing Arts, 800 Bagby St, Houston, TX 77002"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Hobby%20Center%20for%20the%20Performing%20Arts%2C%20800%20Bagby%20St%2C%20Houston%2C%20TX%2077002"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "hobby-center",
+          "friendlyName": "Hobby Center for the Performing Arts",
+          "links": {
+            "ics": {
+              "href": "external-hobby-center.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-hobby-center.rss",
               "type": "application/rss+xml"
             }
           }
