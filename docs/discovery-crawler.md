@@ -24,6 +24,7 @@ are the human-judgment quality gates (Houston-focused? religious / support-group
 | `discovery/ignore-domains.txt` | Tunable editorial/aggregator domain blocklist (unioned with a hardcoded core set). Grown by the implement job + humans. |
 | `scripts/discovery-crawl.ts` | The crawler. No LLM. Search → dedup → fingerprint → ledger + metrics. |
 | `docs/discovery-ledger.json` | Persistent memory of every URL seen, keyed by canonical URL, with a backoff `nextCheckAfter`. |
+| `docs/discovery-shortlist.json` | Deterministic, capped, cheapest-first ranking of tier 1-2 candidates — the ONLY thing the implement job reads. |
 | `docs/discovery-metrics.jsonl` | Append-only per-run metrics for tuning (hits/query, hits/page, new vs old). |
 | `.github/workflows/discovery-crawler.yml` | Job 1 crawls (no LLM); job 2 implements, gated on new items + `run_llm`. |
 
@@ -51,11 +52,24 @@ are the human-judgment quality gates (Houston-focused? religious / support-group
 5. **Metrics.** Each run appends one JSON line with per-query and per-page
    counts, new/old/ignored totals, ledger size, and the list of new domains.
    Tune `queries.txt` and `--pages` from this.
-6. **LLM only on new stuff.** The crawl job outputs `new_items`; the implement
-   job runs only when `new_items > 0` **and** either it's the daily schedule
-   (auto-implement) or a manual dispatch opted in via `run_llm`. It
-   reads `new`/`probed` ledger entries, applies the `source-discovery` skill's
-   quality gates, implements the best, and opens one human-review PR. The
+6. **Triage shortlist (anti-poison-pill).** The crawler ranks live candidates
+   into a capped, cheapest-first `discovery-shortlist.json` so the implement job
+   never wades through the whole ledger or sinks the run on one hard source.
+   Tiers: **1** a real feed found (`icsUrl` / `ics` / `tribe-events-ics`),
+   **2** config-only built-in platform (squarespace/eventbrite/ticketmaster/
+   dice/axs/shopify), **3** reachable-but-unknown, **4** dead/custom/proxy. Only
+   tiers 1-2 make the shortlist (3-4 are deferred to humans). Within a tier:
+   relevance (`queryHits` = distinct queries that surfaced the domain) then
+   recency. The implement job walks it top-to-bottom, gives each candidate ONE
+   bounded attempt, stops after `max_sources` successes, and marks tried-and-
+   failed entries `rejected` so they never return to a future shortlist.
+7. **LLM only on ready stuff.** The crawl job outputs `shortlist_size`; the
+   implement job runs only when `shortlist_size > 0` **and** either it's the
+   daily schedule (auto-implement) or a manual dispatch opted in via `run_llm`.
+   Gating on the shortlist (not raw `new_items`) means the LLM never wakes just
+   to triage editorial/junk domains. It reads the shortlist, applies the
+   `source-discovery` skill's quality gates, implements the best, and opens one
+   human-review PR. The
    crawler never edits `source-candidates.json` itself — it only fills the
    ledger; the LLM promotes ledger entries into real candidates/sources.
 

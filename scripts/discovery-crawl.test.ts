@@ -5,8 +5,15 @@ import { join } from "path";
 import {
     registrableDomain, canonicalUrl, loadQueries, rotateQueries,
     nextCheck, detectPlatform, braveSearch, reclassifyIgnored, loadIgnoreDomains,
+    candidateTier, buildShortlist,
     type FetchImpl, type LedgerEntry,
 } from "./discovery-crawl.js";
+
+const mkEntry = (p: Partial<LedgerEntry> & { domain: string }): LedgerEntry => ({
+    url: `https://${p.domain}/x`, firstSeen: "2026-06-01", lastSeen: "2026-06-01",
+    lastChecked: null, checkCount: 0, status: "new", httpStatus: null,
+    platformGuess: null, icsUrl: null, nextCheckAfter: "", queries: ["q"], ...p,
+});
 
 describe("registrableDomain", () => {
     it("strips www and path", () => {
@@ -118,6 +125,55 @@ describe("loadIgnoreDomains", () => {
     it("falls back to core when the file is missing", async () => {
         const set = await loadIgnoreDomains(join(tmpdir(), "nope-does-not-exist.txt"));
         expect(set.has("facebook.com")).toBe(true);
+    });
+});
+
+describe("candidateTier", () => {
+    it("tier 1 for a found feed", () => {
+        expect(candidateTier(mkEntry({ domain: "v.com", icsUrl: "https://v.com/f.ics" }))).toBe(1);
+        expect(candidateTier(mkEntry({ domain: "v.com", platformGuess: "tribe-events-ics" }))).toBe(1);
+    });
+    it("tier 2 for a config-only built-in platform", () => {
+        expect(candidateTier(mkEntry({ domain: "v.com", platformGuess: "squarespace" }))).toBe(2);
+    });
+    it("tier 3 for reachable-but-unknown", () => {
+        expect(candidateTier(mkEntry({ domain: "v.com", status: "probed", httpStatus: 200 }))).toBe(3);
+    });
+    it("tier 4 for dead/unreachable", () => {
+        expect(candidateTier(mkEntry({ domain: "v.com", status: "dead", httpStatus: 404 }))).toBe(4);
+    });
+    it("tier 0 (not a candidate) for ignored/promoted/rejected", () => {
+        expect(candidateTier(mkEntry({ domain: "v.com", status: "ignored" }))).toBe(0);
+        expect(candidateTier(mkEntry({ domain: "v.com", status: "promoted" }))).toBe(0);
+        expect(candidateTier(mkEntry({ domain: "v.com", status: "rejected", icsUrl: "https://v.com/f.ics" }))).toBe(0);
+    });
+});
+
+describe("buildShortlist", () => {
+    it("includes only tier 1-2, feeds before platforms, capped", () => {
+        const entries: Record<string, LedgerEntry> = {
+            feed: mkEntry({ domain: "feed.com", icsUrl: "https://feed.com/f.ics", queries: ["a"] }),
+            sq: mkEntry({ domain: "sq.com", platformGuess: "eventbrite", queries: ["a", "b", "c"] }),
+            unknown: mkEntry({ domain: "u.com", status: "probed", httpStatus: 200 }), // tier 3 -> excluded
+            dead: mkEntry({ domain: "d.com", status: "dead", httpStatus: 404 }),       // tier 4 -> excluded
+            rejected: mkEntry({ domain: "r.com", icsUrl: "https://r.com/f.ics", status: "rejected" }),
+        };
+        const sl = buildShortlist(entries, 20);
+        expect(sl.map(s => s.domain)).toEqual(["feed.com", "sq.com"]); // tier 1 before tier 2
+        expect(sl.find(s => s.domain === "u.com")).toBeUndefined();
+        expect(sl.find(s => s.domain === "r.com")).toBeUndefined();
+    });
+    it("orders same-tier by queryHits desc", () => {
+        const entries: Record<string, LedgerEntry> = {
+            a: mkEntry({ domain: "a.com", platformGuess: "dice", queries: ["1"] }),
+            b: mkEntry({ domain: "b.com", platformGuess: "dice", queries: ["1", "2", "3"] }),
+        };
+        expect(buildShortlist(entries).map(s => s.domain)).toEqual(["b.com", "a.com"]);
+    });
+    it("respects the cap", () => {
+        const entries: Record<string, LedgerEntry> = {};
+        for (let i = 0; i < 30; i++) entries[`e${i}`] = mkEntry({ domain: `e${i}.com`, platformGuess: "axs" });
+        expect(buildShortlist(entries, 20)).toHaveLength(20);
     });
 });
 
