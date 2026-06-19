@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:832.events
+METHOD:PUBLISH
+X-WR-CALNAME:Rice Village Farmers Market
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:jii8Ps-H51vlljacrnuuW
+SUMMARY:Rice Village Farmers Market
+DTSTAMP:20260619T134008Z
+DTSTART;TZID=America/Chicago:20260621T090000
+DESCRIPTION:Community farmers market featuring local produce\, artisan good
+	s\, and specialty foods.\n\nhttps://www.ricevillagehouston.com/
+URL:https://www.ricevillagehouston.com/
+GEO:29.7166504;-95.4166625
+LOCATION:Rice Village\, Houston\, TX 77005
+TRANSP:TRANSPARENT
+RRULE:FREQ=MONTHLY;BYDAY=1SU,3SU
+DURATION:PT4H
+END:VEVENT
+END:VCALENDAR
