@@ -272,7 +272,7 @@
   },
   {
     "name": "Doc's Houston",
-    "status": "candidate",
+    "status": "added",
     "platform": "Custom / TurnTable",
     "url": "https://docshouston.com/",
     "tags": [
@@ -281,12 +281,24 @@
       "Montrose"
     ],
     "firstSeen": "2026-06-15",
-    "lastChecked": "2026-06-15"
+    "lastChecked": "2026-06-19",
+    "impl": {
+      "type": "custom",
+      "platform": "Turntable Tickets",
+      "observedEventCount": 8,
+      "builtEventCount": 8,
+      "geo": {
+        "lat": 29.727,
+        "lng": -95.409,
+        "label": "Doc's Houston, 1201 Westheimer Rd, Houston, TX 77006"
+      },
+      "note": "Custom HTMLRipper extracting events from Turntable Tickets embedded JSON in page source"
+    }
   },
   {
     "name": "Eldorado Ballroom",
-    "status": "candidate",
-    "platform": "Custom",
+    "status": "notviable",
+    "platform": "Tripleseat (private events only)",
     "url": "https://www.eldoradoballroom.com/",
     "tags": [
       "Music",
@@ -295,7 +307,8 @@
       "Third Ward"
     ],
     "firstSeen": "2026-06-15",
-    "lastChecked": "2026-06-15"
+    "lastChecked": "2026-06-19",
+    "notes": "Private event venue using Tripleseat backend. No public event listings available. Venue functions as event space for rent rather than ticketed public performances."
   },
   {
     "name": "Ensemble Theatre Houston",
@@ -333,7 +346,7 @@
   },
   {
     "name": "Good on Paper Bookshop",
-    "status": "candidate",
+    "status": "investigating",
     "platform": "IndieCommerce / Custom",
     "url": "https://www.goodonpaperbookshop.com/",
     "tags": [
@@ -342,7 +355,8 @@
       "The Heights"
     ],
     "firstSeen": "2026-06-15",
-    "lastChecked": "2026-06-15"
+    "lastChecked": "2026-06-19",
+    "notes": "Website currently unreachable (connection refused / server issues). Unable to assess event availability or structure. Requires retry with alternate endpoints or social media discovery when site is back online."
   },
   {
     "name": "Hermann Park Conservancy",
