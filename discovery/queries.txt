@@ -1,0 +1,48 @@
+# Fixed search queries for the deterministic source-discovery crawler.
+# One query per line. Blank lines and lines starting with `#` are ignored.
+# The crawler rotates through this list (see scripts/discovery-crawl.ts
+# --max-queries / --rotate) so the full list is covered over several days
+# while staying inside the Brave free-tier budget (1000 searches/month).
+#
+# Tune this list from docs/discovery-metrics.jsonl: prune queries that never
+# surface new viable domains, add ones that do.
+
+# --- Music venues ---
+Houston live music venue calendar
+Houston concert calendar
+Montrose Houston live music events
+The Heights Houston live music venue
+
+# --- Arts & culture ---
+Houston art gallery events calendar
+Houston museum events calendar
+Houston theater performance calendar
+
+# --- Community ---
+Houston community center events calendar
+Houston neighborhood events calendar
+
+# --- Food & drink ---
+Houston food festival calendar
+Houston brewery beer release calendar
+Houston restaurant events calendar
+
+# --- Comedy & nightlife ---
+Houston comedy club calendar
+Houston open mic night calendar
+
+# --- Outdoors & sports ---
+Houston outdoor events calendar
+Houston farmers market schedule
+
+# --- Bookstores & libraries ---
+Houston bookstore author events calendar
+
+# --- Festivals & seasonal ---
+Houston festival calendar
+Houston holiday market events
+
+# --- Discovery-oriented ---
+Houston events ICS subscribe calendar
+Houston events RSS feed calendar
+new Houston venue events calendar
