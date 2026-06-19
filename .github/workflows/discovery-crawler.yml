@@ -94,7 +94,9 @@ jobs:
 
   implement:
     needs: crawl
-    if: ${{ inputs.run_llm == true && needs.crawl.outputs.new_items != '0' && needs.crawl.outputs.new_items != '' }}
+    # Runs when the crawl found new items AND either it's the daily schedule
+    # (auto-implement) or a manual dispatch opted in via run_llm.
+    if: ${{ needs.crawl.outputs.new_items != '0' && needs.crawl.outputs.new_items != '' && (inputs.run_llm == true || github.event_name == 'schedule') }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -149,11 +151,21 @@ jobs:
             domain you turn into a source. If a domain pans out as not viable,
             leave a short note in its ledger entry and move on.
 
+            IGNORE LIST. If, while triaging, you find a domain that is clearly
+            NOT a scrapable venue calendar — a news site, magazine, TV station,
+            tourism/"things to do" listicle, generic directory, or reservation
+            platform — APPEND its registrable domain (one per line) to
+            discovery/ignore-domains.txt so future crawls skip it. Only add
+            domains you are confident about; when a domain MIGHT host real
+            events, do NOT add it — leave its single bad ledger URL as-is. These
+            edits ride in the same human-reviewed PR.
+
             STEP 3 — Open ONE PR. Keep only sources that built cleanly with a sane
             event count and passing tests. Run `/code-review` on the diff and
             address findings. Open ONE PR on a feature branch with the new sources,
-            the docs/source-candidates.json updates, and the docs/discovery-ledger.json
-            status updates. This Action's PR will NOT trigger CI or Claude Code
+            the docs/source-candidates.json updates, the docs/discovery-ledger.json
+            status updates, and any discovery/ignore-domains.txt additions. This
+            Action's PR will NOT trigger CI or Claude Code
             Review (bot-authored), so your in-session validation IS the gate: do
             not enable auto-merge, do NOT push to main, do NOT self-merge — the
             repo owner reviews and merges. If nothing passes the gates, make no

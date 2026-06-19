@@ -36,6 +36,7 @@ const QUERIES_FILE = path.join(REPO, "discovery", "queries.txt");
 const CANDIDATES_FILE = path.join(REPO, "docs", "source-candidates.json");
 const LEDGER_FILE = path.join(REPO, "docs", "discovery-ledger.json");
 const METRICS_FILE = path.join(REPO, "docs", "discovery-metrics.jsonl");
+const IGNORE_FILE = path.join(REPO, "discovery", "ignore-domains.txt");
 
 // ---------------------------------------------------------------------------
 // Domain helpers
@@ -50,11 +51,11 @@ export const PLATFORM_DOMAINS = new Set([
     "seetickets.us", "etix.com", "prekindle.com", "wl.seetickets.us",
 ]);
 
-/** Social / review / news / listicle / aggregator hosts that are never a
- * scrapable venue calendar for us (the project prefers venue-specific sources
- * over editorial round-ups). Counted in metrics but never surfaced as a NEW
- * candidate, and existing ledger entries on these domains are reclassified to
- * "ignored". Tune this list from docs/discovery-metrics.jsonl new-domain dumps. */
+/** CORE ignore set: structural hosts that can NEVER be a scrapable venue
+ * calendar for us (social, search, reservation platforms). Hardcoded so the
+ * crawler always filters them even with no data file. The editorial / news /
+ * aggregator long tail lives in the data file discovery/ignore-domains.txt
+ * (see loadIgnoreDomains), which the implement job and humans grow over time. */
 export const IGNORE_DOMAINS = new Set([
     // Social / review / search
     "facebook.com", "instagram.com", "twitter.com", "x.com", "youtube.com",
@@ -63,19 +64,23 @@ export const IGNORE_DOMAINS = new Set([
     "maps.google.com", "yellowpages.com", "foursquare.com", "patch.com",
     // Reservation / ordering platforms (not event sources)
     "resy.com", "toasttab.com", "opentable.com",
-    // News / magazines / TV
-    "houstonchronicle.com", "houstonpress.com", "houstoniamag.com",
-    "papercitymag.com", "outsmartmagazine.com", "culturemap.com", "eater.com",
-    "click2houston.com", "abc13.com", "khou.com", "chron.com",
-    // Tourism / listicle / "things to do" aggregators
-    "visithoustontexas.com", "myguidehouston.com", "365thingsinhouston.com",
-    "hellowoodlands.com", "houstonrestaurantweeks.com", "musicfestivalwizard.com",
-    "downtownhouston.org",
-    // Beer/hobby directories & out-of-market round-ups
-    "beeradvocate.com", "beerfests.com", "brewsology.com", "brewersassociation.org",
-    "texasbrewloop.com", "beerchronicle.com", "houstonbeerguide.com",
-    "craftbeeraustin.com", "metropolitanshuttle.com",
 ]);
+
+/** Effective ignore set = CORE ∪ discovery/ignore-domains.txt. The data file is
+ * the tunable, human/LLM-maintained list of editorial/aggregator domains. */
+export async function loadIgnoreDomains(file = IGNORE_FILE): Promise<Set<string>> {
+    const set = new Set(IGNORE_DOMAINS);
+    try {
+        const text = await readFile(file, "utf8");
+        for (const line of text.split("\n")) {
+            const d = line.trim().toLowerCase();
+            if (d && !d.startsWith("#")) set.add(d);
+        }
+    } catch {
+        /* data file optional */
+    }
+    return set;
+}
 
 const MULTI_PART_TLDS = new Set(["co.uk", "org.uk", "com.au", "co.nz"]);
 
@@ -220,12 +225,12 @@ export function nextCheck(status: LedgerStatus, checkCount: number, now = new Da
     return d.toISOString().slice(0, 10);
 }
 
-/** Reclassify any ledger entry whose domain is now in IGNORE_DOMAINS to
+/** Reclassify any ledger entry whose domain is now in the ignore set to
  * "ignored" (and back off its recheck). Returns the count changed. */
-export function reclassifyIgnored(entries: Record<string, LedgerEntry>, now = new Date()): number {
+export function reclassifyIgnored(entries: Record<string, LedgerEntry>, ignore: Set<string>, now = new Date()): number {
     let n = 0;
     for (const e of Object.values(entries)) {
-        if (IGNORE_DOMAINS.has(e.domain) && e.status !== "ignored") {
+        if (ignore.has(e.domain) && e.status !== "ignored") {
             e.status = "ignored";
             e.nextCheckAfter = nextCheck("ignored", e.checkCount, now);
             n++;
@@ -390,12 +395,13 @@ export async function run(opts: RunOpts): Promise<RunMetrics> {
         : allQueries.slice(0, opts.maxQueries > 0 ? opts.maxQueries : allQueries.length);
 
     const known = await loadKnownDomains();
+    const ignore = await loadIgnoreDomains();
     const ledger = await loadLedger();
 
     // Clean up any existing entries whose domain is now in the ignore list
-    // (e.g. editorial/aggregator domains added after they were first logged),
-    // so the LLM gate never considers them.
-    const reclassified = reclassifyIgnored(ledger.entries, now);
+    // (e.g. editorial/aggregator domains added to discovery/ignore-domains.txt
+    // after they were first logged), so the LLM gate never considers them.
+    const reclassified = reclassifyIgnored(ledger.entries, ignore, now);
     if (reclassified) console.error(`reclassified ${reclassified} ledger entries to ignored`);
 
     const perQuery: QueryMetric[] = [];
@@ -420,7 +426,7 @@ export async function run(opts: RunOpts): Promise<RunMetrics> {
             seenThisRun.add(canon);
 
             const inLedger = ledger.entries[canon];
-            if (IGNORE_DOMAINS.has(domain)) {
+            if (ignore.has(domain)) {
                 qIgnored++; ignored++;
                 if (!inLedger) ledger.entries[canon] = mkEntry(canon, domain, r.title, query, "ignored", now);
                 continue;

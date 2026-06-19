@@ -21,6 +21,7 @@ are the human-judgment quality gates (Houston-focused? religious / support-group
 | File | Role |
 |---|---|
 | `discovery/queries.txt` | Fixed query list (was baked into the skill prompt). Rotated by day. |
+| `discovery/ignore-domains.txt` | Tunable editorial/aggregator domain blocklist (unioned with a hardcoded core set). Grown by the implement job + humans. |
 | `scripts/discovery-crawl.ts` | The crawler. No LLM. Search → dedup → fingerprint → ledger + metrics. |
 | `docs/discovery-ledger.json` | Persistent memory of every URL seen, keyed by canonical URL, with a backoff `nextCheckAfter`. |
 | `docs/discovery-metrics.jsonl` | Append-only per-run metrics for tuning (hits/query, hits/page, new vs old). |
@@ -51,7 +52,8 @@ are the human-judgment quality gates (Houston-focused? religious / support-group
    counts, new/old/ignored totals, ledger size, and the list of new domains.
    Tune `queries.txt` and `--pages` from this.
 6. **LLM only on new stuff.** The crawl job outputs `new_items`; the implement
-   job runs only when `new_items > 0` **and** the `run_llm` input is true. It
+   job runs only when `new_items > 0` **and** either it's the daily schedule
+   (auto-implement) or a manual dispatch opted in via `run_llm`. It
    reads `new`/`probed` ledger entries, applies the `source-discovery` skill's
    quality gates, implements the best, and opens one human-review PR. The
    crawler never edits `source-candidates.json` itself — it only fills the
