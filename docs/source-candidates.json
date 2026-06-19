@@ -82,6 +82,30 @@
     }
   },
   {
+    "name": "Bisong Art Gallery",
+    "status": "added",
+    "platform": "Tribe Events (ICS feed)",
+    "url": "https://bisonggallery.com/events/",
+    "tags": [
+      "Art",
+      "EaDo"
+    ],
+    "firstSeen": "2026-06-19",
+    "lastChecked": "2026-06-19",
+    "pr": null,
+    "impl": {
+      "type": "external",
+      "icsUrl": "https://bisonggallery.com/events/?ical=1",
+      "infoUrl": "https://bisonggallery.com/events",
+      "observedEventCount": 1,
+      "geo": {
+        "lat": 29.761,
+        "lng": -95.348,
+        "label": "Bisong Art Gallery, 1305 Sterrett St, Houston, TX 77002"
+      }
+    }
+  },
+  {
     "name": "Axelrad Beer Garden",
     "status": "added",
     "platform": "Google Calendar (ICS export)",
