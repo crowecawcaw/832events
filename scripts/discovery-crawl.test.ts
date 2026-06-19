@@ -5,7 +5,7 @@ import { join } from "path";
 import {
     registrableDomain, canonicalUrl, loadQueries, rotateQueries,
     nextCheck, detectPlatform, braveSearch, reclassifyIgnored, loadIgnoreDomains,
-    candidateTier, buildShortlist,
+    candidateTier, buildShortlist, isPlatformRoot, probeEntries,
     type FetchImpl, type LedgerEntry,
 } from "./discovery-crawl.js";
 
@@ -174,6 +174,40 @@ describe("buildShortlist", () => {
         const entries: Record<string, LedgerEntry> = {};
         for (let i = 0; i < 30; i++) entries[`e${i}`] = mkEntry({ domain: `e${i}.com`, platformGuess: "axs" });
         expect(buildShortlist(entries, 20)).toHaveLength(20);
+    });
+});
+
+describe("isPlatformRoot", () => {
+    it("flags a path-less platform host", () => {
+        expect(isPlatformRoot("https://www.livenation.com/")).toBe(true);
+        expect(isPlatformRoot("https://ticketmaster.com")).toBe(true);
+    });
+    it("keeps a specific organizer/venue path", () => {
+        expect(isPlatformRoot("https://www.eventbrite.com/o/some-org-123")).toBe(false);
+    });
+    it("ignores non-platform domains", () => {
+        expect(isPlatformRoot("https://realvenue.com/")).toBe(false);
+    });
+    it("excludes platform roots from the shortlist via tier 4", () => {
+        expect(candidateTier(mkEntry({ domain: "livenation.com", url: "https://livenation.com/", platformGuess: "ticketmaster" }))).toBe(4);
+    });
+});
+
+describe("probeEntries", () => {
+    it("marks reachable -> probed (with platform) and unreachable -> dead", async () => {
+        const fetchImpl: FetchImpl = (async (input: any) => {
+            const u = input.toString();
+            if (u.includes("good")) return new Response("<script src='https://static1.squarespace.com/x'></script>", { status: 200 });
+            return new Response("nope", { status: 404 });
+        }) as FetchImpl;
+        const good = mkEntry({ domain: "good.com", url: "https://good.com", status: "new", lastChecked: null });
+        const bad = mkEntry({ domain: "bad.com", url: "https://bad.com", status: "new", lastChecked: null });
+        await probeEntries([good, bad], fetchImpl, new Date(Date.UTC(2026, 0, 1)));
+        expect(good.status).toBe("probed");
+        expect(good.platformGuess).toBe("squarespace");
+        expect(candidateTier(good)).toBe(2);
+        expect(bad.status).toBe("dead");
+        expect(bad.checkCount).toBe(1);
     });
 });
 
