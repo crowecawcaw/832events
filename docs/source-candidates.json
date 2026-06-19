@@ -1264,5 +1264,55 @@
     ],
     "firstSeen": "2026-06-13",
     "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Houston Beer Guide",
+    "status": "notviable",
+    "platform": "WordPress 5.6.17 (Ad-Mag theme) — static landing page",
+    "url": "https://houstonbeerguide.com/upcoming-events",
+    "tags": [
+      "Beer",
+      "Community"
+    ],
+    "firstSeen": "2026-06-19",
+    "lastChecked": "2026-06-19",
+    "notes": "WordPress blog with scattered event posts. No structured event feed, ICS endpoint, or API. Events are embedded in blog posts without consistent HTML structure. Would require manual harvesting or direct owner contact for automated feed."
+  },
+  {
+    "name": "Houston Restaurant Weeks",
+    "status": "candidate",
+    "platform": "WordPress 6.4 + Elementor + custom plugin — AJAX-based",
+    "url": "https://houstonrestaurantweeks.com",
+    "tags": [
+      "Food",
+      "Community"
+    ],
+    "firstSeen": "2026-06-19",
+    "lastChecked": "2026-06-19",
+    "notes": "Annual March/April event series. REST API blocked (403). Custom plugin fields not accessible via standard endpoints. Recommend modeling as single recurring annual event (sources/recurring/restaurant-weeks.yaml) rather than scraping individual restaurant events. Low automation potential without source partnership."
+  },
+  {
+    "name": "Visit Houston Events Calendar",
+    "status": "candidate",
+    "platform": "SimpleView (proprietary tourism CMS) — Vue.js + RequireJS client-side rendering",
+    "url": "https://www.visithoustontexas.com/events/",
+    "tags": [
+      "Events",
+      "Community",
+      "Downtown"
+    ],
+    "firstSeen": "2026-06-19",
+    "lastChecked": "2026-06-19",
+    "notes": "Robust, well-maintained events database (HIGH confidence volume). Official tourism board source. No direct API or ICS feed. Events rendered client-side via Vue.js. Viable with proxy:true for Browserbase JS execution. Requires custom HTMLRipper to parse rendered HTML. High ROI — consider direct partnership outreach to Visit Houston for data feed.",
+    "impl": {
+      "type": "custom",
+      "proxy": true,
+      "note": "Custom ripper with proxy:true. SimpleView is a closed CMS; no public API. Ripper must parse HTML after JS rendering.",
+      "geo": {
+        "lat": 29.7604,
+        "lng": -95.3629,
+        "label": "Houston Events Calendar (Visit Houston)"
+      }
+    }
   }
 ]

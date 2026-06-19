@@ -145,14 +145,15 @@
       "lastSeen": "2026-06-19T04:46:54.659Z",
       "lastChecked": "2026-06-19T04:46:54.659Z",
       "checkCount": 1,
-      "status": "new",
+      "status": "notviable",
       "httpStatus": 200,
       "platformGuess": null,
       "icsUrl": null,
       "nextCheckAfter": "2026-06-20",
       "queries": [
         "Houston brewery beer release calendar"
-      ]
+      ],
+      "note": "Static landing page, no structured event feed"
     },
     "https://texasbrewloop.com/regions/houston": {
       "url": "https://texasbrewloop.com/regions/houston",
@@ -687,16 +688,17 @@
       "title": "Houston Restaurant Weeks | Restaurant Specials",
       "firstSeen": "2026-06-19T04:46:54.659Z",
       "lastSeen": "2026-06-19T04:46:54.659Z",
-      "lastChecked": null,
-      "checkCount": 0,
-      "status": "new",
-      "httpStatus": null,
+      "lastChecked": "2026-06-19T04:46:54.659Z",
+      "checkCount": 1,
+      "status": "investigating",
+      "httpStatus": 200,
       "platformGuess": null,
       "icsUrl": null,
       "nextCheckAfter": "2026-06-20",
       "queries": [
         "Houston restaurant events calendar"
-      ]
+      ],
+      "note": "WordPress + custom plugin, annual event series. Model as recurring event, not individual restaurants."
     },
     "https://visithoustontexas.com/events/food-and-drink-events": {
       "url": "https://visithoustontexas.com/events/food-and-drink-events",
@@ -721,16 +723,17 @@
       "title": "Houston Events Calendar | Local Festivals & Entertainment",
       "firstSeen": "2026-06-19T04:46:54.659Z",
       "lastSeen": "2026-06-19T04:46:54.659Z",
-      "lastChecked": null,
-      "checkCount": 0,
-      "status": "new",
-      "httpStatus": null,
+      "lastChecked": "2026-06-19T04:46:54.659Z",
+      "checkCount": 1,
+      "status": "candidate",
+      "httpStatus": 301,
       "platformGuess": null,
       "icsUrl": null,
       "nextCheckAfter": "2026-06-20",
       "queries": [
         "Houston restaurant events calendar"
-      ]
+      ],
+      "note": "High-value source: SimpleView CMS, client-side Vue.js rendering. Requires proxy:true for Browserbase JS execution + custom HTML ripper. Robust event database."
     },
     "https://eventbrite.com/d/tx--houston/events": {
       "url": "https://eventbrite.com/d/tx--houston/events",
