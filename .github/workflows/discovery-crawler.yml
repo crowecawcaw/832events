@@ -125,7 +125,10 @@ jobs:
             found them). Implement the best ones and open ONE PR for human review.
 
             STEP 1 — TRIAGE. Read docs/discovery-ledger.json. Consider only
-            entries with status "new" or "probed". Apply the QUALITY GATES in
+            entries with status "new" or "probed". To bound cost, evaluate AT
+            MOST the 25 most promising — sort entries that have a built-in
+            platformGuess first, then the rest by most recent firstSeen, and
+            ignore the long tail this run. Apply the QUALITY GATES in
             skills/source-discovery/SKILL.md step 4 (Houston-focused; has a public
             events feed; matches a known ripper type; NOT religious / support-group
             / enrollment-course; sufficient volume). Prefer entries whose
