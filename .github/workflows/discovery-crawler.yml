@@ -108,8 +108,12 @@ jobs:
       id-token: write
       actions: read
     steps:
+      # Check out the TIP of main, not the triggering commit — the crawl job
+      # just pushed the freshly-built docs/discovery-shortlist.json there, and
+      # that's what this job reads.
       - uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 1
 
       - name: Run Claude Code (implement new discoveries)
