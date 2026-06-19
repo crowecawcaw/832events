@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-19T04:10:54.699Z",
+  "generated": "2026-06-19T04:47:57.315Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -666,6 +666,43 @@
             },
             "rss": {
               "href": "lawndale-art-center-lawndale-art-center.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "levy-park-houston",
+      "friendlyName": "Levy Park Houston",
+      "description": "Levy Park Houston",
+      "url": "https://www.levyparkhouston.org/calendar/",
+      "tags": [
+        "Parks",
+        "Community",
+        "Upper Kirby",
+        "Outdoor Recreation"
+      ],
+      "geo": {
+        "lat": 29.7419,
+        "lng": -95.4169,
+        "label": "Levy Park, 3801 Main St, Houston, TX 77002"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Levy%20Park%2C%203801%20Main%20St%2C%20Houston%2C%20TX%2077002"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "levy-park-houston",
+          "friendlyName": "Levy Park Houston",
+          "links": {
+            "ics": {
+              "href": "external-levy-park-houston.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-levy-park-houston.rss",
               "type": "application/rss+xml"
             }
           }
