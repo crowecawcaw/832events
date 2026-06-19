@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-19T13:35:13.556Z",
+  "generated": "2026-06-19T14:40:10.084Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -102,6 +102,41 @@
             },
             "rss": {
               "href": "external-bad-astronaut-brewery.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "bisong-art-gallery",
+      "friendlyName": "Bisong Art Gallery",
+      "description": "Houston art gallery hosting exhibitions and cultural events",
+      "url": "https://bisonggallery.com/events",
+      "tags": [
+        "Art",
+        "EaDo"
+      ],
+      "geo": {
+        "lat": 29.761,
+        "lng": -95.348,
+        "label": "Bisong Art Gallery, 1305 Sterrett St, Houston, TX 77002"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Bisong%20Art%20Gallery%2C%201305%20Sterrett%20St%2C%20Houston%2C%20TX%2077002"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "bisong-art-gallery",
+          "friendlyName": "Bisong Art Gallery",
+          "links": {
+            "ics": {
+              "href": "external-bisong-art-gallery.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-bisong-art-gallery.rss",
               "type": "application/rss+xml"
             }
           }
