@@ -37,6 +37,7 @@ const CANDIDATES_FILE = path.join(REPO, "docs", "source-candidates.json");
 const LEDGER_FILE = path.join(REPO, "docs", "discovery-ledger.json");
 const METRICS_FILE = path.join(REPO, "docs", "discovery-metrics.jsonl");
 const IGNORE_FILE = path.join(REPO, "discovery", "ignore-domains.txt");
+const SHORTLIST_FILE = path.join(REPO, "docs", "discovery-shortlist.json");
 
 // ---------------------------------------------------------------------------
 // Domain helpers
@@ -176,7 +177,7 @@ export async function loadKnownDomains(
 // ---------------------------------------------------------------------------
 
 export type LedgerStatus =
-    | "new" | "probed" | "dead" | "ignored" | "promoted";
+    | "new" | "probed" | "dead" | "ignored" | "promoted" | "rejected";
 
 export interface LedgerEntry {
     url: string;
@@ -215,6 +216,7 @@ export function nextCheck(status: LedgerStatus, checkCount: number, now = new Da
     let days: number;
     switch (status) {
         case "promoted": days = 3650; break;          // it's a source now
+        case "rejected": days = 3650; break;          // evaluated, not viable
         case "ignored": days = 90; break;             // social/aggregator junk
         case "dead": days = Math.min(2 ** checkCount, 60); break; // 1,2,4..60d
         case "probed": days = 14; break;              // looked plausible, recheck fortnightly
@@ -331,6 +333,61 @@ export async function fingerprint(rawUrl: string, fetchImpl: FetchImpl = fetch):
 }
 
 // ---------------------------------------------------------------------------
+// Triage shortlist — deterministic ranking handed to the implement job so it
+// never wades through the whole ledger and never auto-attempts expensive tiers.
+// ---------------------------------------------------------------------------
+
+/** Built-in platforms that need only a config ripper.yaml (no custom code). */
+export const BUILTIN_PLATFORMS = new Set([
+    "squarespace", "eventbrite", "ticketmaster", "dice", "axs", "shopify",
+]);
+
+/** Cheapness/confidence tier for a candidate (see docs/discovery-crawler.md):
+ *   1 = real calendar feed found (cheapest, near-certain)
+ *   2 = config-only built-in platform
+ *   3 = reachable but unknown platform (needs investigation)
+ *   4 = dead / unreachable / custom / proxy (expensive, low yield)
+ *   0 = not a candidate (ignored / already a source). */
+export function candidateTier(e: LedgerEntry): number {
+    if (e.status === "ignored" || e.status === "promoted" || e.status === "rejected") return 0;
+    if (e.icsUrl || e.platformGuess === "ics" || e.platformGuess === "tribe-events-ics") return 1;
+    if (e.platformGuess && BUILTIN_PLATFORMS.has(e.platformGuess)) return 2;
+    if (e.status === "probed" && (e.httpStatus ?? 0) >= 200 && (e.httpStatus ?? 999) < 400) return 3;
+    return 4;
+}
+
+export interface ShortlistItem {
+    url: string;
+    domain: string;
+    tier: number;
+    platformGuess: string | null;
+    icsUrl: string | null;
+    queryHits: number;
+    firstSeen: string;
+}
+
+/** Pre-ranked, capped shortlist of cheap/high-confidence candidates. Tier 1-2
+ * only by default (tier 3-4 are deferred to humans). Ordered: tier asc, then
+ * relevance (distinct queries that surfaced the domain) desc, then recency. */
+export function buildShortlist(
+    entries: Record<string, LedgerEntry>, cap = 20, maxTier = 2,
+): ShortlistItem[] {
+    const items = Object.values(entries)
+        .map(e => ({ e, tier: candidateTier(e) }))
+        .filter(x => x.tier >= 1 && x.tier <= maxTier)
+        .map(({ e, tier }): ShortlistItem => ({
+            url: e.url, domain: e.domain, tier,
+            platformGuess: e.platformGuess ?? null, icsUrl: e.icsUrl ?? null,
+            queryHits: e.queries.length, firstSeen: e.firstSeen,
+        }));
+    items.sort((a, b) =>
+        a.tier - b.tier ||
+        b.queryHits - a.queryHits ||
+        (a.firstSeen < b.firstSeen ? 1 : a.firstSeen > b.firstSeen ? -1 : 0));
+    return items.slice(0, cap);
+}
+
+// ---------------------------------------------------------------------------
 // Classification + run
 // ---------------------------------------------------------------------------
 
@@ -355,6 +412,7 @@ export interface RunMetrics {
     oldItems: number;
     ignored: number;
     ledgerSize: number;
+    shortlistSize: number;
     newDomains: string[];
     perQuery: QueryMetric[];
 }
@@ -385,6 +443,7 @@ interface RunOpts {
     fetchImpl?: FetchImpl;
     throttleMs?: number;
     now?: Date;
+    shortlistCap?: number;
 }
 
 export async function run(opts: RunOpts): Promise<RunMetrics> {
@@ -474,6 +533,9 @@ export async function run(opts: RunOpts): Promise<RunMetrics> {
 
     ledger.updated = now.toISOString();
 
+    // Deterministic, capped, cheapest-first shortlist for the implement job.
+    const shortlist = buildShortlist(ledger.entries, opts.shortlistCap ?? 20);
+
     const metrics: RunMetrics = {
         ts: now.toISOString(),
         queriesRun: queries.length,
@@ -483,12 +545,14 @@ export async function run(opts: RunOpts): Promise<RunMetrics> {
         uniqueUrls: seenThisRun.size,
         newItems, oldItems, ignored,
         ledgerSize: Object.keys(ledger.entries).length,
+        shortlistSize: shortlist.length,
         newDomains: [...newDomains],
         perQuery,
     };
 
     if (opts.write) {
         await writeFile(LEDGER_FILE, JSON.stringify(ledger, null, 2) + "\n");
+        await writeFile(SHORTLIST_FILE, JSON.stringify({ updated: now.toISOString(), items: shortlist }, null, 2) + "\n");
         await appendFile(METRICS_FILE, JSON.stringify(metrics) + "\n");
     }
     return metrics;
@@ -550,13 +614,15 @@ async function main() {
 
     console.error(`queries=${metrics.queriesRun} searches=${metrics.searchesUsed} ` +
         `results=${metrics.totalResults} new=${metrics.newItems} old=${metrics.oldItems} ` +
-        `ignored=${metrics.ignored} ledger=${metrics.ledgerSize}`);
+        `ignored=${metrics.ignored} ledger=${metrics.ledgerSize} shortlist=${metrics.shortlistSize}`);
     if (metrics.newDomains.length) console.error("new domains:\n  " + metrics.newDomains.join("\n  "));
 
-    // GitHub Actions output: gate the LLM job on new items.
+    // GitHub Actions outputs: gate the LLM job on the shortlist (cheap, ready
+    // candidates), not just raw new items (which may be all junk).
     if (process.env.GITHUB_OUTPUT) {
         await appendFile(process.env.GITHUB_OUTPUT,
-            `new_items=${metrics.newItems}\nnew_domains=${metrics.newDomains.length}\n`);
+            `new_items=${metrics.newItems}\nnew_domains=${metrics.newDomains.length}\n` +
+            `shortlist_size=${metrics.shortlistSize}\n`);
     }
 }
 
