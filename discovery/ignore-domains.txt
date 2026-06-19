@@ -1,0 +1,48 @@
+# Tunable ignore list for the discovery crawler (unioned with the hardcoded
+# CORE set in scripts/discovery-crawl.ts). One registrable domain per line;
+# blank lines and `#` comments ignored. A hit on any of these is recorded in
+# metrics but NEVER surfaced as a new candidate, and existing ledger entries on
+# them are reclassified to "ignored".
+#
+# This is where editorial / news / magazine / TV / tourism-listicle / directory
+# domains go — sites that aggregate or write ABOUT events but aren't a scrapable
+# venue calendar (the project prefers venue-specific sources). Grow it from the
+# `newDomains` dump in docs/discovery-metrics.jsonl.
+#
+# The discovery implement job may APPEND domains here for clearly non-venue
+# sites (news/mag/TV/tourism/directory/reservation); the change rides in its
+# human-reviewed PR. When unsure whether a domain might host real events, do
+# NOT add it here — mark just the single bad ledger URL instead.
+
+# --- News / magazines / TV ---
+houstonchronicle.com
+chron.com
+houstonpress.com
+houstoniamag.com
+papercitymag.com
+outsmartmagazine.com
+culturemap.com
+eater.com
+click2houston.com
+abc13.com
+khou.com
+
+# --- Tourism / "things to do" / listicle aggregators ---
+visithoustontexas.com
+myguidehouston.com
+365thingsinhouston.com
+hellowoodlands.com
+houstonrestaurantweeks.com
+musicfestivalwizard.com
+downtownhouston.org
+
+# --- Hobby directories / out-of-market round-ups ---
+beeradvocate.com
+beerfests.com
+brewsology.com
+brewersassociation.org
+texasbrewloop.com
+beerchronicle.com
+houstonbeerguide.com
+craftbeeraustin.com
+metropolitanshuttle.com

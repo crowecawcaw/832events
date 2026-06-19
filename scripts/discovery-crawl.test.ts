@@ -1,7 +1,10 @@
 import { describe, it, expect } from "vitest";
+import { writeFile } from "fs/promises";
+import { tmpdir } from "os";
+import { join } from "path";
 import {
     registrableDomain, canonicalUrl, loadQueries, rotateQueries,
-    nextCheck, detectPlatform, braveSearch, reclassifyIgnored,
+    nextCheck, detectPlatform, braveSearch, reclassifyIgnored, loadIgnoreDomains,
     type FetchImpl, type LedgerEntry,
 } from "./discovery-crawl.js";
 
@@ -89,16 +92,32 @@ describe("reclassifyIgnored", () => {
         url: `https://${domain}/x`, domain, firstSeen: "", lastSeen: "",
         lastChecked: null, checkCount: 0, status, nextCheckAfter: "", queries: [],
     });
+    const ignore = new Set(["culturemap.com", "houstonchronicle.com"]);
     it("downgrades now-ignored domains and leaves real ones", () => {
         const entries: Record<string, LedgerEntry> = {
             a: mk("culturemap.com", "probed"),       // editorial -> ignore
             b: mk("spindletap.com", "new"),           // real venue -> keep
             c: mk("houstonchronicle.com", "ignored"), // already ignored -> no change
         };
-        const n = reclassifyIgnored(entries, new Date(Date.UTC(2026, 0, 1)));
+        const n = reclassifyIgnored(entries, ignore, new Date(Date.UTC(2026, 0, 1)));
         expect(n).toBe(1);
         expect(entries.a.status).toBe("ignored");
         expect(entries.b.status).toBe("new");
+    });
+});
+
+describe("loadIgnoreDomains", () => {
+    it("unions the core set with the data file", async () => {
+        const tmp = join(tmpdir(), `ign-${Date.now()}.txt`);
+        await writeFile(tmp, "# comment\nculturemap.com\n\nEXAMPLE.COM\n");
+        const set = await loadIgnoreDomains(tmp);
+        expect(set.has("facebook.com")).toBe(true); // core
+        expect(set.has("culturemap.com")).toBe(true); // file
+        expect(set.has("example.com")).toBe(true); // lowercased
+    });
+    it("falls back to core when the file is missing", async () => {
+        const set = await loadIgnoreDomains(join(tmpdir(), "nope-does-not-exist.txt"));
+        expect(set.has("facebook.com")).toBe(true);
     });
 });
 
