@@ -50,13 +50,31 @@ export const PLATFORM_DOMAINS = new Set([
     "seetickets.us", "etix.com", "prekindle.com", "wl.seetickets.us",
 ]);
 
-/** Social / review / aggregator hosts that are never a scrapable calendar
- * source for us. Counted in metrics but never surfaced as a NEW candidate. */
+/** Social / review / news / listicle / aggregator hosts that are never a
+ * scrapable venue calendar for us (the project prefers venue-specific sources
+ * over editorial round-ups). Counted in metrics but never surfaced as a NEW
+ * candidate, and existing ledger entries on these domains are reclassified to
+ * "ignored". Tune this list from docs/discovery-metrics.jsonl new-domain dumps. */
 export const IGNORE_DOMAINS = new Set([
+    // Social / review / search
     "facebook.com", "instagram.com", "twitter.com", "x.com", "youtube.com",
     "tiktok.com", "yelp.com", "tripadvisor.com", "reddit.com", "wikipedia.org",
     "pinterest.com", "linkedin.com", "amazon.com", "spotify.com", "google.com",
     "maps.google.com", "yellowpages.com", "foursquare.com", "patch.com",
+    // Reservation / ordering platforms (not event sources)
+    "resy.com", "toasttab.com", "opentable.com",
+    // News / magazines / TV
+    "houstonchronicle.com", "houstonpress.com", "houstoniamag.com",
+    "papercitymag.com", "outsmartmagazine.com", "culturemap.com", "eater.com",
+    "click2houston.com", "abc13.com", "khou.com", "chron.com",
+    // Tourism / listicle / "things to do" aggregators
+    "visithoustontexas.com", "myguidehouston.com", "365thingsinhouston.com",
+    "hellowoodlands.com", "houstonrestaurantweeks.com", "musicfestivalwizard.com",
+    "downtownhouston.org",
+    // Beer/hobby directories & out-of-market round-ups
+    "beeradvocate.com", "beerfests.com", "brewsology.com", "brewersassociation.org",
+    "texasbrewloop.com", "beerchronicle.com", "houstonbeerguide.com",
+    "craftbeeraustin.com", "metropolitanshuttle.com",
 ]);
 
 const MULTI_PART_TLDS = new Set(["co.uk", "org.uk", "com.au", "co.nz"]);
@@ -200,6 +218,20 @@ export function nextCheck(status: LedgerStatus, checkCount: number, now = new Da
     const d = new Date(now);
     d.setUTCDate(d.getUTCDate() + days);
     return d.toISOString().slice(0, 10);
+}
+
+/** Reclassify any ledger entry whose domain is now in IGNORE_DOMAINS to
+ * "ignored" (and back off its recheck). Returns the count changed. */
+export function reclassifyIgnored(entries: Record<string, LedgerEntry>, now = new Date()): number {
+    let n = 0;
+    for (const e of Object.values(entries)) {
+        if (IGNORE_DOMAINS.has(e.domain) && e.status !== "ignored") {
+            e.status = "ignored";
+            e.nextCheckAfter = nextCheck("ignored", e.checkCount, now);
+            n++;
+        }
+    }
+    return n;
 }
 
 // ---------------------------------------------------------------------------
@@ -359,6 +391,12 @@ export async function run(opts: RunOpts): Promise<RunMetrics> {
 
     const known = await loadKnownDomains();
     const ledger = await loadLedger();
+
+    // Clean up any existing entries whose domain is now in the ignore list
+    // (e.g. editorial/aggregator domains added after they were first logged),
+    // so the LLM gate never considers them.
+    const reclassified = reclassifyIgnored(ledger.entries, now);
+    if (reclassified) console.error(`reclassified ${reclassified} ledger entries to ignored`);
 
     const perQuery: QueryMetric[] = [];
     const newDomains = new Set<string>();

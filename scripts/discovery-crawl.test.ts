@@ -1,7 +1,8 @@
 import { describe, it, expect } from "vitest";
 import {
     registrableDomain, canonicalUrl, loadQueries, rotateQueries,
-    nextCheck, detectPlatform, braveSearch, type FetchImpl,
+    nextCheck, detectPlatform, braveSearch, reclassifyIgnored,
+    type FetchImpl, type LedgerEntry,
 } from "./discovery-crawl.js";
 
 describe("registrableDomain", () => {
@@ -80,6 +81,24 @@ describe("detectPlatform", () => {
     it("detects tribe events ical query", () => {
         const r = detectPlatform('<a href="https://v.com/events/?ical=1">subscribe</a>', "https://v.com");
         expect(r.icsUrl).toContain("ical=1");
+    });
+});
+
+describe("reclassifyIgnored", () => {
+    const mk = (domain: string, status: LedgerEntry["status"]): LedgerEntry => ({
+        url: `https://${domain}/x`, domain, firstSeen: "", lastSeen: "",
+        lastChecked: null, checkCount: 0, status, nextCheckAfter: "", queries: [],
+    });
+    it("downgrades now-ignored domains and leaves real ones", () => {
+        const entries: Record<string, LedgerEntry> = {
+            a: mk("culturemap.com", "probed"),       // editorial -> ignore
+            b: mk("spindletap.com", "new"),           // real venue -> keep
+            c: mk("houstonchronicle.com", "ignored"), // already ignored -> no change
+        };
+        const n = reclassifyIgnored(entries, new Date(Date.UTC(2026, 0, 1)));
+        expect(n).toBe(1);
+        expect(entries.a.status).toBe("ignored");
+        expect(entries.b.status).toBe("new");
     });
 });
 
