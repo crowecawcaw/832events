@@ -22,7 +22,8 @@
     "build": "npm run generate-calendars && npm run web:build",
     "check-missing-urls": "tsx scripts/check-missing-urls.ts",
     "check-new-sources": "tsx scripts/check-new-sources.ts",
-    "check-discovery-api": "tsx scripts/check-discovery-api.ts"
+    "check-discovery-api": "tsx scripts/check-discovery-api.ts",
+    "discovery-crawl": "tsx scripts/discovery-crawl.ts"
   },
   "dependencies": {
     "@js-joda/core": "^5.5.3",
