@@ -43,12 +43,15 @@ are the human-judgment quality gates (Houston-focused? religious / support-group
    URL via the ledger instead.
 3. **Ignore junk.** Social/review/aggregator hosts (facebook, instagram, yelp,
    …) are recorded `ignored` and never surfaced as candidates.
-4. **Ledger + backoff.** New domains land in the ledger as `new`. Optional
-   `--probe` does one cheap GET to guess the platform (`squarespace`,
-   `eventbrite`, `ics`, `tribe-events-ics`, …) and find an ICS link, moving the
-   entry to `probed` or `dead`. Recheck cadence backs off by status: `new` next
-   day; `probed` fortnightly; `dead` exponentially (1,2,4…60d); `ignored`
-   quarterly; `promoted` ~never.
+4. **Ledger + backoff + backlog probing.** New domains land as `new`. With
+   `--probe` the crawler fingerprints up to `--probe-cap` entries per run (one
+   cheap GET each, concurrent) — **newest first, then draining the backlog of
+   un-probed/due `new` entries from prior runs** so the shortlist isn't starved
+   by only ever probing the freshest domains. Reachable → `probed` (platformGuess
+   distinguishes a tier 1/2 feed/platform from a tier-3 unknown); unreachable /
+   4xx → `dead`. Recheck cadence backs off by status: `new` next day; `probed`
+   fortnightly; `dead` exponentially (1,2,4…60d); `ignored` quarterly;
+   `promoted`/`rejected` ~never.
 5. **Metrics.** Each run appends one JSON line with per-query and per-page
    counts, new/old/ignored totals, ledger size, and the list of new domains.
    Tune `queries.txt` and `--pages` from this.

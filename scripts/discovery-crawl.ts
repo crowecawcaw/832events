@@ -332,6 +332,30 @@ export async function fingerprint(rawUrl: string, fetchImpl: FetchImpl = fetch):
     }
 }
 
+/** Fingerprint a batch of ledger entries in place with bounded concurrency.
+ * Reachable (2xx/3xx) → "probed" (platformGuess distinguishes tier 1/2 from a
+ * tier-3 unknown); unreachable / 4xx / 5xx → "dead" with backoff. */
+export async function probeEntries(
+    entries: LedgerEntry[], fetchImpl: FetchImpl | undefined, now: Date, concurrency = 8,
+): Promise<void> {
+    const iso = now.toISOString();
+    let idx = 0;
+    const worker = async () => {
+        while (idx < entries.length) {
+            const e = entries[idx++];
+            const fp = await fingerprint(e.url, fetchImpl ?? fetch);
+            e.httpStatus = fp.httpStatus;
+            e.platformGuess = fp.platform;
+            e.icsUrl = fp.icsUrl;
+            e.lastChecked = iso;
+            e.checkCount += 1;
+            e.status = (fp.httpStatus === null || fp.httpStatus >= 400) ? "dead" : "probed";
+            e.nextCheckAfter = nextCheck(e.status, e.checkCount, now);
+        }
+    };
+    await Promise.all(Array.from({ length: Math.min(concurrency, entries.length) }, worker));
+}
+
 // ---------------------------------------------------------------------------
 // Triage shortlist — deterministic ranking handed to the implement job so it
 // never wades through the whole ledger and never auto-attempts expensive tiers.
@@ -348,8 +372,22 @@ export const BUILTIN_PLATFORMS = new Set([
  *   3 = reachable but unknown platform (needs investigation)
  *   4 = dead / unreachable / custom / proxy (expensive, low yield)
  *   0 = not a candidate (ignored / already a source). */
+/** A path-less URL on a generic platform host (e.g. https://livenation.com) is
+ * the platform homepage, not a venue/organizer source — we can't derive an id
+ * from it, so it's never a shortlist candidate. */
+export function isPlatformRoot(url: string): boolean {
+    try {
+        const d = registrableDomain(url);
+        if (!d || !PLATFORM_DOMAINS.has(d)) return false;
+        return new URL(url).pathname.replace(/\/+$/, "") === "";
+    } catch {
+        return false;
+    }
+}
+
 export function candidateTier(e: LedgerEntry): number {
     if (e.status === "ignored" || e.status === "promoted" || e.status === "rejected") return 0;
+    if (isPlatformRoot(e.url)) return 4;
     if (e.icsUrl || e.platformGuess === "ics" || e.platformGuess === "tribe-events-ics") return 1;
     if (e.platformGuess && BUILTIN_PLATFORMS.has(e.platformGuess)) return 2;
     if (e.status === "probed" && (e.httpStatus ?? 0) >= 200 && (e.httpStatus ?? 999) < 400) return 3;
@@ -412,6 +450,7 @@ export interface RunMetrics {
     oldItems: number;
     ignored: number;
     ledgerSize: number;
+    probed: number;
     shortlistSize: number;
     newDomains: string[];
     perQuery: QueryMetric[];
@@ -513,22 +552,20 @@ export async function run(opts: RunOpts): Promise<RunMetrics> {
         perQuery.push({ query, pages: perPage.length, results: results.length, perPage, newItems: qNew, oldItems: qOld, ignored: qIgnored });
     }
 
-    // Fingerprint new entries (capped, best-effort).
-    if (opts.probe && newlyAdded.length) {
-        let n = 0;
-        for (const entry of newlyAdded) {
-            if (n >= opts.probeCap) break;
-            n++;
-            const fp = await fingerprint(entry.url, opts.fetchImpl);
-            entry.httpStatus = fp.httpStatus;
-            entry.platformGuess = fp.platform;
-            entry.icsUrl = fp.icsUrl;
-            entry.lastChecked = now.toISOString();
-            entry.status = fp.httpStatus === null || (fp.httpStatus >= 400) ? "dead"
-                : fp.platform ? "probed" : "new";
-            entry.checkCount = 1;
-            entry.nextCheckAfter = nextCheck(entry.status, entry.checkCount, now);
-        }
+    // Fingerprint entries (best-effort, concurrent, capped): newly-added first,
+    // then DRAIN THE BACKLOG of un-probed / due "new" entries from prior runs so
+    // the shortlist isn't starved by only ever probing the freshest domains.
+    let probedThisRun = 0;
+    if (opts.probe) {
+        const todayStr = now.toISOString().slice(0, 10);
+        const fresh = new Set(newlyAdded.map(e => e.url));
+        const backlog = Object.values(ledger.entries)
+            .filter(e => !fresh.has(e.url) && e.status === "new"
+                && (e.lastChecked === null || e.nextCheckAfter <= todayStr))
+            .sort((a, b) => (a.firstSeen < b.firstSeen ? 1 : a.firstSeen > b.firstSeen ? -1 : 0));
+        const queue = [...newlyAdded, ...backlog].slice(0, opts.probeCap);
+        probedThisRun = queue.length;
+        await probeEntries(queue, opts.fetchImpl, now);
     }
 
     ledger.updated = now.toISOString();
@@ -545,6 +582,7 @@ export async function run(opts: RunOpts): Promise<RunMetrics> {
         uniqueUrls: seenThisRun.size,
         newItems, oldItems, ignored,
         ledgerSize: Object.keys(ledger.entries).length,
+        probed: probedThisRun,
         shortlistSize: shortlist.length,
         newDomains: [...newDomains],
         perQuery,
@@ -586,7 +624,7 @@ async function main() {
     const mock = arg("--mock");
     const pages = parseInt(arg("--pages", "1")!, 10);
     const maxQueries = parseInt(arg("--max-queries", "0")!, 10);
-    const probeCap = parseInt(arg("--probe-cap", "12")!, 10);
+    const probeCap = parseInt(arg("--probe-cap", "60")!, 10);
     const write = !flag("--no-write");
 
     let fetchImpl: FetchImpl | undefined;
@@ -614,7 +652,8 @@ async function main() {
 
     console.error(`queries=${metrics.queriesRun} searches=${metrics.searchesUsed} ` +
         `results=${metrics.totalResults} new=${metrics.newItems} old=${metrics.oldItems} ` +
-        `ignored=${metrics.ignored} ledger=${metrics.ledgerSize} shortlist=${metrics.shortlistSize}`);
+        `ignored=${metrics.ignored} probed=${metrics.probed} ledger=${metrics.ledgerSize} ` +
+        `shortlist=${metrics.shortlistSize}`);
     if (metrics.newDomains.length) console.error("new domains:\n  " + metrics.newDomains.join("\n  "));
 
     // GitHub Actions outputs: gate the LLM job on the shortlist (cheap, ready
