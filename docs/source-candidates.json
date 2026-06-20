@@ -1288,5 +1288,225 @@
     ],
     "firstSeen": "2026-06-13",
     "lastChecked": "2026-06-15"
+  },
+  {
+    "name": "Walking Stick Brewing",
+    "status": "added",
+    "platform": "Tribe Events (WordPress EventCalendar) + proxy",
+    "url": "https://www.walkingstickbrewing.com/",
+    "tags": [
+      "Beer",
+      "Music",
+      "Garden Oaks"
+    ],
+    "firstSeen": "2026-06-20",
+    "lastChecked": "2026-06-20",
+    "pr": "claude/source-pipeline-2026-06-20",
+    "impl": {
+      "type": "external",
+      "icsUrl": "https://walkingstickbrewing.com/?post_type=tribe_events&ical=1&eventDisplay=list",
+      "proxy": true,
+      "note": "Tribe Events feed requires proxy for Browserbase JS execution in CI (site returns 403 to standard bot requests)"
+    }
+  },
+  {
+    "name": "BikeHouston",
+    "status": "candidate",
+    "platform": "Meetup + ICS export",
+    "url": "https://www.bikehoustontx.org/",
+    "tags": [
+      "Cycling",
+      "Outdoor Recreation",
+      "Community"
+    ],
+    "firstSeen": "2026-06-20",
+    "lastChecked": "2026-06-20",
+    "notes": "Cycling advocacy group with regular group rides and events. Meetup integration with ICS-exportable calendar."
+  },
+  {
+    "name": "8th Dimension Comics & Games",
+    "status": "candidate",
+    "platform": "Google Calendar (ICS export)",
+    "url": "https://www.8thdimicom.com/",
+    "tags": [
+      "Comics",
+      "Games",
+      "Entertainment",
+      "Multiple Locations"
+    ],
+    "firstSeen": "2026-06-20",
+    "lastChecked": "2026-06-20",
+    "notes": "Comic shop with weekly Friday Night Magic and organized play events. Multiple Houston locations. Google Calendar with ICS export."
+  },
+  {
+    "name": "Houston Urban Trekkers",
+    "status": "candidate",
+    "platform": "Meetup",
+    "url": "https://www.meetup.com/Houston-Urban-Trekkers/",
+    "tags": [
+      "Hiking",
+      "Outdoor Recreation",
+      "Community"
+    ],
+    "firstSeen": "2026-06-20",
+    "lastChecked": "2026-06-20",
+    "notes": "Active hiking group with regular trail outings. Meetup group with ICS-exportable calendar."
+  },
+  {
+    "name": "Houston Adventure People",
+    "status": "candidate",
+    "platform": "Meetup",
+    "url": "https://www.meetup.com/Houston-Adventure-People/",
+    "tags": [
+      "Outdoor Recreation",
+      "Community",
+      "Adventure"
+    ],
+    "firstSeen": "2026-06-20",
+    "lastChecked": "2026-06-20",
+    "notes": "Outdoor adventure meetup group. Meetup group with ICS-exportable calendar."
+  },
+  {
+    "name": "Gulf Coast Cosmos Comics",
+    "status": "investigating",
+    "platform": "Eventbrite",
+    "url": "https://www.eventbrite.com/o/gulf-coast-cosmos-comics-38169937673",
+    "tags": [
+      "Comics",
+      "Games",
+      "Community"
+    ],
+    "firstSeen": "2026-06-20",
+    "lastChecked": "2026-06-20",
+    "notes": "Comic shop with Eventbrite events. ICS feed URL returned 404 — need to find correct feed format or API endpoint."
+  },
+  {
+    "name": "Bedrock City Comic Co.",
+    "status": "investigating",
+    "platform": "Eventbrite",
+    "url": "https://www.eventbrite.com/o/bedrock-city-comic-co-31662832925",
+    "tags": [
+      "Comics",
+      "Games",
+      "Entertainment"
+    ],
+    "firstSeen": "2026-06-20",
+    "lastChecked": "2026-06-20",
+    "notes": "Multi-location comic shop with Eventbrite events. ICS feed URL returned 404 — need to find correct feed format."
+  },
+  {
+    "name": "Houston Center for Contemporary Craft",
+    "status": "investigating",
+    "platform": "Eventbrite",
+    "url": "https://www.eventbrite.com/o/houston-center-for-contemporary-craft-13485803283",
+    "tags": [
+      "Art",
+      "Craft",
+      "Gallery",
+      "Midtown"
+    ],
+    "firstSeen": "2026-06-20",
+    "lastChecked": "2026-06-20",
+    "notes": "Contemporary craft center with Eventbrite events. ICS feed URL returned 404 — need correct API endpoint."
+  },
+  {
+    "name": "Karbach Brewing Company",
+    "status": "investigating",
+    "platform": "Custom HTML calendar",
+    "url": "https://www.karbachbrewing.com/",
+    "tags": [
+      "Beer",
+      "Brewery",
+      "Music",
+      "EastEnd"
+    ],
+    "firstSeen": "2026-06-20",
+    "lastChecked": "2026-06-20",
+    "notes": "Popular Houston brewery with regular events (yoga, food trucks, live music). Custom HTML calendar parsing needed."
+  },
+  {
+    "name": "Megaton Brewery",
+    "status": "investigating",
+    "platform": "Custom HTML calendar",
+    "url": "https://www.megatonbrewery.com/",
+    "tags": [
+      "Beer",
+      "Brewery",
+      "Music",
+      "Midtown"
+    ],
+    "firstSeen": "2026-06-20",
+    "lastChecked": "2026-06-20",
+    "notes": "Houston brewery with regular events and live music schedule. Custom HTML parsing needed."
+  },
+  {
+    "name": "BOX 13 ArtSpace",
+    "status": "investigating",
+    "platform": "Custom HTML calendar",
+    "url": "https://www.box13artspace.com/",
+    "tags": [
+      "Art",
+      "Gallery",
+      "EaDo"
+    ],
+    "firstSeen": "2026-06-20",
+    "lastChecked": "2026-06-20",
+    "notes": "Artist-run gallery space with openings and exhibitions. Custom HTML parsing needed."
+  },
+  {
+    "name": "Kaboom Books",
+    "status": "investigating",
+    "platform": "Custom HTML calendar",
+    "url": "https://www.kaboombooks.com/",
+    "tags": [
+      "Books",
+      "Community",
+      "Montrose"
+    ],
+    "firstSeen": "2026-06-20",
+    "lastChecked": "2026-06-20",
+    "notes": "Used bookstore with author readings, signings, and book events. Custom HTML calendar."
+  },
+  {
+    "name": "Houston Running Calendar / HARRA",
+    "status": "investigating",
+    "platform": "Custom HTML calendar",
+    "url": "https://www.harriaevents.com/",
+    "tags": [
+      "Running",
+      "Sports",
+      "Outdoor Recreation"
+    ],
+    "firstSeen": "2026-06-20",
+    "lastChecked": "2026-06-20",
+    "notes": "Houston Area Road Runners Association with race calendar and running events. Custom HTML parsing needed."
+  },
+  {
+    "name": "Shrine of the Black Madonna Cultural Center & Bookstore",
+    "status": "candidate",
+    "platform": "Eventbrite",
+    "url": "https://www.eventbrite.com/o/shrine-of-the-black-madonna-cultural-center-bookstore-35355551575",
+    "tags": [
+      "Books",
+      "Community",
+      "Cultural"
+    ],
+    "firstSeen": "2026-06-20",
+    "lastChecked": "2026-06-20",
+    "notes": "Cultural center and bookstore with poetry nights, book signings, and cultural events. Eventbrite organization."
+  },
+  {
+    "name": "The Magick Cauldron",
+    "status": "investigating",
+    "platform": "Contact-based scheduling",
+    "url": "https://www.themagickcauldron.com/",
+    "tags": [
+      "Books",
+      "Metaphysical",
+      "Community"
+    ],
+    "firstSeen": "2026-06-20",
+    "lastChecked": "2026-06-20",
+    "notes": "Metaphysical bookstore with events by contact. Will need to investigate event organization method."
   }
 ]
