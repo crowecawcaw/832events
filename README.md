@@ -7,6 +7,13 @@ Google Calendar, Apple Calendar, Outlook, or any other calendar application.
 
 **https://832.events/**
 
+## Coverage over time
+
+Event and calendar counts from each daily build. Regenerated and committed to
+`main` automatically — see `scripts/update-event-history.mjs`.
+
+![Houston event and calendar coverage over time](docs/event-history.svg)
+
 Built from the [832.events city template](https://github.com/prestomation/206events)
 — see `docs/SETUP.md` for the full setup walkthrough, `docs/city-template.md`
 for how this instance is configured, and `AGENTS.md` for the agent-driven

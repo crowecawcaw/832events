@@ -40,6 +40,52 @@ jobs:
       # This way we keep publishing our calendars even if there are errors, but we get a notification from this failed step
       run: (( $ERROR_COUNT == 0 ))
 
+  update-history:
+    # Record today's event/calendar counts and regenerate the README graph,
+    # committing any change to main. Pushing with the default GITHUB_TOKEN does
+    # NOT retrigger this workflow (GitHub suppresses token-driven workflow
+    # recursion), so there's no build loop. Runs only for our own builds (push
+    # to main / schedule / manual), never for PRs (this workflow has no PR
+    # trigger anyway). Best-effort: the script exits 0 if the build produced no
+    # output, so this never turns a publish run red.
+    if: always()
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    needs: build
+    concurrency:
+      group: event-history-main
+      cancel-in-progress: false
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - name: Download build output
+        uses: actions/download-artifact@v4
+        continue-on-error: true   # build may have failed before uploading output/
+        with:
+          name: github-pages
+          path: output
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Update event history graph
+        run: node scripts/update-event-history.mjs
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet -- event-history.json docs/event-history.svg; then
+            echo "No change in event history; nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add event-history.json docs/event-history.svg
+          git commit -m "Update event/calendar coverage graph"
+          git push origin main
+
   deploy:
     # Always run this deploy, even if the build failed. This is so we get newest results even if a calendar had errors
     if: always()
