@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-20T02:30:26.794Z",
+  "generated": "2026-06-20T13:03:46.031Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -287,42 +287,6 @@
       ]
     },
     {
-      "name": "hobby-center",
-      "friendlyName": "Hobby Center for the Performing Arts",
-      "description": "Houston's premier performing arts center hosting Broadway touring productions, concerts, comedy, and dance performances in Downtown Houston.",
-      "url": "https://www.thehobbycenter.org/events/",
-      "tags": [
-        "Arts",
-        "Downtown",
-        "Music"
-      ],
-      "geo": {
-        "lat": 29.7563,
-        "lng": -95.3717,
-        "label": "Hobby Center for the Performing Arts, 800 Bagby St, Houston, TX 77002"
-      },
-      "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=Hobby%20Center%20for%20the%20Performing%20Arts%2C%20800%20Bagby%20St%2C%20Houston%2C%20TX%2077002"
-      },
-      "kind": "external",
-      "calendars": [
-        {
-          "name": "hobby-center",
-          "friendlyName": "Hobby Center for the Performing Arts",
-          "links": {
-            "ics": {
-              "href": "external-hobby-center.ics",
-              "type": "text/calendar"
-            },
-            "rss": {
-              "href": "external-hobby-center.rss",
-              "type": "application/rss+xml"
-            }
-          }
-        }
-      ]
-    },
-    {
       "name": "holocaust-museum-houston",
       "friendlyName": "Holocaust Museum Houston",
       "description": "Education and remembrance museum with programming including educator workshops, author talks, film screenings, and community lectures",
@@ -526,6 +490,41 @@
             },
             "rss": {
               "href": "external-houston-heights-association.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "inprint-houston",
+      "friendlyName": "Inprint Houston",
+      "description": "Literary nonprofit hosting readings from the Margarett Root Brown Reading Series, book clubs, and writing workshops",
+      "url": "https://inprinthouston.org/calendar/",
+      "tags": [
+        "Books",
+        "Museum District"
+      ],
+      "geo": {
+        "lat": 29.728,
+        "lng": -95.396,
+        "label": "Inprint Houston, 1520 W Main St, Houston, TX 77006"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Inprint%20Houston%2C%201520%20W%20Main%20St%2C%20Houston%2C%20TX%2077006"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "inprint-houston",
+          "friendlyName": "Inprint Houston",
+          "links": {
+            "ics": {
+              "href": "external-inprint-houston.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-inprint-houston.rss",
               "type": "application/rss+xml"
             }
           }
@@ -883,6 +882,42 @@
             },
             "rss": {
               "href": "punch-line-comedy-club-punch-line-comedy-club.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "rice-public-events",
+      "friendlyName": "Rice University",
+      "description": "Rice University",
+      "url": "https://events.rice.edu/",
+      "tags": [
+        "Education",
+        "Art",
+        "Museum District"
+      ],
+      "geo": {
+        "lat": 29.7174,
+        "lng": -95.4018,
+        "label": "Rice University, 6100 Main St, Houston, TX 77005"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Rice%20University%2C%206100%20Main%20St%2C%20Houston%2C%20TX%2077005"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "rice-public-events",
+          "friendlyName": "Rice University - Open to the Public",
+          "links": {
+            "ics": {
+              "href": "rice-public-events-rice-public-events.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "rice-public-events-rice-public-events.rss",
               "type": "application/rss+xml"
             }
           }

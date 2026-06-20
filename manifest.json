@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T02:30:21.243Z",
+  "lastUpdated": "2026-06-20T13:03:41.069Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -264,6 +264,24 @@
       ]
     },
     {
+      "name": "rice-public-events",
+      "description": "Rice University",
+      "friendlyLink": "https://events.rice.edu/",
+      "calendars": [
+        {
+          "name": "rice-public-events",
+          "friendlyName": "Rice University - Open to the Public",
+          "icsUrl": "rice-public-events-rice-public-events.ics",
+          "rssUrl": "rice-public-events-rice-public-events.rss",
+          "tags": [
+            "Education",
+            "Art",
+            "Museum District"
+          ]
+        }
+      ]
+    },
+    {
       "name": "saint-arnold-brewing-company",
       "description": "Saint Arnold Brewing Company",
       "friendlyLink": "https://www.saintarnold.com/happenings/",
@@ -430,19 +448,6 @@
       ]
     },
     {
-      "name": "hobby-center",
-      "friendlyName": "Hobby Center for the Performing Arts",
-      "description": "Houston's premier performing arts center hosting Broadway touring productions, concerts, comedy, and dance performances in Downtown Houston.",
-      "icsUrl": "external-hobby-center.ics",
-      "originalIcsUrl": "https://www.thehobbycenter.org/?post_type=tribe_events&ical=1&eventDisplay=list",
-      "infoUrl": "https://www.thehobbycenter.org/events/",
-      "tags": [
-        "Arts",
-        "Downtown",
-        "Music"
-      ]
-    },
-    {
       "name": "holocaust-museum-houston",
       "friendlyName": "Holocaust Museum Houston",
       "description": "Education and remembrance museum with programming including educator workshops, author talks, film screenings, and community lectures",
@@ -485,6 +490,18 @@
       "tags": [
         "The Heights",
         "Community"
+      ]
+    },
+    {
+      "name": "inprint-houston",
+      "friendlyName": "Inprint Houston",
+      "description": "Literary nonprofit hosting readings from the Margarett Root Brown Reading Series, book clubs, and writing workshops",
+      "icsUrl": "external-inprint-houston.ics",
+      "originalIcsUrl": "https://inprinthouston.org/?post_type=tribe_events&ical=1&eventDisplay=list",
+      "infoUrl": "https://inprinthouston.org/calendar/",
+      "tags": [
+        "Books",
+        "Museum District"
       ]
     },
     {
@@ -537,6 +554,7 @@
     "Community",
     "Downtown",
     "EaDo",
+    "Education",
     "Entertainment",
     "FarmersMarket",
     "Food",
