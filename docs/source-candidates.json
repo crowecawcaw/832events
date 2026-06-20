@@ -1508,5 +1508,33 @@
     "firstSeen": "2026-06-20",
     "lastChecked": "2026-06-20",
     "notes": "Metaphysical bookstore with events by contact. Will need to investigate event organization method."
+  },
+  {
+    "name": "ERJCC Houston",
+    "status": "added",
+    "platform": "Tribe Events (ICS feed)",
+    "url": "https://www.erjcchouston.org/events/",
+    "tags": [
+      "Art",
+      "Community",
+      "Museum District"
+    ],
+    "firstSeen": "2026-06-20",
+    "lastChecked": "2026-06-20",
+    "pr": "TBD",
+    "impl": {
+      "type": "external",
+      "icsUrl": "https://www.erjcchouston.org/events/?ical=1",
+      "infoUrl": "https://www.erjcchouston.org/events/",
+      "observedEventCount": 2,
+      "builtEventCount": 2,
+      "proxy": true,
+      "note": "Cloudflare-protected site requires proxy:true for Browserbase JS execution in CI",
+      "geo": {
+        "lat": 29.7261,
+        "lng": -95.4012,
+        "label": "ERJCC Houston, 5600 North Braeswood Blvd, Houston, TX 77096"
+      }
+    }
   }
 ]
