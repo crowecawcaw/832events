@@ -1,5 +1,5 @@
 {
-  "buildTime": "2026-06-20T13:03:46.034Z",
+  "buildTime": "2026-06-20T13:37:19.836Z",
   "totalErrors": 6,
   "configErrors": [],
   "sources": [
@@ -96,12 +96,6 @@
   ],
   "externalCalendarFailures": [
     {
-      "name": "eureka-heights-brew-co",
-      "friendlyName": "Eureka Heights Brewery",
-      "url": "https://www.eurekaheights.com/?post_type=tribe_events&ical=1&eventDisplay=list",
-      "error": "Error: HTTP 415: "
-    },
-    {
       "name": "hobby-center",
       "friendlyName": "Hobby Center for the Performing Arts",
       "url": "https://www.thehobbycenter.org/?post_type=tribe_events&ical=1&eventDisplay=list",
@@ -110,8 +104,8 @@
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1539,
-    "eventsWithGeo": 1518,
+    "totalEvents": 1558,
+    "eventsWithGeo": 1537,
     "eventsWithoutGeo": 21,
     "geocodeErrors": 0
   },
@@ -130,7 +124,9 @@
     "stereo-live-houston-stereo-live-houston",
     "tag-folk",
     "tag-spring-branch",
-    "tag-clear-lake"
+    "tag-clear-lake",
+    "tag-garden-oaks",
+    "external-walking-stick-brewing"
   ],
   "expectedEmptyCalendars": [],
   "proxyStaleServes": [],
@@ -420,6 +416,13 @@
       "lng": -95.4232
     },
     {
+      "source": "external",
+      "name": "walking-stick-brewing",
+      "label": "Walking Stick Brewing Company, 956 Judiway St, Houston, TX 77018",
+      "lat": 29.8125,
+      "lng": -95.4458
+    },
+    {
       "source": "recurring",
       "name": "wedgewood-farmers-market",
       "label": "Wedgewood area, Houston, TX",
@@ -435,10 +438,10 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1153,
-    "totalEvents": 1539,
+    "eventsWithImage": 1171,
+    "totalEvents": 1558,
     "venuesWithImage": 0,
-    "totalVenues": 34,
+    "totalVenues": 35,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -491,6 +494,12 @@
         "label": "Ensemble Theatre Houston, 3535 Main St, Houston, TX 77002",
         "url": "https://www.ensemblehouston.com/",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ensemble%20Theatre%20Houston%2C%203535%20Main%20St%2C%20Houston%2C%20TX%2077002"
+      },
+      {
+        "source": "external",
+        "name": "eureka-heights-brew-co",
+        "label": "Eureka Heights Brewery, 2454 Sawyer St, Houston, TX 77007",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Eureka%20Heights%20Brewery%2C%202454%20Sawyer%20St%2C%20Houston%2C%20TX%2077007"
       },
       {
         "source": "external",
@@ -1278,7 +1287,7 @@
   "costStats": {
     "eventsWithCost": 538,
     "freeEvents": 469,
-    "totalEvents": 1539,
+    "totalEvents": 1558,
     "unresolvable": 0
   },
   "costGaps": [
@@ -5087,7 +5096,7 @@
     {
       "name": "tag-the-heights",
       "type": "Aggregate",
-      "events": 49,
+      "events": 68,
       "expectEmpty": false,
       "source": "tag-the-heights"
     },
@@ -5241,7 +5250,7 @@
     {
       "name": "tag-beer",
       "type": "Aggregate",
-      "events": 57,
+      "events": 76,
       "expectEmpty": false,
       "source": "tag-beer"
     },
@@ -5351,9 +5360,16 @@
       "source": "tag-theatre"
     },
     {
+      "name": "tag-garden-oaks",
+      "type": "Aggregate",
+      "events": 0,
+      "expectEmpty": false,
+      "source": "tag-garden-oaks"
+    },
+    {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1600,
+      "events": 1619,
       "expectEmpty": false,
       "source": "tag-all"
     },
@@ -5391,6 +5407,13 @@
       "events": 4,
       "expectEmpty": false,
       "source": "diverseworks"
+    },
+    {
+      "name": "external-eureka-heights-brew-co",
+      "type": "External",
+      "events": 19,
+      "expectEmpty": false,
+      "source": "eureka-heights-brew-co"
     },
     {
       "name": "external-hermann-park",
@@ -5454,6 +5477,13 @@
       "events": 7,
       "expectEmpty": false,
       "source": "tuts"
+    },
+    {
+      "name": "external-walking-stick-brewing",
+      "type": "External",
+      "events": 0,
+      "expectEmpty": false,
+      "source": "walking-stick-brewing"
     }
   ]
 }
