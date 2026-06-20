@@ -1,6 +1,10 @@
 import { describe, it, expect } from "vitest";
 import { parse } from "node-html-parser";
 import { LocalDateTime, ZoneId } from "@js-joda/core";
+import {
+    parseEventDatesFromContent,
+    hashEventId as ripperHashEventId,
+} from "./ripper.js";
 
 describe("Saint Arnold Brewing Company Ripper", () => {
     it("should parse event links from post grid", () => {
@@ -131,6 +135,92 @@ describe("Saint Arnold Brewing Company Ripper", () => {
             ampm === "PM" && hourNum !== 12 ? hourNum + 12 : ampm === "AM" && hourNum === 12 ? 0 : hourNum;
 
         expect(adjustedHour).toBe(0);
+    });
+
+    // --- parseEventDatesFromContent: real code-path coverage ---
+
+    function isError(item: unknown): boolean {
+        return typeof item === "object" && item !== null && (item as { error?: unknown }).error === true;
+    }
+
+    it("parses a dated event post into a calendar event (success path)", () => {
+        const html = `
+        <article>
+            <div class="content-inner">
+                <p>Ride with the team! <strong>Friday, October 17</strong> Kickoff party | 6:00 PM</p>
+            </div>
+        </article>`;
+
+        const result = parseEventDatesFromContent(html, "Bike Around the Bay");
+
+        const events = result.filter((r) => !isError(r));
+        const errors = result.filter((r) => isError(r));
+        expect(errors).toHaveLength(0);
+        expect(events).toHaveLength(1);
+        // id is stable + derived from title/date
+        expect((events[0] as { id: string }).id).toContain("bike-around-the-bay");
+        expect((events[0] as { summary: string }).summary).toBe("Bike Around the Bay");
+    });
+
+    it("parses multiple distinct dated entries in one post", () => {
+        const html = `
+        <article>
+            <div class="content-inner">
+                <p><strong>Thursday, June 11</strong> Match A | 2:00 PM</p>
+                <p><strong>Friday, June 12</strong> Match B | 8:00 PM</p>
+            </div>
+        </article>`;
+
+        const result = parseEventDatesFromContent(html, "Soccer at Saint Arnold");
+        const events = result.filter((r) => !isError(r));
+        expect(events.length).toBeGreaterThanOrEqual(2);
+        expect(result.filter((r) => isError(r))).toHaveLength(0);
+    });
+
+    it("skips an undated/evergreen post silently (no error, no event)", () => {
+        // Regression: evergreen promo posts (tours, giveaways, ongoing
+        // collaborations) carry no calendar date and must NOT emit a counted
+        // "No dated events found in content" error.
+        const html = `
+        <article>
+            <div class="content-inner">
+                <p>Enter to win a $100 gift card and a VIP brewery tour. No purchase necessary.
+                Must be 21+. Watch the best soccer this summer on our Super Screen.</p>
+            </div>
+        </article>`;
+
+        const result = parseEventDatesFromContent(html, "Enter to Win Saint Arnold Prizes");
+        expect(result).toHaveLength(0);
+        expect(result.some(isError)).toBe(false);
+    });
+
+    it("still errors when a post has a time but no parseable date (malformed event)", () => {
+        // A post that clearly describes a timed event but whose date can't be
+        // parsed is a genuine parse gap worth surfacing.
+        const html = `
+        <article>
+            <div class="content-inner">
+                <p>Doors at 8:00 PM. See you there!</p>
+            </div>
+        </article>`;
+
+        const result = parseEventDatesFromContent(html, "Mystery Show");
+        expect(result).toHaveLength(1);
+        expect(isError(result[0])).toBe(true);
+        expect((result[0] as { reason: string }).reason).toBe("No dated events found in content");
+    });
+
+    it("errors when the post is missing the expected article structure", () => {
+        const result = parseEventDatesFromContent("<div>no article here</div>", "Broken Post");
+        expect(result).toHaveLength(1);
+        expect(isError(result[0])).toBe(true);
+        expect((result[0] as { reason: string }).reason).toBe("No article element found");
+    });
+
+    it("exported hashEventId matches the local helper (stable ids)", () => {
+        const a = ripperHashEventId("Soccer at Saint Arnold", "2026-06-11");
+        const b = hashEventId("Soccer at Saint Arnold", "2026-06-11");
+        expect(a).toBe(b);
     });
 });
 
