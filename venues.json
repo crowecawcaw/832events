@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-19T14:40:10.084Z",
+  "generated": "2026-06-20T02:30:26.794Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -102,41 +102,6 @@
             },
             "rss": {
               "href": "external-bad-astronaut-brewery.rss",
-              "type": "application/rss+xml"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "name": "bisong-art-gallery",
-      "friendlyName": "Bisong Art Gallery",
-      "description": "Houston art gallery hosting exhibitions and cultural events",
-      "url": "https://bisonggallery.com/events",
-      "tags": [
-        "Art",
-        "EaDo"
-      ],
-      "geo": {
-        "lat": 29.761,
-        "lng": -95.348,
-        "label": "Bisong Art Gallery, 1305 Sterrett St, Houston, TX 77002"
-      },
-      "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=Bisong%20Art%20Gallery%2C%201305%20Sterrett%20St%2C%20Houston%2C%20TX%2077002"
-      },
-      "kind": "external",
-      "calendars": [
-        {
-          "name": "bisong-art-gallery",
-          "friendlyName": "Bisong Art Gallery",
-          "links": {
-            "ics": {
-              "href": "external-bisong-art-gallery.ics",
-              "type": "text/calendar"
-            },
-            "rss": {
-              "href": "external-bisong-art-gallery.rss",
               "type": "application/rss+xml"
             }
           }
@@ -278,40 +243,6 @@
             },
             "rss": {
               "href": "ensemble-theatre-houston-ensemble-theatre-houston.rss",
-              "type": "application/rss+xml"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "name": "eureka-heights-brew-co",
-      "friendlyName": "Eureka Heights Brewery",
-      "description": "Eureka Heights Brewery",
-      "tags": [
-        "Beer",
-        "The Heights"
-      ],
-      "geo": {
-        "lat": 29.7823,
-        "lng": -95.4181,
-        "label": "Eureka Heights Brewery, 2454 Sawyer St, Houston, TX 77007"
-      },
-      "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=Eureka%20Heights%20Brewery%2C%202454%20Sawyer%20St%2C%20Houston%2C%20TX%2077007"
-      },
-      "kind": "external",
-      "calendars": [
-        {
-          "name": "eureka-heights-brew-co",
-          "friendlyName": "Eureka Heights Brewery",
-          "links": {
-            "ics": {
-              "href": "external-eureka-heights-brew-co.ics",
-              "type": "text/calendar"
-            },
-            "rss": {
-              "href": "external-eureka-heights-brew-co.rss",
               "type": "application/rss+xml"
             }
           }
