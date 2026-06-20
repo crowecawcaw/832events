@@ -42,7 +42,7 @@ function slugify(s: string): string {
         .replace(/^-+|-+$/g, "");
 }
 
-function hashEventId(title: string, dateStr: string): string {
+export function hashEventId(title: string, dateStr: string): string {
     const key = `${slugify(title)}-${dateStr}`;
     const hash = crypto
         .createHash("sha256")
@@ -84,7 +84,7 @@ function extractEventLinks(html: string): Map<string, string> {
  *   Date range format like "Thursday, June 11" with time following
  *   Plain text patterns without strong tags
  */
-function parseEventDatesFromContent(html: string, title: string): (RipperCalendarEvent | RipperError)[] {
+export function parseEventDatesFromContent(html: string, title: string): (RipperCalendarEvent | RipperError)[] {
     const root = parse(html);
     const article = root.querySelector("article");
     if (!article) {
@@ -171,8 +171,25 @@ function parseEventDatesFromContent(html: string, title: string): (RipperCalenda
         }
     }
 
-    // If no events found with structured dates, return a ParseError
+    // If no events were built, decide between "broken entry" and "undated post".
+    //
+    // The Happenings page mixes dated one-time events (e.g. "Bike Around the Bay
+    // | October 17") with evergreen/promotional posts that legitimately carry no
+    // calendar date (brewery tours, ongoing collaborations, contests/giveaways,
+    // "watch soccer this summer", etc.). Those undated posts are not events and
+    // must not produce a counted error — emitting one floods the build's error
+    // gate with spurious "No dated events found in content" reports.
+    //
+    // We only treat a post as a malformed *event* when it actually contains a
+    // time-of-day signal (e.g. "8:00 PM") yet we still couldn't pair it with a
+    // parseable date. A post with no time signal at all is an undated post and is
+    // skipped silently (return nothing, no error).
     if (events.length === 0) {
+        const hasTimeSignal = /\d{1,2}:\d{2}\s*(AM|PM)/i.test(content);
+        if (!hasTimeSignal) {
+            // Undated/evergreen post — not an event, skip without an error.
+            return [];
+        }
         return [{
             error: true,
             type: "ParseError",

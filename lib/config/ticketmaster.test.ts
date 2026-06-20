@@ -1,8 +1,9 @@
 import { describe, it, expect } from 'vitest';
 import { ZoneId } from '@js-joda/core';
 import '@js-joda/timezone';
+import { Duration } from '@js-joda/core';
 import { TicketmasterRipper } from './ticketmaster.js';
-import { RipperCalendarEvent } from './schema.js';
+import { RipperCalendarEvent, UncertaintyError } from './schema.js';
 
 const tz = ZoneId.of('America/Los_Angeles');
 
@@ -20,6 +21,11 @@ function parseOne(event: any): RipperCalendarEvent {
     const results = ripper.parseEvents([event], tz, { venueName: 'Test Venue' });
     const [e] = results.filter(r => 'summary' in r) as RipperCalendarEvent[];
     return e;
+}
+
+function parseRaw(event: any) {
+    const ripper = new TicketmasterRipper();
+    return ripper.parseEvents([event], tz, { venueName: 'Test Venue' }, 'test-source', 'test-cal');
 }
 
 describe('TicketmasterRipper cost extraction', () => {
@@ -51,5 +57,40 @@ describe('TicketmasterRipper cost extraction', () => {
     it('still writes the price into the description alongside cost', () => {
         const e = parseOne(makeEvent({ priceRanges: [{ type: 'standard', currency: 'USD', min: 25, max: 75 }] }));
         expect(e.description).toContain('Price: $25 - $75');
+    });
+});
+
+describe('TicketmasterRipper duration / start-time uncertainty', () => {
+    it('emits a 2-hour default duration with NO uncertainty when start time is known (localDate + localTime)', () => {
+        const results = parseRaw(makeEvent());
+        const events = results.filter(r => 'summary' in r) as RipperCalendarEvent[];
+        const uncertainties = results.filter(r => 'type' in r && (r as any).type === 'Uncertainty');
+
+        expect(events).toHaveLength(1);
+        expect(events[0].duration.equals(Duration.ofHours(2))).toBe(true);
+        expect(uncertainties).toHaveLength(0);
+    });
+
+    it('emits a 2-hour default duration with NO uncertainty when start time is known (dateTime)', () => {
+        const results = parseRaw(makeEvent({ dates: { start: { dateTime: '2026-03-10T03:00:00Z' } } }));
+        const events = results.filter(r => 'summary' in r) as RipperCalendarEvent[];
+        const uncertainties = results.filter(r => 'type' in r && (r as any).type === 'Uncertainty');
+
+        expect(events).toHaveLength(1);
+        expect(events[0].duration.equals(Duration.ofHours(2))).toBe(true);
+        expect(uncertainties).toHaveLength(0);
+    });
+
+    it('emits exactly one startTime-only uncertainty for a date-only listing (19:30 placeholder)', () => {
+        const results = parseRaw(makeEvent({ dates: { start: { localDate: '2026-03-10' } } }));
+        const events = results.filter(r => 'summary' in r) as RipperCalendarEvent[];
+        const uncertainties = results.filter(r => 'type' in r && (r as any).type === 'Uncertainty') as UncertaintyError[];
+
+        expect(events).toHaveLength(1);
+        // 19:30 placeholder applied, with the default 2-hour duration.
+        expect(events[0].duration.equals(Duration.ofHours(2))).toBe(true);
+        expect(uncertainties).toHaveLength(1);
+        expect(uncertainties[0].unknownFields).toEqual(['startTime']);
+        expect(uncertainties[0].unknownFields).not.toContain('duration');
     });
 });
