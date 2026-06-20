@@ -1,5 +1,5 @@
 {
-  "buildTime": "2026-06-20T14:24:11.409Z",
+  "buildTime": "2026-06-20T14:55:55.722Z",
   "totalErrors": 6,
   "configErrors": [],
   "sources": [
@@ -96,6 +96,12 @@
   ],
   "externalCalendarFailures": [
     {
+      "name": "bisong-art-gallery",
+      "friendlyName": "Bisong Art Gallery",
+      "url": "https://bisonggallery.com/events/?ical=1",
+      "error": "null"
+    },
+    {
       "name": "hobby-center",
       "friendlyName": "Hobby Center for the Performing Arts",
       "url": "https://www.thehobbycenter.org/?post_type=tribe_events&ical=1&eventDisplay=list",
@@ -104,8 +110,8 @@
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1558,
-    "eventsWithGeo": 1537,
+    "totalEvents": 1560,
+    "eventsWithGeo": 1539,
     "eventsWithoutGeo": 21,
     "geocodeErrors": 0
   },
@@ -204,6 +210,13 @@
       "label": "Ensemble Theatre Houston, 3535 Main St, Houston, TX 77002",
       "lat": 29.7301,
       "lng": -95.4105
+    },
+    {
+      "source": "external",
+      "name": "erjcc-houston",
+      "label": "ERJCC Houston, 5600 North Braeswood Blvd, Houston, TX 77096",
+      "lat": 29.7261,
+      "lng": -95.4012
     },
     {
       "source": "external",
@@ -438,10 +451,10 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1171,
-    "totalEvents": 1558,
+    "eventsWithImage": 1173,
+    "totalEvents": 1560,
     "venuesWithImage": 0,
-    "totalVenues": 35,
+    "totalVenues": 36,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -494,6 +507,13 @@
         "label": "Ensemble Theatre Houston, 3535 Main St, Houston, TX 77002",
         "url": "https://www.ensemblehouston.com/",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ensemble%20Theatre%20Houston%2C%203535%20Main%20St%2C%20Houston%2C%20TX%2077002"
+      },
+      {
+        "source": "external",
+        "name": "erjcc-houston",
+        "label": "ERJCC Houston, 5600 North Braeswood Blvd, Houston, TX 77096",
+        "url": "https://www.erjcchouston.org/events/",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=ERJCC%20Houston%2C%205600%20North%20Braeswood%20Blvd%2C%20Houston%2C%20TX%2077096"
       },
       {
         "source": "external",
@@ -1287,7 +1307,7 @@
   "costStats": {
     "eventsWithCost": 538,
     "freeEvents": 469,
-    "totalEvents": 1558,
+    "totalEvents": 1560,
     "unresolvable": 0
   },
   "costGaps": [
@@ -5145,7 +5165,7 @@
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 464,
+      "events": 466,
       "expectEmpty": false,
       "source": "tag-community"
     },
@@ -5166,21 +5186,21 @@
     {
       "name": "tag-eado",
       "type": "Aggregate",
-      "events": 145,
+      "events": 144,
       "expectEmpty": false,
       "source": "tag-eado"
     },
     {
       "name": "tag-art",
       "type": "Aggregate",
-      "events": 524,
+      "events": 525,
       "expectEmpty": false,
       "source": "tag-art"
     },
     {
       "name": "tag-museum-district",
       "type": "Aggregate",
-      "events": 141,
+      "events": 143,
       "expectEmpty": false,
       "source": "tag-museum-district"
     },
@@ -5369,7 +5389,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1619,
+      "events": 1620,
       "expectEmpty": false,
       "source": "tag-all"
     },
@@ -5388,13 +5408,6 @@
       "source": "bad-astronaut-brewery"
     },
     {
-      "name": "external-bisong-art-gallery",
-      "type": "External",
-      "events": 1,
-      "expectEmpty": false,
-      "source": "bisong-art-gallery"
-    },
-    {
       "name": "external-buffalo-bayou-partnership",
       "type": "External",
       "events": 30,
@@ -5407,6 +5420,13 @@
       "events": 4,
       "expectEmpty": false,
       "source": "diverseworks"
+    },
+    {
+      "name": "external-erjcc-houston",
+      "type": "External",
+      "events": 2,
+      "expectEmpty": false,
+      "source": "erjcc-houston"
     },
     {
       "name": "external-eureka-heights-brew-co",

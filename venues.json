@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-20T14:24:11.405Z",
+  "generated": "2026-06-20T14:55:55.718Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -243,6 +243,42 @@
             },
             "rss": {
               "href": "ensemble-theatre-houston-ensemble-theatre-houston.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "erjcc-houston",
+      "friendlyName": "ERJCC Houston",
+      "description": "Educational, cultural and community events at the Jewish community center in Houston",
+      "url": "https://www.erjcchouston.org/events/",
+      "tags": [
+        "Art",
+        "Community",
+        "Museum District"
+      ],
+      "geo": {
+        "lat": 29.7261,
+        "lng": -95.4012,
+        "label": "ERJCC Houston, 5600 North Braeswood Blvd, Houston, TX 77096"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=ERJCC%20Houston%2C%205600%20North%20Braeswood%20Blvd%2C%20Houston%2C%20TX%2077096"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "erjcc-houston",
+          "friendlyName": "ERJCC Houston",
+          "links": {
+            "ics": {
+              "href": "external-erjcc-houston.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-erjcc-houston.rss",
               "type": "application/rss+xml"
             }
           }
