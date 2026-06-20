@@ -1,0 +1,32 @@
+[
+  {
+    "type": "ParseError",
+    "reason": "Failed to fetch events from Squarespace: Error: 404 ",
+    "context": "https://andersonfair.net/events"
+  },
+  {
+    "type": "ParseError",
+    "reason": "Failed to fetch AXS events for venue 126116: Error: AXS fetch error: HTTP 403 for https://www.axs.com/venues/126116/the-heights-theater-houston-tickets",
+    "context": "venueSlug: the-heights-theater-houston-tickets"
+  },
+  {
+    "type": "ParseError",
+    "reason": "Failed to fetch AXS events for venue 130678: Error: AXS fetch error: HTTP 403 for https://www.axs.com/venues/130678/houston-improv-houston-tickets",
+    "context": "venueSlug: houston-improv-houston-tickets"
+  },
+  {
+    "type": "ParseError",
+    "reason": "Failed to fetch Eventbrite events for organizer 19231282193: Error: Eventbrite API error: 401 ",
+    "context": "pride-houston"
+  },
+  {
+    "type": "ParseError",
+    "reason": "Failed to fetch AXS events for venue 130538: Error: AXS fetch error: HTTP 403 for https://www.axs.com/venues/130538/scout-bar-houston",
+    "context": "venueSlug: scout-bar-houston"
+  },
+  {
+    "type": "ParseError",
+    "reason": "Failed to fetch AXS events for venue 126004: Error: AXS fetch error: HTTP 403 for https://www.axs.com/venues/126004/stereo-live-houston-houston-tickets",
+    "context": "venueSlug: stereo-live-houston-houston-tickets"
+  }
+]

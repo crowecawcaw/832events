@@ -1,0 +1,83 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Evelyn Rubenstein Jewish Community Center - ECPv6.16.4//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Evelyn Rubenstein Jewish Community Center
+X-ORIGINAL-URL:https://www.erjcchouston.org
+X-WR-CALDESC:Events for Evelyn Rubenstein Jewish Community Center
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-Robots-Tag:noindex
+X-PUBLISHED-TTL:PT1H
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20250309T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20251102T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20260308T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20261101T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20270314T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20271107T070000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260625T190000
+DTEND;TZID=America/Chicago:20260625T203000
+DTSTAMP:20260620T092915
+CREATED:20260602T142809Z
+LAST-MODIFIED:20260602T142809Z
+UID:10000556-1782414000-1782419400@www.erjcchouston.org
+SUMMARY:AI Risks: Scams & Self-Harm with Russell Klein
+DESCRIPTION:Powerful AI is now available via websites\, apps and voice assistants. This workshop addresses the gaps between what these system do and the unsafe ways people commonly engage with them. \n\nWeaponization: How AI is used in scams\, impersonation and pressure tactics.\nFake media: Fake images and recordings\, shared by friends and family\, increasingly misrepresents the world we live in.\nExcessive trust: Why trusting advice from an AI chatbot is a bad idea\, and how to do your research more safely.\nMental Health: How AI chatbots and articulate-sounding\, robotic voices are today leading the public to self-harm.\n\nThere is no charge for this tech lecture presented by Russell Klein\, RK Media Services. You must RSVP to register.
+URL:https://www.erjcchouston.org/event/ai-risks-scams-self-harm-with-russell-klein/
+LOCATION:Herzstein Foundation Multipurpose Room
+CATEGORIES:Jewish Life & Learning
+ATTACH;FMTTYPE=image/png:https://www.erjcchouston.org/wp-content/uploads/2026/06/Calendar-Event-Banners-for-Website-33.png
+ORGANIZER;CN="Judy Weil":MAILTO:jweil@erjcchouston.org
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260626T100000
+DTEND;TZID=America/Chicago:20260626T100000
+DTSTAMP:20260620T092915
+CREATED:20260529T194150Z
+LAST-MODIFIED:20260529T194150Z
+UID:10000553-1782468000-1782468000@www.erjcchouston.org
+SUMMARY:Open Gym & Tot Shabbat
+DESCRIPTION:For kids ages 0-5 and their families \nCelebrate Shabbat with your friends and family with open gym in the gymnastics center followed by musical services. \nOpen gym will begin at 10:00 AM in the gymnastics center\, followed by music and services at 11:00 AM in the atrium of the Samuels Family Community Pavilion. \nRSVPs are required and spaces are limited. \n 
+URL:https://www.erjcchouston.org/event/open-gym-tot-shabbat-7/
+LOCATION:Evelyn Rubenstein JCC\, 5601 S. Braeswood\, Houston\, TX\, 77096\, United States
+CATEGORIES:Children & Families
+ATTACH;FMTTYPE=image/png:https://www.erjcchouston.org/wp-content/uploads/2025/11/Email-Banners-2025-12.png
+ORGANIZER;CN="Mayrav Fisher":MAILTO:mfisher@erjcchouston.org
+GEO:29.6738082;-95.4839865
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Evelyn Rubenstein JCC 5601 S. Braeswood Houston TX 77096 United States;X-APPLE-RADIUS=500;X-TITLE=5601 S. Braeswood:geo:-95.4839865,29.6738082
+END:VEVENT
+END:VCALENDAR

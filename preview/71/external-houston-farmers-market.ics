@@ -1,0 +1,453 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Houston Farmers Market - ECPv6.16.2//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Houston Farmers Market
+X-ORIGINAL-URL:https://thehoustonfarmersmarket.com
+X-WR-CALDESC:Events for Houston Farmers Market
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-Robots-Tag:noindex
+X-PUBLISHED-TTL:PT1H
+BEGIN:VTIMEZONE
+TZID:UTC
+BEGIN:STANDARD
+TZOFFSETFROM:+0000
+TZOFFSETTO:+0000
+TZNAME:UTC
+DTSTART:20250101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20250309T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20251102T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20260308T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20261101T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20270314T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20271107T070000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260620T100000
+DTEND;TZID=UTC:20260620T170000
+DTSTAMP:20260620T080301
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000789-1781949600-1781974800@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-06-20/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260621T100000
+DTEND;TZID=UTC:20260621T170000
+DTSTAMP:20260620T080301
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000790-1782036000-1782061200@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-06-21/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260627T100000
+DTEND;TZID=UTC:20260627T170000
+DTSTAMP:20260620T080301
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000791-1782554400-1782579600@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-06-27/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260628T100000
+DTEND;TZID=UTC:20260628T170000
+DTSTAMP:20260620T080301
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000792-1782640800-1782666000@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-06-28/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260628T120000
+DTEND;TZID=America/Chicago:20260628T140000
+DTSTAMP:20260620T080301
+CREATED:20250725T163750Z
+LAST-MODIFIED:20250725T163821Z
+UID:10001464-1782648000-1782655200@thehoustonfarmersmarket.com
+SUMMARY:Mariachi at the Market with Alamo Tamales
+DESCRIPTION:Enjoy live mariachi music at the Houston Farmers Market on the last Sunday of every month from 12–2 PM\, presented in partnership with Alamo Tamales.
+URL:https://thehoustonfarmersmarket.com/event/mariachi-at-the-market-with-alamo-tamales/2026-06-28/
+LOCATION:The Houston Farmers Market\, 2520 Airline Drive\, Houston\, TX\, 77009\, United States
+CATEGORIES:Live Music
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-Apr25-145-scaled-e1753461453830.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260704T100000
+DTEND;TZID=UTC:20260704T170000
+DTSTAMP:20260620T080301
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000793-1783159200-1783184400@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-07-04/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260705T100000
+DTEND;TZID=UTC:20260705T170000
+DTSTAMP:20260620T080301
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000794-1783245600-1783270800@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-07-05/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260711T100000
+DTEND;TZID=UTC:20260711T170000
+DTSTAMP:20260620T080301
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000795-1783764000-1783789200@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-07-11/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260712T100000
+DTEND;TZID=UTC:20260712T170000
+DTSTAMP:20260620T080301
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000796-1783850400-1783875600@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-07-12/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260718T100000
+DTEND;TZID=UTC:20260718T170000
+DTSTAMP:20260620T080301
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000797-1784368800-1784394000@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-07-18/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260719T100000
+DTEND;TZID=UTC:20260719T170000
+DTSTAMP:20260620T080301
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000798-1784455200-1784480400@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-07-19/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260725T100000
+DTEND;TZID=UTC:20260725T170000
+DTSTAMP:20260620T080301
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000799-1784973600-1784998800@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-07-25/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260726T100000
+DTEND;TZID=UTC:20260726T170000
+DTSTAMP:20260620T080301
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000800-1785060000-1785085200@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-07-26/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260726T120000
+DTEND;TZID=America/Chicago:20260726T140000
+DTSTAMP:20260620T080301
+CREATED:20250725T163750Z
+LAST-MODIFIED:20250725T163821Z
+UID:10001465-1785067200-1785074400@thehoustonfarmersmarket.com
+SUMMARY:Mariachi at the Market with Alamo Tamales
+DESCRIPTION:Enjoy live mariachi music at the Houston Farmers Market on the last Sunday of every month from 12–2 PM\, presented in partnership with Alamo Tamales.
+URL:https://thehoustonfarmersmarket.com/event/mariachi-at-the-market-with-alamo-tamales/2026-07-26/
+LOCATION:The Houston Farmers Market\, 2520 Airline Drive\, Houston\, TX\, 77009\, United States
+CATEGORIES:Live Music
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-Apr25-145-scaled-e1753461453830.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260801T100000
+DTEND;TZID=UTC:20260801T170000
+DTSTAMP:20260620T080301
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000801-1785578400-1785603600@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-08-01/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260802T100000
+DTEND;TZID=UTC:20260802T170000
+DTSTAMP:20260620T080301
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000802-1785664800-1785690000@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-08-02/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260808T100000
+DTEND;TZID=UTC:20260808T170000
+DTSTAMP:20260620T080301
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000803-1786183200-1786208400@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-08-08/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260809T100000
+DTEND;TZID=UTC:20260809T170000
+DTSTAMP:20260620T080302
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000804-1786269600-1786294800@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-08-09/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260815T100000
+DTEND;TZID=UTC:20260815T170000
+DTSTAMP:20260620T080302
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000805-1786788000-1786813200@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-08-15/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260816T100000
+DTEND;TZID=UTC:20260816T170000
+DTSTAMP:20260620T080302
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000806-1786874400-1786899600@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-08-16/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260822T100000
+DTEND;TZID=UTC:20260822T170000
+DTSTAMP:20260620T080302
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000807-1787392800-1787418000@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-08-22/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260823T100000
+DTEND;TZID=UTC:20260823T170000
+DTSTAMP:20260620T080302
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000808-1787479200-1787504400@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-08-23/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260829T100000
+DTEND;TZID=UTC:20260829T170000
+DTSTAMP:20260620T080302
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000809-1787997600-1788022800@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-08-29/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260830T100000
+DTEND;TZID=UTC:20260830T170000
+DTSTAMP:20260620T080302
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000810-1788084000-1788109200@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-08-30/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260830T120000
+DTEND;TZID=America/Chicago:20260830T140000
+DTSTAMP:20260620T080302
+CREATED:20250725T163750Z
+LAST-MODIFIED:20250725T163821Z
+UID:10001466-1788091200-1788098400@thehoustonfarmersmarket.com
+SUMMARY:Mariachi at the Market with Alamo Tamales
+DESCRIPTION:Enjoy live mariachi music at the Houston Farmers Market on the last Sunday of every month from 12–2 PM\, presented in partnership with Alamo Tamales.
+URL:https://thehoustonfarmersmarket.com/event/mariachi-at-the-market-with-alamo-tamales/2026-08-30/
+LOCATION:The Houston Farmers Market\, 2520 Airline Drive\, Houston\, TX\, 77009\, United States
+CATEGORIES:Live Music
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-Apr25-145-scaled-e1753461453830.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260905T100000
+DTEND;TZID=UTC:20260905T170000
+DTSTAMP:20260620T080302
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000811-1788602400-1788627600@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-09-05/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260906T100000
+DTEND;TZID=UTC:20260906T170000
+DTSTAMP:20260620T080302
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000812-1788688800-1788714000@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-09-06/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260912T100000
+DTEND;TZID=UTC:20260912T170000
+DTSTAMP:20260620T080302
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000813-1789207200-1789232400@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-09-12/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260913T100000
+DTEND;TZID=UTC:20260913T170000
+DTSTAMP:20260620T080302
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000814-1789293600-1789318800@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-09-13/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260919T100000
+DTEND;TZID=UTC:20260919T170000
+DTSTAMP:20260620T080302
+CREATED:20221102T094601Z
+LAST-MODIFIED:20250725T165140Z
+UID:10000815-1789812000-1789837200@thehoustonfarmersmarket.com
+SUMMARY:Shop Local Market
+DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, craft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
+URL:https://thehoustonfarmersmarket.com/event/shop-local-market/2026-09-19/
+LOCATION:TX
+ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/uploads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
+END:VEVENT
+END:VCALENDAR
