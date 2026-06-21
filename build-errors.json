@@ -1,5 +1,5 @@
 {
-  "buildTime": "2026-06-20T14:55:55.722Z",
+  "buildTime": "2026-06-21T02:48:34.028Z",
   "totalErrors": 6,
   "configErrors": [],
   "sources": [
@@ -110,8 +110,8 @@
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1560,
-    "eventsWithGeo": 1539,
+    "totalEvents": 1555,
+    "eventsWithGeo": 1534,
     "eventsWithoutGeo": 21,
     "geocodeErrors": 0
   },
@@ -451,8 +451,8 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1173,
-    "totalEvents": 1560,
+    "eventsWithImage": 1170,
+    "totalEvents": 1555,
     "venuesWithImage": 0,
     "totalVenues": 36,
     "unresolvable": 0
@@ -1307,7 +1307,7 @@
   "costStats": {
     "eventsWithCost": 538,
     "freeEvents": 469,
-    "totalEvents": 1560,
+    "totalEvents": 1555,
     "unresolvable": 0
   },
   "costGaps": [
@@ -1643,6 +1643,13 @@
     },
     {
       "source": "house-of-blues-houston",
+      "eventId": "tm-G5dIZ_dmErt5w",
+      "summary": "W.A.S.P. - 1984 TO HEADLESS",
+      "date": "2026-09-20T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/wasp-1984-to-headless-houston-texas-09-20-2026/event/3A00643BA77A92F2"
+    },
+    {
+      "source": "house-of-blues-houston",
       "eventId": "tm-G5dIZ_e-Sfww_",
       "summary": "Mario Aguilar - \"Diezmadre\"",
       "date": "2026-08-22T20:00-05:00[America/Chicago]",
@@ -1752,13 +1759,6 @@
       "summary": "Noise Complaints Presents The Late Night R&b Experience Tour - 21+",
       "date": "2026-07-03T20:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/noise-complaints-presents-the-late-night-houston-texas-07-03-2026/event/3A00646AA7BF8CD1"
-    },
-    {
-      "source": "house-of-blues-houston",
-      "eventId": "tm-G5dIZ_kQ4NnGu",
-      "summary": "Thievery Corporation",
-      "date": "2026-06-19T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/thievery-corporation-houston-texas-06-19-2026/event/3A006466958EA30D"
     },
     {
       "source": "house-of-blues-houston",
@@ -3174,13 +3174,6 @@
     },
     {
       "source": "punch-line-comedy-club",
-      "eventId": "tm-G5dIZ_7mjX_ZC",
-      "summary": "Angelo Colina (En Español)",
-      "date": "2026-06-19T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/angelo-colina-en-espanol-houston-texas-06-19-2026/event/3A00644B9CF9900E"
-    },
-    {
-      "source": "punch-line-comedy-club",
       "eventId": "tm-G5dIZ_7mq7_vZ",
       "summary": "Angelo Colina (En Español)",
       "date": "2026-06-20T21:15-05:00[America/Chicago]",
@@ -3192,13 +3185,6 @@
       "summary": "Angelo Colina (En Español)",
       "date": "2026-06-20T19:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/angelo-colina-en-espanol-houston-texas-06-20-2026/event/3A00644B9D099034"
-    },
-    {
-      "source": "punch-line-comedy-club",
-      "eventId": "tm-G5dIZ_7mqZ_ZO",
-      "summary": "Angelo Colina (En Español)",
-      "date": "2026-06-19T21:15-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/angelo-colina-en-espanol-houston-texas-06-19-2026/event/3A00644B9D019020"
     },
     {
       "source": "punch-line-comedy-club",
@@ -3370,13 +3356,6 @@
     },
     {
       "source": "punch-line-comedy-club",
-      "eventId": "tm-G5dIZ_d9XGNVQ",
-      "summary": "Cynthia Lee Fontaine Presents: Drag Brunch at the Punch",
-      "date": "2026-06-20T12:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/cynthia-lee-fontaine-presents-drag-brunch-houston-texas-06-20-2026/event/3A006435FE323D1A"
-    },
-    {
-      "source": "punch-line-comedy-club",
       "eventId": "tm-G5dIZ_d9XuNVN",
       "summary": "Cynthia Lee Fontaine Presents: Drag Brunch at the Punch",
       "date": "2026-07-18T12:00-05:00[America/Chicago]",
@@ -3493,6 +3472,13 @@
       "summary": "Splou",
       "date": "2026-09-11T21:15-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/splou-houston-texas-09-11-2026/event/3A0064CD14345EFE"
+    },
+    {
+      "source": "punch-line-comedy-club",
+      "eventId": "tm-G5dIZ_k5KmcK0",
+      "summary": "Therapy Gecko",
+      "date": "2026-09-20T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/therapy-gecko-houston-texas-09-20-2026/event/3A006462D3BAD4E4"
     },
     {
       "source": "punch-line-comedy-club",
@@ -4644,13 +4630,6 @@
     },
     {
       "source": "white-oak-music-hall",
-      "eventId": "tm-G5dIZ_amOOrvh",
-      "summary": "Gimme Gimme Disco",
-      "date": "2026-06-19T21:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/gimme-gimme-disco-houston-texas-06-19-2026/event/3A00649BA081E05B"
-    },
-    {
-      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_aQY7vDf",
       "summary": "Sleepytime Gorilla Museum",
       "date": "2026-07-31T18:00-05:00[America/Chicago]",
@@ -4798,6 +4777,13 @@
     },
     {
       "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_G5oXiVz",
+      "summary": "Hot Flash Heat Wave",
+      "date": "2026-09-20T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/hot-flash-heat-wave-houston-texas-09-20-2026/event/3A0064C2D1FACD38"
+    },
+    {
+      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_G6l9cXf",
       "summary": "Luke Bower : It's The Wind Tour",
       "date": "2026-09-08T19:00-05:00[America/Chicago]",
@@ -4872,13 +4858,6 @@
       "summary": "Nygma x Gene Ross",
       "date": "2026-07-26T18:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/nygma-x-gene-ross-houston-texas-07-26-2026/event/3A0064D28B036CF8"
-    },
-    {
-      "source": "white-oak-music-hall",
-      "eventId": "tm-G5dIZ_udeNlwU",
-      "summary": "Quack Circle Presents: Antdot x Shimza",
-      "date": "2026-06-23T18:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/quack-circle-presents-antdot-x-shimza-houston-texas-06-23-2026/event/3A0064D0C28EBCB6"
     },
     {
       "source": "white-oak-music-hall",
@@ -5053,7 +5032,7 @@
     {
       "name": "punch-line-comedy-club-punch-line-comedy-club",
       "type": "Ripper",
-      "events": 88,
+      "events": 86,
       "expectEmpty": false,
       "source": "punch-line-comedy-club"
     },
@@ -5102,7 +5081,7 @@
     {
       "name": "white-oak-music-hall-white-oak-music-hall",
       "type": "Ripper",
-      "events": 72,
+      "events": 71,
       "expectEmpty": false,
       "source": "white-oak-music-hall"
     },
@@ -5137,7 +5116,7 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 580,
+      "events": 577,
       "expectEmpty": false,
       "source": "tag-music"
     },
@@ -5151,7 +5130,7 @@
     {
       "name": "tag-downtown",
       "type": "Aggregate",
-      "events": 211,
+      "events": 209,
       "expectEmpty": false,
       "source": "tag-downtown"
     },
@@ -5172,7 +5151,7 @@
     {
       "name": "tag-montrose",
       "type": "Aggregate",
-      "events": 338,
+      "events": 336,
       "expectEmpty": false,
       "source": "tag-montrose"
     },
@@ -5242,7 +5221,7 @@
     {
       "name": "tag-comedy",
       "type": "Aggregate",
-      "events": 200,
+      "events": 198,
       "expectEmpty": false,
       "source": "tag-comedy"
     },
@@ -5277,7 +5256,7 @@
     {
       "name": "tag-near-northside",
       "type": "Aggregate",
-      "events": 120,
+      "events": 119,
       "expectEmpty": false,
       "source": "tag-near-northside"
     },
@@ -5305,7 +5284,7 @@
     {
       "name": "tag-entertainment",
       "type": "Aggregate",
-      "events": 88,
+      "events": 86,
       "expectEmpty": false,
       "source": "tag-entertainment"
     },
@@ -5389,7 +5368,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1620,
+      "events": 1615,
       "expectEmpty": false,
       "source": "tag-all"
     },
