@@ -1,5 +1,5 @@
 {
-  "buildTime": "2026-06-21T02:48:34.028Z",
+  "buildTime": "2026-06-22T02:19:55.696Z",
   "totalErrors": 6,
   "configErrors": [],
   "sources": [
@@ -102,16 +102,34 @@
       "error": "null"
     },
     {
+      "name": "buffalo-bayou-partnership",
+      "friendlyName": "Buffalo Bayou Partnership",
+      "url": "https://buffalobayou.org/events/?ical=1",
+      "error": "Error: HTTP 403: "
+    },
+    {
+      "name": "eureka-heights-brew-co",
+      "friendlyName": "Eureka Heights Brewery",
+      "url": "https://www.eurekaheights.com/?post_type=tribe_events&ical=1&eventDisplay=list",
+      "error": "Error: HTTP 415: "
+    },
+    {
       "name": "hobby-center",
       "friendlyName": "Hobby Center for the Performing Arts",
       "url": "https://www.thehobbycenter.org/?post_type=tribe_events&ical=1&eventDisplay=list",
+      "error": "Error: HTTP 403: "
+    },
+    {
+      "name": "walking-stick-brewing",
+      "friendlyName": "Walking Stick Brewing",
+      "url": "https://walkingstickbrewing.com/?post_type=tribe_events&ical=1&eventDisplay=list",
       "error": "Error: HTTP 403: "
     }
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1555,
-    "eventsWithGeo": 1534,
+    "totalEvents": 1487,
+    "eventsWithGeo": 1466,
     "eventsWithoutGeo": 21,
     "geocodeErrors": 0
   },
@@ -131,8 +149,7 @@
     "tag-folk",
     "tag-spring-branch",
     "tag-clear-lake",
-    "tag-garden-oaks",
-    "external-walking-stick-brewing"
+    "tag-garden-oaks"
   ],
   "expectedEmptyCalendars": [],
   "proxyStaleServes": [],
@@ -451,10 +468,10 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1170,
-    "totalEvents": 1555,
+    "eventsWithImage": 1094,
+    "totalEvents": 1487,
     "venuesWithImage": 0,
-    "totalVenues": 36,
+    "totalVenues": 35,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -514,12 +531,6 @@
         "label": "ERJCC Houston, 5600 North Braeswood Blvd, Houston, TX 77096",
         "url": "https://www.erjcchouston.org/events/",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=ERJCC%20Houston%2C%205600%20North%20Braeswood%20Blvd%2C%20Houston%2C%20TX%2077096"
-      },
-      {
-        "source": "external",
-        "name": "eureka-heights-brew-co",
-        "label": "Eureka Heights Brewery, 2454 Sawyer St, Houston, TX 77007",
-        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Eureka%20Heights%20Brewery%2C%202454%20Sawyer%20St%2C%20Houston%2C%20TX%2077007"
       },
       {
         "source": "external",
@@ -1096,12 +1107,6 @@
       },
       {
         "source": "mossrose-bookshop",
-        "eventId": "author-signings-2026-06-20",
-        "summary": "Author Signings",
-        "date": "2026-06-20T14:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "mossrose-bookshop",
         "eventId": "mossrose-book-club-2026-06-25",
         "summary": "Mossrose Book Club",
         "date": "2026-06-25T19:00-05:00[America/Chicago]"
@@ -1305,9 +1310,9 @@
     ]
   },
   "costStats": {
-    "eventsWithCost": 538,
-    "freeEvents": 469,
-    "totalEvents": 1555,
+    "eventsWithCost": 526,
+    "freeEvents": 462,
+    "totalEvents": 1487,
     "unresolvable": 0
   },
   "costGaps": [
@@ -1626,13 +1631,6 @@
       "summary": "The Mavericks & Friends",
       "date": "2026-09-18T19:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/the-mavericks-friends-houston-texas-09-18-2026/event/3A00649CF68BCF6E"
-    },
-    {
-      "source": "house-of-blues-houston",
-      "eventId": "tm-G5dIZ_AwjfyiS",
-      "summary": "That's Not Me Comedy Tour With Concrete & Jerry Garcia",
-      "date": "2026-06-20T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/thats-not-me-comedy-tour-with-houston-texas-06-20-2026/event/3A00645C9C539B33"
     },
     {
       "source": "house-of-blues-houston",
@@ -2182,13 +2180,6 @@
     },
     {
       "source": "mcgonigels-mucky-duck",
-      "eventId": "mcgonigels-30820",
-      "summary": "Hadden Sayers",
-      "date": "2026-06-20T18:00-05:00[America/Chicago]",
-      "url": "https://www.mcgonigels.com/shows/boomchank-with-hadden-sayers-brannen-temple/"
-    },
-    {
-      "source": "mcgonigels-mucky-duck",
       "eventId": "mcgonigels-30895",
       "summary": "Walt Wilkins, Terry Klein, Thomm Jutz",
       "date": "2026-07-09T20:30-05:00[America/Chicago]",
@@ -2319,13 +2310,6 @@
       "summary": "Bob Schneider",
       "date": "2026-06-26T20:30-05:00[America/Chicago]",
       "url": "https://www.mcgonigels.com/shows/bob-schneider-5/"
-    },
-    {
-      "source": "mcgonigels-mucky-duck",
-      "eventId": "mcgonigels-31759",
-      "summary": "Judy Blank",
-      "date": "2026-06-20T20:30-05:00[America/Chicago]",
-      "url": "https://www.mcgonigels.com/shows/judy-blank/"
     },
     {
       "source": "mcgonigels-mucky-duck",
@@ -2847,12 +2831,6 @@
     },
     {
       "source": "mossrose-bookshop",
-      "eventId": "author-signings-2026-06-20",
-      "summary": "Author Signings",
-      "date": "2026-06-20T14:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "mossrose-bookshop",
       "eventId": "mossrose-book-club-2026-06-25",
       "summary": "Mossrose Book Club",
       "date": "2026-06-25T19:00-05:00[America/Chicago]"
@@ -2870,13 +2848,6 @@
       "summary": "Christina Dodd in conversation with Angelina M. Lopez",
       "date": "2026-06-30T18:30-05:00[America/Chicago]",
       "url": "https://www.murderbooks.com/Dodd"
-    },
-    {
-      "source": "murder-by-the-book",
-      "eventId": "gabbie-hanks-in-conversation-with-stephanie-graves-2026-06-20",
-      "summary": "Gabbie Hanks in conversation with Stephanie Graves",
-      "date": "2026-06-20T15:00-05:00[America/Chicago]",
-      "url": "https://www.murderbooks.com/Hanks"
     },
     {
       "source": "murder-by-the-book",
@@ -3171,20 +3142,6 @@
       "summary": "Mario Adrion",
       "date": "2026-09-12T21:15-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/mario-adrion-houston-texas-09-12-2026/event/3A00644179C13DD2"
-    },
-    {
-      "source": "punch-line-comedy-club",
-      "eventId": "tm-G5dIZ_7mq7_vZ",
-      "summary": "Angelo Colina (En Español)",
-      "date": "2026-06-20T21:15-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/angelo-colina-en-espanol-houston-texas-06-20-2026/event/3A00644B9D119040"
-    },
-    {
-      "source": "punch-line-comedy-club",
-      "eventId": "tm-G5dIZ_7mqe_ZV",
-      "summary": "Angelo Colina (En Español)",
-      "date": "2026-06-20T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/angelo-colina-en-espanol-houston-texas-06-20-2026/event/3A00644B9D099034"
     },
     {
       "source": "punch-line-comedy-club",
@@ -3489,27 +3446,6 @@
     },
     {
       "source": "rice-public-events",
-      "eventId": "20260620T050000Z-428337",
-      "summary": "Masako Miki: Shapeshifters, Sprites, and Spirits",
-      "date": "2026-06-20T10:00-05:00[America/Chicago]",
-      "url": "https://events.rice.edu/event/428337-masako-miki-shapeshifters-sprites-and-spirits"
-    },
-    {
-      "source": "rice-public-events",
-      "eventId": "20260620T180000Z-428407",
-      "summary": "ArtLab: Felted Charms",
-      "date": "2026-06-20T18:00Z",
-      "url": "https://events.rice.edu/event/428407-artlab-felted-charms"
-    },
-    {
-      "source": "rice-public-events",
-      "eventId": "20260621T050000Z-428337",
-      "summary": "Masako Miki: Shapeshifters, Sprites, and Spirits",
-      "date": "2026-06-21T10:00-05:00[America/Chicago]",
-      "url": "https://events.rice.edu/event/428337-masako-miki-shapeshifters-sprites-and-spirits"
-    },
-    {
-      "source": "rice-public-events",
       "eventId": "20260622T050000Z-428337",
       "summary": "Masako Miki: Shapeshifters, Sprites, and Spirits",
       "date": "2026-06-22T10:00-05:00[America/Chicago]",
@@ -3584,6 +3520,13 @@
       "summary": "Masako Miki: Shapeshifters, Sprites, and Spirits",
       "date": "2026-06-27T10:00-05:00[America/Chicago]",
       "url": "https://events.rice.edu/event/428337-masako-miki-shapeshifters-sprites-and-spirits"
+    },
+    {
+      "source": "rice-public-events",
+      "eventId": "20260627T180000Z-428408",
+      "summary": "ArtLab: Felted Charms",
+      "date": "2026-06-27T18:00Z",
+      "url": "https://events.rice.edu/event/428408-artlab-felted-charms"
     },
     {
       "source": "rice-public-events",
@@ -4336,13 +4279,6 @@
     },
     {
       "source": "the-mood-room",
-      "eventId": "6a134278402a0268b318dca6",
-      "summary": "Closed for Private Party",
-      "date": "2026-06-20T19:00:00.777-05:00[America/Chicago]",
-      "url": "https://www.themoodroomhouston.com/events/closed-for-private-party-5bgpn-b5mag-clmst"
-    },
-    {
-      "source": "the-mood-room",
       "eventId": "6a14e9b2b2e959775cbc5247",
       "summary": "Industry Night",
       "date": "2026-06-23T21:00:00.644-05:00[America/Chicago]",
@@ -4382,13 +4318,6 @@
       "summary": "Hot In Herre: 2000s Dance Party",
       "date": "2026-07-10T20:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/hot-in-herre-2000s-dance-party-houston-texas-07-10-2026/event/3A0064A1FD1F5284"
-    },
-    {
-      "source": "white-oak-music-hall",
-      "eventId": "tm-G5dIZ_17ZwUPF",
-      "summary": "Chasin' U - The Morgan Wallen Experience",
-      "date": "2026-06-20T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/chasin-u-the-morgan-wallen-experience-houston-texas-06-20-2026/event/3A0064A100CB6948"
     },
     {
       "source": "white-oak-music-hall",
@@ -4700,13 +4629,6 @@
     },
     {
       "source": "white-oak-music-hall",
-      "eventId": "tm-G5dIZ_F5GYDZy",
-      "summary": "War Within Dreams",
-      "date": "2026-06-20T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/war-within-dreams-houston-texas-06-20-2026/event/3A006482CCC3B039"
-    },
-    {
-      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_FbAdW7E",
       "summary": "Vacation Manor",
       "date": "2026-06-24T19:00-05:00[America/Chicago]",
@@ -4948,7 +4870,7 @@
     {
       "name": "house-of-blues-houston-house-of-blues-houston",
       "type": "Ripper",
-      "events": 45,
+      "events": 44,
       "expectEmpty": false,
       "source": "house-of-blues-houston"
     },
@@ -4997,21 +4919,21 @@
     {
       "name": "mcgonigels-mucky-duck-mcgonigels-mucky-duck",
       "type": "Ripper",
-      "events": 100,
+      "events": 98,
       "expectEmpty": false,
       "source": "mcgonigels-mucky-duck"
     },
     {
       "name": "mossrose-bookshop-mossrose-bookshop",
       "type": "Ripper",
-      "events": 2,
+      "events": 1,
       "expectEmpty": false,
       "source": "mossrose-bookshop"
     },
     {
       "name": "murder-by-the-book-murder-by-the-book",
       "type": "Ripper",
-      "events": 4,
+      "events": 3,
       "expectEmpty": false,
       "source": "murder-by-the-book"
     },
@@ -5025,21 +4947,21 @@
     {
       "name": "project-row-houses-project-row-houses",
       "type": "Ripper",
-      "events": 401,
+      "events": 396,
       "expectEmpty": false,
       "source": "project-row-houses"
     },
     {
       "name": "punch-line-comedy-club-punch-line-comedy-club",
       "type": "Ripper",
-      "events": 86,
+      "events": 84,
       "expectEmpty": false,
       "source": "punch-line-comedy-club"
     },
     {
       "name": "rice-public-events-rice-public-events",
       "type": "Ripper",
-      "events": 112,
+      "events": 110,
       "expectEmpty": false,
       "source": "rice-public-events"
     },
@@ -5067,21 +4989,21 @@
     {
       "name": "the-mood-room-the-mood-room",
       "type": "Ripper",
-      "events": 6,
+      "events": 5,
       "expectEmpty": false,
       "source": "the-mood-room"
     },
     {
       "name": "the-secret-group-the-secret-group",
       "type": "Ripper",
-      "events": 106,
+      "events": 99,
       "expectEmpty": false,
       "source": "the-secret-group"
     },
     {
       "name": "white-oak-music-hall-white-oak-music-hall",
       "type": "Ripper",
-      "events": 71,
+      "events": 69,
       "expectEmpty": false,
       "source": "white-oak-music-hall"
     },
@@ -5095,14 +5017,14 @@
     {
       "name": "tag-the-heights",
       "type": "Aggregate",
-      "events": 68,
+      "events": 49,
       "expectEmpty": false,
       "source": "tag-the-heights"
     },
     {
       "name": "tag-upper-kirby",
       "type": "Aggregate",
-      "events": 121,
+      "events": 117,
       "expectEmpty": false,
       "source": "tag-upper-kirby"
     },
@@ -5116,7 +5038,7 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 577,
+      "events": 582,
       "expectEmpty": false,
       "source": "tag-music"
     },
@@ -5130,7 +5052,7 @@
     {
       "name": "tag-downtown",
       "type": "Aggregate",
-      "events": 209,
+      "events": 176,
       "expectEmpty": false,
       "source": "tag-downtown"
     },
@@ -5144,14 +5066,14 @@
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 466,
+      "events": 455,
       "expectEmpty": false,
       "source": "tag-community"
     },
     {
       "name": "tag-montrose",
       "type": "Aggregate",
-      "events": 336,
+      "events": 346,
       "expectEmpty": false,
       "source": "tag-montrose"
     },
@@ -5165,21 +5087,21 @@
     {
       "name": "tag-eado",
       "type": "Aggregate",
-      "events": 144,
+      "events": 135,
       "expectEmpty": false,
       "source": "tag-eado"
     },
     {
       "name": "tag-art",
       "type": "Aggregate",
-      "events": 525,
+      "events": 518,
       "expectEmpty": false,
       "source": "tag-art"
     },
     {
       "name": "tag-museum-district",
       "type": "Aggregate",
-      "events": 143,
+      "events": 138,
       "expectEmpty": false,
       "source": "tag-museum-district"
     },
@@ -5221,7 +5143,7 @@
     {
       "name": "tag-comedy",
       "type": "Aggregate",
-      "events": 198,
+      "events": 188,
       "expectEmpty": false,
       "source": "tag-comedy"
     },
@@ -5235,28 +5157,28 @@
     {
       "name": "tag-books",
       "type": "Aggregate",
-      "events": 14,
+      "events": 12,
       "expectEmpty": false,
       "source": "tag-books"
     },
     {
       "name": "tag-third-ward",
       "type": "Aggregate",
-      "events": 405,
+      "events": 400,
       "expectEmpty": false,
       "source": "tag-third-ward"
     },
     {
       "name": "tag-beer",
       "type": "Aggregate",
-      "events": 76,
+      "events": 57,
       "expectEmpty": false,
       "source": "tag-beer"
     },
     {
       "name": "tag-near-northside",
       "type": "Aggregate",
-      "events": 119,
+      "events": 117,
       "expectEmpty": false,
       "source": "tag-near-northside"
     },
@@ -5277,21 +5199,21 @@
     {
       "name": "tag-west-university",
       "type": "Aggregate",
-      "events": 4,
+      "events": 3,
       "expectEmpty": false,
       "source": "tag-west-university"
     },
     {
       "name": "tag-entertainment",
       "type": "Aggregate",
-      "events": 86,
+      "events": 84,
       "expectEmpty": false,
       "source": "tag-entertainment"
     },
     {
       "name": "tag-education",
       "type": "Aggregate",
-      "events": 112,
+      "events": 110,
       "expectEmpty": false,
       "source": "tag-education"
     },
@@ -5312,14 +5234,14 @@
     {
       "name": "tag-parks",
       "type": "Aggregate",
-      "events": 94,
+      "events": 59,
       "expectEmpty": false,
       "source": "tag-parks"
     },
     {
       "name": "tag-hermann-park",
       "type": "Aggregate",
-      "events": 14,
+      "events": 11,
       "expectEmpty": false,
       "source": "tag-hermann-park"
     },
@@ -5347,7 +5269,7 @@
     {
       "name": "tag-outdoor-recreation",
       "type": "Aggregate",
-      "events": 20,
+      "events": 18,
       "expectEmpty": false,
       "source": "tag-outdoor-recreation"
     },
@@ -5368,14 +5290,14 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1615,
+      "events": 1547,
       "expectEmpty": false,
       "source": "tag-all"
     },
     {
       "name": "external-axelrad-beer-garden",
       "type": "External",
-      "events": 4960,
+      "events": 4962,
       "expectEmpty": false,
       "source": "axelrad-beer-garden"
     },
@@ -5385,13 +5307,6 @@
       "events": 30,
       "expectEmpty": false,
       "source": "bad-astronaut-brewery"
-    },
-    {
-      "name": "external-buffalo-bayou-partnership",
-      "type": "External",
-      "events": 30,
-      "expectEmpty": false,
-      "source": "buffalo-bayou-partnership"
     },
     {
       "name": "external-diverseworks",
@@ -5408,16 +5323,9 @@
       "source": "erjcc-houston"
     },
     {
-      "name": "external-eureka-heights-brew-co",
-      "type": "External",
-      "events": 19,
-      "expectEmpty": false,
-      "source": "eureka-heights-brew-co"
-    },
-    {
       "name": "external-hermann-park",
       "type": "External",
-      "events": 15,
+      "events": 12,
       "expectEmpty": false,
       "source": "hermann-park"
     },
@@ -5466,7 +5374,7 @@
     {
       "name": "external-levy-park-houston",
       "type": "External",
-      "events": 21,
+      "events": 19,
       "expectEmpty": false,
       "source": "levy-park-houston"
     },
@@ -5476,13 +5384,6 @@
       "events": 7,
       "expectEmpty": false,
       "source": "tuts"
-    },
-    {
-      "name": "external-walking-stick-brewing",
-      "type": "External",
-      "events": 0,
-      "expectEmpty": false,
-      "source": "walking-stick-brewing"
     }
   ]
 }
