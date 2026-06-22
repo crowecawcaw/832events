@@ -1311,7 +1311,7 @@
   },
   {
     "name": "BikeHouston",
-    "status": "candidate",
+    "status": "investigating",
     "platform": "Meetup + ICS export",
     "url": "https://www.bikehoustontx.org/",
     "tags": [
@@ -1320,12 +1320,18 @@
       "Community"
     ],
     "firstSeen": "2026-06-20",
-    "lastChecked": "2026-06-20",
-    "notes": "Cycling advocacy group with regular group rides and events. Meetup integration with ICS-exportable calendar."
+    "lastChecked": "2026-06-22",
+    "notes": "Cycling advocacy group with regular group rides and events. Meetup integration with ICS-exportable calendar.",
+    "impl": {
+      "attempted": "external ICS (Meetup)",
+      "icsUrl": "https://www.meetup.com/BikeHouston/events/ical/",
+      "result": "0 events (Meetup group not found or no upcoming events)",
+      "status": "unresolved - correct Meetup URL needed"
+    }
   },
   {
     "name": "8th Dimension Comics & Games",
-    "status": "candidate",
+    "status": "investigating",
     "platform": "Google Calendar (ICS export)",
     "url": "https://www.8thdimicom.com/",
     "tags": [
@@ -1335,12 +1341,18 @@
       "Multiple Locations"
     ],
     "firstSeen": "2026-06-20",
-    "lastChecked": "2026-06-20",
-    "notes": "Comic shop with weekly Friday Night Magic and organized play events. Multiple Houston locations. Google Calendar with ICS export."
+    "lastChecked": "2026-06-22",
+    "notes": "Comic shop with weekly Friday Night Magic and organized play events. Multiple Houston locations. Google Calendar with ICS export.",
+    "impl": {
+      "attempted": "external ICS (Google Calendar)",
+      "icsUrl": "https://calendar.google.com/calendar/ical/8thdimensioncomics%40gmail.com/public/basic.ics",
+      "result": "0 events (calendar may be empty or URL incorrect)",
+      "status": "unresolved - verify correct Google Calendar ID"
+    }
   },
   {
     "name": "Houston Urban Trekkers",
-    "status": "candidate",
+    "status": "investigating",
     "platform": "Meetup",
     "url": "https://www.meetup.com/Houston-Urban-Trekkers/",
     "tags": [
@@ -1349,12 +1361,18 @@
       "Community"
     ],
     "firstSeen": "2026-06-20",
-    "lastChecked": "2026-06-20",
-    "notes": "Active hiking group with regular trail outings. Meetup group with ICS-exportable calendar."
+    "lastChecked": "2026-06-22",
+    "notes": "Active hiking group with regular trail outings. Meetup group with ICS-exportable calendar.",
+    "impl": {
+      "attempted": "external ICS (Meetup)",
+      "icsUrl": "https://www.meetup.com/Houston-Urban-Trekkers/events/ical/",
+      "result": "0 events returned",
+      "status": "unresolved - may need proxy:true if Meetup blocks CI or calendars are empty"
+    }
   },
   {
     "name": "Houston Adventure People",
-    "status": "candidate",
+    "status": "investigating",
     "platform": "Meetup",
     "url": "https://www.meetup.com/Houston-Adventure-People/",
     "tags": [
@@ -1363,8 +1381,14 @@
       "Adventure"
     ],
     "firstSeen": "2026-06-20",
-    "lastChecked": "2026-06-20",
-    "notes": "Outdoor adventure meetup group. Meetup group with ICS-exportable calendar."
+    "lastChecked": "2026-06-22",
+    "notes": "Outdoor adventure meetup group. Meetup group with ICS-exportable calendar.",
+    "impl": {
+      "attempted": "external ICS (Meetup)",
+      "icsUrl": "https://www.meetup.com/Houston-Adventure-People/events/ical/",
+      "result": "0 events returned",
+      "status": "unresolved - may need proxy:true or calendars may be empty"
+    }
   },
   {
     "name": "Gulf Coast Cosmos Comics",
@@ -1483,7 +1507,7 @@
   },
   {
     "name": "Shrine of the Black Madonna Cultural Center & Bookstore",
-    "status": "candidate",
+    "status": "investigating",
     "platform": "Eventbrite",
     "url": "https://www.eventbrite.com/o/shrine-of-the-black-madonna-cultural-center-bookstore-35355551575",
     "tags": [
@@ -1492,8 +1516,13 @@
       "Cultural"
     ],
     "firstSeen": "2026-06-20",
-    "lastChecked": "2026-06-20",
-    "notes": "Cultural center and bookstore with poetry nights, book signings, and cultural events. Eventbrite organization."
+    "lastChecked": "2026-06-22",
+    "notes": "Cultural center and bookstore with poetry nights, book signings, and cultural events. Eventbrite organization.",
+    "impl": {
+      "attempted": "eventbrite (organizerId: 35355551575)",
+      "result": "0 events returned",
+      "status": "unresolved - verify organizerId or check if events are in the past"
+    }
   },
   {
     "name": "The Magick Cauldron",
