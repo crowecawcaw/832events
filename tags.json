@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-23T02:34:53.071Z",
+  "generated": "2026-06-23T14:27:01.520Z",
   "tags": [
     {
       "name": "Art",
@@ -56,8 +56,8 @@
       "name": "Books",
       "slug": "books",
       "category": "Activities",
-      "eventCount": 12,
-      "calendarCount": 4,
+      "eventCount": 32,
+      "calendarCount": 6,
       "links": {
         "ics": {
           "href": "tag-books.ics",
@@ -107,8 +107,8 @@
       "name": "Community",
       "slug": "community",
       "category": "Community",
-      "eventCount": 454,
-      "calendarCount": 8,
+      "eventCount": 474,
+      "calendarCount": 10,
       "links": {
         "ics": {
           "href": "tag-community.ics",
@@ -116,6 +116,23 @@
         },
         "rss": {
           "href": "tag-community.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Cultural",
+      "slug": "cultural",
+      "category": "Other",
+      "eventCount": 1,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-cultural.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-cultural.rss",
           "type": "application/rss+xml"
         }
       }
@@ -257,6 +274,23 @@
       }
     },
     {
+      "name": "Jazz",
+      "slug": "jazz",
+      "category": "Other",
+      "eventCount": 6,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-jazz.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-jazz.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
       "name": "MakersMarket",
       "slug": "makersmarket",
       "category": "Markets",
@@ -311,8 +345,8 @@
       "name": "Montrose",
       "slug": "montrose",
       "category": "Neighborhoods",
-      "eventCount": 344,
-      "calendarCount": 3,
+      "eventCount": 350,
+      "calendarCount": 4,
       "links": {
         "ics": {
           "href": "tag-montrose.ics",
@@ -362,8 +396,8 @@
       "name": "Music",
       "slug": "music",
       "category": "Activities",
-      "eventCount": 579,
-      "calendarCount": 7,
+      "eventCount": 585,
+      "calendarCount": 8,
       "links": {
         "ics": {
           "href": "tag-music.ics",
@@ -481,8 +515,8 @@
       "name": "The Heights",
       "slug": "the-heights",
       "category": "Neighborhoods",
-      "eventCount": 65,
-      "calendarCount": 4,
+      "eventCount": 84,
+      "calendarCount": 5,
       "links": {
         "ics": {
           "href": "tag-the-heights.ics",
@@ -532,8 +566,8 @@
       "name": "Third Ward",
       "slug": "third-ward",
       "category": "Neighborhoods",
-      "eventCount": 400,
-      "calendarCount": 2,
+      "eventCount": 401,
+      "calendarCount": 3,
       "links": {
         "ics": {
           "href": "tag-third-ward.ics",

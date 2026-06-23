@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-23T02:34:53.065Z",
+  "generated": "2026-06-23T14:27:01.514Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -215,6 +215,42 @@
       ]
     },
     {
+      "name": "docs-houston",
+      "friendlyName": "Doc's Jazz Club",
+      "description": "Doc's Jazz Club",
+      "url": "https://docsjazzclub.com/",
+      "tags": [
+        "Music",
+        "Jazz",
+        "Montrose"
+      ],
+      "geo": {
+        "lat": 29.7456,
+        "lng": -95.3829,
+        "label": "Doc's Jazz Club, 1201 Westheimer Rd, Houston, TX 77006"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Doc's%20Jazz%20Club%2C%201201%20Westheimer%20Rd%2C%20Houston%2C%20TX%2077006"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "docs-houston",
+          "friendlyName": "Doc's Jazz Club",
+          "links": {
+            "ics": {
+              "href": "docs-houston-docs-houston.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "docs-houston-docs-houston.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "ensemble-theatre-houston",
       "friendlyName": "Ensemble Theatre Houston",
       "description": "Ensemble Theatre Houston",
@@ -313,6 +349,42 @@
             },
             "rss": {
               "href": "external-eureka-heights-brew-co.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "good-on-paper-bookshop",
+      "friendlyName": "Good on Paper Books and Stationery",
+      "description": "Good on Paper Books and Stationery",
+      "url": "https://www.goodonpaperbooks.com/events",
+      "tags": [
+        "Books",
+        "Community",
+        "The Heights"
+      ],
+      "geo": {
+        "lat": 29.8096,
+        "lng": -95.3914,
+        "label": "Good on Paper Books, 250 W 19th St Suite D, Houston, TX 77008"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Good%20on%20Paper%20Books%2C%20250%20W%2019th%20St%20Suite%20D%2C%20Houston%2C%20TX%2077008"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "good-on-paper-bookshop",
+          "friendlyName": "Good on Paper Books",
+          "links": {
+            "ics": {
+              "href": "good-on-paper-bookshop-good-on-paper-bookshop.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "good-on-paper-bookshop-good-on-paper-bookshop.rss",
               "type": "application/rss+xml"
             }
           }
@@ -1059,6 +1131,43 @@
             },
             "rss": {
               "href": "saint-arnold-brewing-company-saint-arnold-brewing-company.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "shrine-of-the-black-madonna",
+      "friendlyName": "Shrine of the Black Madonna Cultural Center & Bookstore",
+      "description": "Shrine of the Black Madonna Cultural Center & Bookstore",
+      "url": "https://shrinebookstore.com/",
+      "tags": [
+        "Books",
+        "Community",
+        "Cultural",
+        "Third Ward"
+      ],
+      "geo": {
+        "lat": 29.7368,
+        "lng": -95.344,
+        "label": "Shrine of the Black Madonna Cultural Center & Bookstore, 5309 Martin Luther King Blvd, Houston, TX 77021"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Shrine%20of%20the%20Black%20Madonna%20Cultural%20Center%20%26%20Bookstore%2C%205309%20Martin%20Luther%20King%20Blvd%2C%20Houston%2C%20TX%2077021"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "shrine-of-the-black-madonna",
+          "friendlyName": "Shrine of the Black Madonna",
+          "links": {
+            "ics": {
+              "href": "shrine-of-the-black-madonna-shrine-of-the-black-madonna.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "shrine-of-the-black-madonna-shrine-of-the-black-madonna.rss",
               "type": "application/rss+xml"
             }
           }

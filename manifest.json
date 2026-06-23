@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23T02:34:46.624Z",
+  "lastUpdated": "2026-06-23T14:26:56.182Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -55,6 +55,24 @@
       ]
     },
     {
+      "name": "docs-houston",
+      "description": "Doc's Jazz Club",
+      "friendlyLink": "https://docsjazzclub.com/",
+      "calendars": [
+        {
+          "name": "docs-houston",
+          "friendlyName": "Doc's Jazz Club",
+          "icsUrl": "docs-houston-docs-houston.ics",
+          "rssUrl": "docs-houston-docs-houston.rss",
+          "tags": [
+            "Music",
+            "Jazz",
+            "Montrose"
+          ]
+        }
+      ]
+    },
+    {
       "name": "ensemble-theatre-houston",
       "description": "Ensemble Theatre Houston",
       "friendlyLink": "https://www.ensemblehouston.com/",
@@ -67,6 +85,24 @@
           "tags": [
             "Theater",
             "Midtown"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "good-on-paper-bookshop",
+      "description": "Good on Paper Books and Stationery",
+      "friendlyLink": "https://www.goodonpaperbooks.com/events",
+      "calendars": [
+        {
+          "name": "good-on-paper-bookshop",
+          "friendlyName": "Good on Paper Books",
+          "icsUrl": "good-on-paper-bookshop-good-on-paper-bookshop.ics",
+          "rssUrl": "good-on-paper-bookshop-good-on-paper-bookshop.rss",
+          "tags": [
+            "Books",
+            "Community",
+            "The Heights"
           ]
         }
       ]
@@ -295,6 +331,25 @@
             "Beer",
             "Nightlife",
             "Montrose"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "shrine-of-the-black-madonna",
+      "description": "Shrine of the Black Madonna Cultural Center & Bookstore",
+      "friendlyLink": "https://shrinebookstore.com/",
+      "calendars": [
+        {
+          "name": "shrine-of-the-black-madonna",
+          "friendlyName": "Shrine of the Black Madonna",
+          "icsUrl": "shrine-of-the-black-madonna-shrine-of-the-black-madonna.ics",
+          "rssUrl": "shrine-of-the-black-madonna-shrine-of-the-black-madonna.rss",
+          "tags": [
+            "Books",
+            "Community",
+            "Cultural",
+            "Third Ward"
           ]
         }
       ]
@@ -563,6 +618,7 @@
     "Brewery",
     "Comedy",
     "Community",
+    "Cultural",
     "Downtown",
     "EaDo",
     "Education",
@@ -571,6 +627,7 @@
     "Food",
     "FoodFestival",
     "Hermann Park",
+    "Jazz",
     "MakersMarket",
     "Memorial",
     "Midtown",
