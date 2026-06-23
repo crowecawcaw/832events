@@ -156,6 +156,29 @@
     }
   },
   {
+    "name": "Bayou Music Center",
+    "status": "added",
+    "platform": "Ticketmaster",
+    "url": "https://www.bayoumusiccenter.com/",
+    "tags": [
+      "Music",
+      "Nightlife",
+      "Midtown"
+    ],
+    "firstSeen": "2026-06-23",
+    "lastChecked": "2026-06-23",
+    "impl": {
+      "type": "ticketmaster",
+      "venueId": "KovZpZAEkIIA",
+      "observedEventCount": 10,
+      "geo": {
+        "lat": 29.826,
+        "lng": -95.385,
+        "label": "Bayou Music Center, 6615 Long Drive, Houston, TX 77087"
+      }
+    }
+  },
+  {
     "name": "Basket Books & Art",
     "status": "notviable",
     "platform": "BookManager (not Eventbrite)",

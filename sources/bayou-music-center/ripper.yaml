@@ -1,0 +1,18 @@
+name: bayou-music-center
+type: ticketmaster
+description: "Bayou Music Center"
+url: https://www.bayoumusiccenter.com/
+friendlyLink: https://www.bayoumusiccenter.com/
+tags: [Music, Nightlife, Midtown]
+geo:
+  lat: 29.826
+  lng: -95.385
+  label: "Bayou Music Center, 6615 Long Drive, Houston, TX 77087"
+calendars:
+  - name: bayou-music-center
+    friendlyname: "Bayou Music Center"
+    timezone: America/Chicago
+    config:
+      venueId: "KovZpZAEkIIA"
+      venueName: "Bayou Music Center"
+      venueAddress: "6615 Long Drive, Houston, TX 77087"
