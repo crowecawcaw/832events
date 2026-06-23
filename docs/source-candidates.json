@@ -1311,7 +1311,7 @@
   },
   {
     "name": "BikeHouston",
-    "status": "candidate",
+    "status": "blocked",
     "platform": "Meetup + ICS export",
     "url": "https://www.bikehoustontx.org/",
     "tags": [
@@ -1320,12 +1320,12 @@
       "Community"
     ],
     "firstSeen": "2026-06-20",
-    "lastChecked": "2026-06-20",
-    "notes": "Cycling advocacy group with regular group rides and events. Meetup integration with ICS-exportable calendar."
+    "lastChecked": "2026-06-21",
+    "notes": "Meetup ICS endpoint returns empty response. Meetup may require authentication or API key for ICS export. Consider custom scraper or contact Meetup."
   },
   {
     "name": "8th Dimension Comics & Games",
-    "status": "candidate",
+    "status": "blocked",
     "platform": "Google Calendar (ICS export)",
     "url": "https://www.8thdimicom.com/",
     "tags": [
@@ -1335,12 +1335,12 @@
       "Multiple Locations"
     ],
     "firstSeen": "2026-06-20",
-    "lastChecked": "2026-06-20",
-    "notes": "Comic shop with weekly Friday Night Magic and organized play events. Multiple Houston locations. Google Calendar with ICS export."
+    "lastChecked": "2026-06-21",
+    "notes": "Google Calendar ICS endpoint returns 0 events. Calendar ID may be incorrect or calendar is empty/not public. Need to find correct calendar ID or alternative event source."
   },
   {
     "name": "Houston Urban Trekkers",
-    "status": "candidate",
+    "status": "blocked",
     "platform": "Meetup",
     "url": "https://www.meetup.com/Houston-Urban-Trekkers/",
     "tags": [
@@ -1349,12 +1349,12 @@
       "Community"
     ],
     "firstSeen": "2026-06-20",
-    "lastChecked": "2026-06-20",
-    "notes": "Active hiking group with regular trail outings. Meetup group with ICS-exportable calendar."
+    "lastChecked": "2026-06-21",
+    "notes": "Meetup ICS endpoint returns empty response. Meetup ICS may require authentication. Consider custom Meetup HTML scraper or find alternative event feed."
   },
   {
     "name": "Houston Adventure People",
-    "status": "candidate",
+    "status": "blocked",
     "platform": "Meetup",
     "url": "https://www.meetup.com/Houston-Adventure-People/",
     "tags": [
@@ -1363,8 +1363,8 @@
       "Adventure"
     ],
     "firstSeen": "2026-06-20",
-    "lastChecked": "2026-06-20",
-    "notes": "Outdoor adventure meetup group. Meetup group with ICS-exportable calendar."
+    "lastChecked": "2026-06-21",
+    "notes": "Meetup ICS endpoint returns empty response. Meetup ICS may require authentication. Consider custom Meetup HTML scraper or find alternative event feed."
   },
   {
     "name": "Gulf Coast Cosmos Comics",
