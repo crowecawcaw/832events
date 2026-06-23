@@ -1,5 +1,5 @@
 {
-  "buildTime": "2026-06-23T02:05:28.386Z",
+  "buildTime": "2026-06-23T02:34:53.069Z",
   "totalErrors": 6,
   "configErrors": [],
   "sources": [
@@ -116,8 +116,8 @@
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1499,
-    "eventsWithGeo": 1478,
+    "totalEvents": 1502,
+    "eventsWithGeo": 1481,
     "eventsWithoutGeo": 21,
     "geocodeErrors": 0
   },
@@ -457,8 +457,8 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1108,
-    "totalEvents": 1499,
+    "eventsWithImage": 1103,
+    "totalEvents": 1502,
     "venuesWithImage": 0,
     "totalVenues": 36,
     "unresolvable": 0
@@ -941,6 +941,13 @@
       },
       {
         "source": "houston-center-for-photography",
+        "eventId": "opening-reception-learning-curve-18-2026-07-16",
+        "summary": "Opening Reception: Learning Curve 18",
+        "date": "2026-07-16T18:00-05:00[America/Chicago]",
+        "url": "https://www.edu.hcponline.org/events/learning-curve-18-opening-reception"
+      },
+      {
+        "source": "houston-center-for-photography",
         "eventId": "opening-reception-madre-patria-by-simon-silva-2026-05-28",
         "summary": "Opening Reception: Madre Patria by Simon Silva",
         "date": "2026-05-28T18:00-05:00[America/Chicago]",
@@ -973,13 +980,6 @@
         "summary": "Why Images Matter: Truth, Empathy, Connection",
         "date": "2025-12-03T18:30-06:00[America/Chicago]",
         "url": "https://www.edu.hcponline.org/events/why-images-matter-truth-empathy-connection"
-      },
-      {
-        "source": "lake-houston-brewery",
-        "eventId": "sunday-brunch-2026-06-21",
-        "summary": "Sunday Brunch!",
-        "date": "2026-06-21T11:00-05:00[America/Chicago]",
-        "url": "https://www.lakehoustonbrew.com/event-details/sunday-brunch-2026-06-21-11-00"
       },
       {
         "source": "lake-houston-brewery",
@@ -1101,6 +1101,13 @@
         "url": "https://www.lakehoustonbrew.com/event-details/sunday-brunch-2026-10-18-11-00"
       },
       {
+        "source": "lake-houston-brewery",
+        "eventId": "sunday-brunch-2026-10-25",
+        "summary": "Sunday Brunch!",
+        "date": "2026-10-25T11:00-05:00[America/Chicago]",
+        "url": "https://www.lakehoustonbrew.com/event-details/sunday-brunch-2026-10-25-11-00"
+      },
+      {
         "source": "mossrose-bookshop",
         "eventId": "mossrose-book-club-2026-06-25",
         "summary": "Mossrose Book Club",
@@ -1112,6 +1119,20 @@
         "summary": "Efficient Automatic Data Placement for GPU and CPU Tiered Memory Systems",
         "date": "2026-06-25T19:00Z",
         "url": "https://events.rice.edu/live/events/431887-efficient-automatic-data-placement-for-gpu-and-cpu"
+      },
+      {
+        "source": "rice-public-events",
+        "eventId": "20260626T153000Z-432837",
+        "summary": "Behavioral Acculturation and Acculturative Stress in Latino Immigrant Youth: The Moderating Role of Perceived Autonomy",
+        "date": "2026-06-26T15:30Z",
+        "url": "https://events.rice.edu/event/432837-behavioral-acculturation-and-acculturative-stress"
+      },
+      {
+        "source": "rice-public-events",
+        "eventId": "20260626T153000Z-433063",
+        "summary": "Exploring Organic Transformations with a Photocatalytic Twist",
+        "date": "2026-06-26T15:30Z",
+        "url": "https://events.rice.edu/live/events/432746-exploring-organic-transformations-with-a"
       },
       {
         "source": "rice-public-events",
@@ -1133,6 +1154,41 @@
         "summary": "Overcoming barriers to point-of-care nucleic acid amplification testing",
         "date": "2026-07-01T18:00Z",
         "url": "https://events.rice.edu/live/events/432061-overcoming-barriers-to-point-of-care-nucleic-acid"
+      },
+      {
+        "source": "rice-public-events",
+        "eventId": "20260702T180000Z-433056",
+        "summary": "\"Còn nước, còn tát\": The Ebbs and Flows of Water across Vietnamese Anglophone Cultural Production",
+        "date": "2026-07-02T18:00Z",
+        "url": "https://events.rice.edu/live/events/432669-con-nc-con-tat-the-ebbs-and-flows-of-water-across"
+      },
+      {
+        "source": "rice-public-events",
+        "eventId": "20260703T140000Z-433067",
+        "summary": "Novel Computational Representations of TCRs and pMHCs Incorporating Structural Information for Translational Applications",
+        "date": "2026-07-03T14:00Z",
+        "url": "https://events.rice.edu/live/events/432802-novel-computational-representations-of-tcrs-and"
+      },
+      {
+        "source": "rice-public-events",
+        "eventId": "20260703T150000Z-432759",
+        "summary": "Real and reciprocal space topology in rare earth intermetallics",
+        "date": "2026-07-03T15:00Z",
+        "url": "https://events.rice.edu/event/432759-real-and-reciprocal-space-topology-in-rare-earth"
+      },
+      {
+        "source": "rice-public-events",
+        "eventId": "20260708T170000Z-433066",
+        "summary": "K-Nexus: Hierarchical Gene-to-Cell AI Modeling for Perturbation-Induced Transcriptomic Shift Recovery",
+        "date": "2026-07-08T17:00Z",
+        "url": "https://events.rice.edu/live/events/432801-k-nexus-hierarchical-gene-to-cell-ai-modeling-for"
+      },
+      {
+        "source": "rice-public-events",
+        "eventId": "20260710T150000Z-433058",
+        "summary": "Essays on Industrial Organization and Consumer Behavior",
+        "date": "2026-07-10T15:00Z",
+        "url": "https://events.rice.edu/live/events/432734-essays-on-industrial-organization-and-consumer"
       },
       {
         "source": "rice-public-events",
@@ -1305,9 +1361,9 @@
     ]
   },
   "costStats": {
-    "eventsWithCost": 526,
+    "eventsWithCost": 523,
     "freeEvents": 462,
-    "totalEvents": 1499,
+    "totalEvents": 1502,
     "unresolvable": 0
   },
   "costGaps": [
@@ -1958,6 +2014,13 @@
     },
     {
       "source": "houston-center-for-photography",
+      "eventId": "opening-reception-learning-curve-18-2026-07-16",
+      "summary": "Opening Reception: Learning Curve 18",
+      "date": "2026-07-16T18:00-05:00[America/Chicago]",
+      "url": "https://www.edu.hcponline.org/events/learning-curve-18-opening-reception"
+    },
+    {
+      "source": "houston-center-for-photography",
       "eventId": "opening-reception-madre-patria-by-simon-silva-2026-05-28",
       "summary": "Opening Reception: Madre Patria by Simon Silva",
       "date": "2026-05-28T18:00-05:00[America/Chicago]",
@@ -1990,13 +2053,6 @@
       "summary": "Why Images Matter: Truth, Empathy, Connection",
       "date": "2025-12-03T18:30-06:00[America/Chicago]",
       "url": "https://www.edu.hcponline.org/events/why-images-matter-truth-empathy-connection"
-    },
-    {
-      "source": "lake-houston-brewery",
-      "eventId": "sunday-brunch-2026-06-21",
-      "summary": "Sunday Brunch!",
-      "date": "2026-06-21T11:00-05:00[America/Chicago]",
-      "url": "https://www.lakehoustonbrew.com/event-details/sunday-brunch-2026-06-21-11-00"
     },
     {
       "source": "lake-houston-brewery",
@@ -2116,6 +2172,13 @@
       "summary": "Sunday Brunch!",
       "date": "2026-10-18T11:00-05:00[America/Chicago]",
       "url": "https://www.lakehoustonbrew.com/event-details/sunday-brunch-2026-10-18-11-00"
+    },
+    {
+      "source": "lake-houston-brewery",
+      "eventId": "sunday-brunch-2026-10-25",
+      "summary": "Sunday Brunch!",
+      "date": "2026-10-25T11:00-05:00[America/Chicago]",
+      "url": "https://www.lakehoustonbrew.com/event-details/sunday-brunch-2026-10-25-11-00"
     },
     {
       "source": "lawndale-art-center",
@@ -2818,6 +2881,13 @@
       "url": "https://www.mcgonigels.com/shows/del-castillo-trio-early-show-7/"
     },
     {
+      "source": "mcgonigels-mucky-duck",
+      "eventId": "mcgonigels-32776",
+      "summary": "Pat Byrne",
+      "date": "2026-08-29T18:00-05:00[America/Chicago]",
+      "url": "https://www.mcgonigels.com/shows/pat-byrne-band-early-show-7-10/"
+    },
+    {
       "source": "mossrose-bookshop",
       "eventId": "mossrose-book-club-2026-06-25",
       "summary": "Mossrose Book Club",
@@ -3427,13 +3497,6 @@
     },
     {
       "source": "rice-public-events",
-      "eventId": "20260622T050000Z-428337",
-      "summary": "Masako Miki: Shapeshifters, Sprites, and Spirits",
-      "date": "2026-06-22T10:00-05:00[America/Chicago]",
-      "url": "https://events.rice.edu/event/428337-masako-miki-shapeshifters-sprites-and-spirits"
-    },
-    {
-      "source": "rice-public-events",
       "eventId": "20260623T050000Z-428337",
       "summary": "Masako Miki: Shapeshifters, Sprites, and Spirits",
       "date": "2026-06-23T10:00-05:00[America/Chicago]",
@@ -3473,6 +3536,20 @@
       "summary": "Masako Miki: Shapeshifters, Sprites, and Spirits",
       "date": "2026-06-26T10:00-05:00[America/Chicago]",
       "url": "https://events.rice.edu/event/428337-masako-miki-shapeshifters-sprites-and-spirits"
+    },
+    {
+      "source": "rice-public-events",
+      "eventId": "20260626T153000Z-432837",
+      "summary": "Behavioral Acculturation and Acculturative Stress in Latino Immigrant Youth: The Moderating Role of Perceived Autonomy",
+      "date": "2026-06-26T15:30Z",
+      "url": "https://events.rice.edu/event/432837-behavioral-acculturation-and-acculturative-stress"
+    },
+    {
+      "source": "rice-public-events",
+      "eventId": "20260626T153000Z-433063",
+      "summary": "Exploring Organic Transformations with a Photocatalytic Twist",
+      "date": "2026-06-26T15:30Z",
+      "url": "https://events.rice.edu/live/events/432746-exploring-organic-transformations-with-a"
     },
     {
       "source": "rice-public-events",
@@ -3553,10 +3630,31 @@
     },
     {
       "source": "rice-public-events",
+      "eventId": "20260702T180000Z-433056",
+      "summary": "\"Còn nước, còn tát\": The Ebbs and Flows of Water across Vietnamese Anglophone Cultural Production",
+      "date": "2026-07-02T18:00Z",
+      "url": "https://events.rice.edu/live/events/432669-con-nc-con-tat-the-ebbs-and-flows-of-water-across"
+    },
+    {
+      "source": "rice-public-events",
       "eventId": "20260703T050000Z-428337",
       "summary": "Masako Miki: Shapeshifters, Sprites, and Spirits",
       "date": "2026-07-03T10:00-05:00[America/Chicago]",
       "url": "https://events.rice.edu/event/428337-masako-miki-shapeshifters-sprites-and-spirits"
+    },
+    {
+      "source": "rice-public-events",
+      "eventId": "20260703T140000Z-433067",
+      "summary": "Novel Computational Representations of TCRs and pMHCs Incorporating Structural Information for Translational Applications",
+      "date": "2026-07-03T14:00Z",
+      "url": "https://events.rice.edu/live/events/432802-novel-computational-representations-of-tcrs-and"
+    },
+    {
+      "source": "rice-public-events",
+      "eventId": "20260703T150000Z-432759",
+      "summary": "Real and reciprocal space topology in rare earth intermetallics",
+      "date": "2026-07-03T15:00Z",
+      "url": "https://events.rice.edu/event/432759-real-and-reciprocal-space-topology-in-rare-earth"
     },
     {
       "source": "rice-public-events",
@@ -3595,6 +3693,13 @@
     },
     {
       "source": "rice-public-events",
+      "eventId": "20260708T170000Z-433066",
+      "summary": "K-Nexus: Hierarchical Gene-to-Cell AI Modeling for Perturbation-Induced Transcriptomic Shift Recovery",
+      "date": "2026-07-08T17:00Z",
+      "url": "https://events.rice.edu/live/events/432801-k-nexus-hierarchical-gene-to-cell-ai-modeling-for"
+    },
+    {
+      "source": "rice-public-events",
       "eventId": "20260709T050000Z-428337",
       "summary": "Masako Miki: Shapeshifters, Sprites, and Spirits",
       "date": "2026-07-09T10:00-05:00[America/Chicago]",
@@ -3606,6 +3711,13 @@
       "summary": "Masako Miki: Shapeshifters, Sprites, and Spirits",
       "date": "2026-07-10T10:00-05:00[America/Chicago]",
       "url": "https://events.rice.edu/event/428337-masako-miki-shapeshifters-sprites-and-spirits"
+    },
+    {
+      "source": "rice-public-events",
+      "eventId": "20260710T150000Z-433058",
+      "summary": "Essays on Industrial Organization and Consumer Behavior",
+      "date": "2026-07-10T15:00Z",
+      "url": "https://events.rice.edu/live/events/432734-essays-on-industrial-organization-and-consumer"
     },
     {
       "source": "rice-public-events",
@@ -4823,14 +4935,14 @@
     {
       "name": "camh-camh",
       "type": "Ripper",
-      "events": 3,
+      "events": 4,
       "expectEmpty": false,
       "source": "camh"
     },
     {
       "name": "contemporary-arts-museum-contemporary-arts-museum",
       "type": "Ripper",
-      "events": 3,
+      "events": 4,
       "expectEmpty": false,
       "source": "contemporary-arts-museum"
     },
@@ -4858,7 +4970,7 @@
     {
       "name": "houston-center-for-photography-houston-center-for-photography",
       "type": "Ripper",
-      "events": 32,
+      "events": 33,
       "expectEmpty": false,
       "source": "houston-center-for-photography"
     },
@@ -4900,7 +5012,7 @@
     {
       "name": "mcgonigels-mucky-duck-mcgonigels-mucky-duck",
       "type": "Ripper",
-      "events": 98,
+      "events": 99,
       "expectEmpty": false,
       "source": "mcgonigels-mucky-duck"
     },
@@ -4942,7 +5054,7 @@
     {
       "name": "rice-public-events-rice-public-events",
       "type": "Ripper",
-      "events": 110,
+      "events": 116,
       "expectEmpty": false,
       "source": "rice-public-events"
     },
@@ -4977,7 +5089,7 @@
     {
       "name": "the-secret-group-the-secret-group",
       "type": "Ripper",
-      "events": 99,
+      "events": 94,
       "expectEmpty": false,
       "source": "the-secret-group"
     },
@@ -4991,14 +5103,14 @@
     {
       "name": "tag-farmersmarket",
       "type": "Aggregate",
-      "events": 33,
+      "events": 32,
       "expectEmpty": false,
       "source": "tag-farmersmarket"
     },
     {
       "name": "tag-the-heights",
       "type": "Aggregate",
-      "events": 66,
+      "events": 65,
       "expectEmpty": false,
       "source": "tag-the-heights"
     },
@@ -5019,7 +5131,7 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 578,
+      "events": 579,
       "expectEmpty": false,
       "source": "tag-music"
     },
@@ -5047,14 +5159,14 @@
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 455,
+      "events": 454,
       "expectEmpty": false,
       "source": "tag-community"
     },
     {
       "name": "tag-montrose",
       "type": "Aggregate",
-      "events": 343,
+      "events": 344,
       "expectEmpty": false,
       "source": "tag-montrose"
     },
@@ -5068,28 +5180,28 @@
     {
       "name": "tag-eado",
       "type": "Aggregate",
-      "events": 135,
+      "events": 130,
       "expectEmpty": false,
       "source": "tag-eado"
     },
     {
       "name": "tag-art",
       "type": "Aggregate",
-      "events": 518,
+      "events": 526,
       "expectEmpty": false,
       "source": "tag-art"
     },
     {
       "name": "tag-museum-district",
       "type": "Aggregate",
-      "events": 138,
+      "events": 146,
       "expectEmpty": false,
       "source": "tag-museum-district"
     },
     {
       "name": "tag-museums",
       "type": "Aggregate",
-      "events": 6,
+      "events": 7,
       "expectEmpty": false,
       "source": "tag-museums"
     },
@@ -5110,21 +5222,21 @@
     {
       "name": "tag-arts",
       "type": "Aggregate",
-      "events": 62,
+      "events": 63,
       "expectEmpty": false,
       "source": "tag-arts"
     },
     {
       "name": "tag-photography",
       "type": "Aggregate",
-      "events": 32,
+      "events": 33,
       "expectEmpty": false,
       "source": "tag-photography"
     },
     {
       "name": "tag-comedy",
       "type": "Aggregate",
-      "events": 187,
+      "events": 182,
       "expectEmpty": false,
       "source": "tag-comedy"
     },
@@ -5194,7 +5306,7 @@
     {
       "name": "tag-education",
       "type": "Aggregate",
-      "events": 110,
+      "events": 116,
       "expectEmpty": false,
       "source": "tag-education"
     },
@@ -5215,7 +5327,7 @@
     {
       "name": "tag-parks",
       "type": "Aggregate",
-      "events": 59,
+      "events": 58,
       "expectEmpty": false,
       "source": "tag-parks"
     },
@@ -5236,7 +5348,7 @@
     {
       "name": "tag-makersmarket",
       "type": "Aggregate",
-      "events": 30,
+      "events": 29,
       "expectEmpty": false,
       "source": "tag-makersmarket"
     },
@@ -5250,7 +5362,7 @@
     {
       "name": "tag-outdoor-recreation",
       "type": "Aggregate",
-      "events": 18,
+      "events": 17,
       "expectEmpty": false,
       "source": "tag-outdoor-recreation"
     },
@@ -5271,7 +5383,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1559,
+      "events": 1562,
       "expectEmpty": false,
       "source": "tag-all"
     },
@@ -5362,7 +5474,7 @@
     {
       "name": "external-levy-park-houston",
       "type": "External",
-      "events": 19,
+      "events": 18,
       "expectEmpty": false,
       "source": "levy-park-houston"
     },
