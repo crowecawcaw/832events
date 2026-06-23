@@ -1,0 +1,17 @@
+name: shrine-of-the-black-madonna
+type: eventbrite
+description: "Shrine of the Black Madonna Cultural Center & Bookstore"
+url: https://www.eventbrite.com/o/shrine-of-the-black-madonna-cultural-center-bookstore-35355551575
+friendlyLink: https://shrinebookstore.com/
+tags: [Books, Community, Cultural, "Third Ward"]
+geo:
+  lat: 29.7368
+  lng: -95.3440
+  label: "Shrine of the Black Madonna Cultural Center & Bookstore, 5309 Martin Luther King Blvd, Houston, TX 77021"
+calendars:
+  - name: shrine-of-the-black-madonna
+    friendlyname: "Shrine of the Black Madonna"
+    timezone: America/Chicago
+    config:
+      organizerId: "6138741483"
+      defaultLocation: "Shrine of the Black Madonna Cultural Center & Bookstore, 5309 Martin Luther King Blvd, Houston, TX 77021"
