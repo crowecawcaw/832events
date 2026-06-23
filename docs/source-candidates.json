@@ -296,22 +296,34 @@
   },
   {
     "name": "Doc's Houston",
-    "status": "candidate",
-    "platform": "Custom / TurnTable",
-    "url": "https://docshouston.com/",
+    "status": "added",
+    "platform": "Custom HTML ripper (TurnTable Tickets)",
+    "url": "https://docsjazzclub.com/",
     "tags": [
       "Music",
       "Jazz",
       "Montrose"
     ],
     "firstSeen": "2026-06-15",
-    "lastChecked": "2026-06-15"
+    "lastChecked": "2026-06-23",
+    "pr": "claude/source-pipeline-2026-06-23",
+    "impl": {
+      "type": "custom",
+      "observedEventCount": 6,
+      "builtEventCount": 6,
+      "note": "Custom HTML ripper for TurnTable Tickets platform; jazz venue with upcoming performances",
+      "geo": {
+        "lat": 29.7456,
+        "lng": -95.3829,
+        "label": "Doc's Houston (Doc's Jazz Club), 1201 Westheimer Rd, Houston, TX 77006"
+      }
+    }
   },
   {
     "name": "Eldorado Ballroom",
-    "status": "candidate",
-    "platform": "Custom",
-    "url": "https://www.eldoradoballroom.com/",
+    "status": "investigating",
+    "platform": "Eventbrite",
+    "url": "https://www.theeldoradoballroom.com/",
     "tags": [
       "Music",
       "Jazz",
@@ -319,7 +331,19 @@
       "Third Ward"
     ],
     "firstSeen": "2026-06-15",
-    "lastChecked": "2026-06-15"
+    "lastChecked": "2026-06-23",
+    "notes": "Eventbrite organizer (66985790043) has 0 upcoming events as of June 23, 2026. Events were listed on Eventbrite/Songkick earlier (e.g., Gena/Karriem Riggins on Apr 3, 2026 — now past). Historic jazz venue (est. 1939) operated by Lucille's Hospitality Group under Project Row Houses. Will likely resume events; defer until events appear in Eventbrite API.",
+    "impl": {
+      "type": "eventbrite",
+      "organizerId": "66985790043",
+      "observedEventCount": 0,
+      "builtEventCount": 0,
+      "geo": {
+        "lat": 29.7300,
+        "lng": -95.3620,
+        "label": "Eldorado Ballroom, 2310 Elgin St, Houston, TX 77004"
+      }
+    }
   },
   {
     "name": "Ensemble Theatre Houston",
@@ -357,8 +381,8 @@
   },
   {
     "name": "Good on Paper Bookshop",
-    "status": "candidate",
-    "platform": "IndieCommerce / Custom",
+    "status": "added",
+    "platform": "Drupal + IndieCommerce (custom HTML ripper)",
     "url": "https://www.goodonpaperbookshop.com/",
     "tags": [
       "Books",
@@ -366,7 +390,19 @@
       "The Heights"
     ],
     "firstSeen": "2026-06-15",
-    "lastChecked": "2026-06-15"
+    "lastChecked": "2026-06-23",
+    "pr": "claude/source-pipeline-2026-06-23",
+    "impl": {
+      "type": "custom",
+      "observedEventCount": 19,
+      "builtEventCount": 19,
+      "note": "Custom HTML ripper for Drupal-based bookstore event calendar; extracts from structured event list",
+      "geo": {
+        "lat": 29.8096,
+        "lng": -95.3914,
+        "label": "Good on Paper Books and Stationery, 250 W 19th St Suite D, Houston, TX 77008"
+      }
+    }
   },
   {
     "name": "Hermann Park Conservancy",
@@ -1483,17 +1519,30 @@
   },
   {
     "name": "Shrine of the Black Madonna Cultural Center & Bookstore",
-    "status": "candidate",
+    "status": "added",
     "platform": "Eventbrite",
-    "url": "https://www.eventbrite.com/o/shrine-of-the-black-madonna-cultural-center-bookstore-35355551575",
+    "url": "https://shrinebookstore.com/",
     "tags": [
       "Books",
       "Community",
-      "Cultural"
+      "Cultural",
+      "Third Ward"
     ],
     "firstSeen": "2026-06-20",
-    "lastChecked": "2026-06-20",
-    "notes": "Cultural center and bookstore with poetry nights, book signings, and cultural events. Eventbrite organization."
+    "lastChecked": "2026-06-23",
+    "pr": "claude/source-pipeline-2026-06-23",
+    "impl": {
+      "type": "eventbrite",
+      "organizerId": "6138741483",
+      "observedEventCount": 1,
+      "builtEventCount": 1,
+      "note": "Eventbrite-based cultural center and bookstore with poetry nights, book signings, and cultural events",
+      "geo": {
+        "lat": 29.7368,
+        "lng": -95.3440,
+        "label": "Shrine of the Black Madonna Cultural Center & Bookstore, 5309 Martin Luther King Blvd, Houston, TX 77021"
+      }
+    }
   },
   {
     "name": "The Magick Cauldron",
@@ -1536,5 +1585,47 @@
         "label": "ERJCC Houston, 5600 North Braeswood Blvd, Houston, TX 77096"
       }
     }
+  },
+  {
+    "name": "Market Square Park Farmers Market",
+    "status": "investigating",
+    "platform": "Eventbrite (archived)",
+    "url": "https://downtownhouston.org/do/market-square-park-farmers-market",
+    "tags": [
+      "FarmersMarket",
+      "Community",
+      "Downtown"
+    ],
+    "firstSeen": "2026-06-23",
+    "lastChecked": "2026-06-23",
+    "notes": "Weekly Saturday farmers market (10am-2pm) run by Downtown Houston. Eventbrite listing is archived with no future events. Calendar appears unmaintained. Could be added as recurring YAML with hardcoded schedule."
+  },
+  {
+    "name": "Social Beer Garden HTX",
+    "status": "notviable",
+    "platform": "Squarespace (no structured calendar)",
+    "url": "https://www.socialbeergardenhtx.com/upcomingevents",
+    "tags": [
+      "Beer",
+      "Community",
+      "Houston"
+    ],
+    "firstSeen": "2026-06-23",
+    "lastChecked": "2026-06-23",
+    "notes": "Bar with recurring weekly activities (trivia, comedy, sports) but no structured event calendar with parseable dates. No ICS feed or calendar export. Would require custom ripper with manual maintenance."
+  },
+  {
+    "name": "Houston Cultural Events Calendar",
+    "status": "blocked",
+    "platform": "Unknown (HTTP 403)",
+    "url": "https://www.houcalendar.com/",
+    "tags": [
+      "Community",
+      "Events",
+      "Calendar"
+    ],
+    "firstSeen": "2026-06-23",
+    "lastChecked": "2026-06-23",
+    "notes": "Returns HTTP 403 Forbidden; appears to have bot detection/Cloudflare blocking. Unclear if this is an aggregator or venue calendar. Would require proxy:true and direct investigation."
   }
 ]
