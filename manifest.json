@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23T14:26:56.182Z",
+  "lastUpdated": "2026-06-23T14:27:43.276Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -15,6 +15,24 @@
             "Music",
             "Nightlife",
             "Downtown"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bayou-music-center",
+      "description": "Bayou Music Center",
+      "friendlyLink": "https://www.bayoumusiccenter.com/",
+      "calendars": [
+        {
+          "name": "bayou-music-center",
+          "friendlyName": "Bayou Music Center",
+          "icsUrl": "bayou-music-center-bayou-music-center.ics",
+          "rssUrl": "bayou-music-center-bayou-music-center.rss",
+          "tags": [
+            "Music",
+            "Nightlife",
+            "Midtown"
           ]
         }
       ]

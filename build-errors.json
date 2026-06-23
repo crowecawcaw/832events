@@ -1,5 +1,5 @@
 {
-  "buildTime": "2026-06-23T14:27:01.518Z",
+  "buildTime": "2026-06-23T14:27:47.548Z",
   "totalErrors": 6,
   "configErrors": [],
   "sources": [
@@ -116,8 +116,8 @@
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1528,
-    "eventsWithGeo": 1507,
+    "totalEvents": 1538,
+    "eventsWithGeo": 1517,
     "eventsWithoutGeo": 21,
     "geocodeErrors": 0
   },
@@ -181,6 +181,13 @@
       "label": "Bad Astronaut Brewery, Houston, TX",
       "lat": 29.7683,
       "lng": -95.3628
+    },
+    {
+      "source": "ripper",
+      "name": "bayou-music-center",
+      "label": "Bayou Music Center, 6615 Long Drive, Houston, TX 77087",
+      "lat": 29.826,
+      "lng": -95.385
     },
     {
       "source": "external",
@@ -478,10 +485,10 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1104,
-    "totalEvents": 1528,
+    "eventsWithImage": 1114,
+    "totalEvents": 1538,
     "venuesWithImage": 0,
-    "totalVenues": 39,
+    "totalVenues": 40,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -506,6 +513,13 @@
         "label": "Bad Astronaut Brewery, Houston, TX",
         "url": "https://badastronautbeer.com/",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Bad%20Astronaut%20Brewery%2C%20Houston%2C%20TX"
+      },
+      {
+        "source": "ripper",
+        "name": "bayou-music-center",
+        "label": "Bayou Music Center, 6615 Long Drive, Houston, TX 77087",
+        "url": "https://www.bayoumusiccenter.com/",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Bayou%20Music%20Center%2C%206615%20Long%20Drive%2C%20Houston%2C%20TX%2077087"
       },
       {
         "source": "ripper",
@@ -1574,7 +1588,7 @@
   "costStats": {
     "eventsWithCost": 524,
     "freeEvents": 463,
-    "totalEvents": 1528,
+    "totalEvents": 1538,
     "unresolvable": 0
   },
   "costGaps": [
@@ -1696,6 +1710,76 @@
       "summary": "CODICIADO - Así Es La Vida Tour",
       "date": "2026-08-28T20:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/codiciado-asi-es-la-vida-tour-houston-texas-08-28-2026/event/3A0063841A2EEFB9"
+    },
+    {
+      "source": "bayou-music-center",
+      "eventId": "tm-G5dIZ_5bZVh_b",
+      "summary": "BossMan Dlow",
+      "date": "2026-08-21T20:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/bossman-dlow-houston-texas-08-21-2026/event/3A0064B600D1B658"
+    },
+    {
+      "source": "bayou-music-center",
+      "eventId": "tm-G5dIZ_A54qtOn",
+      "summary": "Flyleaf with Lacey Sturm - 20th Anniversary Tour",
+      "date": "2026-07-25T19:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/flyleaf-with-lacey-sturm-20th-anniversary-houston-texas-07-25-2026/event/3A006452D576982A"
+    },
+    {
+      "source": "bayou-music-center",
+      "eventId": "tm-G5dIZ_aM_0G5k",
+      "summary": "Sevendust & Theory of a Deadman: The Dead / Seven Tour",
+      "date": "2026-09-09T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/sevendust-theory-of-a-deadman-the-houston-texas-09-09-2026/event/3A00649DD990C2C6"
+    },
+    {
+      "source": "bayou-music-center",
+      "eventId": "tm-G5dIZ_aNfJic9",
+      "summary": "Bop To The Top",
+      "date": "2026-07-18T21:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/bop-to-the-top-houston-texas-07-18-2026/event/3A006498D49ACB57"
+    },
+    {
+      "source": "bayou-music-center",
+      "eventId": "tm-G5dIZ_d9aHcSw",
+      "summary": "Palladium Ent. Presents: BRIT FLOYD - The Moon , The Wall & Beyond",
+      "date": "2026-07-17T20:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/palladium-ent-presents-brit-floyd-the-houston-texas-07-17-2026/event/3A006435C9F2DCF2"
+    },
+    {
+      "source": "bayou-music-center",
+      "eventId": "tm-G5dIZ_FXx36y1",
+      "summary": "Black Label Society",
+      "date": "2026-09-02T19:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/black-label-society-houston-texas-09-02-2026/event/3A00648FA2487E4A"
+    },
+    {
+      "source": "bayou-music-center",
+      "eventId": "tm-G5dIZ_GmjLbWY",
+      "summary": "ISAIAH RASHAD: Lil Sunny's Awful Road Trip",
+      "date": "2026-09-18T20:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/isaiah-rashad-lil-sunnys-awful-road-houston-texas-09-18-2026/event/3A0064CB9C7D8F70"
+    },
+    {
+      "source": "bayou-music-center",
+      "eventId": "tm-G5dIZ_GNeNhXq",
+      "summary": "K-POP Superstars",
+      "date": "2026-08-28T20:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/kpop-superstars-houston-texas-08-28-2026/event/3A0064C8C28DBF9D"
+    },
+    {
+      "source": "bayou-music-center",
+      "eventId": "tm-G5dIZ_u1ajkJi",
+      "summary": "Danzig",
+      "date": "2026-09-12T18:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/danzig-houston-texas-09-12-2026/event/3A0064D2897069AC"
+    },
+    {
+      "source": "bayou-music-center",
+      "eventId": "tm-G5dIZ_uG9Ba1w",
+      "summary": "Jacquees & K Camp - Us Over Dem",
+      "date": "2026-08-22T20:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/jacquees-k-camp-us-over-dem-houston-texas-08-22-2026/event/3A0064D317E892B2"
     },
     {
       "source": "docs-houston",
@@ -5313,6 +5397,13 @@
       "source": "aurora-picture-show"
     },
     {
+      "name": "bayou-music-center-bayou-music-center",
+      "type": "Ripper",
+      "events": 10,
+      "expectEmpty": false,
+      "source": "bayou-music-center"
+    },
+    {
       "name": "camh-camh",
       "type": "Ripper",
       "events": 4,
@@ -5532,14 +5623,14 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 585,
+      "events": 595,
       "expectEmpty": false,
       "source": "tag-music"
     },
     {
       "name": "tag-nightlife",
       "type": "Aggregate",
-      "events": 26,
+      "events": 36,
       "expectEmpty": false,
       "source": "tag-nightlife"
     },
@@ -5586,6 +5677,13 @@
       "source": "tag-eado"
     },
     {
+      "name": "tag-midtown",
+      "type": "Aggregate",
+      "events": 24,
+      "expectEmpty": false,
+      "source": "tag-midtown"
+    },
+    {
       "name": "tag-art",
       "type": "Aggregate",
       "events": 526,
@@ -5619,13 +5717,6 @@
       "events": 6,
       "expectEmpty": false,
       "source": "tag-theater"
-    },
-    {
-      "name": "tag-midtown",
-      "type": "Aggregate",
-      "events": 14,
-      "expectEmpty": false,
-      "source": "tag-midtown"
     },
     {
       "name": "tag-books",
@@ -5798,7 +5889,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1588,
+      "events": 1598,
       "expectEmpty": false,
       "source": "tag-all"
     },

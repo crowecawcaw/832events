@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-23T14:27:01.514Z",
+  "generated": "2026-06-23T14:27:47.544Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -102,6 +102,42 @@
             },
             "rss": {
               "href": "external-bad-astronaut-brewery.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "bayou-music-center",
+      "friendlyName": "Bayou Music Center",
+      "description": "Bayou Music Center",
+      "url": "https://www.bayoumusiccenter.com/",
+      "tags": [
+        "Music",
+        "Nightlife",
+        "Midtown"
+      ],
+      "geo": {
+        "lat": 29.826,
+        "lng": -95.385,
+        "label": "Bayou Music Center, 6615 Long Drive, Houston, TX 77087"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Bayou%20Music%20Center%2C%206615%20Long%20Drive%2C%20Houston%2C%20TX%2077087"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "bayou-music-center",
+          "friendlyName": "Bayou Music Center",
+          "links": {
+            "ics": {
+              "href": "bayou-music-center-bayou-music-center.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "bayou-music-center-bayou-music-center.rss",
               "type": "application/rss+xml"
             }
           }
