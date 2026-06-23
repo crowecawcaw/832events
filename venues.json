@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-22T02:19:55.693Z",
+  "generated": "2026-06-23T02:05:28.383Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -279,6 +279,40 @@
             },
             "rss": {
               "href": "external-erjcc-houston.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "eureka-heights-brew-co",
+      "friendlyName": "Eureka Heights Brewery",
+      "description": "Eureka Heights Brewery",
+      "tags": [
+        "Beer",
+        "The Heights"
+      ],
+      "geo": {
+        "lat": 29.7823,
+        "lng": -95.4181,
+        "label": "Eureka Heights Brewery, 2454 Sawyer St, Houston, TX 77007"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Eureka%20Heights%20Brewery%2C%202454%20Sawyer%20St%2C%20Houston%2C%20TX%2077007"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "eureka-heights-brew-co",
+          "friendlyName": "Eureka Heights Brewery",
+          "links": {
+            "ics": {
+              "href": "external-eureka-heights-brew-co.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-eureka-heights-brew-co.rss",
               "type": "application/rss+xml"
             }
           }
