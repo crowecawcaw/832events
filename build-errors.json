@@ -1,5 +1,5 @@
 {
-  "buildTime": "2026-06-23T14:27:47.548Z",
+  "buildTime": "2026-06-24T01:09:07.815Z",
   "totalErrors": 6,
   "configErrors": [],
   "sources": [
@@ -116,8 +116,8 @@
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1538,
-    "eventsWithGeo": 1517,
+    "totalEvents": 1535,
+    "eventsWithGeo": 1514,
     "eventsWithoutGeo": 21,
     "geocodeErrors": 0
   },
@@ -485,8 +485,8 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1114,
-    "totalEvents": 1538,
+    "eventsWithImage": 1118,
+    "totalEvents": 1535,
     "venuesWithImage": 0,
     "totalVenues": 40,
     "unresolvable": 0
@@ -1588,7 +1588,7 @@
   "costStats": {
     "eventsWithCost": 524,
     "freeEvents": 463,
-    "totalEvents": 1538,
+    "totalEvents": 1535,
     "unresolvable": 0
   },
   "costGaps": [
@@ -1626,6 +1626,13 @@
       "summary": "Calle 24 - Eterno Tour",
       "date": "2026-09-13T20:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/calle-24-eterno-tour-houston-texas-09-13-2026/event/3A0064B5D0141EF8"
+    },
+    {
+      "source": "713-music-hall",
+      "eventId": "tm-G5dIZ_6CDCWnS",
+      "summary": "JUNGLE - World Tour 2026",
+      "date": "2026-09-23T20:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/jungle-world-tour-2026-houston-texas-09-23-2026/event/3A006473BB3BDAB3"
     },
     {
       "source": "713-music-hall",
@@ -2265,13 +2272,6 @@
       "summary": "Noise Complaints Presents The Late Night R&b Experience Tour - 21+",
       "date": "2026-07-03T20:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/noise-complaints-presents-the-late-night-houston-texas-07-03-2026/event/3A00646AA7BF8CD1"
-    },
-    {
-      "source": "house-of-blues-houston",
-      "eventId": "tm-G5dIZ_kRsA7i4",
-      "summary": "JINJER Duel North America 2026",
-      "date": "2026-06-23T18:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/jinjer-duel-north-america-2026-houston-texas-06-23-2026/event/3A00646BF1144B15"
     },
     {
       "source": "house-of-blues-houston",
@@ -3391,6 +3391,13 @@
       "summary": "Sejoe",
       "date": "2026-09-06T19:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/sejoe-houston-texas-09-06-2026/event/3A0064A91B6F880F"
+    },
+    {
+      "source": "punch-line-comedy-club",
+      "eventId": "tm-G5dIZ_10jKIc2",
+      "summary": "Jenny Tian: Ripe",
+      "date": "2026-09-23T19:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/jenny-tian-ripe-houston-texas-09-23-2026/event/3A0064A91C4E8B4F"
     },
     {
       "source": "punch-line-comedy-club",
@@ -5333,10 +5340,24 @@
     },
     {
       "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_u_26mKl",
+      "summary": "INOHA",
+      "date": "2026-09-20T18:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/inoha-houston-texas-09-20-2026/event/3A0064D64F1EE4EB"
+    },
+    {
+      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_u15ZUSz",
       "summary": "Nygma x Gene Ross",
       "date": "2026-07-26T18:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/nygma-x-gene-ross-houston-texas-07-26-2026/event/3A0064D28B036CF8"
+    },
+    {
+      "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_ukBkWF8",
+      "summary": "Phillip Phillips: Let's Go Far Tour",
+      "date": "2026-09-11T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/phillip-phillips-lets-go-far-tour-houston-texas-09-11-2026/event/3A0064D1BA1BD210"
     },
     {
       "source": "white-oak-music-hall",
@@ -5378,7 +5399,7 @@
     {
       "name": "713-music-hall-713-music-hall",
       "type": "Ripper",
-      "events": 17,
+      "events": 18,
       "expectEmpty": false,
       "source": "713-music-hall"
     },
@@ -5448,7 +5469,7 @@
     {
       "name": "house-of-blues-houston-house-of-blues-houston",
       "type": "Ripper",
-      "events": 43,
+      "events": 42,
       "expectEmpty": false,
       "source": "house-of-blues-houston"
     },
@@ -5532,7 +5553,7 @@
     {
       "name": "punch-line-comedy-club-punch-line-comedy-club",
       "type": "Ripper",
-      "events": 83,
+      "events": 84,
       "expectEmpty": false,
       "source": "punch-line-comedy-club"
     },
@@ -5588,7 +5609,7 @@
     {
       "name": "white-oak-music-hall-white-oak-music-hall",
       "type": "Ripper",
-      "events": 69,
+      "events": 71,
       "expectEmpty": false,
       "source": "white-oak-music-hall"
     },
@@ -5602,7 +5623,7 @@
     {
       "name": "tag-the-heights",
       "type": "Aggregate",
-      "events": 84,
+      "events": 85,
       "expectEmpty": false,
       "source": "tag-the-heights"
     },
@@ -5623,21 +5644,21 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 595,
+      "events": 590,
       "expectEmpty": false,
       "source": "tag-music"
     },
     {
       "name": "tag-nightlife",
       "type": "Aggregate",
-      "events": 36,
+      "events": 37,
       "expectEmpty": false,
       "source": "tag-nightlife"
     },
     {
       "name": "tag-downtown",
       "type": "Aggregate",
-      "events": 174,
+      "events": 175,
       "expectEmpty": false,
       "source": "tag-downtown"
     },
@@ -5651,14 +5672,14 @@
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 474,
+      "events": 475,
       "expectEmpty": false,
       "source": "tag-community"
     },
     {
       "name": "tag-montrose",
       "type": "Aggregate",
-      "events": 350,
+      "events": 343,
       "expectEmpty": false,
       "source": "tag-montrose"
     },
@@ -5742,7 +5763,7 @@
     {
       "name": "tag-comedy",
       "type": "Aggregate",
-      "events": 182,
+      "events": 183,
       "expectEmpty": false,
       "source": "tag-comedy"
     },
@@ -5770,7 +5791,7 @@
     {
       "name": "tag-near-northside",
       "type": "Aggregate",
-      "events": 117,
+      "events": 119,
       "expectEmpty": false,
       "source": "tag-near-northside"
     },
@@ -5798,7 +5819,7 @@
     {
       "name": "tag-entertainment",
       "type": "Aggregate",
-      "events": 83,
+      "events": 84,
       "expectEmpty": false,
       "source": "tag-entertainment"
     },
@@ -5889,7 +5910,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1598,
+      "events": 1595,
       "expectEmpty": false,
       "source": "tag-all"
     },
