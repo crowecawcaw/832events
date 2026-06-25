@@ -194,9 +194,11 @@ describe("Saint Arnold Brewing Company Ripper", () => {
         expect(result.some(isError)).toBe(false);
     });
 
-    it("still errors when a post has a time but no parseable date (malformed event)", () => {
-        // A post that clearly describes a timed event but whose date can't be
-        // parsed is a genuine parse gap worth surfacing.
+    it("skips a post that has a time but no <strong> calendar date (promo prose)", () => {
+        // A time mentioned in flowing prose is not enough to place an event on a
+        // calendar. Without a structured <strong> date these are promotional
+        // posts (pub-crawl lineups, festival bills) and must be skipped silently,
+        // not counted as errors against the build gate.
         const html = `
         <article>
             <div class="content-inner">
@@ -205,9 +207,43 @@ describe("Saint Arnold Brewing Company Ripper", () => {
         </article>`;
 
         const result = parseEventDatesFromContent(html, "Mystery Show");
-        expect(result).toHaveLength(1);
-        expect(isError(result[0])).toBe(true);
-        expect((result[0] as { reason: string }).reason).toBe("No dated events found in content");
+        expect(result).toHaveLength(0);
+        expect(result.some(isError)).toBe(false);
+    });
+
+    it("creates an all-day event from a <strong> date with no adjacent time", () => {
+        // All-day / time-TBD happenings (e.g. "Bike Around the Bay | Saturday,
+        // October 17 & Sunday, October 18") carry a <strong> date but no headline
+        // time. They must still publish as events using a default midday start,
+        // not be dropped or flagged.
+        const html = `
+        <article>
+            <div class="content-inner">
+                <p><strong>Saturday, October 17 & Sunday, October 18</strong></p>
+                <p>Join us all weekend for the ride. Activities throughout the day.</p>
+            </div>
+        </article>`;
+
+        const result = parseEventDatesFromContent(html, "Bike Around the Bay");
+        const events = result.filter((r) => !isError(r));
+        expect(result.some(isError)).toBe(false);
+        expect(events.length).toBeGreaterThanOrEqual(1);
+        expect((events[0] as { summary: string }).summary).toBe("Bike Around the Bay");
+    });
+
+    it("does not mint a spurious event from a year in a <strong> tag", () => {
+        // "June 1994" must not be read as "June 19"; a post whose only <strong>
+        // tag is prose with a year carries no event date and is skipped.
+        const html = `
+        <article>
+            <div class="content-inner">
+                <p><strong>Brewing since June 1994</strong> — celebrating Houston culture.</p>
+            </div>
+        </article>`;
+
+        const result = parseEventDatesFromContent(html, "Our Story");
+        expect(result).toHaveLength(0);
+        expect(result.some(isError)).toBe(false);
     });
 
     it("errors when the post is missing the expected article structure", () => {

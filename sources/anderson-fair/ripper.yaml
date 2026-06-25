@@ -1,6 +1,12 @@
 name: anderson-fair
 type: squarespace
 proxy: true
+# Disabled 2026-06-25: the Squarespace events endpoint returns HTTP 404 from CI
+# even through the Browserbase proxy, so this produces 0 events and counts toward
+# the daily build error gate. Per AGENTS.md ("already proxy: true and still
+# failing → disabled: true + flag for human review"). Re-enable if the calendar
+# endpoint becomes reachable.
+disabled: true
 description: "Anderson Fair"
 url: https://andersonfair.net/events
 friendlyLink: https://andersonfair.net/

@@ -171,31 +171,40 @@ export function parseEventDatesFromContent(html: string, title: string): (Ripper
         }
     }
 
-    // If no events were built, decide between "broken entry" and "undated post".
+    // Fallback for posts that present a date but no adjacent parseable time.
     //
-    // The Happenings page mixes dated one-time events (e.g. "Bike Around the Bay
-    // | October 17") with evergreen/promotional posts that legitimately carry no
-    // calendar date (brewery tours, ongoing collaborations, contests/giveaways,
-    // "watch soccer this summer", etc.). Those undated posts are not events and
-    // must not produce a counted error — emitting one floods the build's error
-    // gate with spurious "No dated events found in content" reports.
+    // The Happenings page mixes timed one-time events ("<strong>Friday, June
+    // 12</strong> ... 8:00 PM") with all-day / time-TBD happenings whose <strong>
+    // date isn't paired with a headline time — e.g. "Bike Around the Bay |
+    // Saturday, October 17 & Sunday, October 18", where the times that appear
+    // belong to sub-activities, not the event itself. Rather than drop a real
+    // event (or flood the build's error gate), create one per distinct <strong>
+    // date using a default midday start.
     //
-    // We only treat a post as a malformed *event* when it actually contains a
-    // time-of-day signal (e.g. "8:00 PM") yet we still couldn't pair it with a
-    // parseable date. A post with no time signal at all is an undated post and is
-    // skipped silently (return nothing, no error).
+    // A <strong> month+day is the structured-date signal real event posts use; a
+    // \b...(?!\d) guard around the day avoids matching a year ("June 1994" →
+    // "June 19"). Posts with NO <strong> date are evergreen/promotional prose
+    // (brewery tours, giveaways, pub-crawl lineups, festival bills like "713
+    // Day" whose <strong> tags name venues/performers) — they carry no single
+    // calendar date and are skipped silently.
     if (events.length === 0) {
-        const hasTimeSignal = /\d{1,2}:\d{2}\s*(AM|PM)/i.test(content);
-        if (!hasTimeSignal) {
-            // Undated/evergreen post — not an event, skip without an error.
-            return [];
+        const strongTagPattern = /<strong>([^<]*)<\/strong>/gi;
+        let strongMatch;
+        while ((strongMatch = strongTagPattern.exec(html_content)) !== null) {
+            const md = strongMatch[1].match(
+                /\b(January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\.?\s+(\d{1,2})(?!\d)/i,
+            );
+            if (!md) continue;
+            // Default to a midday start: these posts advertise a date but no
+            // single headline time.
+            tryCreateEvent(title, md[1], parseInt(md[2], 10), "12", "00", "PM", seenDates, events);
         }
-        return [{
-            error: true,
-            type: "ParseError",
-            reason: "No dated events found in content",
-            context: `Title: ${title}, Content preview: ${content.substring(0, 200)}`,
-        } as ParseError];
+    }
+
+    if (events.length === 0) {
+        // No timed event and no <strong> calendar date — evergreen/promotional
+        // post, skip silently so it doesn't count toward the build error gate.
+        return [];
     }
 
     return events;

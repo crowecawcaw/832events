@@ -1,6 +1,11 @@
 name: pride-houston
 type: eventbrite
 proxy: true
+# Disabled 2026-06-25: Eventbrite returns HTTP 401 from CI even through the
+# Browserbase proxy, so this produces 0 events and counts toward the daily build
+# error gate. Per AGENTS.md ("already proxy: true and still failing → disabled:
+# true + flag for human review"). Re-enable if organizer 19231282193 is reachable.
+disabled: true
 description: "Pride Houston 365"
 url: https://www.pridehouston.org/
 friendlyLink: https://www.pridehouston.org/

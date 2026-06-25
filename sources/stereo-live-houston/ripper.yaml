@@ -1,6 +1,11 @@
 name: stereo-live-houston
 type: axs
 proxy: true
+# Disabled 2026-06-25: AXS returns HTTP 403 from CI even through the Browserbase
+# proxy, so this produces 0 events and counts toward the daily build error gate.
+# Per AGENTS.md ("already proxy: true and still failing → disabled: true + flag
+# for human review"). Re-enable if AXS becomes reachable for venue 126004.
+disabled: true
 description: "Stereo Live Houston"
 url: https://www.stereolivehouston.com/
 friendlyLink: https://www.stereolivehouston.com/

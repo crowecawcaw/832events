@@ -1,6 +1,11 @@
 name: houston-improv
 type: axs
 proxy: true
+# Disabled 2026-06-25: AXS returns HTTP 403 from CI even through the Browserbase
+# proxy, so this produces 0 events and counts toward the daily build error gate.
+# Per AGENTS.md ("already proxy: true and still failing → disabled: true + flag
+# for human review"). Re-enable if AXS becomes reachable for venue 130678.
+disabled: true
 description: "Houston Improv"
 url: https://improvtx.com/houston/
 friendlyLink: https://improvtx.com/houston/
