@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-06-24T01:09:07.815Z",
-  "totalErrors": 6,
+  "buildTime": "2026-06-25T01:23:14.809Z",
+  "totalErrors": 8,
   "configErrors": [],
   "sources": [
     {
@@ -64,6 +64,28 @@
       ]
     },
     {
+      "source": "saint-arnold-brewing-company",
+      "calendar": "saint-arnold-brewing-company",
+      "type": "Ripper",
+      "errorCount": 2,
+      "parseErrorCount": 2,
+      "uncertaintyCount": 0,
+      "errors": [
+        {
+          "error": true,
+          "type": "ParseError",
+          "reason": "No dated events found in content",
+          "context": "Title: Downtown Pub Crawl, Content preview: \nSome traditions never get old.\n\n\n\nFor decades, Saint Arnold Pub Crawls have been a part of Houston culture. In those early days, thousands of beer lovers gathered for a day of exploring the city one "
+        },
+        {
+          "error": true,
+          "type": "ParseError",
+          "reason": "No dated events found in content",
+          "context": "Title: 713 Day at Saint Arnold, Content preview: \nWhat it do, H-Town!\n\n\n\nOn 713 Day (that’s Monday, July 13), we’re celebrating the city that has supported us since day one with an afternoon and evening filled with all things Houston.\n\n\n\nWe’ll have "
+        }
+      ]
+    },
+    {
       "source": "scout-bar",
       "calendar": "scout-bar",
       "type": "Ripper",
@@ -116,8 +138,8 @@
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1535,
-    "eventsWithGeo": 1514,
+    "totalEvents": 1534,
+    "eventsWithGeo": 1513,
     "eventsWithoutGeo": 21,
     "geocodeErrors": 0
   },
@@ -485,8 +507,8 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1118,
-    "totalEvents": 1535,
+    "eventsWithImage": 1092,
+    "totalEvents": 1534,
     "venuesWithImage": 0,
     "totalVenues": 40,
     "unresolvable": 0
@@ -772,15 +794,15 @@
     "eventGaps": [
       {
         "source": "docs-houston",
-        "eventId": "country-gets-jazzed-willie-patsy-and-dolly-reimagined-2026-06-23",
-        "summary": "Country Gets Jazzed: Willie, Patsy, and Dolly Reimagined!",
-        "date": "2026-06-23T19:30-05:00[America/Chicago]"
-      },
-      {
-        "source": "docs-houston",
         "eventId": "doc-s-presents-the-music-of-sinatra-at-the-sands-with-wyatt-michael-and-the-graeme-francis-orchestra-2026-06-27",
         "summary": "Doc's Presents: The Music of \"Sinatra at the Sands\" with Wyatt Michael and The Graeme Francis Orchestra",
         "date": "2026-06-27T19:30-05:00[America/Chicago]"
+      },
+      {
+        "source": "docs-houston",
+        "eventId": "miles-cannonball-a-tribute-to-two-jazz-giants-2026-07-01",
+        "summary": "Miles & Cannonball: A Tribute to Two Jazz Giants",
+        "date": "2026-07-01T19:30-05:00[America/Chicago]"
       },
       {
         "source": "docs-houston",
@@ -799,12 +821,6 @@
         "eventId": "we-want-the-funk-2026-06-26",
         "summary": "We Want The Funk!",
         "date": "2026-06-26T19:30-05:00[America/Chicago]"
-      },
-      {
-        "source": "docs-houston",
-        "eventId": "yotam-silberstein-a-global-jazz-guitar-experience-2026-06-24",
-        "summary": "Yotam Silberstein: A Global Jazz Guitar Experience",
-        "date": "2026-06-24T19:30-05:00[America/Chicago]"
       },
       {
         "source": "ensemble-theatre-houston",
@@ -841,6 +857,13 @@
         "eventId": "who-all-over-there-2026-05-08",
         "summary": "Who All Over There",
         "date": "2026-05-08T19:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "good-on-paper-bookshop",
+        "eventId": "acotar-midnight-release-party-2026-06-24-ec8d2a1d",
+        "summary": "ACOTAR Midnight Release Party!",
+        "date": "2026-06-24T00:00-05:00[America/Chicago]",
+        "url": "https://www.goodonpaperbooks.com/events"
       },
       {
         "source": "good-on-paper-bookshop",
@@ -1009,6 +1032,13 @@
         "summary": "Artist Talk: Wrapped in Memory with Job García",
         "date": "2026-06-27T14:00-05:00[America/Chicago]",
         "url": "https://www.edu.hcponline.org/events/artist-talk-garcia-wrapped-in-memory"
+      },
+      {
+        "source": "houston-center-for-photography",
+        "eventId": "august-critique-group-howard-bossen-2026-08-09",
+        "summary": "August Critique Group: Howard Bossen",
+        "date": "2026-08-09T14:00-05:00[America/Chicago]",
+        "url": "https://www.edu.hcponline.org/events/summer26-critique-group-2"
       },
       {
         "source": "houston-center-for-photography",
@@ -1403,10 +1433,24 @@
       },
       {
         "source": "rice-public-events",
+        "eventId": "20260708T160000Z-433249",
+        "summary": "Frame of Reference in UAV Search and Rescue: Exocentric vs. Egocentric View for Navigation, Target Detection, and Collision Awareness",
+        "date": "2026-07-08T16:00Z",
+        "url": "https://events.rice.edu/event/433249-frame-of-reference-in-uav-search-and-rescue"
+      },
+      {
+        "source": "rice-public-events",
         "eventId": "20260708T170000Z-433066",
         "summary": "K-Nexus: Hierarchical Gene-to-Cell AI Modeling for Perturbation-Induced Transcriptomic Shift Recovery",
         "date": "2026-07-08T17:00Z",
         "url": "https://events.rice.edu/live/events/432801-k-nexus-hierarchical-gene-to-cell-ai-modeling-for"
+      },
+      {
+        "source": "rice-public-events",
+        "eventId": "20260708T170000Z-433274",
+        "summary": "O⁺ Transport from the Ionospheric Cusp to the Inner Magnetosphere: A Global MHD and Test Particle Study",
+        "date": "2026-07-08T17:00Z",
+        "url": "https://events.rice.edu/event/433274-o-transport-from-the-ionospheric-cusp-to-the-inner"
       },
       {
         "source": "rice-public-events",
@@ -1435,6 +1479,13 @@
         "summary": "Asana Day: The Art of the Possible (Session 1)",
         "date": "2026-08-05T14:00Z",
         "url": "https://events.rice.edu/ofs/event/431057-asana-day-the-art-of-the-possible-session-1"
+      },
+      {
+        "source": "rice-public-events",
+        "eventId": "20260828T210000Z-433240",
+        "summary": "Fall 2026 SST@R Session 1",
+        "date": "2026-08-28T21:00Z",
+        "url": "https://events.rice.edu/cte/event/fall-2026-sstr-session-1"
       },
       {
         "source": "rice-public-events",
@@ -1522,13 +1573,6 @@
       },
       {
         "source": "saint-arnold-brewing-company",
-        "eventId": "saints-sinners-2026-06-24-1a8f862f",
-        "summary": "Saints & Sinners",
-        "date": "2026-06-24T17:00-05:00[America/Chicago]",
-        "url": "https://www.saintarnold.com/saints-sinners/"
-      },
-      {
-        "source": "saint-arnold-brewing-company",
         "eventId": "saints-sinners-2026-06-25-4e37af20",
         "summary": "Saints & Sinners",
         "date": "2026-06-25T20:00-05:00[America/Chicago]",
@@ -1582,13 +1626,20 @@
         "summary": "Saints & Sinners",
         "date": "2027-06-18T17:00-05:00[America/Chicago]",
         "url": "https://www.saintarnold.com/saints-sinners/"
+      },
+      {
+        "source": "saint-arnold-brewing-company",
+        "eventId": "saints-sinners-2027-06-24-3b7750e6",
+        "summary": "Saints & Sinners",
+        "date": "2027-06-24T17:00-05:00[America/Chicago]",
+        "url": "https://www.saintarnold.com/saints-sinners/"
       }
     ]
   },
   "costStats": {
-    "eventsWithCost": 524,
-    "freeEvents": 463,
-    "totalEvents": 1535,
+    "eventsWithCost": 514,
+    "freeEvents": 454,
+    "totalEvents": 1534,
     "unresolvable": 0
   },
   "costGaps": [
@@ -1668,13 +1719,6 @@
       "summary": "T.I. - The King Succession Tour",
       "date": "2026-07-11T20:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/ti-the-king-succession-tour-houston-texas-07-11-2026/event/3A00649ED6585F90"
-    },
-    {
-      "source": "713-music-hall",
-      "eventId": "tm-G5dIZ_AxBVSiW",
-      "summary": "Ilana Glazer Live!",
-      "date": "2026-06-23T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/ilana-glazer-live-houston-texas-06-23-2026/event/3A006458BAD33B3D"
     },
     {
       "source": "713-music-hall",
@@ -1790,15 +1834,15 @@
     },
     {
       "source": "docs-houston",
-      "eventId": "country-gets-jazzed-willie-patsy-and-dolly-reimagined-2026-06-23",
-      "summary": "Country Gets Jazzed: Willie, Patsy, and Dolly Reimagined!",
-      "date": "2026-06-23T19:30-05:00[America/Chicago]"
-    },
-    {
-      "source": "docs-houston",
       "eventId": "doc-s-presents-the-music-of-sinatra-at-the-sands-with-wyatt-michael-and-the-graeme-francis-orchestra-2026-06-27",
       "summary": "Doc's Presents: The Music of \"Sinatra at the Sands\" with Wyatt Michael and The Graeme Francis Orchestra",
       "date": "2026-06-27T19:30-05:00[America/Chicago]"
+    },
+    {
+      "source": "docs-houston",
+      "eventId": "miles-cannonball-a-tribute-to-two-jazz-giants-2026-07-01",
+      "summary": "Miles & Cannonball: A Tribute to Two Jazz Giants",
+      "date": "2026-07-01T19:30-05:00[America/Chicago]"
     },
     {
       "source": "docs-houston",
@@ -1817,12 +1861,6 @@
       "eventId": "we-want-the-funk-2026-06-26",
       "summary": "We Want The Funk!",
       "date": "2026-06-26T19:30-05:00[America/Chicago]"
-    },
-    {
-      "source": "docs-houston",
-      "eventId": "yotam-silberstein-a-global-jazz-guitar-experience-2026-06-24",
-      "summary": "Yotam Silberstein: A Global Jazz Guitar Experience",
-      "date": "2026-06-24T19:30-05:00[America/Chicago]"
     },
     {
       "source": "ensemble-theatre-houston",
@@ -1859,6 +1897,13 @@
       "eventId": "who-all-over-there-2026-05-08",
       "summary": "Who All Over There",
       "date": "2026-05-08T19:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "good-on-paper-bookshop",
+      "eventId": "acotar-midnight-release-party-2026-06-24-ec8d2a1d",
+      "summary": "ACOTAR Midnight Release Party!",
+      "date": "2026-06-24T00:00-05:00[America/Chicago]",
+      "url": "https://www.goodonpaperbooks.com/events"
     },
     {
       "source": "good-on-paper-bookshop",
@@ -2114,13 +2159,6 @@
     },
     {
       "source": "house-of-blues-houston",
-      "eventId": "tm-G5dIZ_A5PUD-2",
-      "summary": "idobi Radio Summer School w/ Honey Revenge & more",
-      "date": "2026-06-24T17:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/idobi-radio-summer-school-w-honey-houston-texas-06-24-2026/event/3A006452E5DBB84F"
-    },
-    {
-      "source": "house-of-blues-houston",
       "eventId": "tm-G5dIZ_aK7wX94",
       "summary": "Corbyn Besson and Soulidified: The Pop'n Out Tour",
       "date": "2026-08-10T19:00-05:00[America/Chicago]",
@@ -2240,6 +2278,13 @@
     },
     {
       "source": "house-of-blues-houston",
+      "eventId": "tm-G5dIZ_GRkeqQT",
+      "summary": "ISAIAH FALLS PRESENTS: LVRS PARADISE - SIDE B TOUR",
+      "date": "2026-09-24T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/isaiah-falls-presents-lvrs-paradise-side-houston-texas-09-24-2026/event/3A0064CBC609D6BF"
+    },
+    {
+      "source": "house-of-blues-houston",
       "eventId": "tm-G5dIZ_GXcQ_wj",
       "summary": "Wade Bowen",
       "date": "2026-08-28T19:00-05:00[America/Chicago]",
@@ -2321,6 +2366,13 @@
       "summary": "Artist Talk: Wrapped in Memory with Job García",
       "date": "2026-06-27T14:00-05:00[America/Chicago]",
       "url": "https://www.edu.hcponline.org/events/artist-talk-garcia-wrapped-in-memory"
+    },
+    {
+      "source": "houston-center-for-photography",
+      "eventId": "august-critique-group-howard-bossen-2026-08-09",
+      "summary": "August Critique Group: Howard Bossen",
+      "date": "2026-08-09T14:00-05:00[America/Chicago]",
+      "url": "https://www.edu.hcponline.org/events/summer26-critique-group-2"
     },
     {
       "source": "houston-center-for-photography",
@@ -2646,6 +2698,13 @@
     },
     {
       "source": "lawndale-art-center",
+      "eventId": "poets-garden-htx-writing-workshop-2026-07-11",
+      "summary": "Poets Garden HTX Writing Workshop",
+      "date": "2026-07-11T13:00-05:00[America/Chicago]",
+      "url": "https://lawndaleartcenter.org/event/poets-garden-htx-writing-workshop-2/"
+    },
+    {
+      "source": "lawndale-art-center",
       "eventId": "the-big-slide-show-2026-07-18",
       "summary": "The Big Slide Show",
       "date": "2026-07-18T14:00-05:00[America/Chicago]",
@@ -2807,13 +2866,6 @@
     },
     {
       "source": "mcgonigels-mucky-duck",
-      "eventId": "mcgonigels-31637",
-      "summary": "The Flinns",
-      "date": "2026-06-23T19:00-05:00[America/Chicago]",
-      "url": "https://www.mcgonigels.com/shows/the-flinns-early-show-2/"
-    },
-    {
-      "source": "mcgonigels-mucky-duck",
       "eventId": "mcgonigels-31753",
       "summary": "Bob Schneider",
       "date": "2026-06-26T18:00-05:00[America/Chicago]",
@@ -2863,13 +2915,6 @@
     },
     {
       "source": "mcgonigels-mucky-duck",
-      "eventId": "mcgonigels-31903",
-      "summary": "Open Mic",
-      "date": "2026-06-22T18:00-05:00[America/Chicago]",
-      "url": "https://www.mcgonigels.com/shows/open-mic-6-930-206/"
-    },
-    {
-      "source": "mcgonigels-mucky-duck",
       "eventId": "mcgonigels-31932",
       "summary": "Irish Session",
       "date": "2026-07-01T19:30-05:00[America/Chicago]",
@@ -2902,13 +2947,6 @@
       "summary": "Shake Russell",
       "date": "2026-07-18T18:00-05:00[America/Chicago]",
       "url": "https://www.mcgonigels.com/shows/shake-russell-early-show-26/"
-    },
-    {
-      "source": "mcgonigels-mucky-duck",
-      "eventId": "mcgonigels-32056",
-      "summary": "Jet Jurgensmeyer",
-      "date": "2026-06-23T21:30-05:00[America/Chicago]",
-      "url": "https://www.mcgonigels.com/shows/jet-jurgensmeyer1/"
     },
     {
       "source": "mcgonigels-mucky-duck",
@@ -3192,6 +3230,13 @@
     },
     {
       "source": "mcgonigels-mucky-duck",
+      "eventId": "mcgonigels-32485",
+      "summary": "Kerrville Winners",
+      "date": "2026-11-10T18:30-06:00[America/Chicago]",
+      "url": "https://www.mcgonigels.com/shows/kerrville-grassy-hill-new-folk-winners-early-show2026/"
+    },
+    {
+      "source": "mcgonigels-mucky-duck",
       "eventId": "mcgonigels-32520",
       "summary": "Thomas Csorba",
       "date": "2026-09-11T20:30-05:00[America/Chicago]",
@@ -3290,13 +3335,6 @@
     },
     {
       "source": "mcgonigels-mucky-duck",
-      "eventId": "mcgonigels-32615",
-      "summary": "Bob Schneider's Moonlight Trio",
-      "date": "2026-11-27T18:00-06:00[America/Chicago]",
-      "url": "https://www.mcgonigels.com/shows/bob-schneiders-moonlight-trio-early-show-jazz-inspired-holiday-set-houston-tx/"
-    },
-    {
-      "source": "mcgonigels-mucky-duck",
       "eventId": "mcgonigels-32622",
       "summary": "Candi Jenkins",
       "date": "2026-10-13T19:00-05:00[America/Chicago]",
@@ -3370,13 +3408,6 @@
       "summary": "Christina Dodd in conversation with Angelina M. Lopez",
       "date": "2026-06-30T18:30-05:00[America/Chicago]",
       "url": "https://www.murderbooks.com/Dodd"
-    },
-    {
-      "source": "murder-by-the-book",
-      "eventId": "kimberly-mccreight-in-conversation-with-abby-dunn-2026-06-23",
-      "summary": "Kimberly McCreight in conversation with Abby Dunn",
-      "date": "2026-06-23T18:30-05:00[America/Chicago]",
-      "url": "https://www.murderbooks.com/mccreight"
     },
     {
       "source": "punch-line-comedy-club",
@@ -3786,6 +3817,13 @@
     },
     {
       "source": "punch-line-comedy-club",
+      "eventId": "tm-G5dIZ_aONkRca",
+      "summary": "Rocky Dale Davis",
+      "date": "2026-09-24T19:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/rocky-dale-davis-houston-texas-09-24-2026/event/3A006498231AFB49"
+    },
+    {
+      "source": "punch-line-comedy-club",
       "eventId": "tm-G5dIZ_aQs6xoI",
       "summary": "La Chupitos: Standopeda ( En Español )",
       "date": "2026-06-26T21:30-05:00[America/Chicago]",
@@ -3968,27 +4006,6 @@
     },
     {
       "source": "rice-public-events",
-      "eventId": "20260623T050000Z-428337",
-      "summary": "Masako Miki: Shapeshifters, Sprites, and Spirits",
-      "date": "2026-06-23T10:00-05:00[America/Chicago]",
-      "url": "https://events.rice.edu/event/428337-masako-miki-shapeshifters-sprites-and-spirits"
-    },
-    {
-      "source": "rice-public-events",
-      "eventId": "20260623T170000Z-431677",
-      "summary": "Advance Your Healthcare Leadership: Virtual Q&A",
-      "date": "2026-06-23T17:00Z",
-      "url": "https://business.rice.edu/advance-your-healthcare-leadership-virtual-qa-5"
-    },
-    {
-      "source": "rice-public-events",
-      "eventId": "20260624T050000Z-428337",
-      "summary": "Masako Miki: Shapeshifters, Sprites, and Spirits",
-      "date": "2026-06-24T10:00-05:00[America/Chicago]",
-      "url": "https://events.rice.edu/event/428337-masako-miki-shapeshifters-sprites-and-spirits"
-    },
-    {
-      "source": "rice-public-events",
       "eventId": "20260625T050000Z-428337",
       "summary": "Masako Miki: Shapeshifters, Sprites, and Spirits",
       "date": "2026-06-25T10:00-05:00[America/Chicago]",
@@ -4164,10 +4181,24 @@
     },
     {
       "source": "rice-public-events",
+      "eventId": "20260708T160000Z-433249",
+      "summary": "Frame of Reference in UAV Search and Rescue: Exocentric vs. Egocentric View for Navigation, Target Detection, and Collision Awareness",
+      "date": "2026-07-08T16:00Z",
+      "url": "https://events.rice.edu/event/433249-frame-of-reference-in-uav-search-and-rescue"
+    },
+    {
+      "source": "rice-public-events",
       "eventId": "20260708T170000Z-433066",
       "summary": "K-Nexus: Hierarchical Gene-to-Cell AI Modeling for Perturbation-Induced Transcriptomic Shift Recovery",
       "date": "2026-07-08T17:00Z",
       "url": "https://events.rice.edu/live/events/432801-k-nexus-hierarchical-gene-to-cell-ai-modeling-for"
+    },
+    {
+      "source": "rice-public-events",
+      "eventId": "20260708T170000Z-433274",
+      "summary": "O⁺ Transport from the Ionospheric Cusp to the Inner Magnetosphere: A Global MHD and Test Particle Study",
+      "date": "2026-07-08T17:00Z",
+      "url": "https://events.rice.edu/event/433274-o-transport-from-the-ionospheric-cusp-to-the-inner"
     },
     {
       "source": "rice-public-events",
@@ -4486,6 +4517,13 @@
     },
     {
       "source": "rice-public-events",
+      "eventId": "20260828T210000Z-433240",
+      "summary": "Fall 2026 SST@R Session 1",
+      "date": "2026-08-28T21:00Z",
+      "url": "https://events.rice.edu/cte/event/fall-2026-sstr-session-1"
+    },
+    {
+      "source": "rice-public-events",
       "eventId": "20260901T220000Z-432735",
       "summary": "Rice360 Global Health Technologies Seminar Series: AI Driven Wearable Sensors for Maternal and Newborn Health in Low Resource Settings",
       "date": "2026-09-01T22:00Z",
@@ -4780,13 +4818,6 @@
     },
     {
       "source": "saint-arnold-brewing-company",
-      "eventId": "saints-sinners-2026-06-24-1a8f862f",
-      "summary": "Saints & Sinners",
-      "date": "2026-06-24T17:00-05:00[America/Chicago]",
-      "url": "https://www.saintarnold.com/saints-sinners/"
-    },
-    {
-      "source": "saint-arnold-brewing-company",
       "eventId": "saints-sinners-2026-06-25-4e37af20",
       "summary": "Saints & Sinners",
       "date": "2026-06-25T20:00-05:00[America/Chicago]",
@@ -4842,11 +4873,11 @@
       "url": "https://www.saintarnold.com/saints-sinners/"
     },
     {
-      "source": "the-mood-room",
-      "eventId": "6a14e9b2b2e959775cbc5247",
-      "summary": "Industry Night",
-      "date": "2026-06-23T21:00:00.644-05:00[America/Chicago]",
-      "url": "https://www.themoodroomhouston.com/events/wdcm82f7exd2k52-w8m85-3h55f-62ach-z7gg3-lae6x-6awch-dldxt"
+      "source": "saint-arnold-brewing-company",
+      "eventId": "saints-sinners-2027-06-24-3b7750e6",
+      "summary": "Saints & Sinners",
+      "date": "2027-06-24T17:00-05:00[America/Chicago]",
+      "url": "https://www.saintarnold.com/saints-sinners/"
     },
     {
       "source": "the-mood-room",
@@ -4854,13 +4885,6 @@
       "summary": "Industry Night",
       "date": "2026-06-30T21:00:00.644-05:00[America/Chicago]",
       "url": "https://www.themoodroomhouston.com/events/wdcm82f7exd2k52-w8m85-3h55f-62ach-z7gg3-lae6x-6awch-dldxt-kpkys"
-    },
-    {
-      "source": "the-mood-room",
-      "eventId": "6a14ea26fb2b062b21c039de",
-      "summary": "Game Night Wednesdays",
-      "date": "2026-06-24T18:00:00.149-05:00[America/Chicago]",
-      "url": "https://www.themoodroomhouston.com/events/game-night-uno-tournament-lt5fp-hswzz-ej62r-fefdc-5drp3-kw8wl-b9ztp-6g9mx-9hkwa-nh49z-9w8t9-fh2jy-ybw6a-yr988-rfb9d-lasa7-2h83m-22mht-3mlfk-efbtk-n8djh-dys75-skjtf-ggs2l-jdd73-kml7z"
     },
     {
       "source": "the-mood-room",
@@ -5326,6 +5350,13 @@
     },
     {
       "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_GwFy4zR",
+      "summary": "Nik Parr & The Selfless Lovers",
+      "date": "2026-09-24T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/nik-parr-the-selfless-lovers-houston-texas-09-24-2026/event/3A0064CC88E55E2F"
+    },
+    {
+      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_kMCjRF_",
       "summary": "Eihwar: Nordic Ritual Nights USA Tour 2026",
       "date": "2026-09-04T19:00-05:00[America/Chicago]",
@@ -5354,10 +5385,24 @@
     },
     {
       "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_u61M2vQ",
+      "summary": "An Evening With Geordie Greep",
+      "date": "2026-09-22T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/an-evening-with-geordie-greep-houston-texas-09-22-2026/event/3A0064D1CADCF05A"
+    },
+    {
+      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_ukBkWF8",
       "summary": "Phillip Phillips: Let's Go Far Tour",
       "date": "2026-09-11T19:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/phillip-phillips-lets-go-far-tour-houston-texas-09-11-2026/event/3A0064D1BA1BD210"
+    },
+    {
+      "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_uQbA6Je",
+      "summary": "Automatic",
+      "date": "2026-09-13T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/automatic-houston-texas-09-13-2026/event/3A0064D698147982"
     },
     {
       "source": "white-oak-music-hall",
@@ -5399,7 +5444,7 @@
     {
       "name": "713-music-hall-713-music-hall",
       "type": "Ripper",
-      "events": 18,
+      "events": 17,
       "expectEmpty": false,
       "source": "713-music-hall"
     },
@@ -5441,7 +5486,7 @@
     {
       "name": "docs-houston-docs-houston",
       "type": "Ripper",
-      "events": 6,
+      "events": 5,
       "expectEmpty": false,
       "source": "docs-houston"
     },
@@ -5455,7 +5500,7 @@
     {
       "name": "good-on-paper-bookshop-good-on-paper-bookshop",
       "type": "Ripper",
-      "events": 19,
+      "events": 20,
       "expectEmpty": false,
       "source": "good-on-paper-bookshop"
     },
@@ -5476,7 +5521,7 @@
     {
       "name": "houston-center-for-photography-houston-center-for-photography",
       "type": "Ripper",
-      "events": 33,
+      "events": 34,
       "expectEmpty": false,
       "source": "houston-center-for-photography"
     },
@@ -5511,14 +5556,14 @@
     {
       "name": "lawndale-art-center-lawndale-art-center",
       "type": "Ripper",
-      "events": 2,
+      "events": 3,
       "expectEmpty": false,
       "source": "lawndale-art-center"
     },
     {
       "name": "mcgonigels-mucky-duck-mcgonigels-mucky-duck",
       "type": "Ripper",
-      "events": 99,
+      "events": 96,
       "expectEmpty": false,
       "source": "mcgonigels-mucky-duck"
     },
@@ -5532,7 +5577,7 @@
     {
       "name": "murder-by-the-book-murder-by-the-book",
       "type": "Ripper",
-      "events": 3,
+      "events": 2,
       "expectEmpty": false,
       "source": "murder-by-the-book"
     },
@@ -5546,14 +5591,14 @@
     {
       "name": "project-row-houses-project-row-houses",
       "type": "Ripper",
-      "events": 396,
+      "events": 392,
       "expectEmpty": false,
       "source": "project-row-houses"
     },
     {
       "name": "punch-line-comedy-club-punch-line-comedy-club",
       "type": "Ripper",
-      "events": 84,
+      "events": 85,
       "expectEmpty": false,
       "source": "punch-line-comedy-club"
     },
@@ -5595,21 +5640,21 @@
     {
       "name": "the-mood-room-the-mood-room",
       "type": "Ripper",
-      "events": 5,
+      "events": 3,
       "expectEmpty": false,
       "source": "the-mood-room"
     },
     {
       "name": "the-secret-group-the-secret-group",
       "type": "Ripper",
-      "events": 94,
+      "events": 88,
       "expectEmpty": false,
       "source": "the-secret-group"
     },
     {
       "name": "white-oak-music-hall-white-oak-music-hall",
       "type": "Ripper",
-      "events": 71,
+      "events": 74,
       "expectEmpty": false,
       "source": "white-oak-music-hall"
     },
@@ -5623,14 +5668,14 @@
     {
       "name": "tag-the-heights",
       "type": "Aggregate",
-      "events": 85,
+      "events": 81,
       "expectEmpty": false,
       "source": "tag-the-heights"
     },
     {
       "name": "tag-upper-kirby",
       "type": "Aggregate",
-      "events": 117,
+      "events": 110,
       "expectEmpty": false,
       "source": "tag-upper-kirby"
     },
@@ -5644,14 +5689,14 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 590,
+      "events": 609,
       "expectEmpty": false,
       "source": "tag-music"
     },
     {
       "name": "tag-nightlife",
       "type": "Aggregate",
-      "events": 37,
+      "events": 36,
       "expectEmpty": false,
       "source": "tag-nightlife"
     },
@@ -5672,14 +5717,14 @@
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 475,
+      "events": 463,
       "expectEmpty": false,
       "source": "tag-community"
     },
     {
       "name": "tag-montrose",
       "type": "Aggregate",
-      "events": 343,
+      "events": 364,
       "expectEmpty": false,
       "source": "tag-montrose"
     },
@@ -5693,7 +5738,7 @@
     {
       "name": "tag-eado",
       "type": "Aggregate",
-      "events": 130,
+      "events": 122,
       "expectEmpty": false,
       "source": "tag-eado"
     },
@@ -5707,14 +5752,14 @@
     {
       "name": "tag-art",
       "type": "Aggregate",
-      "events": 526,
+      "events": 523,
       "expectEmpty": false,
       "source": "tag-art"
     },
     {
       "name": "tag-museum-district",
       "type": "Aggregate",
-      "events": 146,
+      "events": 145,
       "expectEmpty": false,
       "source": "tag-museum-district"
     },
@@ -5728,7 +5773,7 @@
     {
       "name": "tag-jazz",
       "type": "Aggregate",
-      "events": 6,
+      "events": 5,
       "expectEmpty": false,
       "source": "tag-jazz"
     },
@@ -5749,21 +5794,21 @@
     {
       "name": "tag-arts",
       "type": "Aggregate",
-      "events": 63,
+      "events": 64,
       "expectEmpty": false,
       "source": "tag-arts"
     },
     {
       "name": "tag-photography",
       "type": "Aggregate",
-      "events": 33,
+      "events": 34,
       "expectEmpty": false,
       "source": "tag-photography"
     },
     {
       "name": "tag-comedy",
       "type": "Aggregate",
-      "events": 183,
+      "events": 176,
       "expectEmpty": false,
       "source": "tag-comedy"
     },
@@ -5777,21 +5822,21 @@
     {
       "name": "tag-third-ward",
       "type": "Aggregate",
-      "events": 401,
+      "events": 397,
       "expectEmpty": false,
       "source": "tag-third-ward"
     },
     {
       "name": "tag-beer",
       "type": "Aggregate",
-      "events": 74,
+      "events": 72,
       "expectEmpty": false,
       "source": "tag-beer"
     },
     {
       "name": "tag-near-northside",
       "type": "Aggregate",
-      "events": 119,
+      "events": 122,
       "expectEmpty": false,
       "source": "tag-near-northside"
     },
@@ -5812,14 +5857,14 @@
     {
       "name": "tag-west-university",
       "type": "Aggregate",
-      "events": 3,
+      "events": 2,
       "expectEmpty": false,
       "source": "tag-west-university"
     },
     {
       "name": "tag-entertainment",
       "type": "Aggregate",
-      "events": 84,
+      "events": 85,
       "expectEmpty": false,
       "source": "tag-entertainment"
     },
@@ -5854,14 +5899,14 @@
     {
       "name": "tag-parks",
       "type": "Aggregate",
-      "events": 58,
+      "events": 52,
       "expectEmpty": false,
       "source": "tag-parks"
     },
     {
       "name": "tag-hermann-park",
       "type": "Aggregate",
-      "events": 11,
+      "events": 9,
       "expectEmpty": false,
       "source": "tag-hermann-park"
     },
@@ -5889,7 +5934,7 @@
     {
       "name": "tag-outdoor-recreation",
       "type": "Aggregate",
-      "events": 17,
+      "events": 13,
       "expectEmpty": false,
       "source": "tag-outdoor-recreation"
     },
@@ -5910,14 +5955,14 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1595,
+      "events": 1594,
       "expectEmpty": false,
       "source": "tag-all"
     },
     {
       "name": "external-axelrad-beer-garden",
       "type": "External",
-      "events": 4962,
+      "events": 4989,
       "expectEmpty": false,
       "source": "axelrad-beer-garden"
     },
@@ -5945,14 +5990,14 @@
     {
       "name": "external-eureka-heights-brew-co",
       "type": "External",
-      "events": 17,
+      "events": 15,
       "expectEmpty": false,
       "source": "eureka-heights-brew-co"
     },
     {
       "name": "external-hermann-park",
       "type": "External",
-      "events": 12,
+      "events": 10,
       "expectEmpty": false,
       "source": "hermann-park"
     },
@@ -6001,7 +6046,7 @@
     {
       "name": "external-levy-park-houston",
       "type": "External",
-      "events": 18,
+      "events": 14,
       "expectEmpty": false,
       "source": "levy-park-houston"
     },
