@@ -1470,7 +1470,7 @@
   },
   {
     "name": "Karbach Brewing Company",
-    "status": "added",
+    "status": "investigating",
     "platform": "Custom HTML calendar",
     "url": "https://www.karbachbrewing.com/",
     "tags": [
@@ -1480,9 +1480,8 @@
       "EastEnd"
     ],
     "firstSeen": "2026-06-20",
-    "lastChecked": "2026-06-24",
-    "notes": "Custom HTML ripper; expectEmpty:true (recurring events)",
-    "pr": "claude/source-pipeline-2026-06-24"
+    "lastChecked": "2026-06-25",
+    "notes": "Custom HTML ripper exists but the live /community/events/ page is served behind the WordPress 'Age Gate' plugin (nonce-validated cookie); fetches return only the birthdate gate, so the ripper yields 0 events. Reverted from 'added' (a new source must produce >=1 event before merge). Revisit with an age-gate cookie/nonce bypass or a different (e.g. ICS/Eventbrite) feed before re-committing."
   },
   {
     "name": "Megaton Brewery",
