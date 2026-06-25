@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:832.events
+METHOD:PUBLISH
+X-WR-CALNAME:Urban Harvest Farmers Market
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:b0Thi6zWqy3mNGOLMQ29E
+SUMMARY:Urban Harvest Farmers Market
+DTSTAMP:20260625T094503Z
+DTSTART;TZID=America/Chicago:20260627T080000
+DESCRIPTION:Nonprofit Saturday farmers market with local produce\, food\, a
+	nd garden vendors.\n\nhttps://www.urbanharvest.org/events/
+URL:https://www.urbanharvest.org/events/
+GEO:29.7411865;-95.4303696
+LOCATION:2752 Buffalo Speedway\, Houston\, TX 77098
+TRANSP:TRANSPARENT
+RRULE:FREQ=WEEKLY;BYDAY=SA
+DURATION:PT4H
+END:VEVENT
+END:VCALENDAR
