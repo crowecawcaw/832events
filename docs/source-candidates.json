@@ -49,7 +49,7 @@
   {
     "name": "Art League Houston",
     "status": "investigating",
-    "platform": "Squarespace (endpoint disabled) — custom HTMLRipper",
+    "platform": "Squarespace (endpoint disabled) \u2014 custom HTMLRipper",
     "url": "https://www.artleaguehouston.org/events",
     "tags": [
       "Art",
@@ -195,7 +195,7 @@
   {
     "name": "Blue Willow Bookshop",
     "status": "investigating",
-    "platform": "Drupal 11 + Commerce 3 (IndieCommerce) — server-rendered",
+    "platform": "Drupal 11 + Commerce 3 (IndieCommerce) \u2014 server-rendered",
     "url": "https://www.bluewillowbookshop.com/events",
     "tags": [
       "Books"
@@ -203,15 +203,15 @@
     "firstSeen": "2026-06-14",
     "lastChecked": "2026-06-15",
     "impl": {
-      "scrapable": "Yes (server-rendered HTML) — no JavaScript rendering required",
+      "scrapable": "Yes (server-rendered HTML) \u2014 no JavaScript rendering required",
       "selectors": "Event cards in structured HTML list; title, date, time, description visible in page source",
-      "feedAttempted": "/?ical=1, /events/feed, .json endpoints — all blocked by SiteGround Obolus antibot challenge"
+      "feedAttempted": "/?ical=1, /events/feed, .json endpoints \u2014 all blocked by SiteGround Obolus antibot challenge"
     }
   },
   {
     "name": "Brazos Bookstore",
     "status": "investigating",
-    "platform": "Drupal 11 + Commerce 3 (IndieCommerce) — server-rendered",
+    "platform": "Drupal 11 + Commerce 3 (IndieCommerce) \u2014 server-rendered",
     "url": "https://www.brazosbookstore.com/events",
     "tags": [
       "Books",
@@ -220,9 +220,9 @@
     "firstSeen": "2026-06-14",
     "lastChecked": "2026-06-15",
     "impl": {
-      "scrapable": "Yes (server-rendered HTML) — no JavaScript rendering required",
+      "scrapable": "Yes (server-rendered HTML) \u2014 no JavaScript rendering required",
       "selectors": "Event cards in structured HTML list; title, date, time, description visible in page source",
-      "feedAttempted": "/?ical=1, /events/feed, .json endpoints — all blocked by SiteGround Obolus antibot challenge"
+      "feedAttempted": "/?ical=1, /events/feed, .json endpoints \u2014 all blocked by SiteGround Obolus antibot challenge"
     }
   },
   {
@@ -295,7 +295,7 @@
   {
     "name": "Discovery Green",
     "status": "investigating",
-    "platform": "Tribe Events (ICS broken — returns HTML)",
+    "platform": "Tribe Events (ICS broken \u2014 returns HTML)",
     "url": "https://www.discoverygreen.com/events",
     "tags": [
       "Downtown",
@@ -355,15 +355,15 @@
     ],
     "firstSeen": "2026-06-15",
     "lastChecked": "2026-06-23",
-    "notes": "Eventbrite organizer (66985790043) has 0 upcoming events as of June 23, 2026. Events were listed on Eventbrite/Songkick earlier (e.g., Gena/Karriem Riggins on Apr 3, 2026 — now past). Historic jazz venue (est. 1939) operated by Lucille's Hospitality Group under Project Row Houses. Will likely resume events; defer until events appear in Eventbrite API.",
+    "notes": "Eventbrite organizer (66985790043) has 0 upcoming events as of June 23, 2026. Events were listed on Eventbrite/Songkick earlier (e.g., Gena/Karriem Riggins on Apr 3, 2026 \u2014 now past). Historic jazz venue (est. 1939) operated by Lucille's Hospitality Group under Project Row Houses. Will likely resume events; defer until events appear in Eventbrite API.",
     "impl": {
       "type": "eventbrite",
       "organizerId": "66985790043",
       "observedEventCount": 0,
       "builtEventCount": 0,
       "geo": {
-        "lat": 29.7300,
-        "lng": -95.3620,
+        "lat": 29.73,
+        "lng": -95.362,
         "label": "Eldorado Ballroom, 2310 Elgin St, Houston, TX 77004"
       }
     }
@@ -705,7 +705,7 @@
       "infoUrl": "https://iondistrict.com/events/",
       "observedEventCount": 13,
       "geo": {
-        "lat": 29.7240,
+        "lat": 29.724,
         "lng": -95.3905,
         "label": "Ion District, 4201 Main St, Houston, TX 77002"
       }
@@ -1074,7 +1074,7 @@
       "builtEventCount": 88,
       "geo": {
         "lat": 29.7534,
-        "lng": -95.3640,
+        "lng": -95.364,
         "label": "Punch Line Comedy Club, 1204 Caroline Street, Houston, TX 77002"
       }
     }
@@ -1437,7 +1437,7 @@
     ],
     "firstSeen": "2026-06-20",
     "lastChecked": "2026-06-20",
-    "notes": "Comic shop with Eventbrite events. ICS feed URL returned 404 — need to find correct feed format or API endpoint."
+    "notes": "Comic shop with Eventbrite events. ICS feed URL returned 404 \u2014 need to find correct feed format or API endpoint."
   },
   {
     "name": "Bedrock City Comic Co.",
@@ -1451,7 +1451,7 @@
     ],
     "firstSeen": "2026-06-20",
     "lastChecked": "2026-06-20",
-    "notes": "Multi-location comic shop with Eventbrite events. ICS feed URL returned 404 — need to find correct feed format."
+    "notes": "Multi-location comic shop with Eventbrite events. ICS feed URL returned 404 \u2014 need to find correct feed format."
   },
   {
     "name": "Houston Center for Contemporary Craft",
@@ -1466,7 +1466,7 @@
     ],
     "firstSeen": "2026-06-20",
     "lastChecked": "2026-06-20",
-    "notes": "Contemporary craft center with Eventbrite events. ICS feed URL returned 404 — need correct API endpoint."
+    "notes": "Contemporary craft center with Eventbrite events. ICS feed URL returned 404 \u2014 need correct API endpoint."
   },
   {
     "name": "Karbach Brewing Company",
@@ -1480,8 +1480,8 @@
       "EastEnd"
     ],
     "firstSeen": "2026-06-20",
-    "lastChecked": "2026-06-20",
-    "notes": "Popular Houston brewery with regular events (yoga, food trucks, live music). Custom HTML calendar parsing needed."
+    "lastChecked": "2026-06-25",
+    "notes": "Custom HTML ripper exists but the live /community/events/ page is served behind the WordPress 'Age Gate' plugin (nonce-validated cookie); fetches return only the birthdate gate, so the ripper yields 0 events. Reverted from 'added' (a new source must produce >=1 event before merge). Revisit with an age-gate cookie/nonce bypass or a different (e.g. ICS/Eventbrite) feed before re-committing."
   },
   {
     "name": "Megaton Brewery",
@@ -1562,7 +1562,7 @@
       "note": "Eventbrite-based cultural center and bookstore with poetry nights, book signings, and cultural events",
       "geo": {
         "lat": 29.7368,
-        "lng": -95.3440,
+        "lng": -95.344,
         "label": "Shrine of the Black Madonna Cultural Center & Bookstore, 5309 Martin Luther King Blvd, Houston, TX 77021"
       }
     }
@@ -1650,5 +1650,77 @@
     "firstSeen": "2026-06-23",
     "lastChecked": "2026-06-23",
     "notes": "Returns HTTP 403 Forbidden; appears to have bot detection/Cloudflare blocking. Unclear if this is an aggregator or venue calendar. Would require proxy:true and direct investigation."
+  },
+  {
+    "name": "Houston Cinema Arts Society",
+    "status": "added",
+    "platform": "Eventive + ICS",
+    "url": "https://www.cinemahtx.org/",
+    "tags": [
+      "Film",
+      "Cinema",
+      "Arts"
+    ],
+    "firstSeen": "2026-06-24",
+    "lastChecked": "2026-06-24",
+    "notes": "External ICS source with proxy:true (JS-rendered site)",
+    "pr": "claude/source-pipeline-2026-06-24"
+  },
+  {
+    "name": "Central Market Cooking School",
+    "status": "added",
+    "platform": "Eventbrite",
+    "url": "https://www.eventbrite.com/o/central-market-cooking-school-houston-30372805718",
+    "tags": [
+      "Culinary",
+      "Workshops",
+      "Education"
+    ],
+    "firstSeen": "2026-06-24",
+    "lastChecked": "2026-06-24",
+    "notes": "Eventbrite built-in type; 71 events",
+    "pr": "claude/source-pipeline-2026-06-24"
+  },
+  {
+    "name": "HTXoutdoors",
+    "status": "candidate",
+    "platform": "Custom calendar",
+    "url": "https://htxoutdoors.com/",
+    "tags": [
+      "OutdoorRecreation",
+      "Hiking",
+      "Sports"
+    ],
+    "firstSeen": "2026-06-24",
+    "lastChecked": "2026-06-24",
+    "notes": "30+ events/month; Houston's outdoor adventure platform; hiking, kayaking, trail runs"
+  },
+  {
+    "name": "WorldFest-Houston Film Festival",
+    "status": "candidate",
+    "platform": "Custom website",
+    "url": "https://www.worldfest.org/",
+    "tags": [
+      "Film",
+      "Festival",
+      "Arts"
+    ],
+    "firstSeen": "2026-06-24",
+    "lastChecked": "2026-06-24",
+    "notes": "58th annual (May); 120+ films; oldest independent festival in North America"
+  },
+  {
+    "name": "Houston Grand Opera",
+    "status": "candidate",
+    "platform": "Custom ticketing",
+    "url": "https://www.houstongrandopera.org/",
+    "tags": [
+      "Opera",
+      "PerformingArts",
+      "Music"
+    ],
+    "firstSeen": "2026-06-24",
+    "lastChecked": "2026-06-24",
+    "notes": "6+ productions annually; 2026-27 season announced; major performing arts venue"
   }
 ]
