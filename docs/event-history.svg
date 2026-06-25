@@ -30,8 +30,8 @@
 <text x="700.0" y="309" font-size="11" text-anchor="middle" fill="#6b7280">Jun 25</text>
 <text x="14" y="162" font-size="11" fill="#2563eb" text-anchor="middle" transform="rotate(-90 14 162)">Events</text>
 <text x="748" y="162" font-size="11" fill="#ea580c" text-anchor="middle" transform="rotate(90 748 162)">Calendars</text>
-<polyline fill="none" stroke="#2563eb" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" points="56.0,103.2 127.6,115.0 199.1,98.3 270.7,96.7 342.2,90.3 413.8,91.0 485.3,99.7 556.9,93.1 628.4,93.5 700.0,93.6"/>
-<polyline fill="none" stroke="#ea580c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" points="56.0,136.4 127.6,131.3 199.1,110.8 270.7,100.6 342.2,95.4 413.8,95.4 485.3,105.7 556.9,80.1 628.4,80.1 700.0,80.1"/>
+<polyline fill="none" stroke="#2563eb" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" points="56.0,103.2 127.6,115.0 199.1,98.3 270.7,96.7 342.2,90.3 413.8,91.0 485.3,99.7 556.9,93.1 628.4,93.5 700.0,83.9"/>
+<polyline fill="none" stroke="#ea580c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" points="56.0,136.4 127.6,131.3 199.1,110.8 270.7,100.6 342.2,95.4 413.8,95.4 485.3,105.7 556.9,80.1 628.4,80.1 700.0,75.0"/>
 <circle cx="56.0" cy="103.2" r="2.5" fill="#2563eb"/>
 <circle cx="56.0" cy="136.4" r="2.5" fill="#ea580c"/>
 <circle cx="127.6" cy="115.0" r="2.5" fill="#2563eb"/>
@@ -50,8 +50,8 @@
 <circle cx="556.9" cy="80.1" r="2.5" fill="#ea580c"/>
 <circle cx="628.4" cy="93.5" r="2.5" fill="#2563eb"/>
 <circle cx="628.4" cy="80.1" r="2.5" fill="#ea580c"/>
-<circle cx="700.0" cy="93.6" r="2.5" fill="#2563eb"/>
-<circle cx="700.0" cy="80.1" r="2.5" fill="#ea580c"/>
+<circle cx="700.0" cy="83.9" r="2.5" fill="#2563eb"/>
+<circle cx="700.0" cy="75.0" r="2.5" fill="#ea580c"/>
 <rect x="542" y="26" width="158" height="40" fill="#ffffff" fill-opacity="0.85" stroke="#e5e7eb" rx="4"/>
 <line x1="550" y1="38" x2="568" y2="38" stroke="#2563eb" stroke-width="2"/>
 <text x="574" y="42" font-size="11" fill="#374151">Events</text>
