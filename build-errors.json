@@ -1,5 +1,5 @@
 {
-  "buildTime": "2026-06-25T01:23:14.809Z",
+  "buildTime": "2026-06-25T03:28:11.062Z",
   "totalErrors": 8,
   "configErrors": [],
   "sources": [
@@ -138,8 +138,8 @@
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1534,
-    "eventsWithGeo": 1513,
+    "totalEvents": 1610,
+    "eventsWithGeo": 1589,
     "eventsWithoutGeo": 21,
     "geocodeErrors": 0
   },
@@ -159,7 +159,9 @@
     "tag-folk",
     "tag-spring-branch",
     "tag-clear-lake",
+    "tag-cinema",
     "tag-garden-oaks",
+    "external-houston-cinema-arts-society",
     "external-walking-stick-brewing"
   ],
   "expectedEmptyCalendars": [],
@@ -224,6 +226,13 @@
       "label": "Contemporary Arts Museum Houston, 5216 Montrose Blvd, Houston, TX 77006",
       "lat": 29.7261,
       "lng": -95.3905
+    },
+    {
+      "source": "ripper",
+      "name": "central-market-cooking-school",
+      "label": "Central Market Cooking School, 3815 Westheimer Road, Houston, TX 77027",
+      "lat": 29.7314,
+      "lng": -95.4432
     },
     {
       "source": "ripper",
@@ -322,6 +331,13 @@
       "label": "Houston Center for Photography, 1441 W Alabama St, Houston, TX 77006",
       "lat": 29.7389,
       "lng": -95.4214
+    },
+    {
+      "source": "external",
+      "name": "houston-cinema-arts-society",
+      "label": "Houston, TX",
+      "lat": 29.7489,
+      "lng": -95.3676
     },
     {
       "source": "external",
@@ -507,10 +523,10 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1092,
-    "totalEvents": 1534,
+    "eventsWithImage": 1169,
+    "totalEvents": 1610,
     "venuesWithImage": 0,
-    "totalVenues": 40,
+    "totalVenues": 41,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -549,6 +565,13 @@
         "label": "Contemporary Arts Museum Houston, 5216 Montrose Blvd, Houston, TX 77006",
         "url": "https://camh.org/events/",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Contemporary%20Arts%20Museum%20Houston%2C%205216%20Montrose%20Blvd%2C%20Houston%2C%20TX%2077006"
+      },
+      {
+        "source": "ripper",
+        "name": "central-market-cooking-school",
+        "label": "Central Market Cooking School, 3815 Westheimer Road, Houston, TX 77027",
+        "url": "https://www.eventbrite.com/o/central-market-cooking-school-houston-30372805718",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Central%20Market%20Cooking%20School%2C%203815%20Westheimer%20Road%2C%20Houston%2C%20TX%2077027"
       },
       {
         "source": "ripper",
@@ -1637,9 +1660,9 @@
     ]
   },
   "costStats": {
-    "eventsWithCost": 514,
+    "eventsWithCost": 591,
     "freeEvents": 454,
-    "totalEvents": 1534,
+    "totalEvents": 1610,
     "unresolvable": 0
   },
   "costGaps": [
@@ -5477,6 +5500,13 @@
       "source": "camh"
     },
     {
+      "name": "central-market-cooking-school-central-market-cooking-school",
+      "type": "Ripper",
+      "events": 77,
+      "expectEmpty": false,
+      "source": "central-market-cooking-school"
+    },
+    {
       "name": "contemporary-arts-museum-contemporary-arts-museum",
       "type": "Ripper",
       "events": 4,
@@ -5689,7 +5719,7 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 609,
+      "events": 608,
       "expectEmpty": false,
       "source": "tag-music"
     },
@@ -5724,7 +5754,7 @@
     {
       "name": "tag-montrose",
       "type": "Aggregate",
-      "events": 364,
+      "events": 363,
       "expectEmpty": false,
       "source": "tag-montrose"
     },
@@ -5762,6 +5792,34 @@
       "events": 145,
       "expectEmpty": false,
       "source": "tag-museum-district"
+    },
+    {
+      "name": "tag-culinary",
+      "type": "Aggregate",
+      "events": 77,
+      "expectEmpty": false,
+      "source": "tag-culinary"
+    },
+    {
+      "name": "tag-workshops",
+      "type": "Aggregate",
+      "events": 77,
+      "expectEmpty": false,
+      "source": "tag-workshops"
+    },
+    {
+      "name": "tag-education",
+      "type": "Aggregate",
+      "events": 193,
+      "expectEmpty": false,
+      "source": "tag-education"
+    },
+    {
+      "name": "tag-uptown",
+      "type": "Aggregate",
+      "events": 77,
+      "expectEmpty": false,
+      "source": "tag-uptown"
     },
     {
       "name": "tag-museums",
@@ -5869,13 +5927,6 @@
       "source": "tag-entertainment"
     },
     {
-      "name": "tag-education",
-      "type": "Aggregate",
-      "events": 116,
-      "expectEmpty": false,
-      "source": "tag-education"
-    },
-    {
       "name": "tag-clear-lake",
       "type": "Aggregate",
       "events": 0,
@@ -5918,6 +5969,13 @@
       "source": "tag-memorial"
     },
     {
+      "name": "tag-cinema",
+      "type": "Aggregate",
+      "events": 0,
+      "expectEmpty": false,
+      "source": "tag-cinema"
+    },
+    {
       "name": "tag-makersmarket",
       "type": "Aggregate",
       "events": 29,
@@ -5955,7 +6013,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1594,
+      "events": 1670,
       "expectEmpty": false,
       "source": "tag-all"
     },
@@ -6014,6 +6072,13 @@
       "events": 30,
       "expectEmpty": false,
       "source": "houston-arboretum"
+    },
+    {
+      "name": "external-houston-cinema-arts-society",
+      "type": "External",
+      "events": 0,
+      "expectEmpty": false,
+      "source": "houston-cinema-arts-society"
     },
     {
       "name": "external-houston-farmers-market",

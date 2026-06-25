@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-25T01:23:14.811Z",
+  "generated": "2026-06-25T03:28:11.064Z",
   "tags": [
     {
       "name": "Art",
@@ -121,6 +121,23 @@
       }
     },
     {
+      "name": "Culinary",
+      "slug": "culinary",
+      "category": "Other",
+      "eventCount": 77,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-culinary.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-culinary.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
       "name": "Cultural",
       "slug": "cultural",
       "category": "Other",
@@ -175,8 +192,8 @@
       "name": "Education",
       "slug": "education",
       "category": "Activities",
-      "eventCount": 116,
-      "calendarCount": 1,
+      "eventCount": 193,
+      "calendarCount": 2,
       "links": {
         "ics": {
           "href": "tag-education.ics",
@@ -345,7 +362,7 @@
       "name": "Montrose",
       "slug": "montrose",
       "category": "Neighborhoods",
-      "eventCount": 364,
+      "eventCount": 363,
       "calendarCount": 4,
       "links": {
         "ics": {
@@ -396,7 +413,7 @@
       "name": "Music",
       "slug": "music",
       "category": "Activities",
-      "eventCount": 609,
+      "eventCount": 608,
       "calendarCount": 9,
       "links": {
         "ics": {
@@ -597,6 +614,23 @@
       }
     },
     {
+      "name": "Uptown",
+      "slug": "uptown",
+      "category": "Neighborhoods",
+      "eventCount": 77,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-uptown.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-uptown.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
       "name": "Wedgewood",
       "slug": "wedgewood",
       "category": "Neighborhoods",
@@ -626,6 +660,23 @@
         },
         "rss": {
           "href": "tag-west-university.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Workshops",
+      "slug": "workshops",
+      "category": "Other",
+      "eventCount": 77,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-workshops.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-workshops.rss",
           "type": "application/rss+xml"
         }
       }

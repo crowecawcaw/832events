@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-25T01:23:14.805Z",
+  "generated": "2026-06-25T03:28:11.058Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -138,6 +138,43 @@
             },
             "rss": {
               "href": "bayou-music-center-bayou-music-center.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "central-market-cooking-school",
+      "friendlyName": "Central Market Cooking School",
+      "description": "Central Market Cooking School",
+      "url": "https://www.eventbrite.com/o/central-market-cooking-school-houston-30372805718",
+      "tags": [
+        "Culinary",
+        "Workshops",
+        "Education",
+        "Uptown"
+      ],
+      "geo": {
+        "lat": 29.7314,
+        "lng": -95.4432,
+        "label": "Central Market Cooking School, 3815 Westheimer Road, Houston, TX 77027"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Central%20Market%20Cooking%20School%2C%203815%20Westheimer%20Road%2C%20Houston%2C%20TX%2077027"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "central-market-cooking-school",
+          "friendlyName": "Central Market Cooking School",
+          "links": {
+            "ics": {
+              "href": "central-market-cooking-school-central-market-cooking-school.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "central-market-cooking-school-central-market-cooking-school.rss",
               "type": "application/rss+xml"
             }
           }
