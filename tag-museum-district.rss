@@ -4,7 +4,7 @@
     <title>Museum District Events</title>
     <link>https://crowecawcaw.github.io/832events/</link>
     <description>Upcoming events for Museum District Events</description>
-    <lastBuildDate>Thu, 25 Jun 2026 03:27:56 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jun 2026 01:31:21 GMT</lastBuildDate>
     <atom:link href="https://crowecawcaw.github.io/832events/tag-museum-district.rss" rel="self" type="application/rss+xml"/>
     <item>
       <title>Japanese Garden Volunteer Day</title>
@@ -18,28 +18,6 @@ Click here to sign up!</p>
       <link>https://hermannpark.org/event/japanese-garden-volunteer-day-5/</link>
       <pubDate>Thu, 25 Jun 2026 09:00:00 GMT</pubDate>
       <guid isPermaLink="false">tag-museum-district-27850-1782378000-1782388800@hermannpark.org</guid>
-    </item>
-    <item>
-      <title>Masako Miki: Shapeshifters, Sprites, and Spirits</title>
-      <description><![CDATA[<p><strong>Thursday, June 25, 2026 at 10 AM</strong></p>
-<p>Location: Moody Center</p>
-<p>This exhibition is curated by Associate Curator Claudia Mattos with Suzanne Deal Booth Executive Director Alison Weaver and is made possible by the City of Houston through the Houston Arts Alliance, the Moody Center for the Arts Excellence Fund, the H. Russell Pitman Fund for the Moody Center for the Arts, the Tamara de Kuffner Fund, the Kilgore Endowment Fund, and the Sewell Endowment.</p>
-<p><em>From Rice University - Open to the Public</em></p>
-<p><a href="https://events.rice.edu/event/428337-masako-miki-shapeshifters-sprites-and-spirits">Event details</a></p>]]></description>
-      <link>https://events.rice.edu/event/428337-masako-miki-shapeshifters-sprites-and-spirits</link>
-      <pubDate>Thu, 25 Jun 2026 15:00:00 GMT</pubDate>
-      <guid isPermaLink="false">tag-museum-district-20260625T050000Z-428337</guid>
-    </item>
-    <item>
-      <title>Efficient Automatic Data Placement for GPU and CPU Tiered Memory Systems</title>
-      <description><![CDATA[<p><strong>Thursday, June 25, 2026 at 7 PM</strong></p>
-<p>Location: Duncan Hall</p>
-<p>&amp;#160;  Speaker: Ziyi Zhao  Doctoral Candidate  Thesis Defense  Department: Computer Science  Location: Duncan Hall 3076  Modern applications, from AI and machine learning (ML) to large-scale analytics, are increasingly data-intensive, and their performance depends on how fast they can access their data. They run on GPUs and CPUs that access that data in memory, and that memory consists of different kinds, so it forms tiers: fast but small on top, large but slow below. So where these programs&apos; data sits in this hierarchy directly shapes how fast they run. But the fast tier is far too small to hold all the data they touch; only a small fraction is worth keeping there, and that fraction changes from phase to phase. Every page moved up forces another down, so the problem is to decide which data is worth more in the fast tier than the data it would displace, constantly as the workload runs.  Making these decisions automatically is crucial but challenging. The operating system has only a coarse, indirect view of how a program accesses memory, so it must infer which data is hot; and acting on that inference is a trade-off, since the gain from better placement must outweigh the cost of the move. The key is an adaptive policy: one that turns the coarse access signal into data-movement decisions and refines itself from their feedback, learning the right placement for each workload as it runs.  This thesis realizes such policies to achieve efficient data placement across three tiered-memory settings in modern systems. On the GPU, where a fast high-bandwidth memory is backed by a large, slower host memory, hardware access counters with an adaptive threshold and robust host-side management migrate hot data without thrashing, running 3 to 4x faster than the default placement on ML training and inference workloads. On the CPU, the counter-driven, adaptive placement extends to local and CXL memory. And across persistent memory and disk, the system moves data in a way that is resilient to power failures, improving system-wide performance by 1.7x. In all three settings, the policies are self-tuning, require no application changes, and generalize across AI, ML, and HPC workloads, leading in performance among OS-level approaches.https://riceuniversity.zoom.us/j/92921253250?pwd=SKtzuOREw2NqDuaqtW9NqBwFzm85fa.1 (https://riceuniversity.zoom.us/j/92921253250?pwd=SKtzuOREw2NqDuaqtW9NqBwFzm85fa.1)  (Department : Computer Science)</p>
-<p><em>From Rice University - Open to the Public</em></p>
-<p><a href="https://events.rice.edu/live/events/431887-efficient-automatic-data-placement-for-gpu-and-cpu">Event details</a></p>]]></description>
-      <link>https://events.rice.edu/live/events/431887-efficient-automatic-data-placement-for-gpu-and-cpu</link>
-      <pubDate>Thu, 25 Jun 2026 19:00:00 GMT</pubDate>
-      <guid isPermaLink="false">tag-museum-district-20260625T190000Z-432092</guid>
     </item>
     <item>
       <title>AI Risks: Scams &amp; Self-Harm with Russell Klein</title>

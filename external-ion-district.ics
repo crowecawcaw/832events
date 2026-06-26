@@ -49,23 +49,9 @@ DTSTART:20271107T070000
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260623
-DTEND;VALUE=DATE:20260625
-DTSTAMP:20260624T202243
-CREATED:20260616T170234Z
-LAST-MODIFIED:20260616T180010Z
-UID:10005126-1782172800-1782345599@iondistrict.com
-SUMMARY:Rice World Cup Cities Hack
-DESCRIPTION:The Rice World Cup Cities Hack is a sustainability-focused virtual data hackathon tied to the FIFA World Cup 2026. Teams will work with real-world urban datasets to build data management and visualization solutions\, analyzing the sustainability impact of the World Cup on host cities like Houston. \n📅 Kick-Off Workshop: June 23-24 at The Ion\, Houston – Register – https://forms.gle/uBfedtqia27Zmafe7\n💻 Virtual Hackathon: June 23-September 15\n🏆 $10\,000 Grand Prize | $17\,500 in total prizes \nChallenge tracks include Transportation & Access\, Energy-Food-Water Nexus\, Public Health & the Built Environment\, and High-Intensity Corridors & Future Growth Districts. Interdisciplinary teams are encouraged! \n\n\nRegister for Hack by June 22: https://rice-urban-sustainability.devpost.com/
-URL:https://iondistrict.com/event/rice-world-cup-cities-hack/
-LOCATION:Ion\, 4201 Main Street\, Houston\, TX\, 77002\, United States
-CATEGORIES:Founders & Startups,General Community,Networking,Start Here
-ATTACH;FMTTYPE=image/png:https://iondistrict.com/wp-content/uploads/2026/06/RiceHackathonFlyer-1.pdf.png
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260625T170000
 DTEND;TZID=America/Chicago:20260625T190000
-DTSTAMP:20260624T202243
+DTSTAMP:20260625T203101
 CREATED:20251215T174545Z
 LAST-MODIFIED:20260617T225851Z
 UID:10004382-1782406800-1782414000@iondistrict.com
@@ -79,7 +65,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260626T083000
 DTEND;TZID=America/Chicago:20260626T103000
-DTSTAMP:20260624T202243
+DTSTAMP:20260625T203101
 CREATED:20250729T190850Z
 LAST-MODIFIED:20250825T225437Z
 UID:10004069-1782462600-1782469800@iondistrict.com
@@ -93,7 +79,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260626T100000
 DTEND;TZID=America/Chicago:20260626T113000
-DTSTAMP:20260624T202243
+DTSTAMP:20260625T203101
 CREATED:20260616T201036Z
 LAST-MODIFIED:20260616T201036Z
 UID:10005127-1782468000-1782473400@iondistrict.com
@@ -107,7 +93,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260626T103000
 DTEND;TZID=America/Chicago:20260626T113000
-DTSTAMP:20260624T202243
+DTSTAMP:20260625T203101
 CREATED:20260223T143613Z
 LAST-MODIFIED:20260223T143613Z
 UID:10004844-1782469800-1782473400@iondistrict.com
@@ -121,7 +107,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260630T083000
 DTEND;TZID=America/Chicago:20260630T170000
-DTSTAMP:20260624T202243
+DTSTAMP:20260625T203101
 CREATED:20260608T185659Z
 LAST-MODIFIED:20260610T202605Z
 UID:10005113-1782808200-1782838800@iondistrict.com
@@ -130,5 +116,19 @@ DESCRIPTION:Register here: https://luma.com/lpkh8qjc \n​Spend the day working 
 URL:https://iondistrict.com/event/industrious-coworking-day-summer-series/
 LOCATION:Industrious\, 4201 Main St\, Houston\, TX\, 77002
 ATTACH;FMTTYPE=image/png:https://iondistrict.com/wp-content/uploads/2026/06/Screenshot-2026-06-08-at-12.28.29-PM.png
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260630T170000
+DTEND;TZID=America/Chicago:20260630T193000
+DTSTAMP:20260625T203101
+CREATED:20260625T211426Z
+LAST-MODIFIED:20260625T212447Z
+UID:10005163-1782838800-1782847800@iondistrict.com
+SUMMARY:Latino Founders Forum - Lymbar Hosted
+DESCRIPTION:Register here: https://luma.com/Latino-Founders-Forum \nThe June edition of the Latino Founders Forum Houston is on June 30th ⚽🎉 \n​After a strong launch that brought out 50+ founders\, operators\, investors\, creatives\, and professionals\, the forum is keeping the momentum going with a special World Cup Celebration edition of our monthly gathering. \n​Yes\, it’s called Latino Founders Forum — but it’s not only for Latinos. Anyone is welcome to pull up\, grab a drink\, wear their favorite soccer jersey\, make meaningful connections\, and be part of the community. \n​This is a monthly event for people building real things in Houston. While the forum is rooted in supporting and elevating Latino founders\, the room is open to anyone who values entrepreneurship\, culture\, community\, and genuine relationships. \nThey’re back at The Lymbar inside the Ion for another high-quality happy hour designed to bring together founders\, funders\, advisors\, builders\, creatives\, and professionals who want to meet ambitious people in a room that actually feels worth being in. \n​This month\, they’re bringing a World Cup vibe to the night and inviting guests to wear their favorite soccer jersey as we celebrate culture\, connection\, and community in Houston. Expect a great atmosphere\, strong energy\, good drinks\, and the kind of conversations that make these events worth showing up for. \n​Come for the jerseys\, drinks\, and festive energy. Stay for the people\, the conversations\, and the chance to be part of Houston’s growing startup and business community. \n​If you came to one of the earlier events\, you already know the energy. If you haven’t yet\, this is a great one to start with. \n​Built by founders. Powered by community. Open to everyone.
+URL:https://iondistrict.com/event/latino-founders-forum-lymbar-hosted/
+LOCATION:The Lymbar
+CATEGORIES:3rd Party Registration
+ATTACH;FMTTYPE=image/png:https://iondistrict.com/wp-content/uploads/2026/06/LLF-Social.png
 END:VEVENT
 END:VCALENDAR

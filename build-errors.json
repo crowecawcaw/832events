@@ -1,5 +1,5 @@
 {
-  "buildTime": "2026-06-25T03:28:11.062Z",
+  "buildTime": "2026-06-26T01:31:34.034Z",
   "totalErrors": 8,
   "configErrors": [],
   "sources": [
@@ -134,12 +134,18 @@
       "friendlyName": "Hobby Center for the Performing Arts",
       "url": "https://www.thehobbycenter.org/?post_type=tribe_events&ical=1&eventDisplay=list",
       "error": "Error: HTTP 403: "
+    },
+    {
+      "name": "walking-stick-brewing",
+      "friendlyName": "Walking Stick Brewing",
+      "url": "https://walkingstickbrewing.com/?post_type=tribe_events&ical=1&eventDisplay=list",
+      "error": "Error: HTTP 403: "
     }
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1610,
-    "eventsWithGeo": 1589,
+    "totalEvents": 1656,
+    "eventsWithGeo": 1635,
     "eventsWithoutGeo": 21,
     "geocodeErrors": 0
   },
@@ -161,8 +167,7 @@
     "tag-clear-lake",
     "tag-cinema",
     "tag-garden-oaks",
-    "external-houston-cinema-arts-society",
-    "external-walking-stick-brewing"
+    "external-houston-cinema-arts-society"
   ],
   "expectedEmptyCalendars": [],
   "proxyStaleServes": [],
@@ -523,10 +528,10 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1169,
-    "totalEvents": 1610,
+    "eventsWithImage": 1185,
+    "totalEvents": 1656,
     "venuesWithImage": 0,
-    "totalVenues": 41,
+    "totalVenues": 40,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -718,13 +723,6 @@
       },
       {
         "source": "ripper",
-        "name": "mossrose-bookshop",
-        "label": "Mossrose Bookshop, 5441 Almeda Rd, Houston, TX 77004",
-        "url": "https://www.mossrosebooks.com/pages/upcoming-events",
-        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Mossrose%20Bookshop%2C%205441%20Almeda%20Rd%2C%20Houston%2C%20TX%2077004"
-      },
-      {
-        "source": "ripper",
         "name": "murder-by-the-book",
         "label": "Murder By The Book, 2342 Bissonnet St, Houston, TX 77005",
         "url": "https://www.murderbooks.com/events",
@@ -817,33 +815,33 @@
     "eventGaps": [
       {
         "source": "docs-houston",
+        "eventId": "doc-s-presents-jason-marsalis-and-vanisha-gould-2026-07-02",
+        "summary": "Doc's Presents: Jason Marsalis and Vanisha Gould",
+        "date": "2026-07-02T19:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "docs-houston",
         "eventId": "doc-s-presents-the-music-of-sinatra-at-the-sands-with-wyatt-michael-and-the-graeme-francis-orchestra-2026-06-27",
         "summary": "Doc's Presents: The Music of \"Sinatra at the Sands\" with Wyatt Michael and The Graeme Francis Orchestra",
-        "date": "2026-06-27T19:30-05:00[America/Chicago]"
+        "date": "2026-06-27T19:00-05:00[America/Chicago]"
       },
       {
         "source": "docs-houston",
         "eventId": "miles-cannonball-a-tribute-to-two-jazz-giants-2026-07-01",
         "summary": "Miles & Cannonball: A Tribute to Two Jazz Giants",
-        "date": "2026-07-01T19:30-05:00[America/Chicago]"
-      },
-      {
-        "source": "docs-houston",
-        "eventId": "new-orleans-night-featuring-clarence-johnson-iii-2026-06-25",
-        "summary": "New Orleans Night Featuring Clarence Johnson III",
-        "date": "2026-06-25T19:30-05:00[America/Chicago]"
+        "date": "2026-07-01T19:00-05:00[America/Chicago]"
       },
       {
         "source": "docs-houston",
         "eventId": "the-cleo-fox-show-an-immersive-high-energy-musical-journey-2026-06-30",
         "summary": "The Cleo Fox Show: An Immersive, High-Energy Musical Journey!",
-        "date": "2026-06-30T19:30-05:00[America/Chicago]"
+        "date": "2026-06-30T19:00-05:00[America/Chicago]"
       },
       {
         "source": "docs-houston",
         "eventId": "we-want-the-funk-2026-06-26",
         "summary": "We Want The Funk!",
-        "date": "2026-06-26T19:30-05:00[America/Chicago]"
+        "date": "2026-06-26T19:00-05:00[America/Chicago]"
       },
       {
         "source": "ensemble-theatre-houston",
@@ -1386,19 +1384,6 @@
         "url": "https://www.lakehoustonbrew.com/event-details/sunday-brunch-2026-10-25-11-00"
       },
       {
-        "source": "mossrose-bookshop",
-        "eventId": "mossrose-book-club-2026-06-25",
-        "summary": "Mossrose Book Club",
-        "date": "2026-06-25T19:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "rice-public-events",
-        "eventId": "20260625T190000Z-432092",
-        "summary": "Efficient Automatic Data Placement for GPU and CPU Tiered Memory Systems",
-        "date": "2026-06-25T19:00Z",
-        "url": "https://events.rice.edu/live/events/431887-efficient-automatic-data-placement-for-gpu-and-cpu"
-      },
-      {
         "source": "rice-public-events",
         "eventId": "20260626T153000Z-432837",
         "summary": "Behavioral Acculturation and Acculturative Stress in Latino Immigrant Youth: The Moderating Role of Perceived Autonomy",
@@ -1596,13 +1581,6 @@
       },
       {
         "source": "saint-arnold-brewing-company",
-        "eventId": "saints-sinners-2026-06-25-4e37af20",
-        "summary": "Saints & Sinners",
-        "date": "2026-06-25T20:00-05:00[America/Chicago]",
-        "url": "https://www.saintarnold.com/saints-sinners/"
-      },
-      {
-        "source": "saint-arnold-brewing-company",
         "eventId": "saints-sinners-2027-06-08-b4ad5406",
         "summary": "Saints & Sinners",
         "date": "2027-06-08T19:00-05:00[America/Chicago]",
@@ -1656,13 +1634,20 @@
         "summary": "Saints & Sinners",
         "date": "2027-06-24T17:00-05:00[America/Chicago]",
         "url": "https://www.saintarnold.com/saints-sinners/"
+      },
+      {
+        "source": "saint-arnold-brewing-company",
+        "eventId": "saints-sinners-2027-06-25-0c154471",
+        "summary": "Saints & Sinners",
+        "date": "2027-06-25T20:00-05:00[America/Chicago]",
+        "url": "https://www.saintarnold.com/saints-sinners/"
       }
     ]
   },
   "costStats": {
-    "eventsWithCost": 591,
-    "freeEvents": 454,
-    "totalEvents": 1610,
+    "eventsWithCost": 608,
+    "freeEvents": 462,
+    "totalEvents": 1656,
     "unresolvable": 0
   },
   "costGaps": [
@@ -1857,33 +1842,33 @@
     },
     {
       "source": "docs-houston",
+      "eventId": "doc-s-presents-jason-marsalis-and-vanisha-gould-2026-07-02",
+      "summary": "Doc's Presents: Jason Marsalis and Vanisha Gould",
+      "date": "2026-07-02T19:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "docs-houston",
       "eventId": "doc-s-presents-the-music-of-sinatra-at-the-sands-with-wyatt-michael-and-the-graeme-francis-orchestra-2026-06-27",
       "summary": "Doc's Presents: The Music of \"Sinatra at the Sands\" with Wyatt Michael and The Graeme Francis Orchestra",
-      "date": "2026-06-27T19:30-05:00[America/Chicago]"
+      "date": "2026-06-27T19:00-05:00[America/Chicago]"
     },
     {
       "source": "docs-houston",
       "eventId": "miles-cannonball-a-tribute-to-two-jazz-giants-2026-07-01",
       "summary": "Miles & Cannonball: A Tribute to Two Jazz Giants",
-      "date": "2026-07-01T19:30-05:00[America/Chicago]"
-    },
-    {
-      "source": "docs-houston",
-      "eventId": "new-orleans-night-featuring-clarence-johnson-iii-2026-06-25",
-      "summary": "New Orleans Night Featuring Clarence Johnson III",
-      "date": "2026-06-25T19:30-05:00[America/Chicago]"
+      "date": "2026-07-01T19:00-05:00[America/Chicago]"
     },
     {
       "source": "docs-houston",
       "eventId": "the-cleo-fox-show-an-immersive-high-energy-musical-journey-2026-06-30",
       "summary": "The Cleo Fox Show: An Immersive, High-Energy Musical Journey!",
-      "date": "2026-06-30T19:30-05:00[America/Chicago]"
+      "date": "2026-06-30T19:00-05:00[America/Chicago]"
     },
     {
       "source": "docs-houston",
       "eventId": "we-want-the-funk-2026-06-26",
       "summary": "We Want The Funk!",
-      "date": "2026-06-26T19:30-05:00[America/Chicago]"
+      "date": "2026-06-26T19:00-05:00[America/Chicago]"
     },
     {
       "source": "ensemble-theatre-houston",
@@ -2067,6 +2052,13 @@
       "summary": "Rio Da Yung OG - The World is M.I.N.E. Tour",
       "date": "2026-07-25T19:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/rio-da-yung-og-the-world-houston-texas-07-25-2026/event/3A0064A1E261D24F"
+    },
+    {
+      "source": "house-of-blues-houston",
+      "eventId": "tm-G5dIZ_1DsTsSP",
+      "summary": "Starbomb: Probably The Only Tour Ever",
+      "date": "2026-09-25T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/starbomb-probably-the-only-tour-ever-houston-texas-09-25-2026/event/3A0064AEF1FF1CE5"
     },
     {
       "source": "house-of-blues-houston",
@@ -2945,13 +2937,6 @@
     },
     {
       "source": "mcgonigels-mucky-duck",
-      "eventId": "mcgonigels-31942",
-      "summary": "Irish Session",
-      "date": "2026-06-24T19:30-05:00[America/Chicago]",
-      "url": "https://www.mcgonigels.com/shows/irish-session-game-night-126/"
-    },
-    {
-      "source": "mcgonigels-mucky-duck",
       "eventId": "mcgonigels-32007",
       "summary": "Kate Waters, Hudson Mueller, Sarah Golden - Songwriters Night",
       "date": "2026-07-02T18:00-05:00[America/Chicago]",
@@ -3358,6 +3343,13 @@
     },
     {
       "source": "mcgonigels-mucky-duck",
+      "eventId": "mcgonigels-32615",
+      "summary": "Bob Schneider's Moonlight Trio",
+      "date": "2026-11-27T18:00-06:00[America/Chicago]",
+      "url": "https://www.mcgonigels.com/shows/bob-schneiders-moonlight-trio-early-show-jazz-inspired-holiday-set-houston-tx/"
+    },
+    {
+      "source": "mcgonigels-mucky-duck",
       "eventId": "mcgonigels-32622",
       "summary": "Candi Jenkins",
       "date": "2026-10-13T19:00-05:00[America/Chicago]",
@@ -3413,10 +3405,11 @@
       "url": "https://www.mcgonigels.com/shows/pat-byrne-band-early-show-7-10/"
     },
     {
-      "source": "mossrose-bookshop",
-      "eventId": "mossrose-book-club-2026-06-25",
-      "summary": "Mossrose Book Club",
-      "date": "2026-06-25T19:00-05:00[America/Chicago]"
+      "source": "mcgonigels-mucky-duck",
+      "eventId": "mcgonigels-32782",
+      "summary": "Dauzat St. Marie",
+      "date": "2026-08-20T20:30-05:00[America/Chicago]",
+      "url": "https://www.mcgonigels.com/shows/dauzat-st-marie-22/"
     },
     {
       "source": "murder-by-the-book",
@@ -3578,13 +3571,6 @@
       "summary": "Liza Treyger",
       "date": "2026-06-27T21:15-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/liza-treyger-houston-texas-06-27-2026/event/3A0064BA8C3158FA"
-    },
-    {
-      "source": "punch-line-comedy-club",
-      "eventId": "tm-G5dIZ_600ducX",
-      "summary": "Comedy Allstars",
-      "date": "2026-06-24T19:30-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/comedy-allstars-houston-texas-06-24-2026/event/3A006479240CDB7E"
     },
     {
       "source": "punch-line-comedy-club",
@@ -3840,6 +3826,13 @@
     },
     {
       "source": "punch-line-comedy-club",
+      "eventId": "tm-G5dIZ_aONFRc9",
+      "summary": "Rocky Dale Davis",
+      "date": "2026-09-25T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/rocky-dale-davis-houston-texas-09-25-2026/event/3A0064982322FB57"
+    },
+    {
+      "source": "punch-line-comedy-club",
       "eventId": "tm-G5dIZ_aONkRca",
       "summary": "Rocky Dale Davis",
       "date": "2026-09-24T19:30-05:00[America/Chicago]",
@@ -4026,20 +4019,6 @@
       "summary": "Von Decarlo",
       "date": "2026-07-02T19:30-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/von-decarlo-houston-texas-07-02-2026/event/3A0064680F644866"
-    },
-    {
-      "source": "rice-public-events",
-      "eventId": "20260625T050000Z-428337",
-      "summary": "Masako Miki: Shapeshifters, Sprites, and Spirits",
-      "date": "2026-06-25T10:00-05:00[America/Chicago]",
-      "url": "https://events.rice.edu/event/428337-masako-miki-shapeshifters-sprites-and-spirits"
-    },
-    {
-      "source": "rice-public-events",
-      "eventId": "20260625T190000Z-432092",
-      "summary": "Efficient Automatic Data Placement for GPU and CPU Tiered Memory Systems",
-      "date": "2026-06-25T19:00Z",
-      "url": "https://events.rice.edu/live/events/431887-efficient-automatic-data-placement-for-gpu-and-cpu"
     },
     {
       "source": "rice-public-events",
@@ -4841,13 +4820,6 @@
     },
     {
       "source": "saint-arnold-brewing-company",
-      "eventId": "saints-sinners-2026-06-25-4e37af20",
-      "summary": "Saints & Sinners",
-      "date": "2026-06-25T20:00-05:00[America/Chicago]",
-      "url": "https://www.saintarnold.com/saints-sinners/"
-    },
-    {
-      "source": "saint-arnold-brewing-company",
       "eventId": "saints-sinners-2027-06-08-b4ad5406",
       "summary": "Saints & Sinners",
       "date": "2027-06-08T19:00-05:00[America/Chicago]",
@@ -4900,6 +4872,13 @@
       "eventId": "saints-sinners-2027-06-24-3b7750e6",
       "summary": "Saints & Sinners",
       "date": "2027-06-24T17:00-05:00[America/Chicago]",
+      "url": "https://www.saintarnold.com/saints-sinners/"
+    },
+    {
+      "source": "saint-arnold-brewing-company",
+      "eventId": "saints-sinners-2027-06-25-0c154471",
+      "summary": "Saints & Sinners",
+      "date": "2027-06-25T20:00-05:00[America/Chicago]",
       "url": "https://www.saintarnold.com/saints-sinners/"
     },
     {
@@ -5086,6 +5065,13 @@
     },
     {
       "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_5V0gWAz",
+      "summary": "French Police",
+      "date": "2026-09-25T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/french-police-houston-texas-09-25-2026/event/3A0064BD24D7D178"
+    },
+    {
+      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_5z2c1wx",
       "summary": "Mari Froes",
       "date": "2026-09-09T19:00-05:00[America/Chicago]",
@@ -5170,6 +5156,13 @@
     },
     {
       "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_ajh0VsC",
+      "summary": "Death Lens  ''What's Left Now?'' Tour",
+      "date": "2026-09-25T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/death-lens-whats-left-now-tour-houston-texas-09-25-2026/event/3A0064971B934C4E"
+    },
+    {
+      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_aQY7vDf",
       "summary": "Sleepytime Gorilla Museum",
       "date": "2026-07-31T18:00-05:00[America/Chicago]",
@@ -5237,13 +5230,6 @@
       "summary": "The Body",
       "date": "2026-08-01T19:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/the-body-houston-texas-08-01-2026/event/3A006483D087B4BF"
-    },
-    {
-      "source": "white-oak-music-hall",
-      "eventId": "tm-G5dIZ_FbAdW7E",
-      "summary": "Vacation Manor",
-      "date": "2026-06-24T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/vacation-manor-houston-texas-06-24-2026/event/3A006486050FD127"
     },
     {
       "source": "white-oak-music-hall",
@@ -5544,7 +5530,7 @@
     {
       "name": "house-of-blues-houston-house-of-blues-houston",
       "type": "Ripper",
-      "events": 42,
+      "events": 43,
       "expectEmpty": false,
       "source": "house-of-blues-houston"
     },
@@ -5593,7 +5579,7 @@
     {
       "name": "mcgonigels-mucky-duck-mcgonigels-mucky-duck",
       "type": "Ripper",
-      "events": 96,
+      "events": 97,
       "expectEmpty": false,
       "source": "mcgonigels-mucky-duck"
     },
@@ -5621,7 +5607,7 @@
     {
       "name": "project-row-houses-project-row-houses",
       "type": "Ripper",
-      "events": 392,
+      "events": 388,
       "expectEmpty": false,
       "source": "project-row-houses"
     },
@@ -5635,7 +5621,7 @@
     {
       "name": "rice-public-events-rice-public-events",
       "type": "Ripper",
-      "events": 116,
+      "events": 114,
       "expectEmpty": false,
       "source": "rice-public-events"
     },
@@ -5677,14 +5663,14 @@
     {
       "name": "the-secret-group-the-secret-group",
       "type": "Ripper",
-      "events": 88,
+      "events": 109,
       "expectEmpty": false,
       "source": "the-secret-group"
     },
     {
       "name": "white-oak-music-hall-white-oak-music-hall",
       "type": "Ripper",
-      "events": 74,
+      "events": 75,
       "expectEmpty": false,
       "source": "white-oak-music-hall"
     },
@@ -5698,14 +5684,14 @@
     {
       "name": "tag-the-heights",
       "type": "Aggregate",
-      "events": 81,
+      "events": 80,
       "expectEmpty": false,
       "source": "tag-the-heights"
     },
     {
       "name": "tag-upper-kirby",
       "type": "Aggregate",
-      "events": 110,
+      "events": 109,
       "expectEmpty": false,
       "source": "tag-upper-kirby"
     },
@@ -5719,7 +5705,7 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 608,
+      "events": 643,
       "expectEmpty": false,
       "source": "tag-music"
     },
@@ -5733,7 +5719,7 @@
     {
       "name": "tag-downtown",
       "type": "Aggregate",
-      "events": 175,
+      "events": 176,
       "expectEmpty": false,
       "source": "tag-downtown"
     },
@@ -5747,14 +5733,14 @@
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 463,
+      "events": 457,
       "expectEmpty": false,
       "source": "tag-community"
     },
     {
       "name": "tag-montrose",
       "type": "Aggregate",
-      "events": 363,
+      "events": 395,
       "expectEmpty": false,
       "source": "tag-montrose"
     },
@@ -5768,7 +5754,7 @@
     {
       "name": "tag-eado",
       "type": "Aggregate",
-      "events": 122,
+      "events": 143,
       "expectEmpty": false,
       "source": "tag-eado"
     },
@@ -5782,14 +5768,14 @@
     {
       "name": "tag-art",
       "type": "Aggregate",
-      "events": 523,
+      "events": 517,
       "expectEmpty": false,
       "source": "tag-art"
     },
     {
       "name": "tag-museum-district",
       "type": "Aggregate",
-      "events": 145,
+      "events": 143,
       "expectEmpty": false,
       "source": "tag-museum-district"
     },
@@ -5810,7 +5796,7 @@
     {
       "name": "tag-education",
       "type": "Aggregate",
-      "events": 193,
+      "events": 191,
       "expectEmpty": false,
       "source": "tag-education"
     },
@@ -5866,7 +5852,7 @@
     {
       "name": "tag-comedy",
       "type": "Aggregate",
-      "events": 176,
+      "events": 197,
       "expectEmpty": false,
       "source": "tag-comedy"
     },
@@ -5880,21 +5866,21 @@
     {
       "name": "tag-third-ward",
       "type": "Aggregate",
-      "events": 397,
+      "events": 393,
       "expectEmpty": false,
       "source": "tag-third-ward"
     },
     {
       "name": "tag-beer",
       "type": "Aggregate",
-      "events": 72,
+      "events": 71,
       "expectEmpty": false,
       "source": "tag-beer"
     },
     {
       "name": "tag-near-northside",
       "type": "Aggregate",
-      "events": 122,
+      "events": 123,
       "expectEmpty": false,
       "source": "tag-near-northside"
     },
@@ -5950,7 +5936,7 @@
     {
       "name": "tag-parks",
       "type": "Aggregate",
-      "events": 52,
+      "events": 50,
       "expectEmpty": false,
       "source": "tag-parks"
     },
@@ -5992,7 +5978,7 @@
     {
       "name": "tag-outdoor-recreation",
       "type": "Aggregate",
-      "events": 13,
+      "events": 11,
       "expectEmpty": false,
       "source": "tag-outdoor-recreation"
     },
@@ -6013,14 +5999,14 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1670,
+      "events": 1717,
       "expectEmpty": false,
       "source": "tag-all"
     },
     {
       "name": "external-axelrad-beer-garden",
       "type": "External",
-      "events": 4989,
+      "events": 5027,
       "expectEmpty": false,
       "source": "axelrad-beer-garden"
     },
@@ -6048,7 +6034,7 @@
     {
       "name": "external-eureka-heights-brew-co",
       "type": "External",
-      "events": 15,
+      "events": 14,
       "expectEmpty": false,
       "source": "eureka-heights-brew-co"
     },
@@ -6111,7 +6097,7 @@
     {
       "name": "external-levy-park-houston",
       "type": "External",
-      "events": 14,
+      "events": 12,
       "expectEmpty": false,
       "source": "levy-park-houston"
     },
@@ -6121,13 +6107,6 @@
       "events": 7,
       "expectEmpty": false,
       "source": "tuts"
-    },
-    {
-      "name": "external-walking-stick-brewing",
-      "type": "External",
-      "events": 0,
-      "expectEmpty": false,
-      "source": "walking-stick-brewing"
     }
   ]
 }
