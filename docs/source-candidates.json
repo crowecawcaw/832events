@@ -1722,5 +1722,58 @@
     "firstSeen": "2026-06-24",
     "lastChecked": "2026-06-24",
     "notes": "6+ productions annually; 2026-27 season announced; major performing arts venue"
+  },
+  {
+    "name": "Heights Mercantile Farmers Market",
+    "status": "added",
+    "platform": "Squarespace",
+    "url": "https://www.heightsmercantile.com/events",
+    "tags": [
+      "FarmersMarket",
+      "Community",
+      "The Heights"
+    ],
+    "firstSeen": "2026-06-25",
+    "lastChecked": "2026-06-25",
+    "notes": "Squarespace calendar with JSON endpoint (?format=json) verified; 3 upcoming recurring farmer's market events; The Heights location",
+    "pr": "TBD",
+    "impl": {
+      "type": "squarespace",
+      "observedEventCount": 3,
+      "builtEventCount": 3,
+      "geo": {
+        "lat": 29.7837881,
+        "lng": -95.398618,
+        "label": "Heights Mercantile Farmers Market, 714 Yale Street, Houston, TX 77007"
+      }
+    }
+  },
+  {
+    "name": "Houston Area Urban League (HAUL)",
+    "status": "investigating",
+    "platform": "Custom calendar (Eventer plugin)",
+    "url": "https://www.haul.org/events/",
+    "tags": [
+      "Community",
+      "Education",
+      "Arts"
+    ],
+    "firstSeen": "2026-06-25",
+    "lastChecked": "2026-06-25",
+    "notes": "WordPress + Eventer calendar plugin; community organization with ongoing programming; no Tribe Events ICS feed detected"
+  },
+  {
+    "name": "Jewish Federation of Greater Houston",
+    "status": "investigating",
+    "platform": "Custom calendar (WordPress)",
+    "url": "https://www.houstonjewish.org/community/community-calendar/",
+    "tags": [
+      "Community",
+      "Arts",
+      "Cultural"
+    ],
+    "firstSeen": "2026-06-25",
+    "lastChecked": "2026-06-25",
+    "notes": "WordPress site with custom calendar; community organization; would require custom ripper or investigation of available APIs"
   }
 ]
