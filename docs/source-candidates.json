@@ -1795,5 +1795,52 @@
     "firstSeen": "2026-06-25",
     "lastChecked": "2026-06-25",
     "notes": "WordPress site with custom calendar; community organization; would require custom ripper or investigation of available APIs"
+  },
+  {
+    "name": "Houston Zoo",
+    "status": "candidate",
+    "platform": "Custom website calendar",
+    "url": "https://www.houstonzoo.org/plan-your-visit/calendar/",
+    "tags": [
+      "Animals",
+      "Family",
+      "Nature",
+      "Hermann Park"
+    ],
+    "firstSeen": "2026-06-27",
+    "lastChecked": "2026-06-27",
+    "notes": "Zoo events calendar with Red, White & Zoo, TXU Energy Mythical Realms, special programming. No ICS feed or Eventbrite found. Would require custom HTML scraper."
+  },
+  {
+    "name": "Space Center Houston",
+    "status": "candidate",
+    "platform": "Mixed platform (CircuitTree, custom ticketing)",
+    "url": "https://spacecenter.org/events/",
+    "tags": [
+      "Education",
+      "Science",
+      "Space",
+      "NASA",
+      "Family"
+    ],
+    "firstSeen": "2026-06-27",
+    "lastChecked": "2026-06-27",
+    "notes": "Events listed on custom calendar with external ticketing via CircuitTree Events and Space Center ticketing. No unified ICS feed. Would require custom scraper or investigation of CircuitTree API."
+  },
+  {
+    "name": "POST Houston",
+    "status": "candidate",
+    "platform": "Custom HTML calendar with Eventrill ticketing",
+    "url": "https://posthtx.com/event",
+    "tags": [
+      "Art",
+      "Music",
+      "Nightlife",
+      "Food",
+      "Downtown"
+    ],
+    "firstSeen": "2026-06-27",
+    "lastChecked": "2026-06-27",
+    "notes": "Art complex with rooftop venues, DJ nights, cultural programming. Custom web calendar with external Eventrill ticketing. No ICS feed. HTML scraper feasible."
   }
 ]
