@@ -1683,17 +1683,25 @@
   },
   {
     "name": "HTXoutdoors",
-    "status": "candidate",
-    "platform": "Custom calendar",
+    "status": "added",
+    "platform": "Event Espresso 4 (custom JSON API)",
     "url": "https://htxoutdoors.com/",
     "tags": [
       "OutdoorRecreation",
       "Hiking",
-      "Sports"
+      "Sports",
+      "Community"
     ],
     "firstSeen": "2026-06-24",
-    "lastChecked": "2026-06-24",
-    "notes": "30+ events/month; Houston's outdoor adventure platform; hiking, kayaking, trail runs"
+    "lastChecked": "2026-06-26",
+    "pr": "claude/source-pipeline-2026-06-26",
+    "impl": {
+      "type": "custom",
+      "observedEventCount": 33,
+      "builtEventCount": 33,
+      "note": "Event Espresso 4 AJAX API; 33 upcoming outdoor recreation events (hiking, kayaking, trail runs, etc.)",
+      "geo": null
+    }
   },
   {
     "name": "WorldFest-Houston Film Festival",
@@ -1711,17 +1719,29 @@
   },
   {
     "name": "Houston Grand Opera",
-    "status": "candidate",
-    "platform": "Custom ticketing",
-    "url": "https://www.houstongrandopera.org/",
+    "status": "added",
+    "platform": "Next.js/DatoCMS with embedded JSON",
+    "url": "https://www.houstongrandopera.org/on-stage",
     "tags": [
       "Opera",
       "PerformingArts",
-      "Music"
+      "Music",
+      "Downtown"
     ],
     "firstSeen": "2026-06-24",
-    "lastChecked": "2026-06-24",
-    "notes": "6+ productions annually; 2026-27 season announced; major performing arts venue"
+    "lastChecked": "2026-06-26",
+    "pr": "claude/source-pipeline-2026-06-26",
+    "impl": {
+      "type": "custom",
+      "observedEventCount": 11,
+      "builtEventCount": 11,
+      "note": "DatoCMS-backed Next.js site; 11 productions and special events for 2026-27 season; fixed venue (Wortham Theater Center)",
+      "geo": {
+        "lat": 29.7237,
+        "lng": -95.3937,
+        "label": "Wortham Theater Center, 500 Main St, Houston, TX 77002"
+      }
+    }
   },
   {
     "name": "Heights Mercantile Farmers Market",
