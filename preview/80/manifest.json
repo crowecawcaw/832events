@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-27T10:08:16.140Z",
+  "lastUpdated": "2026-06-27T13:48:01.842Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -128,6 +128,24 @@
       ]
     },
     {
+      "name": "heights-mercantile",
+      "description": "Heights Mercantile Farmers Market",
+      "friendlyLink": "https://www.heightsmercantile.com/events",
+      "calendars": [
+        {
+          "name": "heights-mercantile",
+          "friendlyName": "Heights Mercantile Farmers Market",
+          "icsUrl": "heights-mercantile-heights-mercantile.ics",
+          "rssUrl": "heights-mercantile-heights-mercantile.rss",
+          "tags": [
+            "FarmersMarket",
+            "Community",
+            "The Heights"
+          ]
+        }
+      ]
+    },
+    {
       "name": "house-of-blues-houston",
       "description": "House of Blues Houston",
       "friendlyLink": "https://houston.houseofblues.com/",
@@ -158,6 +176,63 @@
             "Arts",
             "Photography",
             "Montrose"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "houston-grand-opera",
+      "description": "Houston Grand Opera",
+      "friendlyLink": "https://www.houstongrandopera.org/on-stage",
+      "calendars": [
+        {
+          "name": "houston-grand-opera",
+          "friendlyName": "Houston Grand Opera",
+          "icsUrl": "houston-grand-opera-houston-grand-opera.ics",
+          "rssUrl": "houston-grand-opera-houston-grand-opera.rss",
+          "tags": [
+            "PerformingArts",
+            "Opera",
+            "Music",
+            "Downtown"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "houston-zoo",
+      "description": "Houston Zoo",
+      "friendlyLink": "https://www.houstonzoo.org/plan-your-visit/calendar/",
+      "calendars": [
+        {
+          "name": "houston-zoo",
+          "friendlyName": "Houston Zoo",
+          "icsUrl": "houston-zoo-houston-zoo.ics",
+          "rssUrl": "houston-zoo-houston-zoo.rss",
+          "tags": [
+            "Animals",
+            "Family",
+            "Parks",
+            "Museum District"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "htxoutdoors",
+      "description": "HTXoutdoors",
+      "friendlyLink": "https://htxoutdoors.com/events-calendar/",
+      "calendars": [
+        {
+          "name": "htxoutdoors",
+          "friendlyName": "HTXoutdoors",
+          "icsUrl": "htxoutdoors-htxoutdoors.ics",
+          "rssUrl": "htxoutdoors-htxoutdoors.rss",
+          "tags": [
+            "Outdoor Recreation",
+            "Hiking",
+            "Sports",
+            "Community"
           ]
         }
       ]
@@ -261,6 +336,26 @@
           "tags": [
             "Books",
             "West University"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "post-houston",
+      "description": "POST Houston",
+      "friendlyLink": "https://posthtx.com/event",
+      "calendars": [
+        {
+          "name": "post-houston",
+          "friendlyName": "POST Houston",
+          "icsUrl": "post-houston-post-houston.ics",
+          "rssUrl": "post-houston-post-houston.rss",
+          "tags": [
+            "Art",
+            "Music",
+            "Nightlife",
+            "Food",
+            "Downtown"
           ]
         }
       ]
@@ -600,6 +695,7 @@
     }
   ],
   "tags": [
+    "Animals",
     "Art",
     "Arts",
     "Beer",
@@ -613,10 +709,12 @@
     "EaDo",
     "Education",
     "Entertainment",
+    "Family",
     "FarmersMarket",
     "Food",
     "FoodFestival",
     "Hermann Park",
+    "Hiking",
     "Jazz",
     "MakersMarket",
     "Memorial",
@@ -627,9 +725,12 @@
     "Music",
     "Near Northside",
     "Nightlife",
+    "Opera",
     "Outdoor Recreation",
     "Parks",
+    "PerformingArts",
     "Photography",
+    "Sports",
     "Tech",
     "The Heights",
     "Theatre",

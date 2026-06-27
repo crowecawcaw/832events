@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-27T10:08:21.209Z",
+  "generated": "2026-06-27T13:48:06.519Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -394,6 +394,42 @@
       ]
     },
     {
+      "name": "heights-mercantile",
+      "friendlyName": "Heights Mercantile Farmers Market",
+      "description": "Heights Mercantile Farmers Market",
+      "url": "https://www.heightsmercantile.com/events",
+      "tags": [
+        "FarmersMarket",
+        "Community",
+        "The Heights"
+      ],
+      "geo": {
+        "lat": 29.7837881,
+        "lng": -95.398618,
+        "label": "Heights Mercantile Farmers Market, 714 Yale Street, Houston, TX 77007"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Heights%20Mercantile%20Farmers%20Market%2C%20714%20Yale%20Street%2C%20Houston%2C%20TX%2077007"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "heights-mercantile",
+          "friendlyName": "Heights Mercantile Farmers Market",
+          "links": {
+            "ics": {
+              "href": "heights-mercantile-heights-mercantile.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "heights-mercantile-heights-mercantile.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "hermann-park",
       "friendlyName": "Hermann Park Conservancy",
       "description": "Hermann Park Conservancy",
@@ -607,6 +643,43 @@
       ]
     },
     {
+      "name": "houston-grand-opera",
+      "friendlyName": "Houston Grand Opera",
+      "description": "Houston Grand Opera",
+      "url": "https://www.houstongrandopera.org/on-stage",
+      "tags": [
+        "PerformingArts",
+        "Opera",
+        "Music",
+        "Downtown"
+      ],
+      "geo": {
+        "lat": 29.7237,
+        "lng": -95.3937,
+        "label": "Wortham Theater Center, 500 Main St, Houston, TX 77002"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Wortham%20Theater%20Center%2C%20500%20Main%20St%2C%20Houston%2C%20TX%2077002"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "houston-grand-opera",
+          "friendlyName": "Houston Grand Opera",
+          "links": {
+            "ics": {
+              "href": "houston-grand-opera-houston-grand-opera.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "houston-grand-opera-houston-grand-opera.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "houston-heights-association",
       "friendlyName": "Houston Heights Association",
       "description": "Houston Heights Association",
@@ -634,6 +707,43 @@
             },
             "rss": {
               "href": "external-houston-heights-association.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "houston-zoo",
+      "friendlyName": "Houston Zoo",
+      "description": "Houston Zoo",
+      "url": "https://www.houstonzoo.org/plan-your-visit/calendar/",
+      "tags": [
+        "Animals",
+        "Family",
+        "Parks",
+        "Museum District"
+      ],
+      "geo": {
+        "lat": 29.7174,
+        "lng": -95.391,
+        "label": "Houston Zoo, 6200 Hermann Park Drive, Houston, TX 77030"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Houston%20Zoo%2C%206200%20Hermann%20Park%20Drive%2C%20Houston%2C%20TX%2077030"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "houston-zoo",
+          "friendlyName": "Houston Zoo",
+          "links": {
+            "ics": {
+              "href": "houston-zoo-houston-zoo.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "houston-zoo-houston-zoo.rss",
               "type": "application/rss+xml"
             }
           }
@@ -918,6 +1028,44 @@
             },
             "rss": {
               "href": "murder-by-the-book-murder-by-the-book.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "post-houston",
+      "friendlyName": "POST Houston",
+      "description": "POST Houston",
+      "url": "https://posthtx.com/event",
+      "tags": [
+        "Art",
+        "Music",
+        "Nightlife",
+        "Food",
+        "Downtown"
+      ],
+      "geo": {
+        "lat": 29.7569,
+        "lng": -95.3594,
+        "label": "POST Houston, 510 Main St, Houston, TX 77002"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=POST%20Houston%2C%20510%20Main%20St%2C%20Houston%2C%20TX%2077002"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "post-houston",
+          "friendlyName": "POST Houston",
+          "links": {
+            "ics": {
+              "href": "post-houston-post-houston.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "post-houston-post-houston.rss",
               "type": "application/rss+xml"
             }
           }

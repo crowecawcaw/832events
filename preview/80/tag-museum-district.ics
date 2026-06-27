@@ -6,13 +6,32 @@ METHOD:PUBLISH
 X-WR-CALNAME:Museum District Events
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://s28164.pcdn.co/file
+ s/MythicalRealms2026_Logo_Webpage-300x200.png
+ATTACH;FMTTYPE=image/png:https://s28164.pcdn.co/files/MythicalRealms2026_Lo
+ go_Webpage-300x200.png
+UID:QIAsx1oBKse6fyWZtwFMA
+SUMMARY:TXU Energy presents Mythical Realms
+DTSTAMP:20260627T134754Z
+DTSTART:20260306T160000Z
+DESCRIPTION:https://www.houstonzoo.org/events/txu-energy-presents-mythical-
+	realms/\n\nFrom Houston Zoo
+URL:https://www.houstonzoo.org/events/txu-energy-presents-mythical-realms/
+GEO:29.7174;-95.391
+LOCATION:6200 Hermann Park Drive\, Houston\, TX 77030
+X-CALRIPPER-SOURCE:houston-zoo
+CATEGORIES:Houston Zoo
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
 IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://www.erjcchouston.or
  g/wp-content/uploads/2025/11/Email-Banners-2025-12.png
 ATTACH;FMTTYPE=image/png:https://www.erjcchouston.org/wp-content/uploads/20
  25/11/Email-Banners-2025-12.png
-UID:0RJRLFcdXHsDSDj-qcgUh
+UID:XHEHarSYdFeHYJ0_mkP_U
 SUMMARY:Open Gym & Tot Shabbat
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260626T100000Z
 DESCRIPTION:For kids ages 0-5 and their families \nCelebrate Shabbat with y
 	our friends and family with open gym in the gymnastics center followed by 
@@ -30,6 +49,25 @@ TRANSP:TRANSPARENT
 DURATION:PT1H
 END:VEVENT
 BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s28164.pcdn.co/fil
+ es/20260228-DSC_0282-300x200.jpg
+ATTACH;FMTTYPE=image/jpeg:https://s28164.pcdn.co/files/20260228-DSC_0282-30
+ 0x200.jpg
+UID:fbkZ1xXrDbHKYqp9OW5Z-
+SUMMARY:Neighbors for Nature – June 27
+DTSTAMP:20260627T134754Z
+DTSTART:20260627T150000Z
+DESCRIPTION:https://www.houstonzoo.org/events/neighbors-for-nature-june/\n\
+	nFrom Houston Zoo
+URL:https://www.houstonzoo.org/events/neighbors-for-nature-june/
+GEO:29.7174;-95.391
+LOCATION:6200 Hermann Park Drive\, Houston\, TX 77030
+X-CALRIPPER-SOURCE:houston-zoo
+CATEGORIES:Houston Zoo
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
 IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://events.rice.edu/liv
  e/image/gid/171/width/80/height/80/crop/1/src_region/0/,0/,1600/,1066/1206
  7_Masako_Miki_Waiting_Cloud_Courtesy_of_the_artist_and_Jessica_Silverman._
@@ -38,9 +76,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:wz4y57T_QYAOFDZ4nyz2j
+UID:n8b0x65UIXm50-xHmmXmX
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260627T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -66,9 +104,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://events.rice.edu/liv
 ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12071_Moody_Center_for_the_
  Arts.rev.1776545783.png
-UID:eEtzDpIA8Ymy_VKwtD8Js
+UID:sCe6k4hDVXxZWajLjsHBu
 SUMMARY:ArtLab: Felted Charms
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260627T180000Z
 DESCRIPTION:https://events.rice.edu/event/428408-artlab-felted-charms\n\nFr
 	om Rice University - Open to the Public
@@ -85,9 +123,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://hermannpark.org/wp
  -content/uploads/2026/05/P1011987-scaled-e1779221087349.jpg
 ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2026/0
  5/P1011987-scaled-e1779221087349.jpg
-UID:99HfaMIH5zwDKEPU5I2V7
+UID:unTmJExvjztkf4INRYcyZ
 SUMMARY:Moonlight Movie Nights: Lilo & Stitch
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260627T203000Z
 DESCRIPTION:As part of this summer’s Kicking It at Hermann Park offerings\,
 	 enjoy “Moonlight Movie Nights\,” presented by Goya\, in the Commons! On S
@@ -116,9 +154,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:aEumDDf3OEEUSi9GGsvxp
+UID:pB60FzjhGhfwqGiLqg1uG
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260628T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -146,9 +184,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:Lu37LcQkFNbuXV-AJtuY-
+UID:1611n-VR5Loh3fLKwpBmZ
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260629T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -176,9 +214,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:zdvdRsOLokg7tnJuM-6Z2
+UID:Q4VXXeFaOPa6uBxxFoU-d
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260630T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -202,10 +240,10 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://inprinthouston.org
  /wp-content/uploads/2026/02/Cant-We-Talk-About-Something-More-Pleasant.jpg
 ATTACH;FMTTYPE=image/jpeg:https://inprinthouston.org/wp-content/uploads/202
  6/02/Cant-We-Talk-About-Something-More-Pleasant.jpg
-UID:Wl3r68lw2ABNHuGhirfY0
+UID:qk47doLJl7tW3NIOtXe3N
 SUMMARY:Inprint BCM HEAL Book Club discusses Can't We Talk About Something 
 	More Pleasant?
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260630T183000Z
 DESCRIPTION:This Inprint BCM HEAL Book Club meeting will take place via Zoo
 	m. The Zoom link will be the same for every meeting and will be provided i
@@ -233,9 +271,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://hermannpark.org/wp
  -content/uploads/2026/02/Pitch-in-at-Hermann-Park-e1772040133699.jpg
 ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2026/0
  2/Pitch-in-at-Hermann-Park-e1772040133699.jpg
-UID:nWKhcEEW9x-VvrQVlqJ6Y
+UID:TQs0Qe4YPotD45LIuEP6u
 SUMMARY:Pitch in at Hermann Park
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260701T083000Z
 DESCRIPTION:Give the Park you love a little extra care\, and help us get re
 	ady for the world! Join us for “Pitch in at Hermann Park\,” a hands-on vol
@@ -280,9 +318,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:Pm20p7JdiYFBZT7dx_Y9f
+UID:KNyhLbKgGXY4uSkBjVMrZ
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260701T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -302,10 +340,10 @@ TRANSP:TRANSPARENT
 DURATION:PT8H
 END:VEVENT
 BEGIN:VEVENT
-UID:4njKNoHv90KKOS_R0XsdM
+UID:fUY8762fPhZW6apsJPnLf
 SUMMARY:Overcoming barriers to point-of-care nucleic acid amplification tes
 	ting
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260701T180000Z
 DESCRIPTION:In this thesis I address aspects of three key bottlenecks limit
 	ing clinical translation of isothermal nucleic acid amplification tests (i
@@ -362,9 +400,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://hermannpark.org/wp
  ed.jpg
 ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2024/0
  4/japanese_garden_2__-_photo_by_patrick_talley-scaled.jpg
-UID:A7LH5NJhHyDAskVU51S6J
+UID:G-VqlUERAlcNsGo_nJEPS
 SUMMARY:Japanese Garden Volunteer Day
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260702T090000Z
 DESCRIPTION:Join us every Thursday for hands-on gardening projects at the J
 	apanese Garden. From 9 a.m. to 12 p.m.\, come help with seasonal tasks lik
@@ -389,9 +427,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:SQP4wk3VFGXBqxBsQF3na
+UID:TX_Yq_1g7pIDx6BvBfI9W
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260702T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -411,10 +449,10 @@ TRANSP:TRANSPARENT
 DURATION:PT8H
 END:VEVENT
 BEGIN:VEVENT
-UID:o9wES8JByKhnSBvJV6lBL
+UID:XyN8hLvWtEYBAtu5P_m46
 SUMMARY:"Còn nước\, còn tát": The Ebbs and Flows of Water across Vietnamese
 	 Anglophone Cultural Production
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260702T180000Z
 DESCRIPTION:&#160\;  Speaker: Karen Siu  Doctoral Candidate  Thesis Defense
 	  Department: English  Location: Herring Hall 255  As a child and grandchi
@@ -462,10 +500,10 @@ TRANSP:TRANSPARENT
 DURATION:PT1H
 END:VEVENT
 BEGIN:VEVENT
-UID:1YQ5jCI3ilZBT2RE8WrfN
+UID:qx8z1vw7qWuHsgUPjry_f
 SUMMARY:Novel Computational Representations of TCRs and pMHCs Incorporating
 	 Structural Information for Translational Applications
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260703T140000Z
 DESCRIPTION:&#160\;  Speaker: Jared Slone  Doctoral Candidate  Thesis Defen
 	se  Department: Computer Science  Location: Duncan Hall 1049  The ability 
@@ -519,6 +557,25 @@ TRANSP:TRANSPARENT
 DURATION:PT1H
 END:VEVENT
 BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s28164.pcdn.co/fil
+ es/BaldEagle_Sally_Resize-Marketing-2-300x200.jpg
+ATTACH;FMTTYPE=image/jpeg:https://s28164.pcdn.co/files/BaldEagle_Sally_Resi
+ ze-Marketing-2-300x200.jpg
+UID:ttiCuNLo6U2kOwdvrC9O7
+SUMMARY:Red\, White & Zoo – Celebrating America’s 250th at Houston Zoo
+DTSTAMP:20260627T134754Z
+DTSTART:20260703T150000Z
+DESCRIPTION:https://www.houstonzoo.org/events/red-white-zoo/\n\nFrom Housto
+	n Zoo
+URL:https://www.houstonzoo.org/events/red-white-zoo/
+GEO:29.7174;-95.391
+LOCATION:6200 Hermann Park Drive\, Houston\, TX 77030
+X-CALRIPPER-SOURCE:houston-zoo
+CATEGORIES:Houston Zoo
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
 IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://events.rice.edu/liv
  e/image/gid/171/width/80/height/80/crop/1/src_region/0/,0/,1600/,1066/1206
  7_Masako_Miki_Waiting_Cloud_Courtesy_of_the_artist_and_Jessica_Silverman._
@@ -527,9 +584,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:6d4m7UyYQ0x9hOBUCJMx3
+UID:NKjT_0De7eFRDdJhrEcY_
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260703T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -549,9 +606,9 @@ TRANSP:TRANSPARENT
 DURATION:PT8H
 END:VEVENT
 BEGIN:VEVENT
-UID:k28YXKt0Zd2zB8KxB9Krg
+UID:A1oobphBip4NFiej0ru1B
 SUMMARY:Real and reciprocal space topology in rare earth intermetallics
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260703T150000Z
 DESCRIPTION:&#160\;  Speaker: Kevin Allen  Doctoral Candidate  Thesis Defen
 	se  Department: Physics &amp\; Astronomy  Location: Brockman Hall for Phys
@@ -635,9 +692,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://hermannpark.org/wp
  -content/uploads/2026/05/P1011987-scaled-e1779221087349.jpg
 ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2026/0
  5/P1011987-scaled-e1779221087349.jpg
-UID:zzS5OuVUHhB6GFVpcD1ks
+UID:A01y22Q4u8aPNqRwsBotY
 SUMMARY:Moonlight Movie Nights: National Treasure
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260703T203000Z
 DESCRIPTION:As part of this summer’s Kicking It at Hermann Park offerings\,
 	 enjoy “Moonlight Movie Nights\,” presented by Goya\, in the Commons! On F
@@ -658,6 +715,25 @@ TRANSP:TRANSPARENT
 DURATION:PT2H
 END:VEVENT
 BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s28164.pcdn.co/fil
+ es/Alligators-at-Armand-Bayou-0002-1586-1-e1556030655569-300x200.jpg
+ATTACH;FMTTYPE=image/jpeg:https://s28164.pcdn.co/files/Alligators-at-Armand
+ -Bayou-0002-1586-1-e1556030655569-300x200.jpg
+UID:K2xW-83Rtt0TI3mQppdBp
+SUMMARY:July Member Morning
+DTSTAMP:20260627T134754Z
+DTSTART:20260704T130000Z
+DESCRIPTION:https://www.houstonzoo.org/events/july-member-morning-2026/\n\n
+	From Houston Zoo
+URL:https://www.houstonzoo.org/events/july-member-morning-2026/
+GEO:29.7174;-95.391
+LOCATION:6200 Hermann Park Drive\, Houston\, TX 77030
+X-CALRIPPER-SOURCE:houston-zoo
+CATEGORIES:Houston Zoo
+TRANSP:TRANSPARENT
+DURATION:PT1H
+END:VEVENT
+BEGIN:VEVENT
 IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://events.rice.edu/liv
  e/image/gid/171/width/80/height/80/crop/1/src_region/0/,0/,1600/,1066/1206
  7_Masako_Miki_Waiting_Cloud_Courtesy_of_the_artist_and_Jessica_Silverman._
@@ -666,9 +742,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:m3pzDsZg54_XF50ouy7M8
+UID:V1xtx6wk-8zZeLjfE00bE
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260704T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -692,9 +768,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://hermannpark.org/wp
  -content/uploads/2026/06/Red-White-Bloom-V2.jpg
 ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2026/0
  6/Red-White-Bloom-V2.jpg
-UID:l-Ub4ArOYW4EAvTQmWZ8a
+UID:6U-QOvmSOf-mXDrtPiASp
 SUMMARY:Red\, White & Bloom
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260704T200000Z
 DESCRIPTION:Celebrate the Fourth of July surrounded by beautiful blooms\, f
 	estive fun\, and one of Houston’s most beloved fireworks displays! Join us
@@ -726,9 +802,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://hermannpark.org/wp
  -content/uploads/2026/06/Red-White-Cruise-2026.jpg
 ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2026/0
  6/Red-White-Cruise-2026.jpg
-UID:HOjAuFgzgKB8pIOtpob39
+UID:aSkCiQC3khTs-GNNIr3To
 SUMMARY:Red\, White & Cruise
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260704T203000Z
 DESCRIPTION:Join us for Red\, White & Cruise where you can watch Miller Out
 	door Theatre’s fireworks show light up the sky from the peaceful waters of
@@ -776,9 +852,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:jRknQbPuuOgj-9MCD4u--
+UID:5UaQn7xqWcmW7URniHHsG
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260705T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -806,9 +882,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:0xDP_1D5C-SKLo5wGsPbt
+UID:jqMN5076n8FYAHOErRAtP
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260706T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -836,9 +912,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:FwwM2r5NHi4EhyY0cSTYM
+UID:Uvs6MwmaW1Q24ZAT-vaoC
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260707T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -862,9 +938,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://hermannpark.org/wp
  -content/uploads/2026/02/Pitch-in-at-Hermann-Park-e1772040133699.jpg
 ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2026/0
  2/Pitch-in-at-Hermann-Park-e1772040133699.jpg
-UID:IA-CIlq5VePdnBRSt62Uh
+UID:nqQ9ysab3Y512wiWV6XU-
 SUMMARY:Pitch in at Hermann Park
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260708T083000Z
 DESCRIPTION:Give the Park you love a little extra care\, and help us get re
 	ady for the world! Join us for “Pitch in at Hermann Park\,” a hands-on vol
@@ -909,9 +985,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:4gbEhII0tvvoyVDZDulz7
+UID:bjh2JGQGryst8Z5Nvm40y
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260708T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -931,10 +1007,10 @@ TRANSP:TRANSPARENT
 DURATION:PT8H
 END:VEVENT
 BEGIN:VEVENT
-UID:NMCGQUxPEpTDBVLLCAtlg
+UID:VIRXl264uoQrcHYoaRw_o
 SUMMARY:Frame of Reference in UAV Search and Rescue: Exocentric vs. Egocent
 	ric View for Navigation\, Target Detection\, and Collision Awareness
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260708T160000Z
 DESCRIPTION:&#160\;  Speaker: Yining Zhang  Masters Candidate  Thesis Defen
 	se  Department: Psychology  Unmanned Aerial Systems (UASs) have enabled se
@@ -973,10 +1049,10 @@ TRANSP:TRANSPARENT
 DURATION:PT1H
 END:VEVENT
 BEGIN:VEVENT
-UID:Wi9LnDUwT1H0ByBtxv3tT
+UID:jKILZHOgDddR7Ez5z4T6A
 SUMMARY:K-Nexus: Hierarchical Gene-to-Cell AI Modeling for Perturbation-Ind
 	uced Transcriptomic Shift Recovery
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260708T170000Z
 DESCRIPTION:&#160\;  Speaker: Zihan Zhao  Masters Candidate  Thesis Defense
 	  Department: Electrical and Computer Engineering  Predicting cellular res
@@ -1010,10 +1086,10 @@ TRANSP:TRANSPARENT
 DURATION:PT1H
 END:VEVENT
 BEGIN:VEVENT
-UID:WYQe4W-3LNcjVEZQpUggk
+UID:nywQCTUt3nC23PCbZfj5j
 SUMMARY:O⁺ Transport from the Ionospheric Cusp to the Inner Magnetosphere: 
 	A Global MHD and Test Particle Study
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260708T170000Z
 DESCRIPTION:&#160\;  Speaker: Yiwen Zhu  Doctoral Candidate  Thesis Defense
 	  Department: Physics &amp\; Astronomy  Location: Herman Brown Hall HBH 25
@@ -1080,9 +1156,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://hermannpark.org/wp
  ed.jpg
 ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2024/0
  4/japanese_garden_2__-_photo_by_patrick_talley-scaled.jpg
-UID:A7j98DuV6HYF0CxmygjvG
+UID:x1XSBC7lTzSt0Izdd8iqv
 SUMMARY:Japanese Garden Volunteer Day
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260709T090000Z
 DESCRIPTION:Join us every Thursday for hands-on gardening projects at the J
 	apanese Garden. From 9 a.m. to 12 p.m.\, come help with seasonal tasks lik
@@ -1107,9 +1183,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:PPw2oKlAf6karvGMNQiQz
+UID:D5DNudffH5cVNQAN0fIWJ
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260709T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -1129,11 +1205,11 @@ TRANSP:TRANSPARENT
 DURATION:PT8H
 END:VEVENT
 BEGIN:VEVENT
-UID:jD8HSJYekcXq32CnPHJfH
+UID:BaayZDtmVk_b58idb2FlY
 SUMMARY:Chemical Pathways to Earth's Habitability: Constraints from the Ori
 	gin\, Distribution\, and Delivery of Life-Essential Elements in the Early 
 	Solar System
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260710T150000Z
 DESCRIPTION:&#160\;  Speaker: Debjeet Pathak  Doctoral Candidate  Thesis De
 	fense  Department: Earth\, Environmental and Planetary Sciences  Location:
@@ -1190,9 +1266,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:9E4d6jWbDX5c-Mmeo6OQC
+UID:5ZlBJFite4UF6vtRtsN8k
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260710T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -1212,9 +1288,9 @@ TRANSP:TRANSPARENT
 DURATION:PT8H
 END:VEVENT
 BEGIN:VEVENT
-UID:kLyNX6J7bpZGecPx3Vxyc
+UID:2TYFhbwap0VLgJhvN1nAV
 SUMMARY:Essays on Industrial Organization and Consumer Behavior
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260710T150000Z
 DESCRIPTION:&#160\;  Speaker: Ruosi Li  Doctoral Candidate  Thesis Defense 
 	 Department: Economics  Location: Kraft Hall Kraft 402\;&#160\;  My disser
@@ -1236,10 +1312,10 @@ TRANSP:TRANSPARENT
 DURATION:PT1H
 END:VEVENT
 BEGIN:VEVENT
-UID:1eI3dNHC2JdU0mRNlx6lI
+UID:gnQl7icqN1hYK92EPzvY4
 SUMMARY:Programmable control of small non-coding RNA expression in mammalia
 	n cells with synthetic RNA polymerase III transactivators.
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260710T200000Z
 DESCRIPTION:&#160\;  Speaker: Matthew Demelo  Doctoral Candidate  Thesis De
 	fense  Department: BioSciences-Biochemistry and Cell Biology  Location: Ke
@@ -1291,9 +1367,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:op1AzA2N4AdidDUUSteOv
+UID:V_wyi-LLQhqyI6nGGdgsu
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260711T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -1317,9 +1393,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://lawndaleartcenter.o
  rg/wp-content/uploads/july2026-420x525.png
 ATTACH;FMTTYPE=image/png:https://lawndaleartcenter.org/wp-content/uploads/j
  uly2026-420x525.png
-UID:Ys4OBVg0LZHlqB1Z2H4Vv
+UID:_rheLT2uPOg_Kxjg1N0RG
 SUMMARY:Poets Garden HTX Writing Workshop
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260711T180000Z
 DESCRIPTION:https://lawndaleartcenter.org/event/poets-garden-htx-writing-wo
 	rkshop-2/\n\nFrom Lawndale Art Center
@@ -1340,9 +1416,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:zh5ZnvCftH36hnmSXpBto
+UID:2wiUnYq7GoW8unMKnHGCd
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260712T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -1370,9 +1446,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:-68E-3MzYcJoZgwEFUqpb
+UID:I0ndVX5CGfDTLpLIxBS7A
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260713T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -1396,9 +1472,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://hmh.org/wp-content/
  uploads/Elementary-720-x-440-px.png
 ATTACH;FMTTYPE=image/png:https://hmh.org/wp-content/uploads/Elementary-720-
  x-440-px.png
-UID:-voAnw0kfwndS4RmmCAXW
+UID:4jkwxVWrpaUegxmGt_ayp
 SUMMARY:Introduction to Teaching the Holocaust
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260714T090000Z
 DESCRIPTION:Join Holocaust Museum Houston for a one day workshop designed t
 	o help educators to feel comfortable teaching about the Holocaust. The day
@@ -1432,9 +1508,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:kqGyi3FrnAaC-O_u6ROWA
+UID:XG9UgA8zcy3AezzNYkz3_
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260714T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -1462,9 +1538,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:8ywtqfPUV3n_h9fe3ZFbY
+UID:ZG5RNy9Bgeb0lFddwsAqs
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260715T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -1492,9 +1568,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:RpdtQX1MYbRx4-U79ADiv
+UID:F_BQr4Rq9eUR_CZrQe-YD
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260716T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -1518,10 +1594,10 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://hmh.org/wp-content
  /uploads/All-the-Horrors-of-War.jpg
 ATTACH;FMTTYPE=image/jpeg:https://hmh.org/wp-content/uploads/All-the-Horror
  s-of-War.jpg
-UID:QnVu2-EPkyqcOe8JbVyMF
+UID:DTSZ83jikEAbef7lOui0E
 SUMMARY:Educating Traumatized Teenagers: The Extraordinary Story of a Swedi
 	sh International School
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260716T183000Z
 DESCRIPTION:After World War II\, Sweden absorbed and provided medical treat
 	ment for thousands of sick survivors. What to do about those who were teen
@@ -1556,9 +1632,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:yWUUTbsTOl40juzuRJew_
+UID:JKGBW7Mor-nq1HKNDvPR6
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260717T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -1578,10 +1654,10 @@ TRANSP:TRANSPARENT
 DURATION:PT8H
 END:VEVENT
 BEGIN:VEVENT
-UID:BNPPXoOvrGBDBXiNN6L3K
+UID:Sx--8JWJti5LNKLz4AY5O
 SUMMARY:Cobalt Photocatalysis as a Platform for Tunable Hydrogen Atom Trans
 	fer in the Ring Opening of Cyclic Ethers
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260717T200000Z
 DESCRIPTION:&#160\;  Speaker: Brian Funk  Doctoral Candidate  Thesis Defens
 	e  Department: Chemistry  Location: BioScience Research Collaborative 1060
@@ -1622,9 +1698,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:QoWkb3teYTbfFoUb1xhxb
+UID:5Fghtb6jPkx2SfJUNgkYR
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260718T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -1650,9 +1726,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://events.rice.edu/li
 ATTACH;FMTTYPE=image/jpeg:https://events.rice.edu/live/image/gid/171/width/
  80/height/80/crop/1/src_region/0/,0/,1600/,1066/12115_c._Frank_Hernandex.r
  ev.1779249383.jpg
-UID:cf4UmJUsBIzxZ9jSIycBx
+UID:a36bgDpvkpznI70W6QZWr
 SUMMARY:Summer Jam 2026
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260718T170000Z
 DESCRIPTION:https://events.rice.edu/event/430644-summer-jam-2026\n\nFrom Ri
 	ce University - Open to the Public
@@ -1669,9 +1745,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://lawndaleartcenter.o
  rg/wp-content/uploads/BIG-SLIDESHOW-2026-420x420.png
 ATTACH;FMTTYPE=image/png:https://lawndaleartcenter.org/wp-content/uploads/B
  IG-SLIDESHOW-2026-420x420.png
-UID:IK7LOjkqL6flm8yOGKzzS
+UID:e2XE9mXTwalkbXm-lBI9w
 SUMMARY:The Big Slide Show
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260718T190000Z
 DESCRIPTION:https://lawndaleartcenter.org/event/the-big-slide-show-12/\n\nF
 	rom Lawndale Art Center
@@ -1691,9 +1767,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:rGoxy58RGZytADSAepIMl
+UID:DWoyvwIsNCwubISR9Xn8s
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260719T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -1717,9 +1793,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://inprinthouston.org
  /wp-content/uploads/2025/10/Son-of-Nobody-Book-Club.jpg
 ATTACH;FMTTYPE=image/jpeg:https://inprinthouston.org/wp-content/uploads/202
  5/10/Son-of-Nobody-Book-Club.jpg
-UID:XQGUb89EYzTprNH_jNnXe
+UID:eRKP57AW9KxUimP56Qbu_
 SUMMARY:INPRINT BOOK CLUB DISCUSSES SON OF NOBODY
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260719T160000Z
 DESCRIPTION:This Inprint Book Club meeting will take place via Zoom. The Zo
 	om link will be the same for every meeting and will be provided in your Ev
@@ -1751,9 +1827,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:dey2hWSnYPWplGMpwtwD8
+UID:WQZIDHHCZRBZ6ylbPyh3R
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260720T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -1781,9 +1857,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:nVXEt4gkvWBCno2Kvi4ZK
+UID:8REhEbVjQR4IQIOAMqXAQ
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260721T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -1811,9 +1887,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:dkfTylIexrxIXB2pCUO9d
+UID:J_L3Ej227sovfZFjz-PxD
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260722T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -1841,9 +1917,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:kGjOa6h8zhwhE4D3YvB-V
+UID:XBMlMKg8wr1afkkPpt-zL
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260723T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -1871,9 +1947,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:Kw7rQTzt3PqZttQ6dXwFN
+UID:WMje0SaexAMGx20PErSHj
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260724T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -1893,6 +1969,25 @@ TRANSP:TRANSPARENT
 DURATION:PT8H
 END:VEVENT
 BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s28164.pcdn.co/fil
+ es/NFN_Cleanup_Beach-300x200.jpg
+ATTACH;FMTTYPE=image/jpeg:https://s28164.pcdn.co/files/NFN_Cleanup_Beach-30
+ 0x200.jpg
+UID:KnMWlt98_UqU4gvaXRd2B
+SUMMARY:Neighbors for Nature – July 25
+DTSTAMP:20260627T134754Z
+DTSTART:20260725T150000Z
+DESCRIPTION:https://www.houstonzoo.org/events/neighbors-for-nature-july-25/
+	\n\nFrom Houston Zoo
+URL:https://www.houstonzoo.org/events/neighbors-for-nature-july-25/
+GEO:29.7174;-95.391
+LOCATION:6200 Hermann Park Drive\, Houston\, TX 77030
+X-CALRIPPER-SOURCE:houston-zoo
+CATEGORIES:Houston Zoo
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
 IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://events.rice.edu/liv
  e/image/gid/171/width/80/height/80/crop/1/src_region/0/,0/,1600/,1066/1206
  7_Masako_Miki_Waiting_Cloud_Courtesy_of_the_artist_and_Jessica_Silverman._
@@ -1901,9 +1996,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:y92pE4xL78E7sPnpGkTR2
+UID:u0YDKGTu4DuWsn6axRjQ_
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260725T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -1931,9 +2026,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:r04QqDnjsuSNl1tRoVlDX
+UID:KR--VDFfgWHeQuWX4Eq3c
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260726T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -1961,9 +2056,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:wa0VThWIv0_ejvGplzIbg
+UID:dnhaFCVxkpEEuacyGlzCv
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260727T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -1991,9 +2086,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:qTGzvY0y1zDq_w1ogjs_2
+UID:ECiOgJ3O_5l1oqszxMOke
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260728T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -2021,9 +2116,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:ldwU5gJ4JdufasCB5DWtA
+UID:WNS9QLfKCf_LAUQPX_uF9
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260729T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -2051,9 +2146,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:LR1VDJrOxqYFFMfOVb2OI
+UID:6d8USIP0_t7yxPXuVgm4F
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260730T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -2079,10 +2174,10 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://events.rice.edu/liv
 ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/214/width/8
  0/height/80/crop/1/src_region/0/,0/,1200/,1200/12113_Demo_Day_2026_graphic
  .rev.1779218369.png
-UID:-Y9QB-HGjpikNTfWphSkx
+UID:nQvyWv-KtMfPXzv7uWLPS
 SUMMARY:Rice University Summer Engineering Innovation Program - Demo Day 20
 	26
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260730T230000Z
 DESCRIPTION:About the Summer Engineering Innovation Program at Rice Univers
 	ityRice University's Summer Engineering Innovation Program (http://www.rce
@@ -2114,9 +2209,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:UsLjTKPahJ26FJILcgt92
+UID:lRbn0Hd8sSYYoNH7olh0-
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260731T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -2136,6 +2231,25 @@ TRANSP:TRANSPARENT
 DURATION:PT8H
 END:VEVENT
 BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s28164.pcdn.co/fil
+ es/Reptile-Construction-Update-300x200.jpg
+ATTACH;FMTTYPE=image/jpeg:https://s28164.pcdn.co/files/Reptile-Construction
+ -Update-300x200.jpg
+UID:_nHwd31GM6o_zl02KOuoa
+SUMMARY:August Member Morning
+DTSTAMP:20260627T134754Z
+DTSTART:20260801T130000Z
+DESCRIPTION:https://www.houstonzoo.org/events/august-member-morning-2026/\n
+	\nFrom Houston Zoo
+URL:https://www.houstonzoo.org/events/august-member-morning-2026/
+GEO:29.7174;-95.391
+LOCATION:6200 Hermann Park Drive\, Houston\, TX 77030
+X-CALRIPPER-SOURCE:houston-zoo
+CATEGORIES:Houston Zoo
+TRANSP:TRANSPARENT
+DURATION:PT1H
+END:VEVENT
+BEGIN:VEVENT
 IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://events.rice.edu/liv
  e/image/gid/171/width/80/height/80/crop/1/src_region/0/,0/,1600/,1066/1206
  7_Masako_Miki_Waiting_Cloud_Courtesy_of_the_artist_and_Jessica_Silverman._
@@ -2144,9 +2258,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:gleXNdcBdp9dJ8-VnRtIX
+UID:MSWdgk0GoZs2TtK9MwbkB
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260801T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -2170,9 +2284,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://lawndaleartcenter.o
  rg/wp-content/uploads/BIG-SLIDESHOW-2026-420x420.png
 ATTACH;FMTTYPE=image/png:https://lawndaleartcenter.org/wp-content/uploads/B
  IG-SLIDESHOW-2026-420x420.png
-UID:2vDBZegRK7cEheAfy9DfF
+UID:joruqshMzS-2pSxbcferB
 SUMMARY:The Big Slide Show
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260801T190000Z
 DESCRIPTION:https://lawndaleartcenter.org/event/the-big-slide-show-13/\n\nF
 	rom Lawndale Art Center
@@ -2192,9 +2306,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:QZ231qJqp3aJEOW1dCW_5
+UID:aNcNd5La2U20CoeSSG9NL
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260802T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -2222,9 +2336,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:y2Q5T1bGfSAJPMBlLrb3q
+UID:dPPdKG3iCvaZ6vc1DNGJ-
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260803T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -2252,9 +2366,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:bzu9djkd3_03bZQy6msc_
+UID:MYW2CoLeSd998tim5mV2M
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260804T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -2274,9 +2388,9 @@ TRANSP:TRANSPARENT
 DURATION:PT8H
 END:VEVENT
 BEGIN:VEVENT
-UID:hzgsO7UtOk9vexnkWfRw5
+UID:ARMNLcWvM1aPDMn7fhVKA
 SUMMARY:Asana Day: The Art of the Possible (Session 1)
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260805T140000Z
 DESCRIPTION:For the first time ever\, the Asana team is coming to Rice for 
 	an immersive\, three-session series designed to transform how Rice moves. 
@@ -2304,9 +2418,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:LPEH6JoX1GisftHmAFdn6
+UID:dt5RqCIgRsPv2cfdJ3fwU
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260805T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -2334,9 +2448,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:D1WlyKIMKB5M-_qaGASwm
+UID:YnMWhJF31vXiL61NV1MwW
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260806T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -2364,9 +2478,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:PPOTpwzShk9Kcx3maSWzQ
+UID:lLXdjA2hb5FmPu4fkSljV
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260807T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -2394,9 +2508,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:niQFSSlzKzD-kvPirtWHH
+UID:GDydgT1nHyFuVyza2Wp_1
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260808T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -2424,9 +2538,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:PWRi0ZLoTyCY1o53nZFp0
+UID:pq6Gjfb-tM_PXujegJe-2
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260809T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -2454,9 +2568,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:gyUvzOyA7LmqKTMs9QxR6
+UID:5BBCSbnCBpdCdw61Oa1dj
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260810T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -2484,9 +2598,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:-5C7NhzCVM8MAsIH6Jz_x
+UID:jcmvbWp2p7FJLZpNID9EJ
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260811T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -2514,9 +2628,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:aaMZT2eog7RYtQzYbQMO6
+UID:AQ3W_NBrGcSkm2SNBJjsz
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260812T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -2544,9 +2658,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:krTGArFt9yjRYSRHBsqwL
+UID:qwwhARe9XD0b23PpsX82r
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260813T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -2574,9 +2688,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:ceXe9DC2zerPi6BcDgsFc
+UID:NaQ5uipoa2n55KX_Wu5It
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260814T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -2596,6 +2710,25 @@ TRANSP:TRANSPARENT
 DURATION:PT8H
 END:VEVENT
 BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s28164.pcdn.co/fil
+ es/Zoolates-August-Promo-Photo-300x200.jpg
+ATTACH;FMTTYPE=image/jpeg:https://s28164.pcdn.co/files/Zoolates-August-Prom
+ o-Photo-300x200.jpg
+UID:p4yD0yCI0cJGtvwso4xYs
+SUMMARY:Zoolates: Pilates at the Zoo
+DTSTAMP:20260627T134754Z
+DTSTART:20260815T124500Z
+DESCRIPTION:https://www.houstonzoo.org/events/zoolates-august-2026/\n\nFrom
+	 Houston Zoo
+URL:https://www.houstonzoo.org/events/zoolates-august-2026/
+GEO:29.7174;-95.391
+LOCATION:6200 Hermann Park Drive\, Houston\, TX 77030
+X-CALRIPPER-SOURCE:houston-zoo
+CATEGORIES:Houston Zoo
+TRANSP:TRANSPARENT
+DURATION:PT1H
+END:VEVENT
+BEGIN:VEVENT
 IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://events.rice.edu/liv
  e/image/gid/171/width/80/height/80/crop/1/src_region/0/,0/,1600/,1066/1206
  7_Masako_Miki_Waiting_Cloud_Courtesy_of_the_artist_and_Jessica_Silverman._
@@ -2604,9 +2737,9 @@ ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/171/width/8
  0/height/80/crop/1/src_region/0/,0/,1600/,1066/12067_Masako_Miki_Waiting_C
  loud_Courtesy_of_the_artist_and_Jessica_Silverman._Photo-_Chris_Grunder.re
  v.1776445875.png
-UID:1Tcv2vqEbv4FUPgXVwQux
+UID:mPIc0BHtkswTsFNewW03A
 SUMMARY:Masako Miki: Shapeshifters\, Sprites\, and Spirits
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260815T150000Z
 DESCRIPTION:This exhibition is curated by Associate Curator Claudia Mattos 
 	with Suzanne Deal Booth Executive Director Alison Weaver and is made possi
@@ -2631,9 +2764,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://inprinthouston.org
  jpg
 ATTACH;FMTTYPE=image/jpeg:https://inprinthouston.org/wp-content/uploads/202
  5/10/How-to-Commit-a-Postcolonial-Murder-Book-Club.jpg
-UID:mGqCbXVU5XZy1BC3w2-aW
+UID:eanBp_-TE0D44c0w7esOc
 SUMMARY:INPRINT BOOK CLUB DISCUSSES HOW TO COMMIT A POSTCOLONIAL MURDER
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260823T160000Z
 DESCRIPTION:This Inprint Book Club meeting will take place via Zoom. The Zo
 	om link will be the same for every meeting and will be provided in your Ev
@@ -2664,9 +2797,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1185711344%2F33366841279%2F1%2Foriginal.20260529-161211?auto=f
  ormat%2Ccompress&q=75&sharp=10&s=8a701476b3c2f15aa462b6532b814902
-UID:6mW5XoGfuBtoqR0vFw-_u
+UID:VqxPM8mB2S5Wap4ynzTOv
 SUMMARY:Film Screening | FEDERAL
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260825T140000Z
 DESCRIPTION:FEDERAL (2003) is a 24-hour\, two-theater movie that captures t
 	he north and south façades of the 1969 Charles Luckman-designed building.\
@@ -2690,9 +2823,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1185711344%2F33366841279%2F1%2Foriginal.20260529-161211?auto=f
  ormat%2Ccompress&q=75&sharp=10&s=8a701476b3c2f15aa462b6532b814902
-UID:GC5NPokqja5XlKr_AAMs1
+UID:LYCqer1NBej6LqhO2fv1A
 SUMMARY:Film Screening | FEDERAL
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260825T140000Z
 DESCRIPTION:FEDERAL (2003) is a 24-hour\, two-theater movie that captures t
 	he north and south façades of the 1969 Charles Luckman-designed building.\
@@ -2712,10 +2845,10 @@ BEGIN:VEVENT
 IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://hmh.org/wp-content
  /uploads/toler.jpg
 ATTACH;FMTTYPE=image/jpeg:https://hmh.org/wp-content/uploads/toler.jpg
-UID:m0Zi4JrOB7D4Jq_LoUU4g
+UID:aGjd1TECDcHV3qLGvM1OV
 SUMMARY:Author Talk with Dr. Pamela Toler\, Author of The Dragon From Chica
 	go
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260827T183000Z
 DESCRIPTION:Join Holocaust Museum Houston for a night with Dr. Pamela Toler
 	\, Author of The Dragon from Chicago: The Untold Story of an American Repo
@@ -2754,9 +2887,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://events.rice.edu/li
 ATTACH;FMTTYPE=image/jpeg:https://events.rice.edu/live/image/gid/76/width/8
  0/height/80/crop/1/src_region/0/,0/,600/,337/12130_Kavraki-RichardsKortum_
  1.rev.1781278680.jpg
-UID:6rx1UQ8GscSys4m0xJXzC
+UID:x0JOPUxcCpZWSwUC3-v6i
 SUMMARY:Triple Crown Celebration
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260827T210000Z
 DESCRIPTION:Join us in honoring Lydia Kavraki (https://news.rice.edu/news/2
 	025/national-academy-sciences-elects-lydia-kavraki-member) and Rebecca Ric
@@ -2783,9 +2916,9 @@ TRANSP:TRANSPARENT
 DURATION:PT2H
 END:VEVENT
 BEGIN:VEVENT
-UID:Y8Us5Eqqi51ST-EWxNfDf
+UID:GAcnAQBIT7D1m-31GVsCf
 SUMMARY:Fall 2026 SST@R Session 1
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260828T210000Z
 DESCRIPTION:We invite all members of our teaching community to join us for 
 	these informal gatherings. During happy hours\, we will have an open tab a
@@ -2807,9 +2940,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1187403094%2F33366841279%2F1%2Foriginal.20260622-152855?auto=f
  ormat%2Ccompress&q=75&sharp=10&s=d43f03849c8574acd398caa2f89ec0bb
-UID:gE-8I1P77SSb9o4F-4-10
+UID:rk7O6I-L9gSNCSL6Wk-OX
 SUMMARY:TAG Alumni Reunion and Celebration
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260828T220000Z
 DESCRIPTION:Past\, current\, and future Teacher Advisory Group (TAG) member
 	s to join us for an art-filled evening.\n\nhttps://www.eventbrite.com/e/ta
@@ -2832,9 +2965,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1187403094%2F33366841279%2F1%2Foriginal.20260622-152855?auto=f
  ormat%2Ccompress&q=75&sharp=10&s=d43f03849c8574acd398caa2f89ec0bb
-UID:u_7-fM99orZAjxm-oFp1R
+UID:KtM3mDVYK-f6KpU4b7bOk
 SUMMARY:TAG Alumni Reunion and Celebration
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260828T220000Z
 DESCRIPTION:Past\, current\, and future Teacher Advisory Group (TAG) member
 	s to join us for an art-filled evening.\n\nhttps://www.eventbrite.com/e/ta
@@ -2856,10 +2989,10 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://events.rice.edu/li
 ATTACH;FMTTYPE=image/jpeg:https://events.rice.edu/live/image/gid/211/width/
  80/height/80/crop/1/src_region/0/,0/,2100/,2467/12132_photos_7997_Xu_Shuai
  _MD_20180801_MPP5948_1336567692.rev.1781724784.jpg
-UID:aKxnOfcTYxcgdmh9M80rW
+UID:OX8ike16znNFeTJlwb7nM
 SUMMARY:Rice360 Global Health Technologies Seminar Series: AI Driven Wearab
 	le Sensors for Maternal and Newborn Health in Low Resource Settings
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260901T220000Z
 DESCRIPTION:Join Rice360 for engaging conversations with leaders in global 
 	health and development as they share their expert insights on the intersec
@@ -2899,10 +3032,10 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://events.rice.edu/li
 ATTACH;FMTTYPE=image/jpeg:https://events.rice.edu/live/image/gid/211/width/
  80/height/80/crop/1/src_region/0/,0/,2100/,2467/12132_photos_7997_Xu_Shuai
  _MD_20180801_MPP5948_1336567692.rev.1781724784.jpg
-UID:nwdkdlcFky7AQj5WZM8Kl
+UID:o_wuZ_1_pIopWtEV6lxQB
 SUMMARY:Rice360 Global Health Technologies Seminar Series: AI Driven Wearab
 	le Sensors for Maternal and Newborn Health in Low Resource Settings
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260901T220000Z
 DESCRIPTION:Join Rice360 for engaging conversations with leaders in global 
 	health and development as they share their expert insights on the intersec
@@ -2943,9 +3076,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1181516630%2F33366841279%2F1%2Foriginal.20260406-165104?auto=f
  ormat%2Ccompress&q=75&sharp=10&s=09883f873c16fddbe8e982524fdc7e72
-UID:gcdT3RWEnUe1ep9V3nmsK
+UID:dvQeyXFitG5AJ5kNOorHh
 SUMMARY:Public Opening | Divination: Beverly Buchanan & Dionne Lee
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260904T000000Z
 DESCRIPTION:Join us for the opening of the exhibition Divination: Beverly B
 	uchanan & Dionne Lee.\n\nhttps://www.eventbrite.com/e/public-opening-divin
@@ -2969,9 +3102,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1181516630%2F33366841279%2F1%2Foriginal.20260406-165104?auto=f
  ormat%2Ccompress&q=75&sharp=10&s=09883f873c16fddbe8e982524fdc7e72
-UID:ix5HZAmnoIPn8GbWX3YNF
+UID:-4shkRmT0_kBCZHg2GkAp
 SUMMARY:Public Opening | Divination: Beverly Buchanan & Dionne Lee
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260904T000000Z
 DESCRIPTION:Join us for the opening of the exhibition Divination: Beverly B
 	uchanan & Dionne Lee.\n\nhttps://www.eventbrite.com/e/public-opening-divin
@@ -2988,9 +3121,9 @@ TRANSP:TRANSPARENT
 DURATION:PT2H
 END:VEVENT
 BEGIN:VEVENT
-UID:5QAwDkaxS1dajLtNZw5lu
+UID:bFUrIDNwnOCyqDfFk3CbW
 SUMMARY:RAMI National Academies Colloquium: Dr. Michael Strano
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260904T170000Z
 DESCRIPTION:https://events.rice.edu/live/events/431530-rami-national-academ
 	ies-colloquium-dr-michael-strano\n\nFrom Rice University - Open to the Pub
@@ -3011,9 +3144,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1186695569%2F33366841279%2F1%2Foriginal.20260611-170535?auto=f
  ormat%2Ccompress&q=75&sharp=10&s=37c829e1ac81f95f272120367cda30c3
-UID:cEFandaEx5ewIItPG32D6
+UID:ILJRuE8dCEBqmb-9CJb-Z
 SUMMARY:In Conversation | Dionne Lee and Rebecca Matalon
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260905T190000Z
 DESCRIPTION:Join artist Dionne Lee and CAMH Senior Curator Rebecca Matalon 
 	for a discussion related to themes explored in the exhibition Divination: 
@@ -3037,9 +3170,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1186695569%2F33366841279%2F1%2Foriginal.20260611-170535?auto=f
  ormat%2Ccompress&q=75&sharp=10&s=37c829e1ac81f95f272120367cda30c3
-UID:4e4k46VzglfHNudwr7mii
+UID:BNn9gKNkx5ZxHLH5MPYUS
 SUMMARY:In Conversation | Dionne Lee and Rebecca Matalon
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260905T190000Z
 DESCRIPTION:Join artist Dionne Lee and CAMH Senior Curator Rebecca Matalon 
 	for a discussion related to themes explored in the exhibition Divination: 
@@ -3062,9 +3195,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://events.rice.edu/li
 ATTACH;FMTTYPE=image/jpeg:https://events.rice.edu/live/image/gid/16/width/8
  0/height/80/crop/1/src_region/0/,0/,3200/,1800/2800_20181013_NCAA_FB_UAB__
  Rice_set2-15.rev.1566886880.jpg
-UID:vMgfeM3Ie-TekpYsj9GK4
+UID:oN2yM1fQw_fUs8yKkT8Vs
 SUMMARY:Rice University Football vs HCU
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260905T230000Z
 DESCRIPTION:Rice University Football vs HCUTV: ESPN+Radio: Varsity Network 
 	/RiceOwls.comStreaming Video: https://riceowls.co/WATCH-AAC-ESPNPLUS (http
@@ -3084,10 +3217,10 @@ TRANSP:TRANSPARENT
 DURATION:PT3H
 END:VEVENT
 BEGIN:VEVENT
-UID:X2yB1FRwIvE7w3QETVAjP
+UID:6xt4Ppzf4T8awDNEOC6OC
 SUMMARY:SynthX "Unlocking the Clinical Potential of Chemical Innovation" Wo
 	rkshop
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260908T170000Z
 DESCRIPTION:By harnessing the expertise and resources of various groups wit
 	hin the TMC\, this long-term series aims to bridge the gap between biomedi
@@ -3127,9 +3260,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://events.rice.edu/liv
 ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/255/width/8
  0/height/80/crop/1/src_region/0/,0/,5976/,3363/12110_OwlNest_-_26_fair_w_c
  ode_1.rev.1778872369.png
-UID:Lfi9opgptUzcnvVenHMYh
+UID:OW6rCyS1NN9wEMXqoJl3L
 SUMMARY:2026 Study Abroad Fair
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260911T160000Z
 DESCRIPTION:The Rice Office of Study Abroad welcomes all Rice undergraduate
 	 students to our annual Study Abroad Fair! Please join us on Friday\, Sept
@@ -3159,9 +3292,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://events.rice.edu/li
 ATTACH;FMTTYPE=image/jpeg:https://events.rice.edu/live/image/gid/16/width/8
  0/height/80/crop/1/src_region/0/,0/,3200/,1800/2800_20181013_NCAA_FB_UAB__
  Rice_set2-15.rev.1566886880.jpg
-UID:kwUGCrLTFvwfpykVHGfvJ
+UID:siQV-sGuh_75xSrHC-UvI
 SUMMARY:Rice University Football at Notre Dame
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260912T193000Z
 DESCRIPTION:Rice University Football at Notre DameTV: NBC/PeacockRadio: Var
 	sity Network /RiceOwls.comStreaming Video: https://www.peacocktv.com/ (htt
@@ -3184,9 +3317,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://inprinthouston.org
  /wp-content/uploads/2025/10/cord-swell-Book-Club.jpg
 ATTACH;FMTTYPE=image/jpeg:https://inprinthouston.org/wp-content/uploads/202
  5/10/cord-swell-Book-Club.jpg
-UID:zqU08Yule62uCeGad-83Q
+UID:nnYSjvt-5H2ruClFkqfF-
 SUMMARY:INPRINT BOOK CLUB DISCUSSES CORD SWELL
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260913T160000Z
 DESCRIPTION:This Inprint Book Club meeting will take place via Zoom. The Zo
 	om link will be the same for every meeting and will be provided in your Ev
@@ -3216,9 +3349,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://events.rice.edu/liv
 ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/153/width/8
  0/height/80/crop/1/src_region/0/,0/,460/,259/11782_Livewhale_Event_Graphic
  s_460_x_259_px_3.rev.1771367388.png
-UID:0bf3KJe0ak42F5czfHcSQ
+UID:4B677B-6KKyyTKmTNatIN
 SUMMARY:2026 AI in Health Conference
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260915T150000Z
 DESCRIPTION:Conference Details:  The Ken Kennedy Institute at Rice Universi
 	ty invites you to the 5th annual AI in Health Conference!Join in on discus
@@ -3249,9 +3382,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://events.rice.edu/liv
 ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/153/width/8
  0/height/80/crop/1/src_region/0/,0/,460/,259/11782_Livewhale_Event_Graphic
  s_460_x_259_px_3.rev.1771367388.png
-UID:BkVKO7WXwYIiYxO9WIn1i
+UID:6dbd0S-ZHeuOZA5MXcd3G
 SUMMARY:2026 AI in Health Conference
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260916T150000Z
 DESCRIPTION:Conference Details:  The Ken Kennedy Institute at Rice Universi
 	ty invites you to the 5th annual AI in Health Conference!Join in on discus
@@ -3282,9 +3415,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://events.rice.edu/liv
 ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/153/width/8
  0/height/80/crop/1/src_region/0/,0/,460/,259/11782_Livewhale_Event_Graphic
  s_460_x_259_px_3.rev.1771367388.png
-UID:g1CKmaflOvjlBjPPdBDci
+UID:IF5oFCOc__TJVnRsnomlu
 SUMMARY:2026 AI in Health Conference
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260917T150000Z
 DESCRIPTION:Conference Details:  The Ken Kennedy Institute at Rice Universi
 	ty invites you to the 5th annual AI in Health Conference!Join in on discus
@@ -3309,9 +3442,9 @@ TRANSP:TRANSPARENT
 DURATION:PT8H
 END:VEVENT
 BEGIN:VEVENT
-UID:3X-k9OpNf-l3aOi_17rha
+UID:v2SAPBGkjkcbHmbdNHamg
 SUMMARY:RAMI National Academies Colloquium: Dr. Nancy Sottos
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260917T200000Z
 DESCRIPTION:https://events.rice.edu/live/events/429993-rami-national-academ
 	ies-colloquium-nancy-sottos\n\nFrom Rice University - Open to the Public
@@ -3330,9 +3463,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://events.rice.edu/liv
 ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/214/width/8
  0/height/80/crop/1/src_region/0/,0/,1200/,1200/7832_Ethics_Panel_2023.SM_p
  ost_1.rev.1695311257.png
-UID:Ii0sicbHSQnXwF3bxc8SU
+UID:dtiltuLDUqiE7w04Lke13
 SUMMARY:Ethical Decisions: The Engineer's Responsibility
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260917T230000Z
 DESCRIPTION:Panl information coming soon!\n\nhttps://events.rice.edu/live/e
 	vents/430783-ethical-decisions-the-engineers-responsibility\n\nFrom Rice U
@@ -3353,9 +3486,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://events.rice.edu/li
 ATTACH;FMTTYPE=image/jpeg:https://events.rice.edu/live/image/gid/16/width/8
  0/height/80/crop/1/src_region/0/,0/,3200/,1800/2800_20181013_NCAA_FB_UAB__
  Rice_set2-15.rev.1566886880.jpg
-UID:el_RstXClQ-kkO1wlSusJ
+UID:EJOu6ntDpUk_JhCYqON1i
 SUMMARY:Rice University Football vs Western Michigan
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260919T230000Z
 DESCRIPTION:Rice University Football vs Western MichiganTV: ESPN+Radio: Var
 	sity Network /RiceOwls.comStreaming Video: https://riceowls.co/WATCH-AAC-E
@@ -3375,9 +3508,9 @@ TRANSP:TRANSPARENT
 DURATION:PT3H
 END:VEVENT
 BEGIN:VEVENT
-UID:GTngNjFAAb--XkXBDFi90
+UID:CcRr-Zf2C3fHdcV1x7RXh
 SUMMARY:NIS Fall 2026 Poster Session
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260922T170000Z
 DESCRIPTION:For non-Rice attendees\, the nearest visitor lot is the North A
 	nnex Lot (Alumni@Campanile). Enter campus at entrance 20 (Kent@Rice)\, and
@@ -3398,9 +3531,9 @@ TRANSP:TRANSPARENT
 DURATION:PT1H
 END:VEVENT
 BEGIN:VEVENT
-UID:FQD3dWG3ID-RROsY6HsEE
+UID:jGx9GxyTatZU9-1bBAj4Z
 SUMMARY:NIS Fall 2026 Poster Session
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260922T170000Z
 DESCRIPTION:For non-Rice attendees\, the nearest visitor lot is the North A
 	nnex Lot (Alumni@Campanile). Enter campus at entrance 20 (Kent@Rice)\, and
@@ -3427,9 +3560,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://events.rice.edu/li
 ATTACH;FMTTYPE=image/jpeg:https://events.rice.edu/live/image/gid/153/width/
  80/height/80/crop/1/src_region/0/,0/,300/,301/11927_Ken_Goldberg_4.rev.177
  3858930.jpg
-UID:2mUOQLFs8dtIzn-P_Cki8
+UID:09eeP6W4gr1YIWCTyusQ6
 SUMMARY:Distinguished Lecture with Ken Goldberg
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260924T210000Z
 DESCRIPTION:RSVP to Attend (https://k2i.wufoo.com/forms/distinguished-lectu
 	re-with-ken-goldberg/): The distinguished lecture is from 4:00-5:00 PM\, f
@@ -3470,9 +3603,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://events.rice.edu/li
 ATTACH;FMTTYPE=image/jpeg:https://events.rice.edu/live/image/gid/16/width/8
  0/height/80/crop/1/src_region/0/,0/,3200/,1800/2800_20181013_NCAA_FB_UAB__
  Rice_set2-15.rev.1566886880.jpg
-UID:1YnqxcRupjRXAPVDBTg-C
+UID:3M0PSS4BGRv0Z0d_2BeGs
 SUMMARY:Rice University Football at Fresno State
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20260927T020000Z
 DESCRIPTION:Rice University Football at Fresno StateTV: CWRadio: Varsity Ne
 	twork /RiceOwls.comStreaming Video: https://riceowls.co/WATCH-AAC-ESPNPLUS
@@ -3497,9 +3630,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://events.rice.edu/li
 ATTACH;FMTTYPE=image/jpeg:https://events.rice.edu/live/image/gid/16/width/8
  0/height/80/crop/1/src_region/0/,0/,3200/,1800/2800_20181013_NCAA_FB_UAB__
  Rice_set2-15.rev.1566886880.jpg
-UID:UeoLAEdb3ojw7lhRTsEYs
+UID:hXWH55OFJt2wU_ZT5ML50
 SUMMARY:Rice University Football vs UTSA - Rice Families Weekend
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20261003T150000Z
 DESCRIPTION:Rice University Football vs UTSA - Rice Families WeekendTV: ESP
 	N networksRadio: Varsity Network /RiceOwls.comStreaming Video: https://ric
@@ -3525,9 +3658,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://events.rice.edu/liv
 ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/153/width/8
  0/height/80/crop/1/src_region/0/,0/,1080/,1080/12097_TLDR25.rev.1778078326
  .png
-UID:w9h5D8XptJTAYc7U0c87H
+UID:Q_hMUyDY4UTqImitKKk_8
 SUMMARY:Texas Colloquium on Distributed Learning (TL\;DR 2026)
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20261008T150000Z
 DESCRIPTION:Date: Thursday &amp\; Friday\, October 8-9\, 2026About:The work
 	shop onFuture-proof Distributed/Federated Learningwill take place October 
@@ -3562,9 +3695,9 @@ TRANSP:TRANSPARENT
 DURATION:PT8H
 END:VEVENT
 BEGIN:VEVENT
-UID:r8Y4pO5t_sh97RtuHjG4k
+UID:Omxumd_oU2lszMCXdK8cC
 SUMMARY:RAMI National Academies Colloquium: Dr. Khalil Amine
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20261008T200000Z
 DESCRIPTION:https://events.rice.edu/live/events/431240-rami-national-academ
 	ies-colloquium-dr-khalil-amine\n\nFrom Rice University - Open to the Publi
@@ -3584,9 +3717,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://events.rice.edu/li
 ATTACH;FMTTYPE=image/jpeg:https://events.rice.edu/live/image/gid/153/width/
  80/height/80/crop/1/src_region/0/,0/,2272/,2999/11926_fb-18jun24-small.rev
  .1773857833.jpg
-UID:pMkdrp3RupNrHYZk2ypRa
+UID:bdFmUZsOfgbqkeLHeKn3q
 SUMMARY:Distinguished Lecture with Francesco Bullo
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20261008T210000Z
 DESCRIPTION:RSVP to Attend (https://k2i.wufoo.com/forms/distinguished-lectu
 	re-with-francesco-bullo/): The distinguished lecture is from 4:00-5:00 PM\
@@ -3628,9 +3761,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://events.rice.edu/liv
 ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/153/width/8
  0/height/80/crop/1/src_region/0/,0/,1080/,1080/12097_TLDR25.rev.1778078326
  .png
-UID:DhZFwIiR-8Lsdg0FJO010
+UID:UYLMuyu8sclWHpvMHf8pc
 SUMMARY:Texas Colloquium on Distributed Learning (TL\;DR 2026)
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20261009T150000Z
 DESCRIPTION:Date: Thursday &amp\; Friday\, October 8-9\, 2026About:The work
 	shop onFuture-proof Distributed/Federated Learningwill take place October 
@@ -3671,9 +3804,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://events.rice.edu/li
 ATTACH;FMTTYPE=image/jpeg:https://events.rice.edu/live/image/gid/16/width/8
  0/height/80/crop/1/src_region/0/,0/,3200/,1800/2800_20181013_NCAA_FB_UAB__
  Rice_set2-15.rev.1566886880.jpg
-UID:LwS7Ox4gUUZh2mC795zy7
+UID:k42OWwbKDUakWGZMo8IGh
 SUMMARY:Rice University Football at East Carolina
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20261010T150000Z
 DESCRIPTION:Rice University Football at East CarolinaTV: ESPN networksRadio
 	: Varsity Network /RiceOwls.comStreaming Video: https://riceowls.co/WATCH-
@@ -3693,15 +3826,35 @@ TRANSP:TRANSPARENT
 DURATION:PT8H
 END:VEVENT
 BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s28164.pcdn.co/fil
+ es/Zoolates-August-Promo-Photo-300x200.jpg
+ATTACH;FMTTYPE=image/jpeg:https://s28164.pcdn.co/files/Zoolates-August-Prom
+ o-Photo-300x200.jpg
+UID:dO-JPeYCmaGRNQKWyU74p
+SUMMARY:Zoolates: Pilates at the Zoo
+DTSTAMP:20260627T134754Z
+DTSTART:20261017T123000Z
+DESCRIPTION:https://www.houstonzoo.org/events/zoolates-pilates-at-the-zoo-o
+	ctober-2026/\n\nFrom Houston Zoo
+URL:https://www.houstonzoo.org/events/zoolates-pilates-at-the-zoo-october-2
+	026/
+GEO:29.7174;-95.391
+LOCATION:6200 Hermann Park Drive\, Houston\, TX 77030
+X-CALRIPPER-SOURCE:houston-zoo
+CATEGORIES:Houston Zoo
+TRANSP:TRANSPARENT
+DURATION:PT1H
+END:VEVENT
+BEGIN:VEVENT
 IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://events.rice.edu/li
  ve/image/gid/16/width/80/height/80/crop/1/src_region/0/,0/,3200/,1800/2800
  _20181013_NCAA_FB_UAB__Rice_set2-15.rev.1566886880.jpg
 ATTACH;FMTTYPE=image/jpeg:https://events.rice.edu/live/image/gid/16/width/8
  0/height/80/crop/1/src_region/0/,0/,3200/,1800/2800_20181013_NCAA_FB_UAB__
  Rice_set2-15.rev.1566886880.jpg
-UID:9jD1nmGl8vdr_mLNNpXga
+UID:hbD0RKzWtjq3-YFbuf_R6
 SUMMARY:Rice University Football vs Tulsa
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20261017T150000Z
 DESCRIPTION:Rice University Football vs TulsaTV: ESPN networksRadio: Varsit
 	y Network /RiceOwls.comStreaming Video: https://riceowls.co/WATCH-AAC-ESPN
@@ -3721,9 +3874,9 @@ TRANSP:TRANSPARENT
 DURATION:PT8H
 END:VEVENT
 BEGIN:VEVENT
-UID:DR1P0PGsfe5aQSUq6rHci
+UID:yJIYV9E3s9JqwHFWi2Dbl
 SUMMARY:NIS Fall 2026 Poster Session
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20261020T170000Z
 DESCRIPTION:For non-Rice attendees\, the nearest visitor lot is the North A
 	nnex Lot (Alumni@Campanile). Enter campus at entrance 20 (Kent@Rice)\, and
@@ -3744,9 +3897,9 @@ TRANSP:TRANSPARENT
 DURATION:PT1H
 END:VEVENT
 BEGIN:VEVENT
-UID:2Np2cqskZS8QnNNgnok_m
+UID:vNGVs1hFgQdepowhtPizV
 SUMMARY:NIS Fall 2026 Poster Session
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20261020T170000Z
 DESCRIPTION:For non-Rice attendees\, the nearest visitor lot is the North A
 	nnex Lot (Alumni@Campanile). Enter campus at entrance 20 (Kent@Rice)\, and
@@ -3773,10 +3926,10 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://events.rice.edu/li
 ATTACH;FMTTYPE=image/jpeg:https://events.rice.edu/live/image/gid/214/width/
  80/height/80/crop/1/src_region/0/,0/,400/,400/12094_1706193979695.rev.1777
  928140.jpg
-UID:M0tUAOEJ0c2inepTtuUdq
+UID:1z6skgzNBiJSyBDz4CzDz
 SUMMARY:Engineers in the C-Suite: Leslie Duke\, Chair and CEO of Burns & Mc
 	Donnell
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20261022T230000Z
 DESCRIPTION:ABOUT THE SPEAKERA proven leader in the workplace and industry\
 	, Leslie Duke paved the way for countless employee-owners\, community memb
@@ -3832,9 +3985,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://events.rice.edu/li
 ATTACH;FMTTYPE=image/jpeg:https://events.rice.edu/live/image/gid/16/width/8
  0/height/80/crop/1/src_region/0/,0/,3200/,1800/2800_20181013_NCAA_FB_UAB__
  Rice_set2-15.rev.1566886880.jpg
-UID:2khmYKRzEdlOSaJGlEvow
+UID:Bicd5FgUawfAu_XXCqVZh
 SUMMARY:Rice University Football at Florida Atlantic
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20261024T150000Z
 DESCRIPTION:Rice University Football at Florida AtlanticTV: ESPN networksRa
 	dio: Varsity Network /RiceOwls.comStreaming Video: https://riceowls.co/WAT
@@ -3861,9 +4014,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://events.rice.edu/li
 ATTACH;FMTTYPE=image/jpeg:https://events.rice.edu/live/image/gid/16/width/8
  0/height/80/crop/1/src_region/0/,0/,3200/,1800/2800_20181013_NCAA_FB_UAB__
  Rice_set2-15.rev.1566886880.jpg
-UID:kdUmz6Za5ie0oPITURc-l
+UID:WHcExEU-PD0VE0fmINfc2
 SUMMARY:Rice University Football at North Texas
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20261107T160000Z
 DESCRIPTION:Rice University Football at North TexasTV: ESPN networksRadio: 
 	Varsity Network /RiceOwls.comStreaming Video: https://riceowls.co/WATCH-AA
@@ -3882,15 +4035,34 @@ TRANSP:TRANSPARENT
 DURATION:PT8H
 END:VEVENT
 BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://s28164.pcdn.co/file
+ s/ZB2026_Logo_Horizontal-1-300x200.png
+ATTACH;FMTTYPE=image/png:https://s28164.pcdn.co/files/ZB2026_Logo_Horizonta
+ l-1-300x200.png
+UID:SSX1iNtm1seoy_PoGeEwj
+SUMMARY:Zoo Ball 2026
+DTSTAMP:20260627T134754Z
+DTSTART:20261108T000000Z
+DESCRIPTION:https://www.houstonzoo.org/events/zoo-ball-2026/\n\nFrom Housto
+	n Zoo
+URL:https://www.houstonzoo.org/events/zoo-ball-2026/
+GEO:29.7174;-95.391
+LOCATION:6200 Hermann Park Drive\, Houston\, TX 77030
+X-CALRIPPER-SOURCE:houston-zoo
+CATEGORIES:Houston Zoo
+TRANSP:TRANSPARENT
+DURATION:PT1H
+END:VEVENT
+BEGIN:VEVENT
 IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://events.rice.edu/li
  ve/image/gid/16/width/80/height/80/crop/1/src_region/0/,0/,3200/,1800/2800
  _20181013_NCAA_FB_UAB__Rice_set2-15.rev.1566886880.jpg
 ATTACH;FMTTYPE=image/jpeg:https://events.rice.edu/live/image/gid/16/width/8
  0/height/80/crop/1/src_region/0/,0/,3200/,1800/2800_20181013_NCAA_FB_UAB__
  Rice_set2-15.rev.1566886880.jpg
-UID:bATeZrTFJ6XN5TSCQ2Ehv
+UID:A22zrLz9yPBIY7vquZpJc
 SUMMARY:Rice University Football vs Tulane - Homecoming & Alumni Weekend
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20261114T160000Z
 DESCRIPTION:Rice University Football vs Tulane - Homecoming &amp\; Alumni W
 	eekendTV: ESPN networksRadio: Varsity Network /RiceOwls.comStreaming Video
@@ -3910,9 +4082,9 @@ TRANSP:TRANSPARENT
 DURATION:PT8H
 END:VEVENT
 BEGIN:VEVENT
-UID:hQBfUWQe-paISBZUUtBS5
+UID:NofWYPi4f1x92C9Ts8T6S
 SUMMARY:NIS Fall 2026 Poster Session
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20261117T180000Z
 DESCRIPTION:For non-Rice attendees\, the nearest visitor lot is the North A
 	nnex Lot (Alumni@Campanile). Enter campus at entrance 20 (Kent@Rice)\, and
@@ -3939,9 +4111,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://events.rice.edu/li
 ATTACH;FMTTYPE=image/jpeg:https://events.rice.edu/live/image/gid/77/width/8
  0/height/80/crop/1/src_region/0/,0/,1800/,1800/12129_Ben_Rhodes_portrait_i
  mage.rev.1781052332.jpg
-UID:N3xYM9VsWmJ4tEkFnkXju
+UID:Fp5mI7Lw2wTzh7yzqkjQI
 SUMMARY:School of Humanities and Arts Campbell Lecture with Ben Rhodes
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20261118T000000Z
 DESCRIPTION:Ben Rhodes '00\, who double majored at Rice in English and Poli
 	tical Science\, is the author of the New York Times bestsellers "After the
@@ -3967,9 +4139,9 @@ TRANSP:TRANSPARENT
 DURATION:PT1H
 END:VEVENT
 BEGIN:VEVENT
-UID:hWJjRLP_rnVm0mb7axrjE
+UID:h_OWxnD9ZaCaye9C-_3pV
 SUMMARY:RAMI National Academies Colloquium: Dr. Gregg Beckham
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20261118T220000Z
 DESCRIPTION:https://events.rice.edu/live/events/429994-rami-national-academ
 	ies-colloquium-gregg-beckham\n\nFrom Rice University - Open to the Public
@@ -3989,9 +4161,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://events.rice.edu/li
 ATTACH;FMTTYPE=image/jpeg:https://events.rice.edu/live/image/gid/77/width/8
  0/height/80/crop/1/src_region/0/,0/,1800/,1800/12129_Ben_Rhodes_portrait_i
  mage.rev.1781052332.jpg
-UID:OVYUBSHaRGaVW8Mo-sLXP
+UID:_IawHijzu2GyUuYJJIx5J
 SUMMARY:School of Humanities and Arts Campbell Lecture with Ben Rhodes
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20261119T000000Z
 DESCRIPTION:Ben Rhodes '00\, who double majored at Rice in English and Poli
 	tical Science\, is the author of the New York Times bestsellers "After the
@@ -4023,9 +4195,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://events.rice.edu/li
 ATTACH;FMTTYPE=image/jpeg:https://events.rice.edu/live/image/gid/16/width/8
  0/height/80/crop/1/src_region/0/,0/,3200/,1800/2800_20181013_NCAA_FB_UAB__
  Rice_set2-15.rev.1566886880.jpg
-UID:gJug3y9SR8cyve5FvsbB9
+UID:QKmqMwOvLEMp46yvA_Y8Y
 SUMMARY:Rice University Football at Temple
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20261120T003000Z
 DESCRIPTION:Rice University Football at TempleTV: ESPNRadio: Varsity Networ
 	k /RiceOwls.comStreaming Video: https://riceowls.co/WATCH-AAC-ESPNPLUS (ht
@@ -4051,9 +4223,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://events.rice.edu/li
 ATTACH;FMTTYPE=image/jpeg:https://events.rice.edu/live/image/gid/16/width/8
  0/height/80/crop/1/src_region/0/,0/,3200/,1800/2800_20181013_NCAA_FB_UAB__
  Rice_set2-15.rev.1566886880.jpg
-UID:UQN9JyT-9RRiOYjqsLgRE
+UID:s-3NuzvJZP5IpCB38l1ZL
 SUMMARY:Rice University Football vs Army
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20261128T160000Z
 DESCRIPTION:Rice University Football vs ArmyTV: ESPN networksRadio: Varsity
 	 Network /RiceOwls.comStreaming Video: https://riceowls.co/WATCH-AAC-ESPNP
@@ -4073,10 +4245,10 @@ TRANSP:TRANSPARENT
 DURATION:PT8H
 END:VEVENT
 BEGIN:VEVENT
-UID:pzdMLdaRGM7FZnRii4Vvz
+UID:HOomyjumK8nXkO8QP9eVR
 SUMMARY:3rd Annual Rice University Center for Nanoscale Imaging Sciences Co
 	nference
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20261211T140000Z
 DESCRIPTION:https://events.rice.edu/event/429180-3rd-annual-rice-university
 	-center-for-nanoscale\n\nFrom Rice University - Open to the Public
@@ -4090,15 +4262,35 @@ TRANSP:TRANSPARENT
 DURATION:PT10H
 END:VEVENT
 BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s28164.pcdn.co/fil
+ es/Zoolates-August-Promo-Photo-300x200.jpg
+ATTACH;FMTTYPE=image/jpeg:https://s28164.pcdn.co/files/Zoolates-August-Prom
+ o-Photo-300x200.jpg
+UID:e28XB8-uGvEdMQgihDkxp
+SUMMARY:Zoolates: Pilates at the Zoo
+DTSTAMP:20260627T134754Z
+DTSTART:20261212T133000Z
+DESCRIPTION:https://www.houstonzoo.org/events/zoolates-pilates-at-the-zoo-d
+	ecember-2026/\n\nFrom Houston Zoo
+URL:https://www.houstonzoo.org/events/zoolates-pilates-at-the-zoo-december-
+	2026/
+GEO:29.7174;-95.391
+LOCATION:6200 Hermann Park Drive\, Houston\, TX 77030
+X-CALRIPPER-SOURCE:houston-zoo
+CATEGORIES:Houston Zoo
+TRANSP:TRANSPARENT
+DURATION:PT1H
+END:VEVENT
+BEGIN:VEVENT
 IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://events.rice.edu/liv
  e/image/gid/153/width/80/height/80/crop/1/src_region/0/,0/,460/,259/11316_
  Livewhale_Event_Graphics_460_x_259_px_4.rev.1762365108.png
 ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/153/width/8
  0/height/80/crop/1/src_region/0/,0/,460/,259/11316_Livewhale_Event_Graphic
  s_460_x_259_px_4.rev.1762365108.png
-UID:3l6Ff7YRLcLcfqysjv8t6
+UID:D5sbcuCkdbdLyq-WA244y
 SUMMARY:2027 Energy HPC & AI Conference
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20270223T160000Z
 DESCRIPTION:Conference Details:  The 20th annual Energy HPC &amp\; AI Confe
 	rence will be hosted by the Ken Kennedy Institute at Rice University. The 
@@ -4133,9 +4325,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://events.rice.edu/liv
 ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/153/width/8
  0/height/80/crop/1/src_region/0/,0/,460/,259/11316_Livewhale_Event_Graphic
  s_460_x_259_px_4.rev.1762365108.png
-UID:BgJrdbR4l5vuCpncTxso9
+UID:ucwRak0UWLx4z_aGCIGFR
 SUMMARY:2027 Energy HPC & AI Conference
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20270224T160000Z
 DESCRIPTION:Conference Details:  The 20th annual Energy HPC &amp\; AI Confe
 	rence will be hosted by the Ken Kennedy Institute at Rice University. The 
@@ -4170,9 +4362,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://events.rice.edu/liv
 ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/153/width/8
  0/height/80/crop/1/src_region/0/,0/,460/,259/11316_Livewhale_Event_Graphic
  s_460_x_259_px_4.rev.1762365108.png
-UID:AinrQnNe7_oekWkw0X2R7
+UID:x74gcl981gPjENd9GpVnC
 SUMMARY:2027 Energy HPC & AI Conference
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20270225T160000Z
 DESCRIPTION:Conference Details:  The 20th annual Energy HPC &amp\; AI Confe
 	rence will be hosted by the Ken Kennedy Institute at Rice University. The 
@@ -4207,9 +4399,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://events.rice.edu/liv
 ATTACH;FMTTYPE=image/png:https://events.rice.edu/live/image/gid/192/width/8
  0/height/80/crop/1/src_region/0/,0/,1000/,500/7575_HUFF_OEDK_logo.rev.1683
  314910.png
-UID:wg1unaSDsA3-9XFfC_t8d
+UID:PLf9lAtJNDBXxonhUukM4
 SUMMARY:2027 Huff OEDK Engineering Design Showcase
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20270415T213000Z
 DESCRIPTION:https://events.rice.edu/event/430040-2027-huff-oedk-engineering
 	-design-showcase\n\nFrom Rice University - Open to the Public
@@ -4223,9 +4415,9 @@ TRANSP:TRANSPARENT
 DURATION:PT2H30M
 END:VEVENT
 BEGIN:VEVENT
-UID:Wdm3TktFuFMPDyMO2NRBF
+UID:oouCpTrFXwqpZqKkkwp95
 SUMMARY:University Awards Ceremony and Reception 2027
-DTSTAMP:20260627T100808Z
+DTSTAMP:20260627T134754Z
 DTSTART:20270427T210000Z
 DESCRIPTION:The entire campus community is invited to join us as we celebra
 	te teaching at Rice and—in particular—those instructors who care very deep

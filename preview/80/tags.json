@@ -1,12 +1,29 @@
 {
-  "generated": "2026-06-27T10:08:21.215Z",
+  "generated": "2026-06-27T13:48:06.525Z",
   "tags": [
+    {
+      "name": "Animals",
+      "slug": "animals",
+      "category": "Other",
+      "eventCount": 10,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-animals.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-animals.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
     {
       "name": "Art",
       "slug": "art",
       "category": "Activities",
-      "eventCount": 510,
-      "calendarCount": 6,
+      "eventCount": 520,
+      "calendarCount": 7,
       "links": {
         "ics": {
           "href": "tag-art.ics",
@@ -107,8 +124,8 @@
       "name": "Community",
       "slug": "community",
       "category": "Community",
-      "eventCount": 449,
-      "calendarCount": 8,
+      "eventCount": 485,
+      "calendarCount": 10,
       "links": {
         "ics": {
           "href": "tag-community.ics",
@@ -158,8 +175,8 @@
       "name": "Downtown",
       "slug": "downtown",
       "category": "Neighborhoods",
-      "eventCount": 177,
-      "calendarCount": 4,
+      "eventCount": 198,
+      "calendarCount": 6,
       "links": {
         "ics": {
           "href": "tag-downtown.ics",
@@ -192,7 +209,7 @@
       "name": "Education",
       "slug": "education",
       "category": "Activities",
-      "eventCount": 184,
+      "eventCount": 194,
       "calendarCount": 2,
       "links": {
         "ics": {
@@ -223,11 +240,28 @@
       }
     },
     {
+      "name": "Family",
+      "slug": "family",
+      "category": "Other",
+      "eventCount": 20,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-family.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-family.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
       "name": "FarmersMarket",
       "slug": "farmersmarket",
       "category": "Markets",
-      "eventCount": 33,
-      "calendarCount": 4,
+      "eventCount": 36,
+      "calendarCount": 5,
       "links": {
         "ics": {
           "href": "tag-farmersmarket.ics",
@@ -243,8 +277,8 @@
       "name": "Food",
       "slug": "food",
       "category": "Activities",
-      "eventCount": 21,
-      "calendarCount": 1,
+      "eventCount": 31,
+      "calendarCount": 2,
       "links": {
         "ics": {
           "href": "tag-food.ics",
@@ -286,6 +320,23 @@
         },
         "rss": {
           "href": "tag-hermann-park.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Hiking",
+      "slug": "hiking",
+      "category": "Other",
+      "eventCount": 33,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-hiking.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-hiking.rss",
           "type": "application/rss+xml"
         }
       }
@@ -379,8 +430,8 @@
       "name": "Museum District",
       "slug": "museum-district",
       "category": "Neighborhoods",
-      "eventCount": 136,
-      "calendarCount": 7,
+      "eventCount": 146,
+      "calendarCount": 8,
       "links": {
         "ics": {
           "href": "tag-museum-district.ics",
@@ -413,8 +464,8 @@
       "name": "Music",
       "slug": "music",
       "category": "Activities",
-      "eventCount": 641,
-      "calendarCount": 9,
+      "eventCount": 662,
+      "calendarCount": 11,
       "links": {
         "ics": {
           "href": "tag-music.ics",
@@ -447,8 +498,8 @@
       "name": "Nightlife",
       "slug": "nightlife",
       "category": "Activities",
-      "eventCount": 37,
-      "calendarCount": 3,
+      "eventCount": 47,
+      "calendarCount": 4,
       "links": {
         "ics": {
           "href": "tag-nightlife.ics",
@@ -461,11 +512,28 @@
       }
     },
     {
+      "name": "Opera",
+      "slug": "opera",
+      "category": "Other",
+      "eventCount": 11,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-opera.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-opera.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
       "name": "Outdoor Recreation",
       "slug": "outdoor-recreation",
       "category": "Other",
-      "eventCount": 8,
-      "calendarCount": 1,
+      "eventCount": 41,
+      "calendarCount": 2,
       "links": {
         "ics": {
           "href": "tag-outdoor-recreation.ics",
@@ -481,8 +549,8 @@
       "name": "Parks",
       "slug": "parks",
       "category": "Community",
-      "eventCount": 46,
-      "calendarCount": 3,
+      "eventCount": 56,
+      "calendarCount": 4,
       "links": {
         "ics": {
           "href": "tag-parks.ics",
@@ -490,6 +558,23 @@
         },
         "rss": {
           "href": "tag-parks.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "PerformingArts",
+      "slug": "performingarts",
+      "category": "Other",
+      "eventCount": 11,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-performingarts.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-performingarts.rss",
           "type": "application/rss+xml"
         }
       }
@@ -507,6 +592,23 @@
         },
         "rss": {
           "href": "tag-photography.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Sports",
+      "slug": "sports",
+      "category": "Activities",
+      "eventCount": 33,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-sports.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-sports.rss",
           "type": "application/rss+xml"
         }
       }
@@ -532,8 +634,8 @@
       "name": "The Heights",
       "slug": "the-heights",
       "category": "Neighborhoods",
-      "eventCount": 79,
-      "calendarCount": 5,
+      "eventCount": 82,
+      "calendarCount": 6,
       "links": {
         "ics": {
           "href": "tag-the-heights.ics",
