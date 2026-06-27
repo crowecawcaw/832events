@@ -1,68 +1,75 @@
 [
   {
-    "source": "houston-grand-opera",
-    "calendar": "houston-grand-opera-houston-grand-opera",
+    "source": "houston-zoo",
+    "calendar": "houston-zoo-houston-zoo",
     "type": "Ripper",
-    "eventCount": 11,
+    "eventCount": 10,
     "sampleEvents": [
       {
-        "summary": "The Butler Studio Showcase",
-        "date": "2026-09-13T19:00-05:00[America/Chicago]",
-        "location": "Wortham Theater Center, 500 Main St, Houston, TX 77002"
+        "summary": "TXU Energy presents Mythical Realms",
+        "date": "2026-03-06T10:00-06:00[America/Chicago]",
+        "location": "6200 Hermann Park Drive, Houston, TX 77030"
       },
       {
-        "summary": "Susannah",
-        "date": "2026-10-23T19:00-05:00[America/Chicago]",
-        "location": "Wortham Theater Center, 500 Main St, Houston, TX 77002"
+        "summary": "Neighbors for Nature – June 27",
+        "date": "2026-06-27T10:00-05:00[America/Chicago]",
+        "location": "6200 Hermann Park Drive, Houston, TX 77030"
       },
       {
-        "summary": "Faust",
-        "date": "2026-10-30T19:00-05:00[America/Chicago]",
-        "location": "Wortham Theater Center, 500 Main St, Houston, TX 77002"
+        "summary": "Red, White & Zoo – Celebrating America’s 250th at Houston Zoo",
+        "date": "2026-07-03T10:00-05:00[America/Chicago]",
+        "location": "6200 Hermann Park Drive, Houston, TX 77030"
       },
       {
-        "summary": "Carols on the Green",
-        "date": "2026-12-12T19:00-06:00[America/Chicago]",
-        "location": "Wortham Theater Center, 500 Main St, Houston, TX 77002"
+        "summary": "July Member Morning",
+        "date": "2026-07-04T08:00-05:00[America/Chicago]",
+        "location": "6200 Hermann Park Drive, Houston, TX 77030"
       },
       {
-        "summary": "Aida",
-        "date": "2027-01-22T19:00-06:00[America/Chicago]",
-        "location": "Wortham Theater Center, 500 Main St, Houston, TX 77002"
+        "summary": "Neighbors for Nature – July 25",
+        "date": "2026-07-25T10:00-05:00[America/Chicago]",
+        "location": "6200 Hermann Park Drive, Houston, TX 77030"
       }
     ]
   },
   {
-    "source": "htxoutdoors",
-    "calendar": "htxoutdoors-htxoutdoors",
+    "source": "post-houston",
+    "calendar": "post-houston-post-houston",
     "type": "Ripper",
-    "eventCount": 33,
+    "eventCount": 10,
     "sampleEvents": [
       {
-        "summary": "White Water Kayaking 101 Weekend",
-        "date": "2026-06-26T19:00-05:00[America/Chicago]",
-        "location": ""
+        "summary": "Match Day Watch Parties at POST",
+        "date": "2026-06-11T12:00-05:00[America/Chicago]",
+        "location": "POST Market, The Docks"
       },
       {
-        "summary": "Full Moon Hike",
-        "date": "2026-06-29T19:50-05:00[America/Chicago]",
-        "location": ""
+        "summary": "DJ Night — Sistek",
+        "date": "2026-06-26T22:00-05:00[America/Chicago]",
+        "location": "Art Club"
       },
       {
-        "summary": "Dance Discovery Series: Cumbia",
-        "date": "2026-07-01T18:15-05:00[America/Chicago]",
-        "location": ""
+        "summary": "Beyond the Senses: A Journey Through the Elements - Cosmos",
+        "date": "2026-06-27T09:30-05:00[America/Chicago]",
+        "location": "Art Club"
       },
       {
-        "summary": "Axe and Knife Throwing",
-        "date": "2026-07-05T15:20-05:00[America/Chicago]",
-        "location": ""
+        "summary": "Karaoke Night: Saturday Mic Fever",
+        "date": "2026-06-27T19:00-05:00[America/Chicago]",
+        "location": "The Docks"
       },
       {
-        "summary": "New Member Party & Social",
-        "date": "2026-07-08T18:00-05:00[America/Chicago]",
-        "location": ""
+        "summary": "Journey Tribute Band Rooftop Concert",
+        "date": "2026-06-27T20:00-05:00[America/Chicago]",
+        "location": "Outpost"
       }
     ]
+  },
+  {
+    "source": "space-center-houston",
+    "calendar": "space-center-houston-main",
+    "type": "Ripper",
+    "eventCount": 10,
+    "sampleEvents": []
   }
 ]

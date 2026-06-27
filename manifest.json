@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-27T13:42:44.003Z",
+  "lastUpdated": "2026-06-27T13:45:09.558Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -200,6 +200,25 @@
       ]
     },
     {
+      "name": "houston-zoo",
+      "description": "Houston Zoo",
+      "friendlyLink": "https://www.houstonzoo.org/plan-your-visit/calendar/",
+      "calendars": [
+        {
+          "name": "houston-zoo",
+          "friendlyName": "Houston Zoo",
+          "icsUrl": "houston-zoo-houston-zoo.ics",
+          "rssUrl": "houston-zoo-houston-zoo.rss",
+          "tags": [
+            "Animals",
+            "Family",
+            "Parks",
+            "Museum District"
+          ]
+        }
+      ]
+    },
+    {
       "name": "htxoutdoors",
       "description": "HTXoutdoors",
       "friendlyLink": "https://htxoutdoors.com/events-calendar/",
@@ -317,6 +336,26 @@
           "tags": [
             "Books",
             "West University"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "post-houston",
+      "description": "POST Houston",
+      "friendlyLink": "https://posthtx.com/event",
+      "calendars": [
+        {
+          "name": "post-houston",
+          "friendlyName": "POST Houston",
+          "icsUrl": "post-houston-post-houston.ics",
+          "rssUrl": "post-houston-post-houston.rss",
+          "tags": [
+            "Art",
+            "Music",
+            "Nightlife",
+            "Food",
+            "Downtown"
           ]
         }
       ]
@@ -656,6 +695,7 @@
     }
   ],
   "tags": [
+    "Animals",
     "Art",
     "Arts",
     "Beer",
@@ -669,6 +709,7 @@
     "EaDo",
     "Education",
     "Entertainment",
+    "Family",
     "FarmersMarket",
     "Food",
     "FoodFestival",

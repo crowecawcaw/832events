@@ -1,5 +1,5 @@
 {
-  "buildTime": "2026-06-27T13:42:48.409Z",
+  "buildTime": "2026-06-27T13:45:14.477Z",
   "totalErrors": 8,
   "configErrors": [],
   "sources": [
@@ -138,8 +138,8 @@
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1676,
-    "eventsWithGeo": 1622,
+    "totalEvents": 1696,
+    "eventsWithGeo": 1642,
     "eventsWithoutGeo": 54,
     "geocodeErrors": 0
   },
@@ -159,7 +159,6 @@
     "stereo-live-houston-stereo-live-houston",
     "tag-folk",
     "tag-spring-branch",
-    "tag-clear-lake",
     "tag-cinema",
     "tag-garden-oaks",
     "external-houston-cinema-arts-society",
@@ -376,6 +375,13 @@
       "lng": -95.4975
     },
     {
+      "source": "ripper",
+      "name": "houston-zoo",
+      "label": "Houston Zoo, 6200 Hermann Park Drive, Houston, TX 77030",
+      "lat": 29.7174,
+      "lng": -95.391
+    },
+    {
       "source": "external",
       "name": "inprint-houston",
       "label": "Inprint Houston, 1520 W Main St, Houston, TX 77006",
@@ -440,6 +446,13 @@
     },
     {
       "source": "ripper",
+      "name": "post-houston",
+      "label": "POST Houston, 510 Main St, Houston, TX 77002",
+      "lat": 29.7569,
+      "lng": -95.3594
+    },
+    {
+      "source": "ripper",
       "name": "project-row-houses",
       "label": "Project Row Houses, 2521 Holman St, Houston, TX 77004",
       "lat": 29.7319,
@@ -486,6 +499,13 @@
       "label": "Shrine of the Black Madonna Cultural Center & Bookstore, 5309 Martin Luther King Blvd, Houston, TX 77021",
       "lat": 29.7368,
       "lng": -95.344
+    },
+    {
+      "source": "ripper",
+      "name": "space-center-houston",
+      "label": "Space Center Houston, 1601 E NASA Parkway, Houston, TX 77058",
+      "lat": 29.7517,
+      "lng": -95.0905
     },
     {
       "source": "ripper",
@@ -538,10 +558,10 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1198,
-    "totalEvents": 1676,
+    "eventsWithImage": 1208,
+    "totalEvents": 1696,
     "venuesWithImage": 0,
-    "totalVenues": 40,
+    "totalVenues": 42,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -683,6 +703,13 @@
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Houston%20Heights%20Association%2C%20Houston%2C%20TX%2077008"
       },
       {
+        "source": "ripper",
+        "name": "houston-zoo",
+        "label": "Houston Zoo, 6200 Hermann Park Drive, Houston, TX 77030",
+        "url": "https://www.houstonzoo.org/plan-your-visit/calendar/",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Houston%20Zoo%2C%206200%20Hermann%20Park%20Drive%2C%20Houston%2C%20TX%2077030"
+      },
+      {
         "source": "external",
         "name": "inprint-houston",
         "label": "Inprint Houston, 1520 W Main St, Houston, TX 77006",
@@ -737,6 +764,13 @@
         "label": "Murder By The Book, 2342 Bissonnet St, Houston, TX 77005",
         "url": "https://www.murderbooks.com/events",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Murder%20By%20The%20Book%2C%202342%20Bissonnet%20St%2C%20Houston%2C%20TX%2077005"
+      },
+      {
+        "source": "ripper",
+        "name": "post-houston",
+        "label": "POST Houston, 510 Main St, Houston, TX 77002",
+        "url": "https://posthtx.com/event",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=POST%20Houston%2C%20510%20Main%20St%2C%20Houston%2C%20TX%2077002"
       },
       {
         "source": "ripper",
@@ -1526,6 +1560,76 @@
         "url": "https://www.lakehoustonbrew.com/event-details/sunday-brunch-2026-10-25-11-00"
       },
       {
+        "source": "post-houston",
+        "eventId": "beyond-the-senses-a-journey-through-the-elements-cosmos-2026-06-27-89cb9a57",
+        "summary": "Beyond the Senses: A Journey Through the Elements - Cosmos",
+        "date": "2026-06-27T09:30-05:00[America/Chicago]",
+        "url": "https://posthtx.com/event/beyond-the-senses-a-journey-through-the-elements---cosmos"
+      },
+      {
+        "source": "post-houston",
+        "eventId": "dj-night-mild-minds-2026-06-27-a61646de",
+        "summary": "DJ Night — Mild Minds",
+        "date": "2026-06-27T22:00-05:00[America/Chicago]",
+        "url": "https://posthtx.com/event/dj-night-mild-minds"
+      },
+      {
+        "source": "post-houston",
+        "eventId": "dj-night-sistek-2026-06-26-4cff8f49",
+        "summary": "DJ Night — Sistek",
+        "date": "2026-06-26T22:00-05:00[America/Chicago]",
+        "url": "https://posthtx.com/event/dj-night-sistek"
+      },
+      {
+        "source": "post-houston",
+        "eventId": "eden-church-houston-sunday-service-2026-06-28-e00169ad",
+        "summary": "Eden Church Houston: Sunday Service",
+        "date": "2026-06-28T08:30-05:00[America/Chicago]",
+        "url": "https://posthtx.com/event/eden-church-houston-sunday-service"
+      },
+      {
+        "source": "post-houston",
+        "eventId": "free-zumba-class-thursday-2026-07-02-73f9d564",
+        "summary": "Free Zumba Class - Thursday",
+        "date": "2026-07-02T18:30-05:00[America/Chicago]",
+        "url": "https://posthtx.com/event/free-zumba-class"
+      },
+      {
+        "source": "post-houston",
+        "eventId": "future-retro-market-2026-06-28-4667a057",
+        "summary": "Future Retro Market",
+        "date": "2026-06-28T12:00-05:00[America/Chicago]",
+        "url": "https://posthtx.com/event/future-retro-market-2"
+      },
+      {
+        "source": "post-houston",
+        "eventId": "journey-tribute-band-rooftop-concert-2026-06-27-d865b84d",
+        "summary": "Journey Tribute Band Rooftop Concert",
+        "date": "2026-06-27T20:00-05:00[America/Chicago]",
+        "url": "https://posthtx.com/event/journey-tribute-band-rooftop-concert"
+      },
+      {
+        "source": "post-houston",
+        "eventId": "karaoke-night-saturday-mic-fever-2026-06-27-6e1113c8",
+        "summary": "Karaoke Night: Saturday Mic Fever",
+        "date": "2026-06-27T19:00-05:00[America/Chicago]",
+        "url": "https://posthtx.com/event/karaoke-night-saturday-mic-fever"
+      },
+      {
+        "source": "post-houston",
+        "eventId": "match-day-watch-parties-at-post-2026-06-11-5afc2eee",
+        "summary": "Match Day Watch Parties at POST",
+        "date": "2026-06-11T12:00-05:00[America/Chicago]",
+        "url": "https://posthtx.com/event/fifa-world-cup-at-post"
+      },
+      {
+        "source": "post-houston",
+        "eventId": "pride-drag-brunch-2026-06-28-dec3af84",
+        "summary": "Pride Drag Brunch",
+        "date": "2026-06-28T11:00-05:00[America/Chicago]",
+        "url": "https://posthtx.com/event/post-el-tiempo-drag-brunch"
+      },
+      {
         "source": "rice-public-events",
         "eventId": "20260701T180000Z-432093",
         "summary": "Overcoming barriers to point-of-care nucleic acid amplification testing",
@@ -1768,7 +1872,7 @@
   "costStats": {
     "eventsWithCost": 602,
     "freeEvents": 459,
-    "totalEvents": 1676,
+    "totalEvents": 1696,
     "unresolvable": 0
   },
   "costGaps": [
@@ -2767,6 +2871,76 @@
       "summary": "The Magic Flute",
       "date": "2027-01-29T19:00-06:00[America/Chicago]",
       "url": "https://www.houstongrandopera.org/on-stage/the-magic-flute"
+    },
+    {
+      "source": "houston-zoo",
+      "eventId": "august-member-morning-2026-08-01-34d415a0",
+      "summary": "August Member Morning",
+      "date": "2026-08-01T08:00-05:00[America/Chicago]",
+      "url": "https://www.houstonzoo.org/events/august-member-morning-2026/"
+    },
+    {
+      "source": "houston-zoo",
+      "eventId": "july-member-morning-2026-07-04-35f2b57d",
+      "summary": "July Member Morning",
+      "date": "2026-07-04T08:00-05:00[America/Chicago]",
+      "url": "https://www.houstonzoo.org/events/july-member-morning-2026/"
+    },
+    {
+      "source": "houston-zoo",
+      "eventId": "neighbors-for-nature-july-25-2026-07-25-7c4c1777",
+      "summary": "Neighbors for Nature – July 25",
+      "date": "2026-07-25T10:00-05:00[America/Chicago]",
+      "url": "https://www.houstonzoo.org/events/neighbors-for-nature-july-25/"
+    },
+    {
+      "source": "houston-zoo",
+      "eventId": "neighbors-for-nature-june-27-2026-06-27-85a5253e",
+      "summary": "Neighbors for Nature – June 27",
+      "date": "2026-06-27T10:00-05:00[America/Chicago]",
+      "url": "https://www.houstonzoo.org/events/neighbors-for-nature-june/"
+    },
+    {
+      "source": "houston-zoo",
+      "eventId": "red-white-zoo-celebrating-america-s-250th-at-houston-zoo-2026-07-03-a4cfee0c",
+      "summary": "Red, White & Zoo – Celebrating America’s 250th at Houston Zoo",
+      "date": "2026-07-03T10:00-05:00[America/Chicago]",
+      "url": "https://www.houstonzoo.org/events/red-white-zoo/"
+    },
+    {
+      "source": "houston-zoo",
+      "eventId": "txu-energy-presents-mythical-realms-2026-03-06-a754927a",
+      "summary": "TXU Energy presents Mythical Realms",
+      "date": "2026-03-06T10:00-06:00[America/Chicago]",
+      "url": "https://www.houstonzoo.org/events/txu-energy-presents-mythical-realms/"
+    },
+    {
+      "source": "houston-zoo",
+      "eventId": "zoo-ball-2026-2026-11-07-759bbd06",
+      "summary": "Zoo Ball 2026",
+      "date": "2026-11-07T18:00-06:00[America/Chicago]",
+      "url": "https://www.houstonzoo.org/events/zoo-ball-2026/"
+    },
+    {
+      "source": "houston-zoo",
+      "eventId": "zoolates-pilates-at-the-zoo-2026-08-15-b30ad504",
+      "summary": "Zoolates: Pilates at the Zoo",
+      "date": "2026-08-15T07:45-05:00[America/Chicago]",
+      "url": "https://www.houstonzoo.org/events/zoolates-august-2026/"
+    },
+    {
+      "source": "houston-zoo",
+      "eventId": "zoolates-pilates-at-the-zoo-2026-10-17-0359bc1d",
+      "summary": "Zoolates: Pilates at the Zoo",
+      "date": "2026-10-17T07:30-05:00[America/Chicago]",
+      "url": "https://www.houstonzoo.org/events/zoolates-pilates-at-the-zoo-october-2026/"
+    },
+    {
+      "source": "houston-zoo",
+      "eventId": "zoolates-pilates-at-the-zoo-2026-12-12-c9301df0",
+      "summary": "Zoolates: Pilates at the Zoo",
+      "date": "2026-12-12T07:30-06:00[America/Chicago]",
+      "url": "https://www.houstonzoo.org/events/zoolates-pilates-at-the-zoo-december-2026/"
     },
     {
       "source": "htxoutdoors",
@@ -3852,6 +4026,76 @@
       "summary": "Christina Dodd in conversation with Angelina M. Lopez",
       "date": "2026-06-30T18:30-05:00[America/Chicago]",
       "url": "https://www.murderbooks.com/Dodd"
+    },
+    {
+      "source": "post-houston",
+      "eventId": "beyond-the-senses-a-journey-through-the-elements-cosmos-2026-06-27-89cb9a57",
+      "summary": "Beyond the Senses: A Journey Through the Elements - Cosmos",
+      "date": "2026-06-27T09:30-05:00[America/Chicago]",
+      "url": "https://posthtx.com/event/beyond-the-senses-a-journey-through-the-elements---cosmos"
+    },
+    {
+      "source": "post-houston",
+      "eventId": "dj-night-mild-minds-2026-06-27-a61646de",
+      "summary": "DJ Night — Mild Minds",
+      "date": "2026-06-27T22:00-05:00[America/Chicago]",
+      "url": "https://posthtx.com/event/dj-night-mild-minds"
+    },
+    {
+      "source": "post-houston",
+      "eventId": "dj-night-sistek-2026-06-26-4cff8f49",
+      "summary": "DJ Night — Sistek",
+      "date": "2026-06-26T22:00-05:00[America/Chicago]",
+      "url": "https://posthtx.com/event/dj-night-sistek"
+    },
+    {
+      "source": "post-houston",
+      "eventId": "eden-church-houston-sunday-service-2026-06-28-e00169ad",
+      "summary": "Eden Church Houston: Sunday Service",
+      "date": "2026-06-28T08:30-05:00[America/Chicago]",
+      "url": "https://posthtx.com/event/eden-church-houston-sunday-service"
+    },
+    {
+      "source": "post-houston",
+      "eventId": "free-zumba-class-thursday-2026-07-02-73f9d564",
+      "summary": "Free Zumba Class - Thursday",
+      "date": "2026-07-02T18:30-05:00[America/Chicago]",
+      "url": "https://posthtx.com/event/free-zumba-class"
+    },
+    {
+      "source": "post-houston",
+      "eventId": "future-retro-market-2026-06-28-4667a057",
+      "summary": "Future Retro Market",
+      "date": "2026-06-28T12:00-05:00[America/Chicago]",
+      "url": "https://posthtx.com/event/future-retro-market-2"
+    },
+    {
+      "source": "post-houston",
+      "eventId": "journey-tribute-band-rooftop-concert-2026-06-27-d865b84d",
+      "summary": "Journey Tribute Band Rooftop Concert",
+      "date": "2026-06-27T20:00-05:00[America/Chicago]",
+      "url": "https://posthtx.com/event/journey-tribute-band-rooftop-concert"
+    },
+    {
+      "source": "post-houston",
+      "eventId": "karaoke-night-saturday-mic-fever-2026-06-27-6e1113c8",
+      "summary": "Karaoke Night: Saturday Mic Fever",
+      "date": "2026-06-27T19:00-05:00[America/Chicago]",
+      "url": "https://posthtx.com/event/karaoke-night-saturday-mic-fever"
+    },
+    {
+      "source": "post-houston",
+      "eventId": "match-day-watch-parties-at-post-2026-06-11-5afc2eee",
+      "summary": "Match Day Watch Parties at POST",
+      "date": "2026-06-11T12:00-05:00[America/Chicago]",
+      "url": "https://posthtx.com/event/fifa-world-cup-at-post"
+    },
+    {
+      "source": "post-houston",
+      "eventId": "pride-drag-brunch-2026-06-28-dec3af84",
+      "summary": "Pride Drag Brunch",
+      "date": "2026-06-28T11:00-05:00[America/Chicago]",
+      "url": "https://posthtx.com/event/post-el-tiempo-drag-brunch"
     },
     {
       "source": "punch-line-comedy-club",
@@ -5977,6 +6221,13 @@
       "source": "houston-improv"
     },
     {
+      "name": "houston-zoo-houston-zoo",
+      "type": "Ripper",
+      "events": 10,
+      "expectEmpty": false,
+      "source": "houston-zoo"
+    },
+    {
       "name": "htxoutdoors-htxoutdoors",
       "type": "Ripper",
       "events": 33,
@@ -6033,6 +6284,13 @@
       "source": "murder-by-the-book"
     },
     {
+      "name": "post-houston-post-houston",
+      "type": "Ripper",
+      "events": 10,
+      "expectEmpty": false,
+      "source": "post-houston"
+    },
+    {
       "name": "pride-houston-pride-houston",
       "type": "Ripper",
       "events": 0,
@@ -6080,6 +6338,13 @@
       "events": 1,
       "expectEmpty": false,
       "source": "shrine-of-the-black-madonna"
+    },
+    {
+      "name": "space-center-houston-main",
+      "type": "Ripper",
+      "events": 10,
+      "expectEmpty": false,
+      "source": "space-center-houston"
     },
     {
       "name": "stereo-live-houston-stereo-live-houston",
@@ -6140,21 +6405,21 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 652,
+      "events": 662,
       "expectEmpty": false,
       "source": "tag-music"
     },
     {
       "name": "tag-nightlife",
       "type": "Aggregate",
-      "events": 37,
+      "events": 47,
       "expectEmpty": false,
       "source": "tag-nightlife"
     },
     {
       "name": "tag-downtown",
       "type": "Aggregate",
-      "events": 188,
+      "events": 198,
       "expectEmpty": false,
       "source": "tag-downtown"
     },
@@ -6203,14 +6468,14 @@
     {
       "name": "tag-art",
       "type": "Aggregate",
-      "events": 510,
+      "events": 520,
       "expectEmpty": false,
       "source": "tag-art"
     },
     {
       "name": "tag-museum-district",
       "type": "Aggregate",
-      "events": 136,
+      "events": 146,
       "expectEmpty": false,
       "source": "tag-museum-district"
     },
@@ -6231,7 +6496,7 @@
     {
       "name": "tag-education",
       "type": "Aggregate",
-      "events": 184,
+      "events": 194,
       "expectEmpty": false,
       "source": "tag-education"
     },
@@ -6313,6 +6578,27 @@
       "source": "tag-spring-branch"
     },
     {
+      "name": "tag-animals",
+      "type": "Aggregate",
+      "events": 10,
+      "expectEmpty": false,
+      "source": "tag-animals"
+    },
+    {
+      "name": "tag-family",
+      "type": "Aggregate",
+      "events": 20,
+      "expectEmpty": false,
+      "source": "tag-family"
+    },
+    {
+      "name": "tag-parks",
+      "type": "Aggregate",
+      "events": 56,
+      "expectEmpty": false,
+      "source": "tag-parks"
+    },
+    {
       "name": "tag-outdoor-recreation",
       "type": "Aggregate",
       "events": 41,
@@ -6357,7 +6643,7 @@
     {
       "name": "tag-food",
       "type": "Aggregate",
-      "events": 21,
+      "events": 31,
       "expectEmpty": false,
       "source": "tag-food"
     },
@@ -6385,7 +6671,7 @@
     {
       "name": "tag-clear-lake",
       "type": "Aggregate",
-      "events": 0,
+      "events": 10,
       "expectEmpty": false,
       "source": "tag-clear-lake"
     },
@@ -6397,18 +6683,25 @@
       "source": "tag-cultural"
     },
     {
+      "name": "tag-science",
+      "type": "Aggregate",
+      "events": 10,
+      "expectEmpty": false,
+      "source": "tag-science"
+    },
+    {
+      "name": "tag-space",
+      "type": "Aggregate",
+      "events": 10,
+      "expectEmpty": false,
+      "source": "tag-space"
+    },
+    {
       "name": "tag-brewery",
       "type": "Aggregate",
       "events": 30,
       "expectEmpty": false,
       "source": "tag-brewery"
-    },
-    {
-      "name": "tag-parks",
-      "type": "Aggregate",
-      "events": 46,
-      "expectEmpty": false,
-      "source": "tag-parks"
     },
     {
       "name": "tag-hermann-park",
@@ -6462,7 +6755,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1743,
+      "events": 1773,
       "expectEmpty": false,
       "source": "tag-all"
     },

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-27T13:42:48.404Z",
+  "generated": "2026-06-27T13:45:14.474Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -714,6 +714,43 @@
       ]
     },
     {
+      "name": "houston-zoo",
+      "friendlyName": "Houston Zoo",
+      "description": "Houston Zoo",
+      "url": "https://www.houstonzoo.org/plan-your-visit/calendar/",
+      "tags": [
+        "Animals",
+        "Family",
+        "Parks",
+        "Museum District"
+      ],
+      "geo": {
+        "lat": 29.7174,
+        "lng": -95.391,
+        "label": "Houston Zoo, 6200 Hermann Park Drive, Houston, TX 77030"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Houston%20Zoo%2C%206200%20Hermann%20Park%20Drive%2C%20Houston%2C%20TX%2077030"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "houston-zoo",
+          "friendlyName": "Houston Zoo",
+          "links": {
+            "ics": {
+              "href": "houston-zoo-houston-zoo.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "houston-zoo-houston-zoo.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "inprint-houston",
       "friendlyName": "Inprint Houston",
       "description": "Literary nonprofit hosting readings from the Margarett Root Brown Reading Series, book clubs, and writing workshops",
@@ -991,6 +1028,44 @@
             },
             "rss": {
               "href": "murder-by-the-book-murder-by-the-book.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "post-houston",
+      "friendlyName": "POST Houston",
+      "description": "POST Houston",
+      "url": "https://posthtx.com/event",
+      "tags": [
+        "Art",
+        "Music",
+        "Nightlife",
+        "Food",
+        "Downtown"
+      ],
+      "geo": {
+        "lat": 29.7569,
+        "lng": -95.3594,
+        "label": "POST Houston, 510 Main St, Houston, TX 77002"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=POST%20Houston%2C%20510%20Main%20St%2C%20Houston%2C%20TX%2077002"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "post-houston",
+          "friendlyName": "POST Houston",
+          "links": {
+            "ics": {
+              "href": "post-houston-post-houston.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "post-houston-post-houston.rss",
               "type": "application/rss+xml"
             }
           }

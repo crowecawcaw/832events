@@ -1,12 +1,29 @@
 {
-  "generated": "2026-06-27T13:42:48.411Z",
+  "generated": "2026-06-27T13:45:14.479Z",
   "tags": [
+    {
+      "name": "Animals",
+      "slug": "animals",
+      "category": "Other",
+      "eventCount": 10,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-animals.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-animals.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
     {
       "name": "Art",
       "slug": "art",
       "category": "Activities",
-      "eventCount": 510,
-      "calendarCount": 6,
+      "eventCount": 520,
+      "calendarCount": 7,
       "links": {
         "ics": {
           "href": "tag-art.ics",
@@ -158,8 +175,8 @@
       "name": "Downtown",
       "slug": "downtown",
       "category": "Neighborhoods",
-      "eventCount": 188,
-      "calendarCount": 5,
+      "eventCount": 198,
+      "calendarCount": 6,
       "links": {
         "ics": {
           "href": "tag-downtown.ics",
@@ -192,7 +209,7 @@
       "name": "Education",
       "slug": "education",
       "category": "Activities",
-      "eventCount": 184,
+      "eventCount": 194,
       "calendarCount": 2,
       "links": {
         "ics": {
@@ -223,6 +240,23 @@
       }
     },
     {
+      "name": "Family",
+      "slug": "family",
+      "category": "Other",
+      "eventCount": 20,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-family.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-family.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
       "name": "FarmersMarket",
       "slug": "farmersmarket",
       "category": "Markets",
@@ -243,8 +277,8 @@
       "name": "Food",
       "slug": "food",
       "category": "Activities",
-      "eventCount": 21,
-      "calendarCount": 1,
+      "eventCount": 31,
+      "calendarCount": 2,
       "links": {
         "ics": {
           "href": "tag-food.ics",
@@ -396,8 +430,8 @@
       "name": "Museum District",
       "slug": "museum-district",
       "category": "Neighborhoods",
-      "eventCount": 136,
-      "calendarCount": 7,
+      "eventCount": 146,
+      "calendarCount": 8,
       "links": {
         "ics": {
           "href": "tag-museum-district.ics",
@@ -430,8 +464,8 @@
       "name": "Music",
       "slug": "music",
       "category": "Activities",
-      "eventCount": 652,
-      "calendarCount": 10,
+      "eventCount": 662,
+      "calendarCount": 11,
       "links": {
         "ics": {
           "href": "tag-music.ics",
@@ -464,8 +498,8 @@
       "name": "Nightlife",
       "slug": "nightlife",
       "category": "Activities",
-      "eventCount": 37,
-      "calendarCount": 3,
+      "eventCount": 47,
+      "calendarCount": 4,
       "links": {
         "ics": {
           "href": "tag-nightlife.ics",
@@ -515,8 +549,8 @@
       "name": "Parks",
       "slug": "parks",
       "category": "Community",
-      "eventCount": 46,
-      "calendarCount": 3,
+      "eventCount": 56,
+      "calendarCount": 4,
       "links": {
         "ics": {
           "href": "tag-parks.ics",
