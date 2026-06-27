@@ -30,8 +30,8 @@
 <text x="700.0" y="309" font-size="11" text-anchor="middle" fill="#6b7280">Jun 27</text>
 <text x="14" y="162" font-size="11" fill="#2563eb" text-anchor="middle" transform="rotate(-90 14 162)">Events</text>
 <text x="748" y="162" font-size="11" fill="#ea580c" text-anchor="middle" transform="rotate(90 748 162)">Calendars</text>
-<polyline fill="none" stroke="#2563eb" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" points="56.0,103.2 114.5,115.0 173.1,98.3 231.6,96.7 290.2,90.3 348.7,91.0 407.3,99.7 465.8,93.1 524.4,93.5 582.9,83.9 641.5,78.0 700.0,75.5"/>
-<polyline fill="none" stroke="#ea580c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" points="56.0,136.4 114.5,131.3 173.1,110.8 231.6,100.6 290.2,95.4 348.7,95.4 407.3,105.7 465.8,80.1 524.4,80.1 582.9,75.0 641.5,80.1 700.0,75.0"/>
+<polyline fill="none" stroke="#2563eb" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" points="56.0,103.2 114.5,115.0 173.1,98.3 231.6,96.7 290.2,90.3 348.7,91.0 407.3,99.7 465.8,93.1 524.4,93.5 582.9,83.9 641.5,78.0 700.0,72.9"/>
+<polyline fill="none" stroke="#ea580c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" points="56.0,136.4 114.5,131.3 173.1,110.8 231.6,100.6 290.2,95.4 348.7,95.4 407.3,105.7 465.8,80.1 524.4,80.1 582.9,75.0 641.5,80.1 700.0,64.7"/>
 <circle cx="56.0" cy="103.2" r="2.5" fill="#2563eb"/>
 <circle cx="56.0" cy="136.4" r="2.5" fill="#ea580c"/>
 <circle cx="114.5" cy="115.0" r="2.5" fill="#2563eb"/>
@@ -54,8 +54,8 @@
 <circle cx="582.9" cy="75.0" r="2.5" fill="#ea580c"/>
 <circle cx="641.5" cy="78.0" r="2.5" fill="#2563eb"/>
 <circle cx="641.5" cy="80.1" r="2.5" fill="#ea580c"/>
-<circle cx="700.0" cy="75.5" r="2.5" fill="#2563eb"/>
-<circle cx="700.0" cy="75.0" r="2.5" fill="#ea580c"/>
+<circle cx="700.0" cy="72.9" r="2.5" fill="#2563eb"/>
+<circle cx="700.0" cy="64.7" r="2.5" fill="#ea580c"/>
 <rect x="542" y="26" width="158" height="40" fill="#ffffff" fill-opacity="0.85" stroke="#e5e7eb" rx="4"/>
 <line x1="550" y1="38" x2="568" y2="38" stroke="#2563eb" stroke-width="2"/>
 <text x="574" y="42" font-size="11" fill="#374151">Events</text>
