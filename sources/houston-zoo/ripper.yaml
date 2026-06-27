@@ -1,0 +1,13 @@
+name: houston-zoo
+description: "Houston Zoo"
+url: https://www.houstonzoo.org/plan-your-visit/calendar/
+friendlyLink: https://www.houstonzoo.org/plan-your-visit/calendar/
+tags: [Animals, Family, Parks, "Museum District"]
+geo:
+  lat: 29.7174
+  lng: -95.3910
+  label: "Houston Zoo, 6200 Hermann Park Drive, Houston, TX 77030"
+calendars:
+  - name: houston-zoo
+    friendlyname: "Houston Zoo"
+    timezone: America/Chicago

@@ -1798,38 +1798,59 @@
   },
   {
     "name": "Houston Zoo",
-    "status": "candidate",
+    "status": "added",
     "platform": "Custom website calendar",
     "url": "https://www.houstonzoo.org/plan-your-visit/calendar/",
     "tags": [
       "Animals",
       "Family",
-      "Nature",
-      "Hermann Park"
+      "Parks",
+      "Museum District"
     ],
     "firstSeen": "2026-06-27",
     "lastChecked": "2026-06-27",
-    "notes": "Zoo events calendar with Red, White & Zoo, TXU Energy Mythical Realms, special programming. No ICS feed or Eventbrite found. Would require custom HTML scraper."
+    "pr": "claude/source-discovery-2026-06-27",
+    "impl": {
+      "type": "custom",
+      "observedEventCount": 10,
+      "builtEventCount": 10,
+      "note": "Custom HTML ripper for zoo event calendar; includes special programming like Red White & Zoo and TXU Energy Mythical Realms",
+      "geo": {
+        "lat": 29.7174,
+        "lng": -95.3910,
+        "label": "Houston Zoo, 6200 Hermann Park Drive, Houston, TX 77030"
+      }
+    }
   },
   {
     "name": "Space Center Houston",
-    "status": "candidate",
-    "platform": "Mixed platform (CircuitTree, custom ticketing)",
+    "status": "added",
+    "platform": "WordPress REST API (Tribe Events)",
     "url": "https://spacecenter.org/events/",
     "tags": [
       "Education",
       "Science",
       "Space",
-      "NASA",
       "Family"
     ],
     "firstSeen": "2026-06-27",
     "lastChecked": "2026-06-27",
-    "notes": "Events listed on custom calendar with external ticketing via CircuitTree Events and Space Center ticketing. No unified ICS feed. Would require custom scraper or investigation of CircuitTree API."
+    "pr": "claude/source-discovery-2026-06-27",
+    "impl": {
+      "type": "custom",
+      "observedEventCount": 10,
+      "builtEventCount": 10,
+      "note": "Custom REST API ripper using Space Center Houston's public WordPress Events Calendar endpoint",
+      "geo": {
+        "lat": 29.7517,
+        "lng": -95.0905,
+        "label": "Space Center Houston, 1601 E NASA Parkway, Houston, TX 77058"
+      }
+    }
   },
   {
     "name": "POST Houston",
-    "status": "candidate",
+    "status": "added",
     "platform": "Custom HTML calendar with Eventrill ticketing",
     "url": "https://posthtx.com/event",
     "tags": [
@@ -1841,6 +1862,17 @@
     ],
     "firstSeen": "2026-06-27",
     "lastChecked": "2026-06-27",
-    "notes": "Art complex with rooftop venues, DJ nights, cultural programming. Custom web calendar with external Eventrill ticketing. No ICS feed. HTML scraper feasible."
+    "pr": "claude/source-discovery-2026-06-27",
+    "impl": {
+      "type": "custom",
+      "observedEventCount": 10,
+      "builtEventCount": 10,
+      "note": "Custom HTML ripper for Webflow-based event calendar; extracts from Webflow event cards",
+      "geo": {
+        "lat": 29.7569,
+        "lng": -95.3594,
+        "label": "POST Houston, 510 Main St, Houston, TX 77002"
+      }
+    }
   }
 ]
