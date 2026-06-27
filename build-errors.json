@@ -1,5 +1,5 @@
 {
-  "buildTime": "2026-06-27T12:57:32.009Z",
+  "buildTime": "2026-06-27T13:42:48.409Z",
   "totalErrors": 8,
   "configErrors": [],
   "sources": [
@@ -138,9 +138,9 @@
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1632,
-    "eventsWithGeo": 1611,
-    "eventsWithoutGeo": 21,
+    "totalEvents": 1676,
+    "eventsWithGeo": 1622,
+    "eventsWithoutGeo": 54,
     "geocodeErrors": 0
   },
   "uncertainEvents": [],
@@ -355,6 +355,13 @@
       "lng": -95.3661
     },
     {
+      "source": "ripper",
+      "name": "houston-grand-opera",
+      "label": "Wortham Theater Center, 500 Main St, Houston, TX 77002",
+      "lat": 29.7237,
+      "lng": -95.3937
+    },
+    {
       "source": "external",
       "name": "houston-heights-association",
       "label": "Houston Heights Association, Houston, TX 77008",
@@ -531,10 +538,10 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1178,
-    "totalEvents": 1632,
+    "eventsWithImage": 1198,
+    "totalEvents": 1676,
     "venuesWithImage": 0,
-    "totalVenues": 39,
+    "totalVenues": 40,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -661,6 +668,13 @@
         "name": "houston-farmers-market",
         "label": "Houston Farmers Market, 2520 Airline Dr, Houston, TX 77009",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Houston%20Farmers%20Market%2C%202520%20Airline%20Dr%2C%20Houston%2C%20TX%2077009"
+      },
+      {
+        "source": "ripper",
+        "name": "houston-grand-opera",
+        "label": "Wortham Theater Center, 500 Main St, Houston, TX 77002",
+        "url": "https://www.houstongrandopera.org/on-stage",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Wortham%20Theater%20Center%2C%20500%20Main%20St%2C%20Houston%2C%20TX%2077002"
       },
       {
         "source": "external",
@@ -1218,6 +1232,174 @@
         "url": "https://www.edu.hcponline.org/events/why-images-matter-truth-empathy-connection"
       },
       {
+        "source": "htxoutdoors",
+        "eventId": "african-safari-adventure-2026-09-03",
+        "summary": "African Safari Adventure",
+        "date": "2026-09-03T08:00-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/african-safari-adventure/"
+      },
+      {
+        "source": "htxoutdoors",
+        "eventId": "annual-beneeezy-purple-monkey-fun-run-2026-09-05",
+        "summary": "Annual Beneeezy Purple Monkey Fun Run",
+        "date": "2026-09-05T07:00-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/annual-beneeezy-purple-monkey-fun-run/"
+      },
+      {
+        "source": "htxoutdoors",
+        "eventId": "backpacking-in-grand-teton-national-park-2026-08-14",
+        "summary": "Backpacking in Grand Teton National Park",
+        "date": "2026-08-14T13:00-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/backpacking-in-grand-teton-national-park/"
+      },
+      {
+        "source": "htxoutdoors",
+        "eventId": "dance-discovery-series-cumbia-2026-07-01",
+        "summary": "Dance Discovery Series: Cumbia",
+        "date": "2026-07-01T18:15-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/dance-discovery-series-1/"
+      },
+      {
+        "source": "htxoutdoors",
+        "eventId": "disc-golf-at-tc-jester-park-2026-07-11",
+        "summary": "Disc Golf at TC Jester Park",
+        "date": "2026-07-11T08:00-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/disc-golf-at-tc-jester-park-31/"
+      },
+      {
+        "source": "htxoutdoors",
+        "eventId": "disc-golf-at-tc-jester-park-2026-07-25",
+        "summary": "Disc Golf at TC Jester Park",
+        "date": "2026-07-25T08:00-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/disc-golf-at-tc-jester-park-32/"
+      },
+      {
+        "source": "htxoutdoors",
+        "eventId": "evening-forest-hike-2026-07-08",
+        "summary": "Evening Forest Hike",
+        "date": "2026-07-08T19:00-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/evening-forest-hike-7/"
+      },
+      {
+        "source": "htxoutdoors",
+        "eventId": "evening-forest-hike-2026-07-22",
+        "summary": "Evening Forest Hike",
+        "date": "2026-07-22T19:00-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/evening-forest-hike-8/"
+      },
+      {
+        "source": "htxoutdoors",
+        "eventId": "evening-forest-hike-2026-08-12",
+        "summary": "Evening Forest Hike",
+        "date": "2026-08-12T19:00-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/evening-forest-hike-9/"
+      },
+      {
+        "source": "htxoutdoors",
+        "eventId": "evening-forest-hike-2026-08-26",
+        "summary": "Evening Forest Hike",
+        "date": "2026-08-26T19:00-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/evening-forest-hike-10/"
+      },
+      {
+        "source": "htxoutdoors",
+        "eventId": "glacier-backpacking-trip-2026-09-12",
+        "summary": "Glacier Backpacking Trip",
+        "date": "2026-09-12T12:00-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/glacier-backpacking-trip/"
+      },
+      {
+        "source": "htxoutdoors",
+        "eventId": "glacier-camping-trip-2026-09-17",
+        "summary": "Glacier Camping Trip",
+        "date": "2026-09-17T12:00-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/glacier-camping-trip/"
+      },
+      {
+        "source": "htxoutdoors",
+        "eventId": "ice-skating-galleria-2026-08-09",
+        "summary": "Ice Skating Galleria",
+        "date": "2026-08-09T13:00-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/ice-skating-galleria/"
+      },
+      {
+        "source": "htxoutdoors",
+        "eventId": "ice-skating-sugar-land-2026-07-10",
+        "summary": "Ice Skating Sugar Land",
+        "date": "2026-07-10T19:30-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/ice-skating-sugar-land/"
+      },
+      {
+        "source": "htxoutdoors",
+        "eventId": "intro-to-kayak-roll-pool-party-2026-07-13",
+        "summary": "Intro to Kayak Roll Pool Party",
+        "date": "2026-07-13T18:00-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/intro-to-kayak-roll-pool-party-2/"
+      },
+      {
+        "source": "htxoutdoors",
+        "eventId": "intro-to-kayak-roll-pool-party-2026-08-10",
+        "summary": "Intro to Kayak Roll Pool Party",
+        "date": "2026-08-10T18:00-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/intro-to-kayak-roll-pool-party-3/"
+      },
+      {
+        "source": "htxoutdoors",
+        "eventId": "intro-to-kayak-roll-pool-party-2026-09-14",
+        "summary": "Intro to Kayak Roll Pool Party",
+        "date": "2026-09-14T18:00-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/intro-to-kayak-roll-pool-party-4/"
+      },
+      {
+        "source": "htxoutdoors",
+        "eventId": "lunar-landing-5k-2026-07-18",
+        "summary": "Lunar Landing 5k",
+        "date": "2026-07-18T06:30-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/lunar-landing-5k/"
+      },
+      {
+        "source": "htxoutdoors",
+        "eventId": "mountain-biking-2026-08-01",
+        "summary": "Mountain Biking",
+        "date": "2026-08-01T10:00-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/mountain-biking-2/"
+      },
+      {
+        "source": "htxoutdoors",
+        "eventId": "new-member-party-social-2026-07-08",
+        "summary": "New Member Party & Social",
+        "date": "2026-07-08T18:00-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/new-member-party-social-3/"
+      },
+      {
+        "source": "htxoutdoors",
+        "eventId": "toughest-10k-kemah-2026-09-20",
+        "summary": "Toughest 10K Kemah",
+        "date": "2026-09-20T06:30-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/toughest-10k-kemah-2/"
+      },
+      {
+        "source": "htxoutdoors",
+        "eventId": "white-water-kayaking-101-weekend-2026-06-26",
+        "summary": "White Water Kayaking 101 Weekend",
+        "date": "2026-06-26T19:00-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/white-water-kayaking-101-weekend-6/"
+      },
+      {
+        "source": "htxoutdoors",
+        "eventId": "white-water-kayaking-101-weekend-2026-07-24",
+        "summary": "White Water Kayaking 101 Weekend",
+        "date": "2026-07-24T19:00-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/white-water-kayaking-101-weekend-7/"
+      },
+      {
+        "source": "htxoutdoors",
+        "eventId": "white-water-kayaking-101-weekend-2026-08-21",
+        "summary": "White Water Kayaking 101 Weekend",
+        "date": "2026-08-21T19:00-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/white-water-kayaking-101-weekend-8/"
+      },
+      {
         "source": "lake-houston-brewery",
         "eventId": "sunday-brunch-2026-06-28",
         "summary": "Sunday Brunch!",
@@ -1586,7 +1768,7 @@
   "costStats": {
     "eventsWithCost": 602,
     "freeEvents": 459,
-    "totalEvents": 1632,
+    "totalEvents": 1676,
     "unresolvable": 0
   },
   "costGaps": [
@@ -2508,6 +2690,314 @@
       "summary": "Why Images Matter: Truth, Empathy, Connection",
       "date": "2025-12-03T18:30-06:00[America/Chicago]",
       "url": "https://www.edu.hcponline.org/events/why-images-matter-truth-empathy-connection"
+    },
+    {
+      "source": "houston-grand-opera",
+      "eventId": "aida-2027-01-22",
+      "summary": "Aida",
+      "date": "2027-01-22T19:00-06:00[America/Chicago]",
+      "url": "https://www.houstongrandopera.org/on-stage/aida"
+    },
+    {
+      "source": "houston-grand-opera",
+      "eventId": "carols-on-the-green-2026-12-12",
+      "summary": "Carols on the Green",
+      "date": "2026-12-12T19:00-06:00[America/Chicago]",
+      "url": "https://www.houstongrandopera.org/events/carols-on-the-green"
+    },
+    {
+      "source": "houston-grand-opera",
+      "eventId": "concert-of-arias-2027-02-26",
+      "summary": "Concert of Arias",
+      "date": "2027-02-26T19:00-06:00[America/Chicago]",
+      "url": "https://www.houstongrandopera.org/on-stage/concert-of-arias"
+    },
+    {
+      "source": "houston-grand-opera",
+      "eventId": "der-rosenkavalier-2027-04-23",
+      "summary": "Der Rosenkavalier",
+      "date": "2027-04-23T19:00-05:00[America/Chicago]",
+      "url": "https://www.houstongrandopera.org/on-stage/der-rosenkavalier"
+    },
+    {
+      "source": "houston-grand-opera",
+      "eventId": "faust-2026-10-30",
+      "summary": "Faust",
+      "date": "2026-10-30T19:00-05:00[America/Chicago]",
+      "url": "https://www.houstongrandopera.org/on-stage/faust"
+    },
+    {
+      "source": "houston-grand-opera",
+      "eventId": "giving-voice-2027-02-19",
+      "summary": "Giving Voice",
+      "date": "2027-02-19T19:00-06:00[America/Chicago]",
+      "url": "https://www.houstongrandopera.org/on-stage/giving-voice"
+    },
+    {
+      "source": "houston-grand-opera",
+      "eventId": "hgo-family-day-the-magic-flute-2027-02-13",
+      "summary": "HGO Family Day: The Magic Flute",
+      "date": "2027-02-13T19:00-06:00[America/Chicago]",
+      "url": "https://www.houstongrandopera.org/on-stage/family-day"
+    },
+    {
+      "source": "houston-grand-opera",
+      "eventId": "show-boat-2027-04-30",
+      "summary": "Show Boat",
+      "date": "2027-04-30T19:00-05:00[America/Chicago]",
+      "url": "https://www.houstongrandopera.org/on-stage/show-boat"
+    },
+    {
+      "source": "houston-grand-opera",
+      "eventId": "susannah-2026-10-23",
+      "summary": "Susannah",
+      "date": "2026-10-23T19:00-05:00[America/Chicago]",
+      "url": "https://www.houstongrandopera.org/on-stage/susannah"
+    },
+    {
+      "source": "houston-grand-opera",
+      "eventId": "the-butler-studio-showcase-2026-09-13",
+      "summary": "The Butler Studio Showcase",
+      "date": "2026-09-13T19:00-05:00[America/Chicago]",
+      "url": "https://www.houstongrandopera.org/on-stage/studio-showcase"
+    },
+    {
+      "source": "houston-grand-opera",
+      "eventId": "the-magic-flute-2027-01-29",
+      "summary": "The Magic Flute",
+      "date": "2027-01-29T19:00-06:00[America/Chicago]",
+      "url": "https://www.houstongrandopera.org/on-stage/the-magic-flute"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "african-safari-adventure-2026-09-03",
+      "summary": "African Safari Adventure",
+      "date": "2026-09-03T08:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/african-safari-adventure/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "annual-beneeezy-purple-monkey-fun-run-2026-09-05",
+      "summary": "Annual Beneeezy Purple Monkey Fun Run",
+      "date": "2026-09-05T07:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/annual-beneeezy-purple-monkey-fun-run/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "axe-and-knife-throwing-2026-07-05",
+      "summary": "Axe and Knife Throwing",
+      "date": "2026-07-05T15:20-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/knife-throwing-3/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "backpacking-in-grand-teton-national-park-2026-08-14",
+      "summary": "Backpacking in Grand Teton National Park",
+      "date": "2026-08-14T13:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/backpacking-in-grand-teton-national-park/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "chile-multisport-adventure-info-meeting-2026-07-16",
+      "summary": "Chile Multisport Adventure Info Meeting",
+      "date": "2026-07-16T19:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/chile-multisport-info-meeting-3/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "climbing-at-momentum-katy-2026-07-21",
+      "summary": "Climbing at Momentum Katy",
+      "date": "2026-07-21T19:30-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/climbing-at-momentum-katy-61/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "dance-discovery-series-cumbia-2026-07-01",
+      "summary": "Dance Discovery Series: Cumbia",
+      "date": "2026-07-01T18:15-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/dance-discovery-series-1/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "disc-golf-at-tc-jester-park-2026-07-11",
+      "summary": "Disc Golf at TC Jester Park",
+      "date": "2026-07-11T08:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/disc-golf-at-tc-jester-park-31/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "disc-golf-at-tc-jester-park-2026-07-25",
+      "summary": "Disc Golf at TC Jester Park",
+      "date": "2026-07-25T08:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/disc-golf-at-tc-jester-park-32/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "evening-forest-hike-2026-07-08",
+      "summary": "Evening Forest Hike",
+      "date": "2026-07-08T19:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/evening-forest-hike-7/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "evening-forest-hike-2026-07-22",
+      "summary": "Evening Forest Hike",
+      "date": "2026-07-22T19:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/evening-forest-hike-8/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "evening-forest-hike-2026-08-12",
+      "summary": "Evening Forest Hike",
+      "date": "2026-08-12T19:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/evening-forest-hike-9/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "evening-forest-hike-2026-08-26",
+      "summary": "Evening Forest Hike",
+      "date": "2026-08-26T19:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/evening-forest-hike-10/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "full-moon-hike-2026-06-29",
+      "summary": "Full Moon Hike",
+      "date": "2026-06-29T19:50-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/full-moon-hike-33/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "full-moon-hike-2026-07-28",
+      "summary": "Full Moon Hike",
+      "date": "2026-07-28T19:50-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/full-moon-hike-34/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "full-moon-hike-2026-08-27",
+      "summary": "Full Moon Hike",
+      "date": "2026-08-27T19:20-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/full-moon-hike-35/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "glacier-backpacking-trip-2026-09-12",
+      "summary": "Glacier Backpacking Trip",
+      "date": "2026-09-12T12:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/glacier-backpacking-trip/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "glacier-camping-trip-2026-09-17",
+      "summary": "Glacier Camping Trip",
+      "date": "2026-09-17T12:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/glacier-camping-trip/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "ice-skating-galleria-2026-08-09",
+      "summary": "Ice Skating Galleria",
+      "date": "2026-08-09T13:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/ice-skating-galleria/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "ice-skating-sugar-land-2026-07-10",
+      "summary": "Ice Skating Sugar Land",
+      "date": "2026-07-10T19:30-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/ice-skating-sugar-land/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "intro-to-kayak-roll-pool-party-2026-07-13",
+      "summary": "Intro to Kayak Roll Pool Party",
+      "date": "2026-07-13T18:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/intro-to-kayak-roll-pool-party-2/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "intro-to-kayak-roll-pool-party-2026-08-10",
+      "summary": "Intro to Kayak Roll Pool Party",
+      "date": "2026-08-10T18:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/intro-to-kayak-roll-pool-party-3/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "intro-to-kayak-roll-pool-party-2026-09-14",
+      "summary": "Intro to Kayak Roll Pool Party",
+      "date": "2026-09-14T18:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/intro-to-kayak-roll-pool-party-4/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "lunar-landing-5k-2026-07-18",
+      "summary": "Lunar Landing 5k",
+      "date": "2026-07-18T06:30-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/lunar-landing-5k/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "mountain-biking-2026-08-01",
+      "summary": "Mountain Biking",
+      "date": "2026-08-01T10:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/mountain-biking-2/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "new-member-party-social-2026-07-08",
+      "summary": "New Member Party & Social",
+      "date": "2026-07-08T18:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/new-member-party-social-3/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "sup-kayak-social-2026-07-18",
+      "summary": "SUP & Kayak Social",
+      "date": "2026-07-18T08:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/sup-kayak-social-31/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "sup-kayak-social-2026-08-15",
+      "summary": "SUP & Kayak Social",
+      "date": "2026-08-15T08:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/sup-kayak-social-32/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "sup-kayak-social-2026-09-19",
+      "summary": "SUP & Kayak Social",
+      "date": "2026-09-19T08:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/sup-kayak-social-33/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "toughest-10k-kemah-2026-09-20",
+      "summary": "Toughest 10K Kemah",
+      "date": "2026-09-20T06:30-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/toughest-10k-kemah-2/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "white-water-kayaking-101-weekend-2026-06-26",
+      "summary": "White Water Kayaking 101 Weekend",
+      "date": "2026-06-26T19:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/white-water-kayaking-101-weekend-6/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "white-water-kayaking-101-weekend-2026-07-24",
+      "summary": "White Water Kayaking 101 Weekend",
+      "date": "2026-07-24T19:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/white-water-kayaking-101-weekend-7/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "white-water-kayaking-101-weekend-2026-08-21",
+      "summary": "White Water Kayaking 101 Weekend",
+      "date": "2026-08-21T19:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/white-water-kayaking-101-weekend-8/"
     },
     {
       "source": "lake-houston-brewery",
@@ -5473,11 +5963,25 @@
       "source": "houston-center-for-photography"
     },
     {
+      "name": "houston-grand-opera-houston-grand-opera",
+      "type": "Ripper",
+      "events": 11,
+      "expectEmpty": false,
+      "source": "houston-grand-opera"
+    },
+    {
       "name": "houston-improv-houston-improv",
       "type": "Ripper",
       "events": 0,
       "expectEmpty": false,
       "source": "houston-improv"
+    },
+    {
+      "name": "htxoutdoors-htxoutdoors",
+      "type": "Ripper",
+      "events": 33,
+      "expectEmpty": false,
+      "source": "htxoutdoors"
     },
     {
       "name": "kindred-stories-kindred-stories",
@@ -5636,7 +6140,7 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 641,
+      "events": 652,
       "expectEmpty": false,
       "source": "tag-music"
     },
@@ -5650,7 +6154,7 @@
     {
       "name": "tag-downtown",
       "type": "Aggregate",
-      "events": 177,
+      "events": 188,
       "expectEmpty": false,
       "source": "tag-downtown"
     },
@@ -5664,7 +6168,7 @@
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 452,
+      "events": 485,
       "expectEmpty": false,
       "source": "tag-community"
     },
@@ -5781,6 +6285,20 @@
       "source": "tag-photography"
     },
     {
+      "name": "tag-performingarts",
+      "type": "Aggregate",
+      "events": 11,
+      "expectEmpty": false,
+      "source": "tag-performingarts"
+    },
+    {
+      "name": "tag-opera",
+      "type": "Aggregate",
+      "events": 11,
+      "expectEmpty": false,
+      "source": "tag-opera"
+    },
+    {
       "name": "tag-comedy",
       "type": "Aggregate",
       "events": 194,
@@ -5793,6 +6311,27 @@
       "events": 0,
       "expectEmpty": false,
       "source": "tag-spring-branch"
+    },
+    {
+      "name": "tag-outdoor-recreation",
+      "type": "Aggregate",
+      "events": 41,
+      "expectEmpty": false,
+      "source": "tag-outdoor-recreation"
+    },
+    {
+      "name": "tag-hiking",
+      "type": "Aggregate",
+      "events": 33,
+      "expectEmpty": false,
+      "source": "tag-hiking"
+    },
+    {
+      "name": "tag-sports",
+      "type": "Aggregate",
+      "events": 33,
+      "expectEmpty": false,
+      "source": "tag-sports"
     },
     {
       "name": "tag-third-ward",
@@ -5907,13 +6446,6 @@
       "source": "tag-tech"
     },
     {
-      "name": "tag-outdoor-recreation",
-      "type": "Aggregate",
-      "events": 8,
-      "expectEmpty": false,
-      "source": "tag-outdoor-recreation"
-    },
-    {
       "name": "tag-theatre",
       "type": "Aggregate",
       "events": 1,
@@ -5930,7 +6462,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1699,
+      "events": 1743,
       "expectEmpty": false,
       "source": "tag-all"
     },

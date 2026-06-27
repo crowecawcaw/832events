@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-27T12:57:32.005Z",
+  "generated": "2026-06-27T13:42:48.404Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -636,6 +636,43 @@
             },
             "rss": {
               "href": "external-houston-farmers-market.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "houston-grand-opera",
+      "friendlyName": "Houston Grand Opera",
+      "description": "Houston Grand Opera",
+      "url": "https://www.houstongrandopera.org/on-stage",
+      "tags": [
+        "PerformingArts",
+        "Opera",
+        "Music",
+        "Downtown"
+      ],
+      "geo": {
+        "lat": 29.7237,
+        "lng": -95.3937,
+        "label": "Wortham Theater Center, 500 Main St, Houston, TX 77002"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Wortham%20Theater%20Center%2C%20500%20Main%20St%2C%20Houston%2C%20TX%2077002"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "houston-grand-opera",
+          "friendlyName": "Houston Grand Opera",
+          "links": {
+            "ics": {
+              "href": "houston-grand-opera-houston-grand-opera.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "houston-grand-opera-houston-grand-opera.rss",
               "type": "application/rss+xml"
             }
           }

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-27T12:57:32.011Z",
+  "generated": "2026-06-27T13:42:48.411Z",
   "tags": [
     {
       "name": "Art",
@@ -107,8 +107,8 @@
       "name": "Community",
       "slug": "community",
       "category": "Community",
-      "eventCount": 452,
-      "calendarCount": 9,
+      "eventCount": 485,
+      "calendarCount": 10,
       "links": {
         "ics": {
           "href": "tag-community.ics",
@@ -158,8 +158,8 @@
       "name": "Downtown",
       "slug": "downtown",
       "category": "Neighborhoods",
-      "eventCount": 177,
-      "calendarCount": 4,
+      "eventCount": 188,
+      "calendarCount": 5,
       "links": {
         "ics": {
           "href": "tag-downtown.ics",
@@ -291,6 +291,23 @@
       }
     },
     {
+      "name": "Hiking",
+      "slug": "hiking",
+      "category": "Other",
+      "eventCount": 33,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-hiking.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-hiking.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
       "name": "Jazz",
       "slug": "jazz",
       "category": "Other",
@@ -413,8 +430,8 @@
       "name": "Music",
       "slug": "music",
       "category": "Activities",
-      "eventCount": 641,
-      "calendarCount": 9,
+      "eventCount": 652,
+      "calendarCount": 10,
       "links": {
         "ics": {
           "href": "tag-music.ics",
@@ -461,11 +478,28 @@
       }
     },
     {
+      "name": "Opera",
+      "slug": "opera",
+      "category": "Other",
+      "eventCount": 11,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-opera.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-opera.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
       "name": "Outdoor Recreation",
       "slug": "outdoor-recreation",
       "category": "Other",
-      "eventCount": 8,
-      "calendarCount": 1,
+      "eventCount": 41,
+      "calendarCount": 2,
       "links": {
         "ics": {
           "href": "tag-outdoor-recreation.ics",
@@ -495,6 +529,23 @@
       }
     },
     {
+      "name": "PerformingArts",
+      "slug": "performingarts",
+      "category": "Other",
+      "eventCount": 11,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-performingarts.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-performingarts.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
       "name": "Photography",
       "slug": "photography",
       "category": "Other",
@@ -507,6 +558,23 @@
         },
         "rss": {
           "href": "tag-photography.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Sports",
+      "slug": "sports",
+      "category": "Activities",
+      "eventCount": 33,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-sports.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-sports.rss",
           "type": "application/rss+xml"
         }
       }

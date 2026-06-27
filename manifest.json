@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-27T12:57:26.897Z",
+  "lastUpdated": "2026-06-27T13:42:44.003Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -176,6 +176,44 @@
             "Arts",
             "Photography",
             "Montrose"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "houston-grand-opera",
+      "description": "Houston Grand Opera",
+      "friendlyLink": "https://www.houstongrandopera.org/on-stage",
+      "calendars": [
+        {
+          "name": "houston-grand-opera",
+          "friendlyName": "Houston Grand Opera",
+          "icsUrl": "houston-grand-opera-houston-grand-opera.ics",
+          "rssUrl": "houston-grand-opera-houston-grand-opera.rss",
+          "tags": [
+            "PerformingArts",
+            "Opera",
+            "Music",
+            "Downtown"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "htxoutdoors",
+      "description": "HTXoutdoors",
+      "friendlyLink": "https://htxoutdoors.com/events-calendar/",
+      "calendars": [
+        {
+          "name": "htxoutdoors",
+          "friendlyName": "HTXoutdoors",
+          "icsUrl": "htxoutdoors-htxoutdoors.ics",
+          "rssUrl": "htxoutdoors-htxoutdoors.rss",
+          "tags": [
+            "Outdoor Recreation",
+            "Hiking",
+            "Sports",
+            "Community"
           ]
         }
       ]
@@ -635,6 +673,7 @@
     "Food",
     "FoodFestival",
     "Hermann Park",
+    "Hiking",
     "Jazz",
     "MakersMarket",
     "Memorial",
@@ -645,9 +684,12 @@
     "Music",
     "Near Northside",
     "Nightlife",
+    "Opera",
     "Outdoor Recreation",
     "Parks",
+    "PerformingArts",
     "Photography",
+    "Sports",
     "Tech",
     "The Heights",
     "Theatre",
