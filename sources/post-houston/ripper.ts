@@ -327,7 +327,6 @@ export default class PostHoustonRipper implements IRipper {
 					location: eventData.locations.join(", ") || "POST Houston",
 					description: eventData.types.length > 0 ? `Type: ${eventData.types.join(", ")}` : "",
 					url: eventData.eventUrl,
-					image: eventData.imageUrl,
 				};
 
 				events.push(event);

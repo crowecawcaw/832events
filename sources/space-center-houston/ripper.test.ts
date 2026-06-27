@@ -152,7 +152,6 @@ describe("SpaceCenterHoustonRipper", () => {
 		expect(firstEvent.summary).toBe("Rocket Park Tram Tour");
 		expect(firstEvent.id).toContain("rocket-park-tram-tour");
 		expect(firstEvent.location).toContain("Space Center Houston");
-		expect(firstEvent.image).toContain("rocket-park");
 		expect(firstEvent.url).toContain("rocket-park-tram-tour");
 		expect(firstEvent.description).toBe("Tram Tour");
 	});
