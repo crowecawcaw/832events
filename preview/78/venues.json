@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-26T10:08:07.823Z",
+  "generated": "2026-06-27T13:40:45.211Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -324,77 +324,6 @@
       ]
     },
     {
-      "name": "ensemble-theatre-houston",
-      "friendlyName": "Ensemble Theatre Houston",
-      "description": "Ensemble Theatre Houston",
-      "url": "https://www.ensemblehouston.com/",
-      "tags": [
-        "Theater",
-        "Midtown"
-      ],
-      "geo": {
-        "lat": 29.7301,
-        "lng": -95.4105,
-        "label": "Ensemble Theatre Houston, 3535 Main St, Houston, TX 77002"
-      },
-      "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=Ensemble%20Theatre%20Houston%2C%203535%20Main%20St%2C%20Houston%2C%20TX%2077002"
-      },
-      "kind": "ripper",
-      "calendars": [
-        {
-          "name": "ensemble-theatre-houston",
-          "friendlyName": "Ensemble Theatre Houston",
-          "links": {
-            "ics": {
-              "href": "ensemble-theatre-houston-ensemble-theatre-houston.ics",
-              "type": "text/calendar"
-            },
-            "rss": {
-              "href": "ensemble-theatre-houston-ensemble-theatre-houston.rss",
-              "type": "application/rss+xml"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "name": "erjcc-houston",
-      "friendlyName": "ERJCC Houston",
-      "description": "Educational, cultural and community events at the Jewish community center in Houston",
-      "url": "https://www.erjcchouston.org/events/",
-      "tags": [
-        "Art",
-        "Community",
-        "Museum District"
-      ],
-      "geo": {
-        "lat": 29.7261,
-        "lng": -95.4012,
-        "label": "ERJCC Houston, 5600 North Braeswood Blvd, Houston, TX 77096"
-      },
-      "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=ERJCC%20Houston%2C%205600%20North%20Braeswood%20Blvd%2C%20Houston%2C%20TX%2077096"
-      },
-      "kind": "external",
-      "calendars": [
-        {
-          "name": "erjcc-houston",
-          "friendlyName": "ERJCC Houston",
-          "links": {
-            "ics": {
-              "href": "external-erjcc-houston.ics",
-              "type": "text/calendar"
-            },
-            "rss": {
-              "href": "external-erjcc-houston.rss",
-              "type": "application/rss+xml"
-            }
-          }
-        }
-      ]
-    },
-    {
       "name": "eureka-heights-brew-co",
       "friendlyName": "Eureka Heights Brewery",
       "description": "Eureka Heights Brewery",
@@ -458,6 +387,42 @@
             },
             "rss": {
               "href": "good-on-paper-bookshop-good-on-paper-bookshop.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "heights-mercantile",
+      "friendlyName": "Heights Mercantile Farmers Market",
+      "description": "Heights Mercantile Farmers Market",
+      "url": "https://www.heightsmercantile.com/events",
+      "tags": [
+        "FarmersMarket",
+        "Community",
+        "The Heights"
+      ],
+      "geo": {
+        "lat": 29.7837881,
+        "lng": -95.398618,
+        "label": "Heights Mercantile Farmers Market, 714 Yale Street, Houston, TX 77007"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Heights%20Mercantile%20Farmers%20Market%2C%20714%20Yale%20Street%2C%20Houston%2C%20TX%2077007"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "heights-mercantile",
+          "friendlyName": "Heights Mercantile Farmers Market",
+          "links": {
+            "ics": {
+              "href": "heights-mercantile-heights-mercantile.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "heights-mercantile-heights-mercantile.rss",
               "type": "application/rss+xml"
             }
           }

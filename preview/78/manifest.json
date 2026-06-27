@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T10:08:02.890Z",
+  "lastUpdated": "2026-06-27T13:40:40.792Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -110,23 +110,6 @@
       ]
     },
     {
-      "name": "ensemble-theatre-houston",
-      "description": "Ensemble Theatre Houston",
-      "friendlyLink": "https://www.ensemblehouston.com/",
-      "calendars": [
-        {
-          "name": "ensemble-theatre-houston",
-          "friendlyName": "Ensemble Theatre Houston",
-          "icsUrl": "ensemble-theatre-houston-ensemble-theatre-houston.ics",
-          "rssUrl": "ensemble-theatre-houston-ensemble-theatre-houston.rss",
-          "tags": [
-            "Theater",
-            "Midtown"
-          ]
-        }
-      ]
-    },
-    {
       "name": "good-on-paper-bookshop",
       "description": "Good on Paper Books and Stationery",
       "friendlyLink": "https://www.goodonpaperbooks.com/events",
@@ -138,6 +121,24 @@
           "rssUrl": "good-on-paper-bookshop-good-on-paper-bookshop.rss",
           "tags": [
             "Books",
+            "Community",
+            "The Heights"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "heights-mercantile",
+      "description": "Heights Mercantile Farmers Market",
+      "friendlyLink": "https://www.heightsmercantile.com/events",
+      "calendars": [
+        {
+          "name": "heights-mercantile",
+          "friendlyName": "Heights Mercantile Farmers Market",
+          "icsUrl": "heights-mercantile-heights-mercantile.ics",
+          "rssUrl": "heights-mercantile-heights-mercantile.rss",
+          "tags": [
+            "FarmersMarket",
             "Community",
             "The Heights"
           ]
@@ -534,19 +535,6 @@
       ]
     },
     {
-      "name": "erjcc-houston",
-      "friendlyName": "ERJCC Houston",
-      "description": "Educational, cultural and community events at the Jewish community center in Houston",
-      "icsUrl": "external-erjcc-houston.ics",
-      "originalIcsUrl": "https://www.erjcchouston.org/events/?ical=1",
-      "infoUrl": "https://www.erjcchouston.org/events/",
-      "tags": [
-        "Art",
-        "Community",
-        "Museum District"
-      ]
-    },
-    {
       "name": "eureka-heights-brew-co",
       "friendlyName": "Eureka Heights Brewery",
       "icsUrl": "external-eureka-heights-brew-co.ics",
@@ -704,7 +692,6 @@
     "Sports",
     "Tech",
     "The Heights",
-    "Theater",
     "Theatre",
     "Third Ward",
     "Upper Kirby",

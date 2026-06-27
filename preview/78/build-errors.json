@@ -1,5 +1,5 @@
 {
-  "buildTime": "2026-06-26T10:08:07.828Z",
+  "buildTime": "2026-06-27T13:40:45.215Z",
   "totalErrors": 8,
   "configErrors": [],
   "sources": [
@@ -130,6 +130,12 @@
       "error": "Error: HTTP 403: "
     },
     {
+      "name": "erjcc-houston",
+      "friendlyName": "ERJCC Houston",
+      "url": "https://www.erjcchouston.org/events/?ical=1",
+      "error": "null"
+    },
+    {
       "name": "hobby-center",
       "friendlyName": "Hobby Center for the Performing Arts",
       "url": "https://www.thehobbycenter.org/?post_type=tribe_events&ical=1&eventDisplay=list",
@@ -138,8 +144,8 @@
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1700,
-    "eventsWithGeo": 1646,
+    "totalEvents": 1657,
+    "eventsWithGeo": 1603,
     "eventsWithoutGeo": 54,
     "geocodeErrors": 0
   },
@@ -283,6 +289,13 @@
       "label": "Good on Paper Books, 250 W 19th St Suite D, Houston, TX 77008",
       "lat": 29.8096,
       "lng": -95.3914
+    },
+    {
+      "source": "ripper",
+      "name": "heights-mercantile",
+      "label": "Heights Mercantile Farmers Market, 714 Yale Street, Houston, TX 77007",
+      "lat": 29.7837881,
+      "lng": -95.398618
     },
     {
       "source": "ripper",
@@ -531,10 +544,10 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1205,
-    "totalEvents": 1700,
+    "eventsWithImage": 1179,
+    "totalEvents": 1657,
     "venuesWithImage": 0,
-    "totalVenues": 41,
+    "totalVenues": 40,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -603,20 +616,6 @@
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Doc's%20Jazz%20Club%2C%201201%20Westheimer%20Rd%2C%20Houston%2C%20TX%2077006"
       },
       {
-        "source": "ripper",
-        "name": "ensemble-theatre-houston",
-        "label": "Ensemble Theatre Houston, 3535 Main St, Houston, TX 77002",
-        "url": "https://www.ensemblehouston.com/",
-        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ensemble%20Theatre%20Houston%2C%203535%20Main%20St%2C%20Houston%2C%20TX%2077002"
-      },
-      {
-        "source": "external",
-        "name": "erjcc-houston",
-        "label": "ERJCC Houston, 5600 North Braeswood Blvd, Houston, TX 77096",
-        "url": "https://www.erjcchouston.org/events/",
-        "mapUrl": "https://www.google.com/maps/search/?api=1&query=ERJCC%20Houston%2C%205600%20North%20Braeswood%20Blvd%2C%20Houston%2C%20TX%2077096"
-      },
-      {
         "source": "external",
         "name": "eureka-heights-brew-co",
         "label": "Eureka Heights Brewery, 2454 Sawyer St, Houston, TX 77007",
@@ -628,6 +627,13 @@
         "label": "Good on Paper Books, 250 W 19th St Suite D, Houston, TX 77008",
         "url": "https://www.goodonpaperbooks.com/events",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Good%20on%20Paper%20Books%2C%20250%20W%2019th%20St%20Suite%20D%2C%20Houston%2C%20TX%2077008"
+      },
+      {
+        "source": "ripper",
+        "name": "heights-mercantile",
+        "label": "Heights Mercantile Farmers Market, 714 Yale Street, Houston, TX 77007",
+        "url": "https://www.heightsmercantile.com/events",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Heights%20Mercantile%20Farmers%20Market%2C%20714%20Yale%20Street%2C%20Houston%2C%20TX%2077007"
       },
       {
         "source": "external",
@@ -846,48 +852,6 @@
         "eventId": "the-cleo-fox-show-an-immersive-high-energy-musical-journey-2026-06-30",
         "summary": "The Cleo Fox Show: An Immersive, High-Energy Musical Journey!",
         "date": "2026-06-30T19:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "docs-houston",
-        "eventId": "we-want-the-funk-2026-06-26",
-        "summary": "We Want The Funk!",
-        "date": "2026-06-26T19:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "ensemble-theatre-houston",
-        "eventId": "akeelah-and-the-bee-2025-09-19",
-        "summary": "Akeelah And The Bee",
-        "date": "2025-09-19T19:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "ensemble-theatre-houston",
-        "eventId": "choir-boy-2026-03-20",
-        "summary": "Choir Boy",
-        "date": "2026-03-20T19:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "ensemble-theatre-houston",
-        "eventId": "get-ready-2026-06-26",
-        "summary": "Get Ready",
-        "date": "2026-06-26T19:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "ensemble-theatre-houston",
-        "eventId": "take-the-soul-train-to-christmas-2025-11-14",
-        "summary": "Take The Soul Train To Christmas",
-        "date": "2025-11-14T19:00-06:00[America/Chicago]"
-      },
-      {
-        "source": "ensemble-theatre-houston",
-        "eventId": "the-bluest-eye-2026-01-23",
-        "summary": "The Bluest Eye",
-        "date": "2026-01-23T19:00-06:00[America/Chicago]"
-      },
-      {
-        "source": "ensemble-theatre-houston",
-        "eventId": "who-all-over-there-2026-05-08",
-        "summary": "Who All Over There",
-        "date": "2026-05-08T19:00-05:00[America/Chicago]"
       },
       {
         "source": "good-on-paper-bookshop",
@@ -1563,34 +1527,6 @@
       },
       {
         "source": "rice-public-events",
-        "eventId": "20260626T153000Z-432837",
-        "summary": "Behavioral Acculturation and Acculturative Stress in Latino Immigrant Youth: The Moderating Role of Perceived Autonomy",
-        "date": "2026-06-26T15:30Z",
-        "url": "https://events.rice.edu/event/432837-behavioral-acculturation-and-acculturative-stress"
-      },
-      {
-        "source": "rice-public-events",
-        "eventId": "20260626T153000Z-433063",
-        "summary": "Exploring Organic Transformations with a Photocatalytic Twist",
-        "date": "2026-06-26T15:30Z",
-        "url": "https://events.rice.edu/live/events/432746-exploring-organic-transformations-with-a"
-      },
-      {
-        "source": "rice-public-events",
-        "eventId": "20260626T180000Z-432291",
-        "summary": "Efficient Adaptation of Foundation Models for Domain-Specific Deployments",
-        "date": "2026-06-26T18:00Z",
-        "url": "https://events.rice.edu/live/events/432254-efficient-adaptation-of-foundation-models-for"
-      },
-      {
-        "source": "rice-public-events",
-        "eventId": "20260626T200000Z-432140",
-        "summary": "Elucidating the Role of Lipid Homeostasis in Organellar Surveillance and Innate Immunity",
-        "date": "2026-06-26T20:00Z",
-        "url": "https://events.rice.edu/live/events/432103-elucidating-the-role-of-lipid-homeostasis-in"
-      },
-      {
-        "source": "rice-public-events",
         "eventId": "20260701T180000Z-432093",
         "summary": "Overcoming barriers to point-of-care nucleic acid amplification testing",
         "date": "2026-07-01T18:00Z",
@@ -1637,6 +1573,13 @@
         "summary": "O⁺ Transport from the Ionospheric Cusp to the Inner Magnetosphere: A Global MHD and Test Particle Study",
         "date": "2026-07-08T17:00Z",
         "url": "https://events.rice.edu/event/433274-o-transport-from-the-ionospheric-cusp-to-the-inner"
+      },
+      {
+        "source": "rice-public-events",
+        "eventId": "20260710T050000Z-433470",
+        "summary": "Chemical Pathways to Earth's Habitability: Constraints from the Origin, Distribution, and Delivery of Life-Essential Elements in the Early Solar System",
+        "date": "2026-07-10T10:00-05:00[America/Chicago]",
+        "url": "https://events.rice.edu/live/events/433469-chemical-pathways-to-earths-habitability"
       },
       {
         "source": "rice-public-events",
@@ -1696,17 +1639,17 @@
       },
       {
         "source": "rice-public-events",
-        "eventId": "20260922T170000Z-431806",
-        "summary": "NIS Fall 2026 Poster Session",
-        "date": "2026-09-22T17:00Z",
-        "url": "https://events.rice.edu/live/events/431040-nis-fall-2026-poster-session"
-      },
-      {
-        "source": "rice-public-events",
         "eventId": "20260922T170000Z-432790",
         "summary": "NIS Fall 2026 Poster Session",
         "date": "2026-09-22T17:00Z",
         "url": "https://events.rice.edu/event/432790-nis-fall-2026-poster-session"
+      },
+      {
+        "source": "rice-public-events",
+        "eventId": "20260922T170000Z-433496",
+        "summary": "NIS Fall 2026 Poster Session",
+        "date": "2026-09-22T17:00Z",
+        "url": "https://events.rice.edu/live/events/431040-nis-fall-2026-poster-session"
       },
       {
         "source": "rice-public-events",
@@ -1823,9 +1766,9 @@
     ]
   },
   "costStats": {
-    "eventsWithCost": 607,
-    "freeEvents": 462,
-    "totalEvents": 1700,
+    "eventsWithCost": 596,
+    "freeEvents": 458,
+    "totalEvents": 1657,
     "unresolvable": 0
   },
   "costGaps": [
@@ -1894,6 +1837,13 @@
     },
     {
       "source": "713-music-hall",
+      "eventId": "tm-G5dIZ_7Svfxz6",
+      "summary": "Freya Skye - Stars Align Tour",
+      "date": "2026-09-26T20:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/freya-skye-stars-align-tour-houston-texas-09-26-2026/event/3A00644CC1522E07"
+    },
+    {
+      "source": "713-music-hall",
       "eventId": "tm-G5dIZ_7U3chk0",
       "summary": "Young the Giant - Victory Garden Tour with Cold War Kids",
       "date": "2026-07-09T18:30-05:00[America/Chicago]",
@@ -1933,13 +1883,6 @@
       "summary": "Malcolm Todd: Do That Again Tour",
       "date": "2026-09-03T20:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/malcolm-todd-do-that-again-tour-houston-texas-09-03-2026/event/3A0064C3985571EC"
-    },
-    {
-      "source": "713-music-hall",
-      "eventId": "tm-G5dIZ_k1iwBvc",
-      "summary": "Ole 60: Smokestack Town Tour",
-      "date": "2026-06-26T20:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/ole-60-smokestack-town-tour-houston-texas-06-26-2026/event/3A006462ACCBA06D"
     },
     {
       "source": "713-music-hall",
@@ -2041,48 +1984,6 @@
       "eventId": "the-cleo-fox-show-an-immersive-high-energy-musical-journey-2026-06-30",
       "summary": "The Cleo Fox Show: An Immersive, High-Energy Musical Journey!",
       "date": "2026-06-30T19:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "docs-houston",
-      "eventId": "we-want-the-funk-2026-06-26",
-      "summary": "We Want The Funk!",
-      "date": "2026-06-26T19:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "ensemble-theatre-houston",
-      "eventId": "akeelah-and-the-bee-2025-09-19",
-      "summary": "Akeelah And The Bee",
-      "date": "2025-09-19T19:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "ensemble-theatre-houston",
-      "eventId": "choir-boy-2026-03-20",
-      "summary": "Choir Boy",
-      "date": "2026-03-20T19:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "ensemble-theatre-houston",
-      "eventId": "get-ready-2026-06-26",
-      "summary": "Get Ready",
-      "date": "2026-06-26T19:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "ensemble-theatre-houston",
-      "eventId": "take-the-soul-train-to-christmas-2025-11-14",
-      "summary": "Take The Soul Train To Christmas",
-      "date": "2025-11-14T19:00-06:00[America/Chicago]"
-    },
-    {
-      "source": "ensemble-theatre-houston",
-      "eventId": "the-bluest-eye-2026-01-23",
-      "summary": "The Bluest Eye",
-      "date": "2026-01-23T19:00-06:00[America/Chicago]"
-    },
-    {
-      "source": "ensemble-theatre-houston",
-      "eventId": "who-all-over-there-2026-05-08",
-      "summary": "Who All Over There",
-      "date": "2026-05-08T19:00-05:00[America/Chicago]"
     },
     {
       "source": "good-on-paper-bookshop",
@@ -2225,6 +2126,27 @@
       "url": "https://www.goodonpaperbooks.com/events"
     },
     {
+      "source": "heights-mercantile",
+      "eventId": "691de9018b84db63a8ddcf3b",
+      "summary": "Heights Mercantile Farmer's Market",
+      "date": "2026-07-26T09:00:00.632-05:00[America/Chicago]",
+      "url": "https://www.heightsmercantile.com/events/11/23-pdyxw-t2zznt3gny54b5-92afj-9m453-swwsz-5sme7-l7wx8-k8hsn-amc9r-h4k39-csyj8-nfcnh-4dr87-brxc7-jrkfr-6nlcc-np7p2"
+    },
+    {
+      "source": "heights-mercantile",
+      "eventId": "692471147d66491ba57a8967",
+      "summary": "Heights Mercantile Farmer's Market",
+      "date": "2026-06-28T09:00:00.551-05:00[America/Chicago]",
+      "url": "https://www.heightsmercantile.com/events/11/23-pdyxw-t2zznt3gny54b5-92afj-9m453-swwsz-5sme7-l7wx8-k8hsn-amc9r-h4k39-csyj8-nfcnh-4dr87-brxc7-jrkfr-6nlcc-np7p2-dj7fe"
+    },
+    {
+      "source": "heights-mercantile",
+      "eventId": "694044fb1c284729ced9beee",
+      "summary": "Heights Mercantile Farmer's Market",
+      "date": "2026-07-12T09:00:00.662-05:00[America/Chicago]",
+      "url": "https://www.heightsmercantile.com/events/11/23-pdyxw-t2zznt3gny54b5-92afj-9m453-swwsz-5sme7-l7wx8-k8hsn-amc9r-h4k39-csyj8-nfcnh-4dr87-brxc7-jrkfr-6nlcc-np7p2-dj7fe-487bc"
+    },
+    {
       "source": "house-of-blues-houston",
       "eventId": "tm-G5dIZ_16xbqa2",
       "summary": "Rio Da Yung OG - The World is M.I.N.E. Tour",
@@ -2352,13 +2274,6 @@
     },
     {
       "source": "house-of-blues-houston",
-      "eventId": "tm-G5dIZ_aK7wX94",
-      "summary": "Corbyn Besson and Soulidified: The Pop'n Out Tour",
-      "date": "2026-08-10T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/corbyn-besson-and-soulidified-the-popn-houston-texas-08-10-2026/event/3A006494C4CBE5D5"
-    },
-    {
-      "source": "house-of-blues-houston",
       "eventId": "tm-G5dIZ_akXl-n_",
       "summary": "Buckcherry & Black Stone Cherry",
       "date": "2026-09-01T18:00-05:00[America/Chicago]",
@@ -2405,6 +2320,13 @@
       "summary": "Mario Aguilar - \"Diezmadre\"",
       "date": "2026-08-22T20:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/mario-aguilar-diezmadre-houston-texas-08-22-2026/event/3A00642873532C99"
+    },
+    {
+      "source": "house-of-blues-houston",
+      "eventId": "tm-G5dIZ_e91U6Do",
+      "summary": "AJ Ghent & His Singing Guitar",
+      "date": "2026-09-26T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/aj-ghent-his-singing-guitar-houston-texas-09-26-2026/event/3A006425CAD87ED1"
     },
     {
       "source": "house-of-blues-houston",
@@ -2496,13 +2418,6 @@
       "summary": "The Marvelous Miss Gender starring BOSCO - Ages 18+ w/ Valid ID",
       "date": "2026-07-22T19:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/the-marvelous-miss-gender-starring-bosco-houston-texas-07-22-2026/event/3A006469C4B6C4C8"
-    },
-    {
-      "source": "house-of-blues-houston",
-      "eventId": "tm-G5dIZ_kMKcLYb",
-      "summary": "Alex Isley - When The City Sleeps",
-      "date": "2026-06-25T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/alex-isley-when-the-city-sleeps-houston-texas-06-25-2026/event/3A00646DD3B5FC18"
     },
     {
       "source": "house-of-blues-houston",
@@ -3297,13 +3212,6 @@
     },
     {
       "source": "mcgonigels-mucky-duck",
-      "eventId": "mcgonigels-31272",
-      "summary": "Trish & Darin",
-      "date": "2026-06-25T18:00-05:00[America/Chicago]",
-      "url": "https://www.mcgonigels.com/shows/trish-darin-early-show-2/"
-    },
-    {
-      "source": "mcgonigels-mucky-duck",
       "eventId": "mcgonigels-31295",
       "summary": "Beat Root Revival",
       "date": "2026-06-27T18:00-05:00[America/Chicago]",
@@ -3367,31 +3275,10 @@
     },
     {
       "source": "mcgonigels-mucky-duck",
-      "eventId": "mcgonigels-31753",
-      "summary": "Bob Schneider",
-      "date": "2026-06-26T18:00-05:00[America/Chicago]",
-      "url": "https://www.mcgonigels.com/shows/bob-schneider-early-show-27/"
-    },
-    {
-      "source": "mcgonigels-mucky-duck",
-      "eventId": "mcgonigels-31755",
-      "summary": "Bob Schneider",
-      "date": "2026-06-26T20:30-05:00[America/Chicago]",
-      "url": "https://www.mcgonigels.com/shows/bob-schneider-5/"
-    },
-    {
-      "source": "mcgonigels-mucky-duck",
       "eventId": "mcgonigels-31829",
       "summary": "Trent Cade",
       "date": "2026-07-25T20:30-05:00[America/Chicago]",
       "url": "https://www.mcgonigels.com/shows/trent-cade-2/"
-    },
-    {
-      "source": "mcgonigels-mucky-duck",
-      "eventId": "mcgonigels-31834",
-      "summary": "Rachel Sumner & Traveling Light",
-      "date": "2026-06-25T20:30-05:00[America/Chicago]",
-      "url": "https://www.mcgonigels.com/shows/rachel-sumner-traveling-light/"
     },
     {
       "source": "mcgonigels-mucky-duck",
@@ -3898,6 +3785,34 @@
       "url": "https://www.mcgonigels.com/shows/dauzat-st-marie-22/"
     },
     {
+      "source": "mcgonigels-mucky-duck",
+      "eventId": "mcgonigels-32786",
+      "summary": "Bob Schneider",
+      "date": "2026-10-29T18:00-05:00[America/Chicago]",
+      "url": "https://www.mcgonigels.com/shows/bob-schneider-early-show-28/"
+    },
+    {
+      "source": "mcgonigels-mucky-duck",
+      "eventId": "mcgonigels-32788",
+      "summary": "Bob Schneider",
+      "date": "2026-10-29T20:30-05:00[America/Chicago]",
+      "url": "https://www.mcgonigels.com/shows/bob-schneider-6/"
+    },
+    {
+      "source": "mcgonigels-mucky-duck",
+      "eventId": "mcgonigels-32791",
+      "summary": "Alejandro Escovedo",
+      "date": "2026-08-28T20:30-05:00[America/Chicago]",
+      "url": "https://www.mcgonigels.com/shows/alejandro-escovedo-the-electric-saints-late-show-2/"
+    },
+    {
+      "source": "mcgonigels-mucky-duck",
+      "eventId": "mcgonigels-32793",
+      "summary": "Alejandro Escovedo",
+      "date": "2026-08-29T20:30-05:00[America/Chicago]",
+      "url": "https://www.mcgonigels.com/shows/alejandro-escovedo-the-electric-saints/"
+    },
+    {
       "source": "murder-by-the-book",
       "eventId": "allison-brennan-2026-06-27",
       "summary": "Allison Brennan",
@@ -4036,20 +3951,6 @@
       "summary": "Liza Treyger",
       "date": "2026-06-27T19:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/liza-treyger-houston-texas-06-27-2026/event/3A0064BA8C2958ED"
-    },
-    {
-      "source": "punch-line-comedy-club",
-      "eventId": "tm-G5dIZ_5nG64NQ",
-      "summary": "Liza Treyger",
-      "date": "2026-06-25T19:30-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/liza-treyger-houston-texas-06-25-2026/event/3A0064BA8C1D58DA"
-    },
-    {
-      "source": "punch-line-comedy-club",
-      "eventId": "tm-G5dIZ_5nGF4N0",
-      "summary": "Liza Treyger",
-      "date": "2026-06-26T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/liza-treyger-houston-texas-06-26-2026/event/3A0064BA8C2158E4"
     },
     {
       "source": "punch-line-comedy-club",
@@ -4312,6 +4213,13 @@
     },
     {
       "source": "punch-line-comedy-club",
+      "eventId": "tm-G5dIZ_aON1RcJ",
+      "summary": "Rocky Dale Davis",
+      "date": "2026-09-26T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/rocky-dale-davis-houston-texas-09-26-2026/event/3A006498232AFB66"
+    },
+    {
+      "source": "punch-line-comedy-club",
       "eventId": "tm-G5dIZ_aONFRc9",
       "summary": "Rocky Dale Davis",
       "date": "2026-09-25T19:00-05:00[America/Chicago]",
@@ -4319,17 +4227,17 @@
     },
     {
       "source": "punch-line-comedy-club",
+      "eventId": "tm-G5dIZ_aONGRcS",
+      "summary": "Rocky Dale Davis",
+      "date": "2026-09-26T21:15-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/rocky-dale-davis-houston-texas-09-26-2026/event/3A0064982332FB73"
+    },
+    {
+      "source": "punch-line-comedy-club",
       "eventId": "tm-G5dIZ_aONkRca",
       "summary": "Rocky Dale Davis",
       "date": "2026-09-24T19:30-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/rocky-dale-davis-houston-texas-09-24-2026/event/3A006498231AFB49"
-    },
-    {
-      "source": "punch-line-comedy-club",
-      "eventId": "tm-G5dIZ_aQs6xoI",
-      "summary": "La Chupitos: Standopeda ( En Español )",
-      "date": "2026-06-26T21:30-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/la-chupitos-standopeda-en-espanol-houston-texas-06-26-2026/event/3A006496B11E2468"
     },
     {
       "source": "punch-line-comedy-club",
@@ -4508,48 +4416,6 @@
     },
     {
       "source": "rice-public-events",
-      "eventId": "20260626T050000Z-428337",
-      "summary": "Masako Miki: Shapeshifters, Sprites, and Spirits",
-      "date": "2026-06-26T10:00-05:00[America/Chicago]",
-      "url": "https://events.rice.edu/event/428337-masako-miki-shapeshifters-sprites-and-spirits"
-    },
-    {
-      "source": "rice-public-events",
-      "eventId": "20260626T153000Z-432837",
-      "summary": "Behavioral Acculturation and Acculturative Stress in Latino Immigrant Youth: The Moderating Role of Perceived Autonomy",
-      "date": "2026-06-26T15:30Z",
-      "url": "https://events.rice.edu/event/432837-behavioral-acculturation-and-acculturative-stress"
-    },
-    {
-      "source": "rice-public-events",
-      "eventId": "20260626T153000Z-433063",
-      "summary": "Exploring Organic Transformations with a Photocatalytic Twist",
-      "date": "2026-06-26T15:30Z",
-      "url": "https://events.rice.edu/live/events/432746-exploring-organic-transformations-with-a"
-    },
-    {
-      "source": "rice-public-events",
-      "eventId": "20260626T170000Z-428404",
-      "summary": "Wellness at the Moody Series",
-      "date": "2026-06-26T17:00Z",
-      "url": "https://events.rice.edu/event/428404-wellness-at-the-moody-series"
-    },
-    {
-      "source": "rice-public-events",
-      "eventId": "20260626T180000Z-432291",
-      "summary": "Efficient Adaptation of Foundation Models for Domain-Specific Deployments",
-      "date": "2026-06-26T18:00Z",
-      "url": "https://events.rice.edu/live/events/432254-efficient-adaptation-of-foundation-models-for"
-    },
-    {
-      "source": "rice-public-events",
-      "eventId": "20260626T200000Z-432140",
-      "summary": "Elucidating the Role of Lipid Homeostasis in Organellar Surveillance and Innate Immunity",
-      "date": "2026-06-26T20:00Z",
-      "url": "https://events.rice.edu/live/events/432103-elucidating-the-role-of-lipid-homeostasis-in"
-    },
-    {
-      "source": "rice-public-events",
       "eventId": "20260627T050000Z-428337",
       "summary": "Masako Miki: Shapeshifters, Sprites, and Spirits",
       "date": "2026-06-27T10:00-05:00[America/Chicago]",
@@ -4701,6 +4567,13 @@
       "summary": "Masako Miki: Shapeshifters, Sprites, and Spirits",
       "date": "2026-07-10T10:00-05:00[America/Chicago]",
       "url": "https://events.rice.edu/event/428337-masako-miki-shapeshifters-sprites-and-spirits"
+    },
+    {
+      "source": "rice-public-events",
+      "eventId": "20260710T050000Z-433470",
+      "summary": "Chemical Pathways to Earth's Habitability: Constraints from the Origin, Distribution, and Delivery of Life-Essential Elements in the Early Solar System",
+      "date": "2026-07-10T10:00-05:00[America/Chicago]",
+      "url": "https://events.rice.edu/live/events/433469-chemical-pathways-to-earths-habitability"
     },
     {
       "source": "rice-public-events",
@@ -5103,17 +4976,17 @@
     },
     {
       "source": "rice-public-events",
-      "eventId": "20260922T170000Z-431806",
-      "summary": "NIS Fall 2026 Poster Session",
-      "date": "2026-09-22T17:00Z",
-      "url": "https://events.rice.edu/live/events/431040-nis-fall-2026-poster-session"
-    },
-    {
-      "source": "rice-public-events",
       "eventId": "20260922T170000Z-432790",
       "summary": "NIS Fall 2026 Poster Session",
       "date": "2026-09-22T17:00Z",
       "url": "https://events.rice.edu/event/432790-nis-fall-2026-poster-session"
+    },
+    {
+      "source": "rice-public-events",
+      "eventId": "20260922T170000Z-433496",
+      "summary": "NIS Fall 2026 Poster Session",
+      "date": "2026-09-22T17:00Z",
+      "url": "https://events.rice.edu/live/events/431040-nis-fall-2026-poster-session"
     },
     {
       "source": "rice-public-events",
@@ -5375,32 +5248,11 @@
       "url": "https://www.themoodroomhouston.com/events/wdcm82f7exd2k52-w8m85-3h55f-62ach-z7gg3-lae6x-6awch-dldxt-kpkys"
     },
     {
-      "source": "the-mood-room",
-      "eventId": "6a14ea9ca83cd355e283de42",
-      "summary": "Open Mic Comedy",
-      "date": "2026-06-25T20:00:00.684-05:00[America/Chicago]",
-      "url": "https://www.themoodroomhouston.com/events/open-mic-comedy-8fsk2-e272r-ernff-xshzk-y674e-da5lt-fssej-6y72k-x8dnp-s4wky-rkpdd-he9rk-mzjrr-3bn9m-apdgg-gdgcm-rhf7z-p4ta9-4r2pt"
-    },
-    {
-      "source": "the-mood-room",
-      "eventId": "6a14eac8da4b8c305f6c508b",
-      "summary": "Vinyl Friday",
-      "date": "2026-06-26T21:00:00.855-05:00[America/Chicago]",
-      "url": "https://www.themoodroomhouston.com/events/event-two-mfs6m-75m4a-a53p7-ba59c-yalwt-ferml-fzm3j-4aafk-cg5cx-ysmc4-mwytd-2r2fa-wgxn2-kxxzg-3t977-fypzl-glgtn-p68hn-b3aje-xkwe6-8h63x-r34dc-28t63-6z3cw-2zprs"
-    },
-    {
       "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_16W6g17",
       "summary": "Hot In Herre: 2000s Dance Party",
       "date": "2026-07-10T20:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/hot-in-herre-2000s-dance-party-houston-texas-07-10-2026/event/3A0064A1FD1F5284"
-    },
-    {
-      "source": "white-oak-music-hall",
-      "eventId": "tm-G5dIZ_19uteNO",
-      "summary": "Broadway Rave",
-      "date": "2026-06-26T21:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/broadway-rave-houston-texas-06-26-2026/event/3A0064A5CDA428E0"
     },
     {
       "source": "white-oak-music-hall",
@@ -5481,13 +5333,6 @@
     },
     {
       "source": "white-oak-music-hall",
-      "eventId": "tm-G5dIZ_1Vex4GD",
-      "summary": "Los Aptos: XFIN TOUR",
-      "date": "2026-06-25T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/los-aptos-xfin-tour-houston-texas-06-25-2026/event/3A0064AD0289533B"
-    },
-    {
-      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_1xhhlUL",
       "summary": "Monsieur Perine: Instrucciones Para Ser Feliz Tour",
       "date": "2026-08-12T19:00-05:00[America/Chicago]",
@@ -5527,13 +5372,6 @@
       "summary": "Quicksand & Bane",
       "date": "2026-08-08T18:30-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/quicksand-bane-houston-texas-08-08-2026/event/3A0064B5B096D24D"
-    },
-    {
-      "source": "white-oak-music-hall",
-      "eventId": "tm-G5dIZ_5S0-Zl7",
-      "summary": "Off Campus Night",
-      "date": "2026-06-26T21:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/off-campus-night-houston-texas-06-26-2026/event/3A0064BCE4840AC4"
     },
     {
       "source": "white-oak-music-hall",
@@ -5604,6 +5442,13 @@
       "summary": "Joshua Slone - Thinking Too Much Tour",
       "date": "2026-07-08T18:30-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/joshua-slone-thinking-too-much-tour-houston-texas-07-08-2026/event/3A006478CC39CA9A"
+    },
+    {
+      "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_6NukHmI",
+      "summary": "Built To Spill",
+      "date": "2026-09-26T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/built-to-spill-houston-texas-09-26-2026/event/3A006478CD1BCBA8"
     },
     {
       "source": "white-oak-music-hall",
@@ -5852,6 +5697,13 @@
     },
     {
       "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_GXwNBLf",
+      "summary": "Six Foot Blonde",
+      "date": "2026-09-26T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/six-foot-blonde-houston-texas-09-26-2026/event/3A0064CFB28FA7D4"
+    },
+    {
+      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_kMCjRF_",
       "summary": "Eihwar: Nordic Ritual Nights USA Tour 2026",
       "date": "2026-09-04T19:00-05:00[America/Chicago]",
@@ -5887,6 +5739,13 @@
     },
     {
       "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_uE-LNAK",
+      "summary": "Zenjii: Single Release Party",
+      "date": "2026-08-15T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/zenjii-single-release-party-houston-texas-08-15-2026/event/3A0064D9E17E3153"
+    },
+    {
+      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_ukBkWF8",
       "summary": "Phillip Phillips: Let's Go Far Tour",
       "date": "2026-09-11T19:00-05:00[America/Chicago]",
@@ -5898,6 +5757,13 @@
       "summary": "Automatic",
       "date": "2026-09-13T19:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/automatic-houston-texas-09-13-2026/event/3A0064D698147982"
+    },
+    {
+      "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_uxraBGm",
+      "summary": " In The Attic, Whisk, Whitehaven",
+      "date": "2026-08-21T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/in-the-attic-whisk-whitehaven-houston-texas-08-21-2026/event/3A0064D89E27A32E"
     },
     {
       "source": "white-oak-music-hall",
@@ -5974,7 +5840,7 @@
     {
       "name": "central-market-cooking-school-central-market-cooking-school",
       "type": "Ripper",
-      "events": 76,
+      "events": 74,
       "expectEmpty": false,
       "source": "central-market-cooking-school"
     },
@@ -5988,7 +5854,7 @@
     {
       "name": "docs-houston-docs-houston",
       "type": "Ripper",
-      "events": 5,
+      "events": 4,
       "expectEmpty": false,
       "source": "docs-houston"
     },
@@ -6007,6 +5873,13 @@
       "source": "good-on-paper-bookshop"
     },
     {
+      "name": "heights-mercantile-heights-mercantile",
+      "type": "Ripper",
+      "events": 3,
+      "expectEmpty": false,
+      "source": "heights-mercantile"
+    },
+    {
       "name": "heights-theater-heights-theater",
       "type": "Ripper",
       "events": 0,
@@ -6016,7 +5889,7 @@
     {
       "name": "house-of-blues-houston-house-of-blues-houston",
       "type": "Ripper",
-      "events": 43,
+      "events": 42,
       "expectEmpty": false,
       "source": "house-of-blues-houston"
     },
@@ -6107,21 +5980,21 @@
     {
       "name": "project-row-houses-project-row-houses",
       "type": "Ripper",
-      "events": 388,
+      "events": 387,
       "expectEmpty": false,
       "source": "project-row-houses"
     },
     {
       "name": "punch-line-comedy-club-punch-line-comedy-club",
       "type": "Ripper",
-      "events": 85,
+      "events": 84,
       "expectEmpty": false,
       "source": "punch-line-comedy-club"
     },
     {
       "name": "rice-public-events-rice-public-events",
       "type": "Ripper",
-      "events": 114,
+      "events": 109,
       "expectEmpty": false,
       "source": "rice-public-events"
     },
@@ -6156,42 +6029,42 @@
     {
       "name": "the-mood-room-the-mood-room",
       "type": "Ripper",
-      "events": 3,
+      "events": 1,
       "expectEmpty": false,
       "source": "the-mood-room"
     },
     {
       "name": "the-secret-group-the-secret-group",
       "type": "Ripper",
-      "events": 109,
+      "events": 101,
       "expectEmpty": false,
       "source": "the-secret-group"
     },
     {
       "name": "white-oak-music-hall-white-oak-music-hall",
       "type": "Ripper",
-      "events": 75,
+      "events": 76,
       "expectEmpty": false,
       "source": "white-oak-music-hall"
     },
     {
       "name": "tag-farmersmarket",
       "type": "Aggregate",
-      "events": 33,
+      "events": 36,
       "expectEmpty": false,
       "source": "tag-farmersmarket"
     },
     {
       "name": "tag-the-heights",
       "type": "Aggregate",
-      "events": 81,
+      "events": 82,
       "expectEmpty": false,
       "source": "tag-the-heights"
     },
     {
       "name": "tag-upper-kirby",
       "type": "Aggregate",
-      "events": 109,
+      "events": 104,
       "expectEmpty": false,
       "source": "tag-upper-kirby"
     },
@@ -6205,7 +6078,7 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 654,
+      "events": 647,
       "expectEmpty": false,
       "source": "tag-music"
     },
@@ -6219,7 +6092,7 @@
     {
       "name": "tag-downtown",
       "type": "Aggregate",
-      "events": 187,
+      "events": 185,
       "expectEmpty": false,
       "source": "tag-downtown"
     },
@@ -6233,14 +6106,14 @@
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 489,
+      "events": 479,
       "expectEmpty": false,
       "source": "tag-community"
     },
     {
       "name": "tag-montrose",
       "type": "Aggregate",
-      "events": 395,
+      "events": 388,
       "expectEmpty": false,
       "source": "tag-montrose"
     },
@@ -6254,56 +6127,56 @@
     {
       "name": "tag-eado",
       "type": "Aggregate",
-      "events": 142,
+      "events": 132,
       "expectEmpty": false,
       "source": "tag-eado"
     },
     {
       "name": "tag-midtown",
       "type": "Aggregate",
-      "events": 24,
+      "events": 20,
       "expectEmpty": false,
       "source": "tag-midtown"
     },
     {
       "name": "tag-art",
       "type": "Aggregate",
-      "events": 517,
+      "events": 509,
       "expectEmpty": false,
       "source": "tag-art"
     },
     {
       "name": "tag-museum-district",
       "type": "Aggregate",
-      "events": 143,
+      "events": 135,
       "expectEmpty": false,
       "source": "tag-museum-district"
     },
     {
       "name": "tag-culinary",
       "type": "Aggregate",
-      "events": 76,
+      "events": 74,
       "expectEmpty": false,
       "source": "tag-culinary"
     },
     {
       "name": "tag-workshops",
       "type": "Aggregate",
-      "events": 76,
+      "events": 74,
       "expectEmpty": false,
       "source": "tag-workshops"
     },
     {
       "name": "tag-education",
       "type": "Aggregate",
-      "events": 190,
+      "events": 183,
       "expectEmpty": false,
       "source": "tag-education"
     },
     {
       "name": "tag-uptown",
       "type": "Aggregate",
-      "events": 76,
+      "events": 74,
       "expectEmpty": false,
       "source": "tag-uptown"
     },
@@ -6317,7 +6190,7 @@
     {
       "name": "tag-jazz",
       "type": "Aggregate",
-      "events": 5,
+      "events": 4,
       "expectEmpty": false,
       "source": "tag-jazz"
     },
@@ -6366,7 +6239,7 @@
     {
       "name": "tag-comedy",
       "type": "Aggregate",
-      "events": 197,
+      "events": 186,
       "expectEmpty": false,
       "source": "tag-comedy"
     },
@@ -6380,7 +6253,7 @@
     {
       "name": "tag-outdoor-recreation",
       "type": "Aggregate",
-      "events": 44,
+      "events": 39,
       "expectEmpty": false,
       "source": "tag-outdoor-recreation"
     },
@@ -6401,21 +6274,21 @@
     {
       "name": "tag-third-ward",
       "type": "Aggregate",
-      "events": 393,
+      "events": 392,
       "expectEmpty": false,
       "source": "tag-third-ward"
     },
     {
       "name": "tag-beer",
       "type": "Aggregate",
-      "events": 71,
+      "events": 69,
       "expectEmpty": false,
       "source": "tag-beer"
     },
     {
       "name": "tag-near-northside",
       "type": "Aggregate",
-      "events": 123,
+      "events": 124,
       "expectEmpty": false,
       "source": "tag-near-northside"
     },
@@ -6443,7 +6316,7 @@
     {
       "name": "tag-entertainment",
       "type": "Aggregate",
-      "events": 85,
+      "events": 84,
       "expectEmpty": false,
       "source": "tag-entertainment"
     },
@@ -6471,14 +6344,14 @@
     {
       "name": "tag-parks",
       "type": "Aggregate",
-      "events": 50,
+      "events": 44,
       "expectEmpty": false,
       "source": "tag-parks"
     },
     {
       "name": "tag-hermann-park",
       "type": "Aggregate",
-      "events": 9,
+      "events": 8,
       "expectEmpty": false,
       "source": "tag-hermann-park"
     },
@@ -6506,7 +6379,7 @@
     {
       "name": "tag-tech",
       "type": "Aggregate",
-      "events": 6,
+      "events": 2,
       "expectEmpty": false,
       "source": "tag-tech"
     },
@@ -6527,14 +6400,14 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1760,
+      "events": 1723,
       "expectEmpty": false,
       "source": "tag-all"
     },
     {
       "name": "external-axelrad-beer-garden",
       "type": "External",
-      "events": 5027,
+      "events": 5029,
       "expectEmpty": false,
       "source": "axelrad-beer-garden"
     },
@@ -6553,23 +6426,16 @@
       "source": "diverseworks"
     },
     {
-      "name": "external-erjcc-houston",
-      "type": "External",
-      "events": 2,
-      "expectEmpty": false,
-      "source": "erjcc-houston"
-    },
-    {
       "name": "external-eureka-heights-brew-co",
       "type": "External",
-      "events": 14,
+      "events": 12,
       "expectEmpty": false,
       "source": "eureka-heights-brew-co"
     },
     {
       "name": "external-hermann-park",
       "type": "External",
-      "events": 10,
+      "events": 9,
       "expectEmpty": false,
       "source": "hermann-park"
     },
@@ -6618,14 +6484,14 @@
     {
       "name": "external-ion-district",
       "type": "External",
-      "events": 6,
+      "events": 2,
       "expectEmpty": false,
       "source": "ion-district"
     },
     {
       "name": "external-levy-park-houston",
       "type": "External",
-      "events": 12,
+      "events": 7,
       "expectEmpty": false,
       "source": "levy-park-houston"
     },
