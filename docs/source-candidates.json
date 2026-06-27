@@ -1874,5 +1874,73 @@
         "label": "POST Houston, 510 Main St, Houston, TX 77002"
       }
     }
+  },
+  {
+    "name": "Rodeo Houston",
+    "status": "rejected",
+    "platform": "Tribe Events (ICS)",
+    "url": "https://rodeohouston.com/plan-your-visit/music-and-concerts",
+    "tags": [
+      "Music",
+      "Community",
+      "Downtown"
+    ],
+    "firstSeen": "2026-06-27",
+    "lastChecked": "2026-06-27",
+    "notes": "ICS feed at rodeohouston.com/event-calendar/?ical=1 returned 0 events on 2026-06-27"
+  },
+  {
+    "name": "Montrose Saloon",
+    "status": "rejected",
+    "platform": "Tribe Events (ICS)",
+    "url": "https://montrosesaloon.com/events/category/live-music",
+    "tags": [
+      "Music",
+      "Montrose",
+      "Nightlife"
+    ],
+    "firstSeen": "2026-06-27",
+    "lastChecked": "2026-06-27",
+    "notes": "ICS feed at montrosesaloon.com/events/?ical=1 returned 0 events on 2026-06-27"
+  },
+  {
+    "name": "Houston on the Cheap Events",
+    "status": "rejected",
+    "platform": "Tribe Events (ICS, aggregator)",
+    "url": "https://www.houstononthecheap.com/houston-museums",
+    "tags": [
+      "Community",
+      "Events"
+    ],
+    "firstSeen": "2026-06-27",
+    "lastChecked": "2026-06-27",
+    "notes": "Events aggregator; ICS feed returned 0 events. Platform focuses on secondary sourcing, not primary calendar."
+  },
+  {
+    "name": "ARTECHOUSE Houston",
+    "status": "blocked",
+    "platform": "Eventbrite (not Tribe Events as shortlist claimed)",
+    "url": "https://artechouse.com/location/houston",
+    "tags": [
+      "Art",
+      "Museums",
+      "Downtown"
+    ],
+    "firstSeen": "2026-06-27",
+    "lastChecked": "2026-06-27",
+    "notes": "Real venue with active Eventbrite events; shortlist platform guess was incorrect. Requires Eventbrite organizerId which was not accessible via curl (potential bot-blocking). Needs manual organizerId lookup or bot-detection bypass (proxy:true)."
+  },
+  {
+    "name": "Houston Event List",
+    "status": "rejected",
+    "platform": "Aggregator (not a primary venue)",
+    "url": "https://www.houeventlist.com",
+    "tags": [
+      "Community",
+      "Events"
+    ],
+    "firstSeen": "2026-06-27",
+    "lastChecked": "2026-06-27",
+    "notes": "Secondary aggregator/discovery platform for Houston music events; curates events from 20+ real venues. Not a primary event source—including would duplicate data and misrepresent aggregator as venue calendar."
   }
 ]
