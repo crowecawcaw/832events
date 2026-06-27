@@ -1,5 +1,5 @@
 {
-  "buildTime": "2026-06-27T01:53:12.412Z",
+  "buildTime": "2026-06-27T12:57:32.009Z",
   "totalErrors": 8,
   "configErrors": [],
   "sources": [
@@ -130,12 +130,6 @@
       "error": "Error: HTTP 403: "
     },
     {
-      "name": "eureka-heights-brew-co",
-      "friendlyName": "Eureka Heights Brewery",
-      "url": "https://www.eurekaheights.com/?post_type=tribe_events&ical=1&eventDisplay=list",
-      "error": "Error: HTTP 415: "
-    },
-    {
       "name": "hobby-center",
       "friendlyName": "Hobby Center for the Performing Arts",
       "url": "https://www.thehobbycenter.org/?post_type=tribe_events&ical=1&eventDisplay=list",
@@ -144,8 +138,8 @@
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1619,
-    "eventsWithGeo": 1598,
+    "totalEvents": 1632,
+    "eventsWithGeo": 1611,
     "eventsWithoutGeo": 21,
     "geocodeErrors": 0
   },
@@ -289,6 +283,13 @@
       "label": "Good on Paper Books, 250 W 19th St Suite D, Houston, TX 77008",
       "lat": 29.8096,
       "lng": -95.3914
+    },
+    {
+      "source": "ripper",
+      "name": "heights-mercantile",
+      "label": "Heights Mercantile Farmers Market, 714 Yale Street, Houston, TX 77007",
+      "lat": 29.7837881,
+      "lng": -95.398618
     },
     {
       "source": "ripper",
@@ -530,10 +531,10 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1163,
-    "totalEvents": 1619,
+    "eventsWithImage": 1178,
+    "totalEvents": 1632,
     "venuesWithImage": 0,
-    "totalVenues": 37,
+    "totalVenues": 39,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -602,11 +603,24 @@
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Doc's%20Jazz%20Club%2C%201201%20Westheimer%20Rd%2C%20Houston%2C%20TX%2077006"
       },
       {
+        "source": "external",
+        "name": "eureka-heights-brew-co",
+        "label": "Eureka Heights Brewery, 2454 Sawyer St, Houston, TX 77007",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Eureka%20Heights%20Brewery%2C%202454%20Sawyer%20St%2C%20Houston%2C%20TX%2077007"
+      },
+      {
         "source": "ripper",
         "name": "good-on-paper-bookshop",
         "label": "Good on Paper Books, 250 W 19th St Suite D, Houston, TX 77008",
         "url": "https://www.goodonpaperbooks.com/events",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Good%20on%20Paper%20Books%2C%20250%20W%2019th%20St%20Suite%20D%2C%20Houston%2C%20TX%2077008"
+      },
+      {
+        "source": "ripper",
+        "name": "heights-mercantile",
+        "label": "Heights Mercantile Farmers Market, 714 Yale Street, Houston, TX 77007",
+        "url": "https://www.heightsmercantile.com/events",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Heights%20Mercantile%20Farmers%20Market%2C%20714%20Yale%20Street%2C%20Houston%2C%20TX%2077007"
       },
       {
         "source": "external",
@@ -1572,7 +1586,7 @@
   "costStats": {
     "eventsWithCost": 602,
     "freeEvents": 459,
-    "totalEvents": 1619,
+    "totalEvents": 1632,
     "unresolvable": 0
   },
   "costGaps": [
@@ -1941,6 +1955,27 @@
       "summary": "YA Book Club",
       "date": "2026-06-02T19:30-05:00[America/Chicago]",
       "url": "https://www.goodonpaperbooks.com/events"
+    },
+    {
+      "source": "heights-mercantile",
+      "eventId": "691de9018b84db63a8ddcf3b",
+      "summary": "Heights Mercantile Farmer's Market",
+      "date": "2026-07-26T09:00:00.632-05:00[America/Chicago]",
+      "url": "https://www.heightsmercantile.com/events/11/23-pdyxw-t2zznt3gny54b5-92afj-9m453-swwsz-5sme7-l7wx8-k8hsn-amc9r-h4k39-csyj8-nfcnh-4dr87-brxc7-jrkfr-6nlcc-np7p2"
+    },
+    {
+      "source": "heights-mercantile",
+      "eventId": "692471147d66491ba57a8967",
+      "summary": "Heights Mercantile Farmer's Market",
+      "date": "2026-06-28T09:00:00.551-05:00[America/Chicago]",
+      "url": "https://www.heightsmercantile.com/events/11/23-pdyxw-t2zznt3gny54b5-92afj-9m453-swwsz-5sme7-l7wx8-k8hsn-amc9r-h4k39-csyj8-nfcnh-4dr87-brxc7-jrkfr-6nlcc-np7p2-dj7fe"
+    },
+    {
+      "source": "heights-mercantile",
+      "eventId": "694044fb1c284729ced9beee",
+      "summary": "Heights Mercantile Farmer's Market",
+      "date": "2026-07-12T09:00:00.662-05:00[America/Chicago]",
+      "url": "https://www.heightsmercantile.com/events/11/23-pdyxw-t2zznt3gny54b5-92afj-9m453-swwsz-5sme7-l7wx8-k8hsn-amc9r-h4k39-csyj8-nfcnh-4dr87-brxc7-jrkfr-6nlcc-np7p2-dj7fe-487bc"
     },
     {
       "source": "house-of-blues-houston",
@@ -5410,6 +5445,13 @@
       "source": "good-on-paper-bookshop"
     },
     {
+      "name": "heights-mercantile-heights-mercantile",
+      "type": "Ripper",
+      "events": 3,
+      "expectEmpty": false,
+      "source": "heights-mercantile"
+    },
+    {
       "name": "heights-theater-heights-theater",
       "type": "Ripper",
       "events": 0,
@@ -5566,14 +5608,14 @@
     {
       "name": "tag-farmersmarket",
       "type": "Aggregate",
-      "events": 33,
+      "events": 36,
       "expectEmpty": false,
       "source": "tag-farmersmarket"
     },
     {
       "name": "tag-the-heights",
       "type": "Aggregate",
-      "events": 67,
+      "events": 82,
       "expectEmpty": false,
       "source": "tag-the-heights"
     },
@@ -5594,7 +5636,7 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 643,
+      "events": 641,
       "expectEmpty": false,
       "source": "tag-music"
     },
@@ -5622,14 +5664,14 @@
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 449,
+      "events": 452,
       "expectEmpty": false,
       "source": "tag-community"
     },
     {
       "name": "tag-montrose",
       "type": "Aggregate",
-      "events": 390,
+      "events": 388,
       "expectEmpty": false,
       "source": "tag-montrose"
     },
@@ -5762,7 +5804,7 @@
     {
       "name": "tag-beer",
       "type": "Aggregate",
-      "events": 57,
+      "events": 69,
       "expectEmpty": false,
       "source": "tag-beer"
     },
@@ -5888,7 +5930,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1686,
+      "events": 1699,
       "expectEmpty": false,
       "source": "tag-all"
     },
@@ -5919,6 +5961,13 @@
       "events": 1,
       "expectEmpty": false,
       "source": "erjcc-houston"
+    },
+    {
+      "name": "external-eureka-heights-brew-co",
+      "type": "External",
+      "events": 12,
+      "expectEmpty": false,
+      "source": "eureka-heights-brew-co"
     },
     {
       "name": "external-hermann-park",

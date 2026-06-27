@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-27T01:53:12.408Z",
+  "generated": "2026-06-27T12:57:32.005Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -324,6 +324,40 @@
       ]
     },
     {
+      "name": "eureka-heights-brew-co",
+      "friendlyName": "Eureka Heights Brewery",
+      "description": "Eureka Heights Brewery",
+      "tags": [
+        "Beer",
+        "The Heights"
+      ],
+      "geo": {
+        "lat": 29.7823,
+        "lng": -95.4181,
+        "label": "Eureka Heights Brewery, 2454 Sawyer St, Houston, TX 77007"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Eureka%20Heights%20Brewery%2C%202454%20Sawyer%20St%2C%20Houston%2C%20TX%2077007"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "eureka-heights-brew-co",
+          "friendlyName": "Eureka Heights Brewery",
+          "links": {
+            "ics": {
+              "href": "external-eureka-heights-brew-co.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-eureka-heights-brew-co.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "good-on-paper-bookshop",
       "friendlyName": "Good on Paper Books and Stationery",
       "description": "Good on Paper Books and Stationery",
@@ -353,6 +387,42 @@
             },
             "rss": {
               "href": "good-on-paper-bookshop-good-on-paper-bookshop.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "heights-mercantile",
+      "friendlyName": "Heights Mercantile Farmers Market",
+      "description": "Heights Mercantile Farmers Market",
+      "url": "https://www.heightsmercantile.com/events",
+      "tags": [
+        "FarmersMarket",
+        "Community",
+        "The Heights"
+      ],
+      "geo": {
+        "lat": 29.7837881,
+        "lng": -95.398618,
+        "label": "Heights Mercantile Farmers Market, 714 Yale Street, Houston, TX 77007"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Heights%20Mercantile%20Farmers%20Market%2C%20714%20Yale%20Street%2C%20Houston%2C%20TX%2077007"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "heights-mercantile",
+          "friendlyName": "Heights Mercantile Farmers Market",
+          "links": {
+            "ics": {
+              "href": "heights-mercantile-heights-mercantile.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "heights-mercantile-heights-mercantile.rss",
               "type": "application/rss+xml"
             }
           }
