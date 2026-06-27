@@ -1657,7 +1657,7 @@
       "lastSeen": "2026-06-25T10:20:03.503Z",
       "lastChecked": "2026-06-19T13:30:02.154Z",
       "checkCount": 1,
-      "status": "probed",
+      "status": "rejected",
       "httpStatus": 200,
       "platformGuess": "ticketmaster",
       "icsUrl": null,
@@ -1665,7 +1665,8 @@
       "queries": [
         "Houston live music venue calendar",
         "new Houston venue events calendar"
-      ]
+      ],
+      "note": "Evaluated 2026-06-27: shortlist source evaluated but not viable"
     },
     "https://seatgeek.com/cities/houston/concerts": {
       "url": "https://seatgeek.com/cities/houston/concerts",
@@ -1850,7 +1851,7 @@
       "lastSeen": "2026-06-27T09:56:51.262Z",
       "lastChecked": "2026-06-19T13:30:02.154Z",
       "checkCount": 1,
-      "status": "probed",
+      "status": "added",
       "httpStatus": 200,
       "platformGuess": "eventbrite",
       "icsUrl": null,
@@ -1863,7 +1864,8 @@
         "Houston neighborhood events calendar",
         "Houston festival calendar",
         "Houston concert calendar"
-      ]
+      ],
+      "note": "Added 2026-06-27 via custom Webflow HTML ripper (PR #79)"
     },
     "https://bayoumusiccenter.com": {
       "url": "https://bayoumusiccenter.com",
@@ -16922,14 +16924,15 @@
       "lastSeen": "2026-06-20T02:20:11.094Z",
       "lastChecked": "2026-06-20T02:20:11.094Z",
       "checkCount": 1,
-      "status": "probed",
+      "status": "rejected",
       "httpStatus": 200,
       "platformGuess": "tribe-events-ics",
       "icsUrl": "https://www.rodeohouston.com/event-calendar/?ical=1",
       "nextCheckAfter": "2026-07-04",
       "queries": [
         "Houston live music venue calendar"
-      ]
+      ],
+      "note": "Evaluated 2026-06-27: shortlist source evaluated but not viable"
     },
     "https://discoverygreen.com/signature-experiences/jazzy-sundays-in-the-parks": {
       "url": "https://discoverygreen.com/signature-experiences/jazzy-sundays-in-the-parks",
@@ -17704,14 +17707,15 @@
       "lastSeen": "2026-06-20T02:20:11.094Z",
       "lastChecked": "2026-06-20T02:20:11.094Z",
       "checkCount": 1,
-      "status": "probed",
+      "status": "rejected",
       "httpStatus": 200,
       "platformGuess": "tribe-events-ics",
       "icsUrl": "https://montrosesaloon.com/events/?ical=1",
       "nextCheckAfter": "2026-07-04",
       "queries": [
         "Montrose Houston live music events"
-      ]
+      ],
+      "note": "Evaluated 2026-06-27: shortlist source evaluated but not viable"
     },
     "https://lgbtq.visithoustontexas.com/nightlife/a-montrose-pub-crawl": {
       "url": "https://lgbtq.visithoustontexas.com/nightlife/a-montrose-pub-crawl",
@@ -18861,14 +18865,15 @@
       "lastSeen": "2026-06-20T02:20:11.094Z",
       "lastChecked": "2026-06-20T14:26:38.725Z",
       "checkCount": 1,
-      "status": "probed",
+      "status": "rejected",
       "httpStatus": 200,
       "platformGuess": "tribe-events-ics",
       "icsUrl": "https://www.artechouse.com/events/?ical=1",
       "nextCheckAfter": "2026-07-04",
       "queries": [
         "Houston art gallery events calendar"
-      ]
+      ],
+      "note": "Evaluated 2026-06-27: shortlist source evaluated but not viable"
     },
     "https://reddit.com/r/houston/comments/1ifhleo/do_we_have_art_galleries_in_houston_where_amateur": {
       "url": "https://reddit.com/r/houston/comments/1ifhleo/do_we_have_art_galleries_in_houston_where_amateur",
