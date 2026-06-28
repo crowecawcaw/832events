@@ -1942,5 +1942,103 @@
     "firstSeen": "2026-06-27",
     "lastChecked": "2026-06-27",
     "notes": "Secondary aggregator/discovery platform for Houston music events; curates events from 20+ real venues. Not a primary event source—including would duplicate data and misrepresent aggregator as venue calendar."
+  },
+  {
+    "name": "Comedy Houston",
+    "status": "notviable",
+    "platform": "WordPress Blog Directory",
+    "url": "https://comedyhouston.com/every-open-mic-night-houston/",
+    "tags": [
+      "Comedy",
+      "Nightlife",
+      "Community"
+    ],
+    "firstSeen": "2026-06-28",
+    "lastChecked": "2026-06-28",
+    "notes": "Blog-style directory of Houston comedy venues and open mic schedules, not an event calendar with parseable structured events. Each venue link points to external sites; no centralized event API or feed. Would require aggregating from 20+ individual venue sites."
+  },
+  {
+    "name": "Fresh Arts Houston",
+    "status": "blocked",
+    "platform": "Custom HTML (Cloudflare-protected)",
+    "url": "https://fresharts.org/upcoming-events/",
+    "tags": [
+      "Art",
+      "Community",
+      "Gallery"
+    ],
+    "firstSeen": "2026-06-28",
+    "lastChecked": "2026-06-28",
+    "notes": "Houston area arts community calendar. Returns 403 Forbidden; Cloudflare WAF blocks bot requests. Would require proxy:true to fetch through Browserbase."
+  },
+  {
+    "name": "GlassTire",
+    "status": "candidate",
+    "platform": "Custom HTML Aggregator",
+    "url": "https://glasstire.com/event-regions/houston/",
+    "tags": [
+      "Art",
+      "Gallery",
+      "Contemporary"
+    ],
+    "firstSeen": "2026-06-28",
+    "lastChecked": "2026-06-28",
+    "notes": "Houston art events aggregator; curates gallery exhibitions, artist talks, and contemporary art events. Server-rendered HTML; would require custom ripper."
+  },
+  {
+    "name": "Read Houston",
+    "status": "candidate",
+    "platform": "Literary Aggregator / Custom HTML",
+    "url": "https://www.readhouston.com/",
+    "tags": [
+      "Books",
+      "Literary",
+      "Community"
+    ],
+    "firstSeen": "2026-06-28",
+    "lastChecked": "2026-06-28",
+    "notes": "Houston literary events aggregator; book signings, author readings, literary festivals. Unclear platform; may be Eventbrite-linked or custom calendar."
+  },
+  {
+    "name": "Downtown Houston Events",
+    "status": "blocked",
+    "platform": "Eventbrite",
+    "url": "https://www.eventbrite.com/o/downtown-houston-51263529253",
+    "tags": [
+      "Community",
+      "Downtown",
+      "Events"
+    ],
+    "firstSeen": "2026-06-28",
+    "lastChecked": "2026-06-28",
+    "notes": "Eventbrite organizer (ID: 51263529253) tested on 2026-06-28: returned 0 upcoming events. API is accessible but organization has no current event listings. May be inactive or intermittent. Revisit periodically."
+  },
+  {
+    "name": "Houston Morning Market Company",
+    "status": "blocked",
+    "platform": "Eventbrite",
+    "url": "https://www.eventbrite.com/o/houston-morning-market-company-31958700815",
+    "tags": [
+      "Markets",
+      "Community",
+      "Artisan"
+    ],
+    "firstSeen": "2026-06-28",
+    "lastChecked": "2026-06-28",
+    "notes": "Eventbrite organizer (ID: 31958700815) tested on 2026-06-28: returned 0 upcoming events via API. Site claims to manage farmers markets and artisan markets, but no current events listed. Likely seasonal or dormant. Revisit when events resume."
+  },
+  {
+    "name": "LIT Bookbar",
+    "status": "candidate",
+    "platform": "Unknown (Books + Music venue)",
+    "url": "https://litbookbar.com/",
+    "tags": [
+      "Books",
+      "Music",
+      "Community"
+    ],
+    "firstSeen": "2026-06-28",
+    "lastChecked": "2026-06-28",
+    "notes": "Houston books and live music venue. Platform type unclear; may have Eventbrite integration, custom calendar, or no public feed."
   }
 ]
