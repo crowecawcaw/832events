@@ -1,5 +1,5 @@
 {
-  "buildTime": "2026-06-27T13:49:38.016Z",
+  "buildTime": "2026-06-28T01:25:20.506Z",
   "totalErrors": 8,
   "configErrors": [],
   "sources": [
@@ -138,9 +138,9 @@
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1696,
-    "eventsWithGeo": 1642,
-    "eventsWithoutGeo": 54,
+    "totalEvents": 1692,
+    "eventsWithGeo": 1637,
+    "eventsWithoutGeo": 55,
     "geocodeErrors": 0
   },
   "uncertainEvents": [],
@@ -558,8 +558,8 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1208,
-    "totalEvents": 1696,
+    "eventsWithImage": 1205,
+    "totalEvents": 1692,
     "venuesWithImage": 0,
     "totalVenues": 42,
     "unresolvable": 0
@@ -1434,6 +1434,13 @@
         "url": "https://htxoutdoors.com/events/white-water-kayaking-101-weekend-8/"
       },
       {
+        "source": "htxoutdoors",
+        "eventId": "white-water-kayaking-101-weekend-2026-09-25",
+        "summary": "White Water Kayaking 101 Weekend",
+        "date": "2026-09-25T19:00-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/white-water-kayaking-101-weekend-9/"
+      },
+      {
         "source": "lake-houston-brewery",
         "eventId": "sunday-brunch-2026-06-28",
         "summary": "Sunday Brunch!",
@@ -1872,7 +1879,7 @@
   "costStats": {
     "eventsWithCost": 602,
     "freeEvents": 459,
-    "totalEvents": 1696,
+    "totalEvents": 1692,
     "unresolvable": 0
   },
   "costGaps": [
@@ -1987,13 +1994,6 @@
       "summary": "Malcolm Todd: Do That Again Tour",
       "date": "2026-09-03T20:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/malcolm-todd-do-that-again-tour-houston-texas-09-03-2026/event/3A0064C3985571EC"
-    },
-    {
-      "source": "713-music-hall",
-      "eventId": "tm-G5dIZ_k1iwBvc",
-      "summary": "Ole 60: Smokestack Town Tour",
-      "date": "2026-06-26T20:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/ole-60-smokestack-town-tour-houston-texas-06-26-2026/event/3A006462ACCBA06D"
     },
     {
       "source": "713-music-hall",
@@ -2895,9 +2895,9 @@
     },
     {
       "source": "houston-zoo",
-      "eventId": "neighbors-for-nature-june-27-2026-06-27-85a5253e",
+      "eventId": "neighbors-for-nature-june-27-2027-06-27-ca0a29c4",
       "summary": "Neighbors for Nature – June 27",
-      "date": "2026-06-27T10:00-05:00[America/Chicago]",
+      "date": "2027-06-27T10:00-05:00[America/Chicago]",
       "url": "https://www.houstonzoo.org/events/neighbors-for-nature-june/"
     },
     {
@@ -3172,6 +3172,13 @@
       "summary": "White Water Kayaking 101 Weekend",
       "date": "2026-08-21T19:00-05:00[America/Chicago]",
       "url": "https://htxoutdoors.com/events/white-water-kayaking-101-weekend-8/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "white-water-kayaking-101-weekend-2026-09-25",
+      "summary": "White Water Kayaking 101 Weekend",
+      "date": "2026-09-25T19:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/white-water-kayaking-101-weekend-9/"
     },
     {
       "source": "lake-houston-brewery",
@@ -4225,13 +4232,6 @@
     },
     {
       "source": "punch-line-comedy-club",
-      "eventId": "tm-G5dIZ_5nGF4N0",
-      "summary": "Liza Treyger",
-      "date": "2026-06-26T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/liza-treyger-houston-texas-06-26-2026/event/3A0064BA8C2158E4"
-    },
-    {
-      "source": "punch-line-comedy-club",
       "eventId": "tm-G5dIZ_5nGG4NB",
       "summary": "Liza Treyger",
       "date": "2026-06-27T21:15-05:00[America/Chicago]",
@@ -4519,13 +4519,6 @@
     },
     {
       "source": "punch-line-comedy-club",
-      "eventId": "tm-G5dIZ_aQs6xoI",
-      "summary": "La Chupitos: Standopeda ( En Español )",
-      "date": "2026-06-26T21:30-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/la-chupitos-standopeda-en-espanol-houston-texas-06-26-2026/event/3A006496B11E2468"
-    },
-    {
-      "source": "punch-line-comedy-club",
       "eventId": "tm-G5dIZ_AZ57F82",
       "summary": "Ron Funches",
       "date": "2026-08-07T21:15-05:00[America/Chicago]",
@@ -4698,6 +4691,13 @@
       "summary": "Von Decarlo",
       "date": "2026-07-02T19:30-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/von-decarlo-houston-texas-07-02-2026/event/3A0064680F644866"
+    },
+    {
+      "source": "punch-line-comedy-club",
+      "eventId": "tm-G5dIZ_uKUjPIq",
+      "summary": "Chinedu",
+      "date": "2026-09-27T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/chinedu-houston-texas-09-27-2026/event/3A0064D4F6725A1D"
     },
     {
       "source": "rice-public-events",
@@ -5548,17 +5548,17 @@
     },
     {
       "source": "white-oak-music-hall",
-      "eventId": "tm-G5dIZ_19uteNO",
-      "summary": "Broadway Rave",
-      "date": "2026-06-26T21:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/broadway-rave-houston-texas-06-26-2026/event/3A0064A5CDA428E0"
-    },
-    {
-      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_1DdFHPs",
       "summary": " Emo Forever",
       "date": "2026-07-10T19:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/emo-forever-houston-texas-07-10-2026/event/3A0064AEC323C971"
+    },
+    {
+      "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_1ICtSU4",
+      "summary": "Mustard Service",
+      "date": "2026-09-27T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/mustard-service-houston-texas-09-27-2026/event/3A0064AA0EA73D95"
     },
     {
       "source": "white-oak-music-hall",
@@ -5671,13 +5671,6 @@
       "summary": "Quicksand & Bane",
       "date": "2026-08-08T18:30-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/quicksand-bane-houston-texas-08-08-2026/event/3A0064B5B096D24D"
-    },
-    {
-      "source": "white-oak-music-hall",
-      "eventId": "tm-G5dIZ_5S0-Zl7",
-      "summary": "Off Campus Night",
-      "date": "2026-06-26T21:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/off-campus-night-houston-texas-06-26-2026/event/3A0064BCE4840AC4"
     },
     {
       "source": "white-oak-music-hall",
@@ -6111,7 +6104,7 @@
     {
       "name": "713-music-hall-713-music-hall",
       "type": "Ripper",
-      "events": 18,
+      "events": 17,
       "expectEmpty": false,
       "source": "713-music-hall"
     },
@@ -6230,7 +6223,7 @@
     {
       "name": "htxoutdoors-htxoutdoors",
       "type": "Ripper",
-      "events": 33,
+      "events": 34,
       "expectEmpty": false,
       "source": "htxoutdoors"
     },
@@ -6307,7 +6300,7 @@
     {
       "name": "punch-line-comedy-club-punch-line-comedy-club",
       "type": "Ripper",
-      "events": 86,
+      "events": 85,
       "expectEmpty": false,
       "source": "punch-line-comedy-club"
     },
@@ -6370,7 +6363,7 @@
     {
       "name": "white-oak-music-hall-white-oak-music-hall",
       "type": "Ripper",
-      "events": 78,
+      "events": 77,
       "expectEmpty": false,
       "source": "white-oak-music-hall"
     },
@@ -6405,21 +6398,21 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 662,
+      "events": 658,
       "expectEmpty": false,
       "source": "tag-music"
     },
     {
       "name": "tag-nightlife",
       "type": "Aggregate",
-      "events": 47,
+      "events": 46,
       "expectEmpty": false,
       "source": "tag-nightlife"
     },
     {
       "name": "tag-downtown",
       "type": "Aggregate",
-      "events": 198,
+      "events": 196,
       "expectEmpty": false,
       "source": "tag-downtown"
     },
@@ -6433,14 +6426,14 @@
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 485,
+      "events": 486,
       "expectEmpty": false,
       "source": "tag-community"
     },
     {
       "name": "tag-montrose",
       "type": "Aggregate",
-      "events": 388,
+      "events": 386,
       "expectEmpty": false,
       "source": "tag-montrose"
     },
@@ -6566,7 +6559,7 @@
     {
       "name": "tag-comedy",
       "type": "Aggregate",
-      "events": 194,
+      "events": 193,
       "expectEmpty": false,
       "source": "tag-comedy"
     },
@@ -6601,21 +6594,21 @@
     {
       "name": "tag-outdoor-recreation",
       "type": "Aggregate",
-      "events": 41,
+      "events": 42,
       "expectEmpty": false,
       "source": "tag-outdoor-recreation"
     },
     {
       "name": "tag-hiking",
       "type": "Aggregate",
-      "events": 33,
+      "events": 34,
       "expectEmpty": false,
       "source": "tag-hiking"
     },
     {
       "name": "tag-sports",
       "type": "Aggregate",
-      "events": 33,
+      "events": 34,
       "expectEmpty": false,
       "source": "tag-sports"
     },
@@ -6636,7 +6629,7 @@
     {
       "name": "tag-near-northside",
       "type": "Aggregate",
-      "events": 126,
+      "events": 125,
       "expectEmpty": false,
       "source": "tag-near-northside"
     },
@@ -6664,7 +6657,7 @@
     {
       "name": "tag-entertainment",
       "type": "Aggregate",
-      "events": 86,
+      "events": 85,
       "expectEmpty": false,
       "source": "tag-entertainment"
     },
@@ -6755,7 +6748,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1773,
+      "events": 1769,
       "expectEmpty": false,
       "source": "tag-all"
     },
