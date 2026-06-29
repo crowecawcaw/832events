@@ -1942,5 +1942,86 @@
     "firstSeen": "2026-06-27",
     "lastChecked": "2026-06-27",
     "notes": "Secondary aggregator/discovery platform for Houston music events; curates events from 20+ real venues. Not a primary event source—including would duplicate data and misrepresent aggregator as venue calendar."
+  },
+  {
+    "name": "Revention Music Center",
+    "status": "blocked",
+    "platform": "AXS / TicketWeb",
+    "url": "https://www.reventioncentertickets.com/",
+    "tags": [
+      "Music",
+      "Downtown",
+      "Concerts"
+    ],
+    "firstSeen": "2026-06-29",
+    "lastChecked": "2026-06-29",
+    "notes": "URL returns 404; appears to be incorrect. Revention Music Center (520 Texas Ave) exists but correct event URL/API endpoint needs to be found."
+  },
+  {
+    "name": "Cullen Performance Hall",
+    "status": "added",
+    "platform": "Custom HTML calendar",
+    "url": "https://www.uh.edu/cullen-performance-hall/about-us/event-calendar/",
+    "tags": [
+      "PerformingArts",
+      "University",
+      "Theater",
+      "Music"
+    ],
+    "firstSeen": "2026-06-29",
+    "lastChecked": "2026-06-29",
+    "impl": {
+      "type": "custom",
+      "observedEventCount": 22,
+      "builtEventCount": 22,
+      "note": "Custom HTML ripper for UH performance hall calendar; 22 events extracted from event listings including performances and speaker series",
+      "geo": {
+        "lat": 29.7199,
+        "lng": -95.2829,
+        "label": "Cullen Performance Hall, 4400 University Drive, Houston, TX 77004"
+      }
+    }
+  },
+  {
+    "name": "Texas Parks and Wildlife Houston Events",
+    "status": "added",
+    "platform": "Custom calendar",
+    "url": "https://tpwd.texas.gov/calendar/near-city/houston-events",
+    "tags": [
+      "Parks",
+      "OutdoorRecreation",
+      "Nature",
+      "Education"
+    ],
+    "firstSeen": "2026-06-29",
+    "lastChecked": "2026-06-29",
+    "impl": {
+      "type": "custom",
+      "observedEventCount": 218,
+      "builtEventCount": 218,
+      "note": "Custom HTML ripper using hCalendar microformat; 218 events from state parks programming (interpretive programs, nature hikes, ranger talks, etc.)",
+      "geo": null
+    }
+  },
+  {
+    "name": "Downtown Houston Events Calendar",
+    "status": "added",
+    "platform": "Custom calendar",
+    "url": "https://downtownhouston.org/calendar",
+    "tags": [
+      "Downtown",
+      "Community",
+      "Arts",
+      "Culture"
+    ],
+    "firstSeen": "2026-06-29",
+    "lastChecked": "2026-06-29",
+    "impl": {
+      "type": "custom",
+      "observedEventCount": 79,
+      "builtEventCount": 79,
+      "note": "Custom HTML ripper for downtown Houston management district calendar; 79 events from downtown venues, festivals, and programming",
+      "geo": null
+    }
   }
 ]
