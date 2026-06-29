@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-29T02:53:04.606Z",
+  "generated": "2026-06-29T14:45:16.537Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -246,6 +246,44 @@
             },
             "rss": {
               "href": "contemporary-arts-museum-contemporary-arts-museum.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "cullen-performance-hall",
+      "friendlyName": "Cullen Performance Hall",
+      "description": "Cullen Performance Hall",
+      "url": "https://www.uh.edu/cullen-performance-hall/about-us/event-calendar/",
+      "tags": [
+        "PerformingArts",
+        "University",
+        "Theater",
+        "Music",
+        "University of Houston"
+      ],
+      "geo": {
+        "lat": 29.7199,
+        "lng": -95.2829,
+        "label": "Cullen Performance Hall, 4400 University Drive, Houston, TX 77004"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Cullen%20Performance%20Hall%2C%204400%20University%20Drive%2C%20Houston%2C%20TX%2077004"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "cullen-performance-hall",
+          "friendlyName": "Cullen Performance Hall",
+          "links": {
+            "ics": {
+              "href": "cullen-performance-hall-cullen-performance-hall.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "cullen-performance-hall-cullen-performance-hall.rss",
               "type": "application/rss+xml"
             }
           }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T02:52:59.810Z",
+  "lastUpdated": "2026-06-29T14:45:11.935Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -92,6 +92,26 @@
       ]
     },
     {
+      "name": "cullen-performance-hall",
+      "description": "Cullen Performance Hall",
+      "friendlyLink": "https://www.uh.edu/cullen-performance-hall/about-us/event-calendar/",
+      "calendars": [
+        {
+          "name": "cullen-performance-hall",
+          "friendlyName": "Cullen Performance Hall",
+          "icsUrl": "cullen-performance-hall-cullen-performance-hall.ics",
+          "rssUrl": "cullen-performance-hall-cullen-performance-hall.rss",
+          "tags": [
+            "PerformingArts",
+            "University",
+            "Theater",
+            "Music",
+            "University of Houston"
+          ]
+        }
+      ]
+    },
+    {
       "name": "docs-houston",
       "description": "Doc's Jazz Club",
       "friendlyLink": "https://docsjazzclub.com/",
@@ -105,6 +125,25 @@
             "Music",
             "Jazz",
             "Montrose"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "downtown-houston-events",
+      "description": "Downtown Houston",
+      "friendlyLink": "https://downtownhouston.org/calendar",
+      "calendars": [
+        {
+          "name": "downtown-houston-events",
+          "friendlyName": "Downtown Houston Events",
+          "icsUrl": "downtown-houston-events-downtown-houston-events.ics",
+          "rssUrl": "downtown-houston-events-downtown-houston-events.rss",
+          "tags": [
+            "Downtown",
+            "Community",
+            "Arts",
+            "Culture"
           ]
         }
       ]
@@ -452,6 +491,25 @@
       ]
     },
     {
+      "name": "texas-parks-wildlife-houston",
+      "description": "Texas Parks and Wildlife",
+      "friendlyLink": "https://tpwd.texas.gov/calendar/near-city/houston-events",
+      "calendars": [
+        {
+          "name": "texas-parks-wildlife-houston",
+          "friendlyName": "Texas Parks and Wildlife Houston Events",
+          "icsUrl": "texas-parks-wildlife-houston-texas-parks-wildlife-houston.ics",
+          "rssUrl": "texas-parks-wildlife-houston-texas-parks-wildlife-houston.rss",
+          "tags": [
+            "Parks",
+            "Outdoor Recreation",
+            "Nature",
+            "Education"
+          ]
+        }
+      ]
+    },
+    {
       "name": "the-mood-room",
       "description": "The Mood Room",
       "friendlyLink": "https://www.themoodroomhouston.com/events",
@@ -695,6 +753,7 @@
     "Community",
     "Culinary",
     "Cultural",
+    "Culture",
     "Downtown",
     "EaDo",
     "Education",
@@ -713,6 +772,7 @@
     "Museum District",
     "Museums",
     "Music",
+    "Nature",
     "Near Northside",
     "Nightlife",
     "Opera",
@@ -723,8 +783,11 @@
     "Sports",
     "Tech",
     "The Heights",
+    "Theater",
     "Theatre",
     "Third Ward",
+    "University",
+    "University of Houston",
     "Upper Kirby",
     "Uptown",
     "Wedgewood",

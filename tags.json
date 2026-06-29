@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-29T02:53:04.613Z",
+  "generated": "2026-06-29T14:45:16.546Z",
   "tags": [
     {
       "name": "Animals",
@@ -39,8 +39,8 @@
       "name": "Arts",
       "slug": "arts",
       "category": "Activities",
-      "eventCount": 63,
-      "calendarCount": 1,
+      "eventCount": 142,
+      "calendarCount": 2,
       "links": {
         "ics": {
           "href": "tag-arts.ics",
@@ -124,8 +124,8 @@
       "name": "Community",
       "slug": "community",
       "category": "Community",
-      "eventCount": 476,
-      "calendarCount": 10,
+      "eventCount": 560,
+      "calendarCount": 11,
       "links": {
         "ics": {
           "href": "tag-community.ics",
@@ -172,11 +172,28 @@
       }
     },
     {
+      "name": "Culture",
+      "slug": "culture",
+      "category": "Other",
+      "eventCount": 79,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-culture.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-culture.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
       "name": "Downtown",
       "slug": "downtown",
       "category": "Neighborhoods",
-      "eventCount": 193,
-      "calendarCount": 6,
+      "eventCount": 272,
+      "calendarCount": 7,
       "links": {
         "ics": {
           "href": "tag-downtown.ics",
@@ -209,8 +226,8 @@
       "name": "Education",
       "slug": "education",
       "category": "Activities",
-      "eventCount": 187,
-      "calendarCount": 2,
+      "eventCount": 405,
+      "calendarCount": 3,
       "links": {
         "ics": {
           "href": "tag-education.ics",
@@ -328,7 +345,7 @@
       "name": "Hiking",
       "slug": "hiking",
       "category": "Other",
-      "eventCount": 36,
+      "eventCount": 41,
       "calendarCount": 1,
       "links": {
         "ics": {
@@ -464,8 +481,8 @@
       "name": "Music",
       "slug": "music",
       "category": "Activities",
-      "eventCount": 648,
-      "calendarCount": 11,
+      "eventCount": 670,
+      "calendarCount": 12,
       "links": {
         "ics": {
           "href": "tag-music.ics",
@@ -473,6 +490,23 @@
         },
         "rss": {
           "href": "tag-music.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Nature",
+      "slug": "nature",
+      "category": "Other",
+      "eventCount": 218,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-nature.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-nature.rss",
           "type": "application/rss+xml"
         }
       }
@@ -532,8 +566,8 @@
       "name": "Outdoor Recreation",
       "slug": "outdoor-recreation",
       "category": "Other",
-      "eventCount": 40,
-      "calendarCount": 2,
+      "eventCount": 263,
+      "calendarCount": 3,
       "links": {
         "ics": {
           "href": "tag-outdoor-recreation.ics",
@@ -549,8 +583,8 @@
       "name": "Parks",
       "slug": "parks",
       "category": "Community",
-      "eventCount": 51,
-      "calendarCount": 4,
+      "eventCount": 269,
+      "calendarCount": 5,
       "links": {
         "ics": {
           "href": "tag-parks.ics",
@@ -566,8 +600,8 @@
       "name": "PerformingArts",
       "slug": "performingarts",
       "category": "Other",
-      "eventCount": 11,
-      "calendarCount": 1,
+      "eventCount": 33,
+      "calendarCount": 2,
       "links": {
         "ics": {
           "href": "tag-performingarts.ics",
@@ -600,7 +634,7 @@
       "name": "Sports",
       "slug": "sports",
       "category": "Activities",
-      "eventCount": 36,
+      "eventCount": 41,
       "calendarCount": 1,
       "links": {
         "ics": {
@@ -648,6 +682,23 @@
       }
     },
     {
+      "name": "Theater",
+      "slug": "theater",
+      "category": "Other",
+      "eventCount": 28,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-theater.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-theater.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
       "name": "Theatre",
       "slug": "theatre",
       "category": "Activities",
@@ -677,6 +728,40 @@
         },
         "rss": {
           "href": "tag-third-ward.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "University",
+      "slug": "university",
+      "category": "Other",
+      "eventCount": 22,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-university.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-university.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "University of Houston",
+      "slug": "university-of-houston",
+      "category": "Neighborhoods",
+      "eventCount": 22,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-university-of-houston.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-university-of-houston.rss",
           "type": "application/rss+xml"
         }
       }
