@@ -1942,5 +1942,64 @@
     "firstSeen": "2026-06-27",
     "lastChecked": "2026-06-27",
     "notes": "Secondary aggregator/discovery platform for Houston music events; curates events from 20+ real venues. Not a primary event source—including would duplicate data and misrepresent aggregator as venue calendar."
+  },
+  {
+    "name": "Revention Music Center",
+    "status": "candidate",
+    "platform": "AXS / TicketWeb",
+    "url": "https://www.reventioncentertickets.com/",
+    "tags": [
+      "Music",
+      "Downtown",
+      "Concerts"
+    ],
+    "firstSeen": "2026-06-29",
+    "lastChecked": "2026-06-29",
+    "notes": "Major downtown concert venue at 520 Texas Avenue; events available through AXS and TicketWeb platforms with active 2026-2027 schedule. Built-in AXS type should work; need to verify venue ID."
+  },
+  {
+    "name": "Cullen Performance Hall",
+    "status": "candidate",
+    "platform": "Custom HTML calendar",
+    "url": "https://www.uh.edu/cullen-performance-hall/about-us/event-calendar/",
+    "tags": [
+      "PerformingArts",
+      "University",
+      "Theater",
+      "Music"
+    ],
+    "firstSeen": "2026-06-29",
+    "lastChecked": "2026-06-29",
+    "notes": "University of Houston venue with regular concert and performance programming; server-rendered HTML calendar accessible"
+  },
+  {
+    "name": "Texas Parks and Wildlife Houston Events",
+    "status": "candidate",
+    "platform": "Custom calendar",
+    "url": "https://tpwd.texas.gov/calendar/near-city/houston-events",
+    "tags": [
+      "Parks",
+      "OutdoorRecreation",
+      "Nature",
+      "Education"
+    ],
+    "firstSeen": "2026-06-29",
+    "lastChecked": "2026-06-29",
+    "notes": "State-run outdoor recreation and nature events calendar for Houston area parks and preserves"
+  },
+  {
+    "name": "Downtown Houston Events Calendar",
+    "status": "candidate",
+    "platform": "Custom calendar",
+    "url": "https://downtownhouston.org/calendar",
+    "tags": [
+      "Downtown",
+      "Community",
+      "Arts",
+      "Culture"
+    ],
+    "firstSeen": "2026-06-29",
+    "lastChecked": "2026-06-29",
+    "notes": "Official downtown Houston management district calendar with curated events, festivals, and programming"
   }
 ]
