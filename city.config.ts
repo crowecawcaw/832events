@@ -97,6 +97,7 @@ const cityConfig = {
         "Upper Kirby",
         "Near Northside",
         "Clear Lake",
+        "University of Houston",
     ],
     // GoatCounter analytics. Set to null to disable analytics entirely
     // (no snippet is injected into index.html).
