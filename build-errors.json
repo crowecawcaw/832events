@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-06-29T14:45:16.543Z",
-  "totalErrors": 27,
+  "buildTime": "2026-06-30T02:57:40.202Z",
+  "totalErrors": 9,
   "configErrors": [],
   "sources": [
     {
@@ -45,6 +45,21 @@
           "type": "ParseError",
           "reason": "Failed to fetch AXS events for venue 130678: Error: AXS fetch error: HTTP 403 for https://www.axs.com/venues/130678/houston-improv-houston-tickets",
           "context": "venueSlug: houston-improv-houston-tickets"
+        }
+      ]
+    },
+    {
+      "source": "murder-by-the-book",
+      "calendar": "murder-by-the-book",
+      "type": "Ripper",
+      "errorCount": 1,
+      "parseErrorCount": 1,
+      "uncertaintyCount": 0,
+      "errors": [
+        {
+          "type": "ParseError",
+          "reason": "Ripper crashed: Error: Murder By The Book fetch failed: HTTP 403 ",
+          "context": ""
         }
       ]
     },
@@ -136,139 +151,24 @@
       "error": "null"
     },
     {
-      "name": "eureka-heights-brew-co",
-      "friendlyName": "Eureka Heights Brewery",
-      "url": "https://www.eurekaheights.com/?post_type=tribe_events&ical=1&eventDisplay=list",
-      "error": "Error: HTTP 415: "
-    },
-    {
       "name": "hobby-center",
       "friendlyName": "Hobby Center for the Performing Arts",
       "url": "https://www.thehobbycenter.org/?post_type=tribe_events&ical=1&eventDisplay=list",
       "error": "Error: HTTP 403: "
+    },
+    {
+      "name": "walking-stick-brewing",
+      "friendlyName": "Walking Stick Brewing",
+      "url": "https://walkingstickbrewing.com/?post_type=tribe_events&ical=1&eventDisplay=list",
+      "error": "Error: HTTP 403: "
     }
   ],
-  "geocodeErrors": [
-    {
-      "type": "GeocodeError",
-      "location": "The Water Works at Buffalo Bayou Park",
-      "source": "downtown-houston-events",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Heritage Society Historic Homes Tour",
-      "source": "downtown-houston-events",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Zaranda",
-      "source": "downtown-houston-events",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Wortham Theater Center",
-      "source": "downtown-houston-events",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Bastrop State Park",
-      "source": "texas-parks-wildlife-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Galveston Island State Park",
-      "source": "texas-parks-wildlife-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Martin Dies, Jr. State Park",
-      "source": "texas-parks-wildlife-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Lake Livingston State Park",
-      "source": "texas-parks-wildlife-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Mission Tejas State Park",
-      "source": "texas-parks-wildlife-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Village Creek State Park",
-      "source": "texas-parks-wildlife-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Huntsville State Park",
-      "source": "texas-parks-wildlife-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Stephen F. Austin State Park",
-      "source": "texas-parks-wildlife-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Buescher State Park",
-      "source": "texas-parks-wildlife-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Sea Rim State Park",
-      "source": "texas-parks-wildlife-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Fort Boggy State Park",
-      "source": "texas-parks-wildlife-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Sheldon Lake State Park & Environmental Learning Center",
-      "source": "texas-parks-wildlife-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Enchanted Rock State Natural Area",
-      "source": "texas-parks-wildlife-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Nature Center Wildlife Management Area",
-      "source": "texas-parks-wildlife-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Guadalupe River State Park",
-      "source": "texas-parks-wildlife-houston",
-      "reason": "Nominatim returned no results"
-    }
-  ],
+  "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1981,
-    "eventsWithGeo": 1697,
-    "eventsWithoutGeo": 284,
-    "geocodeErrors": 19
+    "totalEvents": 1974,
+    "eventsWithGeo": 1691,
+    "eventsWithoutGeo": 283,
+    "geocodeErrors": 0
   },
   "uncertainEvents": [],
   "uncertaintyStats": {
@@ -281,15 +181,17 @@
     "heights-theater-heights-theater",
     "houston-improv-houston-improv",
     "mossrose-bookshop-mossrose-bookshop",
+    "murder-by-the-book-murder-by-the-book",
     "pride-houston-pride-houston",
+    "saint-arnold-brewing-company-saint-arnold-brewing-company",
     "scout-bar-scout-bar",
     "stereo-live-houston-stereo-live-houston",
     "tag-folk",
     "tag-spring-branch",
+    "tag-west-university",
     "tag-cinema",
     "tag-garden-oaks",
-    "external-houston-cinema-arts-society",
-    "external-walking-stick-brewing"
+    "external-houston-cinema-arts-society"
   ],
   "expectedEmptyCalendars": [],
   "proxyStaleServes": [],
@@ -692,10 +594,10 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1180,
-    "totalEvents": 1981,
+    "eventsWithImage": 1183,
+    "totalEvents": 1974,
     "venuesWithImage": 0,
-    "totalVenues": 42,
+    "totalVenues": 41,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -769,6 +671,12 @@
         "label": "Doc's Jazz Club, 1201 Westheimer Rd, Houston, TX 77006",
         "url": "https://docsjazzclub.com/",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Doc's%20Jazz%20Club%2C%201201%20Westheimer%20Rd%2C%20Houston%2C%20TX%2077006"
+      },
+      {
+        "source": "external",
+        "name": "eureka-heights-brew-co",
+        "label": "Eureka Heights Brewery, 2454 Sawyer St, Houston, TX 77007",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Eureka%20Heights%20Brewery%2C%202454%20Sawyer%20St%2C%20Houston%2C%20TX%2077007"
       },
       {
         "source": "ripper",
@@ -895,13 +803,6 @@
       },
       {
         "source": "ripper",
-        "name": "murder-by-the-book",
-        "label": "Murder By The Book, 2342 Bissonnet St, Houston, TX 77005",
-        "url": "https://www.murderbooks.com/events",
-        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Murder%20By%20The%20Book%2C%202342%20Bissonnet%20St%2C%20Houston%2C%20TX%2077005"
-      },
-      {
-        "source": "ripper",
         "name": "post-houston",
         "label": "POST Houston, 510 Main St, Houston, TX 77002",
         "url": "https://posthtx.com/event",
@@ -934,13 +835,6 @@
         "label": "Rice Village Farmers Market, Rice Village, Houston, TX 77005",
         "url": "https://www.ricevillagehouston.com/",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Rice%20Village%20Farmers%20Market%2C%20Rice%20Village%2C%20Houston%2C%20TX%2077005"
-      },
-      {
-        "source": "ripper",
-        "name": "saint-arnold-brewing-company",
-        "label": "Saint Arnold Brewing Company, 2000 Lyons Ave, Houston, TX 77020",
-        "url": "https://www.saintarnold.com/happenings/",
-        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Saint%20Arnold%20Brewing%20Company%2C%202000%20Lyons%20Ave%2C%20Houston%2C%20TX%2077020"
       },
       {
         "source": "ripper",
@@ -2022,8 +1916,8 @@
       },
       {
         "source": "htxoutdoors",
-        "eventId": "dance-discovery-series-cumbia-2026-07-01",
-        "summary": "Dance Discovery Series: Cumbia",
+        "eventId": "cancelled-dance-discovery-series-cumbia-2026-07-01",
+        "summary": "[Cancelled] Dance Discovery Series: Cumbia",
         "date": "2026-07-01T18:15-05:00[America/Chicago]",
         "url": "https://htxoutdoors.com/events/dance-discovery-series-1/"
       },
@@ -2197,13 +2091,6 @@
       },
       {
         "source": "lake-houston-brewery",
-        "eventId": "sunday-brunch-2026-06-28",
-        "summary": "Sunday Brunch!",
-        "date": "2026-06-28T11:00-05:00[America/Chicago]",
-        "url": "https://www.lakehoustonbrew.com/event-details/sunday-brunch-2026-06-28-11-00"
-      },
-      {
-        "source": "lake-houston-brewery",
         "eventId": "sunday-brunch-2026-07-05",
         "summary": "Sunday Brunch!",
         "date": "2026-07-05T11:00-05:00[America/Chicago]",
@@ -2322,6 +2209,20 @@
         "url": "https://www.lakehoustonbrew.com/event-details/sunday-brunch-2026-10-25-11-00"
       },
       {
+        "source": "lake-houston-brewery",
+        "eventId": "sunday-brunch-2026-11-01",
+        "summary": "Sunday Brunch!",
+        "date": "2026-11-01T11:00-06:00[America/Chicago]",
+        "url": "https://www.lakehoustonbrew.com/event-details/sunday-brunch-2026-11-01-11-00"
+      },
+      {
+        "source": "post-houston",
+        "eventId": "america250-4th-of-july-celebration-2026-07-04-267f841a",
+        "summary": "America250 4th of July Celebration",
+        "date": "2026-07-04T19:00-05:00[America/Chicago]",
+        "url": "https://posthtx.com/event/america250-4th-of-july-celebration"
+      },
+      {
         "source": "post-houston",
         "eventId": "america250-foam-party-2026-07-03-3470b350",
         "summary": "America250 Foam Party",
@@ -2330,10 +2231,17 @@
       },
       {
         "source": "post-houston",
-        "eventId": "dj-night-mild-minds-2026-06-27-a61646de",
-        "summary": "DJ Night — Mild Minds",
-        "date": "2026-06-27T22:00-05:00[America/Chicago]",
-        "url": "https://posthtx.com/event/dj-night-mild-minds"
+        "eventId": "america250-foam-party-2026-07-04-2167722d",
+        "summary": "America250 Foam Party",
+        "date": "2026-07-04T11:00-05:00[America/Chicago]",
+        "url": "https://posthtx.com/event/america250-foam-party-2"
+      },
+      {
+        "source": "post-houston",
+        "eventId": "coffee-and-cars-4th-of-july-edition-2026-07-04-f807a673",
+        "summary": "Coffee and Cars — 4th of July Edition",
+        "date": "2026-07-04T09:00-05:00[America/Chicago]",
+        "url": "https://posthtx.com/event/coffee-and-cars-4th-of-july-edition"
       },
       {
         "source": "post-houston",
@@ -2344,13 +2252,6 @@
       },
       {
         "source": "post-houston",
-        "eventId": "eden-church-houston-sunday-service-2026-06-28-e00169ad",
-        "summary": "Eden Church Houston: Sunday Service",
-        "date": "2026-06-28T08:30-05:00[America/Chicago]",
-        "url": "https://posthtx.com/event/eden-church-houston-sunday-service"
-      },
-      {
-        "source": "post-houston",
         "eventId": "free-zumba-class-thursday-2026-07-02-73f9d564",
         "summary": "Free Zumba Class - Thursday",
         "date": "2026-07-02T18:30-05:00[America/Chicago]",
@@ -2358,10 +2259,10 @@
       },
       {
         "source": "post-houston",
-        "eventId": "future-retro-market-2026-06-28-4667a057",
-        "summary": "Future Retro Market",
-        "date": "2026-06-28T11:00-05:00[America/Chicago]",
-        "url": "https://posthtx.com/event/future-retro-market-2"
+        "eventId": "live-band-on-the-lawn-rapture-2026-07-04-02d3de79",
+        "summary": "Live Band On the Lawn — Rapture",
+        "date": "2026-07-04T19:00-05:00[America/Chicago]",
+        "url": "https://posthtx.com/event/live-band-on-the-lawn-rapture"
       },
       {
         "source": "post-houston",
@@ -2376,13 +2277,6 @@
         "summary": "Movie Night on the Lawn: Top Gun",
         "date": "2026-07-02T20:00-05:00[America/Chicago]",
         "url": "https://posthtx.com/event/movie-night-on-the-lawn-top-gun"
-      },
-      {
-        "source": "post-houston",
-        "eventId": "pride-drag-brunch-2026-06-28-dec3af84",
-        "summary": "Pride Drag Brunch",
-        "date": "2026-06-28T11:00-05:00[America/Chicago]",
-        "url": "https://posthtx.com/event/post-el-tiempo-drag-brunch"
       },
       {
         "source": "post-houston",
@@ -2565,69 +2459,6 @@
         "summary": "University Awards Ceremony and Reception 2027",
         "date": "2027-04-27T21:00Z",
         "url": "https://events.rice.edu/cte/event/university-awards-ceremony-and-reception-2027"
-      },
-      {
-        "source": "saint-arnold-brewing-company",
-        "eventId": "saints-sinners-2027-06-08-b4ad5406",
-        "summary": "Saints & Sinners",
-        "date": "2027-06-08T19:00-05:00[America/Chicago]",
-        "url": "https://www.saintarnold.com/saints-sinners/"
-      },
-      {
-        "source": "saint-arnold-brewing-company",
-        "eventId": "saints-sinners-2027-06-09-4ae3248f",
-        "summary": "Saints & Sinners",
-        "date": "2027-06-09T18:00-05:00[America/Chicago]",
-        "url": "https://www.saintarnold.com/saints-sinners/"
-      },
-      {
-        "source": "saint-arnold-brewing-company",
-        "eventId": "saints-sinners-2027-06-10-6e332816",
-        "summary": "Saints & Sinners",
-        "date": "2027-06-10T18:00-05:00[America/Chicago]",
-        "url": "https://www.saintarnold.com/saints-sinners/"
-      },
-      {
-        "source": "saint-arnold-brewing-company",
-        "eventId": "saints-sinners-2027-06-11-c7aef4f5",
-        "summary": "Saints & Sinners",
-        "date": "2027-06-11T17:00-05:00[America/Chicago]",
-        "url": "https://www.saintarnold.com/saints-sinners/"
-      },
-      {
-        "source": "saint-arnold-brewing-company",
-        "eventId": "saints-sinners-2027-06-12-6c350ece",
-        "summary": "Saints & Sinners",
-        "date": "2027-06-12T19:00-05:00[America/Chicago]",
-        "url": "https://www.saintarnold.com/saints-sinners/"
-      },
-      {
-        "source": "saint-arnold-brewing-company",
-        "eventId": "saints-sinners-2027-06-17-df69e5ff",
-        "summary": "Saints & Sinners",
-        "date": "2027-06-17T18:00-05:00[America/Chicago]",
-        "url": "https://www.saintarnold.com/saints-sinners/"
-      },
-      {
-        "source": "saint-arnold-brewing-company",
-        "eventId": "saints-sinners-2027-06-18-da986314",
-        "summary": "Saints & Sinners",
-        "date": "2027-06-18T17:00-05:00[America/Chicago]",
-        "url": "https://www.saintarnold.com/saints-sinners/"
-      },
-      {
-        "source": "saint-arnold-brewing-company",
-        "eventId": "saints-sinners-2027-06-24-3b7750e6",
-        "summary": "Saints & Sinners",
-        "date": "2027-06-24T17:00-05:00[America/Chicago]",
-        "url": "https://www.saintarnold.com/saints-sinners/"
-      },
-      {
-        "source": "saint-arnold-brewing-company",
-        "eventId": "saints-sinners-2027-06-25-0c154471",
-        "summary": "Saints & Sinners",
-        "date": "2027-06-25T20:00-05:00[America/Chicago]",
-        "url": "https://www.saintarnold.com/saints-sinners/"
       },
       {
         "source": "texas-parks-wildlife-houston",
@@ -3381,12 +3212,6 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
-        "eventId": "interpretive-center-open-8-30am-to-2-30pm-bastrop-state-park-2026-06-29",
-        "summary": "Interpretive Center Open 8:30am to 2:30pm - Bastrop State Park",
-        "date": "2026-06-29T08:30-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
         "eventId": "interpretive-center-open-8-30am-to-2-30pm-bastrop-state-park-2026-07-06",
         "summary": "Interpretive Center Open 8:30am to 2:30pm - Bastrop State Park",
         "date": "2026-07-06T08:30-05:00[America/Chicago]"
@@ -3426,6 +3251,12 @@
         "eventId": "interpretive-center-open-8-30am-to-2-30pm-bastrop-state-park-2026-08-31",
         "summary": "Interpretive Center Open 8:30am to 2:30pm - Bastrop State Park",
         "date": "2026-08-31T08:30-05:00[America/Chicago]"
+      },
+      {
+        "source": "texas-parks-wildlife-houston",
+        "eventId": "interpretive-center-open-8-30am-to-2-30pm-bastrop-state-park-2027-06-29",
+        "summary": "Interpretive Center Open 8:30am to 2:30pm - Bastrop State Park",
+        "date": "2027-06-29T08:30-05:00[America/Chicago]"
       },
       {
         "source": "texas-parks-wildlife-houston",
@@ -3940,9 +3771,9 @@
     ]
   },
   "costStats": {
-    "eventsWithCost": 583,
-    "freeEvents": 452,
-    "totalEvents": 1981,
+    "eventsWithCost": 580,
+    "freeEvents": 450,
+    "totalEvents": 1974,
     "unresolvable": 0
   },
   "costGaps": [
@@ -4920,6 +4751,13 @@
     },
     {
       "source": "heights-mercantile",
+      "eventId": "692471147d66491ba57a8967",
+      "summary": "Heights Mercantile Farmer's Market",
+      "date": "2026-08-09T09:00:00.498-05:00[America/Chicago]",
+      "url": "https://www.heightsmercantile.com/events/11/23-pdyxw-t2zznt3gny54b5-92afj-9m453-swwsz-5sme7-l7wx8-k8hsn-amc9r-h4k39-csyj8-nfcnh-4dr87-brxc7-jrkfr-6nlcc-np7p2-dj7fe"
+    },
+    {
+      "source": "heights-mercantile",
       "eventId": "694044fb1c284729ced9beee",
       "summary": "Heights Mercantile Farmer's Market",
       "date": "2026-07-12T09:00:00.662-05:00[America/Chicago]",
@@ -5529,6 +5367,13 @@
     },
     {
       "source": "houston-zoo",
+      "eventId": "celebrate-713-day-at-houston-zoo-2026-07-13-3bc0c481",
+      "summary": "Celebrate 713 Day at Houston Zoo",
+      "date": "2026-07-13T09:00-05:00[America/Chicago]",
+      "url": "https://www.houstonzoo.org/events/713-weekend/"
+    },
+    {
+      "source": "houston-zoo",
       "eventId": "july-member-morning-2026-07-04-35f2b57d",
       "summary": "July Member Morning",
       "date": "2026-07-04T08:00-05:00[America/Chicago]",
@@ -5613,6 +5458,13 @@
     },
     {
       "source": "htxoutdoors",
+      "eventId": "cancelled-dance-discovery-series-cumbia-2026-07-01",
+      "summary": "[Cancelled] Dance Discovery Series: Cumbia",
+      "date": "2026-07-01T18:15-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/dance-discovery-series-1/"
+    },
+    {
+      "source": "htxoutdoors",
       "eventId": "chile-multisport-adventure-info-meeting-2026-07-16",
       "summary": "Chile Multisport Adventure Info Meeting",
       "date": "2026-07-16T19:00-05:00[America/Chicago]",
@@ -5624,13 +5476,6 @@
       "summary": "Climbing at Momentum Katy",
       "date": "2026-07-21T19:30-05:00[America/Chicago]",
       "url": "https://htxoutdoors.com/events/climbing-at-momentum-katy-61/"
-    },
-    {
-      "source": "htxoutdoors",
-      "eventId": "dance-discovery-series-cumbia-2026-07-01",
-      "summary": "Dance Discovery Series: Cumbia",
-      "date": "2026-07-01T18:15-05:00[America/Chicago]",
-      "url": "https://htxoutdoors.com/events/dance-discovery-series-1/"
     },
     {
       "source": "htxoutdoors",
@@ -5687,13 +5532,6 @@
       "summary": "Evening Forest Hike",
       "date": "2026-08-26T19:00-05:00[America/Chicago]",
       "url": "https://htxoutdoors.com/events/evening-forest-hike-10/"
-    },
-    {
-      "source": "htxoutdoors",
-      "eventId": "full-moon-hike-2026-06-29",
-      "summary": "Full Moon Hike",
-      "date": "2026-06-29T19:50-05:00[America/Chicago]",
-      "url": "https://htxoutdoors.com/events/full-moon-hike-33/"
     },
     {
       "source": "htxoutdoors",
@@ -5872,13 +5710,6 @@
     },
     {
       "source": "lake-houston-brewery",
-      "eventId": "sunday-brunch-2026-06-28",
-      "summary": "Sunday Brunch!",
-      "date": "2026-06-28T11:00-05:00[America/Chicago]",
-      "url": "https://www.lakehoustonbrew.com/event-details/sunday-brunch-2026-06-28-11-00"
-    },
-    {
-      "source": "lake-houston-brewery",
       "eventId": "sunday-brunch-2026-07-05",
       "summary": "Sunday Brunch!",
       "date": "2026-07-05T11:00-05:00[America/Chicago]",
@@ -5995,6 +5826,13 @@
       "summary": "Sunday Brunch!",
       "date": "2026-10-25T11:00-05:00[America/Chicago]",
       "url": "https://www.lakehoustonbrew.com/event-details/sunday-brunch-2026-10-25-11-00"
+    },
+    {
+      "source": "lake-houston-brewery",
+      "eventId": "sunday-brunch-2026-11-01",
+      "summary": "Sunday Brunch!",
+      "date": "2026-11-01T11:00-06:00[America/Chicago]",
+      "url": "https://www.lakehoustonbrew.com/event-details/sunday-brunch-2026-11-01-11-00"
     },
     {
       "source": "lawndale-art-center",
@@ -6690,11 +6528,18 @@
       "url": "https://www.mcgonigels.com/shows/pauline-reese-libby-koch/"
     },
     {
-      "source": "murder-by-the-book",
-      "eventId": "christina-dodd-in-conversation-with-angelina-m-lopez-2026-06-30",
-      "summary": "Christina Dodd in conversation with Angelina M. Lopez",
-      "date": "2026-06-30T18:30-05:00[America/Chicago]",
-      "url": "https://www.murderbooks.com/Dodd"
+      "source": "mcgonigels-mucky-duck",
+      "eventId": "mcgonigels-32837",
+      "summary": "John Evans",
+      "date": "2026-08-21T18:00-05:00[America/Chicago]",
+      "url": "https://www.mcgonigels.com/shows/john-evans-early-show-22/"
+    },
+    {
+      "source": "post-houston",
+      "eventId": "america250-4th-of-july-celebration-2026-07-04-267f841a",
+      "summary": "America250 4th of July Celebration",
+      "date": "2026-07-04T19:00-05:00[America/Chicago]",
+      "url": "https://posthtx.com/event/america250-4th-of-july-celebration"
     },
     {
       "source": "post-houston",
@@ -6705,10 +6550,17 @@
     },
     {
       "source": "post-houston",
-      "eventId": "dj-night-mild-minds-2026-06-27-a61646de",
-      "summary": "DJ Night — Mild Minds",
-      "date": "2026-06-27T22:00-05:00[America/Chicago]",
-      "url": "https://posthtx.com/event/dj-night-mild-minds"
+      "eventId": "america250-foam-party-2026-07-04-2167722d",
+      "summary": "America250 Foam Party",
+      "date": "2026-07-04T11:00-05:00[America/Chicago]",
+      "url": "https://posthtx.com/event/america250-foam-party-2"
+    },
+    {
+      "source": "post-houston",
+      "eventId": "coffee-and-cars-4th-of-july-edition-2026-07-04-f807a673",
+      "summary": "Coffee and Cars — 4th of July Edition",
+      "date": "2026-07-04T09:00-05:00[America/Chicago]",
+      "url": "https://posthtx.com/event/coffee-and-cars-4th-of-july-edition"
     },
     {
       "source": "post-houston",
@@ -6719,13 +6571,6 @@
     },
     {
       "source": "post-houston",
-      "eventId": "eden-church-houston-sunday-service-2026-06-28-e00169ad",
-      "summary": "Eden Church Houston: Sunday Service",
-      "date": "2026-06-28T08:30-05:00[America/Chicago]",
-      "url": "https://posthtx.com/event/eden-church-houston-sunday-service"
-    },
-    {
-      "source": "post-houston",
       "eventId": "free-zumba-class-thursday-2026-07-02-73f9d564",
       "summary": "Free Zumba Class - Thursday",
       "date": "2026-07-02T18:30-05:00[America/Chicago]",
@@ -6733,10 +6578,10 @@
     },
     {
       "source": "post-houston",
-      "eventId": "future-retro-market-2026-06-28-4667a057",
-      "summary": "Future Retro Market",
-      "date": "2026-06-28T11:00-05:00[America/Chicago]",
-      "url": "https://posthtx.com/event/future-retro-market-2"
+      "eventId": "live-band-on-the-lawn-rapture-2026-07-04-02d3de79",
+      "summary": "Live Band On the Lawn — Rapture",
+      "date": "2026-07-04T19:00-05:00[America/Chicago]",
+      "url": "https://posthtx.com/event/live-band-on-the-lawn-rapture"
     },
     {
       "source": "post-houston",
@@ -6751,13 +6596,6 @@
       "summary": "Movie Night on the Lawn: Top Gun",
       "date": "2026-07-02T20:00-05:00[America/Chicago]",
       "url": "https://posthtx.com/event/movie-night-on-the-lawn-top-gun"
-    },
-    {
-      "source": "post-houston",
-      "eventId": "pride-drag-brunch-2026-06-28-dec3af84",
-      "summary": "Pride Drag Brunch",
-      "date": "2026-06-28T11:00-05:00[America/Chicago]",
-      "url": "https://posthtx.com/event/post-el-tiempo-drag-brunch"
     },
     {
       "source": "post-houston",
@@ -6786,13 +6624,6 @@
       "summary": "Jenny Tian: Ripe",
       "date": "2026-09-23T19:30-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/jenny-tian-ripe-houston-texas-09-23-2026/event/3A0064A91C4E8B4F"
-    },
-    {
-      "source": "punch-line-comedy-club",
-      "eventId": "tm-G5dIZ_10QmIKD",
-      "summary": "LeMaire Lee",
-      "date": "2026-09-02T19:30-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/lemaire-lee-houston-texas-09-02-2026/event/3A0064A91ABA84FB"
     },
     {
       "source": "punch-line-comedy-club",
@@ -7132,13 +6963,6 @@
     },
     {
       "source": "punch-line-comedy-club",
-      "eventId": "tm-G5dIZ_ANa5ySq",
-      "summary": "ALOK: Eat Pray Leave Tour",
-      "date": "2026-06-28T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/alok-eat-pray-leave-tour-houston-texas-06-28-2026/event/3A006458C92F9CDD"
-    },
-    {
-      "source": "punch-line-comedy-club",
       "eventId": "tm-G5dIZ_aON1RcJ",
       "summary": "Rocky Dale Davis",
       "date": "2026-09-26T19:00-05:00[America/Chicago]",
@@ -7348,11 +7172,11 @@
       "url": "https://www.ticketmaster.com/chinedu-houston-texas-09-27-2026/event/3A0064D4F6725A1D"
     },
     {
-      "source": "rice-public-events",
-      "eventId": "20260629T050000Z-428337",
-      "summary": "Masako Miki: Shapeshifters, Sprites, and Spirits",
-      "date": "2026-06-29T10:00-05:00[America/Chicago]",
-      "url": "https://events.rice.edu/event/428337-masako-miki-shapeshifters-sprites-and-spirits"
+      "source": "punch-line-comedy-club",
+      "eventId": "tm-G5dIZ_uU_rzEg",
+      "summary": "Jokes Over Brunch",
+      "date": "2026-08-09T14:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/jokes-over-brunch-houston-texas-08-09-2026/event/3A0064DD997B89F5"
     },
     {
       "source": "rice-public-events",
@@ -8088,69 +7912,6 @@
       "summary": "University Awards Ceremony and Reception 2027",
       "date": "2027-04-27T21:00Z",
       "url": "https://events.rice.edu/cte/event/university-awards-ceremony-and-reception-2027"
-    },
-    {
-      "source": "saint-arnold-brewing-company",
-      "eventId": "saints-sinners-2027-06-08-b4ad5406",
-      "summary": "Saints & Sinners",
-      "date": "2027-06-08T19:00-05:00[America/Chicago]",
-      "url": "https://www.saintarnold.com/saints-sinners/"
-    },
-    {
-      "source": "saint-arnold-brewing-company",
-      "eventId": "saints-sinners-2027-06-09-4ae3248f",
-      "summary": "Saints & Sinners",
-      "date": "2027-06-09T18:00-05:00[America/Chicago]",
-      "url": "https://www.saintarnold.com/saints-sinners/"
-    },
-    {
-      "source": "saint-arnold-brewing-company",
-      "eventId": "saints-sinners-2027-06-10-6e332816",
-      "summary": "Saints & Sinners",
-      "date": "2027-06-10T18:00-05:00[America/Chicago]",
-      "url": "https://www.saintarnold.com/saints-sinners/"
-    },
-    {
-      "source": "saint-arnold-brewing-company",
-      "eventId": "saints-sinners-2027-06-11-c7aef4f5",
-      "summary": "Saints & Sinners",
-      "date": "2027-06-11T17:00-05:00[America/Chicago]",
-      "url": "https://www.saintarnold.com/saints-sinners/"
-    },
-    {
-      "source": "saint-arnold-brewing-company",
-      "eventId": "saints-sinners-2027-06-12-6c350ece",
-      "summary": "Saints & Sinners",
-      "date": "2027-06-12T19:00-05:00[America/Chicago]",
-      "url": "https://www.saintarnold.com/saints-sinners/"
-    },
-    {
-      "source": "saint-arnold-brewing-company",
-      "eventId": "saints-sinners-2027-06-17-df69e5ff",
-      "summary": "Saints & Sinners",
-      "date": "2027-06-17T18:00-05:00[America/Chicago]",
-      "url": "https://www.saintarnold.com/saints-sinners/"
-    },
-    {
-      "source": "saint-arnold-brewing-company",
-      "eventId": "saints-sinners-2027-06-18-da986314",
-      "summary": "Saints & Sinners",
-      "date": "2027-06-18T17:00-05:00[America/Chicago]",
-      "url": "https://www.saintarnold.com/saints-sinners/"
-    },
-    {
-      "source": "saint-arnold-brewing-company",
-      "eventId": "saints-sinners-2027-06-24-3b7750e6",
-      "summary": "Saints & Sinners",
-      "date": "2027-06-24T17:00-05:00[America/Chicago]",
-      "url": "https://www.saintarnold.com/saints-sinners/"
-    },
-    {
-      "source": "saint-arnold-brewing-company",
-      "eventId": "saints-sinners-2027-06-25-0c154471",
-      "summary": "Saints & Sinners",
-      "date": "2027-06-25T20:00-05:00[America/Chicago]",
-      "url": "https://www.saintarnold.com/saints-sinners/"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -8904,12 +8665,6 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
-      "eventId": "interpretive-center-open-8-30am-to-2-30pm-bastrop-state-park-2026-06-29",
-      "summary": "Interpretive Center Open 8:30am to 2:30pm - Bastrop State Park",
-      "date": "2026-06-29T08:30-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
       "eventId": "interpretive-center-open-8-30am-to-2-30pm-bastrop-state-park-2026-07-06",
       "summary": "Interpretive Center Open 8:30am to 2:30pm - Bastrop State Park",
       "date": "2026-07-06T08:30-05:00[America/Chicago]"
@@ -8949,6 +8704,12 @@
       "eventId": "interpretive-center-open-8-30am-to-2-30pm-bastrop-state-park-2026-08-31",
       "summary": "Interpretive Center Open 8:30am to 2:30pm - Bastrop State Park",
       "date": "2026-08-31T08:30-05:00[America/Chicago]"
+    },
+    {
+      "source": "texas-parks-wildlife-houston",
+      "eventId": "interpretive-center-open-8-30am-to-2-30pm-bastrop-state-park-2027-06-29",
+      "summary": "Interpretive Center Open 8:30am to 2:30pm - Bastrop State Park",
+      "date": "2027-06-29T08:30-05:00[America/Chicago]"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -9903,13 +9664,6 @@
     },
     {
       "source": "white-oak-music-hall",
-      "eventId": "tm-G5dIZ_Ax65mnz",
-      "summary": "Perry Maysun : A Very Pathetic Tour",
-      "date": "2026-06-28T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/perry-maysun-a-very-pathetic-tour-houston-texas-06-28-2026/event/3A006458872EEAB8"
-    },
-    {
-      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_axRZ3Bz",
       "summary": "Electric Feels: Indie Rock + Electronic Dance Party",
       "date": "2026-07-25T21:00-05:00[America/Chicago]",
@@ -10142,9 +9896,9 @@
     {
       "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_uxraBGm",
-      "summary": " In The Attic, Whisk, Whitehaven",
+      "summary": "Lavi Bly, In The Attic, Whisk, Whitehaven",
       "date": "2026-08-21T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/in-the-attic-whisk-whitehaven-houston-texas-08-21-2026/event/3A0064D89E27A32E"
+      "url": "https://www.ticketmaster.com/lavi-bly-in-the-attic-whisk-houston-texas-08-21-2026/event/3A0064D89E27A32E"
     },
     {
       "source": "white-oak-music-hall",
@@ -10221,7 +9975,7 @@
     {
       "name": "central-market-cooking-school-central-market-cooking-school",
       "type": "Ripper",
-      "events": 71,
+      "events": 72,
       "expectEmpty": false,
       "source": "central-market-cooking-school"
     },
@@ -10270,7 +10024,7 @@
     {
       "name": "heights-mercantile-heights-mercantile",
       "type": "Ripper",
-      "events": 2,
+      "events": 3,
       "expectEmpty": false,
       "source": "heights-mercantile"
     },
@@ -10312,14 +10066,14 @@
     {
       "name": "houston-zoo-houston-zoo",
       "type": "Ripper",
-      "events": 9,
+      "events": 10,
       "expectEmpty": false,
       "source": "houston-zoo"
     },
     {
       "name": "htxoutdoors-htxoutdoors",
       "type": "Ripper",
-      "events": 41,
+      "events": 40,
       "expectEmpty": false,
       "source": "htxoutdoors"
     },
@@ -10354,7 +10108,7 @@
     {
       "name": "mcgonigels-mucky-duck-mcgonigels-mucky-duck",
       "type": "Ripper",
-      "events": 96,
+      "events": 97,
       "expectEmpty": false,
       "source": "mcgonigels-mucky-duck"
     },
@@ -10368,7 +10122,7 @@
     {
       "name": "murder-by-the-book-murder-by-the-book",
       "type": "Ripper",
-      "events": 1,
+      "events": 0,
       "expectEmpty": false,
       "source": "murder-by-the-book"
     },
@@ -10396,21 +10150,21 @@
     {
       "name": "punch-line-comedy-club-punch-line-comedy-club",
       "type": "Ripper",
-      "events": 83,
+      "events": 82,
       "expectEmpty": false,
       "source": "punch-line-comedy-club"
     },
     {
       "name": "rice-public-events-rice-public-events",
       "type": "Ripper",
-      "events": 106,
+      "events": 105,
       "expectEmpty": false,
       "source": "rice-public-events"
     },
     {
       "name": "saint-arnold-brewing-company-saint-arnold-brewing-company",
       "type": "Ripper",
-      "events": 9,
+      "events": 0,
       "expectEmpty": false,
       "source": "saint-arnold-brewing-company"
     },
@@ -10459,14 +10213,14 @@
     {
       "name": "the-secret-group-the-secret-group",
       "type": "Ripper",
-      "events": 95,
+      "events": 91,
       "expectEmpty": false,
       "source": "the-secret-group"
     },
     {
       "name": "white-oak-music-hall-white-oak-music-hall",
       "type": "Ripper",
-      "events": 78,
+      "events": 77,
       "expectEmpty": false,
       "source": "white-oak-music-hall"
     },
@@ -10480,14 +10234,14 @@
     {
       "name": "tag-the-heights",
       "type": "Aggregate",
-      "events": 69,
+      "events": 79,
       "expectEmpty": false,
       "source": "tag-the-heights"
     },
     {
       "name": "tag-upper-kirby",
       "type": "Aggregate",
-      "events": 101,
+      "events": 100,
       "expectEmpty": false,
       "source": "tag-upper-kirby"
     },
@@ -10501,21 +10255,21 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 670,
+      "events": 669,
       "expectEmpty": false,
       "source": "tag-music"
     },
     {
       "name": "tag-nightlife",
       "type": "Aggregate",
-      "events": 46,
+      "events": 37,
       "expectEmpty": false,
       "source": "tag-nightlife"
     },
     {
       "name": "tag-downtown",
       "type": "Aggregate",
-      "events": 272,
+      "events": 271,
       "expectEmpty": false,
       "source": "tag-downtown"
     },
@@ -10529,14 +10283,14 @@
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 560,
+      "events": 558,
       "expectEmpty": false,
       "source": "tag-community"
     },
     {
       "name": "tag-montrose",
       "type": "Aggregate",
-      "events": 378,
+      "events": 368,
       "expectEmpty": false,
       "source": "tag-montrose"
     },
@@ -10550,7 +10304,7 @@
     {
       "name": "tag-eado",
       "type": "Aggregate",
-      "events": 147,
+      "events": 143,
       "expectEmpty": false,
       "source": "tag-eado"
     },
@@ -10564,28 +10318,28 @@
     {
       "name": "tag-art",
       "type": "Aggregate",
-      "events": 513,
+      "events": 512,
       "expectEmpty": false,
       "source": "tag-art"
     },
     {
       "name": "tag-museum-district",
       "type": "Aggregate",
-      "events": 141,
+      "events": 142,
       "expectEmpty": false,
       "source": "tag-museum-district"
     },
     {
       "name": "tag-culinary",
       "type": "Aggregate",
-      "events": 71,
+      "events": 72,
       "expectEmpty": false,
       "source": "tag-culinary"
     },
     {
       "name": "tag-workshops",
       "type": "Aggregate",
-      "events": 71,
+      "events": 72,
       "expectEmpty": false,
       "source": "tag-workshops"
     },
@@ -10599,7 +10353,7 @@
     {
       "name": "tag-uptown",
       "type": "Aggregate",
-      "events": 71,
+      "events": 72,
       "expectEmpty": false,
       "source": "tag-uptown"
     },
@@ -10683,7 +10437,7 @@
     {
       "name": "tag-comedy",
       "type": "Aggregate",
-      "events": 200,
+      "events": 195,
       "expectEmpty": false,
       "source": "tag-comedy"
     },
@@ -10697,42 +10451,42 @@
     {
       "name": "tag-animals",
       "type": "Aggregate",
-      "events": 9,
+      "events": 10,
       "expectEmpty": false,
       "source": "tag-animals"
     },
     {
       "name": "tag-family",
       "type": "Aggregate",
-      "events": 19,
+      "events": 20,
       "expectEmpty": false,
       "source": "tag-family"
     },
     {
       "name": "tag-parks",
       "type": "Aggregate",
-      "events": 269,
+      "events": 268,
       "expectEmpty": false,
       "source": "tag-parks"
     },
     {
       "name": "tag-outdoor-recreation",
       "type": "Aggregate",
-      "events": 263,
+      "events": 260,
       "expectEmpty": false,
       "source": "tag-outdoor-recreation"
     },
     {
       "name": "tag-hiking",
       "type": "Aggregate",
-      "events": 41,
+      "events": 40,
       "expectEmpty": false,
       "source": "tag-hiking"
     },
     {
       "name": "tag-sports",
       "type": "Aggregate",
-      "events": 41,
+      "events": 40,
       "expectEmpty": false,
       "source": "tag-sports"
     },
@@ -10746,14 +10500,14 @@
     {
       "name": "tag-beer",
       "type": "Aggregate",
-      "events": 57,
+      "events": 58,
       "expectEmpty": false,
       "source": "tag-beer"
     },
     {
       "name": "tag-near-northside",
       "type": "Aggregate",
-      "events": 126,
+      "events": 125,
       "expectEmpty": false,
       "source": "tag-near-northside"
     },
@@ -10774,14 +10528,14 @@
     {
       "name": "tag-west-university",
       "type": "Aggregate",
-      "events": 1,
+      "events": 0,
       "expectEmpty": false,
       "source": "tag-west-university"
     },
     {
       "name": "tag-entertainment",
       "type": "Aggregate",
-      "events": 83,
+      "events": 82,
       "expectEmpty": false,
       "source": "tag-entertainment"
     },
@@ -10851,7 +10605,7 @@
     {
       "name": "tag-makersmarket",
       "type": "Aggregate",
-      "events": 30,
+      "events": 29,
       "expectEmpty": false,
       "source": "tag-makersmarket"
     },
@@ -10879,14 +10633,14 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 2057,
+      "events": 2050,
       "expectEmpty": false,
       "source": "tag-all"
     },
     {
       "name": "external-axelrad-beer-garden",
       "type": "External",
-      "events": 5028,
+      "events": 5030,
       "expectEmpty": false,
       "source": "axelrad-beer-garden"
     },
@@ -10903,6 +10657,13 @@
       "events": 4,
       "expectEmpty": false,
       "source": "diverseworks"
+    },
+    {
+      "name": "external-eureka-heights-brew-co",
+      "type": "External",
+      "events": 10,
+      "expectEmpty": false,
+      "source": "eureka-heights-brew-co"
     },
     {
       "name": "external-hermann-park",
@@ -10949,7 +10710,7 @@
     {
       "name": "external-inprint-houston",
       "type": "External",
-      "events": 6,
+      "events": 7,
       "expectEmpty": false,
       "source": "inprint-houston"
     },
@@ -10963,7 +10724,7 @@
     {
       "name": "external-levy-park-houston",
       "type": "External",
-      "events": 5,
+      "events": 3,
       "expectEmpty": false,
       "source": "levy-park-houston"
     },
@@ -10973,13 +10734,6 @@
       "events": 7,
       "expectEmpty": false,
       "source": "tuts"
-    },
-    {
-      "name": "external-walking-stick-brewing",
-      "type": "External",
-      "events": 0,
-      "expectEmpty": false,
-      "source": "walking-stick-brewing"
     }
   ]
 }

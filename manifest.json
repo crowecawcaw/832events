@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T14:45:11.935Z",
+  "lastUpdated": "2026-06-30T02:57:35.647Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -363,23 +363,6 @@
       ]
     },
     {
-      "name": "murder-by-the-book",
-      "description": "Murder By The Book",
-      "friendlyLink": "https://www.murderbooks.com/events",
-      "calendars": [
-        {
-          "name": "murder-by-the-book",
-          "friendlyName": "Murder By The Book",
-          "icsUrl": "murder-by-the-book-murder-by-the-book.ics",
-          "rssUrl": "murder-by-the-book-murder-by-the-book.rss",
-          "tags": [
-            "Books",
-            "West University"
-          ]
-        }
-      ]
-    },
-    {
       "name": "post-houston",
       "description": "POST Houston",
       "friendlyLink": "https://posthtx.com/event",
@@ -449,24 +432,6 @@
             "Education",
             "Art",
             "Museum District"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "saint-arnold-brewing-company",
-      "description": "Saint Arnold Brewing Company",
-      "friendlyLink": "https://www.saintarnold.com/happenings/",
-      "calendars": [
-        {
-          "name": "saint-arnold-brewing-company",
-          "friendlyName": "Saint Arnold Brewing Company",
-          "icsUrl": "saint-arnold-brewing-company-saint-arnold-brewing-company.ics",
-          "rssUrl": "saint-arnold-brewing-company-saint-arnold-brewing-company.rss",
-          "tags": [
-            "Beer",
-            "Nightlife",
-            "Montrose"
           ]
         }
       ]
@@ -632,6 +597,16 @@
       ]
     },
     {
+      "name": "eureka-heights-brew-co",
+      "friendlyName": "Eureka Heights Brewery",
+      "icsUrl": "external-eureka-heights-brew-co.ics",
+      "originalIcsUrl": "https://www.eurekaheights.com/?post_type=tribe_events&ical=1&eventDisplay=list",
+      "tags": [
+        "Beer",
+        "The Heights"
+      ]
+    },
+    {
       "name": "hermann-park",
       "friendlyName": "Hermann Park Conservancy",
       "description": "Hermann Park Conservancy",
@@ -791,7 +766,6 @@
     "Upper Kirby",
     "Uptown",
     "Wedgewood",
-    "West University",
     "Workshops"
   ]
 }

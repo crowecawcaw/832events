@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-29T14:45:16.537Z",
+  "generated": "2026-06-30T02:57:40.196Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -355,6 +355,40 @@
             },
             "rss": {
               "href": "docs-houston-docs-houston.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "eureka-heights-brew-co",
+      "friendlyName": "Eureka Heights Brewery",
+      "description": "Eureka Heights Brewery",
+      "tags": [
+        "Beer",
+        "The Heights"
+      ],
+      "geo": {
+        "lat": 29.7823,
+        "lng": -95.4181,
+        "label": "Eureka Heights Brewery, 2454 Sawyer St, Houston, TX 77007"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Eureka%20Heights%20Brewery%2C%202454%20Sawyer%20St%2C%20Houston%2C%20TX%2077007"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "eureka-heights-brew-co",
+          "friendlyName": "Eureka Heights Brewery",
+          "links": {
+            "ics": {
+              "href": "external-eureka-heights-brew-co.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-eureka-heights-brew-co.rss",
               "type": "application/rss+xml"
             }
           }
@@ -1004,41 +1038,6 @@
       ]
     },
     {
-      "name": "murder-by-the-book",
-      "friendlyName": "Murder By The Book",
-      "description": "Murder By The Book",
-      "url": "https://www.murderbooks.com/events",
-      "tags": [
-        "Books",
-        "West University"
-      ],
-      "geo": {
-        "lat": 29.7255,
-        "lng": -95.4175,
-        "label": "Murder By The Book, 2342 Bissonnet St, Houston, TX 77005"
-      },
-      "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=Murder%20By%20The%20Book%2C%202342%20Bissonnet%20St%2C%20Houston%2C%20TX%2077005"
-      },
-      "kind": "ripper",
-      "calendars": [
-        {
-          "name": "murder-by-the-book",
-          "friendlyName": "Murder By The Book",
-          "links": {
-            "ics": {
-              "href": "murder-by-the-book-murder-by-the-book.ics",
-              "type": "text/calendar"
-            },
-            "rss": {
-              "href": "murder-by-the-book-murder-by-the-book.rss",
-              "type": "application/rss+xml"
-            }
-          }
-        }
-      ]
-    },
-    {
       "name": "post-houston",
       "friendlyName": "POST Houston",
       "description": "POST Houston",
@@ -1213,42 +1212,6 @@
             },
             "rss": {
               "href": "recurring-rice-village-farmers-market.rss",
-              "type": "application/rss+xml"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "name": "saint-arnold-brewing-company",
-      "friendlyName": "Saint Arnold Brewing Company",
-      "description": "Saint Arnold Brewing Company",
-      "url": "https://www.saintarnold.com/happenings/",
-      "tags": [
-        "Beer",
-        "Nightlife",
-        "Montrose"
-      ],
-      "geo": {
-        "lat": 29.7809,
-        "lng": -95.32,
-        "label": "Saint Arnold Brewing Company, 2000 Lyons Ave, Houston, TX 77020"
-      },
-      "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=Saint%20Arnold%20Brewing%20Company%2C%202000%20Lyons%20Ave%2C%20Houston%2C%20TX%2077020"
-      },
-      "kind": "ripper",
-      "calendars": [
-        {
-          "name": "saint-arnold-brewing-company",
-          "friendlyName": "Saint Arnold Brewing Company",
-          "links": {
-            "ics": {
-              "href": "saint-arnold-brewing-company-saint-arnold-brewing-company.ics",
-              "type": "text/calendar"
-            },
-            "rss": {
-              "href": "saint-arnold-brewing-company-saint-arnold-brewing-company.rss",
               "type": "application/rss+xml"
             }
           }
