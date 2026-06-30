@@ -157,6 +157,11 @@ export function App832(props) {
     toastT.current = setTimeout(() => setToast(null), 2200)
   }, [])
 
+  // Cancel any pending toast-dismiss timer on unmount so it can't fire
+  // setToast() after the component is gone (which throws "window is not
+  // defined" during test teardown and leaks a timer in the browser).
+  useEffect(() => () => clearTimeout(toastT.current), [])
+
   /* ---- venue lookup: icsUrl -> venue (presence ⇒ fixed-location calendar) ---- */
   const venueByIcsUrl = useMemo(() => {
     const map = new Map()
