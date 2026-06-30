@@ -1,0 +1,76 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Levy Park - ECPv6.16.3//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Levy Park
+X-ORIGINAL-URL:https://www.levyparkhouston.org
+X-WR-CALDESC:Events for Levy Park
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-Robots-Tag:noindex
+X-PUBLISHED-TTL:PT1H
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20250309T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20251102T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20260308T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20261101T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20270314T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20271107T070000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260611
+DTEND;VALUE=DATE:20260720
+DTSTAMP:20260630T084431
+CREATED:20260514T213012Z
+LAST-MODIFIED:20260616T223718Z
+UID:10017625-1781136000-1784505599@www.levyparkhouston.org
+SUMMARY:Summer Soccer Celebration
+DESCRIPTION:In celebration of the world’s greatest soccer tournament playing out in Houston and cities across North America\, Levy Park is getting into the festivities with free game watch parties. This series of 15 curated\, family-friendly watch parties offers a central gathering place for fùtbol fans to catch some of the tournament’s most anticipated games\, including key matchups featuring the United States and Mexico\, as well as pivotal knockout rounds. Each free viewing event will feature a large-scale outdoor LED screen with professional sound\, entertainment\, food and beverage concessions\, and merchandise sales. \nCommunity Partners: Further enhancing programming\, Levy Park will partner with local organizations to broaden community engagement\, including collaborations with cultural groups and soccer-focused nonprofits. Levy Park is seeking enthusiastic volunteers and community partner organizations to help bring this festival to life. Volunteers will work directly alongside our event team\, supporting booth operations and helping ensure every guest has an unforgettable experience. Email us to learn more about volunteer opportunities. \nFood and Beverage Concessions: Enjoy a variety of festival food fare\, beer and wine\, and non-alcoholic beverages from Coca-Cola. Visit Smalls Sliders for burgers\, fries\, and shakes and cool down with Frios Gourmet Pops. Stop by Hearsay’s festival tent for a cold beer or beer bucket or grab a michelada\, wine\, or beer from Gaspacho’s festival tent. Non-alcoholic drinks from Coca-Cola as well as pre-packaged snacks can be purchased at the Community Partner Concessions Booth\, proceeds benefiting Levy Park and the event’s community partners. \nFace Painting & Henna Art: Get into the tournament spirit with face and body art! \nMerchandise: Event merchandise celebrating Houston\, Levy Park\, and the global soccer tournament will also be available for purchase. \nArt Installations and Photo Opportunities: Commemorate the experience with a photo tour of the park\, including life-sized soccer-themed photo backdrops and a tournament bracket. Visit our soccer ball music box and turn the crank for festive sounds. \nFestival Guidelines: \nVISITORS MUST COMPLY WITH DIRECTIONS FROM PARK PERSONNEL\, OR THEY WILL BE ASKED TO LEAVE THE PARK. PARENTS ARE RESPONSIBLE FOR THEIR CHILDREN’S SAFETY IN THE PARK. \nCHAIRS AND SEATING: No outside furniture. Blankets may be brought into the Festival site for the designated blanket seating area. All other furniture is available on a first-come\, first-served basis. \nSTROLLERS & WAGONS: Oversized strollers and wagons may need to be parked in a designated area during the festival. All visitors must comply with park personnel regarding stroller and wagon parking. \nFOOD AND BEVERAGES: Guests are permitted to enter with one factory-sealed bottle of water. While outside food and drinks are prohibited\, exceptions will be made for baby food and necessary medical dietary food items. A variety of food\, non-alcoholic drinks\, beer\, and wine is available for purchase from Festival concessionaires. \nRE-ENTRY: If you leave the Festival site\, you will be re-screened before re-entry. \nTHE FOLLOWING ARE PROHIBITED: \n\nSmoking or Vaping\nUmbrellas\nDrug Use\nKites and Drones\nRecreational Motorized Vehicles\nGuns\, knives\, any weaponry\nSoliciting\nBikes\, scooters\, rollerblades\, and roller skates\n\nGroup Stage Festival Schedule: \nThursday\, June 11 from 12:30 p.m. to 5:30 p.m. – Mexico vs South Africa (2:00 p.m. Kick Off) \nFriday\, June 12 from 6:30 p.m. to 11:00 p.m. – USA vs Paraguay (8:00 p.m. Kick Off) \nThursday\, June 18 from 6:30 p.m. to 11:00 p.m. – Mexico vs South Korea (8:00 p.m. Kick Off) \nFriday\, June 19 from 12:30 p.m. to 5:30 p.m. – USA vs Australia (2:00 p.m. Kick Off) \nWednesday\, June 24 from 6:30 p.m. to 11:00 p.m. – Czechia vs Mexico (8:00 p.m. Kick Off) \nRound of 32 Festival Schedule: \nSunday\, June 28 from 12:30 p.m. to 5:30 p.m. – 2A vs 2B (2:00 p.m. Kick Off) \nWednesday\, July 1 from 5:30 p.m. to 10:30 p.m. – 1D vs 3BEFIJ (7:00 p.m. Kick Off) \nRound of 16 Festival Schedule: \nMonday\, July 6 from 5:30 p.m. to 10:30 p.m. – W81 vs W82 (7:00 p.m. Kick Off) \nQuarter-Finals Festival Schedule: \nThursday\, July 9 from 1:30 p.m. to 6:30 p.m. – W89 vs W90 (3:00 p.m. Kick Off) \nFriday\, July 10 from 12:30 p.m. to 5:30 p.m. – W93 vs W94 (2:00 p.m. Kick Off) \nSaturday\, July 11 from 2:30 p.m. to 11:00 p.m. – W91 vs W92 (4:00 p.m. Kick Off) & W95 vs W96 (8:00 p.m. Kick Off) \nSemi-Finals Festival Schedule: \nTuesday\, July 14 from 12:30 p.m. to 5:30 p.m. – W97 vs W98 (2:00 p.m. Kick Off) \nWednesday\, July 15 from 12:30 p.m. to 5:30 p.m. – W99 vs W100 (2:00 p.m. Kick Off) \nFinals Festival Schedule: \nSaturday\, July 18 from 2:00 p.m. to 8:00 p.m. – Bronze Final (4:00 p.m. Kick Off) \nSunday\, July 19 from 12:00 p.m. to 6:00 p.m. – Final (2:00 p.m. Kick Off)
+URL:https://www.levyparkhouston.org/events/summer-soccer-celebration/
+ATTACH;FMTTYPE=image/png:https://www.levyparkhouston.org/wp-content/uploads/2026/05/Event-Lawn-with-Screen-scaled.png
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260630T100000
+DTEND;TZID=America/Chicago:20260630T223000
+DTSTAMP:20260630T084431
+CREATED:20240314T154749Z
+LAST-MODIFIED:20241211T211741Z
+UID:10007938-1782813600-1782858600@www.levyparkhouston.org
+SUMMARY:Family Storytime & Craft
+DESCRIPTION:Join us for a cross-generational literacy experience! Family Storytime features a story followed by a craft that accompanies the reading. All craft supplies are included as a part of this free program.
+URL:https://www.levyparkhouston.org/events/family-storytime-craft-3/2026-06-30/
+LOCATION:Levy Park (Event Pavilion)\, TX
+ATTACH;FMTTYPE=image/jpeg:https://www.levyparkhouston.org/wp-content/uploads/2024/03/R7407885.jpg
+END:VEVENT
+END:VCALENDAR
