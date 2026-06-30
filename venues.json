@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-30T13:45:07.812Z",
+  "generated": "2026-06-30T13:47:00.300Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -1319,6 +1319,42 @@
             },
             "rss": {
               "href": "shrine-of-the-black-madonna-shrine-of-the-black-madonna.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "heritage-society",
+      "friendlyName": "The Heritage Society",
+      "description": "The Heritage Society",
+      "url": "https://www.heritagesociety.org/calendar",
+      "tags": [
+        "History",
+        "Community",
+        "Downtown"
+      ],
+      "geo": {
+        "lat": 29.760728,
+        "lng": -95.372803,
+        "label": "The Heritage Society, 1100 Bagby Street, Houston, TX 77002"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=The%20Heritage%20Society%2C%201100%20Bagby%20Street%2C%20Houston%2C%20TX%2077002"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "heritage-society",
+          "friendlyName": "The Heritage Society",
+          "links": {
+            "ics": {
+              "href": "heritage-society-heritage-society.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "heritage-society-heritage-society.rss",
               "type": "application/rss+xml"
             }
           }

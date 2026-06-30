@@ -1,5 +1,5 @@
 {
-  "buildTime": "2026-06-30T13:45:07.818Z",
+  "buildTime": "2026-06-30T13:47:00.307Z",
   "totalErrors": 8,
   "configErrors": [],
   "sources": [
@@ -144,8 +144,8 @@
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 2005,
-    "eventsWithGeo": 1722,
+    "totalEvents": 2007,
+    "eventsWithGeo": 1724,
     "eventsWithoutGeo": 283,
     "geocodeErrors": 0
   },
@@ -310,6 +310,13 @@
       "label": "The Heights Theater, 339 W 19th St, Houston, TX 77008",
       "lat": 29.8027,
       "lng": -95.411
+    },
+    {
+      "source": "ripper",
+      "name": "heritage-society",
+      "label": "The Heritage Society, 1100 Bagby Street, Houston, TX 77002",
+      "lat": 29.760728,
+      "lng": -95.372803
     },
     {
       "source": "external",
@@ -579,10 +586,10 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1184,
-    "totalEvents": 2005,
+    "eventsWithImage": 1186,
+    "totalEvents": 2007,
     "venuesWithImage": 0,
-    "totalVenues": 43,
+    "totalVenues": 44,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -676,6 +683,13 @@
         "label": "Heights Mercantile Farmers Market, 714 Yale Street, Houston, TX 77007",
         "url": "https://www.heightsmercantile.com/events",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Heights%20Mercantile%20Farmers%20Market%2C%20714%20Yale%20Street%2C%20Houston%2C%20TX%2077007"
+      },
+      {
+        "source": "ripper",
+        "name": "heritage-society",
+        "label": "The Heritage Society, 1100 Bagby Street, Houston, TX 77002",
+        "url": "https://www.heritagesociety.org/calendar",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=The%20Heritage%20Society%2C%201100%20Bagby%20Street%2C%20Houston%2C%20TX%2077002"
       },
       {
         "source": "external",
@@ -3989,7 +4003,7 @@
   "costStats": {
     "eventsWithCost": 580,
     "freeEvents": 450,
-    "totalEvents": 2005,
+    "totalEvents": 2007,
     "unresolvable": 0
   },
   "costGaps": [
@@ -4978,6 +4992,20 @@
       "summary": "Heights Mercantile Farmer's Market",
       "date": "2026-07-12T09:00:00.662-05:00[America/Chicago]",
       "url": "https://www.heightsmercantile.com/events/11/23-pdyxw-t2zznt3gny54b5-92afj-9m453-swwsz-5sme7-l7wx8-k8hsn-amc9r-h4k39-csyj8-nfcnh-4dr87-brxc7-jrkfr-6nlcc-np7p2-dj7fe-487bc"
+    },
+    {
+      "source": "heritage-society",
+      "eventId": "6a209c027b8195500ed42097",
+      "summary": "Patriot Day - Free Family Event",
+      "date": "2026-07-01T10:00:00.812-05:00[America/Chicago]",
+      "url": "https://www.heritagesociety.org/calendar/2026/7/1/patriot-day-free-family-event"
+    },
+    {
+      "source": "heritage-society",
+      "eventId": "6a3b0f60d76f5b6ad49c5e75",
+      "summary": "Children's Story Telling in the General Store with Author Deb Evans ",
+      "date": "2026-07-11T10:00:00.531-05:00[America/Chicago]",
+      "url": "https://www.heritagesociety.org/calendar/2026/6/27/childrens-story-telling-in-the-general-store-with-deb-evans-995n5"
     },
     {
       "source": "house-of-blues-houston",
@@ -10476,6 +10504,13 @@
       "source": "heights-theater"
     },
     {
+      "name": "heritage-society-heritage-society",
+      "type": "Ripper",
+      "events": 2,
+      "expectEmpty": false,
+      "source": "heritage-society"
+    },
+    {
       "name": "house-of-blues-houston-house-of-blues-houston",
       "type": "Ripper",
       "events": 41,
@@ -10716,7 +10751,7 @@
     {
       "name": "tag-downtown",
       "type": "Aggregate",
-      "events": 271,
+      "events": 273,
       "expectEmpty": false,
       "source": "tag-downtown"
     },
@@ -10730,7 +10765,7 @@
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 558,
+      "events": 560,
       "expectEmpty": false,
       "source": "tag-community"
     },
@@ -10866,6 +10901,13 @@
       "events": 31,
       "expectEmpty": false,
       "source": "tag-books"
+    },
+    {
+      "name": "tag-history",
+      "type": "Aggregate",
+      "events": 2,
+      "expectEmpty": false,
+      "source": "tag-history"
     },
     {
       "name": "tag-photography",
@@ -11080,7 +11122,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 2081,
+      "events": 2083,
       "expectEmpty": false,
       "source": "tag-all"
     },

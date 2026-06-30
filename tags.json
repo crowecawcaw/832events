@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-30T13:45:07.822Z",
+  "generated": "2026-06-30T13:47:00.310Z",
   "tags": [
     {
       "name": "Animals",
@@ -124,8 +124,8 @@
       "name": "Community",
       "slug": "community",
       "category": "Community",
-      "eventCount": 558,
-      "calendarCount": 11,
+      "eventCount": 560,
+      "calendarCount": 12,
       "links": {
         "ics": {
           "href": "tag-community.ics",
@@ -192,8 +192,8 @@
       "name": "Downtown",
       "slug": "downtown",
       "category": "Neighborhoods",
-      "eventCount": 271,
-      "calendarCount": 7,
+      "eventCount": 273,
+      "calendarCount": 8,
       "links": {
         "ics": {
           "href": "tag-downtown.ics",
@@ -354,6 +354,23 @@
         },
         "rss": {
           "href": "tag-hiking.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "History",
+      "slug": "history",
+      "category": "Other",
+      "eventCount": 2,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-history.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-history.rss",
           "type": "application/rss+xml"
         }
       }

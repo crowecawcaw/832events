@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T13:45:03.079Z",
+  "lastUpdated": "2026-06-30T13:46:55.402Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -180,6 +180,24 @@
             "FarmersMarket",
             "Community",
             "The Heights"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "heritage-society",
+      "description": "The Heritage Society",
+      "friendlyLink": "https://www.heritagesociety.org/calendar",
+      "calendars": [
+        {
+          "name": "heritage-society",
+          "friendlyName": "The Heritage Society",
+          "icsUrl": "heritage-society-heritage-society.ics",
+          "rssUrl": "heritage-society-heritage-society.rss",
+          "tags": [
+            "History",
+            "Community",
+            "Downtown"
           ]
         }
       ]
@@ -773,6 +791,7 @@
     "FoodFestival",
     "Hermann Park",
     "Hiking",
+    "History",
     "Jazz",
     "MakersMarket",
     "Memorial",
