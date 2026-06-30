@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-06-30T02:57:40.202Z",
-  "totalErrors": 9,
+  "buildTime": "2026-06-30T13:43:58.507Z",
+  "totalErrors": 8,
   "configErrors": [],
   "sources": [
     {
@@ -45,21 +45,6 @@
           "type": "ParseError",
           "reason": "Failed to fetch AXS events for venue 130678: Error: AXS fetch error: HTTP 403 for https://www.axs.com/venues/130678/houston-improv-houston-tickets",
           "context": "venueSlug: houston-improv-houston-tickets"
-        }
-      ]
-    },
-    {
-      "source": "murder-by-the-book",
-      "calendar": "murder-by-the-book",
-      "type": "Ripper",
-      "errorCount": 1,
-      "parseErrorCount": 1,
-      "uncertaintyCount": 0,
-      "errors": [
-        {
-          "type": "ParseError",
-          "reason": "Ripper crashed: Error: Murder By The Book fetch failed: HTTP 403 ",
-          "context": ""
         }
       ]
     },
@@ -155,18 +140,12 @@
       "friendlyName": "Hobby Center for the Performing Arts",
       "url": "https://www.thehobbycenter.org/?post_type=tribe_events&ical=1&eventDisplay=list",
       "error": "Error: HTTP 403: "
-    },
-    {
-      "name": "walking-stick-brewing",
-      "friendlyName": "Walking Stick Brewing",
-      "url": "https://walkingstickbrewing.com/?post_type=tribe_events&ical=1&eventDisplay=list",
-      "error": "Error: HTTP 403: "
     }
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1974,
-    "eventsWithGeo": 1691,
+    "totalEvents": 2005,
+    "eventsWithGeo": 1722,
     "eventsWithoutGeo": 283,
     "geocodeErrors": 0
   },
@@ -181,17 +160,16 @@
     "heights-theater-heights-theater",
     "houston-improv-houston-improv",
     "mossrose-bookshop-mossrose-bookshop",
-    "murder-by-the-book-murder-by-the-book",
     "pride-houston-pride-houston",
     "saint-arnold-brewing-company-saint-arnold-brewing-company",
     "scout-bar-scout-bar",
     "stereo-live-houston-stereo-live-houston",
     "tag-folk",
     "tag-spring-branch",
-    "tag-west-university",
     "tag-cinema",
     "tag-garden-oaks",
-    "external-houston-cinema-arts-society"
+    "external-houston-cinema-arts-society",
+    "external-walking-stick-brewing"
   ],
   "expectedEmptyCalendars": [],
   "proxyStaleServes": [],
@@ -524,6 +502,13 @@
     },
     {
       "source": "ripper",
+      "name": "sawyer-yards",
+      "label": "Sawyer Yards, 2101 Winter Street, Houston, TX 77007",
+      "lat": 29.7698,
+      "lng": -95.3839
+    },
+    {
+      "source": "ripper",
       "name": "scout-bar",
       "label": "Scout Bar, 18307 Egret Bay Blvd, Houston, TX 77058",
       "lat": 29.5699,
@@ -594,10 +579,10 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1183,
-    "totalEvents": 1974,
+    "eventsWithImage": 1184,
+    "totalEvents": 2005,
     "venuesWithImage": 0,
-    "totalVenues": 41,
+    "totalVenues": 43,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -803,6 +788,13 @@
       },
       {
         "source": "ripper",
+        "name": "murder-by-the-book",
+        "label": "Murder By The Book, 2342 Bissonnet St, Houston, TX 77005",
+        "url": "https://www.murderbooks.com/events",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Murder%20By%20The%20Book%2C%202342%20Bissonnet%20St%2C%20Houston%2C%20TX%2077005"
+      },
+      {
+        "source": "ripper",
         "name": "post-houston",
         "label": "POST Houston, 510 Main St, Houston, TX 77002",
         "url": "https://posthtx.com/event",
@@ -835,6 +827,13 @@
         "label": "Rice Village Farmers Market, Rice Village, Houston, TX 77005",
         "url": "https://www.ricevillagehouston.com/",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Rice%20Village%20Farmers%20Market%2C%20Rice%20Village%2C%20Houston%2C%20TX%2077005"
+      },
+      {
+        "source": "ripper",
+        "name": "sawyer-yards",
+        "label": "Sawyer Yards, 2101 Winter Street, Houston, TX 77007",
+        "url": "https://www.sawyeryards.com/",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sawyer%20Yards%2C%202101%20Winter%20Street%2C%20Houston%2C%20TX%2077007"
       },
       {
         "source": "ripper",
@@ -1916,8 +1915,8 @@
       },
       {
         "source": "htxoutdoors",
-        "eventId": "cancelled-dance-discovery-series-cumbia-2026-07-01",
-        "summary": "[Cancelled] Dance Discovery Series: Cumbia",
+        "eventId": "dance-discovery-series-cumbia-2026-07-01",
+        "summary": "Dance Discovery Series: Cumbia",
         "date": "2026-07-01T18:15-05:00[America/Chicago]",
         "url": "https://htxoutdoors.com/events/dance-discovery-series-1/"
       },
@@ -2459,6 +2458,223 @@
         "summary": "University Awards Ceremony and Reception 2027",
         "date": "2027-04-27T21:00Z",
         "url": "https://events.rice.edu/cte/event/university-awards-ceremony-and-reception-2027"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "chicanx-photographers-as-documentary-historians-2026-08-13",
+        "summary": "Chicanx Photographers as Documentary Historians",
+        "date": "2026-08-13T19:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/chicanx-photographers-as-documentary-historians"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "claire-loft-tat-d-esprit-2026-07-25",
+        "summary": "Claire Loft: État d'esprit",
+        "date": "2026-07-25T18:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/claire-loft-etat-desprit"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "closing-reception-casa-de-cultura-2026-08-22",
+        "summary": "Closing Reception: Casa De Cultura",
+        "date": "2026-08-22T17:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/closing-reception-casa-de-cultura"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "con-sangre-y-coraz-n-portrait-of-our-community-2026-08-06",
+        "summary": "Con Sangre y Corazón - Portrait of Our Community",
+        "date": "2026-08-06T19:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/con-sangre-y-corazon-portrait-of-our-community"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "crafts-community-support-day-back-to-school-supply-drive-2026-08-01",
+        "summary": "Crafts + Community Support Day: Back-to-School Supply Drive",
+        "date": "2026-08-01T12:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/crafts-community-support-day-back-to-school-supply-drive"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "crafts-community-support-day-food-drive-2026-08-15",
+        "summary": "Crafts + Community Support Day: Food Drive",
+        "date": "2026-08-15T12:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/crafts-community-support-day-food-drive"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "el-ensayo-2026-08-29",
+        "summary": "El Ensayo",
+        "date": "2026-08-29T13:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/el-ensayo"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "form-and-figure-2026-08-08",
+        "summary": "Form and Figure",
+        "date": "2026-08-08T17:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/form-and-figure"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "heart-of-houston-2026-09-10",
+        "summary": "HEART OF HOUSTON",
+        "date": "2026-09-10T17:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/heart-of-houston"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "houston-plays-the-world-2026-07-09",
+        "summary": "Houston Plays the World",
+        "date": "2026-07-09T18:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/houston-plays-the-world"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "in-the-pit-real-talk-from-latinx-music-photographers-2026-07-16",
+        "summary": "In the Pit: Real Talk from Latinx Music Photographers",
+        "date": "2026-07-16T19:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/in-the-pit-real-talk-from-latinx-music-photographers"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "ladies-night-at-velocity-2026-07-01",
+        "summary": "Ladies Night at Velocity",
+        "date": "2026-07-01T18:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/ladies-night-at-velocity"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "layering-wax-encaustic-workshop-2026-07-11",
+        "summary": "Layering + WAX: Encaustic Workshop",
+        "date": "2026-07-11T11:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/layering-wax-encaustic-workshop-1"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "live-photo-session-aqui-estoy-2026-07-19",
+        "summary": "Live Photo Session: Aqui Estoy",
+        "date": "2026-07-19T12:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/live-photo-session-aqui-estoy"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "live-photo-session-latinx-music-subcultures-2026-07-25",
+        "summary": "Live Photo Session: Latinx Music Subcultures",
+        "date": "2026-07-25T12:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/live-photo-session-latinx-music-subcultures"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "live-photo-session-native-soul-2026-07-12",
+        "summary": "Live Photo Session: Native Soul",
+        "date": "2026-07-12T12:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/live-photo-session-native-soul"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "live-photo-session-trenzas-woven-with-pride-and-resistance-2026-07-18",
+        "summary": "Live Photo Session: Trenzas – Woven with Pride and Resistance",
+        "date": "2026-07-18T12:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/live-photo-session-trenzas--woven-with-pride-and-resistance"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "open-gallery-community-art-market-classic-car-display-2026-08-08",
+        "summary": "Open Gallery, Community Art Market, & Classic Car Display",
+        "date": "2026-08-08T12:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/open-gallery-community-art-market-and-classic-car-display"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "open-gallery-community-art-market-live-photo-session-2026-07-11",
+        "summary": "Open Gallery, Community Art Market, & Live Photo Session",
+        "date": "2026-07-11T12:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/open-gallery-community-art-market-and-live-photo-session"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "opening-reception-luz-y-sombra-2026-07-09",
+        "summary": "Opening Reception + Luz y Sombra",
+        "date": "2026-07-09T19:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/opening-reception-luz-y-sombra"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "painting-with-suzanne-acrylic-painting-party-2026-07-26",
+        "summary": "Painting with Suzanne Acrylic Painting Party",
+        "date": "2026-07-26T15:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/painting-with-suzanne-acrylic-painting-party"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "red-bull-dance-your-style-south-usa-2026-07-11",
+        "summary": "Red Bull Dance Your Style South USA",
+        "date": "2026-07-11T18:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/red-bull-dance-your-style-south-usa"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "second-saturday-open-art-studios-2026-07-11",
+        "summary": "Second Saturday Open Art Studios",
+        "date": "2026-07-11T12:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/second-saturday-open-art-studios-1"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "silver-street-third-saturday-2026-07-18",
+        "summary": "Silver Street Third Saturday",
+        "date": "2026-07-18T12:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/silver-street-third-saturday-2026"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "studio-conversations-inside-the-process-with-amanda-berg-2026-07-02",
+        "summary": "Studio Conversations: Inside the Process with Amanda Berg",
+        "date": "2026-07-02T18:30-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/studio-conversations-inside-the-process-with-amanda-berg"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "studio-conversations-inside-the-process-with-kimani-gichau-2026-07-18",
+        "summary": "Studio Conversations: Inside the Process with Kimani Gichau",
+        "date": "2026-07-18T18:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/studio-conversations-inside-the-process-with-kimani-gichau"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "studio-conversations-inside-the-process-with-stacy-gresell-2026-07-11",
+        "summary": "Studio Conversations: Inside the Process with Stacy Gresell",
+        "date": "2026-07-11T18:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/studio-conversations-inside-the-process-with-stacy-gresell"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "the-memory-of-matter-2026-07-17",
+        "summary": "The Memory of Matter",
+        "date": "2026-07-17T18:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/the-memory-of-matter"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "the-silos-third-saturday-2026-07-18",
+        "summary": "The Silos Third Saturday",
+        "date": "2026-07-18T12:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/the-silos-third-saturday-2026"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "vinyl-voices-podcast-taping-2026-07-23",
+        "summary": "Vinyl Voices Podcast Taping",
+        "date": "2026-07-23T19:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/vinyl-voices-podcast-taping"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "wax-words-poetry-lyrics-and-layers-in-art-2026-07-18",
+        "summary": "WAX & Words: Poetry, Lyrics, and Layers in Art",
+        "date": "2026-07-18T11:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/wax-and-words-poetry-lyrics-and-layers-in-art-1"
       },
       {
         "source": "texas-parks-wildlife-houston",
@@ -3773,7 +3989,7 @@
   "costStats": {
     "eventsWithCost": 580,
     "freeEvents": 450,
-    "totalEvents": 1974,
+    "totalEvents": 2005,
     "unresolvable": 0
   },
   "costGaps": [
@@ -5458,13 +5674,6 @@
     },
     {
       "source": "htxoutdoors",
-      "eventId": "cancelled-dance-discovery-series-cumbia-2026-07-01",
-      "summary": "[Cancelled] Dance Discovery Series: Cumbia",
-      "date": "2026-07-01T18:15-05:00[America/Chicago]",
-      "url": "https://htxoutdoors.com/events/dance-discovery-series-1/"
-    },
-    {
-      "source": "htxoutdoors",
       "eventId": "chile-multisport-adventure-info-meeting-2026-07-16",
       "summary": "Chile Multisport Adventure Info Meeting",
       "date": "2026-07-16T19:00-05:00[America/Chicago]",
@@ -5476,6 +5685,13 @@
       "summary": "Climbing at Momentum Katy",
       "date": "2026-07-21T19:30-05:00[America/Chicago]",
       "url": "https://htxoutdoors.com/events/climbing-at-momentum-katy-61/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "dance-discovery-series-cumbia-2026-07-01",
+      "summary": "Dance Discovery Series: Cumbia",
+      "date": "2026-07-01T18:15-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/dance-discovery-series-1/"
     },
     {
       "source": "htxoutdoors",
@@ -6533,6 +6749,13 @@
       "summary": "John Evans",
       "date": "2026-08-21T18:00-05:00[America/Chicago]",
       "url": "https://www.mcgonigels.com/shows/john-evans-early-show-22/"
+    },
+    {
+      "source": "murder-by-the-book",
+      "eventId": "christina-dodd-in-conversation-with-angelina-m-lopez-2026-06-30",
+      "summary": "Christina Dodd in conversation with Angelina M. Lopez",
+      "date": "2026-06-30T18:30-05:00[America/Chicago]",
+      "url": "https://www.murderbooks.com/Dodd"
     },
     {
       "source": "post-houston",
@@ -7912,6 +8135,223 @@
       "summary": "University Awards Ceremony and Reception 2027",
       "date": "2027-04-27T21:00Z",
       "url": "https://events.rice.edu/cte/event/university-awards-ceremony-and-reception-2027"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "chicanx-photographers-as-documentary-historians-2026-08-13",
+      "summary": "Chicanx Photographers as Documentary Historians",
+      "date": "2026-08-13T19:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/chicanx-photographers-as-documentary-historians"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "claire-loft-tat-d-esprit-2026-07-25",
+      "summary": "Claire Loft: État d'esprit",
+      "date": "2026-07-25T18:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/claire-loft-etat-desprit"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "closing-reception-casa-de-cultura-2026-08-22",
+      "summary": "Closing Reception: Casa De Cultura",
+      "date": "2026-08-22T17:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/closing-reception-casa-de-cultura"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "con-sangre-y-coraz-n-portrait-of-our-community-2026-08-06",
+      "summary": "Con Sangre y Corazón - Portrait of Our Community",
+      "date": "2026-08-06T19:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/con-sangre-y-corazon-portrait-of-our-community"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "crafts-community-support-day-back-to-school-supply-drive-2026-08-01",
+      "summary": "Crafts + Community Support Day: Back-to-School Supply Drive",
+      "date": "2026-08-01T12:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/crafts-community-support-day-back-to-school-supply-drive"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "crafts-community-support-day-food-drive-2026-08-15",
+      "summary": "Crafts + Community Support Day: Food Drive",
+      "date": "2026-08-15T12:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/crafts-community-support-day-food-drive"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "el-ensayo-2026-08-29",
+      "summary": "El Ensayo",
+      "date": "2026-08-29T13:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/el-ensayo"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "form-and-figure-2026-08-08",
+      "summary": "Form and Figure",
+      "date": "2026-08-08T17:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/form-and-figure"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "heart-of-houston-2026-09-10",
+      "summary": "HEART OF HOUSTON",
+      "date": "2026-09-10T17:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/heart-of-houston"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "houston-plays-the-world-2026-07-09",
+      "summary": "Houston Plays the World",
+      "date": "2026-07-09T18:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/houston-plays-the-world"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "in-the-pit-real-talk-from-latinx-music-photographers-2026-07-16",
+      "summary": "In the Pit: Real Talk from Latinx Music Photographers",
+      "date": "2026-07-16T19:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/in-the-pit-real-talk-from-latinx-music-photographers"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "ladies-night-at-velocity-2026-07-01",
+      "summary": "Ladies Night at Velocity",
+      "date": "2026-07-01T18:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/ladies-night-at-velocity"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "layering-wax-encaustic-workshop-2026-07-11",
+      "summary": "Layering + WAX: Encaustic Workshop",
+      "date": "2026-07-11T11:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/layering-wax-encaustic-workshop-1"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "live-photo-session-aqui-estoy-2026-07-19",
+      "summary": "Live Photo Session: Aqui Estoy",
+      "date": "2026-07-19T12:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/live-photo-session-aqui-estoy"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "live-photo-session-latinx-music-subcultures-2026-07-25",
+      "summary": "Live Photo Session: Latinx Music Subcultures",
+      "date": "2026-07-25T12:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/live-photo-session-latinx-music-subcultures"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "live-photo-session-native-soul-2026-07-12",
+      "summary": "Live Photo Session: Native Soul",
+      "date": "2026-07-12T12:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/live-photo-session-native-soul"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "live-photo-session-trenzas-woven-with-pride-and-resistance-2026-07-18",
+      "summary": "Live Photo Session: Trenzas – Woven with Pride and Resistance",
+      "date": "2026-07-18T12:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/live-photo-session-trenzas--woven-with-pride-and-resistance"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "open-gallery-community-art-market-classic-car-display-2026-08-08",
+      "summary": "Open Gallery, Community Art Market, & Classic Car Display",
+      "date": "2026-08-08T12:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/open-gallery-community-art-market-and-classic-car-display"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "open-gallery-community-art-market-live-photo-session-2026-07-11",
+      "summary": "Open Gallery, Community Art Market, & Live Photo Session",
+      "date": "2026-07-11T12:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/open-gallery-community-art-market-and-live-photo-session"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "opening-reception-luz-y-sombra-2026-07-09",
+      "summary": "Opening Reception + Luz y Sombra",
+      "date": "2026-07-09T19:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/opening-reception-luz-y-sombra"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "painting-with-suzanne-acrylic-painting-party-2026-07-26",
+      "summary": "Painting with Suzanne Acrylic Painting Party",
+      "date": "2026-07-26T15:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/painting-with-suzanne-acrylic-painting-party"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "red-bull-dance-your-style-south-usa-2026-07-11",
+      "summary": "Red Bull Dance Your Style South USA",
+      "date": "2026-07-11T18:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/red-bull-dance-your-style-south-usa"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "second-saturday-open-art-studios-2026-07-11",
+      "summary": "Second Saturday Open Art Studios",
+      "date": "2026-07-11T12:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/second-saturday-open-art-studios-1"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "silver-street-third-saturday-2026-07-18",
+      "summary": "Silver Street Third Saturday",
+      "date": "2026-07-18T12:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/silver-street-third-saturday-2026"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "studio-conversations-inside-the-process-with-amanda-berg-2026-07-02",
+      "summary": "Studio Conversations: Inside the Process with Amanda Berg",
+      "date": "2026-07-02T18:30-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/studio-conversations-inside-the-process-with-amanda-berg"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "studio-conversations-inside-the-process-with-kimani-gichau-2026-07-18",
+      "summary": "Studio Conversations: Inside the Process with Kimani Gichau",
+      "date": "2026-07-18T18:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/studio-conversations-inside-the-process-with-kimani-gichau"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "studio-conversations-inside-the-process-with-stacy-gresell-2026-07-11",
+      "summary": "Studio Conversations: Inside the Process with Stacy Gresell",
+      "date": "2026-07-11T18:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/studio-conversations-inside-the-process-with-stacy-gresell"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "the-memory-of-matter-2026-07-17",
+      "summary": "The Memory of Matter",
+      "date": "2026-07-17T18:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/the-memory-of-matter"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "the-silos-third-saturday-2026-07-18",
+      "summary": "The Silos Third Saturday",
+      "date": "2026-07-18T12:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/the-silos-third-saturday-2026"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "vinyl-voices-podcast-taping-2026-07-23",
+      "summary": "Vinyl Voices Podcast Taping",
+      "date": "2026-07-23T19:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/vinyl-voices-podcast-taping"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "wax-words-poetry-lyrics-and-layers-in-art-2026-07-18",
+      "summary": "WAX & Words: Poetry, Lyrics, and Layers in Art",
+      "date": "2026-07-18T11:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/wax-and-words-poetry-lyrics-and-layers-in-art-1"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -10122,7 +10562,7 @@
     {
       "name": "murder-by-the-book-murder-by-the-book",
       "type": "Ripper",
-      "events": 0,
+      "events": 1,
       "expectEmpty": false,
       "source": "murder-by-the-book"
     },
@@ -10167,6 +10607,13 @@
       "events": 0,
       "expectEmpty": false,
       "source": "saint-arnold-brewing-company"
+    },
+    {
+      "name": "sawyer-yards-sawyer-yards",
+      "type": "Ripper",
+      "events": 31,
+      "expectEmpty": false,
+      "source": "sawyer-yards"
     },
     {
       "name": "scout-bar-scout-bar",
@@ -10255,7 +10702,7 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 669,
+      "events": 668,
       "expectEmpty": false,
       "source": "tag-music"
     },
@@ -10290,7 +10737,7 @@
     {
       "name": "tag-montrose",
       "type": "Aggregate",
-      "events": 368,
+      "events": 367,
       "expectEmpty": false,
       "source": "tag-montrose"
     },
@@ -10318,7 +10765,7 @@
     {
       "name": "tag-art",
       "type": "Aggregate",
-      "events": 512,
+      "events": 543,
       "expectEmpty": false,
       "source": "tag-art"
     },
@@ -10416,7 +10863,7 @@
     {
       "name": "tag-books",
       "type": "Aggregate",
-      "events": 30,
+      "events": 31,
       "expectEmpty": false,
       "source": "tag-books"
     },
@@ -10507,7 +10954,7 @@
     {
       "name": "tag-near-northside",
       "type": "Aggregate",
-      "events": 125,
+      "events": 156,
       "expectEmpty": false,
       "source": "tag-near-northside"
     },
@@ -10528,7 +10975,7 @@
     {
       "name": "tag-west-university",
       "type": "Aggregate",
-      "events": 0,
+      "events": 1,
       "expectEmpty": false,
       "source": "tag-west-university"
     },
@@ -10633,7 +11080,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 2050,
+      "events": 2081,
       "expectEmpty": false,
       "source": "tag-all"
     },
@@ -10734,6 +11181,13 @@
       "events": 7,
       "expectEmpty": false,
       "source": "tuts"
+    },
+    {
+      "name": "external-walking-stick-brewing",
+      "type": "External",
+      "events": 0,
+      "expectEmpty": false,
+      "source": "walking-stick-brewing"
     }
   ]
 }

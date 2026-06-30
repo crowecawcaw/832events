@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T02:57:35.647Z",
+  "lastUpdated": "2026-06-30T13:43:53.752Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -363,6 +363,23 @@
       ]
     },
     {
+      "name": "murder-by-the-book",
+      "description": "Murder By The Book",
+      "friendlyLink": "https://www.murderbooks.com/events",
+      "calendars": [
+        {
+          "name": "murder-by-the-book",
+          "friendlyName": "Murder By The Book",
+          "icsUrl": "murder-by-the-book-murder-by-the-book.ics",
+          "rssUrl": "murder-by-the-book-murder-by-the-book.rss",
+          "tags": [
+            "Books",
+            "West University"
+          ]
+        }
+      ]
+    },
+    {
       "name": "post-houston",
       "description": "POST Houston",
       "friendlyLink": "https://posthtx.com/event",
@@ -432,6 +449,23 @@
             "Education",
             "Art",
             "Museum District"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "sawyer-yards",
+      "description": "Sawyer Yards",
+      "friendlyLink": "https://www.sawyeryards.com/",
+      "calendars": [
+        {
+          "name": "sawyer-yards",
+          "friendlyName": "Sawyer Yards",
+          "icsUrl": "sawyer-yards-sawyer-yards.ics",
+          "rssUrl": "sawyer-yards-sawyer-yards.rss",
+          "tags": [
+            "Art",
+            "Near Northside"
           ]
         }
       ]
@@ -766,6 +800,7 @@
     "Upper Kirby",
     "Uptown",
     "Wedgewood",
+    "West University",
     "Workshops"
   ]
 }

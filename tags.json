@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-30T02:57:40.205Z",
+  "generated": "2026-06-30T13:43:58.510Z",
   "tags": [
     {
       "name": "Animals",
@@ -22,8 +22,8 @@
       "name": "Art",
       "slug": "art",
       "category": "Activities",
-      "eventCount": 512,
-      "calendarCount": 7,
+      "eventCount": 543,
+      "calendarCount": 8,
       "links": {
         "ics": {
           "href": "tag-art.ics",
@@ -73,8 +73,8 @@
       "name": "Books",
       "slug": "books",
       "category": "Activities",
-      "eventCount": 30,
-      "calendarCount": 4,
+      "eventCount": 31,
+      "calendarCount": 5,
       "links": {
         "ics": {
           "href": "tag-books.ics",
@@ -430,7 +430,7 @@
       "name": "Montrose",
       "slug": "montrose",
       "category": "Neighborhoods",
-      "eventCount": 368,
+      "eventCount": 367,
       "calendarCount": 3,
       "links": {
         "ics": {
@@ -481,7 +481,7 @@
       "name": "Music",
       "slug": "music",
       "category": "Activities",
-      "eventCount": 669,
+      "eventCount": 668,
       "calendarCount": 12,
       "links": {
         "ics": {
@@ -515,8 +515,8 @@
       "name": "Near Northside",
       "slug": "near-northside",
       "category": "Neighborhoods",
-      "eventCount": 125,
-      "calendarCount": 3,
+      "eventCount": 156,
+      "calendarCount": 4,
       "links": {
         "ics": {
           "href": "tag-near-northside.ics",
@@ -813,6 +813,23 @@
         },
         "rss": {
           "href": "tag-wedgewood.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "West University",
+      "slug": "west-university",
+      "category": "Neighborhoods",
+      "eventCount": 1,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-west-university.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-west-university.rss",
           "type": "application/rss+xml"
         }
       }

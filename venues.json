@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-30T02:57:40.196Z",
+  "generated": "2026-06-30T13:43:58.500Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -1038,6 +1038,41 @@
       ]
     },
     {
+      "name": "murder-by-the-book",
+      "friendlyName": "Murder By The Book",
+      "description": "Murder By The Book",
+      "url": "https://www.murderbooks.com/events",
+      "tags": [
+        "Books",
+        "West University"
+      ],
+      "geo": {
+        "lat": 29.7255,
+        "lng": -95.4175,
+        "label": "Murder By The Book, 2342 Bissonnet St, Houston, TX 77005"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Murder%20By%20The%20Book%2C%202342%20Bissonnet%20St%2C%20Houston%2C%20TX%2077005"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "murder-by-the-book",
+          "friendlyName": "Murder By The Book",
+          "links": {
+            "ics": {
+              "href": "murder-by-the-book-murder-by-the-book.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "murder-by-the-book-murder-by-the-book.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "post-houston",
       "friendlyName": "POST Houston",
       "description": "POST Houston",
@@ -1212,6 +1247,41 @@
             },
             "rss": {
               "href": "recurring-rice-village-farmers-market.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "sawyer-yards",
+      "friendlyName": "Sawyer Yards",
+      "description": "Sawyer Yards",
+      "url": "https://www.sawyeryards.com/",
+      "tags": [
+        "Art",
+        "Near Northside"
+      ],
+      "geo": {
+        "lat": 29.7698,
+        "lng": -95.3839,
+        "label": "Sawyer Yards, 2101 Winter Street, Houston, TX 77007"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Sawyer%20Yards%2C%202101%20Winter%20Street%2C%20Houston%2C%20TX%2077007"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "sawyer-yards",
+          "friendlyName": "Sawyer Yards",
+          "links": {
+            "ics": {
+              "href": "sawyer-yards-sawyer-yards.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "sawyer-yards-sawyer-yards.rss",
               "type": "application/rss+xml"
             }
           }
