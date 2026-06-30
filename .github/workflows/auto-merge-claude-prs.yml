@@ -1,0 +1,199 @@
+name: Auto-merge Claude PRs
+
+# Daily janitor that merges *trusted, green* bot-authored PRs so source/candidate
+# runs don't pile up waiting for a manual click. It is deliberately conservative:
+# every gate below must pass or the PR is skipped (fail-closed). Nothing here
+# trusts PR-supplied code — the workflow runs from the default branch on a
+# schedule and only ever reads PR *metadata* via the API, so a malicious PR can
+# never make this job execute its code with repo secrets.
+#
+# Security model (why a stranger can't open a PR and hijack the repo):
+#   1. Trigger is `schedule`/`workflow_dispatch`, NOT `pull_request_target`.
+#      The job always runs the default-branch copy of this file with the repo's
+#      token; it never checks out or runs the PR's head code. This sidesteps the
+#      classic pull_request_target privilege-escalation / secret-exfil bug.
+#   2. Author allowlist — only PRs opened by TRUSTED_AUTHORS (the Claude GitHub
+#      App) are eligible. GitHub logins are authenticated and unique, so this
+#      can't be spoofed; a human contributor's PR is never auto-merged.
+#   3. Same-repo only — the head branch must live in THIS repo, not a fork.
+#      Fork PRs (the usual attack surface) are ignored outright.
+#   4. Path allowlist (default-deny) — every changed file must match an
+#      ALLOWED_PATHS pattern. Touching .github/**, scripts/**, package*.json,
+#      web/**, etc. is NOT allowed, so even a compromised bot session cannot
+#      slip a workflow edit, a postinstall script, or a dependency swap through
+#      auto-merge to exfiltrate secrets — those still require a human.
+#   5. CI must be green — all check runs on the head SHA must be complete and
+#      successful (with a build check present), and no review may request
+#      changes. Pending/failed/absent CI ⇒ skip.
+#   6. Least privilege — the token gets only contents+pull-requests write and
+#      read on checks/statuses. No `actions: write`, no PAT.
+#
+# Operational note: merges use GITHUB_TOKEN, which by design does NOT trigger
+# downstream workflows, so the site is refreshed by publish_calendars.yml's own
+# daily schedule rather than by this merge. That's intentional (keeps blast
+# radius small); run that workflow manually if you want an immediate rebuild.
+
+on:
+  schedule:
+    - cron: "0 7 * * *" # Daily, 07:00 UTC (before the source pipeline's 08:30 run)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Evaluate and report eligibility without merging"
+        type: boolean
+        default: false
+
+concurrency:
+  group: auto-merge-claude-prs
+  cancel-in-progress: false
+
+permissions:
+  contents: write       # merge eligible PRs
+  pull-requests: write  # read PR metadata + merge endpoint
+  checks: read          # read CI check-run conclusions
+  statuses: read         # read commit statuses
+
+jobs:
+  auto-merge:
+    # Never run on template copies/forks — only the canonical repo.
+    if: ${{ github.repository == 'crowecawcaw/832events' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Merge trusted, green Claude PRs
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // ---- Configuration (review these knobs) -----------------------
+            // Logins allowed to be auto-merged. The Claude GitHub App authors
+            // PRs as "claude[bot]". Add trusted bots here; do NOT add humans.
+            const TRUSTED_AUTHORS = new Set(['claude[bot]']);
+
+            // Default-deny allowlist: EVERY changed file must match one of these
+            // or the PR is skipped. Keep this to content that cannot execute in
+            // CI or alter the security surface (no .github/**, scripts/**,
+            // package*.json, web/**, *.config.*, CODEOWNERS, .npmrc, ...).
+            const ALLOWED_PATHS = [
+              /^sources\//,                       // new / edited event sources
+              /^docs\//,                          // candidate tracking, ledgers, docs
+              /^allowed-removals\//,              // intentional calendar-URL removals
+              /^ideas\.md$/,
+              /^fetch-cache\.json$/,              // build caches (cold-start baselines)
+              /^geo-cache\.json$/,
+              /^event-uncertainty-cache\.json$/,
+              /^event-history\.json$/,
+            ];
+
+            // A check whose name contains this substring must exist and be
+            // successful (the "build / build" job from pr-preview.yml).
+            const REQUIRED_CHECK_SUBSTRING = 'build';
+
+            const MERGE_METHOD = 'merge'; // matches the repo's existing convention
+            const DRY_RUN = context.payload.inputs?.dry_run === 'true'
+                          || context.payload.inputs?.dry_run === true;
+            // ---------------------------------------------------------------
+
+            const { owner, repo } = context.repo;
+            const log = [];
+            const skip = (pr, reason) => {
+              log.push(`- ⏭️  #${pr.number} "${pr.title}" — skipped: ${reason}`);
+            };
+
+            const { data: openPrs } = await github.rest.pulls.list({
+              owner, repo, state: 'open', base: 'main', per_page: 100,
+            });
+
+            let mergedCount = 0;
+            for (const prItem of openPrs) {
+              // Re-fetch the full PR so mergeable/mergeable_state are populated.
+              const { data: pr } = await github.rest.pulls.get({
+                owner, repo, pull_number: prItem.number,
+              });
+
+              if (pr.draft) { skip(pr, 'draft'); continue; }
+
+              if (!TRUSTED_AUTHORS.has(pr.user.login)) {
+                skip(pr, `author "${pr.user.login}" not in allowlist`); continue;
+              }
+
+              // Reject fork PRs — head must live in this repo.
+              if (pr.head.repo?.full_name !== `${owner}/${repo}`) {
+                skip(pr, `head repo "${pr.head.repo?.full_name}" is not ${owner}/${repo} (fork)`);
+                continue;
+              }
+
+              // mergeable is computed asynchronously by GitHub; null = not ready.
+              if (pr.mergeable === null) { skip(pr, 'mergeability not yet computed (will retry next run)'); continue; }
+              if (pr.mergeable === false) { skip(pr, `not mergeable (state: ${pr.mergeable_state})`); continue; }
+              if (pr.mergeable_state === 'dirty' || pr.mergeable_state === 'blocked') {
+                skip(pr, `mergeable_state is "${pr.mergeable_state}"`); continue;
+              }
+
+              // Path allowlist (default-deny).
+              const files = await github.paginate(github.rest.pulls.listFiles, {
+                owner, repo, pull_number: pr.number, per_page: 100,
+              });
+              const disallowed = files
+                .map(f => f.filename)
+                .filter(name => !ALLOWED_PATHS.some(rx => rx.test(name)));
+              if (disallowed.length) {
+                skip(pr, `touches non-allowlisted path(s): ${disallowed.slice(0, 5).join(', ')}${disallowed.length > 5 ? '…' : ''} (needs human review)`);
+                continue;
+              }
+
+              // CI: every check run on the head SHA must be complete & successful,
+              // and a "build" check must be present and successful.
+              const checks = await github.paginate(github.rest.checks.listForRef, {
+                owner, repo, ref: pr.head.sha, per_page: 100,
+              });
+              if (checks.length === 0) { skip(pr, 'no check runs on head SHA (CI has not run)'); continue; }
+              const incomplete = checks.filter(c => c.status !== 'completed');
+              if (incomplete.length) { skip(pr, `CI still running: ${incomplete.map(c => c.name).join(', ')}`); continue; }
+              const OK = new Set(['success', 'neutral', 'skipped']);
+              const failed = checks.filter(c => !OK.has(c.conclusion));
+              if (failed.length) { skip(pr, `failing check(s): ${failed.map(c => `${c.name}=${c.conclusion}`).join(', ')}`); continue; }
+              const buildOk = checks.some(c =>
+                c.name.toLowerCase().includes(REQUIRED_CHECK_SUBSTRING) && c.conclusion === 'success');
+              if (!buildOk) { skip(pr, `required "${REQUIRED_CHECK_SUBSTRING}" check not present/successful`); continue; }
+
+              // Also honor failing legacy commit statuses, if any.
+              const { data: combined } = await github.rest.repos.getCombinedStatusForRef({
+                owner, repo, ref: pr.head.sha,
+              });
+              if (combined.state === 'failure' || combined.state === 'error') {
+                skip(pr, `commit status is "${combined.state}"`); continue;
+              }
+
+              // No outstanding "changes requested" review.
+              const reviews = await github.paginate(github.rest.pulls.listReviews, {
+                owner, repo, pull_number: pr.number, per_page: 100,
+              });
+              const latestByUser = new Map();
+              for (const r of reviews) {
+                if (['APPROVED', 'CHANGES_REQUESTED', 'DISMISSED'].includes(r.state)) {
+                  latestByUser.set(r.user.login, r.state);
+                }
+              }
+              if ([...latestByUser.values()].includes('CHANGES_REQUESTED')) {
+                skip(pr, 'a reviewer requested changes'); continue;
+              }
+
+              // All gates passed.
+              if (DRY_RUN) {
+                log.push(`- ✅ #${pr.number} "${pr.title}" — ELIGIBLE (dry run, not merged)`);
+                continue;
+              }
+              try {
+                await github.rest.pulls.merge({
+                  owner, repo, pull_number: pr.number, merge_method: MERGE_METHOD,
+                });
+                mergedCount++;
+                log.push(`- ✅ #${pr.number} "${pr.title}" — merged`);
+              } catch (err) {
+                log.push(`- ⚠️  #${pr.number} "${pr.title}" — merge failed: ${err.message}`);
+              }
+            }
+
+            const header = `## Auto-merge Claude PRs\n\n` +
+              `${openPrs.length} open PR(s) evaluated, ${mergedCount} merged` +
+              `${DRY_RUN ? ' _(dry run)_' : ''}.\n\n`;
+            await core.summary.addRaw(header + (log.join('\n') || '_No open PRs._')).write();
