@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-06-30T13:47:00.307Z",
-  "totalErrors": 8,
+  "buildTime": "2026-06-30T15:45:43.214Z",
+  "totalErrors": 10,
   "configErrors": [],
   "sources": [
     {
@@ -15,6 +15,21 @@
           "type": "ParseError",
           "reason": "Failed to fetch events from Squarespace: Error: 404 ",
           "context": "https://andersonfair.net/events"
+        }
+      ]
+    },
+    {
+      "source": "cullen-performance-hall",
+      "calendar": "cullen-performance-hall",
+      "type": "Ripper",
+      "errorCount": 1,
+      "parseErrorCount": 1,
+      "uncertaintyCount": 0,
+      "errors": [
+        {
+          "type": "ParseError",
+          "reason": "Could not parse date: \" \"",
+          "context": "Dan and Phil: The Hard Launch World Tour "
         }
       ]
     },
@@ -142,12 +157,19 @@
       "error": "Error: HTTP 403: "
     }
   ],
-  "geocodeErrors": [],
+  "geocodeErrors": [
+    {
+      "type": "GeocodeError",
+      "location": "Guard & Grace",
+      "source": "downtown-houston-events",
+      "reason": "Nominatim returned no results"
+    }
+  ],
   "geoStats": {
-    "totalEvents": 2007,
-    "eventsWithGeo": 1724,
+    "totalEvents": 2005,
+    "eventsWithGeo": 1722,
     "eventsWithoutGeo": 283,
-    "geocodeErrors": 0
+    "geocodeErrors": 1
   },
   "uncertainEvents": [],
   "uncertaintyStats": {
@@ -587,7 +609,7 @@
   ],
   "photoStats": {
     "eventsWithImage": 1186,
-    "totalEvents": 2007,
+    "totalEvents": 2005,
     "venuesWithImage": 0,
     "totalVenues": 44,
     "unresolvable": 0
@@ -907,12 +929,6 @@
       },
       {
         "source": "cullen-performance-hall",
-        "eventId": "dan-and-phil-the-hard-launch-world-tour-2026-09-26",
-        "summary": "Dan and Phil: The Hard Launch World Tour",
-        "date": "2026-09-26T20:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "cullen-performance-hall",
         "eventId": "derrick-stroup-running-hot-tour-2026-10-17",
         "summary": "Derrick Stroup Running Hot Tour",
         "date": "2026-10-17T19:00-05:00[America/Chicago]"
@@ -922,6 +938,12 @@
         "eventId": "dl-hughley-and-don-lemon-dl-dl-anything-goes-2026-11-21",
         "summary": "DL Hughley and Don Lemon: DL + DL 'Anything Goes'",
         "date": "2026-11-21T19:00-06:00[America/Chicago]"
+      },
+      {
+        "source": "cullen-performance-hall",
+        "eventId": "i-said-what-i-said-2026-08-15",
+        "summary": "I Said What I Said",
+        "date": "2026-08-15T20:00-05:00[America/Chicago]"
       },
       {
         "source": "cullen-performance-hall",
@@ -1063,12 +1085,6 @@
       },
       {
         "source": "downtown-houston-events",
-        "eventId": "2026-premium-world-cup-watch-party-experience-2026-06-29",
-        "summary": "2026 Premium World Cup Watch Party Experience",
-        "date": "2026-06-29T12:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "downtown-houston-events",
         "eventId": "2026-premium-world-cup-watch-party-experience-2026-06-30",
         "summary": "2026 Premium World Cup Watch Party Experience",
         "date": "2026-06-30T12:00-05:00[America/Chicago]"
@@ -1105,9 +1121,9 @@
       },
       {
         "source": "downtown-houston-events",
-        "eventId": "america-250-exhibit-the-american-revolution-experience-2026-06-29",
-        "summary": "America 250 Exhibit: The American Revolution Experience",
-        "date": "2026-06-29T10:00-05:00[America/Chicago]"
+        "eventId": "2026-premium-world-cup-watch-party-experience-2026-07-06",
+        "summary": "2026 Premium World Cup Watch Party Experience",
+        "date": "2026-07-06T12:00-05:00[America/Chicago]"
       },
       {
         "source": "downtown-houston-events",
@@ -1147,9 +1163,9 @@
       },
       {
         "source": "downtown-houston-events",
-        "eventId": "bumper-and-cruiser-boats-2026-06-29",
-        "summary": "Bumper and Cruiser Boats",
-        "date": "2026-06-29T10:00-05:00[America/Chicago]"
+        "eventId": "america-250-exhibit-the-american-revolution-experience-2026-07-06",
+        "summary": "America 250 Exhibit: The American Revolution Experience",
+        "date": "2026-07-06T10:00-05:00[America/Chicago]"
       },
       {
         "source": "downtown-houston-events",
@@ -1189,9 +1205,9 @@
       },
       {
         "source": "downtown-houston-events",
-        "eventId": "fifa-fan-festival-houston-2026-06-29",
-        "summary": "FIFA Fan Festival Houston",
-        "date": "2026-06-29T10:30-05:00[America/Chicago]"
+        "eventId": "bumper-and-cruiser-boats-2026-07-06",
+        "summary": "Bumper and Cruiser Boats",
+        "date": "2026-07-06T10:00-05:00[America/Chicago]"
       },
       {
         "source": "downtown-houston-events",
@@ -1231,6 +1247,12 @@
       },
       {
         "source": "downtown-houston-events",
+        "eventId": "fifa-fan-festival-houston-2026-07-06",
+        "summary": "FIFA Fan Festival Houston",
+        "date": "2026-07-06T12:30-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
         "eventId": "fitbreak-hip-hop-dance-fitness-2026-06-30",
         "summary": "FitBreak: Hip-Hop Dance Fitness",
         "date": "2026-06-30T18:30-05:00[America/Chicago]"
@@ -1267,15 +1289,9 @@
       },
       {
         "source": "downtown-houston-events",
-        "eventId": "kickboxing-2026-06-29",
+        "eventId": "kickboxing-2026-07-06",
         "summary": "Kickboxing",
-        "date": "2026-06-29T18:30-05:00[America/Chicago]"
-      },
-      {
-        "source": "downtown-houston-events",
-        "eventId": "lunes-yoga-en-espa-ol-2026-06-29",
-        "summary": "Lunes Yoga en Español",
-        "date": "2026-06-29T18:30-05:00[America/Chicago]"
+        "date": "2026-07-06T18:30-05:00[America/Chicago]"
       },
       {
         "source": "downtown-houston-events",
@@ -1291,12 +1307,6 @@
       },
       {
         "source": "downtown-houston-events",
-        "eventId": "one-world-one-game-watch-party-2026-06-29",
-        "summary": "'One World, One Game' Watch Party",
-        "date": "2026-06-29T11:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "downtown-houston-events",
         "eventId": "one-world-one-game-watch-party-2026-07-03",
         "summary": "'One World, One Game' Watch Party",
         "date": "2026-07-03T11:00-05:00[America/Chicago]"
@@ -1306,12 +1316,6 @@
         "eventId": "one-world-one-game-watch-party-2026-07-04",
         "summary": "'One World, One Game' Watch Party",
         "date": "2026-07-04T11:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "downtown-houston-events",
-        "eventId": "sip-score-celebrate-2026-06-29",
-        "summary": "Sip, Score & Celebrate",
-        "date": "2026-06-29T20:00-05:00[America/Chicago]"
       },
       {
         "source": "downtown-houston-events",
@@ -1351,9 +1355,15 @@
       },
       {
         "source": "downtown-houston-events",
-        "eventId": "soccer-fan-happy-hour-at-xochi-2026-06-29",
-        "summary": "Soccer Fan Happy Hour at Xochi",
-        "date": "2026-06-29T11:30-05:00[America/Chicago]"
+        "eventId": "sip-score-celebrate-2026-07-06",
+        "summary": "Sip, Score & Celebrate",
+        "date": "2026-07-06T20:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "soccer-dining-at-guard-and-grace-houston-2026-07-05",
+        "summary": "Soccer Dining at Guard and Grace Houston",
+        "date": "2026-07-05T16:00-05:00[America/Chicago]"
       },
       {
         "source": "downtown-houston-events",
@@ -1393,9 +1403,9 @@
       },
       {
         "source": "downtown-houston-events",
-        "eventId": "soccer-fan-happy-hour-at-zaranda-2026-06-29",
-        "summary": "Soccer Fan Happy Hour at Zaranda",
-        "date": "2026-06-29T11:00-05:00[America/Chicago]"
+        "eventId": "soccer-fan-happy-hour-at-xochi-2026-07-06",
+        "summary": "Soccer Fan Happy Hour at Xochi",
+        "date": "2026-07-06T11:30-05:00[America/Chicago]"
       },
       {
         "source": "downtown-houston-events",
@@ -1435,15 +1445,15 @@
       },
       {
         "source": "downtown-houston-events",
-        "eventId": "soccer-summer-kicks-and-coffee-at-discovery-green-2026-07-04",
-        "summary": "Soccer Summer: Kicks and Coffee at Discovery Green",
-        "date": "2026-07-04T10:00-05:00[America/Chicago]"
+        "eventId": "soccer-fan-happy-hour-at-zaranda-2026-07-06",
+        "summary": "Soccer Fan Happy Hour at Zaranda",
+        "date": "2026-07-06T11:00-05:00[America/Chicago]"
       },
       {
         "source": "downtown-houston-events",
-        "eventId": "sounds-of-the-world-pipes-praise-soccer-jim-roman-2026-06-29",
-        "summary": "Sounds of the World: Pipes, Praise & Soccer: Jim Roman",
-        "date": "2026-06-29T10:30-05:00[America/Chicago]"
+        "eventId": "soccer-summer-kicks-and-coffee-at-discovery-green-2026-07-04",
+        "summary": "Soccer Summer: Kicks and Coffee at Discovery Green",
+        "date": "2026-07-04T10:00-05:00[America/Chicago]"
       },
       {
         "source": "downtown-houston-events",
@@ -1489,12 +1499,6 @@
       },
       {
         "source": "downtown-houston-events",
-        "eventId": "undercurrents-by-rafael-lozano-hemmer-2026-06-29",
-        "summary": "\"Undercurrents\" by Rafael Lozano-Hemmer",
-        "date": "2026-06-29T10:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "downtown-houston-events",
         "eventId": "undercurrents-by-rafael-lozano-hemmer-2026-06-30",
         "summary": "\"Undercurrents\" by Rafael Lozano-Hemmer",
         "date": "2026-06-30T10:00-05:00[America/Chicago]"
@@ -1528,6 +1532,12 @@
         "eventId": "undercurrents-by-rafael-lozano-hemmer-2026-07-05",
         "summary": "\"Undercurrents\" by Rafael Lozano-Hemmer",
         "date": "2026-07-05T10:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "undercurrents-by-rafael-lozano-hemmer-2026-07-06",
+        "summary": "\"Undercurrents\" by Rafael Lozano-Hemmer",
+        "date": "2026-07-06T10:00-05:00[America/Chicago]"
       },
       {
         "source": "downtown-houston-events",
@@ -3484,12 +3494,6 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
-        "eventId": "interpretive-center-open-8-30am-to-2-30pm-bastrop-state-park-2027-06-29",
-        "summary": "Interpretive Center Open 8:30am to 2:30pm - Bastrop State Park",
-        "date": "2027-06-29T08:30-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
         "eventId": "island-trail-hike-2026-07-04",
         "summary": "Island Trail Hike",
         "date": "2026-07-04T10:00-05:00[America/Chicago]"
@@ -3904,6 +3908,12 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
+        "eventId": "stargazing-at-the-park-2026-07-25",
+        "summary": "Stargazing at the Park!",
+        "date": "2026-07-25T21:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "texas-parks-wildlife-houston",
         "eventId": "stars-stripes-s-mores-night-2026-07-04",
         "summary": "Stars, Stripes & S’mores Night",
         "date": "2026-07-04T16:30-05:00[America/Chicago]"
@@ -4003,7 +4013,7 @@
   "costStats": {
     "eventsWithCost": 580,
     "freeEvents": 450,
-    "totalEvents": 2007,
+    "totalEvents": 2005,
     "unresolvable": 0
   },
   "costGaps": [
@@ -4204,12 +4214,6 @@
     },
     {
       "source": "cullen-performance-hall",
-      "eventId": "dan-and-phil-the-hard-launch-world-tour-2026-09-26",
-      "summary": "Dan and Phil: The Hard Launch World Tour",
-      "date": "2026-09-26T20:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "cullen-performance-hall",
       "eventId": "derrick-stroup-running-hot-tour-2026-10-17",
       "summary": "Derrick Stroup Running Hot Tour",
       "date": "2026-10-17T19:00-05:00[America/Chicago]"
@@ -4219,6 +4223,12 @@
       "eventId": "dl-hughley-and-don-lemon-dl-dl-anything-goes-2026-11-21",
       "summary": "DL Hughley and Don Lemon: DL + DL 'Anything Goes'",
       "date": "2026-11-21T19:00-06:00[America/Chicago]"
+    },
+    {
+      "source": "cullen-performance-hall",
+      "eventId": "i-said-what-i-said-2026-08-15",
+      "summary": "I Said What I Said",
+      "date": "2026-08-15T20:00-05:00[America/Chicago]"
     },
     {
       "source": "cullen-performance-hall",
@@ -4360,12 +4370,6 @@
     },
     {
       "source": "downtown-houston-events",
-      "eventId": "2026-premium-world-cup-watch-party-experience-2026-06-29",
-      "summary": "2026 Premium World Cup Watch Party Experience",
-      "date": "2026-06-29T12:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "downtown-houston-events",
       "eventId": "2026-premium-world-cup-watch-party-experience-2026-06-30",
       "summary": "2026 Premium World Cup Watch Party Experience",
       "date": "2026-06-30T12:00-05:00[America/Chicago]"
@@ -4402,9 +4406,9 @@
     },
     {
       "source": "downtown-houston-events",
-      "eventId": "america-250-exhibit-the-american-revolution-experience-2026-06-29",
-      "summary": "America 250 Exhibit: The American Revolution Experience",
-      "date": "2026-06-29T10:00-05:00[America/Chicago]"
+      "eventId": "2026-premium-world-cup-watch-party-experience-2026-07-06",
+      "summary": "2026 Premium World Cup Watch Party Experience",
+      "date": "2026-07-06T12:00-05:00[America/Chicago]"
     },
     {
       "source": "downtown-houston-events",
@@ -4444,9 +4448,9 @@
     },
     {
       "source": "downtown-houston-events",
-      "eventId": "bumper-and-cruiser-boats-2026-06-29",
-      "summary": "Bumper and Cruiser Boats",
-      "date": "2026-06-29T10:00-05:00[America/Chicago]"
+      "eventId": "america-250-exhibit-the-american-revolution-experience-2026-07-06",
+      "summary": "America 250 Exhibit: The American Revolution Experience",
+      "date": "2026-07-06T10:00-05:00[America/Chicago]"
     },
     {
       "source": "downtown-houston-events",
@@ -4486,9 +4490,9 @@
     },
     {
       "source": "downtown-houston-events",
-      "eventId": "fifa-fan-festival-houston-2026-06-29",
-      "summary": "FIFA Fan Festival Houston",
-      "date": "2026-06-29T10:30-05:00[America/Chicago]"
+      "eventId": "bumper-and-cruiser-boats-2026-07-06",
+      "summary": "Bumper and Cruiser Boats",
+      "date": "2026-07-06T10:00-05:00[America/Chicago]"
     },
     {
       "source": "downtown-houston-events",
@@ -4528,6 +4532,12 @@
     },
     {
       "source": "downtown-houston-events",
+      "eventId": "fifa-fan-festival-houston-2026-07-06",
+      "summary": "FIFA Fan Festival Houston",
+      "date": "2026-07-06T12:30-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
       "eventId": "fitbreak-hip-hop-dance-fitness-2026-06-30",
       "summary": "FitBreak: Hip-Hop Dance Fitness",
       "date": "2026-06-30T18:30-05:00[America/Chicago]"
@@ -4564,15 +4574,9 @@
     },
     {
       "source": "downtown-houston-events",
-      "eventId": "kickboxing-2026-06-29",
+      "eventId": "kickboxing-2026-07-06",
       "summary": "Kickboxing",
-      "date": "2026-06-29T18:30-05:00[America/Chicago]"
-    },
-    {
-      "source": "downtown-houston-events",
-      "eventId": "lunes-yoga-en-espa-ol-2026-06-29",
-      "summary": "Lunes Yoga en Español",
-      "date": "2026-06-29T18:30-05:00[America/Chicago]"
+      "date": "2026-07-06T18:30-05:00[America/Chicago]"
     },
     {
       "source": "downtown-houston-events",
@@ -4588,12 +4592,6 @@
     },
     {
       "source": "downtown-houston-events",
-      "eventId": "one-world-one-game-watch-party-2026-06-29",
-      "summary": "'One World, One Game' Watch Party",
-      "date": "2026-06-29T11:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "downtown-houston-events",
       "eventId": "one-world-one-game-watch-party-2026-07-03",
       "summary": "'One World, One Game' Watch Party",
       "date": "2026-07-03T11:00-05:00[America/Chicago]"
@@ -4603,12 +4601,6 @@
       "eventId": "one-world-one-game-watch-party-2026-07-04",
       "summary": "'One World, One Game' Watch Party",
       "date": "2026-07-04T11:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "downtown-houston-events",
-      "eventId": "sip-score-celebrate-2026-06-29",
-      "summary": "Sip, Score & Celebrate",
-      "date": "2026-06-29T20:00-05:00[America/Chicago]"
     },
     {
       "source": "downtown-houston-events",
@@ -4648,9 +4640,15 @@
     },
     {
       "source": "downtown-houston-events",
-      "eventId": "soccer-fan-happy-hour-at-xochi-2026-06-29",
-      "summary": "Soccer Fan Happy Hour at Xochi",
-      "date": "2026-06-29T11:30-05:00[America/Chicago]"
+      "eventId": "sip-score-celebrate-2026-07-06",
+      "summary": "Sip, Score & Celebrate",
+      "date": "2026-07-06T20:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "soccer-dining-at-guard-and-grace-houston-2026-07-05",
+      "summary": "Soccer Dining at Guard and Grace Houston",
+      "date": "2026-07-05T16:00-05:00[America/Chicago]"
     },
     {
       "source": "downtown-houston-events",
@@ -4690,9 +4688,9 @@
     },
     {
       "source": "downtown-houston-events",
-      "eventId": "soccer-fan-happy-hour-at-zaranda-2026-06-29",
-      "summary": "Soccer Fan Happy Hour at Zaranda",
-      "date": "2026-06-29T11:00-05:00[America/Chicago]"
+      "eventId": "soccer-fan-happy-hour-at-xochi-2026-07-06",
+      "summary": "Soccer Fan Happy Hour at Xochi",
+      "date": "2026-07-06T11:30-05:00[America/Chicago]"
     },
     {
       "source": "downtown-houston-events",
@@ -4732,15 +4730,15 @@
     },
     {
       "source": "downtown-houston-events",
-      "eventId": "soccer-summer-kicks-and-coffee-at-discovery-green-2026-07-04",
-      "summary": "Soccer Summer: Kicks and Coffee at Discovery Green",
-      "date": "2026-07-04T10:00-05:00[America/Chicago]"
+      "eventId": "soccer-fan-happy-hour-at-zaranda-2026-07-06",
+      "summary": "Soccer Fan Happy Hour at Zaranda",
+      "date": "2026-07-06T11:00-05:00[America/Chicago]"
     },
     {
       "source": "downtown-houston-events",
-      "eventId": "sounds-of-the-world-pipes-praise-soccer-jim-roman-2026-06-29",
-      "summary": "Sounds of the World: Pipes, Praise & Soccer: Jim Roman",
-      "date": "2026-06-29T10:30-05:00[America/Chicago]"
+      "eventId": "soccer-summer-kicks-and-coffee-at-discovery-green-2026-07-04",
+      "summary": "Soccer Summer: Kicks and Coffee at Discovery Green",
+      "date": "2026-07-04T10:00-05:00[America/Chicago]"
     },
     {
       "source": "downtown-houston-events",
@@ -4786,12 +4784,6 @@
     },
     {
       "source": "downtown-houston-events",
-      "eventId": "undercurrents-by-rafael-lozano-hemmer-2026-06-29",
-      "summary": "\"Undercurrents\" by Rafael Lozano-Hemmer",
-      "date": "2026-06-29T10:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "downtown-houston-events",
       "eventId": "undercurrents-by-rafael-lozano-hemmer-2026-06-30",
       "summary": "\"Undercurrents\" by Rafael Lozano-Hemmer",
       "date": "2026-06-30T10:00-05:00[America/Chicago]"
@@ -4825,6 +4817,12 @@
       "eventId": "undercurrents-by-rafael-lozano-hemmer-2026-07-05",
       "summary": "\"Undercurrents\" by Rafael Lozano-Hemmer",
       "date": "2026-07-05T10:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "undercurrents-by-rafael-lozano-hemmer-2026-07-06",
+      "summary": "\"Undercurrents\" by Rafael Lozano-Hemmer",
+      "date": "2026-07-06T10:00-05:00[America/Chicago]"
     },
     {
       "source": "downtown-houston-events",
@@ -9175,12 +9173,6 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
-      "eventId": "interpretive-center-open-8-30am-to-2-30pm-bastrop-state-park-2027-06-29",
-      "summary": "Interpretive Center Open 8:30am to 2:30pm - Bastrop State Park",
-      "date": "2027-06-29T08:30-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
       "eventId": "island-trail-hike-2026-07-04",
       "summary": "Island Trail Hike",
       "date": "2026-07-04T10:00-05:00[America/Chicago]"
@@ -9592,6 +9584,12 @@
       "eventId": "springfest-2026-07-11",
       "summary": "Springfest",
       "date": "2026-07-11T10:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "texas-parks-wildlife-houston",
+      "eventId": "stargazing-at-the-park-2026-07-25",
+      "summary": "Stargazing at the Park!",
+      "date": "2026-07-25T21:00-05:00[America/Chicago]"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -10471,7 +10469,7 @@
     {
       "name": "downtown-houston-events-downtown-houston-events",
       "type": "Ripper",
-      "events": 79,
+      "events": 77,
       "expectEmpty": false,
       "source": "downtown-houston-events"
     },
@@ -10751,7 +10749,7 @@
     {
       "name": "tag-downtown",
       "type": "Aggregate",
-      "events": 273,
+      "events": 271,
       "expectEmpty": false,
       "source": "tag-downtown"
     },
@@ -10765,7 +10763,7 @@
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 560,
+      "events": 558,
       "expectEmpty": false,
       "source": "tag-community"
     },
@@ -10884,14 +10882,14 @@
     {
       "name": "tag-arts",
       "type": "Aggregate",
-      "events": 142,
+      "events": 140,
       "expectEmpty": false,
       "source": "tag-arts"
     },
     {
       "name": "tag-culture",
       "type": "Aggregate",
-      "events": 79,
+      "events": 77,
       "expectEmpty": false,
       "source": "tag-culture"
     },
@@ -11122,7 +11120,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 2083,
+      "events": 2081,
       "expectEmpty": false,
       "source": "tag-all"
     },
