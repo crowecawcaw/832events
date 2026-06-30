@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-06-30T15:45:43.214Z",
-  "totalErrors": 10,
+  "buildTime": "2026-06-30T15:49:59.869Z",
+  "totalErrors": 9,
   "configErrors": [],
   "sources": [
     {
@@ -157,19 +157,12 @@
       "error": "Error: HTTP 403: "
     }
   ],
-  "geocodeErrors": [
-    {
-      "type": "GeocodeError",
-      "location": "Guard & Grace",
-      "source": "downtown-houston-events",
-      "reason": "Nominatim returned no results"
-    }
-  ],
+  "geocodeErrors": [],
   "geoStats": {
     "totalEvents": 2005,
     "eventsWithGeo": 1722,
     "eventsWithoutGeo": 283,
-    "geocodeErrors": 1
+    "geocodeErrors": 0
   },
   "uncertainEvents": [],
   "uncertaintyStats": {
