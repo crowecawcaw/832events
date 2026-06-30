@@ -1132,15 +1132,27 @@
   },
   {
     "name": "Sawyer Yards / Silver Street Studios",
-    "status": "investigating",
-    "platform": "ctycms (custom CMS)",
+    "status": "added",
+    "platform": "Custom HTML (City CMS)",
     "url": "https://www.sawyeryards.com/events/upcoming-events",
     "tags": [
       "Art",
       "First Ward"
     ],
     "firstSeen": "2026-06-15",
-    "lastChecked": "2026-06-15"
+    "lastChecked": "2026-06-30",
+    "pr": "feature/source-discovery-2026-06-30",
+    "impl": {
+      "type": "custom",
+      "observedEventCount": 31,
+      "builtEventCount": 31,
+      "note": "Custom HTMLRipper for City CMS platform; 31 events from artist collective and gallery space",
+      "geo": {
+        "lat": 29.7653,
+        "lng": -95.4099,
+        "label": "Sawyer Yards / Silver Street Studios, 2101 Winter Street, Houston, TX 77007"
+      }
+    }
   },
   {
     "name": "Scout Bar",
