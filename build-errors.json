@@ -1,5 +1,5 @@
 {
-  "buildTime": "2026-06-30T15:49:59.869Z",
+  "buildTime": "2026-07-01T01:51:02.774Z",
   "totalErrors": 9,
   "configErrors": [],
   "sources": [
@@ -159,8 +159,8 @@
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 2005,
-    "eventsWithGeo": 1722,
+    "totalEvents": 1981,
+    "eventsWithGeo": 1698,
     "eventsWithoutGeo": 283,
     "geocodeErrors": 0
   },
@@ -601,10 +601,10 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1186,
-    "totalEvents": 2005,
+    "eventsWithImage": 1187,
+    "totalEvents": 1981,
     "venuesWithImage": 0,
-    "totalVenues": 44,
+    "totalVenues": 40,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -684,13 +684,6 @@
         "name": "eureka-heights-brew-co",
         "label": "Eureka Heights Brewery, 2454 Sawyer St, Houston, TX 77007",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Eureka%20Heights%20Brewery%2C%202454%20Sawyer%20St%2C%20Houston%2C%20TX%2077007"
-      },
-      {
-        "source": "ripper",
-        "name": "good-on-paper-bookshop",
-        "label": "Good on Paper Books, 250 W 19th St Suite D, Houston, TX 77008",
-        "url": "https://www.goodonpaperbooks.com/events",
-        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Good%20on%20Paper%20Books%2C%20250%20W%2019th%20St%20Suite%20D%2C%20Houston%2C%20TX%2077008"
       },
       {
         "source": "ripper",
@@ -774,13 +767,6 @@
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Inprint%20Houston%2C%201520%20W%20Main%20St%2C%20Houston%2C%20TX%2077006"
       },
       {
-        "source": "external",
-        "name": "ion-district",
-        "label": "Ion District, 4201 Main St, Houston, TX 77002",
-        "url": "https://iondistrict.com/events/",
-        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ion%20District%2C%204201%20Main%20St%2C%20Houston%2C%20TX%2077002"
-      },
-      {
         "source": "ripper",
         "name": "kindred-stories",
         "label": "Kindred Stories, 2304 Stuart St, Houston, TX 77004",
@@ -802,25 +788,11 @@
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Lawndale%20Art%20Center%2C%204912%20Main%20St%2C%20Houston%2C%20TX%2077002"
       },
       {
-        "source": "external",
-        "name": "levy-park-houston",
-        "label": "Levy Park, 3801 Main St, Houston, TX 77002",
-        "url": "https://www.levyparkhouston.org/calendar/",
-        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Levy%20Park%2C%203801%20Main%20St%2C%20Houston%2C%20TX%2077002"
-      },
-      {
         "source": "ripper",
         "name": "mcgonigels-mucky-duck",
         "label": "McGonigel's Mucky Duck, 2425 Norfolk St, Houston, TX 77098",
         "url": "https://mcgonigels.com/",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=McGonigel's%20Mucky%20Duck%2C%202425%20Norfolk%20St%2C%20Houston%2C%20TX%2077098"
-      },
-      {
-        "source": "ripper",
-        "name": "murder-by-the-book",
-        "label": "Murder By The Book, 2342 Bissonnet St, Houston, TX 77005",
-        "url": "https://www.murderbooks.com/events",
-        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Murder%20By%20The%20Book%2C%202342%20Bissonnet%20St%2C%20Houston%2C%20TX%2077005"
       },
       {
         "source": "ripper",
@@ -1537,146 +1509,6 @@
         "eventId": "zumba-2026-07-02",
         "summary": "Zumba",
         "date": "2026-07-02T18:30-05:00[America/Chicago]"
-      },
-      {
-        "source": "good-on-paper-bookshop",
-        "eventId": "acotar-midnight-release-party-2026-06-24-ec8d2a1d",
-        "summary": "ACOTAR Midnight Release Party!",
-        "date": "2026-06-24T00:00-05:00[America/Chicago]",
-        "url": "https://www.goodonpaperbooks.com/events"
-      },
-      {
-        "source": "good-on-paper-bookshop",
-        "eventId": "audiobook-walk-2026-06-06-8a3dce97",
-        "summary": "Audiobook Walk",
-        "date": "2026-06-06T10:30-05:00[America/Chicago]",
-        "url": "https://www.goodonpaperbooks.com/events"
-      },
-      {
-        "source": "good-on-paper-bookshop",
-        "eventId": "book-buffet-book-club-2026-06-24-d1ed9d94",
-        "summary": "Book Buffet Book Club",
-        "date": "2026-06-24T18:30-05:00[America/Chicago]",
-        "url": "https://www.goodonpaperbooks.com/events"
-      },
-      {
-        "source": "good-on-paper-bookshop",
-        "eventId": "books-bourbon-2026-06-17-7219e448",
-        "summary": "Books & Bourbon",
-        "date": "2026-06-17T19:30-05:00[America/Chicago]",
-        "url": "https://www.goodonpaperbooks.com/events"
-      },
-      {
-        "source": "good-on-paper-bookshop",
-        "eventId": "camp-bookbound-sidequest-bakery-theme-2026-06-29-2ea2ef41",
-        "summary": "CAMP BOOKBOUND SIDEQUEST: Bakery Theme",
-        "date": "2026-06-29T13:00-05:00[America/Chicago]",
-        "url": "https://www.goodonpaperbooks.com/events"
-      },
-      {
-        "source": "good-on-paper-bookshop",
-        "eventId": "camp-bookbound-sidequest-beach-theme-2026-06-01-da58236b",
-        "summary": "CAMP BOOKBOUND SIDEQUEST: Beach Theme",
-        "date": "2026-06-01T13:00-05:00[America/Chicago]",
-        "url": "https://www.goodonpaperbooks.com/events"
-      },
-      {
-        "source": "good-on-paper-bookshop",
-        "eventId": "camp-bookbound-sidequest-magic-theme-2026-06-15-fee96075",
-        "summary": "CAMP BOOKBOUND SIDEQUEST: Magic Theme",
-        "date": "2026-06-15T13:00-05:00[America/Chicago]",
-        "url": "https://www.goodonpaperbooks.com/events"
-      },
-      {
-        "source": "good-on-paper-bookshop",
-        "eventId": "glenton-richards-author-talk-2026-06-20-7df75dbb",
-        "summary": "Glenton Richards Author Talk",
-        "date": "2026-06-20T14:30-05:00[America/Chicago]",
-        "url": "https://www.goodonpaperbooks.com/events"
-      },
-      {
-        "source": "good-on-paper-bookshop",
-        "eventId": "grand-reopening-celebrate-our-expansion-with-us-2026-06-20-f5acce21",
-        "summary": "Grand Reopening: Celebrate Our Expansion with Us!",
-        "date": "2026-06-20T10:00-05:00[America/Chicago]",
-        "url": "https://www.goodonpaperbooks.com/events"
-      },
-      {
-        "source": "good-on-paper-bookshop",
-        "eventId": "june-craft-night-2026-06-16-b4c89381",
-        "summary": "June Craft Night",
-        "date": "2026-06-16T19:00-05:00[America/Chicago]",
-        "url": "https://www.goodonpaperbooks.com/events"
-      },
-      {
-        "source": "good-on-paper-bookshop",
-        "eventId": "little-listeners-children-s-storytime-2026-06-21-1d7ec3b6",
-        "summary": "Little Listeners Children's Storytime",
-        "date": "2026-06-21T12:30-05:00[America/Chicago]",
-        "url": "https://www.goodonpaperbooks.com/events"
-      },
-      {
-        "source": "good-on-paper-bookshop",
-        "eventId": "little-listeners-with-sanyu-ntanda-2026-06-07-b11b98dd",
-        "summary": "Little Listeners with Sanyu Ntanda",
-        "date": "2026-06-07T12:30-05:00[America/Chicago]",
-        "url": "https://www.goodonpaperbooks.com/events"
-      },
-      {
-        "source": "good-on-paper-bookshop",
-        "eventId": "novel-romantics-book-club-2026-06-04-db48c92d",
-        "summary": "Novel Romantics Book Club",
-        "date": "2026-06-04T19:30-05:00[America/Chicago]",
-        "url": "https://www.goodonpaperbooks.com/events"
-      },
-      {
-        "source": "good-on-paper-bookshop",
-        "eventId": "queer-powerpoint-night-2026-06-10-87eb2fea",
-        "summary": "Queer Powerpoint Night",
-        "date": "2026-06-10T19:30-05:00[America/Chicago]",
-        "url": "https://www.goodonpaperbooks.com/events"
-      },
-      {
-        "source": "good-on-paper-bookshop",
-        "eventId": "silent-read-in-2026-06-25-0872bed5",
-        "summary": "Silent Read In",
-        "date": "2026-06-25T19:30-05:00[America/Chicago]",
-        "url": "https://www.goodonpaperbooks.com/events"
-      },
-      {
-        "source": "good-on-paper-bookshop",
-        "eventId": "small-business-stroll-2026-06-11-a9a997c5",
-        "summary": "Small Business Stroll",
-        "date": "2026-06-11T16:00-05:00[America/Chicago]",
-        "url": "https://www.goodonpaperbooks.com/events"
-      },
-      {
-        "source": "good-on-paper-bookshop",
-        "eventId": "the-past-tense-book-club-2026-06-30-40f620e2",
-        "summary": "The Past Tense Book Club",
-        "date": "2026-06-30T19:30-05:00[America/Chicago]",
-        "url": "https://www.goodonpaperbooks.com/events"
-      },
-      {
-        "source": "good-on-paper-bookshop",
-        "eventId": "they-built-me-for-freedom-storytime-2026-06-12-f5a5e149",
-        "summary": "They Built Me for Freedom Storytime",
-        "date": "2026-06-12T11:30-05:00[America/Chicago]",
-        "url": "https://www.goodonpaperbooks.com/events"
-      },
-      {
-        "source": "good-on-paper-bookshop",
-        "eventId": "timeless-book-club-2026-06-09-a9195533",
-        "summary": "Timeless Book Club",
-        "date": "2026-06-09T19:30-05:00[America/Chicago]",
-        "url": "https://www.goodonpaperbooks.com/events"
-      },
-      {
-        "source": "good-on-paper-bookshop",
-        "eventId": "ya-book-club-2026-06-02-bff0875e",
-        "summary": "YA Book Club",
-        "date": "2026-06-02T19:30-05:00[America/Chicago]",
-        "url": "https://www.goodonpaperbooks.com/events"
       },
       {
         "source": "houston-center-for-photography",
@@ -4006,7 +3838,7 @@
   "costStats": {
     "eventsWithCost": 580,
     "freeEvents": 450,
-    "totalEvents": 2005,
+    "totalEvents": 1981,
     "unresolvable": 0
   },
   "costGaps": [
@@ -4128,6 +3960,13 @@
       "summary": "CODICIADO - Así Es La Vida Tour",
       "date": "2026-08-28T20:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/codiciado-asi-es-la-vida-tour-houston-texas-08-28-2026/event/3A0063841A2EEFB9"
+    },
+    {
+      "source": "bayou-music-center",
+      "eventId": "tm-G5dIZ_1L6gTmm",
+      "summary": "The STARS Tour featuring Anne Wilson",
+      "date": "2026-09-30T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/the-stars-tour-featuring-anne-wilson-houston-texas-09-30-2026/event/3A0064A7C7D7FBAE"
     },
     {
       "source": "bayou-music-center",
@@ -4824,146 +4663,6 @@
       "date": "2026-07-02T18:30-05:00[America/Chicago]"
     },
     {
-      "source": "good-on-paper-bookshop",
-      "eventId": "acotar-midnight-release-party-2026-06-24-ec8d2a1d",
-      "summary": "ACOTAR Midnight Release Party!",
-      "date": "2026-06-24T00:00-05:00[America/Chicago]",
-      "url": "https://www.goodonpaperbooks.com/events"
-    },
-    {
-      "source": "good-on-paper-bookshop",
-      "eventId": "audiobook-walk-2026-06-06-8a3dce97",
-      "summary": "Audiobook Walk",
-      "date": "2026-06-06T10:30-05:00[America/Chicago]",
-      "url": "https://www.goodonpaperbooks.com/events"
-    },
-    {
-      "source": "good-on-paper-bookshop",
-      "eventId": "book-buffet-book-club-2026-06-24-d1ed9d94",
-      "summary": "Book Buffet Book Club",
-      "date": "2026-06-24T18:30-05:00[America/Chicago]",
-      "url": "https://www.goodonpaperbooks.com/events"
-    },
-    {
-      "source": "good-on-paper-bookshop",
-      "eventId": "books-bourbon-2026-06-17-7219e448",
-      "summary": "Books & Bourbon",
-      "date": "2026-06-17T19:30-05:00[America/Chicago]",
-      "url": "https://www.goodonpaperbooks.com/events"
-    },
-    {
-      "source": "good-on-paper-bookshop",
-      "eventId": "camp-bookbound-sidequest-bakery-theme-2026-06-29-2ea2ef41",
-      "summary": "CAMP BOOKBOUND SIDEQUEST: Bakery Theme",
-      "date": "2026-06-29T13:00-05:00[America/Chicago]",
-      "url": "https://www.goodonpaperbooks.com/events"
-    },
-    {
-      "source": "good-on-paper-bookshop",
-      "eventId": "camp-bookbound-sidequest-beach-theme-2026-06-01-da58236b",
-      "summary": "CAMP BOOKBOUND SIDEQUEST: Beach Theme",
-      "date": "2026-06-01T13:00-05:00[America/Chicago]",
-      "url": "https://www.goodonpaperbooks.com/events"
-    },
-    {
-      "source": "good-on-paper-bookshop",
-      "eventId": "camp-bookbound-sidequest-magic-theme-2026-06-15-fee96075",
-      "summary": "CAMP BOOKBOUND SIDEQUEST: Magic Theme",
-      "date": "2026-06-15T13:00-05:00[America/Chicago]",
-      "url": "https://www.goodonpaperbooks.com/events"
-    },
-    {
-      "source": "good-on-paper-bookshop",
-      "eventId": "glenton-richards-author-talk-2026-06-20-7df75dbb",
-      "summary": "Glenton Richards Author Talk",
-      "date": "2026-06-20T14:30-05:00[America/Chicago]",
-      "url": "https://www.goodonpaperbooks.com/events"
-    },
-    {
-      "source": "good-on-paper-bookshop",
-      "eventId": "grand-reopening-celebrate-our-expansion-with-us-2026-06-20-f5acce21",
-      "summary": "Grand Reopening: Celebrate Our Expansion with Us!",
-      "date": "2026-06-20T10:00-05:00[America/Chicago]",
-      "url": "https://www.goodonpaperbooks.com/events"
-    },
-    {
-      "source": "good-on-paper-bookshop",
-      "eventId": "june-craft-night-2026-06-16-b4c89381",
-      "summary": "June Craft Night",
-      "date": "2026-06-16T19:00-05:00[America/Chicago]",
-      "url": "https://www.goodonpaperbooks.com/events"
-    },
-    {
-      "source": "good-on-paper-bookshop",
-      "eventId": "little-listeners-children-s-storytime-2026-06-21-1d7ec3b6",
-      "summary": "Little Listeners Children's Storytime",
-      "date": "2026-06-21T12:30-05:00[America/Chicago]",
-      "url": "https://www.goodonpaperbooks.com/events"
-    },
-    {
-      "source": "good-on-paper-bookshop",
-      "eventId": "little-listeners-with-sanyu-ntanda-2026-06-07-b11b98dd",
-      "summary": "Little Listeners with Sanyu Ntanda",
-      "date": "2026-06-07T12:30-05:00[America/Chicago]",
-      "url": "https://www.goodonpaperbooks.com/events"
-    },
-    {
-      "source": "good-on-paper-bookshop",
-      "eventId": "novel-romantics-book-club-2026-06-04-db48c92d",
-      "summary": "Novel Romantics Book Club",
-      "date": "2026-06-04T19:30-05:00[America/Chicago]",
-      "url": "https://www.goodonpaperbooks.com/events"
-    },
-    {
-      "source": "good-on-paper-bookshop",
-      "eventId": "queer-powerpoint-night-2026-06-10-87eb2fea",
-      "summary": "Queer Powerpoint Night",
-      "date": "2026-06-10T19:30-05:00[America/Chicago]",
-      "url": "https://www.goodonpaperbooks.com/events"
-    },
-    {
-      "source": "good-on-paper-bookshop",
-      "eventId": "silent-read-in-2026-06-25-0872bed5",
-      "summary": "Silent Read In",
-      "date": "2026-06-25T19:30-05:00[America/Chicago]",
-      "url": "https://www.goodonpaperbooks.com/events"
-    },
-    {
-      "source": "good-on-paper-bookshop",
-      "eventId": "small-business-stroll-2026-06-11-a9a997c5",
-      "summary": "Small Business Stroll",
-      "date": "2026-06-11T16:00-05:00[America/Chicago]",
-      "url": "https://www.goodonpaperbooks.com/events"
-    },
-    {
-      "source": "good-on-paper-bookshop",
-      "eventId": "the-past-tense-book-club-2026-06-30-40f620e2",
-      "summary": "The Past Tense Book Club",
-      "date": "2026-06-30T19:30-05:00[America/Chicago]",
-      "url": "https://www.goodonpaperbooks.com/events"
-    },
-    {
-      "source": "good-on-paper-bookshop",
-      "eventId": "they-built-me-for-freedom-storytime-2026-06-12-f5a5e149",
-      "summary": "They Built Me for Freedom Storytime",
-      "date": "2026-06-12T11:30-05:00[America/Chicago]",
-      "url": "https://www.goodonpaperbooks.com/events"
-    },
-    {
-      "source": "good-on-paper-bookshop",
-      "eventId": "timeless-book-club-2026-06-09-a9195533",
-      "summary": "Timeless Book Club",
-      "date": "2026-06-09T19:30-05:00[America/Chicago]",
-      "url": "https://www.goodonpaperbooks.com/events"
-    },
-    {
-      "source": "good-on-paper-bookshop",
-      "eventId": "ya-book-club-2026-06-02-bff0875e",
-      "summary": "YA Book Club",
-      "date": "2026-06-02T19:30-05:00[America/Chicago]",
-      "url": "https://www.goodonpaperbooks.com/events"
-    },
-    {
       "source": "heights-mercantile",
       "eventId": "691de9018b84db63a8ddcf3b",
       "summary": "Heights Mercantile Farmer's Market",
@@ -5277,6 +4976,13 @@
       "summary": "Kandi Burruss - I Do. I Did. I'm Done (Ages 21+ Event)",
       "date": "2026-08-23T18:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/kandi-burruss-i-do-i-did-houston-texas-08-23-2026/event/3A0064D0A16E7F80"
+    },
+    {
+      "source": "house-of-blues-houston",
+      "eventId": "tm-G5dIZ_uLYGKDG",
+      "summary": "Billy Currington",
+      "date": "2026-09-19T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/billy-currington-houston-texas-09-19-2026/event/3A0064D7F0313ECC"
     },
     {
       "source": "house-of-blues-houston",
@@ -6770,13 +6476,6 @@
       "url": "https://www.mcgonigels.com/shows/john-evans-early-show-22/"
     },
     {
-      "source": "murder-by-the-book",
-      "eventId": "christina-dodd-in-conversation-with-angelina-m-lopez-2026-06-30",
-      "summary": "Christina Dodd in conversation with Angelina M. Lopez",
-      "date": "2026-06-30T18:30-05:00[America/Chicago]",
-      "url": "https://www.murderbooks.com/Dodd"
-    },
-    {
       "source": "post-houston",
       "eventId": "america250-4th-of-july-celebration-2026-07-04-267f841a",
       "summary": "America250 4th of July Celebration",
@@ -7314,6 +7013,13 @@
       "summary": "Francisco Ramos",
       "date": "2026-08-29T21:15-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/francisco-ramos-houston-texas-08-29-2026/event/3A00648AD059ED64"
+    },
+    {
+      "source": "punch-line-comedy-club",
+      "eventId": "tm-G5dIZ_FloqXDT",
+      "summary": "Kevin Sullivan",
+      "date": "2026-09-30T19:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/kevin-sullivan-houston-texas-09-30-2026/event/3A00648AD177EEFF"
     },
     {
       "source": "punch-line-comedy-club",
@@ -10228,6 +9934,13 @@
     },
     {
       "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_G6opjFt",
+      "summary": "Dana and Alden: Papa's Boat Tour",
+      "date": "2026-09-30T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/dana-and-alden-papas-boat-tour-houston-texas-09-30-2026/event/3A0064C1D159C229"
+    },
+    {
+      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_G6uklgL",
       "summary": "American Football",
       "date": "2026-09-08T19:00-05:00[America/Chicago]",
@@ -10347,6 +10060,13 @@
     },
     {
       "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_uM5nuwd",
+      "summary": "Older Brother Core Night",
+      "date": "2026-07-17T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/older-brother-core-night-houston-texas-07-17-2026/event/3A0064DDCBA8DC83"
+    },
+    {
+      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_uQbA6Je",
       "summary": "Automatic",
       "date": "2026-09-13T19:00-05:00[America/Chicago]",
@@ -10420,7 +10140,7 @@
     {
       "name": "bayou-music-center-bayou-music-center",
       "type": "Ripper",
-      "events": 10,
+      "events": 11,
       "expectEmpty": false,
       "source": "bayou-music-center"
     },
@@ -10504,7 +10224,7 @@
     {
       "name": "house-of-blues-houston-house-of-blues-houston",
       "type": "Ripper",
-      "events": 41,
+      "events": 42,
       "expectEmpty": false,
       "source": "house-of-blues-houston"
     },
@@ -10616,7 +10336,7 @@
     {
       "name": "punch-line-comedy-club-punch-line-comedy-club",
       "type": "Ripper",
-      "events": 82,
+      "events": 83,
       "expectEmpty": false,
       "source": "punch-line-comedy-club"
     },
@@ -10693,7 +10413,7 @@
     {
       "name": "white-oak-music-hall-white-oak-music-hall",
       "type": "Ripper",
-      "events": 77,
+      "events": 79,
       "expectEmpty": false,
       "source": "white-oak-music-hall"
     },
@@ -10707,7 +10427,7 @@
     {
       "name": "tag-the-heights",
       "type": "Aggregate",
-      "events": 79,
+      "events": 80,
       "expectEmpty": false,
       "source": "tag-the-heights"
     },
@@ -10728,21 +10448,21 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 668,
+      "events": 667,
       "expectEmpty": false,
       "source": "tag-music"
     },
     {
       "name": "tag-nightlife",
       "type": "Aggregate",
-      "events": 37,
+      "events": 38,
       "expectEmpty": false,
       "source": "tag-nightlife"
     },
     {
       "name": "tag-downtown",
       "type": "Aggregate",
-      "events": 271,
+      "events": 273,
       "expectEmpty": false,
       "source": "tag-downtown"
     },
@@ -10756,14 +10476,14 @@
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 558,
+      "events": 559,
       "expectEmpty": false,
       "source": "tag-community"
     },
     {
       "name": "tag-montrose",
       "type": "Aggregate",
-      "events": 367,
+      "events": 362,
       "expectEmpty": false,
       "source": "tag-montrose"
     },
@@ -10784,7 +10504,7 @@
     {
       "name": "tag-midtown",
       "type": "Aggregate",
-      "events": 20,
+      "events": 21,
       "expectEmpty": false,
       "source": "tag-midtown"
     },
@@ -10917,7 +10637,7 @@
     {
       "name": "tag-comedy",
       "type": "Aggregate",
-      "events": 195,
+      "events": 196,
       "expectEmpty": false,
       "source": "tag-comedy"
     },
@@ -10987,7 +10707,7 @@
     {
       "name": "tag-near-northside",
       "type": "Aggregate",
-      "events": 156,
+      "events": 158,
       "expectEmpty": false,
       "source": "tag-near-northside"
     },
@@ -11015,7 +10735,7 @@
     {
       "name": "tag-entertainment",
       "type": "Aggregate",
-      "events": 82,
+      "events": 83,
       "expectEmpty": false,
       "source": "tag-entertainment"
     },
@@ -11113,7 +10833,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 2081,
+      "events": 2082,
       "expectEmpty": false,
       "source": "tag-all"
     },
