@@ -2246,8 +2246,8 @@
   },
   {
     "name": "Rooftop Cinema Club Houston",
-    "status": "candidate",
-    "platform": "Website + Fever ticketing",
+    "status": "added",
+    "platform": "Custom HTML ripper",
     "url": "https://rooftopcinemaclub.com/us/houston/uptown",
     "tags": [
       "Cinema",
@@ -2256,12 +2256,22 @@
     ],
     "firstSeen": "2026-07-01",
     "lastChecked": "2026-07-01",
-    "notes": "Open-air cinema at 1700 Post Oak Blvd, BLVD Place (5th floor). Two screens with year-round programming: first-run films, cult classics, drag nights, queer cinema, family matinées. Approximately 120+ events/year. Website calendar with event listings."
+    "pr": "feature/source-discovery-2026-07-01",
+    "impl": {
+      "type": "custom",
+      "observedEventCount": 10,
+      "builtEventCount": 10,
+      "geo": {
+        "lat": 29.7496,
+        "lng": -95.4618,
+        "label": "Rooftop Cinema Club Houston, 1700 Post Oak Boulevard, Houston, TX 77056"
+      }
+    }
   },
   {
     "name": "River Oaks Theatre Houston",
-    "status": "candidate",
-    "platform": "Website + Eventive ticketing",
+    "status": "added",
+    "platform": "Custom HTML ripper (Eventive-based)",
     "url": "https://www.theriveroakstheatre.com/",
     "tags": [
       "Cinema",
@@ -2270,12 +2280,22 @@
     ],
     "firstSeen": "2026-07-01",
     "lastChecked": "2026-07-01",
-    "notes": "Historic dine-in cinema reopened October 2024. Located in River Oaks Shopping Center. Programs: arthouse films, awards contenders, classic cinema, live events (comedy, music). Full bar and recliner seating. Approximately 60+ events/month estimated."
+    "pr": "feature/source-discovery-2026-07-01",
+    "impl": {
+      "type": "custom",
+      "proxy": true,
+      "note": "Custom HTML ripper for Eventive-based event listings; requires proxy:true for Browserbase JS execution in CI",
+      "geo": {
+        "lat": 29.7318,
+        "lng": -95.4186,
+        "label": "River Oaks Theatre, River Oaks Shopping Center, Houston, TX 77019"
+      }
+    }
   },
   {
     "name": "Arthouse Houston",
-    "status": "candidate",
-    "platform": "Eventive (nonprofit cinema platform)",
+    "status": "added",
+    "platform": "Custom HTML ripper (Eventive)",
     "url": "https://arthousehtx.org/",
     "tags": [
       "Cinema",
@@ -2284,12 +2304,18 @@
     ],
     "firstSeen": "2026-07-01",
     "lastChecked": "2026-07-01",
-    "notes": "501(c)(3) nonprofit founded 2021 for arthouse cinema culture. Manages film programming via Eventive. Recently purchased historic Garden Oaks Theater. Curates cinema celebrating Wes Anderson and Richard Linklater. Approximately 20-30 events/month across venues."
+    "pr": "feature/source-discovery-2026-07-01",
+    "impl": {
+      "type": "custom",
+      "proxy": true,
+      "note": "Custom HTML ripper for Eventive ticketing platform; nonprofit multi-location cinema; requires proxy:true",
+      "geo": null
+    }
   },
   {
     "name": "The DeLUXE Theater Houston",
-    "status": "candidate",
-    "platform": "Website + Tix.com ticketing",
+    "status": "added",
+    "platform": "Custom HTML ripper (WordPress REST API)",
     "url": "https://thedeluxetheater.com/",
     "tags": [
       "Theater",
@@ -2298,12 +2324,23 @@
     ],
     "firstSeen": "2026-07-01",
     "lastChecked": "2026-07-01",
-    "notes": "Historic Black theater (opened 1941, restored 2015). Located at 3303 Lyons Ave, Fifth Ward. 125-seat proscenium theater. Diverse programming: theater, dance, music, film, community events, visual art, workshops. Website calendar with Tix.com ticketing. Approximately 50+ events/month."
+    "pr": "feature/source-discovery-2026-07-01",
+    "impl": {
+      "type": "custom",
+      "observedEventCount": 348,
+      "builtEventCount": 348,
+      "note": "Custom HTML ripper for WordPress Modern Events Calendar REST API; 348 events extracted including theater, dance, music, film, community programming",
+      "geo": {
+        "lat": 29.7186,
+        "lng": -95.3468,
+        "label": "The DeLUXE Theater, 3303 Lyons Avenue, Houston, TX 77020"
+      }
+    }
   },
   {
     "name": "Children's Museum Houston",
-    "status": "candidate",
-    "platform": "Custom website calendar",
+    "status": "added",
+    "platform": "Custom HTML ripper (Webflow)",
     "url": "https://www.cmhouston.org/events",
     "tags": [
       "Family",
@@ -2313,6 +2350,17 @@
     ],
     "firstSeen": "2026-07-01",
     "lastChecked": "2026-07-01",
-    "notes": "Major Houston institution at 1500 Binz St. Free Family Night Thursdays 5-8pm. Regular special events, character appearances, seasonal programming. Hours: Wed-Sat 10am-6pm, Thu 10am-8pm, Sun 12-6pm. Approximately 40+ events/month estimated. No public ICS feed apparent."
+    "pr": "feature/source-discovery-2026-07-01",
+    "impl": {
+      "type": "custom",
+      "observedEventCount": 49,
+      "builtEventCount": 49,
+      "note": "Custom HTML ripper for Webflow-based calendar; 49 events including Free Family Nights, summer programs, workshops, cultural events",
+      "geo": {
+        "lat": 29.7195,
+        "lng": -95.3872,
+        "label": "Children's Museum Houston, 1500 Binz Street, Houston, TX 77004"
+      }
+    }
   }
 ]
