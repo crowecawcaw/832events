@@ -2170,5 +2170,78 @@
     "firstSeen": "2026-06-28",
     "lastChecked": "2026-06-28",
     "notes": "Tribe Events ICS endpoints return HTML instead of iCalendar format; source appears to use Tribe Events but ICS feed is not functional"
+  },
+  {
+    "name": "Energy Corridor Farmers Market",
+    "status": "added",
+    "platform": "Tribe Events (ICS feed)",
+    "url": "https://energycorridor.org/energy-corridor-farmers-market",
+    "tags": [
+      "FarmersMarket",
+      "Community",
+      "Energy Corridor"
+    ],
+    "firstSeen": "2026-07-01",
+    "lastChecked": "2026-07-01",
+    "pr": "TBD",
+    "impl": {
+      "type": "external",
+      "icsUrl": "https://energycorridor.org/events/?ical=1",
+      "observedEventCount": 3
+    }
+  },
+  {
+    "name": "CCS Houston",
+    "status": "added",
+    "platform": "Tribe Events (ICS feed)",
+    "url": "https://ccs-houston.com/events/",
+    "tags": [
+      "Art",
+      "Community"
+    ],
+    "firstSeen": "2026-07-01",
+    "lastChecked": "2026-07-01",
+    "pr": "TBD",
+    "impl": {
+      "type": "external",
+      "icsUrl": "https://ccs-houston.com/events/?ical=1",
+      "observedEventCount": 13
+    }
+  },
+  {
+    "name": "Houston Food Bank",
+    "status": "added",
+    "platform": "Tribe Events (ICS feed)",
+    "url": "https://www.houstonfoodbank.org/upcomingevent/",
+    "tags": [
+      "Community",
+      "Medical Center"
+    ],
+    "firstSeen": "2026-07-01",
+    "lastChecked": "2026-07-01",
+    "pr": "TBD",
+    "impl": {
+      "type": "external",
+      "icsUrl": "https://www.houstonfoodbank.org/upcomingevents/?ical=1",
+      "observedEventCount": 12
+    }
+  },
+  {
+    "name": "Comedy Calendar",
+    "status": "added",
+    "platform": "Tribe Events (ICS feed)",
+    "url": "https://comedycalendar.com/",
+    "tags": [
+      "Comedy",
+      "Nightlife"
+    ],
+    "firstSeen": "2026-07-01",
+    "lastChecked": "2026-07-01",
+    "pr": "TBD",
+    "impl": {
+      "type": "external",
+      "icsUrl": "https://comedycalendar.com/events/?ical=1",
+      "observedEventCount": 30
+    }
   }
 ]
