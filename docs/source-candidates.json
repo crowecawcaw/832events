@@ -2243,5 +2243,124 @@
       "icsUrl": "https://comedycalendar.com/events/?ical=1",
       "observedEventCount": 30
     }
+  },
+  {
+    "name": "Rooftop Cinema Club Houston",
+    "status": "added",
+    "platform": "Custom HTML ripper",
+    "url": "https://rooftopcinemaclub.com/us/houston/uptown",
+    "tags": [
+      "Cinema",
+      "Entertainment",
+      "Uptown"
+    ],
+    "firstSeen": "2026-07-01",
+    "lastChecked": "2026-07-01",
+    "pr": "feature/source-discovery-2026-07-01",
+    "impl": {
+      "type": "custom",
+      "observedEventCount": 10,
+      "builtEventCount": 10,
+      "geo": {
+        "lat": 29.7496,
+        "lng": -95.4618,
+        "label": "Rooftop Cinema Club Houston, 1700 Post Oak Boulevard, Houston, TX 77056"
+      }
+    }
+  },
+  {
+    "name": "River Oaks Theatre Houston",
+    "status": "added",
+    "platform": "Custom HTML ripper (Eventive-based)",
+    "url": "https://www.theriveroakstheatre.com/",
+    "tags": [
+      "Cinema",
+      "Theater",
+      "RiverOaks"
+    ],
+    "firstSeen": "2026-07-01",
+    "lastChecked": "2026-07-01",
+    "pr": "feature/source-discovery-2026-07-01",
+    "impl": {
+      "type": "custom",
+      "proxy": true,
+      "note": "Custom HTML ripper for Eventive-based event listings; requires proxy:true for Browserbase JS execution in CI",
+      "geo": {
+        "lat": 29.7318,
+        "lng": -95.4186,
+        "label": "River Oaks Theatre, River Oaks Shopping Center, Houston, TX 77019"
+      }
+    }
+  },
+  {
+    "name": "Arthouse Houston",
+    "status": "added",
+    "platform": "Custom HTML ripper (Eventive)",
+    "url": "https://arthousehtx.org/",
+    "tags": [
+      "Cinema",
+      "Arts",
+      "Nonprofit"
+    ],
+    "firstSeen": "2026-07-01",
+    "lastChecked": "2026-07-01",
+    "pr": "feature/source-discovery-2026-07-01",
+    "impl": {
+      "type": "custom",
+      "proxy": true,
+      "note": "Custom HTML ripper for Eventive ticketing platform; nonprofit multi-location cinema; requires proxy:true",
+      "geo": null
+    }
+  },
+  {
+    "name": "The DeLUXE Theater Houston",
+    "status": "added",
+    "platform": "Custom HTML ripper (WordPress REST API)",
+    "url": "https://thedeluxetheater.com/",
+    "tags": [
+      "Theater",
+      "Performance",
+      "FifthWard"
+    ],
+    "firstSeen": "2026-07-01",
+    "lastChecked": "2026-07-01",
+    "pr": "feature/source-discovery-2026-07-01",
+    "impl": {
+      "type": "custom",
+      "observedEventCount": 348,
+      "builtEventCount": 348,
+      "note": "Custom HTML ripper for WordPress Modern Events Calendar REST API; 348 events extracted including theater, dance, music, film, community programming",
+      "geo": {
+        "lat": 29.7186,
+        "lng": -95.3468,
+        "label": "The DeLUXE Theater, 3303 Lyons Avenue, Houston, TX 77020"
+      }
+    }
+  },
+  {
+    "name": "Children's Museum Houston",
+    "status": "added",
+    "platform": "Custom HTML ripper (Webflow)",
+    "url": "https://www.cmhouston.org/events",
+    "tags": [
+      "Family",
+      "Kids",
+      "Museum",
+      "MuseumDistrict"
+    ],
+    "firstSeen": "2026-07-01",
+    "lastChecked": "2026-07-01",
+    "pr": "feature/source-discovery-2026-07-01",
+    "impl": {
+      "type": "custom",
+      "observedEventCount": 49,
+      "builtEventCount": 49,
+      "note": "Custom HTML ripper for Webflow-based calendar; 49 events including Free Family Nights, summer programs, workshops, cultural events",
+      "geo": {
+        "lat": 29.7195,
+        "lng": -95.3872,
+        "label": "Children's Museum Houston, 1500 Binz Street, Houston, TX 77004"
+      }
+    }
   }
 ]
