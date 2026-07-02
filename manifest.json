@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T01:50:57.049Z",
+  "lastUpdated": "2026-07-02T02:31:29.327Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -144,6 +144,24 @@
             "Community",
             "Arts",
             "Culture"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "good-on-paper-bookshop",
+      "description": "Good on Paper Books and Stationery",
+      "friendlyLink": "https://www.goodonpaperbooks.com/events",
+      "calendars": [
+        {
+          "name": "good-on-paper-bookshop",
+          "friendlyName": "Good on Paper Books",
+          "icsUrl": "good-on-paper-bookshop-good-on-paper-bookshop.ics",
+          "rssUrl": "good-on-paper-bookshop-good-on-paper-bookshop.rss",
+          "tags": [
+            "Books",
+            "Community",
+            "The Heights"
           ]
         }
       ]
@@ -602,6 +620,30 @@
       ]
     },
     {
+      "name": "ccs-houston",
+      "friendlyName": "CCS Houston",
+      "description": "Comic and creative events in Houston",
+      "icsUrl": "external-ccs-houston.ics",
+      "originalIcsUrl": "https://ccs-houston.com/events/?ical=1",
+      "infoUrl": "https://ccs-houston.com/events/",
+      "tags": [
+        "Art",
+        "Community"
+      ]
+    },
+    {
+      "name": "comedy-calendar",
+      "friendlyName": "Comedy Calendar",
+      "description": "Comedy and entertainment events calendar",
+      "icsUrl": "external-comedy-calendar.ics",
+      "originalIcsUrl": "https://comedycalendar.com/events/?ical=1",
+      "infoUrl": "https://comedycalendar.com/",
+      "tags": [
+        "Comedy",
+        "Nightlife"
+      ]
+    },
+    {
       "name": "diverseworks",
       "friendlyName": "DiverseWorks",
       "description": "Interdisciplinary arts organization presenting experimental visual art, performance, music, and community programs in Houston. Programs include multi-week exhibitions, artist talks, and immersive events.",
@@ -611,6 +653,32 @@
       "tags": [
         "Art",
         "Midtown"
+      ]
+    },
+    {
+      "name": "energy-corridor-farmers-market",
+      "friendlyName": "Energy Corridor Farmers Market",
+      "description": "Farmers market and community events in the Energy Corridor",
+      "icsUrl": "external-energy-corridor-farmers-market.ics",
+      "originalIcsUrl": "https://energycorridor.org/events/?ical=1",
+      "infoUrl": "https://energycorridor.org/energy-corridor-farmers-market",
+      "tags": [
+        "FarmersMarket",
+        "Community",
+        "Energy Corridor"
+      ]
+    },
+    {
+      "name": "erjcc-houston",
+      "friendlyName": "ERJCC Houston",
+      "description": "Educational, cultural and community events at the Jewish community center in Houston",
+      "icsUrl": "external-erjcc-houston.ics",
+      "originalIcsUrl": "https://www.erjcchouston.org/events/?ical=1",
+      "infoUrl": "https://www.erjcchouston.org/events/",
+      "tags": [
+        "Art",
+        "Community",
+        "Museum District"
       ]
     },
     {
@@ -673,6 +741,18 @@
       ]
     },
     {
+      "name": "houston-food-bank",
+      "friendlyName": "Houston Food Bank",
+      "description": "Community events and food-related activities hosted by the Houston Food Bank",
+      "icsUrl": "external-houston-food-bank.ics",
+      "originalIcsUrl": "https://www.houstonfoodbank.org/upcomingevents/?ical=1",
+      "infoUrl": "https://www.houstonfoodbank.org/upcomingevent/",
+      "tags": [
+        "Community",
+        "Medical Center"
+      ]
+    },
+    {
       "name": "houston-heights-association",
       "friendlyName": "Houston Heights Association",
       "icsUrl": "external-houston-heights-association.ics",
@@ -692,6 +772,33 @@
       "tags": [
         "Books",
         "Museum District"
+      ]
+    },
+    {
+      "name": "ion-district",
+      "friendlyName": "Ion District",
+      "description": "Ion District community calendar",
+      "icsUrl": "external-ion-district.ics",
+      "originalIcsUrl": "https://iondistrict.com/events/?ical=1",
+      "infoUrl": "https://iondistrict.com/events/",
+      "tags": [
+        "Community",
+        "Tech",
+        "Midtown"
+      ]
+    },
+    {
+      "name": "levy-park-houston",
+      "friendlyName": "Levy Park Houston",
+      "description": "Levy Park Houston",
+      "icsUrl": "external-levy-park-houston.ics",
+      "originalIcsUrl": "https://www.levyparkhouston.org/events-calendar/?ical=1",
+      "infoUrl": "https://www.levyparkhouston.org/calendar/",
+      "tags": [
+        "Parks",
+        "Community",
+        "Upper Kirby",
+        "Outdoor Recreation"
       ]
     },
     {
@@ -722,6 +829,7 @@
     "Downtown",
     "EaDo",
     "Education",
+    "Energy Corridor",
     "Entertainment",
     "Family",
     "FarmersMarket",
@@ -732,6 +840,7 @@
     "History",
     "Jazz",
     "MakersMarket",
+    "Medical Center",
     "Memorial",
     "Midtown",
     "Montrose",
@@ -747,6 +856,7 @@
     "PerformingArts",
     "Photography",
     "Sports",
+    "Tech",
     "The Heights",
     "Theater",
     "Theatre",

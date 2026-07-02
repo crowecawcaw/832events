@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-01T01:51:02.768Z",
+  "generated": "2026-07-02T02:32:27.809Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -362,6 +362,78 @@
       ]
     },
     {
+      "name": "energy-corridor-farmers-market",
+      "friendlyName": "Energy Corridor Farmers Market",
+      "description": "Farmers market and community events in the Energy Corridor",
+      "url": "https://energycorridor.org/energy-corridor-farmers-market",
+      "tags": [
+        "FarmersMarket",
+        "Community",
+        "Energy Corridor"
+      ],
+      "geo": {
+        "lat": 29.7396,
+        "lng": -95.5128,
+        "label": "Energy Corridor, Houston, TX"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Energy%20Corridor%2C%20Houston%2C%20TX"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "energy-corridor-farmers-market",
+          "friendlyName": "Energy Corridor Farmers Market",
+          "links": {
+            "ics": {
+              "href": "external-energy-corridor-farmers-market.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-energy-corridor-farmers-market.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "erjcc-houston",
+      "friendlyName": "ERJCC Houston",
+      "description": "Educational, cultural and community events at the Jewish community center in Houston",
+      "url": "https://www.erjcchouston.org/events/",
+      "tags": [
+        "Art",
+        "Community",
+        "Museum District"
+      ],
+      "geo": {
+        "lat": 29.7261,
+        "lng": -95.4012,
+        "label": "ERJCC Houston, 5600 North Braeswood Blvd, Houston, TX 77096"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=ERJCC%20Houston%2C%205600%20North%20Braeswood%20Blvd%2C%20Houston%2C%20TX%2077096"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "erjcc-houston",
+          "friendlyName": "ERJCC Houston",
+          "links": {
+            "ics": {
+              "href": "external-erjcc-houston.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-erjcc-houston.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "eureka-heights-brew-co",
       "friendlyName": "Eureka Heights Brewery",
       "description": "Eureka Heights Brewery",
@@ -389,6 +461,42 @@
             },
             "rss": {
               "href": "external-eureka-heights-brew-co.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "good-on-paper-bookshop",
+      "friendlyName": "Good on Paper Books and Stationery",
+      "description": "Good on Paper Books and Stationery",
+      "url": "https://www.goodonpaperbooks.com/events",
+      "tags": [
+        "Books",
+        "Community",
+        "The Heights"
+      ],
+      "geo": {
+        "lat": 29.8096,
+        "lng": -95.3914,
+        "label": "Good on Paper Books, 250 W 19th St Suite D, Houston, TX 77008"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Good%20on%20Paper%20Books%2C%20250%20W%2019th%20St%20Suite%20D%2C%20Houston%2C%20TX%2077008"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "good-on-paper-bookshop",
+          "friendlyName": "Good on Paper Books",
+          "links": {
+            "ics": {
+              "href": "good-on-paper-bookshop-good-on-paper-bookshop.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "good-on-paper-bookshop-good-on-paper-bookshop.rss",
               "type": "application/rss+xml"
             }
           }
@@ -645,6 +753,41 @@
       ]
     },
     {
+      "name": "houston-food-bank",
+      "friendlyName": "Houston Food Bank",
+      "description": "Community events and food-related activities hosted by the Houston Food Bank",
+      "url": "https://www.houstonfoodbank.org/upcomingevent/",
+      "tags": [
+        "Community",
+        "Medical Center"
+      ],
+      "geo": {
+        "lat": 29.7621,
+        "lng": -95.3826,
+        "label": "Houston Food Bank, Houston, TX"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Houston%20Food%20Bank%2C%20Houston%2C%20TX"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "houston-food-bank",
+          "friendlyName": "Houston Food Bank",
+          "links": {
+            "ics": {
+              "href": "external-houston-food-bank.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-houston-food-bank.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "houston-grand-opera",
       "friendlyName": "Houston Grand Opera",
       "description": "Houston Grand Opera",
@@ -788,6 +931,42 @@
       ]
     },
     {
+      "name": "ion-district",
+      "friendlyName": "Ion District",
+      "description": "Ion District community calendar",
+      "url": "https://iondistrict.com/events/",
+      "tags": [
+        "Community",
+        "Tech",
+        "Midtown"
+      ],
+      "geo": {
+        "lat": 29.724,
+        "lng": -95.3905,
+        "label": "Ion District, 4201 Main St, Houston, TX 77002"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Ion%20District%2C%204201%20Main%20St%2C%20Houston%2C%20TX%2077002"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "ion-district",
+          "friendlyName": "Ion District",
+          "links": {
+            "ics": {
+              "href": "external-ion-district.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-ion-district.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "kindred-stories",
       "friendlyName": "Kindred Stories",
       "description": "Kindred Stories",
@@ -887,6 +1066,43 @@
             },
             "rss": {
               "href": "lawndale-art-center-lawndale-art-center.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "levy-park-houston",
+      "friendlyName": "Levy Park Houston",
+      "description": "Levy Park Houston",
+      "url": "https://www.levyparkhouston.org/calendar/",
+      "tags": [
+        "Parks",
+        "Community",
+        "Upper Kirby",
+        "Outdoor Recreation"
+      ],
+      "geo": {
+        "lat": 29.7419,
+        "lng": -95.4169,
+        "label": "Levy Park, 3801 Main St, Houston, TX 77002"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Levy%20Park%2C%203801%20Main%20St%2C%20Houston%2C%20TX%2077002"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "levy-park-houston",
+          "friendlyName": "Levy Park Houston",
+          "links": {
+            "ics": {
+              "href": "external-levy-park-houston.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-levy-park-houston.rss",
               "type": "application/rss+xml"
             }
           }

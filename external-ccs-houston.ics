@@ -1,0 +1,272 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//CCS Houston - ECPv6.16.5//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:CCS Houston
+X-ORIGINAL-URL:https://ccs-houston.com
+X-WR-CALDESC:Events for CCS Houston
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-Robots-Tag:noindex
+X-PUBLISHED-TTL:PT1H
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20250309T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20251102T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20260308T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20261101T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20270314T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20271107T070000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:20250309T070000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:20251102T060000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:20260308T070000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:20261101T060000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:20270314T070000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:20271107T060000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260703T100000
+DTEND;TZID=America/Chicago:20260705T170000
+DTSTAMP:20260421T143501Z
+CREATED:20260421T143501Z
+LAST-MODIFIED:20260421T143501Z
+UID:70255-1783072800-1783270800@ccs-houston.com
+SUMMARY:Houston TCG Con IX
+DESCRIPTION:Houston TCG Con IX — Your Favorite TCG Weekend in Texas \nThree days. 100+ vendors. Every game that matters. Houston TCG Con IX is back — and the Texas TCG community keeps showing up stronger every round! \nPokémon. Yu-Gi-Oh!. Magic: The Gathering. One Piece. Lorcana. Riftbound. Dragon Ball Super. Digimon. Flesh and Blood. If it’s cardboard worth chasing\, it’s on this floor. \n  \n📅 Date: Friday–Sunday\, July 3–5\, 2026 \n⏰ Time: Friday: 3PM – 10PM | Saturday: 10AM – 6PM | Sunday: 10AM – 5PM \n📍 Location: 9700 Bissonnet St\, Unit 1500\, Houston\, TX 77036 \n🎟️ FREE Entry + FREE Parking \n  \n🔥 Event Highlights 🔥 \n🃏 100+ TCG Vendors — Three Days of Cardboard Shop from 100+ vendors traveling from across Texas and beyond. Find singles\, sealed product\, booster boxes\, graded slabs\, Japanese imports\, and rare inserts across every major title — Pokémon\, MTG\, Yu-Gi-Oh!\, One Piece\, Lorcana\, Riftbound\, Dragon Ball Super\, Digimon\, Flesh and Blood\, and more. Come with a wantlist. Leave with something you weren’t expecting. \n  \n🤝 The Trade Floor Is Open Bring your binders\, your bulk\, your trade bait\, and your spec pulls. Houston TCG Con is a trade-friendly floor — deals happen naturally here because the people at the tables are collectors first. Three days means three days of opportunities to find the trade that makes your collection. \n  \n💸 Deals Across Every Budget From budget bulk and bargain boxes to high-end slabs and competitive singles — the floor has range. Whether you’re spec buying\, PC hunting\, or just looking to flip smart\, TCG Con IX has the inventory to make it happen. \n  \n💼 Vendor Space Available Table space is open for TCG and collectibles vendors. Come connect with the Texas TCG community. 👉 Apply here: https://forms.gle/KFdA1u3pKRAvNtzJ9 \n  \n🏨 Traveling to Houston? Lock In Your Rate We’ve secured a special hotel rate exclusively for TCG Con IX attendees. Book your stay and make it a full weekend. 👉 Book here \n  \nThree days. One floor. The best TCG weekend in Texas. Houston TCG Con IX — July 3–5.
+URL:https://ccs-houston.com/events/houston-tcg-con-ix/
+CATEGORIES:Trading Card Game
+ATTACH;FMTTYPE=image/png:https://ccs-houston.com/wp-content/uploads/2026/04/HTX-Banner-IG-Reel-TCG-Con-IX.png
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260711T100000
+DTEND;TZID=America/Chicago:20260712T170000
+DTSTAMP:20260421T144256Z
+CREATED:20260421T144256Z
+LAST-MODIFIED:20260421T144256Z
+UID:70261-1783764000-1783875600@ccs-houston.com
+SUMMARY:Artist Alley Houston III
+DESCRIPTION:Artist Alley Houston III — 100+ Local Creators. All Original. All Handmade.\nPrint hunters\, charm collectors\, plushie lovers\, and fandom art fanatics — Artist Alley Houston III is your weekend. Two days\, 100+ local and regional creators\, and zero mass-produced merch. Every piece on every table was made by the person standing behind it. \n  \n📅 Date: Saturday–Sunday\, July 11–12\, 2026 \n⏰ Time: Saturday: 10AM – 6PM | Sunday: 10AM – 5PM \n📍 Location: 9700 Bissonnet St\, Unit 1500\, Houston\, TX 77036 🎟️ FREE Entry + FREE Parking \n  \n🔥 Event Highlights 🔥 \n🎨 100+ Artists and Makers — All Fandoms\, All Styles Explore a curated marketplace packed with anime fan art\, original illustrations\, stickers\, enamel pins\, art prints\, zines\, plushies\, handcrafted charms\, crochet creations\, accessories\, fantasy artwork\, and pop-culture-inspired pieces — all original\, all handmade\, no AI-generated art. Whether you’re shopping for your wall\, your ita bag\, your shelf\, or just yourself\, this floor delivers. Come ready to discover your next favorite Houston creator. \n  \n✨ Exclusive Drops and Event Debuts Many artists are launching event-only merch\, limited bundles\, brand-new releases\, and first-time debuts created specifically for Artist Alley Houston III. You won’t find these anywhere else — online or in stores. Bring a tote bag. You’re going to need it. \n  \n💬 Meet the Makers Talk with the artists. Hear the stories behind the work. Commission something made just for you. This is not just a shopping floor — it’s where Houston’s creative community shows up in person. Fellow creators\, longtime collectors\, and first-time visitors all belong here. \n  \n🎁 FREE Artist Raffle Win original art\, stickers\, keychains\, and handmade goods donated by our featured artists. No purchase necessary — just stop by\, sign up\, and you’re in. Every ticket is a chance to go home with something one-of-a-kind. \n  \n💌 Join the Artist Lineup Table space is open for local artists and makers. Come build with the Houston creative community. 👉 Apply here \n  \n🏨 Traveling to Houston? Lock In Your Rate We’ve secured a special hotel rate exclusively for Artist Alley Houston III attendees. Book your stay and make it a full weekend. 👉 Book here \n  \nTwo days. 100+ creators. Art made with love\, sold in person. Artist Alley Houston III — July 11 & 12.
+URL:https://ccs-houston.com/events/artist-alley-houston-iii/
+CATEGORIES:Anime
+ATTACH;FMTTYPE=image/png:https://ccs-houston.com/wp-content/uploads/2026/04/Banner.png
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260718T100000
+DTEND;TZID=America/Chicago:20260719T170000
+DTSTAMP:20260421T174042Z
+CREATED:20260421T174042Z
+LAST-MODIFIED:20260421T174042Z
+UID:70279-1784368800-1784480400@ccs-houston.com
+SUMMARY:CCS Nerd Yard Sale III
+DESCRIPTION:CCS Houston Nerd Yard Sale III — Dig In. Deal Out. Pass It On.\nGot shelves full of stuff that deserves a new home? Looking to score fan-loved finds at yard-sale prices? CCS Houston Nerd Yard Sale III is back for a full weekend — two days of clearing\, digging\, dealing\, and connecting with fellow fans across every fandom and era. \nThis isn’t a convention. It’s not a vendor hall. It’s a true community yard sale where real collectors clear their collections\, real deals get made\, and real conversations happen over shared fandoms. \n  \n📅 Date: Saturday–Sunday\, July 18–19\, 2026 \n⏰ Time: Saturday: 10AM – 6PM | Sunday: 10AM – 5PM \n📍 Location: 9700 Bissonnet St\, Unit 1500\, Houston\, TX 77036 \n🎟️ FREE Entry + FREE Parking \n  \n🔥 Event Highlights 🔥 \n🧺 For Sellers — Clear Your Shelves\, Make Some Cash Got boxes of fandom stuff ready to move? Duplicates\, impulse buys\, collections you’ve outgrown? Set up a table\, meet fellow fans\, and pass your collection on to someone who’ll love it just as much as you did. Perfect for collectors downsizing\, families clearing closets\, and anyone who needs to make space. 👉 Apply to be a seller \n  \n🔍 For Shoppers — Dig\, Deal\, Discover Bargain hunters\, this floor is yours. Browse tables packed with fan-loved finds at yard-sale prices across every fandom and era. You never know what you’ll find — but here’s what might be waiting: \n\n📚 Comics\, manga\, and books\n🎮 Retro games and consoles — NES\, SNES\, Sega\, PlayStation classics\, and more\n🧸 Plushies\, pins\, keychains\, and gacha\n🧩 Anime merch\, figures\, and Funkos\n📼 VHS\, vintage media\, and old-school collectibles\n👕 Fandom fashion and accessories\n🃏 Cards\, toys\, and unexpected gems\n\nPrices are yard-sale friendly. Every table is different. The best finds are the ones you didn’t know you were looking for. \n  \n👨‍👩‍👧‍👦 All Fandoms. All Ages. Zero Gatekeeping. Bring the whole crew. No pressure. No gatekeeping. Just fans connecting with fans over the things they love. \n  \n🏨 Traveling to Houston? Lock In Your Rate We’ve secured a special hotel rate exclusively for Nerd Yard Sale III attendees. Book your stay and make it a full weekend. 👉 Book here \n  \nBring your trade boxes. Bring your shopping bags. Bring your inner treasure hunter. CCS Houston Nerd Yard Sale III — July 18 & 19.
+URL:https://ccs-houston.com/events/ccs-nerd-yard-sale-iii/
+CATEGORIES:Action Figure & Toy,Anime,Comic,Video Game
+ATTACH;FMTTYPE=image/jpeg:https://ccs-houston.com/wp-content/uploads/2026/04/Banner-1.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260725T100000
+DTEND;TZID=America/Chicago:20260726T170000
+DTSTAMP:20260625T193032Z
+CREATED:20260519T190518Z
+LAST-MODIFIED:20260625T193032Z
+UID:77363-1784973600-1785085200@ccs-houston.com
+SUMMARY:Houston World of Hot Wheels IV
+DESCRIPTION:🚗🏁 Houston World of Hot Wheels IV is roaring back with more thrills and speed! 🏁🚗\nAfter an electric\, action-packed weekend of nonstop deals\, racing\, and collector excitement\, Houston World of Hot Wheels IV is revving up for another round! We’re bringing even MORE vendors\, MORE cars\, and MORE action for collectors\, racers\, and families to enjoy all weekend long. ⚡ \n  \n📅 July 25–26\, 2026 | 10AM–5PM\n📍 9700 Bissonnet St 1500\, Houston\, TX\n🎟️ FREE Entry + FREE Parking \n  \nEvent Highlights\n🛒 Hot Wheels Swap & Shop – Both Days \n50+ vendors. 30\,000+ Hot Wheels\, Matchbox\, and diecast to dig through. STHs\, TH variations\, premium Car Culture\, redline-era pieces\, MOC vintage\, loose mainline bins\, M2s\, Greenlights\, Johnny Lightnings. Bring your want list! \n  \n🚗✨ Houston Diecast Custom Contest – 10AM-3PM | Both Days \nCalling all builders and custom kings 👑 Bring your best custom Hot Wheels/Matchbox build — paint\, wheel swaps\, stance\, body kits\, full one-of-one creations. This contest is for the detail freaks and the true “trust the process” customizers. 🏆 The winner will be announced at 4PM and will receive a prize sponsored by Domingo! ✨ Hosted by @funopolistoys \n  \n🏁 Hot Wheels Racing Contest – Both Days\nThe stage track is live all weekend. Hourly races\, prizes for winners\, FREE to enter. \n  \n🏎️ Car Show (Parking Lot Showcase) \nTake it outside and check out Houston’s coolest real-life rides. Style\, horsepower\, and car-community energy all in one spot. \n  \n👶 Mini Zones & Family Fun\nFun spaces for younger collectors and first‑time racers — all ages welcome! \n  \n🚨 VENDORS WANTED\nGot STHs\, vintage redlines\, custom builds\, or bulk mainline to move? This is your crowd.\n📥 Apply: https://tinyurl.com/CCSGuestVendorFromHouston \n  \n🏨 Special Hotel Deals\nEnjoy a special room rate of $79/night at TownePlace Suites\, just about 15 minutes from the venue!\n👉 Book: https://www.marriott.com/event-reservations/reservation-link.mi?id=1767823967549&key=CORP&app=resvlink \n  \nHunt or race. Trade or just walk the floor. The customs will be parked outside\, the bins will be open inside\, and the track will be running all weekend. See you July 25–26.
+URL:https://ccs-houston.com/events/houston-world-of-hot-wheels-iv/
+CATEGORIES:Action Figure & Toy
+ATTACH;FMTTYPE=image/png:https://ccs-houston.com/wp-content/uploads/2026/05/Event-Launch-Kit-Houston-World-of-Hot-Wheels-IV.png
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260731T090000
+DTEND;TZID=America/Chicago:20260731T180000
+DTSTAMP:20260625T204705Z
+CREATED:20260625T204705Z
+LAST-MODIFIED:20260625T204705Z
+UID:92022-1785488400-1785520800@ccs-houston.com
+SUMMARY:Back to School Yugioh Tournament
+DESCRIPTION:Join us on July 31 for a special Back-to-School Yu-Gi-Oh Tournament Hosted by Eclectic Nerdz. where your entry helps local students get ready for the new school year. Instead of an entry fee\, bring $10+ worth of new\, sealed school supplies and compete for prizes while supporting a great cause. \n  \nPlay\, give back\, and help make a difference—one duel at a time! \n🗓️ : July 31\, 2026 \n📍: 9700 Bissonnet St\, #1500\, Houston\, TX 77036 \n  \nEvent Overview: \n\nFormat: Advanced\nTournament Structure: Swiss Rounds\nExpected Number of Rounds: 5\, Rounds based on Attendance\nEntry: Sealed School supplies of $10 value or more\nOn-Site Registration\n\n  \n💰 Prize Pool: \n\n1st Place: Booster Box Chaos Origins and Yugioh Playmat\n2nd Place: 12 packs of Chaos Origins and Yugioh Playmat\n3rd Place: 6 Packs of Chaos Origins Yugioh Playmat\n\n  \n📋 Registration Details: \n\nRegistration begins at 6 PM\nRound 1 Starts at 6:45 PM
+URL:https://ccs-houston.com/events/back-to-school-yugioh-tournament/
+CATEGORIES:Trading Card Game
+ATTACH;FMTTYPE=image/png:https://ccs-houston.com/wp-content/uploads/2026/06/Banner.png
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260801T090000
+DTEND;TZID=America/Chicago:20260802T180000
+DTSTAMP:20260604T130021Z
+CREATED:20260604T125532Z
+LAST-MODIFIED:20260604T130021Z
+UID:81542-1785574800-1785693600@ccs-houston.com
+SUMMARY:CCS $20\,000 cEDH Invitational Qualifier #3
+DESCRIPTION:🏆 CCS $20\,000 cEDH Invitational Qualifier #3 🏆\nThe race tightens. The margins shrink. \nQualifier #3 brings us into the mid season of the CCS $50\,000 cEDH Invitational Series. With only three events after\, every decision matters and every point is gold. \nFull Details → https://topdeck.gg/event/ccs-50000-cedh-invitational \n  \n🗓 Dates: August 1–2\, 2026 \n📍 Location: Charlie’s Collectible Show\, 9700 Bissonett St Unit 1500\, Houston\, TX 77036 \n\nTournament Details:\n\n🎟️ Entry Fee: $90 before July 18\, $110 After\n🔗 Register Now! 👉  https://topdeck.gg/event/css-20000-cedh-invitational-qualifier-4\n\n🗂️ Format & Structure\n\nFormat: cEDH (Proxy Friendly)\nSaturday: 6 Swiss Rounds (based on attendance)\nSunday: 2 Swiss Rounds → Top 16\n\n🚫 Proxy Requirements: \n\nFull card name\, mana cost\, type line\, and effect text\nTest cards or clearly written MDFCs allowed\nNo paper slip-ins permitted\n\n💰 Guaranteed $20\,000 Prize Pool\n\n1st — $5\,000 + Auto Invite + TopDeck Invite + 200 pts\n2nd-4th — $2\,000 each + Auto Invite + 160 pts\n5th–8th — $550 + 120 pts\n9th–16th — $550 + 100 pts\n17th–32nd — $175 + 75 pts\n33rd–48th — 60 pts\n49th–64th — 45 pts\n65th–96th — 30 pts\n97th–128th — 20 pts\n\nEvent Schedule:\n🕔 Registration Opens: 9 AM \n🕔 Player Meeting (Day 1): 10 AM \n🕔 Day 2 Start Time: 9 AM \n🛍️ Collectible Marketplace\nBetween rounds\, enjoy access to a curated marketplace featuring: \n\nTCG singles\, sealed\, and accessories\nRetro video games & consoles\nAnime merch\, figures\, and models\nToys and other hobby collectibles\n\nPerfect for grabbing upgrades\, browsing grails\, or just hanging out between matches. \n🏨 Special Hotel Deals\nEnjoy a special rate of $79/night — 2 Queens at TownePlace Suites\, only 15 minutes distance from the action! \nBook your stay 👉🏻 https://www.marriott.com/event-reservations/reservation-link.mi?id=1767823967549&key=CORP&app=resvlink \n🔔 IMPORTANT REMINDERS\n\nPlayer names will appear as real names on published documents.\nTop 16 decklists will be published.\n\n🔥 Late-season stakes hit hard — tighten your game and push forward. Your run to the $50K Invitational continues at CCS cEDH Qualifier #3!
+URL:https://ccs-houston.com/events/ccs-20000-cedh-invitational-qualifier-3/
+CATEGORIES:Trading Card Game
+ATTACH;FMTTYPE=image/png:https://ccs-houston.com/wp-content/uploads/2026/06/Event-Launch-Kit-CCS-20000-cEDH-Invitational-Qualifier-3.png
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260801T100000
+DTEND;TZID=America/Chicago:20260801T170000
+DTSTAMP:20260603T171707Z
+CREATED:20260603T171707Z
+LAST-MODIFIED:20260603T171707Z
+UID:81396-1785578400-1785603600@ccs-houston.com
+SUMMARY:Houston Comic Exchange II
+DESCRIPTION:Houston Comic Exchange II – Built for Comic Collectors\nSummer is prime comic-hunting season\, and CCS Houston Comic Exchange II brings together collectors\, dealers\, and fans for a day of buying\, selling\, trading\, and discovering comics. From key issues and first appearances to hidden gems and box-fresh finds\, every table offers something worth digging for. \nNo gatekeeping\, no pressure\, just comics and the people who love them. \n  \n📅 Saturday\, August 1\, 2026 | 10AM – 5PM \n📍 9700 Bissonnet St\, Unit 1500\, Houston\, TX \n🎟️ FREE Entry + FREE Parking \n  \n🔥 Event Highlights 🔥\n📦 50 Vendor Tables – All Comics\, All Formats \nSingles\, back issues\, key issues\, first appearances\, graded slabs\, raw runs\, indie and small press\, variant covers. Vendor tables dedicated entirely to comics\, no toys\, no filler. If you’re a comic collector\, this floor was built for you. \n  \n🔍 Key Issues and First Appearances \nThis is where the hunt lives. Vendors bring the deep cuts\, raw back issues worth digging through\, graded books if you’re chasing condition\, and the kind of keys that actually show up when serious collectors are clearing their own collections to make room. \n  \n📚 Back-Issue Digging and Indie Discovery \nNot every great find is a grail. Long boxes of back issues across decades and publishers\, plus indie comics and small press titles that never make it to a standard shop shelf. Come with a list or come ready to browse – both work. \n  \n🤝 Vendors Who Collect Too \nThe people behind these tables are the same people who will ask what you’re hunting before they start pulling books for you. The Houston Comic Exchange is a community floor first. The conversations are part of the event. \n  \n🛒 Vendor Table Applications \nHouston comic vendors: we’re gathering a focused comics-only crowd\, and free entry is driving serious foot traffic. Apply for your table here 👉🏻 https://forms.gle/7q6pjcoiJTPbJouP8 \n  \nThe key issue you’ve been tracking is probably in one of those long boxes this summer. The Houston Comic Exchange II\, August 1. Free entry\, free parking\, always.
+URL:https://ccs-houston.com/events/houston-comic-exchange-ii/
+CATEGORIES:Comic
+ATTACH;FMTTYPE=image/jpeg:https://ccs-houston.com/wp-content/uploads/2026/06/Banner.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260802T050000
+DTEND;TZID=America/Chicago:20260802T220000
+DTSTAMP:20260610T144515Z
+CREATED:20260610T144515Z
+LAST-MODIFIED:20260610T144515Z
+UID:85666-1785646800-1785708000@ccs-houston.com
+SUMMARY:Houston Toy Exchange III
+DESCRIPTION:Houston Toy Exchange III — The Floor Is Loaded\, Houston\nSomewhere on this floor is the piece you have been hunting for months. 🔥 \nHouston Toy Exchange III is a pure toy marketplace\, no convention noise\, no filler. Just collectors\, families\, and dealers moving action figures\, vintage finds\, and modern grails across one packed floor at CCS Houston. The fun is in the hunt: digging through a bin you have never seen\, talking shop with someone who knows the line better than you do\, and walking out with something you did not expect to find. \n  \n📅 Date: Sunday\, August 2\, 2026 | 10AM – 5PM \n📍 Location: 9700 Bissonnet St\, #1500\, Houston\, TX 77036 \n🎟️ FREE Entry + FREE Parking \n  \n🔥 What You’ll Find on the Floor 🔥 \n🛍️ Toy Marketplace Tables packed with action figures\, vintage toys\, sealed and loose\, nostalgia pieces\, and the modern lines collectors are actually chasing right now. Every table is its own dig. Come search the floor. \n  \n💰 Buy\, Sell\, Trade Bring the toys you are ready to pass along or trade up for something you have been chasing. Collectors and vendors are buying\, selling\, and trading all day. Connect\, negotiate\, and keep great pieces moving through the community. \n  \n🔍 Toy Appraisals Holding something and not sure what it’s worth? One of our experienced vendors is running toy appraisals all day\, sharing insights on value\, rarity\, and trade potential so you can make confident\, informed deals on the floor. \n  \n🧩 Toy Scavenger Hunt Challenge Turn the hunt into a game. Work the marketplace and complete the Toy Hunt Challenge by tracking down specific toy categories across multiple booths for a shot at prizes and collector bragging rights. \n  \n📸 Toy Flex Wall Score something special? Show it off. Snap a photo of your best pickup at the Toy Flex Wall and share your find with the community. \n  \nLongtime collector or just starting out\, Houston Toy Exchange III is about connecting\, swapping stories\, and keeping the love of toys alive together. Bring your toys\, bring your curiosity\, pull up. \n  \nWant in as a vendor? Tables are open: https://tinyurl.com/CCSGuestVendorFromHouston \n  \nHouston Toy Exchange III. Bring your toys\, bring your curiosity\, and come move some pieces.
+URL:https://ccs-houston.com/events/houston-toy-exchange-iii/
+CATEGORIES:Action Figure & Toy
+ATTACH;FMTTYPE=image/png:https://ccs-houston.com/wp-content/uploads/2026/06/Event-Launch-Kit-Houston-Toy-Exchange-III.png
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260807T100000
+DTEND;TZID=America/Chicago:20260809T170000
+DTSTAMP:20260430T190538Z
+CREATED:20260430T190538Z
+LAST-MODIFIED:20260430T190538Z
+UID:71933-1786096800-1786294800@ccs-houston.com
+SUMMARY:Houston TCG Con X
+DESCRIPTION:🃏 Houston TCG Con X | Every Format. One Floor. Three Days. 🃏\nThree days. Every format in the room. The Houston TCG community takes over CCS August 7–9 for Pokémon\, MTG\, One Piece\, Lorcana\, and Yu-Gi-Oh. Tournament grinders and binder flippers on the same floor\, doing what this community does best. \n  \n📅 Date: Friday–Sunday\, August 7–9\, 2026 \n⏰ Time: Friday: 3PM–10PM | Saturday: 10AM–6PM | Sunday: 10AM–5PM \n📍 Location: 9700 Bissonnet St\, Unit 1500\, Houston\, TX \n🎟️ FREE Entry + FREE Parking \n  \n🔥 Event Highlights 🔥 \n🃔 Multi-Game Vendor Floor \nPokémon. MTG. One Piece. Lorcana. Yu-Gi-Oh. Singles vendors\, sealed product\, and binder traders across every major format. Three full days to hunt\, flip\, and deal face-to-face. \n  \n🏆 Multi-Game Tournaments \nCompetitive rounds running all weekend across formats. Tournament schedule and registration details coming soon. Follow CCS Houston for updates. \n  \n📦 Full Marketplace \nSports cards\, anime merch\, figures\, comics\, and toys rounding out the vendor floor for everything you collect beyond the card game. \n  \n💼 Vendor Tables Available \nTCG dealers\, singles vendors\, sports card sellers\, anime and collectible booths. Houston’s biggest TCG weekend is yours. Apply: https://docs.google.com/forms/d/e/1FAIpQLSdei0apYj2qU4fQIiz9rrqVDHgqmFZSpLRzYDAufcg3B8BaXA/viewform \n  \n🏨 Traveling to Houston? Lock Your Room \nGroup rate available at Marriott. Book before it fills: https://www.marriott.com/event-reservations/reservation-link.mi?id=1767823967549&key=CORP&app=resvlink \nThree days\, every format\, free entry. See you in August\, Houston.
+URL:https://ccs-houston.com/events/houston-tcg-con-x/
+CATEGORIES:Trading Card Game
+ATTACH;FMTTYPE=image/jpeg:https://ccs-houston.com/wp-content/uploads/2026/04/HTX-Event-Launch-Kit-CCS-TCG-Con-X-1.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260808T100000
+DTEND;TZID=America/Chicago:20260809T170000
+DTSTAMP:20260611T145809Z
+CREATED:20260611T141237Z
+LAST-MODIFIED:20260611T145809Z
+UID:85799-1786183200-1786294800@ccs-houston.com
+SUMMARY:Legacy Duelist Series Houston
+DESCRIPTION:🏆 Legacy Duelist Series Houston🏆\nCharlie’s Collectible Show is proud to partner with Yggdrasil Materias to bring the Legacy Duelist Series to Houston! If you’re a duelist who loves retro formats\, then this weekend is a must. LDS Houston features an Edison main event\, an Edison 3v3 Sunday Event\, and a Goat format Sunday tournament. Yggdrasil Materias will be slinging supplies\, and CCS will be providing the Yu-Gi-Oh! Singles. \n  \n🗓 Dates: August 8-9\, 2026 \n📍 Location: Charlie’s Collectible Show\, 9700 Bissonett St Unit 1500\, Houston\, TX 77036 \n  \nTournament Details:\n\n🎟️ Main Event Entry Fee: $60 (SOLD OUT)\n🎟️ Day 2 Edison 3v3 Entry Fee: $115\n🎟️ Day 2 Goat Entry Fee: $40\n🔗 Main Event Page 👉  https://www.yggdrasilmaterias.com/product/lds-houston-ygo-tournament-day-1-edison-format\n🔗 Register For Sunday Edison 3v3 Now! 👉  https://www.yggdrasilmaterias.com/product/lds-houston-ygo-tournament-day-2-3v3-edison\n\n🔗 Register For Sunday Goat Format Now! 👉 https://www.yggdrasilmaterias.com/product/lds-houston-ygo-tournament-day-2-goat\n\n\n\n  \n🗂️ Format & Structure\n\nFormats: Day 1: Edison Main Event | Day 2: Main Event Top Cut\, Edison 3v3 & Goat Format\nDay 1 — Edison Tournament:\n9 rounds of Swiss\nDay 2 — Edison Tournament\nTop Cut\nDay 2 — Edison 3v3 Tournament\n\n6 rounds of Swiss with cut to Top 8\n\n\nDay 2 — Goat Tournament:\n7 rounds of Swiss with cut to Top 8\n\n  \n💰 Edison Format Prizing:\n1st: SJCS Dark End Dragon + First Place Playmat + LDS Champs Invite \n2nd: Ultimate Rare Caius The Shadow Monarch x2 + Top 8 Playmat + LDS Champs Invite \n3rd: Ultimate Rare Caius The Shadow Monarch + Top 8 Playmat + LDS Champs Invite \n4th: Ultimate Rare Dark Armed Dragon x1 + Top 8 Playmat + LDS Champs Invite \n5th – 8th: Ultimate Rare Judgment Dragon x1 + Top 8 Playmat + LDS Champs Invite \n9th -16th: Colossal Fighter Ultimate Rare x1 + Top 16 Playmat \n17th-32nd: Tragoedia Ultimate Rare x1 + Top 32 Playmat \n  \n💰 Edison 3v3 Prizing:\n1st Place Team: Ultimate Rare Dark Armed Dragon x3 + Top Cut Playmat x3 \n2nd Place Team: Champion Pack Trap Dustshoot x3 + Top Cut Playmat x3 \n3rd-4th Place Team: TBD \n5th-8th Place Team: TBD \n  \n💰 Goat Format Prizing:\n1st: TP2 Morphing Jar + First Place Playmat \n2nd: Champion Pack Book of Moon + Top Cut Playmat \n3rd-4th: TP7 Breaker the Magical Warrior + Top Cut Playmat \n5th – 8th: Ultimate Rare Tsukuyomi + Top Cut Playmat \n  \nDay 1 Event Schedule:\n🕔 Doors Open: 7:00 AM \n🕔 Check-In Cutoff: 8:30 AM \n🕔 Start Time: 8:45 AM \n  \nDay 2 Event Schedule:\n🕔 Doors Open: 7:00 AM \n🕔 Main Event Top Cut Start: 7:30 AM \n🕔 Goat Check-In Cutoff: 7:45 AM \n🕔 Goat Tournament Start: 8:00 AM \n🕔 Edison 3v3 Check-In Cutoff: 8:45 AM \n🕔 Edison 3v3 Tournament Start 9:00 AM
+URL:https://ccs-houston.com/events/legacy-duelist-series-houston/
+CATEGORIES:Trading Card Game
+ATTACH;FMTTYPE=image/jpeg:https://ccs-houston.com/wp-content/uploads/2026/06/Banner-1.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260815T100000
+DTEND;TZID=America/Chicago:20260816T170000
+DTSTAMP:20260512T204604Z
+CREATED:20260512T204232Z
+LAST-MODIFIED:20260512T204604Z
+UID:75826-1786788000-1786899600@ccs-houston.com
+SUMMARY:Retro Video Game Expo III
+DESCRIPTION:🕹️ Houston\, Press Start on a Weekend of Pure Retro Nostalgia! 👾 \nStep back into the golden era of gaming at Retro Video Game Expo III\, a two-day celebration of classic consoles\, arcade legends\, competitive retro tournaments\, and nonstop free play. From expanded free-play zones spanning the 80s and beyond to live\, high-energy tournament matchups and a collector-focused marketplace\, this expo is built for gamers who chase high scores and grail finds. \n  \n🗓️ Date & Time: August 15–16\, 2026 | 10AM–5PM \n📍 Location: 9700 Bissonnet St #1500\, Houston\, TX 77036 \n💥 FREE ENTRY. FREE PARKING. FREE PLAY. \n\n🎮 Event Highlights\n🎮 Retro Video Game Marketplace – All Weekend \nStep into a collector’s paradise. Vendors from across the region are bringing vintage consoles\, original cartridges\, imports\, manuals\, accessories\, and hard-to-find titles. This is where treasures respawn. \n🚨 Want to vend? Sign up here 👉 https://tinyurl.com/HoustonVendors \n  \n🎮 Free-Play Zone – ALL Day \nJump on 80’s Arcades & Classic Consoles and relive the games that made gaming legendary. More setups and activities to be announced soon! \n\n🤝 Calling All Collaborators & Retro Communities\nThis event is built with the community for community! We’re actively looking to partner with: \n🏁 Tournament organizers → https://forms.gle/74Qvuv9PFzeDVF1V8 \n🕹️ Pinball/Arcade Hosts → https://forms.gle/74Qvuv9PFzeDVF1V8 \n🎤 Workshops & Panels → https://forms.gle/q2nCKsZ6FEVZBgqW9 \n🙌 Volunteer Sign-Up → https://forms.gle/15zMGTqZPSGKjGdy6 \n🎮 Vendor Applications → https://tinyurl.com/CCSGuestVendorFromHouston \nIf you’ve ever wanted to be part of event\, bring your passion! Let’s chat! 📩 \n  \n🏨 Special Hotel Deals \nEnjoy a special rate of $79/night — 2 Queens at TownePlace Suites\, only 15 minutes distance from the action! \nBook your stay 👉🏻 https://www.marriott.com/event-reservations/reservation-link.mi?id=1767823967549&key=CORP&app=resvlink \n  \nBring your crew\, grab a controller\, and let’s relive the golden age of gaming together. 👾✨
+URL:https://ccs-houston.com/events/retro-video-game-expo-iii/
+CATEGORIES:Video Game
+ATTACH;FMTTYPE=image/png:https://ccs-houston.com/wp-content/uploads/2026/05/Banner-5.png
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260829T100000
+DTEND;TZID=America/Chicago:20260830T170000
+DTSTAMP:20260630T144247Z
+CREATED:20260624T155309Z
+LAST-MODIFIED:20260630T144247Z
+UID:91970-1787997600-1788109200@ccs-houston.com
+SUMMARY:CCS Card Show I
+DESCRIPTION:CCS Card Show I — Every Sport. Every TCG. One Floor.\nHouston\, the hobby comes home. For the first time at CCS\, every major sport and every major TCG land under one roof: sports card collectors\, memorabilia hunters\, and TCG players moving cards on the same floor\, the way it should be. Modern hits to vintage grails\, sealed wax to graded slabs\, raw singles to game-used pieces. Buy\, sell\, trade\, grade. This is the room. \n  \n📅 Date: August 29-30\, 2026 | 10AM – 5PM \n📍 Location: 9700 Bissonnet St\, Unit 1500\, Houston\, TX 77036 \n🎟️ FREE Entry + FREE Parking \n  \n🔥 Event Highlights 🔥 \n⚾ The Ultimate Sports Card & Memorabilia Marketplace \nExplore vendors dedicated to sports cards\, high-end memorabilia\, and rare collectibles from baseball\, football\, basketball\, and more. If you’re hunting for a signed rookie card\, vintage set\, or exclusive autograph\, this is THE place to level up your collection. \n  \n🃏 Trading Card Game Extravaganza 🃏 \nWe’re also featuring top TCG vendors offering a treasure trove of Pokémon\, Yu-Gi-Oh!\, Magic: The Gathering\, One Piece\, Lorcana\, and more! Chase that elusive rare pull or build your deck for your next tournament\, you’ll find the best deals on booster packs\, graded singles\, sealed products\, and Japanese imports. \n  \n💼 Vendors Wanted \nGot a table’s worth to move? Guest vendors are welcome at Card Show I. The person across the table is a fan like you. Claim your spot 👉🏻 https://forms.gle/sZdrRxHkEXM69kbN6 \n  \n🏨 Traveling to Houston? Lock In Your Rate\nEnjoy a special rate of $79/night — ****2 Queens at TownePlace Suites\, only 15 minutes away from the action! 👉 https://www.marriott.com/event-reservations/reservation-link.mi?id=1767823967549&key=CORP&app=resvlink \n  \nHouston’s first CCS Card Show. Every sport\, every TCG\, one floor. Pull up.
+URL:https://ccs-houston.com/events/ccs-card-show-i/
+CATEGORIES:Sports Card,Trading Card Game
+ATTACH;FMTTYPE=image/jpeg:https://ccs-houston.com/wp-content/uploads/2026/06/Event-Launch-Kit-CCS-Card-Show-I-1.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260919T100000
+DTEND;TZID=America/Chicago:20260919T170000
+DTSTAMP:20260519T191054Z
+CREATED:20260519T191054Z
+LAST-MODIFIED:20260519T191054Z
+UID:77376-1789812000-1789837200@ccs-houston.com
+SUMMARY:Demon Slayer Mini Con
+DESCRIPTION:🔥 Calling all Demon Slayer Corps members\, Hashira-in-training\, and Tanjiro fans**!** 🔥\nFrom Mizunoto beginners to seasoned Hashira\, masters of Sun Breathing to the loyal members of the Zenitsu-squad\, Demon Slayer Mini Con is your next mission! CCS Houston is hosting a one-day Total Concentration event for every slayer who lives for the Hinokami Kagura\, the intensity of the Upper Rank battles\, and the bond between friends. \nJoin the Corps for a day packed with Nichirin-grade marketplace finds\, Cosplay haoris\, and Blood Demon Art energy\, all in a fan-first space where no one is left in the Final Selection alone. \nSteel your heart\, grab your Kasugai Crow\, and let’s set our hearts ablaze together ⚔️✨ \n  \n🗓️ Date & Time: Saturday\, Sept 19\, 2026 | 10AM – 5PM \n📍 Location: 9700 Bissonnet St\, #1500\, Houston\, TX 77036 \n🎟️ FREE Entry + FREE Parking \n  \n👘 Demon Slayer Cosplay Showcase + Demon Face-Off (2 PM)\nPrepare for a Hashira-level showdown in a dramatic pose-off against our “demon.” The crowd’s roar will determine who survives the night and claims victory. \n  \n🎴 Nichirin Sword Pose-Off (3PM)\nEven without a uniform\, your spirit can burn bright! Grab a Nichirin blade\, take the stage\, and unleash your most iconic Breathing Style pose for a chance to win a prize. \n  \n🎮 Demon Slayer: Hinokami Chronicles Free-Play Zone (All Day)\nJump into the action in our gaming area! Join free play sessions on the Demon Slayer: The Hinokami Chronicles video game and challenge fellow slayers to a dueling trial. \n  \nDemon Slayer Trivia (3:30 PM)\nOnly those with the sharpest focus will survive this mental trial and earn their rank as a true scholar of the series. \n  \n🎨 Nezuko’s Box DIY Craft Station (All Day)\nChannel your inner Urokodaki to construct a miniature wooden-style carrier using paper\, charms\, and markers. Open to all ages! \n  \n🔥 Demon Slayer Artist Alley\nWander through a marketplace filled with hand-forged treasures and fandom collectibles\, including custom Nichirin charms\, Demon Slayer-inspired prints\, and talismans for the next mission\, our Artist Alley features the most talented creators in the Corps. \n🔥 Want to create something special for Demon Slayer fans? \n🔗 Host activities\, workshops\, or panels → https://forms.gle/q2nCKsZ6FEVZBgqW9 \n🔗 Volunteer Sign-Up → https://forms.gle/15zMGTqZPSGKjGdy6 \n🔗 Vendor Applications → https://tinyurl.com/HoustonVendors
+URL:https://ccs-houston.com/events/demon-slayer-mini-con/
+CATEGORIES:Anime
+ATTACH;FMTTYPE=image/jpeg:https://ccs-houston.com/wp-content/uploads/2026/05/HOUSTON-Event-Launch-Kit-Demon-Slayer-Mini-Con.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20261106T100000
+DTEND;TZID=America/New_York:20261108T170000
+DTSTAMP:20260119T164143Z
+CREATED:20251203T152754Z
+LAST-MODIFIED:20260119T164143Z
+UID:38034-1793959200-1794157200@ccs-houston.com
+SUMMARY:CCS $50\,000 Riftbound Invitational
+DESCRIPTION:CCS $50\,000 Riftbound Invitational – 2026 Series Overview\nThe CCS $50\,000 Riftbound Invitational is a year-long competitive circuit for Riftbound players. \nThe season concludes on November 6–8\, 2026 in Houston\, Texas\, with a $50\,000 Invite-Only Championship featuring 128 of the best players in the game. \nGo to the Topdeck Invitational Page \n\nHow to Qualify for the $50\,000 Invitational\n3 Ways to Qualify (128 Total Spots)\n1. Auto-Qualify – Top 8 from each $25K Main Event (6 events) \nTotal Spots: 48 \n2. Points Leaderboard – Top performers across all events \nTotal Spots: 64 \n3. LCQ Winners – Winner of each Last Chance Qualifier (16 events) \nTotal Spots: 16 \nIf a player qualifies through multiple methods\, leaderboard spots roll down to the next eligible player. \n\nBonus for the Most Consistent Players\nThe Top 8 players on the final Points Leaderboard earn a Round 1 Bye at the Invitational. \n\nMain Qualifier Weekends – Structure & Prizes\nEach of the 6 qualifier weekends includes: \nSaturday – $25\,000 Main Event\n\nFormat: Standard\nSwiss + Top Cut\nTop 8 auto-qualify\nTop 128 placements earn leaderboard points\n\nSunday – $5\,000 Side Event\n\nOne-day event\nTop 8 earn 30 leaderboard points\nNo auto-invite\n\n\nLeaderboard Points System\nSaturday $25K Main Events (Top 128 Earn Points)\n1st — 100 \n2nd — 80 \n3rd–4th — 65 \n5th–8th — 50 \n9th–16th — 35 \n17th–32nd — 20 \n33rd–64th — 10 \n65th–128th — 5 \nTotal Points per Main Event: 1\,750 \nTotal Across All 6: 10\,500 \nSunday $5K Side Events — Points\nTop 8 — 30 points each \n\nLast Chance Qualifiers (LCQs)\n\n16 total events\nWinner of each LCQ earns an automatic invite\nOpen entry — no prior points required\n\n\nMain Qualifier Tournament Weekends\n(All 6 Events + Signup Links) \nQualifier Weekend 1\nJanuary 31 – February 1\, 2026 \n📍 Houston\, Texas \nSignup: https://topdeck.gg/event/25000-houston-invitational-qualifier-1 \nQualifier Weekend 2\nMarch 14–15\, 2026 \n📍 Houston\, Texas \nSignup: https://topdeck.gg/event/25000-houston-invitational-qualifier-2 \nQualifier Weekend 3\nMay 23–24\, 2026 \n📍 Atlanta\, Georgia \nSignup: https://topdeck.gg/event/25000-houston-invitational-qualifier-3 \nQualifier Weekend 4\nJuly 11–12\, 2026 \n📍 Atlanta\, Georgia \nSignup: https://topdeck.gg/event/25000-atlanta-invitational-qualifier-4 \nQualifier Weekend 5\nSeptember 19–20\, 2026 \n📍 Houston\, Texas \nSignup: https://topdeck.gg/event/25000-houston-invitational-qualifier-5 \nQualifier Weekend 6\nOctober 10-11\, 2026 \n📍 Atlanta\, Georgia \nSignup: https://topdeck.gg/event/25000-atlanta-invitational-qualifier-6 \n\nCCS $50\,000 Riftbound Invitational Championship Weekend\nNovember 6–8\, 2026 \n📍 Houston\, Texas \n128 players compete for $50\,000 and the title of CCS Riftbound Champion.
+URL:https://ccs-houston.com/events/ccs-50000-riftbound-invitational/
+CATEGORIES:Trading Card Game
+ATTACH;FMTTYPE=image/png:https://ccs-houston.com/wp-content/uploads/2025/12/Riftbound-50K-Invitational-Banner-IG-1.png
+END:VEVENT
+END:VCALENDAR
