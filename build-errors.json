@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-07-03T16:54:43.614Z",
-  "totalErrors": 12,
+  "buildTime": "2026-07-03T18:08:45.112Z",
+  "totalErrors": 11,
   "configErrors": [],
   "sources": [
     {
@@ -75,21 +75,6 @@
           "type": "ParseError",
           "reason": "Failed to fetch AXS events for venue 130678: Error: AXS fetch error: HTTP 403 for https://www.axs.com/venues/130678/houston-improv-houston-tickets",
           "context": "venueSlug: houston-improv-houston-tickets"
-        }
-      ]
-    },
-    {
-      "source": "nrg-arena",
-      "calendar": "nrg-arena",
-      "type": "Ripper",
-      "errorCount": 1,
-      "parseErrorCount": 1,
-      "uncertaintyCount": 0,
-      "errors": [
-        {
-          "type": "ParseError",
-          "reason": "Ripper crashed: Error: Browserbase fetch failed: HTTP 429 — {\"statusCode\":429,\"error\":\"Too Many Requests\",\"message\":\"You've exceeded your max concurrent fetch requests limit (limit 5, currently 5). Please contact support to increase your limit.\"}",
-          "context": ""
         }
       ]
     },
@@ -194,12 +179,6 @@
       "friendlyName": "Hobby Center for the Performing Arts",
       "url": "https://www.thehobbycenter.org/?post_type=tribe_events&ical=1&eventDisplay=list",
       "error": "Error: HTTP 403: "
-    },
-    {
-      "name": "islamic-society-greater-houston",
-      "friendlyName": "Islamic Society of Greater Houston",
-      "url": "https://isgh.org/?post_type=tribe_events&ical=1",
-      "error": "Error: HTTP 403: "
     }
   ],
   "geocodeErrors": [],
@@ -238,6 +217,7 @@
     "tag-river-oaks",
     "tag-garden-oaks",
     "external-houston-cinema-arts-society",
+    "external-islamic-society-greater-houston",
     "external-walking-stick-brewing"
   ],
   "expectedEmptyCalendars": [],
@@ -15416,6 +15396,13 @@
       "events": 26,
       "expectEmpty": false,
       "source": "ion-district"
+    },
+    {
+      "name": "external-islamic-society-greater-houston",
+      "type": "External",
+      "events": 0,
+      "expectEmpty": false,
+      "source": "islamic-society-greater-houston"
     },
     {
       "name": "external-levy-park-houston",
