@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-02T02:31:29.327Z",
+  "lastUpdated": "2026-07-03T06:56:25.284Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -69,6 +69,25 @@
             "Workshops",
             "Education",
             "Uptown"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "childrens-museum-houston",
+      "description": "Children's Museum Houston",
+      "friendlyLink": "cmhouston.org",
+      "calendars": [
+        {
+          "name": "main",
+          "friendlyName": "Children's Museum Houston",
+          "icsUrl": "childrens-museum-houston-main.ics",
+          "rssUrl": "childrens-museum-houston-main.rss",
+          "tags": [
+            "Family",
+            "Kids",
+            "Museum",
+            "Museum District"
           ]
         }
       ]
@@ -381,6 +400,23 @@
       ]
     },
     {
+      "name": "murder-by-the-book",
+      "description": "Murder By The Book",
+      "friendlyLink": "https://www.murderbooks.com/events",
+      "calendars": [
+        {
+          "name": "murder-by-the-book",
+          "friendlyName": "Murder By The Book",
+          "icsUrl": "murder-by-the-book-murder-by-the-book.ics",
+          "rssUrl": "murder-by-the-book-murder-by-the-book.rss",
+          "tags": [
+            "Books",
+            "West University"
+          ]
+        }
+      ]
+    },
+    {
       "name": "post-houston",
       "description": "POST Houston",
       "friendlyLink": "https://posthtx.com/event",
@@ -455,6 +491,24 @@
       ]
     },
     {
+      "name": "rooftop-cinema-club-houston",
+      "description": "Rooftop Cinema Club Houston",
+      "friendlyLink": "https://rooftopcinemaclub.com/us/houston/uptown",
+      "calendars": [
+        {
+          "name": "rooftop-cinema-club-houston",
+          "friendlyName": "Rooftop Cinema Club Houston",
+          "icsUrl": "rooftop-cinema-club-houston-rooftop-cinema-club-houston.ics",
+          "rssUrl": "rooftop-cinema-club-houston-rooftop-cinema-club-houston.rss",
+          "tags": [
+            "Cinema",
+            "Entertainment",
+            "Uptown"
+          ]
+        }
+      ]
+    },
+    {
       "name": "sawyer-yards",
       "description": "Sawyer Yards",
       "friendlyLink": "https://www.sawyeryards.com/",
@@ -505,6 +559,24 @@
             "Outdoor Recreation",
             "Nature",
             "Education"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "the-deluxe-theater",
+      "description": "The DeLUXE Theater Houston",
+      "friendlyLink": "https://thedeluxetheater.com/",
+      "calendars": [
+        {
+          "name": "the-deluxe-theater",
+          "friendlyName": "The DeLUXE Theater Houston",
+          "icsUrl": "the-deluxe-theater-the-deluxe-theater.ics",
+          "rssUrl": "the-deluxe-theater-the-deluxe-theater.rss",
+          "tags": [
+            "Theater",
+            "Performance",
+            "Near Northside"
           ]
         }
       ]
@@ -821,6 +893,7 @@
     "Beer",
     "Books",
     "Brewery",
+    "Cinema",
     "Comedy",
     "Community",
     "Culinary",
@@ -839,11 +912,13 @@
     "Hiking",
     "History",
     "Jazz",
+    "Kids",
     "MakersMarket",
     "Medical Center",
     "Memorial",
     "Midtown",
     "Montrose",
+    "Museum",
     "Museum District",
     "Museums",
     "Music",
@@ -853,6 +928,7 @@
     "Opera",
     "Outdoor Recreation",
     "Parks",
+    "Performance",
     "PerformingArts",
     "Photography",
     "Sports",
@@ -866,6 +942,7 @@
     "Upper Kirby",
     "Uptown",
     "Wedgewood",
+    "West University",
     "Workshops"
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-02T02:32:27.809Z",
+  "generated": "2026-07-03T06:56:39.396Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -175,6 +175,42 @@
             },
             "rss": {
               "href": "central-market-cooking-school-central-market-cooking-school.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "childrens-museum-houston",
+      "friendlyName": "Children's Museum Houston",
+      "description": "Children's Museum Houston",
+      "tags": [
+        "Family",
+        "Kids",
+        "Museum",
+        "Museum District"
+      ],
+      "geo": {
+        "lat": 29.7195,
+        "lng": -95.3872,
+        "label": "Children's Museum Houston, 1500 Binz Street, Houston, TX 77004"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Children's%20Museum%20Houston%2C%201500%20Binz%20Street%2C%20Houston%2C%20TX%2077004"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "main",
+          "friendlyName": "Children's Museum Houston",
+          "links": {
+            "ics": {
+              "href": "childrens-museum-houston-main.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "childrens-museum-houston-main.rss",
               "type": "application/rss+xml"
             }
           }
@@ -1145,6 +1181,41 @@
       ]
     },
     {
+      "name": "murder-by-the-book",
+      "friendlyName": "Murder By The Book",
+      "description": "Murder By The Book",
+      "url": "https://www.murderbooks.com/events",
+      "tags": [
+        "Books",
+        "West University"
+      ],
+      "geo": {
+        "lat": 29.7255,
+        "lng": -95.4175,
+        "label": "Murder By The Book, 2342 Bissonnet St, Houston, TX 77005"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Murder%20By%20The%20Book%2C%202342%20Bissonnet%20St%2C%20Houston%2C%20TX%2077005"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "murder-by-the-book",
+          "friendlyName": "Murder By The Book",
+          "links": {
+            "ics": {
+              "href": "murder-by-the-book-murder-by-the-book.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "murder-by-the-book-murder-by-the-book.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "post-houston",
       "friendlyName": "POST Houston",
       "description": "POST Houston",
@@ -1326,6 +1397,42 @@
       ]
     },
     {
+      "name": "rooftop-cinema-club-houston",
+      "friendlyName": "Rooftop Cinema Club Houston",
+      "description": "Rooftop Cinema Club Houston",
+      "url": "https://rooftopcinemaclub.com/us/houston/uptown",
+      "tags": [
+        "Cinema",
+        "Entertainment",
+        "Uptown"
+      ],
+      "geo": {
+        "lat": 29.7496,
+        "lng": -95.4618,
+        "label": "Rooftop Cinema Club Houston, 1700 Post Oak Boulevard, Houston, TX 77056"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Rooftop%20Cinema%20Club%20Houston%2C%201700%20Post%20Oak%20Boulevard%2C%20Houston%2C%20TX%2077056"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "rooftop-cinema-club-houston",
+          "friendlyName": "Rooftop Cinema Club Houston",
+          "links": {
+            "ics": {
+              "href": "rooftop-cinema-club-houston-rooftop-cinema-club-houston.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "rooftop-cinema-club-houston-rooftop-cinema-club-houston.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "sawyer-yards",
       "friendlyName": "Sawyer Yards",
       "description": "Sawyer Yards",
@@ -1391,6 +1498,42 @@
             },
             "rss": {
               "href": "shrine-of-the-black-madonna-shrine-of-the-black-madonna.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "the-deluxe-theater",
+      "friendlyName": "The DeLUXE Theater Houston",
+      "description": "The DeLUXE Theater Houston",
+      "url": "https://thedeluxetheater.com/",
+      "tags": [
+        "Theater",
+        "Performance",
+        "Near Northside"
+      ],
+      "geo": {
+        "lat": 29.7186,
+        "lng": -95.3468,
+        "label": "The DeLUXE Theater, 3303 Lyons Avenue, Houston, TX 77020"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=The%20DeLUXE%20Theater%2C%203303%20Lyons%20Avenue%2C%20Houston%2C%20TX%2077020"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "the-deluxe-theater",
+          "friendlyName": "The DeLUXE Theater Houston",
+          "links": {
+            "ics": {
+              "href": "the-deluxe-theater-the-deluxe-theater.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "the-deluxe-theater-the-deluxe-theater.rss",
               "type": "application/rss+xml"
             }
           }

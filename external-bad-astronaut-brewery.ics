@@ -19,35 +19,6 @@ DTSTART:20250101T000000
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-DTSTART;TZID=UTC:20260702T193000
-DTEND;TZID=UTC:20260702T220000
-DTSTAMP:20260108T233558Z
-CREATED:20241203T222143Z
-LAST-MODIFIED:20260108T233558Z
-UID:10002323-1783020600-1783029600@badastronautbeer.com
-SUMMARY:AIR HOCKEY TOURNAMENT
-DESCRIPTION:Bad Astronaut & Photon Air Hockey Present \nAIR HOCKEY DOUBLES TOURNAMENT\nEvery Thursday | 7:30 – 10 PM | Free Entry\n\n\n\n\n\n\nJoin us every Thursday in the taproom for our exciting Air Hockey Tournaments! Whether you’re a beginner or an expert\, there’s a matchup for you. Enjoy thrilling double-elimination rounds with timed 3-minute matches and fantastic prizes for the winners. Test your skills and immerse yourself in the electrifying experience of Photon Blitz! Don’t miss out on the action!
-URL:https://badastronautbeer.com/event/air-hockey-tournament-2/2026-07-02/
-LOCATION:Bad Astronaut Brewery\, 1519 Fulton Street\, Houston\, TX\, 77009\, United States
-CATEGORIES:Air Hockey
-ATTACH;FMTTYPE=image/jpeg:https://badastronautbeer.com/wp-content/uploads/2024/06/https___cdn.evbuc_.com_images_786255799_2189178121793_1_original.jpg
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=UTC:20260702T210000
-DTEND;TZID=UTC:20260702T230000
-DTSTAMP:20250623T211429Z
-CREATED:20250623T211429Z
-LAST-MODIFIED:20250623T211429Z
-UID:10004991-1783026000-1783033200@badastronautbeer.com
-SUMMARY:HAPPY HOUR: Reverse Happy Hour
-DESCRIPTION:HAPPY HOUR DAILY SPECIAL \nREVERSE HAPPY HOUR \n$2 Off All Beverages (Sodas Not Included) 9 – 11 PM! \n 
-URL:https://badastronautbeer.com/event/happy-hour-reverse-happy-hour/2026-07-02/
-LOCATION:Bad Astronaut Brewery\, 1519 Fulton Street\, Houston\, TX\, 77009\, United States
-CATEGORIES:Happy Hour
-ATTACH;FMTTYPE=image/jpeg:https://badastronautbeer.com/wp-content/uploads/2025/06/Copy-of-happy-hour-Instagram-Post-45-3.jpg
-ORGANIZER;CN="Bad Astronaut Brewery":MAILTO:info@badastronautbeer.com
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;TZID=UTC:20260703T170000
 DTEND;TZID=UTC:20260703T233000
 DTSTAMP:20251204T000419Z
@@ -458,6 +429,35 @@ URL:https://badastronautbeer.com/event/run-club-wednesdays/2026-07-29/
 LOCATION:Bad Astronaut Brewery\, 1519 Fulton Street\, Houston\, TX\, 77009\, United States
 CATEGORIES:Run Club
 ATTACH;FMTTYPE=image/jpeg:https://badastronautbeer.com/wp-content/uploads/2024/07/486448432_1211774240463347_5176061303121198030_n.jpg
+ORGANIZER;CN="Bad Astronaut Brewery":MAILTO:info@badastronautbeer.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260730T193000
+DTEND;TZID=UTC:20260730T220000
+DTSTAMP:20260108T233558Z
+CREATED:20241203T222143Z
+LAST-MODIFIED:20260108T233558Z
+UID:10002327-1785439800-1785448800@badastronautbeer.com
+SUMMARY:AIR HOCKEY TOURNAMENT
+DESCRIPTION:Bad Astronaut & Photon Air Hockey Present \nAIR HOCKEY DOUBLES TOURNAMENT\nEvery Thursday | 7:30 – 10 PM | Free Entry\n\n\n\n\n\n\nJoin us every Thursday in the taproom for our exciting Air Hockey Tournaments! Whether you’re a beginner or an expert\, there’s a matchup for you. Enjoy thrilling double-elimination rounds with timed 3-minute matches and fantastic prizes for the winners. Test your skills and immerse yourself in the electrifying experience of Photon Blitz! Don’t miss out on the action!
+URL:https://badastronautbeer.com/event/air-hockey-tournament-2/2026-07-30/
+LOCATION:Bad Astronaut Brewery\, 1519 Fulton Street\, Houston\, TX\, 77009\, United States
+CATEGORIES:Air Hockey
+ATTACH;FMTTYPE=image/jpeg:https://badastronautbeer.com/wp-content/uploads/2024/06/https___cdn.evbuc_.com_images_786255799_2189178121793_1_original.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260730T210000
+DTEND;TZID=UTC:20260730T230000
+DTSTAMP:20250623T211429Z
+CREATED:20250623T211429Z
+LAST-MODIFIED:20250623T211429Z
+UID:10004995-1785445200-1785452400@badastronautbeer.com
+SUMMARY:HAPPY HOUR: Reverse Happy Hour
+DESCRIPTION:HAPPY HOUR DAILY SPECIAL \nREVERSE HAPPY HOUR \n$2 Off All Beverages (Sodas Not Included) 9 – 11 PM! \n 
+URL:https://badastronautbeer.com/event/happy-hour-reverse-happy-hour/2026-07-30/
+LOCATION:Bad Astronaut Brewery\, 1519 Fulton Street\, Houston\, TX\, 77009\, United States
+CATEGORIES:Happy Hour
+ATTACH;FMTTYPE=image/jpeg:https://badastronautbeer.com/wp-content/uploads/2025/06/Copy-of-happy-hour-Instagram-Post-45-3.jpg
 ORGANIZER;CN="Bad Astronaut Brewery":MAILTO:info@badastronautbeer.com
 END:VEVENT
 END:VCALENDAR
