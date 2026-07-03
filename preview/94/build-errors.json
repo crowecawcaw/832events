@@ -1,5 +1,5 @@
 {
-  "buildTime": "2026-07-03T17:34:47.450Z",
+  "buildTime": "2026-07-03T18:06:11.875Z",
   "totalErrors": 11,
   "configErrors": [],
   "sources": [
@@ -179,12 +179,6 @@
       "friendlyName": "Hobby Center for the Performing Arts",
       "url": "https://www.thehobbycenter.org/?post_type=tribe_events&ical=1&eventDisplay=list",
       "error": "Error: HTTP 403: "
-    },
-    {
-      "name": "islamic-society-greater-houston",
-      "friendlyName": "Islamic Society of Greater Houston",
-      "url": "https://isgh.org/?post_type=tribe_events&ical=1",
-      "error": "Error: HTTP 403: "
     }
   ],
   "geocodeErrors": [],
@@ -223,6 +217,7 @@
     "tag-river-oaks",
     "tag-garden-oaks",
     "external-houston-cinema-arts-society",
+    "external-islamic-society-greater-houston",
     "external-walking-stick-brewing"
   ],
   "expectedEmptyCalendars": [],
@@ -15401,6 +15396,13 @@
       "events": 26,
       "expectEmpty": false,
       "source": "ion-district"
+    },
+    {
+      "name": "external-islamic-society-greater-houston",
+      "type": "External",
+      "events": 0,
+      "expectEmpty": false,
+      "source": "islamic-society-greater-houston"
     },
     {
       "name": "external-levy-park-houston",
