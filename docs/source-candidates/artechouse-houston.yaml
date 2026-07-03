@@ -1,0 +1,11 @@
+name: ARTECHOUSE Houston
+status: blocked
+platform: Eventbrite (not Tribe Events as shortlist claimed)
+url: https://artechouse.com/location/houston
+tags:
+  - Art
+  - Museums
+  - Downtown
+firstSeen: 2026-06-27
+lastChecked: 2026-06-27
+notes: Real venue with active Eventbrite events; shortlist platform guess was incorrect. Requires Eventbrite organizerId which was not accessible via curl (potential bot-blocking). Needs manual organizerId lookup or bot-detection bypass (proxy:true).

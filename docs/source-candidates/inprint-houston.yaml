@@ -1,0 +1,19 @@
+name: inprint-houston
+status: added
+platform: The Events Calendar (Tribe Events plugin)
+url: https://inprinthouston.org/calendar/
+tags:
+  - Books
+  - Museum District
+firstSeen: 2026-06-15
+lastChecked: 2026-06-16
+impl:
+  type: external
+  icsUrl: https://inprinthouston.org/?post_type=tribe_events&ical=1&eventDisplay=list
+  infoUrl: https://inprinthouston.org/calendar/
+  observedEventCount: 6
+  geo:
+    lat: 29.728
+    lng: -95.396
+    label: Inprint Houston, 1520 W Main St, Houston, TX 77006
+  proxy: true

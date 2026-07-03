@@ -1,0 +1,14 @@
+name: Comedy Calendar
+status: added
+platform: Tribe Events (ICS feed)
+url: https://comedycalendar.com/
+tags:
+  - Comedy
+  - Nightlife
+firstSeen: 2026-07-01
+lastChecked: 2026-07-01
+pr: TBD
+impl:
+  type: external
+  icsUrl: https://comedycalendar.com/events/?ical=1
+  observedEventCount: 30

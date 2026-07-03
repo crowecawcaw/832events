@@ -147,13 +147,13 @@ and implements the best ones in one run:
 
 - **Discover** (`skills/source-discovery/SKILL.md` steps 1–5) — scan for new
   event sources in your city, quality-gate them, and record candidates in
-  `docs/source-candidates.json` (git history is the log). Flag dead sources.
+  `docs/source-candidates/` (git history is the log). Flag dead sources.
 - **Implement** (`skills/source-discovery/SKILL.md` steps 6–8) — build **up to
   5** pending candidates, cheapest/highest volume first (external ICS + built-in
   platform rippers), validating each in-session (`npm run validate`, per-source
   `ONLY_SOURCE` build, `npm run test:all`, `/code-review`). It opens **one PR
   for human review** with all successfully-built sources plus the
-  `docs/source-candidates.json` updates. Since CI won't run on a bot-authored
+  `docs/source-candidates/` updates. Since CI won't run on a bot-authored
   PR, in-session validation is the gate; the repo owner merges.
 
 If discovery turns up nothing and no candidates are implementable, it opens no PR.

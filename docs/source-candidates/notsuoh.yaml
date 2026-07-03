@@ -1,0 +1,20 @@
+name: Notsuoh
+status: investigating
+platform: Squarespace (HTML)
+url: http://notsuoh.com/
+tags:
+  - Music
+  - Nightlife
+  - Arts
+  - Downtown
+firstSeen: 2026-06-16
+lastChecked: 2026-06-18
+notes: Custom HTML ripper implemented and tested locally (8 events in unit tests), but live fetch returns 0 events. Squarespace selectors may need adjustment or site structure changed. Ripper code exists at sources/notsuoh/ripper.ts, ready for debugging.
+impl:
+  type: custom
+  observedEventCount: 8
+  builtEventCount: 0
+  geo:
+    lat: 29.7603
+    lng: -95.3866
+    label: Notsuoh, 314 Main St, Houston, TX 77002

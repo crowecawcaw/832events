@@ -1,0 +1,20 @@
+name: Cullen Performance Hall
+status: added
+platform: Custom HTML calendar
+url: https://www.uh.edu/cullen-performance-hall/about-us/event-calendar/
+tags:
+  - PerformingArts
+  - University
+  - Theater
+  - Music
+firstSeen: 2026-06-29
+lastChecked: 2026-06-29
+impl:
+  type: custom
+  observedEventCount: 22
+  builtEventCount: 22
+  note: Custom HTML ripper for UH performance hall calendar; 22 events extracted from event listings including performances and speaker series
+  geo:
+    lat: 29.7199
+    lng: -95.2829
+    label: Cullen Performance Hall, 4400 University Drive, Houston, TX 77004

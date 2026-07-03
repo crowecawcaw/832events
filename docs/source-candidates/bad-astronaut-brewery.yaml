@@ -1,0 +1,19 @@
+name: Bad Astronaut Brewery
+status: added
+platform: The Events Calendar (WordPress)
+url: https://badastronautbeer.com/
+tags:
+  - Beer
+  - Brewery
+  - Montrose
+firstSeen: 2026-06-15
+lastChecked: 2026-06-15
+pr: 27
+impl:
+  feedUrl: https://badastronautbeer.com/?tribe-events-list=&tribe-bar-date=2026-06-15
+  observedEventCount: 35+
+  timezone: America/Chicago
+  geo:
+    lat: 29.7683
+    lng: -95.3628
+    label: Bad Astronaut Brewery, Houston, TX

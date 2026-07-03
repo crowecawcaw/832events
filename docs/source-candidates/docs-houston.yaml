@@ -1,0 +1,20 @@
+name: Doc's Houston
+status: added
+platform: Custom HTML ripper (TurnTable Tickets)
+url: https://docsjazzclub.com/
+tags:
+  - Music
+  - Jazz
+  - Montrose
+firstSeen: 2026-06-15
+lastChecked: 2026-06-23
+pr: claude/source-pipeline-2026-06-23
+impl:
+  type: custom
+  observedEventCount: 6
+  builtEventCount: 6
+  note: Custom HTML ripper for TurnTable Tickets platform; jazz venue with upcoming performances
+  geo:
+    lat: 29.7456
+    lng: -95.3829
+    label: Doc's Houston (Doc's Jazz Club), 1201 Westheimer Rd, Houston, TX 77006

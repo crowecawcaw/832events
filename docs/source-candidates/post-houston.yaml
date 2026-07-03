@@ -1,0 +1,22 @@
+name: POST Houston
+status: added
+platform: Custom HTML calendar with Eventrill ticketing
+url: https://posthtx.com/event
+tags:
+  - Art
+  - Music
+  - Nightlife
+  - Food
+  - Downtown
+firstSeen: 2026-06-27
+lastChecked: 2026-06-27
+pr: claude/source-discovery-2026-06-27
+impl:
+  type: custom
+  observedEventCount: 10
+  builtEventCount: 10
+  note: Custom HTML ripper for Webflow-based event calendar; extracts from Webflow event cards
+  geo:
+    lat: 29.7569
+    lng: -95.3594
+    label: POST Houston, 510 Main St, Houston, TX 77002

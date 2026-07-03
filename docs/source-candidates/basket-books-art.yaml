@@ -1,0 +1,11 @@
+name: Basket Books & Art
+status: notviable
+platform: BookManager (not Eventbrite)
+url: https://www.basket-books.com/
+tags:
+  - Books
+  - Arts
+  - Montrose
+firstSeen: 2026-06-16
+lastChecked: 2026-06-18
+notes: Uses BookManager platform with dynamic event loading; no Eventbrite account found. Would require custom scraper with proxy:true for JS rendering.

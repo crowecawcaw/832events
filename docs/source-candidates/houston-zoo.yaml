@@ -1,0 +1,21 @@
+name: Houston Zoo
+status: added
+platform: Custom website calendar
+url: https://www.houstonzoo.org/plan-your-visit/calendar/
+tags:
+  - Animals
+  - Family
+  - Parks
+  - Museum District
+firstSeen: 2026-06-27
+lastChecked: 2026-06-27
+pr: claude/source-discovery-2026-06-27
+impl:
+  type: custom
+  observedEventCount: 10
+  builtEventCount: 10
+  note: Custom HTML ripper for zoo event calendar; includes special programming like Red White & Zoo and TXU Energy Mythical Realms
+  geo:
+    lat: 29.7174
+    lng: -95.391
+    label: Houston Zoo, 6200 Hermann Park Drive, Houston, TX 77030

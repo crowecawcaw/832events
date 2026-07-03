@@ -1,0 +1,21 @@
+name: Children's Museum Houston
+status: added
+platform: Custom HTML ripper (Webflow)
+url: https://www.cmhouston.org/events
+tags:
+  - Family
+  - Kids
+  - Museum
+  - MuseumDistrict
+firstSeen: 2026-07-01
+lastChecked: 2026-07-01
+pr: feature/source-discovery-2026-07-01
+impl:
+  type: custom
+  observedEventCount: 49
+  builtEventCount: 49
+  note: Custom HTML ripper for Webflow-based calendar; 49 events including Free Family Nights, summer programs, workshops, cultural events
+  geo:
+    lat: 29.7195
+    lng: -95.3872
+    label: Children's Museum Houston, 1500 Binz Street, Houston, TX 77004

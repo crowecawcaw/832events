@@ -1,0 +1,12 @@
+name: Dan Electro's Guitar Bar
+status: investigating
+platform: Custom HTML
+url: https://danelectrosguitar.com/
+tags:
+  - Music
+  - Rock
+  - Blues
+  - The Heights
+firstSeen: 2026-06-15
+lastChecked: 2026-06-18
+notes: Custom HTML ripper fully implemented but website unreachable from CI. Ripper code is ready; will produce events when site becomes accessible. Consider setting proxy:true if needed.

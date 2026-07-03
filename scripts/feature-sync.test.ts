@@ -31,10 +31,10 @@ describe("classifyPath", () => {
         }
     });
 
-    it("treats top-level design docs as engine but the candidates file as content", () => {
+    it("treats top-level design docs as engine but candidate YAMLs as content", () => {
         expect(classifyPath("docs/upstream-feature-sync.md")).toBe("engine");
         expect(classifyPath("docs/plans/something.md")).toBe("engine");
-        expect(classifyPath("docs/source-candidates.json")).toBe("content");
+        expect(classifyPath("docs/source-candidates/nrg-stadium.yaml")).toBe("content");
     });
 
     it("treats per-city content as content", () => {

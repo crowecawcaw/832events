@@ -1,0 +1,17 @@
+name: Downtown Houston Events Calendar
+status: added
+platform: Custom calendar
+url: https://downtownhouston.org/calendar
+tags:
+  - Downtown
+  - Community
+  - Arts
+  - Culture
+firstSeen: 2026-06-29
+lastChecked: 2026-06-29
+impl:
+  type: custom
+  observedEventCount: 79
+  builtEventCount: 79
+  note: Custom HTML ripper for downtown Houston management district calendar; 79 events from downtown venues, festivals, and programming
+  geo: null

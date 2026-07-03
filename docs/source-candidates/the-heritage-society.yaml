@@ -1,0 +1,19 @@
+name: The Heritage Society
+status: promoted
+platform: Squarespace
+url: https://www.heritagesociety.org/calendar
+tags:
+  - History
+  - Community
+  - Downtown
+firstSeen: 2026-06-28
+lastChecked: 2026-06-28
+impl:
+  type: squarespace
+  observedEventCount: 2
+  builtEventCount: 2
+  note: Squarespace calendar with ?format=json endpoint; 2 upcoming events including Patriot Day celebration
+  geo:
+    lat: 29.760728
+    lng: -95.372803
+    label: The Heritage Society, 1100 Bagby Street, Houston, TX 77002

@@ -110,10 +110,14 @@ the default branch. So PR preview builds *read* the cache the daily `main` build
 writes and make almost no outgoing requests themselves; a PR build's own save is
 scoped to the PR and can't pollute `main`.
 
-**Cold start / forks:** an empty committed `fetch-cache.json`
-(`{"version":1,"entries":{}}`) is the baseline when no Actions Cache entry
-exists (first run, or a fork PR without cache access). Never commit a populated
-version — let the Actions Cache hold the live data.
+**Cold start / forks:** `fetch-cache.json` is **gitignored — never committed**.
+When no Actions Cache entry exists (first run, or a fork PR without cache
+access), the loader starts from an empty cache (`{"version":1,"entries":{}}`)
+and the build refetches every source once. The Actions Cache holds the live
+data; the file is regenerated on disk each build. It used to be committed as an
+"empty baseline," but populated copies kept riding into `main` through
+auto-merged discovery PRs and conflicting on rebase — gitignoring it removes
+that failure mode entirely.
 
 ## Reporting: `proxyStaleServes`
 

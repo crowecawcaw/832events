@@ -1,0 +1,11 @@
+name: Houston Urban Trekkers
+status: blocked
+platform: Meetup
+url: https://www.meetup.com/Houston-Urban-Trekkers/
+tags:
+  - Hiking
+  - Outdoor Recreation
+  - Community
+firstSeen: 2026-06-20
+lastChecked: 2026-06-21
+notes: Meetup ICS endpoint returns empty response. Meetup ICS may require authentication. Consider custom Meetup HTML scraper or find alternative event feed.

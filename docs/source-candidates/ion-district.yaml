@@ -1,0 +1,19 @@
+name: Ion District
+status: added
+platform: Tribe Events (ICS)
+url: https://iondistrict.com/events/
+tags:
+  - Community
+  - Tech
+  - Midtown
+firstSeen: 2026-06-15
+lastChecked: 2026-06-17
+impl:
+  type: external
+  icsUrl: https://iondistrict.com/events/?ical=1
+  infoUrl: https://iondistrict.com/events/
+  observedEventCount: 13
+  geo:
+    lat: 29.724
+    lng: -95.3905
+    label: Ion District, 4201 Main St, Houston, TX 77002

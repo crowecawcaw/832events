@@ -17,5 +17,12 @@ web/.playwright/
 .env.local
 .env.*.local
 
+# Build caches — regenerated each build, persisted across CI runs via the
+# GitHub Actions Cache (see docs/github-native-caches.md, docs/fetch-cache.md).
+# Never committed: two discovery PRs used to conflict on these populated blobs.
+# A missing file is a clean cold start (loaders return an empty cache).
+geo-cache.json
+fetch-cache.json
+
 # Claude Code harness (agent worktrees, local state)
 .claude/

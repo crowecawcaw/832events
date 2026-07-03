@@ -1,0 +1,14 @@
+name: Lawndale Art Center
+status: added
+platform: WordPress + custom HTML (no ICS/API available)
+url: https://lawndaleartcenter.org/events/
+tags:
+  - Art
+  - Museum District
+firstSeen: 2026-06-14
+lastChecked: 2026-06-18
+pr: claude/source-pipeline-2026-06-18
+impl:
+  type: custom
+  builtEventCount: 2
+  note: Custom HTML ripper for WordPress events

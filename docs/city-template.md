@@ -50,7 +50,7 @@ deleted and regrown for the new city.**
 |---|---|---|
 | **ENGINE** | City-agnostic code and automation | `lib/` (except noted tables), `scripts/`, `web/`, `skills/`, `.github/workflows/`, `index.ts` |
 | **CONFIG** | The single edit surface for a new city | `city.config.ts` (repo root) |
-| **CITY CONTENT** | Seattle data a new city deletes and regrows | ~160 source dirs under `sources/`, ~95 `sources/recurring/*.yaml`, `sources/external/*.yaml`, `sources/houston_showlists/` (incl. its `VENUE_CONFIG`), `docs/source-candidates.json`, `event-uncertainty-cache.json` (~920 KB of Seattle resolutions), `allowed-removals/`, Seattle entries in `ideas.md`, Seattle lookup tables in `lib/geocoder.ts` (`NEIGHBORHOOD_CENTROIDS`, `LIBRARY_BRANCH_COORDS`, `UNIVERSITY_BUILDING_COORDS`, `UNIVERSITY_NAMED_LOCATIONS`, `KNOWN_VENUE_COORDS`) |
+| **CITY CONTENT** | Seattle data a new city deletes and regrows | ~160 source dirs under `sources/`, ~95 `sources/recurring/*.yaml`, `sources/external/*.yaml`, `sources/houston_showlists/` (incl. its `VENUE_CONFIG`), `docs/source-candidates/`, `event-uncertainty-cache.json` (~920 KB of Seattle resolutions), `allowed-removals/`, Seattle entries in `ideas.md`, Seattle lookup tables in `lib/geocoder.ts` (`NEIGHBORHOOD_CENTROIDS`, `LIBRARY_BRANCH_COORDS`, `UNIVERSITY_BUILDING_COORDS`, `UNIVERSITY_NAMED_LOCATIONS`, `KNOWN_VENUE_COORDS`) |
 
 `geo-cache.json` and `fetch-cache.json` are already committed as empty
 cold-start baselines and need no template treatment.
@@ -168,8 +168,8 @@ Deterministic, idempotent, no LLM required. Prompts for the config values
    `web/src/sw.js`, plus generated `README.md` and `ideas.md`.
 3. **Strips Seattle content**: deletes `sources/*` ripper dirs (including
    `houston_showlists/`), `sources/recurring/*`, `sources/external/*`
-   (keeping both dirs via `.gitkeep`), resets `docs/source-candidates.json`
-   to empty, `allowed-removals/*`;
+   (keeping both dirs via `.gitkeep`), clears `docs/source-candidates/`
+   to empty (keeping the dir via `.gitkeep`), `allowed-removals/*`;
    resets `event-uncertainty-cache.json` to `{"version":1,"entries":{}}`;
    prunes the five Seattle lookup tables in `lib/geocoder.ts` to empty
    stubs (the surrounding matching logic is table-driven, so empty tables
@@ -279,7 +279,7 @@ Anthropic-account routines or extra secrets. The reference instance runs
    errors, and skips silently when the OAuth token is unset.
 2. **Source pipeline** — one scheduled workflow, `claude-sources.yml` (daily
    08:30 UTC). It runs `skills/source-discovery/SKILL.md`: discovers new
-   sources, records them in `docs/source-candidates.json`, builds up to 5
+   sources, records them in `docs/source-candidates/`, builds up to 5
    pending candidates, and opens a single human-review PR.
 
 Issues and PRs are owner-driven, not automated: the owner comments

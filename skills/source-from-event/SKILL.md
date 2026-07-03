@@ -117,7 +117,7 @@ already done the discovery; you have the candidate URL/venue in hand.
 That skill handles:
 
 - Live fetch validation of the candidate URL
-- Adding/updating the candidate's entry in `docs/source-candidates.json`
+- Adding/updating the candidate's file `docs/source-candidates/<slug>.yaml`
   (note in `notes` that this came from a poster lookup)
 - Spawning a coding agent to implement the ripper / add the external
   ICS / configure the built-in type

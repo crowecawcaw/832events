@@ -1,0 +1,18 @@
+name: HTXoutdoors
+status: added
+platform: Event Espresso 4 (custom JSON API)
+url: https://htxoutdoors.com/
+tags:
+  - OutdoorRecreation
+  - Hiking
+  - Sports
+  - Community
+firstSeen: 2026-06-24
+lastChecked: 2026-06-26
+pr: claude/source-pipeline-2026-06-26
+impl:
+  type: custom
+  observedEventCount: 33
+  builtEventCount: 33
+  note: Event Espresso 4 AJAX API; 33 upcoming outdoor recreation events (hiking, kayaking, trail runs, etc.)
+  geo: null

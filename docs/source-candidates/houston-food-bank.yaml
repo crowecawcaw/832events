@@ -1,0 +1,14 @@
+name: Houston Food Bank
+status: added
+platform: Tribe Events (ICS feed)
+url: https://www.houstonfoodbank.org/upcomingevent/
+tags:
+  - Community
+  - Medical Center
+firstSeen: 2026-07-01
+lastChecked: 2026-07-01
+pr: TBD
+impl:
+  type: external
+  icsUrl: https://www.houstonfoodbank.org/upcomingevents/?ical=1
+  observedEventCount: 12

@@ -1,0 +1,20 @@
+name: The DeLUXE Theater Houston
+status: added
+platform: Custom HTML ripper (WordPress REST API)
+url: https://thedeluxetheater.com/
+tags:
+  - Theater
+  - Performance
+  - FifthWard
+firstSeen: 2026-07-01
+lastChecked: 2026-07-01
+pr: feature/source-discovery-2026-07-01
+impl:
+  type: custom
+  observedEventCount: 348
+  builtEventCount: 348
+  note: Custom HTML ripper for WordPress Modern Events Calendar REST API; 348 events extracted including theater, dance, music, film, community programming
+  geo:
+    lat: 29.7186
+    lng: -95.3468
+    label: The DeLUXE Theater, 3303 Lyons Avenue, Houston, TX 77020

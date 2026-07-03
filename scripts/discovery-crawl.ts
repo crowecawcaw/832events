@@ -5,7 +5,7 @@
  *   1. Run a FIXED list of Brave web searches (discovery/queries.txt),
  *      paginated several pages deep.
  *   2. Dedup every result URL against what we ALREADY pull from
- *      (every URL in sources/**.yaml + docs/source-candidates.json) and
+ *      (every URL in sources/**.yaml + docs/source-candidates/*.yaml) and
  *      against the persistent ledger.
  *   3. Optionally fingerprint brand-new domains (one cheap GET) to guess the
  *      platform.
@@ -16,7 +16,7 @@
  * The LLM (separate workflow job) only runs when this crawler reports NEW
  * items — it reads the ledger, applies human-judgment quality gates, and
  * implements sources. This script never calls an LLM and never touches
- * source-candidates.json.
+ * docs/source-candidates/.
  *
  * Usage:
  *   tsx scripts/discovery-crawl.ts [--max-queries N] [--pages N] [--rotate]
@@ -28,12 +28,13 @@
 import { readFile, writeFile, readdir, appendFile } from "fs/promises";
 import * as path from "path";
 import { fileURLToPath } from "url";
+import { loadSourceCandidates } from "../lib/source-candidates.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.join(__dirname, "..");
 const SOURCES_DIR = path.join(REPO, "sources");
 const QUERIES_FILE = path.join(REPO, "discovery", "queries.txt");
-const CANDIDATES_FILE = path.join(REPO, "docs", "source-candidates.json");
+const CANDIDATES_DIR = path.join(REPO, "docs", "source-candidates");
 const LEDGER_FILE = path.join(REPO, "docs", "discovery-ledger.json");
 const METRICS_FILE = path.join(REPO, "docs", "discovery-metrics.jsonl");
 const IGNORE_FILE = path.join(REPO, "discovery", "ignore-domains.txt");
@@ -127,12 +128,12 @@ export function canonicalUrl(rawUrl: string): string | null {
 
 const URL_RE = /https?:\/\/[^\s"'<>)]+/g;
 
-/** Scan every source YAML + source-candidates.json and collect the set of
+/** Scan every source YAML + docs/source-candidates/*.yaml and collect the set of
  * registrable domains we already know about (excluding generic platform
  * domains, which can legitimately host new sources). */
 export async function loadKnownDomains(
     sourcesDir = SOURCES_DIR,
-    candidatesFile = CANDIDATES_FILE,
+    candidatesDir = CANDIDATES_DIR,
 ): Promise<Set<string>> {
     const known = new Set<string>();
     const addUrl = (s: string) => {
@@ -162,12 +163,10 @@ export async function loadKnownDomains(
     }
 
     // Candidate URLs (all statuses — don't re-surface anything already triaged).
-    try {
-        const cands = JSON.parse(await readFile(candidatesFile, "utf8"));
-        for (const c of cands) if (c.url) addUrl(c.url);
-    } catch {
-        /* candidates file optional */
-    }
+    // One YAML file per candidate under docs/source-candidates/; a missing dir
+    // yields an empty list, so the crawler runs fine on a cold copy.
+    const { candidates } = await loadSourceCandidates(candidatesDir);
+    for (const c of candidates) if (c.url) addUrl(c.url);
 
     return known;
 }

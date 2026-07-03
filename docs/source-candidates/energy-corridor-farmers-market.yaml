@@ -1,0 +1,15 @@
+name: Energy Corridor Farmers Market
+status: added
+platform: Tribe Events (ICS feed)
+url: https://energycorridor.org/energy-corridor-farmers-market
+tags:
+  - FarmersMarket
+  - Community
+  - Energy Corridor
+firstSeen: 2026-07-01
+lastChecked: 2026-07-01
+pr: TBD
+impl:
+  type: external
+  icsUrl: https://energycorridor.org/events/?ical=1
+  observedEventCount: 3

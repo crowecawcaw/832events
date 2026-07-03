@@ -3,8 +3,8 @@ name: Claude Source Pipeline
 # Discovers new Houston event sources AND implements them in a single daily run,
 # opening ONE human-review PR. (This replaces the old two-workflow split —
 # claude-discovery.yml + claude-implementation.yml — and the push-markdown-to-
-# main-then-read-it-an-hour-later dance. Candidate tracking lives in the single
-# file docs/source-candidates.json.)
+# main-then-read-it-an-hour-later dance. Candidate tracking lives in
+# docs/source-candidates/ — one YAML file per candidate.)
 #
 # A PR opened from this Action uses the Actions default token, so it will NOT
 # trigger CI or the automated Claude Code Review (bot-authored events don't start
@@ -62,17 +62,18 @@ jobs:
           prompt: |
             You run the source pipeline end to end: discover new Houston event
             sources, then implement the best ones and open ONE PR for human review.
-            Candidate tracking lives in the single file docs/source-candidates.json.
+            Candidate tracking lives in docs/source-candidates/ — one YAML file
+            per candidate, named <slug>.yaml (slug = lowercased, hyphenated name).
 
             STEP 1 — DISCOVER. Follow skills/source-discovery/SKILL.md steps 1-5:
             scan for new Houston event sources, quality-gate them (check they
             don't already exist under sources/external/, sources/recurring/, or
-            sources/*/ripper.yaml, and aren't already in docs/source-candidates.json),
-            and record findings by editing docs/source-candidates.json (add/update
-            entries; flag dead sources with status: dead). Git history is the log.
+            sources/*/ripper.yaml, and aren't already in docs/source-candidates/),
+            and record findings by creating/editing one docs/source-candidates/<slug>.yaml
+            file per candidate (flag dead sources with status: dead). Git history is the log.
 
             STEP 2 — IMPLEMENT up to ${{ inputs.max_sources || '5' }} candidates.
-            From docs/source-candidates.json select entries with status "candidate"
+            From docs/source-candidates/ select files with status "candidate"
             (or "investigating" if you can confirm a working feed). PRIORITISE the
             cheapest, highest-volume first: external ICS feeds and built-in platform
             rippers (Ticketmaster / Eventbrite / AXS / Squarespace — config-only
@@ -81,7 +82,7 @@ jobs:
             clean) per skills/source-discovery/SKILL.md from step 6, EXCEPT its
             commit / push / PR / merge instructions, which are SUPERSEDED — only you
             (the orchestrator) open the single PR at the end. For each source: set
-            its docs/source-candidates.json entry status to "added" (and the pr field
+            its docs/source-candidates/<slug>.yaml status to "added" (and the pr field
             once the PR exists), then VALIDATE: `npm run validate`, then
             `ONLY_SOURCE=<name> npm run generate-calendars` (confirm a sane, non-zero
             event count and no errors), then `npm run test:all`. NEVER run a full
@@ -95,7 +96,7 @@ jobs:
             and note it in the PR body. Run `/code-review` on the working-tree diff
             and address its findings (delegate substantial fixes to a sub-agent).
             Open ONE PR on a feature branch with all successfully-built sources plus
-            the docs/source-candidates.json updates. This Action's PR will NOT
+            the docs/source-candidates/ updates. This Action's PR will NOT
             trigger CI or Claude Code Review (bot-authored), so your in-session
             validation IS the gate: do not wait for CI/review, do not enable
             auto-merge, do NOT push to main, and do NOT self-merge — the repo owner

@@ -150,7 +150,7 @@ cadences for each are in [`docs/routines.md`](./routines.md):
   run and `force_routine=true`).
 - **Source pipeline** — one scheduled workflow, `claude-sources.yml` (daily
   08:30 UTC). It discovers new sources, records them in
-  `docs/source-candidates.json`, builds up to 5 pending candidates, and opens a
+  `docs/source-candidates/`, builds up to 5 pending candidates, and opens a
   single human-review PR (`skills/source-discovery/SKILL.md`).
 
 Issues and PRs are **owner-driven**, not automated: comment `@claude` to

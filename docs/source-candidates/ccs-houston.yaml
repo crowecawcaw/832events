@@ -1,0 +1,14 @@
+name: CCS Houston
+status: added
+platform: Tribe Events (ICS feed)
+url: https://ccs-houston.com/events/
+tags:
+  - Art
+  - Community
+firstSeen: 2026-07-01
+lastChecked: 2026-07-01
+pr: TBD
+impl:
+  type: external
+  icsUrl: https://ccs-houston.com/events/?ical=1
+  observedEventCount: 13

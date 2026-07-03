@@ -35,7 +35,7 @@ are the human-judgment quality gates (Houston-focused? religious / support-group
    throttled to ~1 req/s. Query selection rotates by UTC day so the whole list
    is covered over several days within budget.
 2. **Dedup against what we already pull from.** A known-domain index is built by
-   scanning every URL in `sources/**.yaml` + `docs/source-candidates.json`. A hit
+   scanning every URL in `sources/**.yaml` + `docs/source-candidates/*.yaml`. A hit
    whose registrable domain is already known is recorded as `promoted` (parked
    ~10y) and never re-probed. Generic platform hosts (eventbrite.com,
    ticketmaster.com, dice.fm, squarespace.com, google.com, …) are **excluded**
@@ -73,7 +73,7 @@ are the human-judgment quality gates (Houston-focused? religious / support-group
    to triage editorial/junk domains. It reads the shortlist, applies the
    `source-discovery` skill's quality gates, implements the best, and opens one
    human-review PR. The
-   crawler never edits `source-candidates.json` itself — it only fills the
+   crawler never edits `docs/source-candidates/` itself — it only fills the
    ledger; the LLM promotes ledger entries into real candidates/sources.
 
 ## Running locally

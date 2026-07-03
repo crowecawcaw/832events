@@ -70,12 +70,13 @@ jobs:
       run: npm run test:all
 
     - name: Restore geo-cache
-      # geo-cache.json is persisted via the GitHub Actions Cache, not S3.
-      # The committed file is an empty cold-start baseline; an immutable
-      # per-run key never matches exactly, so restore-keys returns the newest
-      # entry (same pattern as the fetch cache below). On a cold cache the
-      # build re-geocodes every location once with the current normalization
-      # logic — slower for one build, and legacy dirty keys don't carry over.
+      # geo-cache.json is persisted via the GitHub Actions Cache, not S3, and is
+      # NOT committed (gitignored — see docs/github-native-caches.md). An
+      # immutable per-run key never matches exactly, so restore-keys returns the
+      # newest entry (same pattern as the fetch cache below). On a cold cache the
+      # build starts empty and re-geocodes every location once with the current
+      # normalization logic — slower for one build, and legacy dirty keys don't
+      # carry over.
       uses: actions/cache/restore@v4
       with:
         path: geo-cache.json

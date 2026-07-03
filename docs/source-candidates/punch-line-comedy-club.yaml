@@ -1,0 +1,20 @@
+name: Punch Line Comedy Club
+status: added
+platform: Ticketmaster
+url: https://www.punchlinecomedyclub.com/
+tags:
+  - Comedy
+  - Entertainment
+  - Downtown
+firstSeen: 2026-06-15
+lastChecked: 2026-06-18
+pr: claude/source-pipeline-2026-06-18
+impl:
+  type: ticketmaster
+  venueId: KovZ917ARGO
+  observedEventCount: 88
+  builtEventCount: 88
+  geo:
+    lat: 29.7534
+    lng: -95.364
+    label: Punch Line Comedy Club, 1204 Caroline Street, Houston, TX 77002

@@ -1,0 +1,19 @@
+name: Rooftop Cinema Club Houston
+status: added
+platform: Custom HTML ripper
+url: https://rooftopcinemaclub.com/us/houston/uptown
+tags:
+  - Cinema
+  - Entertainment
+  - Uptown
+firstSeen: 2026-07-01
+lastChecked: 2026-07-01
+pr: feature/source-discovery-2026-07-01
+impl:
+  type: custom
+  observedEventCount: 10
+  builtEventCount: 10
+  geo:
+    lat: 29.7496
+    lng: -95.4618
+    label: Rooftop Cinema Club Houston, 1700 Post Oak Boulevard, Houston, TX 77056

@@ -1,0 +1,20 @@
+name: Lake Houston Brewery
+status: added
+platform: Wix (HTML scraper)
+url: https://www.lakehoustonbrew.com/
+tags:
+  - Beer
+  - Music
+  - Northside
+firstSeen: 2026-06-16
+lastChecked: 2026-06-18
+pr: claude/source-pipeline-2026-06-18
+impl:
+  type: custom
+  observedEventCount: 25
+  builtEventCount: 18
+  note: Custom Wix HTML ripper, 18 events extracted from Sunday Brunch series
+  geo:
+    lat: 30.0654
+    lng: -95.1242
+    label: Lake Houston Brewery, 10614 FM 1960 W, Humble, TX 77338

@@ -1,0 +1,17 @@
+name: Texas Parks and Wildlife Houston Events
+status: added
+platform: Custom calendar
+url: https://tpwd.texas.gov/calendar/near-city/houston-events
+tags:
+  - Parks
+  - OutdoorRecreation
+  - Nature
+  - Education
+firstSeen: 2026-06-29
+lastChecked: 2026-06-29
+impl:
+  type: custom
+  observedEventCount: 218
+  builtEventCount: 218
+  note: Custom HTML ripper using hCalendar microformat; 218 events from state parks programming (interpretive programs, nature hikes, ranger talks, etc.)
+  geo: null

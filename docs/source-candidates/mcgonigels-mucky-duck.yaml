@@ -1,0 +1,16 @@
+name: McGonigel's Mucky Duck
+status: added
+platform: WordPress (Tessera Events) - custom HTML
+url: https://www.mcgonigels.com/
+tags:
+  - Music
+  - Upper Kirby
+firstSeen: 2026-06-14
+lastChecked: 2026-06-18
+pr: claude/source-pipeline-2026-06-18
+impl:
+  type: custom
+  ripper: sources/mcgonigels-mucky-duck/ripper.ts
+  extractionPath: eventObjects.push({...}) regex on homepage HTML
+  builtEventCount: 104
+  note: Custom HTML ripper, 104 events extracted

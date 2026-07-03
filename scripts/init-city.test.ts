@@ -123,8 +123,8 @@ describe("buildActions", () => {
         await writeFile(join(root, "sources", "external", "feed.yaml"), "name: feed\n");
         await mkdir(join(root, "sources", "recurring"), { recursive: true });
         await writeFile(join(root, "sources", "recurring", "market.yaml"), "name: market\n");
-        await mkdir(join(root, "docs"), { recursive: true });
-        await writeFile(join(root, "docs", "source-candidates.json"), '[{"name":"a-venue","status":"added"}]\n');
+        await mkdir(join(root, "docs", "source-candidates"), { recursive: true });
+        await writeFile(join(root, "docs", "source-candidates", "a-venue.yaml"), "name: A Venue\nstatus: added\n");
         await mkdir(join(root, "allowed-removals"), { recursive: true });
         await writeFile(join(root, "allowed-removals", "old.ics"), "");
         await mkdir(join(root, ".github", "workflows"), { recursive: true });
@@ -140,7 +140,8 @@ describe("buildActions", () => {
         expect(descs).toContain("delete sources/some_venue/");
         expect(descs).toContain("delete sources/external/feed.yaml");
         expect(descs).toContain("delete sources/recurring/market.yaml");
-        expect(descs).toContain("reset docs/source-candidates.json to an empty list");
+        expect(descs).toContain("delete docs/source-candidates/a-venue.yaml");
+        expect(descs).toContain("keep docs/source-candidates/ via .gitkeep");
         expect(descs).toContain("delete allowed-removals/old.ics");
         expect(descs).toContain("delete .github/workflows/notify-discord.yml");
         expect(descs).toContain("reset event-uncertainty-cache.json to the empty baseline");
@@ -158,11 +159,11 @@ describe("buildActions", () => {
         // apply only the deletion/keep actions, which is what the fixture
         // exercises.
         const actions = (await buildActions(root, deriveConfig(portland)))
-            .filter(a => a.description.startsWith("delete ") || a.description.startsWith("keep ") || a.description.startsWith("reset docs/source-candidates"));
+            .filter(a => a.description.startsWith("delete ") || a.description.startsWith("keep "));
         for (const a of actions) await a.apply();
         expect(await readdir(join(root, "sources"))).toEqual(["external", "recurring"]);
         expect(await readdir(join(root, "sources", "external"))).toEqual([".gitkeep"]);
-        expect(await readFile(join(root, "docs", "source-candidates.json"), "utf8")).toBe("[]\n");
+        expect(await readdir(join(root, "docs", "source-candidates"))).toEqual([".gitkeep"]);
         expect(await readdir(join(root, "allowed-removals"))).toEqual([".gitkeep"]);
         expect(await readdir(join(root, ".github", "workflows"))).toEqual([]);
     });

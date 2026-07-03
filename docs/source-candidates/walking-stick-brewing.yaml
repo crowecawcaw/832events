@@ -1,0 +1,16 @@
+name: Walking Stick Brewing
+status: added
+platform: Tribe Events (WordPress EventCalendar) + proxy
+url: https://www.walkingstickbrewing.com/
+tags:
+  - Beer
+  - Music
+  - Garden Oaks
+firstSeen: 2026-06-20
+lastChecked: 2026-06-20
+pr: claude/source-pipeline-2026-06-20
+impl:
+  type: external
+  icsUrl: https://walkingstickbrewing.com/?post_type=tribe_events&ical=1&eventDisplay=list
+  proxy: true
+  note: Tribe Events feed requires proxy for Browserbase JS execution in CI (site returns 403 to standard bot requests)

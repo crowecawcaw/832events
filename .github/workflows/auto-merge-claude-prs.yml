@@ -77,8 +77,8 @@ jobs:
               /^docs\//,                          // candidate tracking, ledgers, docs
               /^allowed-removals\//,              // intentional calendar-URL removals
               /^ideas\.md$/,
-              /^fetch-cache\.json$/,              // build caches (cold-start baselines)
-              /^geo-cache\.json$/,
+              // fetch-cache.json / geo-cache.json are gitignored (persisted via
+              // the Actions Cache), so they never appear in a PR diff.
               /^event-uncertainty-cache\.json$/,
               /^event-history\.json$/,
             ];

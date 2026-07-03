@@ -1,0 +1,20 @@
+name: Mossrose Bookshop
+status: added
+platform: Shopify
+url: https://www.mossrosebooks.com/
+tags:
+  - Books
+  - Community
+  - EaDo
+firstSeen: 2026-06-15
+lastChecked: 2026-06-18
+pr: claude/source-pipeline-2026-06-18
+impl:
+  type: custom
+  observedEventCount: 2
+  builtEventCount: 2
+  note: Custom ripper for WBS Pro Calendar plugin; extracts events from embedded JSON
+  geo:
+    lat: 29.7415
+    lng: -95.3765
+    label: Mossrose Bookshop, 5441 Almeda Rd, Houston, TX 77004

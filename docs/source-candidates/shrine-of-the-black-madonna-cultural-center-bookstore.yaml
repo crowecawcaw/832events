@@ -1,0 +1,22 @@
+name: Shrine of the Black Madonna Cultural Center & Bookstore
+status: added
+platform: Eventbrite
+url: https://shrinebookstore.com/
+tags:
+  - Books
+  - Community
+  - Cultural
+  - Third Ward
+firstSeen: 2026-06-20
+lastChecked: 2026-06-23
+pr: claude/source-pipeline-2026-06-23
+impl:
+  type: eventbrite
+  organizerId: "6138741483"
+  observedEventCount: 1
+  builtEventCount: 1
+  note: Eventbrite-based cultural center and bookstore with poetry nights, book signings, and cultural events
+  geo:
+    lat: 29.7368
+    lng: -95.344
+    label: Shrine of the Black Madonna Cultural Center & Bookstore, 5309 Martin Luther King Blvd, Houston, TX 77021

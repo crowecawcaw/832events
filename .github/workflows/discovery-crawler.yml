@@ -177,7 +177,7 @@ jobs:
             STEP 3 — Open ONE PR. Keep only sources that built cleanly with a sane
             event count and passing tests. Run `/code-review` on the diff and
             address findings. Open ONE PR on a feature branch with the new sources,
-            the docs/source-candidates.json updates, the docs/discovery-ledger.json
+            the docs/source-candidates/ updates, the docs/discovery-ledger.json
             status updates, and any discovery/ignore-domains.txt additions. This
             Action's PR will NOT trigger CI or Claude Code
             Review (bot-authored), so your in-session validation IS the gate: do

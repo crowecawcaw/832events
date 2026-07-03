@@ -48,6 +48,7 @@ export type PathClass = "engine" | "content" | "config" | "skip";
 const CONTENT_PREFIXES = [
     "sources/",
     "allowed-removals/",
+    "docs/source-candidates/",
 ];
 
 /** Individual content files (caches, Seattle data, per-city prose). */
@@ -55,7 +56,6 @@ const CONTENT_FILES = new Set([
     "event-uncertainty-cache.json",
     "geo-cache.json",
     "fetch-cache.json",
-    "docs/source-candidates.json",
     "ideas.md",
     "todo.md",
     "README.md",
@@ -94,7 +94,8 @@ export function classifyPath(path: string): PathClass {
     for (const p of CONTENT_PREFIXES) if (path.startsWith(p)) return "content";
 
     // docs/ is mixed: top-level design docs (docs/foo.md, docs/plans/*) are
-    // engine; the candidates file was already caught above as content.
+    // engine; the per-city candidate YAMLs (docs/source-candidates/) were
+    // already caught above as content by CONTENT_PREFIXES.
     if (path.startsWith("docs/") && path.endsWith(".md")) return "engine";
 
     if (ENGINE_FILES.has(path)) return "engine";

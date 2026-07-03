@@ -1,0 +1,11 @@
+name: Houston Cultural Events Calendar
+status: blocked
+platform: Unknown (HTTP 403)
+url: https://www.houcalendar.com/
+tags:
+  - Community
+  - Events
+  - Calendar
+firstSeen: 2026-06-23
+lastChecked: 2026-06-23
+notes: Returns HTTP 403 Forbidden; appears to have bot detection/Cloudflare blocking. Unclear if this is an aggregator or venue calendar. Would require proxy:true and direct investigation.

@@ -1,0 +1,19 @@
+name: River Oaks Theatre Houston
+status: added
+platform: Custom HTML ripper (Eventive-based)
+url: https://www.theriveroakstheatre.com/
+tags:
+  - Cinema
+  - Theater
+  - RiverOaks
+firstSeen: 2026-07-01
+lastChecked: 2026-07-01
+pr: feature/source-discovery-2026-07-01
+impl:
+  type: custom
+  proxy: true
+  note: Custom HTML ripper for Eventive-based event listings; requires proxy:true for Browserbase JS execution in CI
+  geo:
+    lat: 29.7318
+    lng: -95.4186
+    label: River Oaks Theatre, River Oaks Shopping Center, Houston, TX 77019

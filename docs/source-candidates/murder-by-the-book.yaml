@@ -1,0 +1,14 @@
+name: Murder By The Book
+status: added
+platform: Drupal 11 + IndieCommerce (HTML-only)
+url: https://www.murderbooks.com/events
+tags:
+  - Books
+  - West University
+firstSeen: 2026-06-14
+lastChecked: 2026-06-18
+pr: claude/source-pipeline-2026-06-18
+impl:
+  type: custom
+  builtEventCount: 6
+  note: Custom HTML ripper for Drupal bookstore events

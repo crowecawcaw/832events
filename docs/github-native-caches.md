@@ -49,8 +49,11 @@ mechanism as the source fetch cache):
 
 - **Restore** at start: `actions/cache/restore` with key
   `geo-cache-v1-${{ github.run_id }}` and `restore-keys: geo-cache-v1-`,
-  so the newest prior cache is restored. A cold cache leaves the empty
-  committed baseline in place and the build re-geocodes from scratch.
+  so the newest prior cache is restored. `geo-cache.json` is **gitignored —
+  never committed**; a cold cache starts from an empty cache and the build
+  re-geocodes from scratch. (It used to be committed as an empty baseline, but
+  populated copies kept riding into `main` via auto-merged discovery PRs and
+  conflicting on rebase.)
 - **Save** at end: `actions/cache/save` under the per-run key.
 - **Backup**: the `geo-cache` artifact (90-day retention) is still
   uploaded every build, so the data survives a cache eviction.

@@ -1,0 +1,10 @@
+name: Blaffer Art Museum
+status: rejected
+platform: Tribe Events (ICS endpoint returns HTML)
+url: https://blafferartmuseum.org
+tags:
+  - Art
+  - Museum District
+firstSeen: 2026-06-28
+lastChecked: 2026-06-28
+notes: Tribe Events ICS endpoints return HTML instead of iCalendar format; source appears to use Tribe Events but ICS feed is not functional

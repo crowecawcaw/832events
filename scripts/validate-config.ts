@@ -16,6 +16,7 @@ import { externalConfigSchema } from "../lib/config/schema.js";
 import { loadYamlDir } from "../lib/config/dir-loader.js";
 import { RecurringEventProcessor } from "../lib/config/recurring.js";
 import { detectTagDuplicates, categoryFor } from "../lib/config/tags.js";
+import { loadSourceCandidates } from "../lib/source-candidates.js";
 
 async function main(): Promise<void> {
   const problems: string[] = [];
@@ -110,12 +111,21 @@ async function main(): Promise<void> {
     problems.push(`[tags] near-duplicate spellings: ${dup.spellings.join(" / ")}`);
   }
 
+  // 6. Source-candidate triage files (docs/source-candidates/*.yaml). One file
+  //    per record; a malformed file would otherwise be silently skipped by the
+  //    crawler, so gate it here (no fetch). A missing dir is fine (empty list).
+  const { candidates, problems: candidateProblems } = await loadSourceCandidates();
+  problems.push(...candidateProblems);
+
   if (problems.length > 0) {
     console.error(`\n✗ Config validation failed (${problems.length} problem(s)):\n`);
     problems.forEach(p => console.error(`  - ${p}`));
     process.exit(1);
   }
-  console.log(`✓ Config valid: ${rippers.length} rippers, ${allTags.size} tags.`);
+  console.log(
+    `✓ Config valid: ${rippers.length} rippers, ${allTags.size} tags, ` +
+      `${candidates.length} candidates.`,
+  );
 }
 
 main().catch(err => {

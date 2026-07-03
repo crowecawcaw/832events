@@ -1,0 +1,11 @@
+name: Czech Center Houston
+status: investigating
+platform: Squarespace
+url: https://www.czechcenter.org/hours-admissions
+tags:
+  - Culture
+  - Community
+  - Arts
+firstSeen: 2026-07-03
+lastChecked: 2026-07-03
+notes: Squarespace site but JSON endpoint (?format=json) returns no upcoming events. Verify if venue has events or try HTML scraping.

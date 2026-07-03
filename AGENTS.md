@@ -134,15 +134,19 @@ proven from CI). If Browserbase also fails, set `disabled: true`.
 
 ## Caches
 
-- **`geo-cache.json`** — resolved coordinates. Lives in the GitHub Actions Cache;
-  the committed file is an empty cold-start baseline. Don't hand-edit it (a cache
-  hit overwrites it). Fix geocoding in code: add to `KNOWN_VENUE_COORDS` in
-  `lib/geocoder.ts`. See `docs/github-native-caches.md`.
+- **`geo-cache.json`** — resolved coordinates. **Gitignored, never committed** —
+  it lives only in the GitHub Actions Cache (a cold cache starts empty). Don't
+  hand-edit it (the build overwrites it). Fix geocoding in code: add to
+  `KNOWN_VENUE_COORDS` in `lib/geocoder.ts`. See `docs/github-native-caches.md`.
 - **`event-uncertainty-cache.json`** — committed file, the single source of truth
   for resolved unknown fields. Edited by the resolver skills via PR. See
   `docs/event-uncertainty.md`.
 - **`fetch-cache.json`** — throttles every source to one live fetch per TTL (24h).
-  See `docs/fetch-cache.md`.
+  **Gitignored, never committed** (same as `geo-cache.json`). See `docs/fetch-cache.md`.
+
+  > Both caches used to be committed as "empty baselines," but populated copies
+  > kept riding into `main` through auto-merged discovery PRs and conflicting on
+  > rebase. Never re-add them to git.
 
 ## Event uncertainty (unparsable per-event fields)
 
@@ -168,8 +172,10 @@ Every build publishes machine-readable JSON under `output/` (`index.json`,
 `tags.json`, `venues.json`, `manifest.json`, `events-index.json`, `llms.txt`,
 `sitemap.xml`). Built by `lib/discovery.ts`, validated by
 `npm run check-discovery-api`. Source candidates are tracked in
-`docs/source-candidates.json` (one array; status `candidate`/`investigating`/
-`added`/`disabled`/`notviable`/`dead`); feature ideas in `ideas.md`.
+`docs/source-candidates/` — **one YAML file per candidate** (`<slug>.yaml`),
+status `candidate`/`investigating`/`added`/`disabled`/`notviable`/`dead`;
+`npm run validate` schema-checks them. One-file-per-record (not a single array)
+so two discovery PRs never conflict on rebase. Feature ideas in `ideas.md`.
 
 ## Development workflow
 

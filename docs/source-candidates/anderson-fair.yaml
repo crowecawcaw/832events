@@ -1,0 +1,16 @@
+name: Anderson Fair
+status: added
+platform: Squarespace + Bandsintown
+url: https://www.andersonfair.net/
+tags:
+  - Music
+  - Folk
+  - Community
+  - Montrose
+firstSeen: 2026-06-15
+lastChecked: 2026-06-18
+pr: claude/source-pipeline-2026-06-18
+impl:
+  type: squarespace
+  proxy: true
+  note: Calendar is client-side rendered; uses proxy:true for Browserbase JS execution in CI

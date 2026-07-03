@@ -1,0 +1,20 @@
+name: Good on Paper Bookshop
+status: added
+platform: Drupal + IndieCommerce (custom HTML ripper)
+url: https://www.goodonpaperbookshop.com/
+tags:
+  - Books
+  - Community
+  - The Heights
+firstSeen: 2026-06-15
+lastChecked: 2026-06-23
+pr: claude/source-pipeline-2026-06-23
+impl:
+  type: custom
+  observedEventCount: 19
+  builtEventCount: 19
+  note: Custom HTML ripper for Drupal-based bookstore event calendar; extracts from structured event list
+  geo:
+    lat: 29.8096
+    lng: -95.3914
+    label: Good on Paper Books and Stationery, 250 W 19th St Suite D, Houston, TX 77008

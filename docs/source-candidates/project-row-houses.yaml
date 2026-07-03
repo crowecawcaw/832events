@@ -1,0 +1,21 @@
+name: Project Row Houses
+status: added
+platform: Eventbrite
+url: https://projectrowhouses.org/
+tags:
+  - Art
+  - Community
+  - Third Ward
+firstSeen: 2026-06-14
+lastChecked: 2026-06-16
+pr: 34
+impl:
+  type: eventbrite
+  organizerId: "8766639900"
+  observedEventCount: 8
+  builtEventCount: 410
+  note: 410 events includes recurring weekly lessons and performances expanded across event window
+  geo:
+    lat: 29.7319
+    lng: -95.3653
+    label: Project Row Houses, 2521 Holman St, Houston, TX 77004

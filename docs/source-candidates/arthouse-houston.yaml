@@ -1,0 +1,16 @@
+name: Arthouse Houston
+status: added
+platform: Custom HTML ripper (Eventive)
+url: https://arthousehtx.org/
+tags:
+  - Cinema
+  - Arts
+  - Nonprofit
+firstSeen: 2026-07-01
+lastChecked: 2026-07-01
+pr: feature/source-discovery-2026-07-01
+impl:
+  type: custom
+  proxy: true
+  note: Custom HTML ripper for Eventive ticketing platform; nonprofit multi-location cinema; requires proxy:true
+  geo: null

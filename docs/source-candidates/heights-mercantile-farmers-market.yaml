@@ -1,0 +1,20 @@
+name: Heights Mercantile Farmers Market
+status: added
+platform: Squarespace
+url: https://www.heightsmercantile.com/events
+tags:
+  - FarmersMarket
+  - Community
+  - The Heights
+firstSeen: 2026-06-25
+lastChecked: 2026-06-25
+notes: Squarespace calendar with JSON endpoint (?format=json) verified; 3 upcoming recurring farmer's market events; The Heights location
+pr: TBD
+impl:
+  type: squarespace
+  observedEventCount: 3
+  builtEventCount: 3
+  geo:
+    lat: 29.7837881
+    lng: -95.398618
+    label: Heights Mercantile Farmers Market, 714 Yale Street, Houston, TX 77007

@@ -1,0 +1,21 @@
+name: Houston Grand Opera
+status: added
+platform: Next.js/DatoCMS with embedded JSON
+url: https://www.houstongrandopera.org/on-stage
+tags:
+  - Opera
+  - PerformingArts
+  - Music
+  - Downtown
+firstSeen: 2026-06-24
+lastChecked: 2026-06-26
+pr: claude/source-pipeline-2026-06-26
+impl:
+  type: custom
+  observedEventCount: 11
+  builtEventCount: 11
+  note: DatoCMS-backed Next.js site; 11 productions and special events for 2026-27 season; fixed venue (Wortham Theater Center)
+  geo:
+    lat: 29.7237
+    lng: -95.3937
+    label: Wortham Theater Center, 500 Main St, Houston, TX 77002

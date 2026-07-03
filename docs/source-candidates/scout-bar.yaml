@@ -1,0 +1,19 @@
+name: Scout Bar
+status: added
+platform: AXS
+url: https://scoutbar.com/calendar/
+tags:
+  - Music
+  - South Houston
+firstSeen: 2026-06-14
+lastChecked: 2026-06-16
+pr: 34
+impl:
+  type: axs
+  venueId: 130538
+  venueSlug: scout-bar-houston
+  observedEventCount: null
+  geo:
+    lat: 29.5699
+    lng: -95.1248
+    label: Scout Bar, 18307 Egret Bay Blvd, Houston, TX 77058

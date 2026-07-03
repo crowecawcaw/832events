@@ -1,0 +1,11 @@
+name: Fresh Arts Houston
+status: blocked
+platform: Custom HTML (Cloudflare-protected)
+url: https://fresharts.org/upcoming-events/
+tags:
+  - Art
+  - Community
+  - Gallery
+firstSeen: 2026-06-28
+lastChecked: 2026-06-28
+notes: Houston area arts community calendar. Returns 403 Forbidden; Cloudflare WAF blocks bot requests. Would require proxy:true to fetch through Browserbase.

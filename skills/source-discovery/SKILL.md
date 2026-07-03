@@ -10,12 +10,17 @@ This skill is triggered by the build report skill (`skills/build-report/SKILL.md
 
 ### 1. Read existing candidates
 
-Candidate triage data lives in a single JSON array at
-**`docs/source-candidates.json`** — one object per candidate with fields
-`{name, status, platform, url, tags, firstSeen, lastChecked, pr, impl?, notes?}`.
-To check what's been evaluated, read the file and scan the entries by
-`name` and `status`. The chronological record of discovery runs is git
-log — there is no separate discovery-log directory.
+Candidate triage data lives in **`docs/source-candidates/`** — **one YAML file
+per candidate**, named `<slug>.yaml` where the slug is the lowercased,
+hyphenated `name` (e.g. `NRG Stadium` → `nrg-stadium.yaml`). Each file is one
+record with fields `{name, status, platform?, url?, tags?, firstSeen?,
+lastChecked?, pr?, impl?, notes?}` (`name` and `status` required). To check
+what's been evaluated, list the directory / grep it by `name` and `status`.
+
+> One file per record (not a single JSON array) so two discovery PRs adding
+> different candidates never touch the same file and never conflict on rebase.
+> `npm run validate` schema-checks every file. The chronological record of
+> discovery runs is git log — there is no separate discovery-log directory.
 
 ### 2. Check for dead sources
 
@@ -25,7 +30,7 @@ Before searching for new sources, check existing sources for signs of death:
 python3 skills/source-discovery/scripts/dead-sources.py
 ```
 
-For any source with **0 events for 30+ consecutive days** or returning **404/410 consistently**, flag it: update or add its entry in `docs/source-candidates.json` with `status: "dead"` and a note describing the symptom. Do NOT disable it — just flag it for human review.
+For any source with **0 events for 30+ consecutive days** or returning **404/410 consistently**, flag it: update or add its entry in `docs/source-candidates/` with `status: "dead"` and a note describing the symptom. Do NOT disable it — just flag it for human review.
 
 ### 3. Search for new sources
 
@@ -63,7 +68,7 @@ For each search result that looks like a Houston event source, evaluate:
    - Shopify (built-in `shopify` type — verify `/products.json` returns events)
    - Custom HTML/JSON scraping (the repo has many custom rippers — this is viable, not "not viable")
 4. **Not already covered?** Check `sources/` directory and `sources/external/`
-5. **Not already in candidates?** Check `docs/source-candidates.json` for an entry with the same `name`/`url`.
+5. **Not already in candidates?** Check `docs/source-candidates/` for an entry with the same `name`/`url`.
 6. **Sufficient event volume?** Should have at least a few events, not a one-off
 7. **Not a religious source?** Do not add sources that are primarily religious organizations (churches, synagogues, mosques, religious federations, etc.). Secular community organizations (Urban League, NAACP, etc.) are fine. Cultural events hosted at religious venues are OK if the organization itself is secular.
 8. **Not an enrollment-style course?** Skip events that are structured as academic courses — multi-session, enrollment-based classes offered by a college, university, or community college when paid. One-off workshops, single classes, short series at studios or community orgs, and lectures are always fine. The test: "Is this *attending an event* or *enrolling in a class at a school*?"
@@ -77,9 +82,10 @@ For each search result that looks like a Houston event source, evaluate:
 
 ### 5. Update candidate entries and push to main
 
-For each source evaluated, add or update its entry in
-`docs/source-candidates.json`. The `status` field is the source of
-truth — update it as the candidate's situation changes:
+For each source evaluated, create or edit its file
+`docs/source-candidates/<slug>.yaml` (slug = lowercased, hyphenated `name`;
+one record per file). The `status` field is the source of truth — update it as
+the candidate's situation changes:
 
 - **New candidate found**: Add an entry with `status: "candidate"`, set
   `firstSeen` and `lastChecked`, and fill `url`, `platform`, `tags`, and
@@ -112,7 +118,7 @@ From the 💡 Candidate list, **always pick the source with the highest confiden
 **🔴 Low does not mean "not viable".** The repo has many custom scrapers (frye_art_museum, royal_room, cobys_cafe, seatoday, etc.). A 🔴 Low source is still worth implementing — it just takes more work and should be prioritized after higher-tier candidates. Only mark a source `❌ Not Viable` if it truly can't be scraped (no structured data at all, JS-rendered with no API, requires browser automation we don't have).
 
 To implement:
-0. **Use the candidate's `impl` block if present.** If the candidate's entry in `docs/source-candidates.json` has an `impl` field (resolved feed URL / venue IDs / `geo` / observed event count), copy those handles **verbatim** into the `ripper.yaml` — discovery already resolved and verified them. Do **not** re-geocode or substitute your own `geo`. Treat `impl.observedEventCount` as the ballpark to verify the build against (see step 7). Do not set `status: "added"` until events are actually confirmed (>0).
+0. **Use the candidate's `impl` block if present.** If the candidate's file `docs/source-candidates/<slug>.yaml` has an `impl` field (resolved feed URL / venue IDs / `geo` / observed event count), copy those handles **verbatim** into the `ripper.yaml` — discovery already resolved and verified them. Do **not** re-geocode or substitute your own `geo`. Treat `impl.observedEventCount` as the ballpark to verify the build against (see step 7). Do not set `status: "added"` until events are actually confirmed (>0).
 1. **Cut a feature branch**: `scripts/new_feature_branch.sh`
 2. **Pre-implementation fetch validation** — Before writing a line of parser code, attempt a live fetch of the source URL:
    ```bash
@@ -130,7 +136,7 @@ To implement:
    **Handling a blocked source:**
    - **Fetch succeeds locally (200 + data)** → implement with no proxy, push PR. If CI fetches successfully, done.
    - **CI returns 403/captcha** → set `proxy: true` to fetch the source live through Browserbase in the main build, and push a follow-up PR. If that still fails, set `disabled: true` and record the candidate as `status: "blocked"`.
-   - **Fetch fails locally (403 / CAPTCHA / connection reset / non-200)** → do NOT implement. Record what you observed in `docs/source-candidates.json` with `status: "blocked"` or `status: "candidate"`, and move on.
+   - **Fetch fails locally (403 / CAPTCHA / connection reset / non-200)** → do NOT implement. Record what you observed in `docs/source-candidates/` with `status: "blocked"` or `status: "candidate"`, and move on.
 
    **Do not guess at the data shape** if you cannot fetch the source. An implementation written against an inaccessible URL is a guess — it will produce 0 events or parse errors. Only implement once you have seen a real sample response.
 
@@ -169,7 +175,7 @@ After the PR is open:
 
 4. **Repeat** until the review is clean and no blocking comments remain and all review threads are resolved.
 
-5. **When the review is clean + events confirmed (>0)** → Set the candidate's `status` to `"added"` in `docs/source-candidates.json` (and add the `pr` field) and commit the update to the PR branch.
+5. **When the review is clean + events confirmed (>0)** → Set the candidate's `status` to `"added"` in `docs/source-candidates/` (and add the `pr` field) and commit the update to the PR branch.
 
 ### 8. Report findings and request review
 
@@ -189,19 +195,19 @@ Include a "🔍 Source Discovery" section in the daily report:
 ## Important rules
 
 - **Always open a PR** for new sources — never push ripper code direct to main
-- **Open a PR for candidate updates** — even reference data changes need a PR (repo requires it). Candidate entries live in `docs/source-candidates.json`.
+- **Open a PR for candidate updates** — even reference data changes need a PR (repo requires it). Candidate entries live in `docs/source-candidates/`.
 - **Always implement highest-confidence source first** — don't skip to low-confidence custom scrapers when a verified built-in type is available
 - **One source per cycle** — implement, verify, iterate on review feedback, then report. Don't stack multiple sources in one cycle.
 - **Always delegate to a coding agent** to implement the ripper — do not write code directly
 - **Houston-focused only** — sources must primarily serve Houston audiences. A few events outside city limits is OK (e.g., a wine-tasting series with some suburban events). Venues entirely outside Houston (Sugar Land, Katy, The Woodlands) are not appropriate.
 - **Rotate search queries** — don't run the same searches every day
-- **Check `docs/source-candidates.json` first** — read the file, look for an entry with the same `name`/`url` and its `status`. Avoid re-proposing evaluated sources.
+- **Check `docs/source-candidates/` first** — list/grep the directory, look for a file with the same `name`/`url` and its `status`. Avoid re-proposing evaluated sources.
 - **Flag dead sources** — but don't disable them without human approval
 - **Respect the existing tag system** — adding a new tag is just using it in a source's `tags:` field. The build no longer requires registration in a central allow-list; it does fail on near-duplicate spellings (e.g. `"Capitol Hill"` vs `"CapitolHill"`). Check `lib/config/tags.ts` for the preferred spellings before introducing a new tag.
 - **Tags should reflect a venue's PRIMARY identity** — only add a tag if the venue is primarily known for that category. A music venue that occasionally hosts comedy nights gets `Music` but NOT `Comedy`. A venue that is equally known for both (e.g., a comedy club that also does music) can have both. When in doubt, use fewer tags.
 - **Validate the live source before implementing** — always attempt a fetch before writing parser code. A 200 with events in the Claude Code web environment is the only green light to implement. A 404 means the URL was wrong — keep searching. A 403, CAPTCHA, or any non-200 in Claude Code web means the source is blocked here; record it as `status: "blocked"` and move on — do not implement. Never implement a source you cannot fetch; an implementation written against an inaccessible URL is a guess.
 - **Never add a source that returns 0 events** — new sources must produce at least 1 event in CI before merging. The build now fails on new sources with 0 events (no `expectEmpty` exemption for brand-new sources). A source with 0 events has no proven data pipeline. Keep as `🔍 Investigating` until the correct URL or data shape is found.
-- **Blocked from CI?** If a source works locally but CI 403s it, set `proxy: true` to fetch it live through Browserbase in the main build. If that still fails, set `disabled: true` and record it as `status: "blocked"` in `docs/source-candidates.json`. If the source is inaccessible even locally (CAPTCHA, Cloudflare, connection refused), record it as `status: "blocked"` with notes on what you observed, and do not implement it.
+- **Blocked from CI?** If a source works locally but CI 403s it, set `proxy: true` to fetch it live through Browserbase in the main build. If that still fails, set `disabled: true` and record it as `status: "blocked"` in `docs/source-candidates/`. If the source is inaccessible even locally (CAPTCHA, Cloudflare, connection refused), record it as `status: "blocked"` with notes on what you observed, and do not implement it.
 - **A 404 is not "not viable"** — it means the URL was wrong. Update the candidate to `🔍 Investigating` and keep searching for the correct URL. Only mark `❌ Not Viable` when no working URL can be found after investigation.
 - **Iterate until the review is clean** — don't request human review until Claude Code Review has no blocking comments.
 - **Parse methods must never return null** — new custom rippers must have parse methods that return `RipperCalendarEvent | RipperError` (never `null`). Filters and dedup belong in the caller, not the parse method. TypeScript enforces this at compile time. See AGENTS.md "Parse Methods Must Never Return Null" for the required pattern.

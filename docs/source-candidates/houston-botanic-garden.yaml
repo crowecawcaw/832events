@@ -1,0 +1,15 @@
+name: Houston Botanic Garden
+status: investigating
+platform: Tribe Events (ICS, unverified)
+url: https://hbg.org/events/
+tags:
+  - Nature
+  - Parks
+  - Gardens
+  - Braeswood
+firstSeen: 2026-06-16
+lastChecked: 2026-06-18
+notes: "External ICS feed created at sources/external/houston-botanic-garden.yaml. Live fetch of Tribe Events ICS endpoint returned 0 events. Verify ICS URL: https://hbg.org/?post_type=tribe_events&ical=1&eventDisplay=list"
+impl:
+  icsUrl: https://hbg.org/?post_type=tribe_events&ical=1&eventDisplay=list
+  builtEventCount: 0

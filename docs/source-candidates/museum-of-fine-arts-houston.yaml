@@ -1,0 +1,12 @@
+name: Museum of Fine Arts Houston
+status: investigating
+platform: Unknown (Cloudflare-blocked; per-event iCalendar export only)
+url: https://www.mfah.org/events
+tags:
+  - Art
+  - Museums
+  - Museum District
+firstSeen: 2026-06-13
+lastChecked: 2026-06-15
+impl:
+  note: "Cloudflare WAF blocks all bot requests. No subscribable ICS feed found via curl, JSON endpoint, or direct /events.ics probes. Site exports individual event .ics files only. Platform is custom CMS (not Tribe Events, Eventbrite, Squarespace, Ticketmaster, or Localist). Would need a custom ripper with proxy: true (live Browserbase fetch) to parse events. High-value source; defer until that is verified."

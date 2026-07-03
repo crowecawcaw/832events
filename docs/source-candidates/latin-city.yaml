@@ -1,0 +1,13 @@
+name: Latin City
+status: added
+platform: Eventbrite
+url: https://latincity.eventbrite.com
+firstSeen: 2026-06-15
+lastChecked: 2026-06-18
+pr: claude/source-pipeline-2026-06-18
+impl:
+  type: eventbrite
+  organizerId: "1098215067"
+  observedEventCount: 23
+  builtEventCount: 23
+  note: Eventbrite built-in type, 23 events from organization

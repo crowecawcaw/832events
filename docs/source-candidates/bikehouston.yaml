@@ -1,0 +1,11 @@
+name: BikeHouston
+status: blocked
+platform: Meetup + ICS export
+url: https://www.bikehoustontx.org/
+tags:
+  - Cycling
+  - Outdoor Recreation
+  - Community
+firstSeen: 2026-06-20
+lastChecked: 2026-06-21
+notes: Meetup ICS endpoint returns empty response. Meetup may require authentication or API key for ICS export. Consider custom scraper or contact Meetup.

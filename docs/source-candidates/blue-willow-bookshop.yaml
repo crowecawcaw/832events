@@ -1,0 +1,12 @@
+name: Blue Willow Bookshop
+status: investigating
+platform: Drupal 11 + Commerce 3 (IndieCommerce) — server-rendered
+url: https://www.bluewillowbookshop.com/events
+tags:
+  - Books
+firstSeen: 2026-06-14
+lastChecked: 2026-06-15
+impl:
+  scrapable: Yes (server-rendered HTML) — no JavaScript rendering required
+  selectors: Event cards in structured HTML list; title, date, time, description visible in page source
+  feedAttempted: /?ical=1, /events/feed, .json endpoints — all blocked by SiteGround Obolus antibot challenge

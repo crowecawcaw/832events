@@ -1,0 +1,21 @@
+name: Eldorado Ballroom
+status: investigating
+platform: Eventbrite
+url: https://www.theeldoradoballroom.com/
+tags:
+  - Music
+  - Jazz
+  - Community
+  - Third Ward
+firstSeen: 2026-06-15
+lastChecked: 2026-06-23
+notes: Eventbrite organizer (66985790043) has 0 upcoming events as of June 23, 2026. Events were listed on Eventbrite/Songkick earlier (e.g., Gena/Karriem Riggins on Apr 3, 2026 — now past). Historic jazz venue (est. 1939) operated by Lucille's Hospitality Group under Project Row Houses. Will likely resume events; defer until events appear in Eventbrite API.
+impl:
+  type: eventbrite
+  organizerId: "66985790043"
+  observedEventCount: 0
+  builtEventCount: 0
+  geo:
+    lat: 29.73
+    lng: -95.362
+    label: Eldorado Ballroom, 2310 Elgin St, Houston, TX 77004
