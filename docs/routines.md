@@ -100,14 +100,20 @@ before landing anything.
   (`ONLY_SOURCE=<source> npm run generate-calendars`), runs `npm run
   test:all`, and runs `/code-review` on the working-tree diff, addressing
   findings (the `code-review` plugin is loaded for this). The build-error
-  responder follows the same self-validate-then-PR pattern. Their prompts
-  explicitly tell Claude *not* to wait for CI/review or enable auto-merge,
-  since neither will fire on a bot-opened PR.
+  responder follows the same self-validate-then-PR pattern.
 
-If you later want the fully hands-off auto-review/auto-merge loop for the
-pipeline's PR, give it a GitHub App or fine-grained PAT as `github_token`
-(so its PRs trigger downstream workflows) and widen the
-`claude-code-review.yml` gate to that identity.
+  For **content-only** PRs (sources/, docs/, allowed-removals/, the caches),
+  the pipeline then **enables GitHub auto-merge** on its own PR, so it merges
+  automatically once the required `build / build` check (pr-preview) goes
+  green — no manual click. It never pushes to `main` or self-merges directly;
+  GitHub does the merge when the check passes. A PR that touches anything else
+  (workflows, engine code, config) is left for the owner — the pipeline only
+  enables auto-merge when every changed file is content.
+
+This needs two one-time repo settings (see `docs/SETUP.md` → "Native
+auto-merge"): enable **Allow auto-merge**, and protect `main` with **Require
+status checks** (`build / build`). Until those are set, `gh pr merge --auto` is
+a no-op and PRs wait for a manual merge.
 
 ## 1. Build-error responder
 

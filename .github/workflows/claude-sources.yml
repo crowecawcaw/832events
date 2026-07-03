@@ -96,9 +96,16 @@ jobs:
             and note it in the PR body. Run `/code-review` on the working-tree diff
             and address its findings (delegate substantial fixes to a sub-agent).
             Open ONE PR on a feature branch with all successfully-built sources plus
-            the docs/source-candidates/ updates. This Action's PR will NOT
-            trigger CI or Claude Code Review (bot-authored), so your in-session
-            validation IS the gate: do not wait for CI/review, do not enable
-            auto-merge, do NOT push to main, and do NOT self-merge — the repo owner
-            reviews and merges. If you found nothing to add, make no changes and open
-            no PR.
+            the docs/source-candidates/ updates. The PR's build (pr-preview) DOES
+            run; Claude Code Review does not (it's owner-only), so your in-session
+            validation stands in for review. After opening the PR, ENABLE
+            AUTO-MERGE so GitHub merges it automatically once the required
+            "build / build" check passes — but ONLY if every changed file is
+            calendar content (sources/, docs/, allowed-removals/, ideas.md,
+            event-uncertainty-cache.json, event-history.json). Command:
+            `gh pr merge --auto --merge <number>` (best-effort — if the repo hasn't
+            enabled auto-merge yet, note it in the PR body and continue). If the PR
+            touches anything else (.github/, scripts/, lib/, web/, package*.json,
+            *.config.*), do NOT enable auto-merge and do NOT self-merge — leave it
+            for the owner. NEVER push to main. If you found nothing to add, make no
+            changes and open no PR.

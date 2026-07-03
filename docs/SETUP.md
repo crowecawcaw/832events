@@ -150,8 +150,10 @@ cadences for each are in [`docs/routines.md`](./routines.md):
   run and `force_routine=true`).
 - **Source pipeline** — one scheduled workflow, `claude-sources.yml` (daily
   08:30 UTC). It discovers new sources, records them in
-  `docs/source-candidates/`, builds up to 5 pending candidates, and opens a
-  single human-review PR (`skills/source-discovery/SKILL.md`).
+  `docs/source-candidates/`, builds up to 5 pending candidates, and opens one
+  PR (`skills/source-discovery/SKILL.md`). For a **content-only** PR it enables
+  GitHub auto-merge, so the PR merges itself once the build passes (see "Native
+  auto-merge" below); anything touching code/config waits for you.
 
 Issues and PRs are **owner-driven**, not automated: comment `@claude` to
 have it act on demand (`claude.yml`), and owner-authored PRs are
@@ -161,6 +163,40 @@ access-control section of [`docs/routines.md`](./routines.md).
 
 Both authenticate with `CLAUDE_CODE_OAUTH_TOKEN` and skip silently when
 it (or, for a fork, the matching `github.repository`) isn't present.
+
+### Native auto-merge
+
+The bot pipelines enable GitHub's built-in auto-merge on their own
+content-only PRs (`gh pr merge --auto --merge`), so a green PR merges without
+a manual click. GitHub only honours that once `main` has a required check to
+wait on, so this is a **one-time owner setup** (nothing merges automatically
+until it's done):
+
+1. **Allow auto-merge** — Repo **Settings → General → Pull Requests →** check
+   **"Allow auto-merge"**. Without it, `gh pr merge --auto` errors and every
+   PR waits for a manual merge.
+2. **Protect `main`** — Repo **Settings → Branches → Add branch ruleset** (or
+   classic branch protection) targeting `main`, with just:
+   - **Require status checks to pass** → add **`build / build`** (the
+     pr-preview build; it runs on every PR, bot PRs included). This is the
+     check auto-merge waits for.
+   - Do **not** require checks that don't run on bot PRs (e.g. Claude Code
+     Review is owner-only) — that would block every bot PR.
+3. **Keep direct pushes working** — a required status check also applies to
+   direct pushes, and `publish_calendars.yml` pushes the coverage graph
+   straight to `main`. Add the GitHub Actions actor (or **"Repository admin"**)
+   to the ruleset **bypass list** so that push isn't blocked; watch the next
+   `publish_calendars.yml` run and add the bypass if its push starts failing.
+
+Security model: this replaces the old `auto-merge-claude-prs.yml` janitor,
+which enforced a path allowlist in workflow code. The guard now lives in the
+bot prompts (`claude-sources.yml` / `discovery-crawler.yml`): a pipeline only
+enables auto-merge when **every changed file is calendar content** (`sources/`,
+`docs/`, `allowed-removals/`, caches); a PR touching `.github/`, `scripts/`,
+`lib/`, `web/`, or config is left for you to review and merge. This is a
+bot-side (advisory) guard rather than a GitHub-enforced one — if you later want
+it enforced, add a `.github/CODEOWNERS` + **Require review from Code Owners**
+(with *Required approvals* `0`) to the ruleset.
 
 ### Browserbase proxy (skip until a source actually needs it)
 
