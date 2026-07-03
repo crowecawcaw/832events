@@ -49,7 +49,7 @@
   {
     "name": "Art League Houston",
     "status": "investigating",
-    "platform": "Squarespace (endpoint disabled) — custom HTMLRipper",
+    "platform": "Squarespace (endpoint disabled) \u2014 custom HTMLRipper",
     "url": "https://www.artleaguehouston.org/events",
     "tags": [
       "Art",
@@ -195,7 +195,7 @@
   {
     "name": "Blue Willow Bookshop",
     "status": "investigating",
-    "platform": "Drupal 11 + Commerce 3 (IndieCommerce) — server-rendered",
+    "platform": "Drupal 11 + Commerce 3 (IndieCommerce) \u2014 server-rendered",
     "url": "https://www.bluewillowbookshop.com/events",
     "tags": [
       "Books"
@@ -203,15 +203,15 @@
     "firstSeen": "2026-06-14",
     "lastChecked": "2026-06-15",
     "impl": {
-      "scrapable": "Yes (server-rendered HTML) — no JavaScript rendering required",
+      "scrapable": "Yes (server-rendered HTML) \u2014 no JavaScript rendering required",
       "selectors": "Event cards in structured HTML list; title, date, time, description visible in page source",
-      "feedAttempted": "/?ical=1, /events/feed, .json endpoints — all blocked by SiteGround Obolus antibot challenge"
+      "feedAttempted": "/?ical=1, /events/feed, .json endpoints \u2014 all blocked by SiteGround Obolus antibot challenge"
     }
   },
   {
     "name": "Brazos Bookstore",
     "status": "investigating",
-    "platform": "Drupal 11 + Commerce 3 (IndieCommerce) — server-rendered",
+    "platform": "Drupal 11 + Commerce 3 (IndieCommerce) \u2014 server-rendered",
     "url": "https://www.brazosbookstore.com/events",
     "tags": [
       "Books",
@@ -220,9 +220,9 @@
     "firstSeen": "2026-06-14",
     "lastChecked": "2026-06-15",
     "impl": {
-      "scrapable": "Yes (server-rendered HTML) — no JavaScript rendering required",
+      "scrapable": "Yes (server-rendered HTML) \u2014 no JavaScript rendering required",
       "selectors": "Event cards in structured HTML list; title, date, time, description visible in page source",
-      "feedAttempted": "/?ical=1, /events/feed, .json endpoints — all blocked by SiteGround Obolus antibot challenge"
+      "feedAttempted": "/?ical=1, /events/feed, .json endpoints \u2014 all blocked by SiteGround Obolus antibot challenge"
     }
   },
   {
@@ -295,7 +295,7 @@
   {
     "name": "Discovery Green",
     "status": "investigating",
-    "platform": "Tribe Events (ICS broken — returns HTML)",
+    "platform": "Tribe Events (ICS broken \u2014 returns HTML)",
     "url": "https://www.discoverygreen.com/events",
     "tags": [
       "Downtown",
@@ -355,7 +355,7 @@
     ],
     "firstSeen": "2026-06-15",
     "lastChecked": "2026-06-23",
-    "notes": "Eventbrite organizer (66985790043) has 0 upcoming events as of June 23, 2026. Events were listed on Eventbrite/Songkick earlier (e.g., Gena/Karriem Riggins on Apr 3, 2026 — now past). Historic jazz venue (est. 1939) operated by Lucille's Hospitality Group under Project Row Houses. Will likely resume events; defer until events appear in Eventbrite API.",
+    "notes": "Eventbrite organizer (66985790043) has 0 upcoming events as of June 23, 2026. Events were listed on Eventbrite/Songkick earlier (e.g., Gena/Karriem Riggins on Apr 3, 2026 \u2014 now past). Historic jazz venue (est. 1939) operated by Lucille's Hospitality Group under Project Row Houses. Will likely resume events; defer until events appear in Eventbrite API.",
     "impl": {
       "type": "eventbrite",
       "organizerId": "66985790043",
@@ -1449,7 +1449,7 @@
     ],
     "firstSeen": "2026-06-20",
     "lastChecked": "2026-06-20",
-    "notes": "Comic shop with Eventbrite events. ICS feed URL returned 404 — need to find correct feed format or API endpoint."
+    "notes": "Comic shop with Eventbrite events. ICS feed URL returned 404 \u2014 need to find correct feed format or API endpoint."
   },
   {
     "name": "Bedrock City Comic Co.",
@@ -1463,7 +1463,7 @@
     ],
     "firstSeen": "2026-06-20",
     "lastChecked": "2026-06-20",
-    "notes": "Multi-location comic shop with Eventbrite events. ICS feed URL returned 404 — need to find correct feed format."
+    "notes": "Multi-location comic shop with Eventbrite events. ICS feed URL returned 404 \u2014 need to find correct feed format."
   },
   {
     "name": "Houston Center for Contemporary Craft",
@@ -1478,7 +1478,7 @@
     ],
     "firstSeen": "2026-06-20",
     "lastChecked": "2026-06-20",
-    "notes": "Contemporary craft center with Eventbrite events. ICS feed URL returned 404 — need correct API endpoint."
+    "notes": "Contemporary craft center with Eventbrite events. ICS feed URL returned 404 \u2014 need correct API endpoint."
   },
   {
     "name": "Karbach Brewing Company",
@@ -1953,7 +1953,7 @@
     ],
     "firstSeen": "2026-06-27",
     "lastChecked": "2026-06-27",
-    "notes": "Secondary aggregator/discovery platform for Houston music events; curates events from 20+ real venues. Not a primary event source—including would duplicate data and misrepresent aggregator as venue calendar."
+    "notes": "Secondary aggregator/discovery platform for Houston music events; curates events from 20+ real venues. Not a primary event source\u2014including would duplicate data and misrepresent aggregator as venue calendar."
   },
   {
     "name": "Revention Music Center",
@@ -2362,5 +2362,87 @@
         "label": "Children's Museum Houston, 1500 Binz Street, Houston, TX 77004"
       }
     }
+  },
+  {
+    "name": "Toyota Center",
+    "status": "candidate",
+    "platform": "AXS",
+    "url": "https://www.toyotacenter.com/events",
+    "tags": [
+      "Music",
+      "Sports",
+      "Nightlife",
+      "Downtown"
+    ],
+    "firstSeen": "2026-07-03",
+    "lastChecked": "2026-07-03",
+    "notes": "AXS venue; Houston Rockets & Astros home. Need to find AXS venueId and venueSlug for implementation."
+  },
+  {
+    "name": "Wonky Power Records",
+    "status": "candidate",
+    "platform": "DICE",
+    "url": "https://www.wonkypower.com/",
+    "tags": [
+      "Music",
+      "Nightlife"
+    ],
+    "firstSeen": "2026-07-03",
+    "lastChecked": "2026-07-03",
+    "notes": "DICE-powered music venue; confirmed DICE widget present. Requires DICE_API_KEY environment variable."
+  },
+  {
+    "name": "DO713",
+    "status": "rejected",
+    "platform": "Eventbrite (aggregator)",
+    "url": "https://do713.com/venues/the-heights-theater",
+    "tags": [
+      "Events",
+      "Directory"
+    ],
+    "firstSeen": "2026-07-03",
+    "lastChecked": "2026-07-03",
+    "notes": "Event aggregator/directory platform, not a primary event source. Including would duplicate data from real venues already scraped."
+  },
+  {
+    "name": "Do512",
+    "status": "rejected",
+    "platform": "Eventbrite (aggregator)",
+    "url": "https://do512.com/venues/karbach-brewing-co-houston",
+    "tags": [
+      "Events",
+      "Directory"
+    ],
+    "firstSeen": "2026-07-03",
+    "lastChecked": "2026-07-03",
+    "notes": "Event aggregator/directory platform, not a primary event source. Including would duplicate data from real venues already scraped."
+  },
+  {
+    "name": "Czech Center Houston",
+    "status": "investigating",
+    "platform": "Squarespace",
+    "url": "https://www.czechcenter.org/hours-admissions",
+    "tags": [
+      "Culture",
+      "Community",
+      "Arts"
+    ],
+    "firstSeen": "2026-07-03",
+    "lastChecked": "2026-07-03",
+    "notes": "Squarespace site but JSON endpoint (?format=json) returns no upcoming events. Verify if venue has events or try HTML scraping."
+  },
+  {
+    "name": "AD Players",
+    "status": "investigating",
+    "platform": "Squarespace",
+    "url": "https://www.adplayers.org/",
+    "tags": [
+      "Theater",
+      "Arts",
+      "EaDo"
+    ],
+    "firstSeen": "2026-07-03",
+    "lastChecked": "2026-07-03",
+    "notes": "Squarespace theater site but JSON endpoint returns no upcoming events. Verify event schedule or try HTML scraping."
   }
 ]
