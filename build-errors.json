@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-07-03T16:45:28.700Z",
-  "totalErrors": 11,
+  "buildTime": "2026-07-03T16:54:43.614Z",
+  "totalErrors": 12,
   "configErrors": [],
   "sources": [
     {
@@ -75,6 +75,21 @@
           "type": "ParseError",
           "reason": "Failed to fetch AXS events for venue 130678: Error: AXS fetch error: HTTP 403 for https://www.axs.com/venues/130678/houston-improv-houston-tickets",
           "context": "venueSlug: houston-improv-houston-tickets"
+        }
+      ]
+    },
+    {
+      "source": "nrg-arena",
+      "calendar": "nrg-arena",
+      "type": "Ripper",
+      "errorCount": 1,
+      "parseErrorCount": 1,
+      "uncertaintyCount": 0,
+      "errors": [
+        {
+          "type": "ParseError",
+          "reason": "Ripper crashed: Error: Browserbase fetch failed: HTTP 429 — {\"statusCode\":429,\"error\":\"Too Many Requests\",\"message\":\"You've exceeded your max concurrent fetch requests limit (limit 5, currently 5). Please contact support to increase your limit.\"}",
+          "context": ""
         }
       ]
     },
@@ -179,12 +194,18 @@
       "friendlyName": "Hobby Center for the Performing Arts",
       "url": "https://www.thehobbycenter.org/?post_type=tribe_events&ical=1&eventDisplay=list",
       "error": "Error: HTTP 403: "
+    },
+    {
+      "name": "islamic-society-greater-houston",
+      "friendlyName": "Islamic Society of Greater Houston",
+      "url": "https://isgh.org/?post_type=tribe_events&ical=1",
+      "error": "Error: HTTP 403: "
     }
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 2525,
-    "eventsWithGeo": 2206,
+    "totalEvents": 2646,
+    "eventsWithGeo": 2327,
     "eventsWithoutGeo": 319,
     "geocodeErrors": 0
   },
@@ -196,10 +217,13 @@
   },
   "zeroEventCalendars": [
     "anderson-fair-anderson-fair",
+    "arena-theatre-arena-theatre",
     "arthouse-houston-arthouse-houston",
     "heights-theater-heights-theater",
     "houston-improv-houston-improv",
     "mossrose-bookshop-mossrose-bookshop",
+    "nrg-arena-nrg-arena",
+    "nrg-stadium-nrg-stadium",
     "pride-houston-pride-houston",
     "river-oaks-theatre-river-oaks-theatre",
     "saint-arnold-brewing-company-saint-arnold-brewing-company",
@@ -208,6 +232,9 @@
     "tag-folk",
     "tag-nonprofit",
     "tag-spring-branch",
+    "tag-events",
+    "tag-concerts",
+    "tag-fifa",
     "tag-river-oaks",
     "tag-garden-oaks",
     "external-houston-cinema-arts-society",
@@ -233,6 +260,13 @@
       "label": "Anderson Fair, 2007 Grant St, Houston, TX 77006",
       "lat": 29.7447,
       "lng": -95.4034
+    },
+    {
+      "source": "ripper",
+      "name": "arena-theatre",
+      "label": "Arena Theatre, 7326 Southwest Freeway, Houston, TX 77074",
+      "lat": 29.7104,
+      "lng": -95.5198
     },
     {
       "source": "ripper",
@@ -317,6 +351,13 @@
       "label": "Doc's Jazz Club, 1201 Westheimer Rd, Houston, TX 77006",
       "lat": 29.7456,
       "lng": -95.3829
+    },
+    {
+      "source": "ripper",
+      "name": "encore-houston",
+      "label": "ENCORE Day and Night, Houston, TX",
+      "lat": 29.7489,
+      "lng": -95.3881
     },
     {
       "source": "external",
@@ -530,6 +571,20 @@
     },
     {
       "source": "ripper",
+      "name": "nrg-arena",
+      "label": "NRG Arena, Houston, TX",
+      "lat": 29.6862,
+      "lng": -95.4085
+    },
+    {
+      "source": "ripper",
+      "name": "nrg-stadium",
+      "label": "NRG Stadium, Houston, TX",
+      "lat": 29.6846,
+      "lng": -95.4097
+    },
+    {
+      "source": "ripper",
       "name": "post-houston",
       "label": "POST Houston, 510 Main St, Houston, TX 77002",
       "lat": 29.7569,
@@ -670,10 +725,10 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1582,
-    "totalEvents": 2525,
+    "eventsWithImage": 1703,
+    "totalEvents": 2646,
     "venuesWithImage": 0,
-    "totalVenues": 50,
+    "totalVenues": 51,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -753,6 +808,13 @@
         "label": "Doc's Jazz Club, 1201 Westheimer Rd, Houston, TX 77006",
         "url": "https://docsjazzclub.com/",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Doc's%20Jazz%20Club%2C%201201%20Westheimer%20Rd%2C%20Houston%2C%20TX%2077006"
+      },
+      {
+        "source": "ripper",
+        "name": "encore-houston",
+        "label": "ENCORE Day and Night, Houston, TX",
+        "url": "https://www.eventbriteapi.com/",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=ENCORE%20Day%20and%20Night%2C%20Houston%2C%20TX"
       },
       {
         "source": "external",
@@ -5100,9 +5162,9 @@
     ]
   },
   "costStats": {
-    "eventsWithCost": 586,
-    "freeEvents": 449,
-    "totalEvents": 2525,
+    "eventsWithCost": 707,
+    "freeEvents": 570,
+    "totalEvents": 2646,
     "unresolvable": 0
   },
   "costGaps": [
@@ -14397,6 +14459,13 @@
       "source": "anderson-fair"
     },
     {
+      "name": "arena-theatre-arena-theatre",
+      "type": "Ripper",
+      "events": 0,
+      "expectEmpty": false,
+      "source": "arena-theatre"
+    },
+    {
       "name": "arthouse-houston-arthouse-houston",
       "type": "Ripper",
       "events": 0,
@@ -14465,6 +14534,13 @@
       "events": 73,
       "expectEmpty": false,
       "source": "downtown-houston-events"
+    },
+    {
+      "name": "encore-houston-encore-houston",
+      "type": "Ripper",
+      "events": 121,
+      "expectEmpty": false,
+      "source": "encore-houston"
     },
     {
       "name": "ensemble-theatre-houston-ensemble-theatre-houston",
@@ -14591,6 +14667,20 @@
       "events": 9,
       "expectEmpty": false,
       "source": "murder-by-the-book"
+    },
+    {
+      "name": "nrg-arena-nrg-arena",
+      "type": "Ripper",
+      "events": 0,
+      "expectEmpty": false,
+      "source": "nrg-arena"
+    },
+    {
+      "name": "nrg-stadium-nrg-stadium",
+      "type": "Ripper",
+      "events": 0,
+      "expectEmpty": false,
+      "source": "nrg-stadium"
     },
     {
       "name": "post-houston-post-houston",
@@ -14749,14 +14839,14 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 652,
+      "events": 773,
       "expectEmpty": false,
       "source": "tag-music"
     },
     {
       "name": "tag-nightlife",
       "type": "Aggregate",
-      "events": 69,
+      "events": 190,
       "expectEmpty": false,
       "source": "tag-nightlife"
     },
@@ -14789,11 +14879,11 @@
       "source": "tag-montrose"
     },
     {
-      "name": "tag-cinema",
+      "name": "tag-theater",
       "type": "Aggregate",
-      "events": 11,
+      "events": 377,
       "expectEmpty": false,
-      "source": "tag-cinema"
+      "source": "tag-theater"
     },
     {
       "name": "tag-arts",
@@ -14801,6 +14891,13 @@
       "events": 136,
       "expectEmpty": false,
       "source": "tag-arts"
+    },
+    {
+      "name": "tag-cinema",
+      "type": "Aggregate",
+      "events": 11,
+      "expectEmpty": false,
+      "source": "tag-cinema"
     },
     {
       "name": "tag-nonprofit",
@@ -14826,7 +14923,7 @@
     {
       "name": "tag-midtown",
       "type": "Aggregate",
-      "events": 47,
+      "events": 168,
       "expectEmpty": false,
       "source": "tag-midtown"
     },
@@ -14913,13 +15010,6 @@
       "events": 22,
       "expectEmpty": false,
       "source": "tag-university"
-    },
-    {
-      "name": "tag-theater",
-      "type": "Aggregate",
-      "events": 377,
-      "expectEmpty": false,
-      "source": "tag-theater"
     },
     {
       "name": "tag-university-of-houston",
@@ -15062,6 +15152,34 @@
       "source": "tag-west-university"
     },
     {
+      "name": "tag-events",
+      "type": "Aggregate",
+      "events": 0,
+      "expectEmpty": false,
+      "source": "tag-events"
+    },
+    {
+      "name": "tag-clear-lake",
+      "type": "Aggregate",
+      "events": 10,
+      "expectEmpty": false,
+      "source": "tag-clear-lake"
+    },
+    {
+      "name": "tag-concerts",
+      "type": "Aggregate",
+      "events": 0,
+      "expectEmpty": false,
+      "source": "tag-concerts"
+    },
+    {
+      "name": "tag-fifa",
+      "type": "Aggregate",
+      "events": 0,
+      "expectEmpty": false,
+      "source": "tag-fifa"
+    },
+    {
       "name": "tag-entertainment",
       "type": "Aggregate",
       "events": 96,
@@ -15074,13 +15192,6 @@
       "events": 0,
       "expectEmpty": false,
       "source": "tag-river-oaks"
-    },
-    {
-      "name": "tag-clear-lake",
-      "type": "Aggregate",
-      "events": 10,
-      "expectEmpty": false,
-      "source": "tag-clear-lake"
     },
     {
       "name": "tag-cultural",
@@ -15183,7 +15294,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 2601,
+      "events": 2722,
       "expectEmpty": false,
       "source": "tag-all"
     },

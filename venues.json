@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-03T16:45:28.692Z",
+  "generated": "2026-07-03T16:54:43.603Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -391,6 +391,42 @@
             },
             "rss": {
               "href": "docs-houston-docs-houston.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "encore-houston",
+      "friendlyName": "ENCORE Day and Night",
+      "description": "ENCORE Day and Night",
+      "url": "https://www.eventbriteapi.com/",
+      "tags": [
+        "Music",
+        "Nightlife",
+        "Midtown"
+      ],
+      "geo": {
+        "lat": 29.7489,
+        "lng": -95.3881,
+        "label": "ENCORE Day and Night, Houston, TX"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=ENCORE%20Day%20and%20Night%2C%20Houston%2C%20TX"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "encore-houston",
+          "friendlyName": "ENCORE Day and Night",
+          "links": {
+            "ics": {
+              "href": "encore-houston-encore-houston.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "encore-houston-encore-houston.rss",
               "type": "application/rss+xml"
             }
           }
