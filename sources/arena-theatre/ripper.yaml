@@ -1,0 +1,19 @@
+name: arena-theatre
+type: ticketmaster
+proxy: true
+description: "Arena Theatre"
+url: https://www.arenatheatrehouston.com/
+friendlyLink: https://www.arenatheatrehouston.com/
+tags: [Theater, Music, Arts, "Upper Kirby"]
+geo:
+  lat: 29.7104
+  lng: -95.5198
+  label: "Arena Theatre, 7326 Southwest Freeway, Houston, TX 77074"
+calendars:
+  - name: arena-theatre
+    friendlyname: "Arena Theatre"
+    timezone: America/Chicago
+    config:
+      venueId: "475308"
+      venueName: "Arena Theatre"
+      venueAddress: "7326 Southwest Freeway, Houston, TX 77074"

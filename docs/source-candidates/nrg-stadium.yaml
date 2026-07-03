@@ -1,0 +1,22 @@
+name: NRG Stadium
+status: added
+platform: Ticketmaster
+url: https://www.nrgpark.com/
+tags:
+  - Sports
+  - Music
+  - Concerts
+  - FIFA
+  - Clear Lake
+firstSeen: 2026-07-03
+lastChecked: 2026-07-03
+pr: claude/rebase-errors-multiple-prs-ksw503
+impl:
+  type: ticketmaster
+  venueId: "475596"
+  proxy: true
+  note: FIFA World Cup 2026 matches (July-Aug) + other major events; Ticketmaster venue with 403-blocked API access from CI, requires Browserbase proxy
+  geo:
+    lat: 29.6846
+    lng: -95.4097
+    label: NRG Stadium, Houston, TX

@@ -1,0 +1,21 @@
+name: ENCORE Day and Night
+status: added
+platform: Eventbrite
+url: https://www.eventbrite.com/o/encore-day-and-night-120860439079
+tags:
+  - Music
+  - Nightlife
+  - Midtown
+firstSeen: 2026-07-03
+lastChecked: 2026-07-03
+pr: claude/rebase-errors-multiple-prs-ksw503
+impl:
+  type: eventbrite
+  organizerId: "120860439079"
+  observedEventCount: 121
+  builtEventCount: 121
+  note: Eventbrite-based nightclub/music venue with 121 confirmed events
+  geo:
+    lat: 29.7489
+    lng: -95.3881
+    label: ENCORE Day and Night, Midtown, Houston, TX

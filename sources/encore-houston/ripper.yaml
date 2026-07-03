@@ -1,0 +1,17 @@
+name: encore-houston
+type: eventbrite
+description: "ENCORE Day and Night"
+url: https://www.eventbriteapi.com/
+friendlyLink: https://www.eventbriteapi.com/
+tags: [Music, Nightlife, Midtown]
+geo:
+  lat: 29.7489
+  lng: -95.3881
+  label: "ENCORE Day and Night, Houston, TX"
+calendars:
+  - name: encore-houston
+    friendlyname: "ENCORE Day and Night"
+    timezone: America/Chicago
+    config:
+      organizerId: "120860439079"
+      defaultLocation: "Houston, TX"

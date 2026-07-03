@@ -1,0 +1,21 @@
+name: Arena Theatre
+status: added
+platform: Ticketmaster
+url: https://www.thearenahouston.com/
+tags:
+  - Theater
+  - Music
+  - Arts
+  - Upper Kirby
+firstSeen: 2026-07-03
+lastChecked: 2026-07-03
+pr: claude/rebase-errors-multiple-prs-ksw503
+impl:
+  type: ticketmaster
+  venueId: "475308"
+  proxy: true
+  note: Theater and music venue in Upper Kirby area; Ticketmaster venue, requires Browserbase proxy
+  geo:
+    lat: 29.7104
+    lng: -95.5198
+    label: Arena Theatre, 7326 Southwest Freeway, Houston, TX 77074

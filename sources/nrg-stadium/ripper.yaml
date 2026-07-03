@@ -1,0 +1,19 @@
+name: nrg-stadium
+type: ticketmaster
+proxy: true
+description: "NRG Stadium"
+url: https://www.nrg.us/
+friendlyLink: https://www.nrg.us/events
+tags: [Sports, Music, Concerts, FIFA, "Clear Lake"]
+geo:
+  lat: 29.6846
+  lng: -95.4097
+  label: "NRG Stadium, Houston, TX"
+calendars:
+  - name: nrg-stadium
+    friendlyname: "NRG Stadium"
+    timezone: America/Chicago
+    config:
+      venueId: "475596"
+      venueName: "NRG Stadium"
+      venueAddress: "Houston, TX"
