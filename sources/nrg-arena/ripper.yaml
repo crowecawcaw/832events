@@ -1,0 +1,19 @@
+name: nrg-arena
+type: ticketmaster
+proxy: true
+description: "NRG Arena"
+url: https://www.nrg.us/
+friendlyLink: https://www.nrg.us/events
+tags: [Sports, Music, Events, "Clear Lake"]
+geo:
+  lat: 29.6862
+  lng: -95.4085
+  label: "NRG Arena, Houston, TX"
+calendars:
+  - name: nrg-arena
+    friendlyname: "NRG Arena"
+    timezone: America/Chicago
+    config:
+      venueId: "475175"
+      venueName: "NRG Arena"
+      venueAddress: "Houston, TX"
