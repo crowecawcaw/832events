@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-07-03T06:56:39.404Z",
-  "totalErrors": 14,
+  "buildTime": "2026-07-03T15:02:47.028Z",
+  "totalErrors": 12,
   "configErrors": [],
   "sources": [
     {
@@ -103,8 +103,8 @@
       "errors": [
         {
           "type": "ParseError",
-          "reason": "Ripper crashed: Error: River Oaks Theatre fetch failed: HTTP 403 ",
-          "context": ""
+          "reason": "Could not extract event title",
+          "context": "<a class=\"nav__a nav__a--events\" href='/movie-theater/riveroaks/coming-soon'>\n                        <span class=\"nav__drawerText\">\n\n\nComing Soon</span>\n                    </a>"
         }
       ]
     },
@@ -181,25 +181,12 @@
       "error": "Error: HTTP 403: "
     }
   ],
-  "geocodeErrors": [
-    {
-      "type": "GeocodeError",
-      "location": "Blue Note Hawaii, 2335 Kalakaua Avenue, Honolulu, HI, 96815, United States",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Brad Garrett’s Comedy Club, 3799 S Las Vegas Blvd, Las Vegas, NV, 89109, USA",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    }
-  ],
+  "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 2524,
-    "eventsWithGeo": 2205,
+    "totalEvents": 2525,
+    "eventsWithGeo": 2206,
     "eventsWithoutGeo": 319,
-    "geocodeErrors": 2
+    "geocodeErrors": 0
   },
   "uncertainEvents": [],
   "uncertaintyStats": {
@@ -232,7 +219,7 @@
       "source": "texas-parks-wildlife-houston",
       "url": "https://tpwd.texas.gov/calendar/near-city/houston-events",
       "cachedAt": "2026-07-02T02:31:00.471Z",
-      "ageHours": 28,
+      "ageHours": 37,
       "error": "fetch failed"
     }
   ],
@@ -691,8 +678,8 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1581,
-    "totalEvents": 2524,
+    "eventsWithImage": 1582,
+    "totalEvents": 2525,
     "venuesWithImage": 0,
     "totalVenues": 50,
     "unresolvable": 0
@@ -5123,7 +5110,7 @@
   "costStats": {
     "eventsWithCost": 586,
     "freeEvents": 449,
-    "totalEvents": 2524,
+    "totalEvents": 2525,
     "unresolvable": 0
   },
   "costGaps": [
@@ -14742,14 +14729,14 @@
     {
       "name": "tag-farmersmarket",
       "type": "Aggregate",
-      "events": 38,
+      "events": 39,
       "expectEmpty": false,
       "source": "tag-farmersmarket"
     },
     {
       "name": "tag-the-heights",
       "type": "Aggregate",
-      "events": 83,
+      "events": 84,
       "expectEmpty": false,
       "source": "tag-the-heights"
     },
@@ -15169,7 +15156,7 @@
     {
       "name": "tag-makersmarket",
       "type": "Aggregate",
-      "events": 29,
+      "events": 30,
       "expectEmpty": false,
       "source": "tag-makersmarket"
     },
@@ -15204,7 +15191,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 2600,
+      "events": 2601,
       "expectEmpty": false,
       "source": "tag-all"
     },
