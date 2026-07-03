@@ -1,0 +1,11 @@
+name: Sam Houston State University Events
+status: rejected
+platform: Localist (ICS - single event only)
+url: https://events.shsu.edu/event/open_mic_night_9076
+tags:
+  - Education
+  - Arts
+  - Entertainment
+firstSeen: 2026-07-02
+lastChecked: 2026-07-02
+notes: ICS endpoint points to individual event files, not a full calendar feed. Shortlist entry referenced a single Open Mic Night event. SHSU likely has a calendar at events.shsu.edu but would require calendar feed discovery, not individual event ICS files.

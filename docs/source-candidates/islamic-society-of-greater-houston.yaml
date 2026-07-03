@@ -1,0 +1,18 @@
+name: Islamic Society of Greater Houston
+status: added
+platform: Tribe Events (ICS feed)
+url: https://isgh.org/events/
+tags:
+  - Community
+  - Cultural
+  - Religious
+firstSeen: 2026-07-03
+lastChecked: 2026-07-03
+pr: claude/rebase-errors-multiple-prs-ksw503
+impl:
+  type: external
+  icsUrl: https://isgh.org/?post_type=tribe_events&ical=1
+  infoUrl: https://isgh.org/events/
+  proxy: true
+  note: Tribe Events ICS feed for Islamic Society; multi-location, requires Browserbase proxy for Cloudflare bypass
+  geo: null

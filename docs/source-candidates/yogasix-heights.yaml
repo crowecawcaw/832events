@@ -1,0 +1,11 @@
+name: YogaSix Heights
+status: investigating
+platform: HubSpot (not Squarespace as initially thought)
+url: https://www.yogasix.com/location/heights
+tags:
+  - Yoga
+  - Wellness
+  - The Heights
+firstSeen: 2026-07-03
+lastChecked: 2026-07-03
+notes: Yoga studio at 1324 N Shepherd Dr; site is hosted on HubSpot, not Squarespace. No calendar API available (?format=json returns HTML). Class schedules dynamically loaded via JS. Would require custom HTML scraper with proxy:true.

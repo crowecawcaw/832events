@@ -1,0 +1,21 @@
+name: NRG Arena
+status: added
+platform: Ticketmaster
+url: https://www.nrgpark.com/
+tags:
+  - Sports
+  - Music
+  - Events
+  - Clear Lake
+firstSeen: 2026-07-03
+lastChecked: 2026-07-03
+pr: claude/rebase-errors-multiple-prs-ksw503
+impl:
+  type: ticketmaster
+  venueId: "475175"
+  proxy: true
+  note: Major concert and events venue at NRG Park; Ticketmaster venue, requires Browserbase proxy
+  geo:
+    lat: 29.6862
+    lng: -95.4085
+    label: NRG Arena, Houston, TX
