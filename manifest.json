@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-04T04:44:24.105Z",
+  "lastUpdated": "2026-07-04T10:53:39.969Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -418,23 +418,6 @@
       ]
     },
     {
-      "name": "murder-by-the-book",
-      "description": "Murder By The Book",
-      "friendlyLink": "https://www.murderbooks.com/events",
-      "calendars": [
-        {
-          "name": "murder-by-the-book",
-          "friendlyName": "Murder By The Book",
-          "icsUrl": "murder-by-the-book-murder-by-the-book.ics",
-          "rssUrl": "murder-by-the-book-murder-by-the-book.rss",
-          "tags": [
-            "Books",
-            "West University"
-          ]
-        }
-      ]
-    },
-    {
       "name": "post-houston",
       "description": "POST Houston",
       "friendlyLink": "https://posthtx.com/event",
@@ -558,6 +541,23 @@
             "Community",
             "Cultural",
             "Third Ward"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "songkick-houston",
+      "description": "Songkick Houston Metro",
+      "friendlyLink": "https://www.songkick.com/metro-areas/15073-us-houston",
+      "calendars": [
+        {
+          "name": "songkick-houston",
+          "friendlyName": "Songkick Houston Concerts",
+          "icsUrl": "songkick-houston-songkick-houston.ics",
+          "rssUrl": "songkick-houston-songkick-houston.rss",
+          "tags": [
+            "Music",
+            "Concert"
           ]
         }
       ]
@@ -914,6 +914,7 @@
     "Cinema",
     "Comedy",
     "Community",
+    "Concert",
     "Culinary",
     "Cultural",
     "Culture",
@@ -960,7 +961,6 @@
     "Upper Kirby",
     "Uptown",
     "Wedgewood",
-    "West University",
     "Workshops"
   ]
 }

@@ -19,21 +19,6 @@ DTSTART:20250101T000000
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-DTSTART;TZID=UTC:20260703T170000
-DTEND;TZID=UTC:20260703T233000
-DTSTAMP:20251204T000419Z
-CREATED:20250828T223752Z
-LAST-MODIFIED:20251204T000419Z
-UID:10005891-1783098000-1783121400@badastronautbeer.com
-SUMMARY:713v3 Virtua Fighter 5 & Tekken 8 Tournament
-DESCRIPTION:713v3 Houston’s 3v3 Tournament \nVIRTUA FIGHTER 5 & TEKKEN 8\nEvery First Friday of the Month\n5 – 6:30 PM Casuals \n7 PM – Tournament Start \n11 PM – 12 AM Tournament End \nRegister at Start.gg/tournament/713v3-1/details and pay IN PERSON \n$20 Per Team for Venue and Prize Pool \nSide Tournaments Encouraged (BYOC) \n 
-URL:https://badastronautbeer.com/event/713v3/2026-07-03/
-LOCATION:Bad Astronaut Brewery\, 1519 Fulton Street\, Houston\, TX\, 77009\, United States
-CATEGORIES:Live Event
-ATTACH;FMTTYPE=image/png:https://badastronautbeer.com/wp-content/uploads/2025/08/713v3.png
-ORGANIZER;CN="Bad Astronaut Brewery":MAILTO:info@badastronautbeer.com
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;TZID=UTC:20260705T110000
 DTEND;TZID=UTC:20260705T220000
 DTSTAMP:20250627T211952Z
@@ -458,6 +443,21 @@ URL:https://badastronautbeer.com/event/happy-hour-reverse-happy-hour/2026-07-30/
 LOCATION:Bad Astronaut Brewery\, 1519 Fulton Street\, Houston\, TX\, 77009\, United States
 CATEGORIES:Happy Hour
 ATTACH;FMTTYPE=image/jpeg:https://badastronautbeer.com/wp-content/uploads/2025/06/Copy-of-happy-hour-Instagram-Post-45-3.jpg
+ORGANIZER;CN="Bad Astronaut Brewery":MAILTO:info@badastronautbeer.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260802T110000
+DTEND;TZID=UTC:20260802T220000
+DTSTAMP:20250627T211952Z
+CREATED:20250623T211737Z
+LAST-MODIFIED:20250627T211952Z
+UID:10005256-1785668400-1785708000@badastronautbeer.com
+SUMMARY:HAPPY HOUR: Sunday Funday!
+DESCRIPTION:HAPPY HOUR DAILY SPECIAL \nSUNDAY FUNDAY \n$2 OFF ALL BEVERAGES (Sodas Not Included) All Day!
+URL:https://badastronautbeer.com/event/happy-hour-sunday-funday/2026-08-02/
+LOCATION:Bad Astronaut Brewry\, 1519 Fulton Street\, Houston\, TX\, 77009\, United States
+CATEGORIES:Happy Hour
+ATTACH;FMTTYPE=image/jpeg:https://badastronautbeer.com/wp-content/uploads/2025/06/Copy-of-happy-hour-Instagram-Post-45-4.jpg
 ORGANIZER;CN="Bad Astronaut Brewery":MAILTO:info@badastronautbeer.com
 END:VEVENT
 END:VCALENDAR

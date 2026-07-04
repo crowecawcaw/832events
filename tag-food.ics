@@ -6,9 +6,9 @@ METHOD:PUBLISH
 X-WR-CALNAME:Food Events
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:Ub7JtOkr2cAky1V-0CDa0
+UID:ZzIYU8-itxtcUUJb-qMr5
 SUMMARY:Match Day Watch Parties at POST
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20260611T170000Z
 DESCRIPTION:Type: Sports\, Watch Party\, Gathering\n\nhttps://posthtx.com/e
 	vent/fifa-world-cup-at-post\n\nFrom POST Houston
@@ -21,39 +21,9 @@ TRANSP:TRANSPARENT
 DURATION:PT2H
 END:VEVENT
 BEGIN:VEVENT
-UID:MZdA85gtY2hqV2oqaaDF1
-SUMMARY:America250 Foam Party
-DTSTAMP:20260704T044416Z
-DTSTART:20260703T160000Z
-DESCRIPTION:Type: Child Friendly\, Game\, Holiday Special\n\nhttps://postht
-	x.com/event/america250-foam-party\n\nFrom POST Houston
-URL:https://posthtx.com/event/america250-foam-party
-GEO:29.7569;-95.3594
-LOCATION:Skylawn
-X-CALRIPPER-SOURCE:post-houston
-CATEGORIES:POST Houston
-TRANSP:TRANSPARENT
-DURATION:PT2H
-END:VEVENT
-BEGIN:VEVENT
-UID:y03DICRVmGbovNOQ3HgXo
-SUMMARY:Taylor Swift Tribute Rooftop Concert
-DTSTAMP:20260704T044416Z
-DTSTART:20260704T010000Z
-DESCRIPTION:Type: Music/Concert\n\nhttps://posthtx.com/event/reputation-tay
-	lor-swift-tribute\n\nFrom POST Houston
-URL:https://posthtx.com/event/reputation-taylor-swift-tribute
-GEO:29.7569;-95.3594
-LOCATION:Outpost
-X-CALRIPPER-SOURCE:post-houston
-CATEGORIES:POST Houston
-TRANSP:TRANSPARENT
-DURATION:PT2H
-END:VEVENT
-BEGIN:VEVENT
-UID:i_bo4OwGRqBXq6SRCJbLx
+UID:zo3xxZEN222qJfIJGzHOr
 SUMMARY:DJ Night — Robert Hood
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20260704T030000Z
 DESCRIPTION:Type: Music/Concert\, New Media Art Museum\, Party\n\nhttps://p
 	osthtx.com/event/dj-night-robert-hood\n\nFrom POST Houston
@@ -66,9 +36,9 @@ TRANSP:TRANSPARENT
 DURATION:PT2H
 END:VEVENT
 BEGIN:VEVENT
-UID:0KfxUvrE0MQMUPwB9kibo
+UID:pA40Lel9CNrqyabkqN3O8
 SUMMARY:Coffee and Cars — 4th of July Edition
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20260704T140000Z
 DESCRIPTION:Type: Gathering\n\nhttps://posthtx.com/event/coffee-and-cars-4t
 	h-of-july-edition\n\nFrom POST Houston
@@ -81,9 +51,9 @@ TRANSP:TRANSPARENT
 DURATION:PT2H
 END:VEVENT
 BEGIN:VEVENT
-UID:3yV7FlaFrMmUJ2-SUi6p6
+UID:mla0VPUxRfPyTNXCVbvYA
 SUMMARY:America250 Foam Party
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20260704T160000Z
 DESCRIPTION:Type: Child Friendly\, Game\, Holiday Special\n\nhttps://postht
 	x.com/event/america250-foam-party-2\n\nFrom POST Houston
@@ -96,9 +66,9 @@ TRANSP:TRANSPARENT
 DURATION:PT2H
 END:VEVENT
 BEGIN:VEVENT
-UID:lzzVuUs3YQHLRJk6gj5Rw
+UID:yRx7cCcBURXnTe_kJzZC0
 SUMMARY:Live Band On the Lawn — Rapture
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20260705T000000Z
 DESCRIPTION:Type: Music/Concert\, Holiday Special\, Party\n\nhttps://postht
 	x.com/event/live-band-on-the-lawn-rapture\n\nFrom POST Houston
@@ -111,9 +81,9 @@ TRANSP:TRANSPARENT
 DURATION:PT2H
 END:VEVENT
 BEGIN:VEVENT
-UID:K9fgxlMH591WCFGHuKJue
+UID:cr67KXPrDBT4NROzqwt3n
 SUMMARY:America250 4th of July Celebration
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20260705T000000Z
 DESCRIPTION:Type: Holiday Special\, Music/Concert\, Party\n\nhttps://postht
 	x.com/event/america250-4th-of-july-celebration\n\nFrom POST Houston
@@ -126,9 +96,9 @@ TRANSP:TRANSPARENT
 DURATION:PT2H
 END:VEVENT
 BEGIN:VEVENT
-UID:iLJO2TRoCgr7aGojM7IF8
+UID:a38rpt6SEK8Ts2Hv5oGmp
 SUMMARY:DJ Night — Bianca Oblivion
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20260705T030000Z
 DESCRIPTION:Type: Music/Concert\, New Media Art Museum\, Party\n\nhttps://p
 	osthtx.com/event/dj-night-bianca-oblivion\n\nFrom POST Houston
@@ -141,15 +111,46 @@ TRANSP:TRANSPARENT
 DURATION:PT2H
 END:VEVENT
 BEGIN:VEVENT
-UID:vBAGAXA0eE9wLJS-xag5t
+UID:ixjSB_TiumTIzTxL4srXg
 SUMMARY:Eden Church Houston: Sunday Service
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20260705T133000Z
 DESCRIPTION:Type: Gathering\n\nhttps://posthtx.com/event/eden-church-housto
 	n-sunday-service\n\nFrom POST Houston
 URL:https://posthtx.com/event/eden-church-houston-sunday-service
 GEO:29.7569;-95.3594
 LOCATION:Z Atrium
+X-CALRIPPER-SOURCE:post-houston
+CATEGORIES:POST Houston
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+UID:YOnywHyxmDhVEnoIvDuPB
+SUMMARY:Selestial Sacred Sound Sessions: Third Eye Chakra Sound Journey
+DTSTAMP:20260704T105332Z
+DTSTART:20260707T013000Z
+DESCRIPTION:Type: Wellness\n\nhttps://posthtx.com/event/selestial-sacred-so
+	und-sessions-third-eye-chakra-sound-journey\n\nFrom POST Houston
+URL:https://posthtx.com/event/selestial-sacred-sound-sessions-third-eye-cha
+	kra-sound-journey
+GEO:29.7569;-95.3594
+LOCATION:Art Club
+X-CALRIPPER-SOURCE:post-houston
+CATEGORIES:POST Houston
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+UID:RReelngaWWrR248QQQzGR
+SUMMARY:Free Spanish Yoga Class
+DTSTAMP:20260704T105332Z
+DTSTART:20260709T000000Z
+DESCRIPTION:Type: Wellness\, Gathering\n\nhttps://posthtx.com/event/free-sp
+	anish-yoga-class-13\n\nFrom POST Houston
+URL:https://posthtx.com/event/free-spanish-yoga-class-13
+GEO:29.7569;-95.3594
+LOCATION:Skylawn
 X-CALRIPPER-SOURCE:post-houston
 CATEGORIES:POST Houston
 TRANSP:TRANSPARENT
@@ -163,10 +164,10 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1181539933%2F2407114280263%2F1%2Foriginal.20260406-205059?auto
  =format%2Ccompress&q=75&sharp=10&s=3398a2a05ae02c6c2e5c8e3cc726d0cb
-UID:c_5laC40jCzPJxO1mQGFh
+UID:ls5lApSJubZJ2KvQQ6Bei
 SUMMARY:Sazón Latin Food Festival 2026: Cleveland’s Taste of Latin American
 	 Food
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20260711T160000Z
 DESCRIPTION:Family-friendly outdoor festival featuring Latin music and cura
 	ted food from across Latin America. Our annual celebration of sabor.\n\nht
@@ -188,10 +189,10 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1176212894%2F2407114280263%2F1%2Foriginal.20260129-224403?auto
  =format%2Ccompress&q=75&sharp=10&s=9952a290d650fc6059124f57614dd253
-UID:UzMQY03kctfb0d47XYWFL
+UID:u1ou5yfKcDMBcKRwyvT7I
 SUMMARY:Sazón Latin Food Festival 2026: Columbus’s Taste of Latin American 
 	Food
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20260712T160000Z
 DESCRIPTION:Family-friendly outdoor festival featuring Latin music and cura
 	ted food from across Latin America. Our annual celebration of sabor.\n\nht
@@ -214,10 +215,10 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1177096264%2F2407114280263%2F1%2Foriginal.20260209-195659?auto
  =format%2Ccompress&q=75&sharp=10&s=5e1fd81645930e85d1ede0f80bc89563
-UID:LMK916Q9JvVQDOWDwFcej
+UID:IejrtuR4wNTaxswC4z-Td
 SUMMARY:Sazón Latin Food Festival 2026: Richmond's Taste of Latin American 
 	Food
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20260718T160000Z
 DESCRIPTION:Family-friendly outdoor festival featuring Latin music and cura
 	ted food from across Latin America. Our annual celebration of sabor.\n\nht
@@ -239,10 +240,10 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1176172735%2F2407114280263%2F1%2Foriginal.20260129-162549?auto
  =format%2Ccompress&q=75&sharp=10&s=d1ec233e351de75ac63ddde24da1807e
-UID:_AQ7Oio0EP5VWevLdnbtc
+UID:QHCCFOMorhLO-_vO6zPao
 SUMMARY:Sazón Latin Food Festival 2026: Detroit’s Taste of Latin American F
 	ood
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20260726T160000Z
 DESCRIPTION:Family-friendly outdoor festival featuring Latin music and cura
 	ted food from across Latin America. Our annual celebration of sabor.\n\nht
@@ -264,10 +265,10 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1177076514%2F2407114280263%2F1%2Foriginal.20260209-170913?auto
  =format%2Ccompress&q=75&sharp=10&s=fa75a043ee6805c15a1607449dd8c320
-UID:e7jAbJExIi9QlEI0qbTju
+UID:HgYJE03wxrnCZ7Qc0PVCN
 SUMMARY:Sazón Latin Food Festival 2026: Denver's Taste of Latin American Fo
 	od
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20260809T180000Z
 DESCRIPTION:Family-friendly outdoor festival featuring Latin music and cura
 	ted food from across Latin America. Our annual celebration of sabor.\n\nht
@@ -289,10 +290,10 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1177883605%2F2407114280263%2F1%2Foriginal.20260218-222226?auto
  =format%2Ccompress&q=75&sharp=10&s=31730b4d132507513039b51be0fc72b8
-UID:TZLJOVxvn-FL-Gdv6s1L1
+UID:hOXYIjpKovXymbCoolJLD
 SUMMARY:Sazón Latin Food Festival 2026: Boston’s Taste of Latin American Fo
 	od
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20260816T160000Z
 DESCRIPTION:Family-friendly outdoor festival featuring Latin music and cura
 	ted food from across Latin America. Our annual celebration of sabor.\n\nht
@@ -314,10 +315,10 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1175275857%2F2407114280263%2F1%2Foriginal.20260119-205007?auto
  =format%2Ccompress&q=75&sharp=10&s=79f7c55abcaf62d4b5aa3167b73a9458
-UID:eKAfLjwgcuWc8Xq2gcHA6
+UID:hYllGNo73j8iowyg2LqpM
 SUMMARY:Sazón Latin Food Festival 2026: Brooklyn’s Taste of Latin American 
 	Food
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20260830T160000Z
 DESCRIPTION:Family-friendly outdoor festival featuring Latin music and cura
 	ted food from across Latin America. Our annual celebration of sabor.\n\nht
@@ -339,9 +340,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1180602646%2F2407114280263%2F1%2Foriginal.20260324-201032?auto
  =format%2Ccompress&q=75&sharp=10&s=8f0916cd2f8be147c27dc23b16f4696c
-UID:M_yTj8awY3L0wrIyEm7NF
+UID:LXiYPIM2tKq9LN_dVoR8R
 SUMMARY:Empanada Festival in Austin
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20260906T170000Z
 DESCRIPTION:Family Friendly\, Free Admission\, Outdoor\, Music and Plenty o
 	f Curated empanada Options From All over Latin America!\n\nhttps://www.eve
@@ -364,10 +365,10 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1184897625%2F2407114280263%2F1%2Foriginal.20260518-232945?auto
  =format%2Ccompress&q=75&sharp=10&s=fa95140533f96075737088eaad5d4f76
-UID:FaM7OOKeMME9aL47gBnCx
+UID:QkeGyeKxhfEj5b4-fLrlQ
 SUMMARY:Sazón Latin Food Festival 2026: Charlotte’s Taste of Latin American
 	 Food
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20260912T160000Z
 DESCRIPTION:Family-friendly outdoor festival featuring Latin music and cura
 	ted food from across Latin America. Our annual celebration of sabor.\n\nht
@@ -390,10 +391,10 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1184897573%2F2407114280263%2F1%2Foriginal.20260518-232855?auto
  =format%2Ccompress&q=75&sharp=10&s=30b4eb3fafc0265e7550f8fae8ade29d
-UID:1GmIMyesJkOShb9v_qybJ
+UID:DUwDIS8_uKLEXVkf3YMBj
 SUMMARY:Sazón Latin Food Festival 2026: Raleigh’s Taste of Latin American F
 	ood
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20260913T160000Z
 DESCRIPTION:Family-friendly outdoor festival featuring Latin music and cura
 	ted food from across Latin America. Our annual celebration of sabor.\n\nht
@@ -415,10 +416,10 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1178413317%2F2407114280263%2F1%2Foriginal.20260225-152710?auto
  =format%2Ccompress&q=75&sharp=10&s=d0d7235a0ad8dfb97e415d96ec449b32
-UID:1DhlTLeRYga94Tf2AS3V-
+UID:tMTwBZEbyIZFvzwq6tmc8
 SUMMARY:Sazón Latin Food Festival 2026: Philadelphia’s Taste of Latin Ameri
 	can Food
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20260919T160000Z
 DESCRIPTION:Family-friendly outdoor festival featuring Latin music and cura
 	ted food from across Latin America. Our annual celebration of sabor.\n\nht
@@ -441,10 +442,10 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1178412797%2F2407114280263%2F1%2Foriginal.20260225-152146?auto
  =format%2Ccompress&q=75&sharp=10&s=581faf2874432bd33b3455836c352f35
-UID:g45N9FWj0bWUhai6AvQzz
+UID:xszlA0DJEyZ9HWgO6XXkA
 SUMMARY:Sazón Latin Food Festival 2026: Baltimore’s Taste of Latin American
 	 Food
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20260920T160000Z
 DESCRIPTION:Family-friendly outdoor festival featuring Latin music and cura
 	ted food from across Latin America. Our annual celebration of sabor.\n\nht
@@ -467,10 +468,10 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1177953080%2F2407114280263%2F1%2Foriginal.20260219-173808?auto
  =format%2Ccompress&q=75&sharp=10&s=65bb74d7aaebe09ca810f80d749f19b6
-UID:xn6bX980tPLLvPHJ44wTZ
+UID:ggEl_gcufZhU3fdhnHPZy
 SUMMARY:Sazón Latin Food Festival 2026: Indianapolis Taste of Latin America
 	n Food
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20260926T160000Z
 DESCRIPTION:Family-friendly outdoor festival featuring Latin music and cura
 	ted food from across Latin America. Our annual celebration of sabor.\n\nht
@@ -493,10 +494,10 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1177884842%2F2407114280263%2F1%2Foriginal.20260218-223526?auto
  =format%2Ccompress&q=75&sharp=10&s=a351c4cc2fb39b508921603bb63914c3
-UID:C94-dAG9NxNGVJwy0SCkY
+UID:HL_DS0ohoPh_knKItH7qA
 SUMMARY:Sazón Latin Food Festival 2026: St. Louis’s Taste of Latin American
 	 Food
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20260927T170000Z
 DESCRIPTION:Family-friendly outdoor festival featuring Latin music and cura
 	ted food from across Latin America. Our annual celebration of sabor.\n\nht
@@ -519,9 +520,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1181296545%2F2407114280263%2F1%2Foriginal.20260402-150136?auto
  =format%2Ccompress&q=75&sharp=10&s=167ce5cffb3dbe4f6e32e5cf1b54d307
-UID:5ZssqUVs1_Pc6gMjiRCb2
+UID:AgUrnaYBQpogk6zwyP6KA
 SUMMARY:Parrilla  Latin American BBQ Festival in Austin
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20261003T170000Z
 DESCRIPTION:Family Friendly · Free Admission · Outdoor · Live Entertainment
 	 · Grilled Food & Flavors From Latin America!\n\nhttps://www.eventbrite.co
@@ -544,9 +545,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1178657155%2F2407114280263%2F1%2Foriginal.20260227-233312?auto
  =format%2Ccompress&q=75&sharp=10&s=2caf4f6ff4c069146f5849093639e471
-UID:CYT_L6LZbIhj10akm-AE_
+UID:8qjZ92zkipGcF4DmHn59T
 SUMMARY:PILÓN: Houston's Celebration of Afro-Latino Food
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20261004T170000Z
 DESCRIPTION:Family-friendly cultural festival celebrating Afro-Latino food\
 	, art\, and community in Houston.\n\nhttps://www.eventbrite.com/e/pilon-ho
@@ -569,10 +570,10 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1177885399%2F2407114280263%2F1%2Foriginal.20260218-224129?auto
  =format%2Ccompress&q=75&sharp=10&s=8e64f71c241f99e0b9daf16724729016
-UID:rN1XQ56lxk1TxZoclSOKP
+UID:V3ueYuRUVcOWk53sBgksF
 SUMMARY:Sazón Latin Food Festival 2026: Atlanta's Taste of Latin American F
 	ood
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20261010T160000Z
 DESCRIPTION:Family-friendly outdoor festival featuring Latin music and cura
 	ted food from across Latin America. Our annual celebration of sabor.\n\nht
@@ -595,10 +596,10 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1177980071%2F2407114280263%2F1%2Foriginal.20260219-215954?auto
  =format%2Ccompress&q=75&sharp=10&s=167ec5cd507df8642793442a6a9bedc9
-UID:2eq6_ScfO-BR4HbMK8MRW
+UID:r0Kb8UV7Icnfm-kbzuvOM
 SUMMARY:Sazón Latin Food Festival 2026: Nashville’s Taste of Latin American
 	 Food
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20261018T170000Z
 DESCRIPTION:Family-friendly outdoor festival featuring Latin music and cura
 	ted food from across Latin America. Our annual celebration of sabor.\n\nht
@@ -621,10 +622,10 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1175275356%2F2407114280263%2F1%2Foriginal.20260119-204525?auto
  =format%2Ccompress&q=75&sharp=10&s=7ecb2a41f055490adaeb267a5efdf9f3
-UID:8xMx0kEUU5Thxk8wuiaU6
+UID:ebWk6eKKkteFB9W00_9uq
 SUMMARY:Sazón Latin Food Festival 2026: Jacksonville’s Taste of Latin Ameri
 	can Food
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20261108T170000Z
 DESCRIPTION:Family-friendly outdoor festival featuring Latin music and cura
 	ted food from across Latin America. Our annual celebration of sabor.\n\nht
@@ -647,10 +648,10 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
 ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
  %2Fimages%2F1178843151%2F2407114280263%2F1%2Foriginal.20260302-220534?auto
  =format%2Ccompress&q=75&sharp=10&s=dfe47bf18dbb456ceb1f8be331cc3fc2
-UID:X1KgfPAK3ZQoGt2TKEDdJ
+UID:Esb50OSC2ilzcokMXDbbR
 SUMMARY:Sazón Latin Food Festival 2026: Fort Lauderdale's taste of Latin Am
 	erica
-DTSTAMP:20260704T044416Z
+DTSTAMP:20260704T105332Z
 DTSTART:20261122T170000Z
 DESCRIPTION:Family-friendly outdoor festival featuring Latin music and cura
 	ted food from across Latin America. Our annual celebration of sabor.\n\nht
