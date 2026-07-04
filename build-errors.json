@@ -1,5 +1,5 @@
 {
-  "buildTime": "2026-07-03T18:08:45.112Z",
+  "buildTime": "2026-07-04T04:44:29.421Z",
   "totalErrors": 11,
   "configErrors": [],
   "sources": [
@@ -183,8 +183,8 @@
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 2646,
-    "eventsWithGeo": 2327,
+    "totalEvents": 2638,
+    "eventsWithGeo": 2319,
     "eventsWithoutGeo": 319,
     "geocodeErrors": 0
   },
@@ -705,8 +705,8 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1703,
-    "totalEvents": 2646,
+    "eventsWithImage": 1708,
+    "totalEvents": 2638,
     "venuesWithImage": 0,
     "totalVenues": 51,
     "unresolvable": 0
@@ -1075,17 +1075,10 @@
       },
       {
         "source": "childrens-museum-houston",
-        "eventId": "basf-kids-labs-2026-07-03-b4b51a54",
+        "eventId": "basf-kids-labs-2027-07-03-4a7056e5",
         "summary": "BASF Kids' Labs",
-        "date": "2026-07-03T10:00-05:00[America/Chicago]",
+        "date": "2027-07-03T10:00-05:00[America/Chicago]",
         "url": "https://www.cmhouston.org/events/basf-kids-labs"
-      },
-      {
-        "source": "childrens-museum-houston",
-        "eventId": "cmh-extended-summer-hours-2026-07-03-2974ec58",
-        "summary": "CMH Extended Summer Hours",
-        "date": "2026-07-03T10:00-05:00[America/Chicago]",
-        "url": "https://www.cmhouston.org/events/cmh-extended-summer-hours-2"
       },
       {
         "source": "childrens-museum-houston",
@@ -1093,6 +1086,13 @@
         "summary": "CMH Extended Summer Hours",
         "date": "2026-08-07T10:00-05:00[America/Chicago]",
         "url": "https://www.cmhouston.org/events/cmh-extended-summer-hours-3"
+      },
+      {
+        "source": "childrens-museum-houston",
+        "eventId": "cmh-extended-summer-hours-2027-07-03-83bc7efa",
+        "summary": "CMH Extended Summer Hours",
+        "date": "2027-07-03T10:00-05:00[America/Chicago]",
+        "url": "https://www.cmhouston.org/events/cmh-extended-summer-hours-2"
       },
       {
         "source": "childrens-museum-houston",
@@ -1124,16 +1124,16 @@
       },
       {
         "source": "childrens-museum-houston",
-        "eventId": "final-kickoff-soccer-party-2026-07-03-6aa5402b",
+        "eventId": "final-kickoff-soccer-party-2027-07-03-3ae3c0e2",
         "summary": "Final Kickoff Soccer Party",
-        "date": "2026-07-03T10:00-05:00[America/Chicago]",
+        "date": "2027-07-03T10:00-05:00[America/Chicago]",
         "url": "https://www.cmhouston.org/events/final-kickoff-party"
       },
       {
         "source": "childrens-museum-houston",
-        "eventId": "final-kickoff-soccer-party-2026-07-03-6aa5402b",
+        "eventId": "final-kickoff-soccer-party-2027-07-03-3ae3c0e2",
         "summary": "Final Kickoff Soccer Party",
-        "date": "2026-07-03T10:00-05:00[America/Chicago]",
+        "date": "2027-07-03T10:00-05:00[America/Chicago]",
         "url": "https://www.cmhouston.org/events/final-kickoff-party"
       },
       {
@@ -1390,9 +1390,9 @@
       },
       {
         "source": "childrens-museum-houston",
-        "eventId": "zumbini-fridays-2026-07-03-b761b532",
+        "eventId": "zumbini-fridays-2027-07-03-2ba1338e",
         "summary": "Zumbini Fridays",
-        "date": "2026-07-03T10:00-05:00[America/Chicago]",
+        "date": "2027-07-03T10:00-05:00[America/Chicago]",
         "url": "https://www.cmhouston.org/events/zumbini"
       },
       {
@@ -4185,15 +4185,15 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
-        "eventId": "night-sky-viewing-2026-07-03",
-        "summary": "Night Sky Viewing",
-        "date": "2026-07-03T20:30-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
         "eventId": "night-sky-viewing-2026-07-14",
         "summary": "Night Sky Viewing",
         "date": "2026-07-14T20:30-05:00[America/Chicago]"
+      },
+      {
+        "source": "texas-parks-wildlife-houston",
+        "eventId": "night-sky-viewing-2027-07-03",
+        "summary": "Night Sky Viewing",
+        "date": "2027-07-03T20:30-05:00[America/Chicago]"
       },
       {
         "source": "texas-parks-wildlife-houston",
@@ -4209,9 +4209,9 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
-        "eventId": "pelts-and-tracks-2026-07-03",
+        "eventId": "pelts-and-tracks-2027-07-03",
         "summary": "Pelts and Tracks",
-        "date": "2026-07-03T14:00-05:00[America/Chicago]"
+        "date": "2027-07-03T14:00-05:00[America/Chicago]"
       },
       {
         "source": "texas-parks-wildlife-houston",
@@ -5144,7 +5144,7 @@
   "costStats": {
     "eventsWithCost": 707,
     "freeEvents": 570,
-    "totalEvents": 2646,
+    "totalEvents": 2638,
     "unresolvable": 0
   },
   "costGaps": [
@@ -5360,17 +5360,10 @@
     },
     {
       "source": "childrens-museum-houston",
-      "eventId": "basf-kids-labs-2026-07-03-b4b51a54",
+      "eventId": "basf-kids-labs-2027-07-03-4a7056e5",
       "summary": "BASF Kids' Labs",
-      "date": "2026-07-03T10:00-05:00[America/Chicago]",
+      "date": "2027-07-03T10:00-05:00[America/Chicago]",
       "url": "https://www.cmhouston.org/events/basf-kids-labs"
-    },
-    {
-      "source": "childrens-museum-houston",
-      "eventId": "cmh-extended-summer-hours-2026-07-03-2974ec58",
-      "summary": "CMH Extended Summer Hours",
-      "date": "2026-07-03T10:00-05:00[America/Chicago]",
-      "url": "https://www.cmhouston.org/events/cmh-extended-summer-hours-2"
     },
     {
       "source": "childrens-museum-houston",
@@ -5378,6 +5371,13 @@
       "summary": "CMH Extended Summer Hours",
       "date": "2026-08-07T10:00-05:00[America/Chicago]",
       "url": "https://www.cmhouston.org/events/cmh-extended-summer-hours-3"
+    },
+    {
+      "source": "childrens-museum-houston",
+      "eventId": "cmh-extended-summer-hours-2027-07-03-83bc7efa",
+      "summary": "CMH Extended Summer Hours",
+      "date": "2027-07-03T10:00-05:00[America/Chicago]",
+      "url": "https://www.cmhouston.org/events/cmh-extended-summer-hours-2"
     },
     {
       "source": "childrens-museum-houston",
@@ -5409,16 +5409,16 @@
     },
     {
       "source": "childrens-museum-houston",
-      "eventId": "final-kickoff-soccer-party-2026-07-03-6aa5402b",
+      "eventId": "final-kickoff-soccer-party-2027-07-03-3ae3c0e2",
       "summary": "Final Kickoff Soccer Party",
-      "date": "2026-07-03T10:00-05:00[America/Chicago]",
+      "date": "2027-07-03T10:00-05:00[America/Chicago]",
       "url": "https://www.cmhouston.org/events/final-kickoff-party"
     },
     {
       "source": "childrens-museum-houston",
-      "eventId": "final-kickoff-soccer-party-2026-07-03-6aa5402b",
+      "eventId": "final-kickoff-soccer-party-2027-07-03-3ae3c0e2",
       "summary": "Final Kickoff Soccer Party",
-      "date": "2026-07-03T10:00-05:00[America/Chicago]",
+      "date": "2027-07-03T10:00-05:00[America/Chicago]",
       "url": "https://www.cmhouston.org/events/final-kickoff-party"
     },
     {
@@ -5675,9 +5675,9 @@
     },
     {
       "source": "childrens-museum-houston",
-      "eventId": "zumbini-fridays-2026-07-03-b761b532",
+      "eventId": "zumbini-fridays-2027-07-03-2ba1338e",
       "summary": "Zumbini Fridays",
-      "date": "2026-07-03T10:00-05:00[America/Chicago]",
+      "date": "2027-07-03T10:00-05:00[America/Chicago]",
       "url": "https://www.cmhouston.org/events/zumbini"
     },
     {
@@ -6563,6 +6563,13 @@
     },
     {
       "source": "house-of-blues-houston",
+      "eventId": "tm-G5dIZ_CkmVnN7",
+      "summary": "Club 90s Presents MJ Night - Ages 18+",
+      "date": "2026-09-11T20:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/club-90s-presents-mj-night-ages-houston-texas-09-11-2026/event/3A0064E1AED2A8C4"
+    },
+    {
+      "source": "house-of-blues-houston",
       "eventId": "tm-G5dIZ_d9GBCZL",
       "summary": "Qveen Herby - Isle of Qveen Tour",
       "date": "2026-07-16T19:00-05:00[America/Chicago]",
@@ -6672,6 +6679,13 @@
       "summary": "The Temper Trap - Sungazer Tour",
       "date": "2026-08-16T19:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/the-temper-trap-sungazer-tour-houston-texas-08-16-2026/event/3A0064C8BC3DB4AE"
+    },
+    {
+      "source": "house-of-blues-houston",
+      "eventId": "tm-G5dIZ_GxxSF0y",
+      "summary": "Pouya - The Forever Glades Tour",
+      "date": "2026-10-03T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/pouya-the-forever-glades-tour-houston-texas-10-03-2026/event/3A0064C8A2CC8939"
     },
     {
       "source": "house-of-blues-houston",
@@ -8901,6 +8915,20 @@
     },
     {
       "source": "punch-line-comedy-club",
+      "eventId": "tm-G5dIZbM9llCT-",
+      "summary": "Rick Glassman",
+      "date": "2026-10-03T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/rick-glassman-houston-texas-10-03-2026/event/3A006375EBACEFE1"
+    },
+    {
+      "source": "punch-line-comedy-club",
+      "eventId": "tm-G5dIZbM9llXTt",
+      "summary": "Rick Glassman",
+      "date": "2026-10-03T21:15-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/rick-glassman-houston-texas-10-03-2026/event/3A006375EBAFEFE9"
+    },
+    {
+      "source": "punch-line-comedy-club",
       "eventId": "tm-G5dIZbM9lnmTb",
       "summary": "Rick Glassman",
       "date": "2026-10-02T21:15-05:00[America/Chicago]",
@@ -10955,15 +10983,15 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
-      "eventId": "night-sky-viewing-2026-07-03",
-      "summary": "Night Sky Viewing",
-      "date": "2026-07-03T20:30-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
       "eventId": "night-sky-viewing-2026-07-14",
       "summary": "Night Sky Viewing",
       "date": "2026-07-14T20:30-05:00[America/Chicago]"
+    },
+    {
+      "source": "texas-parks-wildlife-houston",
+      "eventId": "night-sky-viewing-2027-07-03",
+      "summary": "Night Sky Viewing",
+      "date": "2027-07-03T20:30-05:00[America/Chicago]"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -10979,9 +11007,9 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
-      "eventId": "pelts-and-tracks-2026-07-03",
+      "eventId": "pelts-and-tracks-2027-07-03",
       "summary": "Pelts and Tracks",
-      "date": "2026-07-03T14:00-05:00[America/Chicago]"
+      "date": "2027-07-03T14:00-05:00[America/Chicago]"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -13913,6 +13941,13 @@
     },
     {
       "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_1pzYXeS",
+      "summary": "Ultra Sunn",
+      "date": "2026-10-03T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/ultra-sunn-houston-texas-10-03-2026/event/3A0064A5B8C3E0B3"
+    },
+    {
+      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_1Qmirft",
       "summary": "Forever Miles - Sorry, Sarah - Bipolar Joyride",
       "date": "2026-08-14T19:00-05:00[America/Chicago]",
@@ -14560,7 +14595,7 @@
     {
       "name": "house-of-blues-houston-house-of-blues-houston",
       "type": "Ripper",
-      "events": 43,
+      "events": 45,
       "expectEmpty": false,
       "source": "house-of-blues-houston"
     },
@@ -14686,7 +14721,7 @@
     {
       "name": "punch-line-comedy-club-punch-line-comedy-club",
       "type": "Ripper",
-      "events": 85,
+      "events": 87,
       "expectEmpty": false,
       "source": "punch-line-comedy-club"
     },
@@ -14784,7 +14819,7 @@
     {
       "name": "white-oak-music-hall-white-oak-music-hall",
       "type": "Ripper",
-      "events": 80,
+      "events": 81,
       "expectEmpty": false,
       "source": "white-oak-music-hall"
     },
@@ -14819,7 +14854,7 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 773,
+      "events": 763,
       "expectEmpty": false,
       "source": "tag-music"
     },
@@ -14833,7 +14868,7 @@
     {
       "name": "tag-downtown",
       "type": "Aggregate",
-      "events": 271,
+      "events": 275,
       "expectEmpty": false,
       "source": "tag-downtown"
     },
@@ -14854,7 +14889,7 @@
     {
       "name": "tag-montrose",
       "type": "Aggregate",
-      "events": 345,
+      "events": 332,
       "expectEmpty": false,
       "source": "tag-montrose"
     },
@@ -15043,7 +15078,7 @@
     {
       "name": "tag-comedy",
       "type": "Aggregate",
-      "events": 244,
+      "events": 246,
       "expectEmpty": false,
       "source": "tag-comedy"
     },
@@ -15106,7 +15141,7 @@
     {
       "name": "tag-near-northside",
       "type": "Aggregate",
-      "events": 509,
+      "events": 510,
       "expectEmpty": false,
       "source": "tag-near-northside"
     },
@@ -15162,7 +15197,7 @@
     {
       "name": "tag-entertainment",
       "type": "Aggregate",
-      "events": 96,
+      "events": 98,
       "expectEmpty": false,
       "source": "tag-entertainment"
     },
@@ -15274,7 +15309,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 2722,
+      "events": 2714,
       "expectEmpty": false,
       "source": "tag-all"
     },
