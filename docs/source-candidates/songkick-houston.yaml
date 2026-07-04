@@ -1,0 +1,15 @@
+name: Songkick Houston
+status: added
+platform: Custom HTML Ripper
+url: https://www.songkick.com/metro-areas/15073-us-houston
+tags:
+  - Music
+  - Concert
+  - Live Events
+firstSeen: 2026-07-04
+lastChecked: 2026-07-04
+pr: null
+impl:
+  type: custom
+  observedEventCount: 50
+  notes: "Custom HTML ripper parsing Songkick's semantic markup and JSON-LD metadata. 50 concert events scraped successfully."
