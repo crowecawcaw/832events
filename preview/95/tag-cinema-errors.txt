@@ -1,0 +1,12 @@
+[
+  {
+    "type": "ParseError",
+    "reason": "No event elements found in HTML",
+    "context": "Check if Eventive widget rendered correctly"
+  },
+  {
+    "type": "ParseError",
+    "reason": "Could not extract event title",
+    "context": "<a class=\"nav__a nav__a--events\" href='/movie-theater/riveroaks/coming-soon'>\n                        <span class=\"nav__drawerText\">\n\n\nComing Soon</span>\n                    </a>"
+  }
+]
