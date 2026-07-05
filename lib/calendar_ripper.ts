@@ -125,6 +125,21 @@ export function hasFutureEventsInICS(icsContent: string, today?: Date): boolean 
   return false;
 }
 
+/**
+ * Filter calendar events to only include those within -3 days to +3 months from now.
+ * Modifies the calendar in place by replacing its events array.
+ */
+export function filterEventsByDateRange(calendar: RipperCalendar): void {
+  const now = new Date();
+  const threeDaysAgoTime = now.getTime() - (3 * 24 * 60 * 60 * 1000);
+  const threeMonthsLaterTime = new Date(now.getFullYear(), now.getMonth() + 3, now.getDate()).getTime();
+
+  calendar.events = calendar.events.filter(event => {
+    const eventTime = event.date.toEpochSecond() * 1000; // Convert seconds to milliseconds
+    return eventTime >= threeDaysAgoTime && eventTime <= threeMonthsLaterTime;
+  });
+}
+
 interface CalendarOutput {
   friendlyName: string;
   icsPath: string;
@@ -524,9 +539,14 @@ export const main = async () => {
   const ripperTags = new Map<string, string[]>();
   const calendarTags = new Map<string, string[]>();
 
+  // Filter recurring calendars before adding to allCalendars so aggregates get filtered events
+  for (const calendar of recurringCalendars) {
+    filterEventsByDateRange(calendar);
+  }
+
   // Add recurring calendars first
   allCalendars.push(...recurringCalendars);
-  
+
   // Decode HTML entities in event titles (e.g. "Greg Hoy &amp; the Boys" →
   // "Greg Hoy & the Boys") before any serialization, so ICS, events-index.json,
   // RSS, and the website all get clean titles. Idempotent — see text-normalize.ts.
@@ -696,6 +716,10 @@ export const main = async () => {
 
   // --- Process ripper results (preserving original order for ToC) ---
   for (const { config, calendars } of ripperResults) {
+    // Filter events before adding to allCalendars so aggregates get filtered events
+    for (const calendar of calendars) {
+      filterEventsByDateRange(calendar);
+    }
     allCalendars.push(...calendars);
 
     const outputs: CalendarOutput[] = [];
