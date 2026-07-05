@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-04T10:53:39.969Z",
+  "lastUpdated": "2026-07-05T06:04:11.995Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -413,6 +413,23 @@
           "tags": [
             "Music",
             "Upper Kirby"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "murder-by-the-book",
+      "description": "Murder By The Book",
+      "friendlyLink": "https://www.murderbooks.com/events",
+      "calendars": [
+        {
+          "name": "murder-by-the-book",
+          "friendlyName": "Murder By The Book",
+          "icsUrl": "murder-by-the-book-murder-by-the-book.ics",
+          "rssUrl": "murder-by-the-book-murder-by-the-book.rss",
+          "tags": [
+            "Books",
+            "West University"
           ]
         }
       ]
@@ -961,6 +978,7 @@
     "Upper Kirby",
     "Uptown",
     "Wedgewood",
+    "West University",
     "Workshops"
   ]
 }
