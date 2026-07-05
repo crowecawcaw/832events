@@ -66,14 +66,14 @@ function extractImageUrl(vevent: any): string | undefined {
 
 /**
  * Parses external calendar ICS data into events, expanding RRULE recurrences.
- * Filters events to only include those within the specified time range.
+ * Filters events to only include those within the specified time range (-3 days to +3 months).
  */
 export function parseExternalCalendarEvents(icsData: string): RipperCalendarEvent[] {
   const events: RipperCalendarEvent[] = [];
 
   const now = new Date();
-  const oneWeekAgo = new Date(now);
-  oneWeekAgo.setDate(now.getDate() - 7);
+  const threeDaysAgo = new Date(now);
+  threeDaysAgo.setDate(now.getDate() - 3);
   const threeMonthsLater = new Date(now);
   threeMonthsLater.setMonth(now.getMonth() + 3);
 
@@ -125,7 +125,7 @@ export function parseExternalCalendarEvents(icsData: string): RipperCalendarEven
           while (instanceCount < 10000 && (next = expand.next())) {
             const startDate = next.toJSDate();
             if (startDate > threeMonthsLater) break;
-            if (startDate >= oneWeekAgo) {
+            if (startDate >= threeDaysAgo) {
               const zonedDateTime = ZonedDateTime.parse(
                 startDate.toISOString().replace('Z', '+00:00[UTC]')
               );
@@ -149,7 +149,7 @@ export function parseExternalCalendarEvents(icsData: string): RipperCalendarEven
       } else {
         const startDate = event.startDate?.toJSDate();
         if (!startDate) continue;
-        if (startDate < oneWeekAgo || startDate > threeMonthsLater) continue;
+        if (startDate < threeDaysAgo || startDate > threeMonthsLater) continue;
 
         let durationHours = 1;
         if (event.endDate && event.startDate) {
