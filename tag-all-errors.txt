@@ -16,6 +16,11 @@
   },
   {
     "type": "ParseError",
+    "reason": "Ripper crashed: Error: Ensemble Theatre Houston fetch failed: HTTP 404 ",
+    "context": ""
+  },
+  {
+    "type": "ParseError",
     "reason": "Failed to fetch AXS events for venue 126116: Error: AXS fetch error: HTTP 403 for https://www.axs.com/venues/126116/the-heights-theater-houston-tickets",
     "context": "venueSlug: the-heights-theater-houston-tickets"
   },
@@ -26,7 +31,7 @@
   },
   {
     "type": "ParseError",
-    "reason": "Failed to fetch Eventbrite events for organizer 19231282193: Error: Browserbase fetch failed: HTTP 429 — {\"statusCode\":429,\"error\":\"Too Many Requests\",\"message\":\"You've exceeded your max concurrent fetch requests limit (limit 5, currently 5). Please contact support to increase your limit.\"}",
+    "reason": "Failed to fetch Eventbrite events for organizer 19231282193: Error: Eventbrite API error: 401 ",
     "context": "pride-houston"
   },
   {
