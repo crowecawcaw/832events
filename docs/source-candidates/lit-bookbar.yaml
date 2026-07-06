@@ -1,11 +1,11 @@
 name: LIT Bookbar
-status: candidate
-platform: Unknown (Books + Music venue)
+status: blocked
+platform: Unknown (Obolus PoW bot detection)
 url: https://litbookbar.com/
 tags:
   - Books
   - Music
   - Community
 firstSeen: 2026-06-28
-lastChecked: 2026-06-28
-notes: Houston books and live music venue. Platform type unclear; may have Eventbrite integration, custom calendar, or no public feed.
+lastChecked: 2026-07-06
+notes: Website blocks automated access using Obolus proof-of-work challenge. No public ICS feed or Eventbrite calendar endpoint (organizer 77055834113 has no public feed). Venue coordinates and neighborhood unknown. Cannot determine platform or event availability without bypassing bot detection.

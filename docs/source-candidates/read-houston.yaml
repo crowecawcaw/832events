@@ -1,11 +1,15 @@
 name: Read Houston
-status: candidate
-platform: Literary Aggregator / Custom HTML
-url: https://www.readhouston.com/
+status: added
+platform: Squarespace (proxy required)
+url: https://www.readhouston.com/events
 tags:
   - Books
   - Literary
   - Community
 firstSeen: 2026-06-28
-lastChecked: 2026-06-28
-notes: Houston literary events aggregator; book signings, author readings, literary festivals. Unclear platform; may be Eventbrite-linked or custom calendar.
+lastChecked: 2026-07-06
+impl:
+  type: squarespace
+  proxyRequired: true
+  observedEventCount: 0
+  notes: "Squarespace site with JavaScript-rendered events; requires proxy: true for Browserbase access in CI. Community calendar covering Houston area (geo: null)."
