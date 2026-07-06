@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-07-06T04:20:32.952Z",
-  "totalErrors": 12,
+  "buildTime": "2026-07-06T12:31:02.391Z",
+  "totalErrors": 13,
   "configErrors": [],
   "sources": [
     {
@@ -118,8 +118,8 @@
       "errors": [
         {
           "type": "ParseError",
-          "reason": "Could not extract event title",
-          "context": "<a class=\"nav__a nav__a--events\" href='/movie-theater/riveroaks/coming-soon'>\n                        <span class=\"nav__drawerText\">\n\n\nComing Soon</span>\n                    </a>"
+          "reason": "Ripper crashed: Error: River Oaks Theatre fetch failed: HTTP 403 ",
+          "context": ""
         }
       ]
     },
@@ -174,6 +174,21 @@
           "context": "venueSlug: stereo-live-houston-houston-tickets"
         }
       ]
+    },
+    {
+      "source": "toyota-center",
+      "calendar": "toyota-center",
+      "type": "Ripper",
+      "errorCount": 1,
+      "parseErrorCount": 1,
+      "uncertaintyCount": 0,
+      "errors": [
+        {
+          "type": "ParseError",
+          "reason": "Failed to fetch AXS events for venue 101329: Error: AXS fetch error: HTTP 403 for https://www.axs.com/venues/101329/toyota-center-houston-tickets",
+          "context": "venueSlug: toyota-center-houston-tickets"
+        }
+      ]
     }
   ],
   "externalCalendarFailures": [
@@ -198,9 +213,9 @@
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1738,
-    "eventsWithGeo": 1453,
-    "eventsWithoutGeo": 285,
+    "totalEvents": 1736,
+    "eventsWithGeo": 1452,
+    "eventsWithoutGeo": 284,
     "geocodeErrors": 0
   },
   "uncertainEvents": [],
@@ -221,10 +236,12 @@
     "nrg-arena-nrg-arena",
     "nrg-stadium-nrg-stadium",
     "pride-houston-pride-houston",
+    "read-houston-read-houston",
     "river-oaks-theatre-river-oaks-theatre",
     "saint-arnold-brewing-company-saint-arnold-brewing-company",
     "scout-bar-scout-bar",
     "stereo-live-houston-stereo-live-houston",
+    "toyota-center-toyota-center",
     "tag-folk",
     "tag-nonprofit",
     "tag-film",
@@ -232,6 +249,7 @@
     "tag-events",
     "tag-concerts",
     "tag-fifa",
+    "tag-literary",
     "tag-river-oaks",
     "tag-garden-oaks",
     "external-houston-cinema-arts-society",
@@ -687,6 +705,13 @@
       "lng": -95.349
     },
     {
+      "source": "ripper",
+      "name": "toyota-center",
+      "label": "Toyota Center, 1510 Polk St, Houston, TX 77002",
+      "lat": 29.7589,
+      "lng": -95.3677
+    },
+    {
       "source": "external",
       "name": "tuts",
       "label": "Theatre Under The Stars at Hobby Center, 800 Bagby St, Houston, TX 77002",
@@ -723,8 +748,8 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1024,
-    "totalEvents": 1738,
+    "eventsWithImage": 1022,
+    "totalEvents": 1736,
     "venuesWithImage": 0,
     "totalVenues": 51,
     "unresolvable": 0
@@ -3977,9 +4002,9 @@
     ]
   },
   "costStats": {
-    "eventsWithCost": 359,
-    "freeEvents": 236,
-    "totalEvents": 1738,
+    "eventsWithCost": 358,
+    "freeEvents": 235,
+    "totalEvents": 1736,
     "unresolvable": 0
   },
   "costGaps": [
@@ -9895,7 +9920,7 @@
     {
       "name": "encore-houston-encore-houston",
       "type": "Ripper",
-      "events": 27,
+      "events": 26,
       "expectEmpty": false,
       "source": "encore-houston"
     },
@@ -10068,6 +10093,13 @@
       "source": "punch-line-comedy-club"
     },
     {
+      "name": "read-houston-read-houston",
+      "type": "Ripper",
+      "events": 0,
+      "expectEmpty": false,
+      "source": "read-houston"
+    },
+    {
       "name": "rice-public-events-rice-public-events",
       "type": "Ripper",
       "events": 75,
@@ -10166,6 +10198,13 @@
       "source": "the-secret-group"
     },
     {
+      "name": "toyota-center-toyota-center",
+      "type": "Ripper",
+      "events": 0,
+      "expectEmpty": false,
+      "source": "toyota-center"
+    },
+    {
       "name": "white-oak-music-hall-white-oak-music-hall",
       "type": "Ripper",
       "events": 80,
@@ -10203,14 +10242,14 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 621,
+      "events": 620,
       "expectEmpty": false,
       "source": "tag-music"
     },
     {
       "name": "tag-nightlife",
       "type": "Aggregate",
-      "events": 95,
+      "events": 94,
       "expectEmpty": false,
       "source": "tag-nightlife"
     },
@@ -10231,7 +10270,7 @@
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 376,
+      "events": 375,
       "expectEmpty": false,
       "source": "tag-community"
     },
@@ -10287,14 +10326,14 @@
     {
       "name": "tag-midtown",
       "type": "Aggregate",
-      "events": 65,
+      "events": 64,
       "expectEmpty": false,
       "source": "tag-midtown"
     },
     {
       "name": "tag-art",
       "type": "Aggregate",
-      "events": 297,
+      "events": 296,
       "expectEmpty": false,
       "source": "tag-art"
     },
@@ -10551,6 +10590,13 @@
       "source": "tag-entertainment"
     },
     {
+      "name": "tag-literary",
+      "type": "Aggregate",
+      "events": 0,
+      "expectEmpty": false,
+      "source": "tag-literary"
+    },
+    {
       "name": "tag-river-oaks",
       "type": "Aggregate",
       "events": 0,
@@ -10665,7 +10711,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1778,
+      "events": 1776,
       "expectEmpty": false,
       "source": "tag-all"
     },
