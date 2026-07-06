@@ -1,11 +1,11 @@
 name: Visit Houston Texas Events
-status: candidate
-platform: Custom web calendar (VisitHouston tourism site)
+status: notviable
+platform: SimpleView CMS (no public feeds)
 url: https://www.visithoustontexas.com/events/
 tags:
   - Events
   - Tourism
   - Festivals
 firstSeen: 2026-07-04
-lastChecked: 2026-07-04
-notes: "Official Houston tourism board's centralized events calendar. Covers major festivals, concerts, theater, food events. Searchable by category/date/location. Feed format needs verification."
+lastChecked: 2026-07-06
+notes: "SimpleView CMS platform does not expose public event feeds (no ICS, JSON API, or RSS). Events are JavaScript-rendered; static content only. Would require browser automation/Browserbase proxy to scrape dynamically-loaded content. SimpleView does not provide documented API access for third-party integrations."

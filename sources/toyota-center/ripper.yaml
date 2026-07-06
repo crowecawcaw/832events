@@ -1,0 +1,20 @@
+name: toyota-center
+type: axs
+proxy: true
+description: "Toyota Center"
+url: https://www.toyotacenter.com/events
+friendlyLink: https://www.toyotacenter.com/events
+tags: [Music, Sports, Nightlife, Downtown]
+geo:
+  lat: 29.7589
+  lng: -95.3677
+  label: "Toyota Center, 1510 Polk St, Houston, TX 77002"
+calendars:
+  - name: toyota-center
+    friendlyname: "Toyota Center"
+    timezone: America/Chicago
+    config:
+      venueId: 101329
+      venueSlug: "toyota-center-houston-tickets"
+      venueName: "Toyota Center"
+      venueAddress: "1510 Polk St, Houston, TX 77002"

@@ -1,6 +1,6 @@
 name: Toyota Center
-status: candidate
-platform: AXS
+status: added
+platform: AXS (proxy required)
 url: https://www.toyotacenter.com/events
 tags:
   - Music
@@ -8,5 +8,11 @@ tags:
   - Nightlife
   - Downtown
 firstSeen: 2026-07-03
-lastChecked: 2026-07-03
-notes: AXS venue; Houston Rockets & Astros home. Need to find AXS venueId and venueSlug for implementation.
+lastChecked: 2026-07-06
+impl:
+  type: axs
+  venueId: 101329
+  venueSlug: "toyota-center-houston-tickets"
+  proxyRequired: true
+  observedEventCount: 0
+  notes: "AXS venue for Houston Rockets and Astros. Returns 403 in CI due to IP blocking; requires proxy: true for Browserbase access."
