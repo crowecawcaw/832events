@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-07-05T14:18:53.221Z",
-  "totalErrors": 14,
+  "buildTime": "2026-07-06T04:20:32.952Z",
+  "totalErrors": 12,
   "configErrors": [],
   "sources": [
     {
@@ -196,25 +196,12 @@
       "error": "Error: HTTP 403: "
     }
   ],
-  "geocodeErrors": [
-    {
-      "type": "GeocodeError",
-      "location": "St. Joseph's Chapel",
-      "source": "songkick-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Milwaukee Improv (Main Room), 20110 Lower Union Street, Brookfield, WI, 53045, USA",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    }
-  ],
+  "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1752,
-    "eventsWithGeo": 1461,
-    "eventsWithoutGeo": 291,
-    "geocodeErrors": 2
+    "totalEvents": 1738,
+    "eventsWithGeo": 1453,
+    "eventsWithoutGeo": 285,
+    "geocodeErrors": 0
   },
   "uncertainEvents": [],
   "uncertaintyStats": {
@@ -736,8 +723,8 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1027,
-    "totalEvents": 1752,
+    "eventsWithImage": 1024,
+    "totalEvents": 1738,
     "venuesWithImage": 0,
     "totalVenues": 51,
     "unresolvable": 0
@@ -1865,20 +1852,6 @@
         "eventId": "little-listeners-children-s-storytime-2026-07-05-5542008b",
         "summary": "Little Listeners Children's Storytime",
         "date": "2026-07-05T12:30-05:00[America/Chicago]",
-        "url": "https://www.goodonpaperbooks.com/events"
-      },
-      {
-        "source": "good-on-paper-bookshop",
-        "eventId": "novel-romantics-book-club-2026-07-02-74a142ba",
-        "summary": "Novel Romantics Book Club",
-        "date": "2026-07-02T19:30-05:00[America/Chicago]",
-        "url": "https://www.goodonpaperbooks.com/events"
-      },
-      {
-        "source": "good-on-paper-bookshop",
-        "eventId": "offsite-event-tabling-for-kevin-james-thornton-s-comedy-show-2026-07-02-cb382ce7",
-        "summary": "OFFSITE EVENT: Tabling for Kevin James Thornton's Comedy Show!",
-        "date": "2026-07-02T19:30-05:00[America/Chicago]",
         "url": "https://www.goodonpaperbooks.com/events"
       },
       {
@@ -3043,12 +3016,6 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
-        "eventId": "all-about-nature-2026-07-05",
-        "summary": "All About Nature",
-        "date": "2026-07-05T13:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
         "eventId": "all-about-nature-2026-07-12",
         "summary": "All About Nature",
         "date": "2026-07-12T13:00-05:00[America/Chicago]"
@@ -3082,12 +3049,6 @@
         "eventId": "all-about-snakes-2026-07-25",
         "summary": "All About Snakes",
         "date": "2026-07-25T15:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
-        "eventId": "all-about-us-a-guided-hike-2026-07-05",
-        "summary": "All About Us: a Guided Hike",
-        "date": "2026-07-05T10:00-05:00[America/Chicago]"
       },
       {
         "source": "texas-parks-wildlife-houston",
@@ -3151,12 +3112,6 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
-        "eventId": "alligator-talk-2026-07-05",
-        "summary": "Alligator Talk",
-        "date": "2026-07-05T15:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
         "eventId": "alligator-talk-2026-07-12",
         "summary": "Alligator Talk",
         "date": "2026-07-12T15:00-05:00[America/Chicago]"
@@ -3172,12 +3127,6 @@
         "eventId": "alligator-talk-2026-07-26",
         "summary": "Alligator Talk",
         "date": "2026-07-26T15:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
-        "eventId": "alligators-from-egg-to-apex-2026-07-05",
-        "summary": "Alligators: From Egg to Apex",
-        "date": "2026-07-05T14:00-05:00[America/Chicago]"
       },
       {
         "source": "texas-parks-wildlife-houston",
@@ -3454,12 +3403,6 @@
         "eventId": "first-saturday-hike-2026-10-03",
         "summary": "First Saturday Hike",
         "date": "2026-10-03T10:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
-        "eventId": "fishing-with-a-ranger-2026-07-05",
-        "summary": "Fishing with a Ranger",
-        "date": "2026-07-05T09:00-05:00[America/Chicago]"
       },
       {
         "source": "texas-parks-wildlife-houston",
@@ -3853,12 +3796,6 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
-        "eventId": "now-you-see-me-2026-07-05",
-        "summary": "Now You See Me",
-        "date": "2026-07-05T11:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
         "eventId": "paddling-for-beginners-2026-07-10",
         "summary": "Paddling for Beginners",
         "date": "2026-07-10T09:00-05:00[America/Chicago]"
@@ -4027,12 +3964,6 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
-        "eventId": "watercolors-and-willets-2026-07-05",
-        "summary": "Watercolors and Willets",
-        "date": "2026-07-05T14:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
         "eventId": "wildcraft-alligators-2026-07-18",
         "summary": "Wildcraft: Alligators!",
         "date": "2026-07-18T11:00-05:00[America/Chicago]"
@@ -4048,7 +3979,7 @@
   "costStats": {
     "eventsWithCost": 359,
     "freeEvents": 236,
-    "totalEvents": 1752,
+    "totalEvents": 1738,
     "unresolvable": 0
   },
   "costGaps": [
@@ -5027,20 +4958,6 @@
     },
     {
       "source": "good-on-paper-bookshop",
-      "eventId": "novel-romantics-book-club-2026-07-02-74a142ba",
-      "summary": "Novel Romantics Book Club",
-      "date": "2026-07-02T19:30-05:00[America/Chicago]",
-      "url": "https://www.goodonpaperbooks.com/events"
-    },
-    {
-      "source": "good-on-paper-bookshop",
-      "eventId": "offsite-event-tabling-for-kevin-james-thornton-s-comedy-show-2026-07-02-cb382ce7",
-      "summary": "OFFSITE EVENT: Tabling for Kevin James Thornton's Comedy Show!",
-      "date": "2026-07-02T19:30-05:00[America/Chicago]",
-      "url": "https://www.goodonpaperbooks.com/events"
-    },
-    {
-      "source": "good-on-paper-bookshop",
       "eventId": "one-star-read-powerpoint-night-2026-07-30-694addee",
       "summary": "One Star Read PowerPoint Night",
       "date": "2026-07-30T19:30-05:00[America/Chicago]",
@@ -5493,13 +5410,6 @@
       "summary": "Annual Beneeezy Purple Monkey Fun Run",
       "date": "2026-09-05T07:00-05:00[America/Chicago]",
       "url": "https://htxoutdoors.com/events/annual-beneeezy-purple-monkey-fun-run/"
-    },
-    {
-      "source": "htxoutdoors",
-      "eventId": "axe-and-knife-throwing-2026-07-05",
-      "summary": "Axe and Knife Throwing",
-      "date": "2026-07-05T15:20-05:00[America/Chicago]",
-      "url": "https://htxoutdoors.com/events/knife-throwing-3/"
     },
     {
       "source": "htxoutdoors",
@@ -8196,12 +8106,6 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
-      "eventId": "all-about-nature-2026-07-05",
-      "summary": "All About Nature",
-      "date": "2026-07-05T13:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
       "eventId": "all-about-nature-2026-07-12",
       "summary": "All About Nature",
       "date": "2026-07-12T13:00-05:00[America/Chicago]"
@@ -8235,12 +8139,6 @@
       "eventId": "all-about-snakes-2026-07-25",
       "summary": "All About Snakes",
       "date": "2026-07-25T15:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
-      "eventId": "all-about-us-a-guided-hike-2026-07-05",
-      "summary": "All About Us: a Guided Hike",
-      "date": "2026-07-05T10:00-05:00[America/Chicago]"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -8304,12 +8202,6 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
-      "eventId": "alligator-talk-2026-07-05",
-      "summary": "Alligator Talk",
-      "date": "2026-07-05T15:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
       "eventId": "alligator-talk-2026-07-12",
       "summary": "Alligator Talk",
       "date": "2026-07-12T15:00-05:00[America/Chicago]"
@@ -8325,12 +8217,6 @@
       "eventId": "alligator-talk-2026-07-26",
       "summary": "Alligator Talk",
       "date": "2026-07-26T15:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
-      "eventId": "alligators-from-egg-to-apex-2026-07-05",
-      "summary": "Alligators: From Egg to Apex",
-      "date": "2026-07-05T14:00-05:00[America/Chicago]"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -8607,12 +8493,6 @@
       "eventId": "first-saturday-hike-2026-10-03",
       "summary": "First Saturday Hike",
       "date": "2026-10-03T10:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
-      "eventId": "fishing-with-a-ranger-2026-07-05",
-      "summary": "Fishing with a Ranger",
-      "date": "2026-07-05T09:00-05:00[America/Chicago]"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -9006,12 +8886,6 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
-      "eventId": "now-you-see-me-2026-07-05",
-      "summary": "Now You See Me",
-      "date": "2026-07-05T11:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
       "eventId": "paddling-for-beginners-2026-07-10",
       "summary": "Paddling for Beginners",
       "date": "2026-07-10T09:00-05:00[America/Chicago]"
@@ -9180,12 +9054,6 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
-      "eventId": "watercolors-and-willets-2026-07-05",
-      "summary": "Watercolors and Willets",
-      "date": "2026-07-05T14:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
       "eventId": "wildcraft-alligators-2026-07-18",
       "summary": "Wildcraft: Alligators!",
       "date": "2026-07-18T11:00-05:00[America/Chicago]"
@@ -9195,13 +9063,6 @@
       "eventId": "wildcraft-owls-2026-07-25",
       "summary": "Wildcraft: Owls!",
       "date": "2026-07-25T11:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "the-deluxe-theater",
-      "eventId": "black-is-eternal-2026-07-02",
-      "summary": "Black Is Eternal",
-      "date": "2026-07-02T19:00-05:00[America/Chicago]",
-      "url": "https://thedeluxetheater.com/events/black-is-eternal/"
     },
     {
       "source": "the-deluxe-theater",
@@ -9237,13 +9098,6 @@
       "summary": "The Sermon: Houston Movie Premiere",
       "date": "2026-07-12T18:30-05:00[America/Chicago]",
       "url": "https://thedeluxetheater.com/events/the-sermon-houston-movie-premiere/"
-    },
-    {
-      "source": "the-deluxe-theater",
-      "eventId": "yoga-in-the-5th-2026-07-02",
-      "summary": "Yoga In The 5th",
-      "date": "2026-07-02T18:30-05:00[America/Chicago]",
-      "url": "https://thedeluxetheater.com/events/yoga-in-the-5th/"
     },
     {
       "source": "the-mood-room",
@@ -10055,7 +9909,7 @@
     {
       "name": "good-on-paper-bookshop-good-on-paper-bookshop",
       "type": "Ripper",
-      "events": 14,
+      "events": 12,
       "expectEmpty": false,
       "source": "good-on-paper-bookshop"
     },
@@ -10118,7 +9972,7 @@
     {
       "name": "htxoutdoors-htxoutdoors",
       "type": "Ripper",
-      "events": 39,
+      "events": 38,
       "expectEmpty": false,
       "source": "htxoutdoors"
     },
@@ -10286,14 +10140,14 @@
     {
       "name": "texas-parks-wildlife-houston-texas-parks-wildlife-houston",
       "type": "Ripper",
-      "events": 169,
+      "events": 162,
       "expectEmpty": false,
       "source": "texas-parks-wildlife-houston"
     },
     {
       "name": "the-deluxe-theater-the-deluxe-theater",
       "type": "Ripper",
-      "events": 7,
+      "events": 5,
       "expectEmpty": false,
       "source": "the-deluxe-theater"
     },
@@ -10328,7 +10182,7 @@
     {
       "name": "tag-the-heights",
       "type": "Aggregate",
-      "events": 83,
+      "events": 81,
       "expectEmpty": false,
       "source": "tag-the-heights"
     },
@@ -10349,7 +10203,7 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 623,
+      "events": 621,
       "expectEmpty": false,
       "source": "tag-music"
     },
@@ -10377,21 +10231,21 @@
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 379,
+      "events": 376,
       "expectEmpty": false,
       "source": "tag-community"
     },
     {
       "name": "tag-montrose",
       "type": "Aggregate",
-      "events": 260,
+      "events": 258,
       "expectEmpty": false,
       "source": "tag-montrose"
     },
     {
       "name": "tag-theater",
       "type": "Aggregate",
-      "events": 24,
+      "events": 22,
       "expectEmpty": false,
       "source": "tag-theater"
     },
@@ -10468,7 +10322,7 @@
     {
       "name": "tag-education",
       "type": "Aggregate",
-      "events": 320,
+      "events": 313,
       "expectEmpty": false,
       "source": "tag-education"
     },
@@ -10545,7 +10399,7 @@
     {
       "name": "tag-books",
       "type": "Aggregate",
-      "events": 30,
+      "events": 28,
       "expectEmpty": false,
       "source": "tag-books"
     },
@@ -10594,28 +10448,28 @@
     {
       "name": "tag-parks",
       "type": "Aggregate",
-      "events": 237,
+      "events": 230,
       "expectEmpty": false,
       "source": "tag-parks"
     },
     {
       "name": "tag-outdoor-recreation",
       "type": "Aggregate",
-      "events": 237,
+      "events": 229,
       "expectEmpty": false,
       "source": "tag-outdoor-recreation"
     },
     {
       "name": "tag-hiking",
       "type": "Aggregate",
-      "events": 39,
+      "events": 38,
       "expectEmpty": false,
       "source": "tag-hiking"
     },
     {
       "name": "tag-sports",
       "type": "Aggregate",
-      "events": 39,
+      "events": 38,
       "expectEmpty": false,
       "source": "tag-sports"
     },
@@ -10636,7 +10490,7 @@
     {
       "name": "tag-near-northside",
       "type": "Aggregate",
-      "events": 168,
+      "events": 166,
       "expectEmpty": false,
       "source": "tag-near-northside"
     },
@@ -10734,14 +10588,14 @@
     {
       "name": "tag-nature",
       "type": "Aggregate",
-      "events": 169,
+      "events": 162,
       "expectEmpty": false,
       "source": "tag-nature"
     },
     {
       "name": "tag-performance",
       "type": "Aggregate",
-      "events": 7,
+      "events": 5,
       "expectEmpty": false,
       "source": "tag-performance"
     },
@@ -10811,7 +10665,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1792,
+      "events": 1778,
       "expectEmpty": false,
       "source": "tag-all"
     },
