@@ -19,21 +19,6 @@ DTSTART:20250101T000000
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-DTSTART;TZID=UTC:20260705T110000
-DTEND;TZID=UTC:20260705T220000
-DTSTAMP:20250627T211952Z
-CREATED:20250623T211737Z
-LAST-MODIFIED:20250627T211952Z
-UID:10005252-1783249200-1783288800@badastronautbeer.com
-SUMMARY:HAPPY HOUR: Sunday Funday!
-DESCRIPTION:HAPPY HOUR DAILY SPECIAL \nSUNDAY FUNDAY \n$2 OFF ALL BEVERAGES (Sodas Not Included) All Day!
-URL:https://badastronautbeer.com/event/happy-hour-sunday-funday/2026-07-05/
-LOCATION:Bad Astronaut Brewry\, 1519 Fulton Street\, Houston\, TX\, 77009\, United States
-CATEGORIES:Happy Hour
-ATTACH;FMTTYPE=image/jpeg:https://badastronautbeer.com/wp-content/uploads/2025/06/Copy-of-happy-hour-Instagram-Post-45-4.jpg
-ORGANIZER;CN="Bad Astronaut Brewery":MAILTO:info@badastronautbeer.com
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;TZID=UTC:20260708T150000
 DTEND;TZID=UTC:20260708T190000
 DTSTAMP:20250623T211246Z
@@ -458,6 +443,21 @@ URL:https://badastronautbeer.com/event/happy-hour-sunday-funday/2026-08-02/
 LOCATION:Bad Astronaut Brewry\, 1519 Fulton Street\, Houston\, TX\, 77009\, United States
 CATEGORIES:Happy Hour
 ATTACH;FMTTYPE=image/jpeg:https://badastronautbeer.com/wp-content/uploads/2025/06/Copy-of-happy-hour-Instagram-Post-45-4.jpg
+ORGANIZER;CN="Bad Astronaut Brewery":MAILTO:info@badastronautbeer.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260805T150000
+DTEND;TZID=UTC:20260805T190000
+DTSTAMP:20250623T211246Z
+CREATED:20250623T211246Z
+LAST-MODIFIED:20250623T211246Z
+UID:10004735-1785942000-1785956400@badastronautbeer.com
+SUMMARY:HAPPY HOUR: We're Half Way There Wednesdays!
+DESCRIPTION:HAPPY HOUR DAILY SPECIAL \nWE’RE HALF WAY THERE WEDNESDAYS! \n$3 Off All Cocktails & Wine Until 7 PM
+URL:https://badastronautbeer.com/event/happy-hour-were-half-way-there-wednesdays/2026-08-05/
+LOCATION:Bad Astronaut Brewery\, 1519 Fulton Street\, Houston\, TX\, 77009\, United States
+CATEGORIES:Happy Hour
+ATTACH;FMTTYPE=image/jpeg:https://badastronautbeer.com/wp-content/uploads/2025/06/Copy-of-happy-hour-Instagram-Post-45-2.jpg
 ORGANIZER;CN="Bad Astronaut Brewery":MAILTO:info@badastronautbeer.com
 END:VEVENT
 END:VCALENDAR

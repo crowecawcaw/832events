@@ -16,6 +16,11 @@
   },
   {
     "type": "ParseError",
+    "reason": "Ripper crashed: Error: Downtown Houston Events fetch failed: HTTP 403 ",
+    "context": ""
+  },
+  {
+    "type": "ParseError",
     "reason": "Ripper crashed: Error: Ensemble Theatre Houston fetch failed: HTTP 404 ",
     "context": ""
   },
@@ -31,13 +36,18 @@
   },
   {
     "type": "ParseError",
+    "reason": "Missing date string for event",
+    "context": "Title: Community Heroes Day"
+  },
+  {
+    "type": "ParseError",
     "reason": "Failed to fetch Eventbrite events for organizer 19231282193: Error: Eventbrite API error: 401 ",
     "context": "pride-houston"
   },
   {
     "type": "ParseError",
-    "reason": "Ripper crashed: Error: River Oaks Theatre fetch failed: HTTP 403 ",
-    "context": ""
+    "reason": "Could not extract event title",
+    "context": "<a class=\"nav__a nav__a--events\" href='/movie-theater/riveroaks/coming-soon'>\n                        <span class=\"nav__drawerText\">\n\n\nComing Soon</span>\n                    </a>"
   },
   {
     "error": true,
@@ -50,6 +60,11 @@
     "type": "ParseError",
     "reason": "No dated events found in content",
     "context": "Title: 713 Day at Saint Arnold, Content preview: \nWhat it do, H-Town!\n\n\n\nOn 713 Day (that’s Monday, July 13), we’re celebrating the city that has supported us since day one with an afternoon and evening filled with all things Houston.\n\n\n\nWe’ll have "
+  },
+  {
+    "type": "ParseError",
+    "reason": "Ripper crashed: Error: Sawyer Yards fetch failed: HTTP 403 ",
+    "context": ""
   },
   {
     "type": "ParseError",
