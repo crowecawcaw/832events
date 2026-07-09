@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-07-08T05:09:31.632Z",
-  "totalErrors": 21,
+  "buildTime": "2026-07-09T04:58:43.896Z",
+  "totalErrors": 16,
   "configErrors": [],
   "sources": [
     {
@@ -124,36 +124,6 @@
       ]
     },
     {
-      "source": "murder-by-the-book",
-      "calendar": "murder-by-the-book",
-      "type": "Ripper",
-      "errorCount": 1,
-      "parseErrorCount": 1,
-      "uncertaintyCount": 0,
-      "errors": [
-        {
-          "type": "ParseError",
-          "reason": "Ripper crashed: Error: Murder By The Book fetch failed: HTTP 403 ",
-          "context": ""
-        }
-      ]
-    },
-    {
-      "source": "nrg-stadium",
-      "calendar": "nrg-stadium",
-      "type": "Ripper",
-      "errorCount": 1,
-      "parseErrorCount": 1,
-      "uncertaintyCount": 0,
-      "errors": [
-        {
-          "type": "ParseError",
-          "reason": "Ripper crashed: Error: Browserbase fetch failed: HTTP 429 — {\"statusCode\":429,\"error\":\"Too Many Requests\",\"message\":\"You've exceeded your max concurrent fetch requests limit (limit 5, currently 5). Please contact support to increase your limit.\"}",
-          "context": ""
-        }
-      ]
-    },
-    {
       "source": "pride-houston",
       "calendar": "pride-houston",
       "type": "Ripper",
@@ -163,7 +133,7 @@
       "errors": [
         {
           "type": "ParseError",
-          "reason": "Failed to fetch Eventbrite events for organizer 19231282193: Error: Browserbase fetch failed: HTTP 429 — {\"statusCode\":429,\"error\":\"Too Many Requests\",\"message\":\"You've exceeded your max concurrent fetch requests limit (limit 5, currently 5). Please contact support to increase your limit.\"}",
+          "reason": "Failed to fetch Eventbrite events for organizer 19231282193: Error: Eventbrite API error: 401 ",
           "context": "pride-houston"
         }
       ]
@@ -286,25 +256,12 @@
       "error": "Error: HTTP 403: "
     }
   ],
-  "geocodeErrors": [
-    {
-      "type": "GeocodeError",
-      "location": "Linda Ronstadt Music Hall, 260 South Church Avenue, Tucson, AZ, 85701, USA",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Denver Improv, 8246 Northfield Blvd, Denver, CO, 80238, United States",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    }
-  ],
+  "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1645,
-    "eventsWithGeo": 1390,
-    "eventsWithoutGeo": 255,
-    "geocodeErrors": 2
+    "totalEvents": 1653,
+    "eventsWithGeo": 1401,
+    "eventsWithoutGeo": 252,
+    "geocodeErrors": 0
   },
   "uncertainEvents": [],
   "uncertaintyStats": {
@@ -322,7 +279,6 @@
     "heights-theater-heights-theater",
     "houston-improv-houston-improv",
     "mossrose-bookshop-mossrose-bookshop",
-    "murder-by-the-book-murder-by-the-book",
     "nrg-arena-nrg-arena",
     "nrg-stadium-nrg-stadium",
     "pride-houston-pride-houston",
@@ -338,7 +294,6 @@
     "tag-film",
     "tag-culture",
     "tag-spring-branch",
-    "tag-west-university",
     "tag-events",
     "tag-concerts",
     "tag-fifa",
@@ -350,15 +305,7 @@
     "external-walking-stick-brewing"
   ],
   "expectedEmptyCalendars": [],
-  "proxyStaleServes": [
-    {
-      "source": "river-oaks-theatre",
-      "url": "https://www.theriveroakstheatre.com/",
-      "cachedAt": "2026-07-05T06:03:44.423Z",
-      "ageHours": 71,
-      "error": "Browserbase fetch failed: HTTP 429 — {\"statusCode\":429,\"error\":\"Too Many Requests\",\"message\":\"You've exceeded your max concurrent fetch requests limit (limit 5, currently 5). Please contact support to increase your limit.\"}"
-    }
-  ],
+  "proxyStaleServes": [],
   "newZeroEventSources": [],
   "newSourceParseErrors": [],
   "urlEntityErrors": [],
@@ -849,10 +796,10 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1036,
-    "totalEvents": 1645,
+    "eventsWithImage": 1050,
+    "totalEvents": 1653,
     "venuesWithImage": 0,
-    "totalVenues": 49,
+    "totalVenues": 50,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -1096,6 +1043,13 @@
         "label": "McGonigel's Mucky Duck, 2425 Norfolk St, Houston, TX 77098",
         "url": "https://mcgonigels.com/",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=McGonigel's%20Mucky%20Duck%2C%202425%20Norfolk%20St%2C%20Houston%2C%20TX%2077098"
+      },
+      {
+        "source": "ripper",
+        "name": "murder-by-the-book",
+        "label": "Murder By The Book, 2342 Bissonnet St, Houston, TX 77005",
+        "url": "https://www.murderbooks.com/events",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Murder%20By%20The%20Book%2C%202342%20Bissonnet%20St%2C%20Houston%2C%20TX%2077005"
       },
       {
         "source": "ripper",
@@ -1534,13 +1488,6 @@
       },
       {
         "source": "good-on-paper-bookshop",
-        "eventId": "little-listeners-children-s-storytime-2026-07-05-5542008b",
-        "summary": "Little Listeners Children's Storytime",
-        "date": "2026-07-05T12:30-05:00[America/Chicago]",
-        "url": "https://www.goodonpaperbooks.com/events"
-      },
-      {
-        "source": "good-on-paper-bookshop",
         "eventId": "one-star-read-powerpoint-night-2026-07-30-694addee",
         "summary": "One Star Read PowerPoint Night",
         "date": "2026-07-30T19:30-05:00[America/Chicago]",
@@ -1639,13 +1586,6 @@
       },
       {
         "source": "htxoutdoors",
-        "eventId": "evening-forest-hike-2026-07-08",
-        "summary": "Evening Forest Hike",
-        "date": "2026-07-08T19:00-05:00[America/Chicago]",
-        "url": "https://htxoutdoors.com/events/evening-forest-hike-7/"
-      },
-      {
-        "source": "htxoutdoors",
         "eventId": "evening-forest-hike-2026-07-22",
         "summary": "Evening Forest Hike",
         "date": "2026-07-22T19:00-05:00[America/Chicago]",
@@ -1734,13 +1674,6 @@
         "summary": "Mountain Biking",
         "date": "2026-08-01T10:00-05:00[America/Chicago]",
         "url": "https://htxoutdoors.com/events/mountain-biking-2/"
-      },
-      {
-        "source": "htxoutdoors",
-        "eventId": "new-member-party-social-2026-07-08",
-        "summary": "New Member Party & Social",
-        "date": "2026-07-08T18:00-05:00[America/Chicago]",
-        "url": "https://htxoutdoors.com/events/new-member-party-social-3/"
       },
       {
         "source": "htxoutdoors",
@@ -2084,6 +2017,13 @@
         "summary": "NIS Fall 2026 Poster Session",
         "date": "2026-09-22T17:00Z",
         "url": "https://events.rice.edu/live/events/431040-nis-fall-2026-poster-session"
+      },
+      {
+        "source": "rice-public-events",
+        "eventId": "20261008T200000Z-432300",
+        "summary": "RAMI National Academies Colloquium: Dr. Khalil Amine",
+        "date": "2026-10-08T20:00Z",
+        "url": "https://events.rice.edu/live/events/431240-rami-national-academies-colloquium-dr-khalil-amine"
       },
       {
         "source": "rooftop-cinema-club-houston",
@@ -2817,12 +2757,6 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
-        "eventId": "education-center-open-2026-07-08",
-        "summary": "Education Center Open",
-        "date": "2026-07-08T13:30-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
         "eventId": "education-center-open-2026-07-15",
         "summary": "Education Center Open",
         "date": "2026-07-15T13:30-05:00[America/Chicago]"
@@ -3429,6 +3363,12 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
+        "eventId": "trail-maintenance-mornings-2026-10-08",
+        "summary": "Trail Maintenance Mornings",
+        "date": "2026-10-08T08:30-05:00[America/Chicago]"
+      },
+      {
+        "source": "texas-parks-wildlife-houston",
         "eventId": "view-the-moon-2026-07-18",
         "summary": "View the Moon",
         "date": "2026-07-18T14:00-05:00[America/Chicago]"
@@ -3448,9 +3388,9 @@
     ]
   },
   "costStats": {
-    "eventsWithCost": 376,
-    "freeEvents": 249,
-    "totalEvents": 1645,
+    "eventsWithCost": 378,
+    "freeEvents": 251,
+    "totalEvents": 1653,
     "unresolvable": 0
   },
   "costGaps": [
@@ -4016,13 +3956,6 @@
     },
     {
       "source": "good-on-paper-bookshop",
-      "eventId": "little-listeners-children-s-storytime-2026-07-05-5542008b",
-      "summary": "Little Listeners Children's Storytime",
-      "date": "2026-07-05T12:30-05:00[America/Chicago]",
-      "url": "https://www.goodonpaperbooks.com/events"
-    },
-    {
-      "source": "good-on-paper-bookshop",
       "eventId": "one-star-read-powerpoint-night-2026-07-30-694addee",
       "summary": "One Star Read PowerPoint Night",
       "date": "2026-07-30T19:30-05:00[America/Chicago]",
@@ -4237,6 +4170,13 @@
       "summary": "Club 90s Presents MJ Night - Ages 18+",
       "date": "2026-09-11T20:30-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/club-90s-presents-mj-night-ages-houston-texas-09-11-2026/event/3A0064E1AED2A8C4"
+    },
+    {
+      "source": "house-of-blues-houston",
+      "eventId": "tm-G5dIZ_CrPCkR2",
+      "summary": "The Four Horsemen - The Album-Quality Metallica Experience",
+      "date": "2026-09-04T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/the-four-horsemen-the-albumquality-metallica-houston-texas-09-04-2026/event/3A0064E7A5386BCF"
     },
     {
       "source": "house-of-blues-houston",
@@ -4527,13 +4467,6 @@
     },
     {
       "source": "htxoutdoors",
-      "eventId": "evening-forest-hike-2026-07-08",
-      "summary": "Evening Forest Hike",
-      "date": "2026-07-08T19:00-05:00[America/Chicago]",
-      "url": "https://htxoutdoors.com/events/evening-forest-hike-7/"
-    },
-    {
-      "source": "htxoutdoors",
       "eventId": "evening-forest-hike-2026-07-22",
       "summary": "Evening Forest Hike",
       "date": "2026-07-22T19:00-05:00[America/Chicago]",
@@ -4646,13 +4579,6 @@
     },
     {
       "source": "htxoutdoors",
-      "eventId": "new-member-party-social-2026-07-08",
-      "summary": "New Member Party & Social",
-      "date": "2026-07-08T18:00-05:00[America/Chicago]",
-      "url": "https://htxoutdoors.com/events/new-member-party-social-3/"
-    },
-    {
-      "source": "htxoutdoors",
       "eventId": "pickleball-beginners-open-play-2026-07-11",
       "summary": "Pickleball Beginners Open Play",
       "date": "2026-07-11T09:00-05:00[America/Chicago]",
@@ -4678,13 +4604,6 @@
       "summary": "SUP & Kayak Social",
       "date": "2026-09-19T08:00-05:00[America/Chicago]",
       "url": "https://htxoutdoors.com/events/sup-kayak-social-33/"
-    },
-    {
-      "source": "htxoutdoors",
-      "eventId": "sup-kayaking-101-2026-07-08",
-      "summary": "SUP & Kayaking 101",
-      "date": "2026-07-08T12:00-05:00[America/Chicago]",
-      "url": "https://htxoutdoors.com/events/sup-kayaking-101/"
     },
     {
       "source": "htxoutdoors",
@@ -4916,6 +4835,13 @@
       "summary": "Kim Richey",
       "date": "2026-09-17T18:00-05:00[America/Chicago]",
       "url": "https://www.mcgonigels.com/shows/kim-richey-early-show-7/"
+    },
+    {
+      "source": "mcgonigels-mucky-duck",
+      "eventId": "mcgonigels-31397",
+      "summary": "Chris Smither",
+      "date": "2026-10-08T18:00-05:00[America/Chicago]",
+      "url": "https://www.mcgonigels.com/shows/chris-smither-early-show-3/"
     },
     {
       "source": "mcgonigels-mucky-duck",
@@ -5296,6 +5222,62 @@
       "url": "https://www.mcgonigels.com/shows/winston-cook-sarah-golden-cole-stephens/"
     },
     {
+      "source": "murder-by-the-book",
+      "eventId": "ashley-winstead-in-conversation-with-abby-dunn-2026-07-14",
+      "summary": "Ashley Winstead in conversation with Abby Dunn",
+      "date": "2026-07-14T18:30-05:00[America/Chicago]",
+      "url": "https://www.murderbooks.com/event/2026-07-14/ashley-winstead-conversation-abby-dunn"
+    },
+    {
+      "source": "murder-by-the-book",
+      "eventId": "jack-friday-2026-07-15",
+      "summary": "Jack Friday",
+      "date": "2026-07-15T18:30-05:00[America/Chicago]",
+      "url": "https://www.murderbooks.com/friday"
+    },
+    {
+      "source": "murder-by-the-book",
+      "eventId": "julia-london-2026-07-18",
+      "summary": "Julia London",
+      "date": "2026-07-18T15:00-05:00[America/Chicago]",
+      "url": "https://www.murderbooks.com/London"
+    },
+    {
+      "source": "murder-by-the-book",
+      "eventId": "lauren-nossett-in-conversation-with-ashley-winstead-2026-07-28",
+      "summary": "Lauren Nossett in conversation with Ashley Winstead",
+      "date": "2026-07-28T18:30-05:00[America/Chicago]",
+      "url": "https://www.murderbooks.com/Nossett"
+    },
+    {
+      "source": "murder-by-the-book",
+      "eventId": "mary-pauline-lowry-and-kelsey-cox-in-conversation-with-abby-dunn-2026-07-09",
+      "summary": "Mary Pauline Lowry and Kelsey Cox in conversation with Abby Dunn",
+      "date": "2026-07-09T18:30-05:00[America/Chicago]",
+      "url": "https://www.murderbooks.com/event/2026-07-09/mary-pauline-lowry-and-kelsey-cox-conversation-abby-dunn"
+    },
+    {
+      "source": "murder-by-the-book",
+      "eventId": "miranda-smith-and-mallory-arnold-in-conversation-with-abby-dunn-2026-07-22",
+      "summary": "Miranda Smith and Mallory Arnold in conversation with Abby Dunn",
+      "date": "2026-07-22T18:30-05:00[America/Chicago]",
+      "url": "https://www.murderbooks.com/Smith-Arnold"
+    },
+    {
+      "source": "murder-by-the-book",
+      "eventId": "pamela-colloff-in-conversation-with-mimi-swartz-2026-07-16",
+      "summary": "Pamela Colloff in conversation with Mimi Swartz",
+      "date": "2026-07-16T18:30-05:00[America/Chicago]",
+      "url": "https://www.murderbooks.com/colloff"
+    },
+    {
+      "source": "murder-by-the-book",
+      "eventId": "the-girl-on-the-train-celebration-with-alley-theatre-2026-07-08",
+      "summary": "The Girl on the Train Celebration with Alley Theatre",
+      "date": "2026-07-08T18:30-05:00[America/Chicago]",
+      "url": "https://www.murderbooks.com/event/2026-07-08/girl-train-celebration-alley-theatre"
+    },
+    {
       "source": "post-houston",
       "eventId": "black-swan-free-yoga-2026-07-11-97ff6b46",
       "summary": "Black Swan Free Yoga",
@@ -5455,6 +5437,13 @@
       "summary": "Sydney Castillo",
       "date": "2026-08-30T19:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/sydney-castillo-houston-texas-08-30-2026/event/3A0064BF1CB3F033"
+    },
+    {
+      "source": "punch-line-comedy-club",
+      "eventId": "tm-G5dIZ_5HLe2a0",
+      "summary": "Holmes",
+      "date": "2026-10-07T19:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/holmes-houston-texas-10-07-2026/event/3A0064BF1F08F264"
     },
     {
       "source": "punch-line-comedy-club",
@@ -5763,6 +5752,20 @@
       "summary": "Ron Funches",
       "date": "2026-08-08T19:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/ron-funches-houston-texas-08-08-2026/event/3A0064500B18841A"
+    },
+    {
+      "source": "punch-line-comedy-club",
+      "eventId": "tm-G5dIZ_Cj2GcHy",
+      "summary": "Comedy Allstars",
+      "date": "2026-08-05T19:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/comedy-allstars-houston-texas-08-05-2026/event/3A0064E70F32DF39"
+    },
+    {
+      "source": "punch-line-comedy-club",
+      "eventId": "tm-G5dIZ_CQcWMKC",
+      "summary": "Matt Hyams & Friends",
+      "date": "2026-08-26T19:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/matt-hyams-friends-houston-texas-08-26-2026/event/3A0064E6ADF774CE"
     },
     {
       "source": "punch-line-comedy-club",
@@ -6477,6 +6480,34 @@
       "summary": "Rice University Football vs UTSA - Rice Families Weekend",
       "date": "2026-10-03T10:00-05:00[America/Chicago]",
       "url": "https://admin.riceowls.com/calendar.aspx?game_id=28817&sport_id=2"
+    },
+    {
+      "source": "rice-public-events",
+      "eventId": "20261008T050000Z-431660",
+      "summary": "Texas Colloquium on Distributed Learning (TL;DR 2026)",
+      "date": "2026-10-08T10:00-05:00[America/Chicago]",
+      "url": "https://events.rice.edu/live/events/429641-texas-colloquium-on-distributed-learning-tldr-2026"
+    },
+    {
+      "source": "rice-public-events",
+      "eventId": "20261008T200000Z-432300",
+      "summary": "RAMI National Academies Colloquium: Dr. Khalil Amine",
+      "date": "2026-10-08T20:00Z",
+      "url": "https://events.rice.edu/live/events/431240-rami-national-academies-colloquium-dr-khalil-amine"
+    },
+    {
+      "source": "rice-public-events",
+      "eventId": "20261008T210000Z-431659",
+      "summary": "Distinguished Lecture with Francesco Bullo",
+      "date": "2026-10-08T21:00Z",
+      "url": "https://events.rice.edu/live/events/distinguished-lecture-with-francesco-bullo"
+    },
+    {
+      "source": "rice-public-events",
+      "eventId": "20261008T230000Z-433862",
+      "summary": "Across Two Seas Symposium",
+      "date": "2026-10-08T10:00-05:00[America/Chicago]",
+      "url": "https://events.rice.edu/art-history/event/433862-across-two-seas-symposium"
     },
     {
       "source": "rooftop-cinema-club-houston",
@@ -7210,12 +7241,6 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
-      "eventId": "education-center-open-2026-07-08",
-      "summary": "Education Center Open",
-      "date": "2026-07-08T13:30-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
       "eventId": "education-center-open-2026-07-15",
       "summary": "Education Center Open",
       "date": "2026-07-15T13:30-05:00[America/Chicago]"
@@ -7822,6 +7847,12 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
+      "eventId": "trail-maintenance-mornings-2026-10-08",
+      "summary": "Trail Maintenance Mornings",
+      "date": "2026-10-08T08:30-05:00[America/Chicago]"
+    },
+    {
+      "source": "texas-parks-wildlife-houston",
       "eventId": "view-the-moon-2026-07-18",
       "summary": "View the Moon",
       "date": "2026-07-18T14:00-05:00[America/Chicago]"
@@ -7858,13 +7889,6 @@
       "summary": "Into the Deep",
       "date": "2026-07-18T17:00-05:00[America/Chicago]",
       "url": "https://thedeluxetheater.com/events/into-the-deep/"
-    },
-    {
-      "source": "the-deluxe-theater",
-      "eventId": "outside-4-reel-2026-07-05",
-      "summary": "Outside 4 Reel",
-      "date": "2026-07-05T12:00-05:00[America/Chicago]",
-      "url": "https://thedeluxetheater.com/events/outside-4-reel/"
     },
     {
       "source": "the-deluxe-theater",
@@ -8428,13 +8452,6 @@
     },
     {
       "source": "white-oak-music-hall",
-      "eventId": "tm-G5dIZ_GNeZDDo",
-      "summary": "The SoapGirls",
-      "date": "2026-07-07T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/the-soapgirls-houston-texas-07-07-2026/event/3A0064C8C203BED1"
-    },
-    {
-      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_GR2OXKH",
       "summary": "Telescreens - Why The Lights Flicker North American Tour",
       "date": "2026-09-28T19:00-05:00[America/Chicago]",
@@ -8697,7 +8714,7 @@
     {
       "name": "good-on-paper-bookshop-good-on-paper-bookshop",
       "type": "Ripper",
-      "events": 12,
+      "events": 11,
       "expectEmpty": false,
       "source": "good-on-paper-bookshop"
     },
@@ -8725,7 +8742,7 @@
     {
       "name": "house-of-blues-houston-house-of-blues-houston",
       "type": "Ripper",
-      "events": 45,
+      "events": 46,
       "expectEmpty": false,
       "source": "house-of-blues-houston"
     },
@@ -8760,7 +8777,7 @@
     {
       "name": "htxoutdoors-htxoutdoors",
       "type": "Ripper",
-      "events": 38,
+      "events": 35,
       "expectEmpty": false,
       "source": "htxoutdoors"
     },
@@ -8795,7 +8812,7 @@
     {
       "name": "mcgonigels-mucky-duck-mcgonigels-mucky-duck",
       "type": "Ripper",
-      "events": 60,
+      "events": 61,
       "expectEmpty": false,
       "source": "mcgonigels-mucky-duck"
     },
@@ -8809,7 +8826,7 @@
     {
       "name": "murder-by-the-book-murder-by-the-book",
       "type": "Ripper",
-      "events": 0,
+      "events": 8,
       "expectEmpty": false,
       "source": "murder-by-the-book"
     },
@@ -8844,14 +8861,14 @@
     {
       "name": "project-row-houses-project-row-houses",
       "type": "Ripper",
-      "events": 150,
+      "events": 152,
       "expectEmpty": false,
       "source": "project-row-houses"
     },
     {
       "name": "punch-line-comedy-club-punch-line-comedy-club",
       "type": "Ripper",
-      "events": 86,
+      "events": 89,
       "expectEmpty": false,
       "source": "punch-line-comedy-club"
     },
@@ -8865,7 +8882,7 @@
     {
       "name": "rice-public-events-rice-public-events",
       "type": "Ripper",
-      "events": 74,
+      "events": 78,
       "expectEmpty": false,
       "source": "rice-public-events"
     },
@@ -8942,7 +8959,7 @@
     {
       "name": "the-deluxe-theater-the-deluxe-theater",
       "type": "Ripper",
-      "events": 5,
+      "events": 4,
       "expectEmpty": false,
       "source": "the-deluxe-theater"
     },
@@ -8970,28 +8987,28 @@
     {
       "name": "white-oak-music-hall-white-oak-music-hall",
       "type": "Ripper",
-      "events": 82,
+      "events": 81,
       "expectEmpty": false,
       "source": "white-oak-music-hall"
     },
     {
       "name": "tag-farmersmarket",
       "type": "Aggregate",
-      "events": 38,
+      "events": 37,
       "expectEmpty": false,
       "source": "tag-farmersmarket"
     },
     {
       "name": "tag-the-heights",
       "type": "Aggregate",
-      "events": 81,
+      "events": 79,
       "expectEmpty": false,
       "source": "tag-the-heights"
     },
     {
       "name": "tag-upper-kirby",
       "type": "Aggregate",
-      "events": 90,
+      "events": 91,
       "expectEmpty": false,
       "source": "tag-upper-kirby"
     },
@@ -9005,7 +9022,7 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 620,
+      "events": 617,
       "expectEmpty": false,
       "source": "tag-music"
     },
@@ -9019,7 +9036,7 @@
     {
       "name": "tag-downtown",
       "type": "Aggregate",
-      "events": 192,
+      "events": 196,
       "expectEmpty": false,
       "source": "tag-downtown"
     },
@@ -9033,21 +9050,21 @@
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 314,
+      "events": 312,
       "expectEmpty": false,
       "source": "tag-community"
     },
     {
       "name": "tag-montrose",
       "type": "Aggregate",
-      "events": 253,
+      "events": 249,
       "expectEmpty": false,
       "source": "tag-montrose"
     },
     {
       "name": "tag-theater",
       "type": "Aggregate",
-      "events": 22,
+      "events": 21,
       "expectEmpty": false,
       "source": "tag-theater"
     },
@@ -9096,14 +9113,14 @@
     {
       "name": "tag-art",
       "type": "Aggregate",
-      "events": 267,
+      "events": 273,
       "expectEmpty": false,
       "source": "tag-art"
     },
     {
       "name": "tag-museum-district",
       "type": "Aggregate",
-      "events": 134,
+      "events": 138,
       "expectEmpty": false,
       "source": "tag-museum-district"
     },
@@ -9124,7 +9141,7 @@
     {
       "name": "tag-education",
       "type": "Aggregate",
-      "events": 313,
+      "events": 317,
       "expectEmpty": false,
       "source": "tag-education"
     },
@@ -9201,7 +9218,7 @@
     {
       "name": "tag-books",
       "type": "Aggregate",
-      "events": 19,
+      "events": 26,
       "expectEmpty": false,
       "source": "tag-books"
     },
@@ -9229,7 +9246,7 @@
     {
       "name": "tag-comedy",
       "type": "Aggregate",
-      "events": 243,
+      "events": 246,
       "expectEmpty": false,
       "source": "tag-comedy"
     },
@@ -9257,28 +9274,28 @@
     {
       "name": "tag-outdoor-recreation",
       "type": "Aggregate",
-      "events": 233,
+      "events": 230,
       "expectEmpty": false,
       "source": "tag-outdoor-recreation"
     },
     {
       "name": "tag-hiking",
       "type": "Aggregate",
-      "events": 38,
+      "events": 35,
       "expectEmpty": false,
       "source": "tag-hiking"
     },
     {
       "name": "tag-sports",
       "type": "Aggregate",
-      "events": 38,
+      "events": 35,
       "expectEmpty": false,
       "source": "tag-sports"
     },
     {
       "name": "tag-third-ward",
       "type": "Aggregate",
-      "events": 153,
+      "events": 155,
       "expectEmpty": false,
       "source": "tag-third-ward"
     },
@@ -9292,7 +9309,7 @@
     {
       "name": "tag-near-northside",
       "type": "Aggregate",
-      "events": 135,
+      "events": 133,
       "expectEmpty": false,
       "source": "tag-near-northside"
     },
@@ -9313,7 +9330,7 @@
     {
       "name": "tag-west-university",
       "type": "Aggregate",
-      "events": 0,
+      "events": 8,
       "expectEmpty": false,
       "source": "tag-west-university"
     },
@@ -9348,7 +9365,7 @@
     {
       "name": "tag-entertainment",
       "type": "Aggregate",
-      "events": 96,
+      "events": 99,
       "expectEmpty": false,
       "source": "tag-entertainment"
     },
@@ -9404,7 +9421,7 @@
     {
       "name": "tag-performance",
       "type": "Aggregate",
-      "events": 5,
+      "events": 4,
       "expectEmpty": false,
       "source": "tag-performance"
     },
@@ -9439,7 +9456,7 @@
     {
       "name": "tag-makersmarket",
       "type": "Aggregate",
-      "events": 29,
+      "events": 28,
       "expectEmpty": false,
       "source": "tag-makersmarket"
     },
@@ -9474,7 +9491,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1685,
+      "events": 1693,
       "expectEmpty": false,
       "source": "tag-all"
     },

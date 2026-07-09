@@ -11,7 +11,7 @@
   },
   {
     "type": "ParseError",
-    "reason": "Failed to fetch Eventbrite events for organizer 19231282193: Error: Browserbase fetch failed: HTTP 429 — {\"statusCode\":429,\"error\":\"Too Many Requests\",\"message\":\"You've exceeded your max concurrent fetch requests limit (limit 5, currently 5). Please contact support to increase your limit.\"}",
+    "reason": "Failed to fetch Eventbrite events for organizer 19231282193: Error: Eventbrite API error: 401 ",
     "context": "pride-houston"
   }
 ]
