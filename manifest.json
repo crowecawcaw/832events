@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-11T05:49:36.186Z",
+  "lastUpdated": "2026-07-12T05:03:17.965Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -203,24 +203,6 @@
       ]
     },
     {
-      "name": "heritage-society",
-      "description": "The Heritage Society",
-      "friendlyLink": "https://www.heritagesociety.org/calendar",
-      "calendars": [
-        {
-          "name": "heritage-society",
-          "friendlyName": "The Heritage Society",
-          "icsUrl": "heritage-society-heritage-society.ics",
-          "rssUrl": "heritage-society-heritage-society.rss",
-          "tags": [
-            "History",
-            "Community",
-            "Downtown"
-          ]
-        }
-      ]
-    },
-    {
       "name": "house-of-blues-houston",
       "description": "House of Blues Houston",
       "friendlyLink": "https://houston.houseofblues.com/",
@@ -399,21 +381,18 @@
       ]
     },
     {
-      "name": "post-houston",
-      "description": "POST Houston",
-      "friendlyLink": "https://posthtx.com/event",
+      "name": "murder-by-the-book",
+      "description": "Murder By The Book",
+      "friendlyLink": "https://www.murderbooks.com/events",
       "calendars": [
         {
-          "name": "post-houston",
-          "friendlyName": "POST Houston",
-          "icsUrl": "post-houston-post-houston.ics",
-          "rssUrl": "post-houston-post-houston.rss",
+          "name": "murder-by-the-book",
+          "friendlyName": "Murder By The Book",
+          "icsUrl": "murder-by-the-book-murder-by-the-book.ics",
+          "rssUrl": "murder-by-the-book-murder-by-the-book.rss",
           "tags": [
-            "Art",
-            "Music",
-            "Nightlife",
-            "Food",
-            "Downtown"
+            "Books",
+            "West University"
           ]
         }
       ]
@@ -468,25 +447,6 @@
             "Cinema",
             "Entertainment",
             "Uptown"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "shrine-of-the-black-madonna",
-      "description": "Shrine of the Black Madonna Cultural Center & Bookstore",
-      "friendlyLink": "https://shrinebookstore.com/",
-      "calendars": [
-        {
-          "name": "shrine-of-the-black-madonna",
-          "friendlyName": "Shrine of the Black Madonna",
-          "icsUrl": "shrine-of-the-black-madonna-shrine-of-the-black-madonna.ics",
-          "rssUrl": "shrine-of-the-black-madonna-shrine-of-the-black-madonna.rss",
-          "tags": [
-            "Books",
-            "Community",
-            "Cultural",
-            "Third Ward"
           ]
         }
       ]
@@ -728,20 +688,6 @@
       ]
     },
     {
-      "name": "hermann-park",
-      "friendlyName": "Hermann Park Conservancy",
-      "description": "Hermann Park Conservancy",
-      "icsUrl": "external-hermann-park.ics",
-      "originalIcsUrl": "https://hermannpark.org/events/?ical=1",
-      "infoUrl": "https://hermannpark.org/events/",
-      "tags": [
-        "Parks",
-        "Community",
-        "Hermann Park",
-        "Museum District"
-      ]
-    },
-    {
       "name": "holocaust-museum-houston",
       "friendlyName": "Holocaust Museum Houston",
       "description": "Education and remembrance museum with programming including educator workshops, author talks, film screenings, and community lectures",
@@ -862,7 +808,6 @@
     "Community",
     "Concert",
     "Culinary",
-    "Cultural",
     "Downtown",
     "EaDo",
     "Education",
@@ -872,9 +817,7 @@
     "FarmersMarket",
     "Food",
     "FoodFestival",
-    "Hermann Park",
     "Hiking",
-    "History",
     "Jazz",
     "Kids",
     "MakersMarket",
@@ -906,6 +849,7 @@
     "Upper Kirby",
     "Uptown",
     "Wedgewood",
+    "West University",
     "Workshops"
   ]
 }

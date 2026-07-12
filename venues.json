@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-11T05:49:49.904Z",
+  "generated": "2026-07-12T05:03:24.614Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -612,43 +612,6 @@
       ]
     },
     {
-      "name": "hermann-park",
-      "friendlyName": "Hermann Park Conservancy",
-      "description": "Hermann Park Conservancy",
-      "url": "https://hermannpark.org/events/",
-      "tags": [
-        "Parks",
-        "Community",
-        "Hermann Park",
-        "Museum District"
-      ],
-      "geo": {
-        "lat": 29.7356,
-        "lng": -95.4654,
-        "label": "Hermann Park, 6001 Fannin St, Houston, TX 77030"
-      },
-      "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=Hermann%20Park%2C%206001%20Fannin%20St%2C%20Houston%2C%20TX%2077030"
-      },
-      "kind": "external",
-      "calendars": [
-        {
-          "name": "hermann-park",
-          "friendlyName": "Hermann Park Conservancy",
-          "links": {
-            "ics": {
-              "href": "external-hermann-park.ics",
-              "type": "text/calendar"
-            },
-            "rss": {
-              "href": "external-hermann-park.rss",
-              "type": "application/rss+xml"
-            }
-          }
-        }
-      ]
-    },
-    {
       "name": "holocaust-museum-houston",
       "friendlyName": "Holocaust Museum Houston",
       "description": "Education and remembrance museum with programming including educator workshops, author talks, film screenings, and community lectures",
@@ -1217,37 +1180,34 @@
       ]
     },
     {
-      "name": "post-houston",
-      "friendlyName": "POST Houston",
-      "description": "POST Houston",
-      "url": "https://posthtx.com/event",
+      "name": "murder-by-the-book",
+      "friendlyName": "Murder By The Book",
+      "description": "Murder By The Book",
+      "url": "https://www.murderbooks.com/events",
       "tags": [
-        "Art",
-        "Music",
-        "Nightlife",
-        "Food",
-        "Downtown"
+        "Books",
+        "West University"
       ],
       "geo": {
-        "lat": 29.7569,
-        "lng": -95.3594,
-        "label": "POST Houston, 510 Main St, Houston, TX 77002"
+        "lat": 29.7255,
+        "lng": -95.4175,
+        "label": "Murder By The Book, 2342 Bissonnet St, Houston, TX 77005"
       },
       "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=POST%20Houston%2C%20510%20Main%20St%2C%20Houston%2C%20TX%2077002"
+        "web": "https://www.google.com/maps/search/?api=1&query=Murder%20By%20The%20Book%2C%202342%20Bissonnet%20St%2C%20Houston%2C%20TX%2077005"
       },
       "kind": "ripper",
       "calendars": [
         {
-          "name": "post-houston",
-          "friendlyName": "POST Houston",
+          "name": "murder-by-the-book",
+          "friendlyName": "Murder By The Book",
           "links": {
             "ics": {
-              "href": "post-houston-post-houston.ics",
+              "href": "murder-by-the-book-murder-by-the-book.ics",
               "type": "text/calendar"
             },
             "rss": {
-              "href": "post-houston-post-houston.rss",
+              "href": "murder-by-the-book-murder-by-the-book.rss",
               "type": "application/rss+xml"
             }
           }
@@ -1398,43 +1358,6 @@
       ]
     },
     {
-      "name": "shrine-of-the-black-madonna",
-      "friendlyName": "Shrine of the Black Madonna Cultural Center & Bookstore",
-      "description": "Shrine of the Black Madonna Cultural Center & Bookstore",
-      "url": "https://shrinebookstore.com/",
-      "tags": [
-        "Books",
-        "Community",
-        "Cultural",
-        "Third Ward"
-      ],
-      "geo": {
-        "lat": 29.7368,
-        "lng": -95.344,
-        "label": "Shrine of the Black Madonna Cultural Center & Bookstore, 5309 Martin Luther King Blvd, Houston, TX 77021"
-      },
-      "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=Shrine%20of%20the%20Black%20Madonna%20Cultural%20Center%20%26%20Bookstore%2C%205309%20Martin%20Luther%20King%20Blvd%2C%20Houston%2C%20TX%2077021"
-      },
-      "kind": "ripper",
-      "calendars": [
-        {
-          "name": "shrine-of-the-black-madonna",
-          "friendlyName": "Shrine of the Black Madonna",
-          "links": {
-            "ics": {
-              "href": "shrine-of-the-black-madonna-shrine-of-the-black-madonna.ics",
-              "type": "text/calendar"
-            },
-            "rss": {
-              "href": "shrine-of-the-black-madonna-shrine-of-the-black-madonna.rss",
-              "type": "application/rss+xml"
-            }
-          }
-        }
-      ]
-    },
-    {
       "name": "the-deluxe-theater",
       "friendlyName": "The DeLUXE Theater Houston",
       "description": "The DeLUXE Theater Houston",
@@ -1464,42 +1387,6 @@
             },
             "rss": {
               "href": "the-deluxe-theater-the-deluxe-theater.rss",
-              "type": "application/rss+xml"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "name": "heritage-society",
-      "friendlyName": "The Heritage Society",
-      "description": "The Heritage Society",
-      "url": "https://www.heritagesociety.org/calendar",
-      "tags": [
-        "History",
-        "Community",
-        "Downtown"
-      ],
-      "geo": {
-        "lat": 29.760728,
-        "lng": -95.372803,
-        "label": "The Heritage Society, 1100 Bagby Street, Houston, TX 77002"
-      },
-      "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=The%20Heritage%20Society%2C%201100%20Bagby%20Street%2C%20Houston%2C%20TX%2077002"
-      },
-      "kind": "ripper",
-      "calendars": [
-        {
-          "name": "heritage-society",
-          "friendlyName": "The Heritage Society",
-          "links": {
-            "ics": {
-              "href": "heritage-society-heritage-society.ics",
-              "type": "text/calendar"
-            },
-            "rss": {
-              "href": "heritage-society-heritage-society.rss",
               "type": "application/rss+xml"
             }
           }
