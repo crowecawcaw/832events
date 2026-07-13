@@ -1,0 +1,12 @@
+[
+  {
+    "type": "ParseError",
+    "reason": "Ripper crashed: Error: Downtown Houston Events fetch failed: HTTP 403 ",
+    "context": ""
+  },
+  {
+    "type": "ParseError",
+    "reason": "Failed to fetch AXS events for venue 101329: Error: AXS fetch error: HTTP 403 for https://www.axs.com/venues/101329/toyota-center-houston-tickets",
+    "context": "venueSlug: toyota-center-houston-tickets"
+  }
+]
