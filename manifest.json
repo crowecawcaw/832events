@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-12T05:03:17.965Z",
+  "lastUpdated": "2026-07-13T04:51:59.212Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -398,6 +398,26 @@
       ]
     },
     {
+      "name": "post-houston",
+      "description": "POST Houston",
+      "friendlyLink": "https://posthtx.com/event",
+      "calendars": [
+        {
+          "name": "post-houston",
+          "friendlyName": "POST Houston",
+          "icsUrl": "post-houston-post-houston.ics",
+          "rssUrl": "post-houston-post-houston.rss",
+          "tags": [
+            "Art",
+            "Music",
+            "Nightlife",
+            "Food",
+            "Downtown"
+          ]
+        }
+      ]
+    },
+    {
       "name": "project-row-houses",
       "description": "Project Row Houses",
       "friendlyLink": "https://projectrowhouses.org/visit/calendar/",
@@ -447,6 +467,25 @@
             "Cinema",
             "Entertainment",
             "Uptown"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "shrine-of-the-black-madonna",
+      "description": "Shrine of the Black Madonna Cultural Center & Bookstore",
+      "friendlyLink": "https://shrinebookstore.com/",
+      "calendars": [
+        {
+          "name": "shrine-of-the-black-madonna",
+          "friendlyName": "Shrine of the Black Madonna",
+          "icsUrl": "shrine-of-the-black-madonna-shrine-of-the-black-madonna.ics",
+          "rssUrl": "shrine-of-the-black-madonna-shrine-of-the-black-madonna.rss",
+          "tags": [
+            "Books",
+            "Community",
+            "Cultural",
+            "Third Ward"
           ]
         }
       ]
@@ -678,16 +717,6 @@
       ]
     },
     {
-      "name": "eureka-heights-brew-co",
-      "friendlyName": "Eureka Heights Brewery",
-      "icsUrl": "external-eureka-heights-brew-co.ics",
-      "originalIcsUrl": "https://www.eurekaheights.com/?post_type=tribe_events&ical=1&eventDisplay=list",
-      "tags": [
-        "Beer",
-        "The Heights"
-      ]
-    },
-    {
       "name": "holocaust-museum-houston",
       "friendlyName": "Holocaust Museum Houston",
       "description": "Education and remembrance museum with programming including educator workshops, author talks, film screenings, and community lectures",
@@ -808,6 +837,7 @@
     "Community",
     "Concert",
     "Culinary",
+    "Cultural",
     "Downtown",
     "EaDo",
     "Education",

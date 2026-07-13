@@ -19,48 +19,6 @@ DTSTART:20250101T000000
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-DTSTART;TZID=UTC:20260711T130000
-DTEND;TZID=UTC:20260711T190000
-DTSTAMP:20250325T213110Z
-CREATED:20240630T192217Z
-LAST-MODIFIED:20250325T213110Z
-UID:10001208-1783774800-1783796400@badastronautbeer.com
-SUMMARY:Second Saturday POP UP ART MARKET
-DESCRIPTION:Second Saturday POP UP Art Market\nEvery Second Saturday | 1 PM – 7 PM | Free \nFeaturing Artist Los-2Wins Dela Parra & Invited Artists \nPlease send vender inquiries to Daniel Parra: DaniRoseGold@gmail.com
-URL:https://badastronautbeer.com/event/second-saturday-pop-up-art-market/2026-07-11/
-LOCATION:Bad Astronaut Brewery\, 1519 Fulton Street\, Houston\, TX\, 77009\, United States
-ATTACH;FMTTYPE=image/jpeg:https://badastronautbeer.com/wp-content/uploads/2024/06/5bdb390d-63c9-417c-b09d-f7e3aa05a42c.jpg
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=UTC:20260712T110000
-DTEND;TZID=UTC:20260712T220000
-DTSTAMP:20250627T211952Z
-CREATED:20250623T211737Z
-LAST-MODIFIED:20250627T211952Z
-UID:10005253-1783854000-1783893600@badastronautbeer.com
-SUMMARY:HAPPY HOUR: Sunday Funday!
-DESCRIPTION:HAPPY HOUR DAILY SPECIAL \nSUNDAY FUNDAY \n$2 OFF ALL BEVERAGES (Sodas Not Included) All Day!
-URL:https://badastronautbeer.com/event/happy-hour-sunday-funday/2026-07-12/
-LOCATION:Bad Astronaut Brewry\, 1519 Fulton Street\, Houston\, TX\, 77009\, United States
-CATEGORIES:Happy Hour
-ATTACH;FMTTYPE=image/jpeg:https://badastronautbeer.com/wp-content/uploads/2025/06/Copy-of-happy-hour-Instagram-Post-45-4.jpg
-ORGANIZER;CN="Bad Astronaut Brewery":MAILTO:info@badastronautbeer.com
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=UTC:20260712T130000
-DTEND;TZID=UTC:20260712T180000
-DTSTAMP:20250910T221108Z
-CREATED:20240630T194917Z
-LAST-MODIFIED:20250910T221108Z
-UID:10001328-1783861200-1783879200@badastronautbeer.com
-SUMMARY:Thorn & Moon Mystical Market
-DESCRIPTION:THORN & MOON Presents \nGood Vibes Mystical Market\nEvery Second Sunday| 1 PM – 6 PM | Free Entry \nArt\, Vendors\, Tarot\, Cosplay & Music! Shop a curated selection of talented local artists and magickal vendors! Oddities! Art! Esoteric & Apothecary Wares! Enjoy a tarot reading from one of the mystics! Great food and delicious craft brews! All ages FREE event – bring the kiddos and fur babies  \n 
-URL:https://badastronautbeer.com/event/thorn-moon-mystical-market/2026-07-12/
-LOCATION:Bad Astronaut Brewery\, 1519 Fulton Street\, Houston\, TX\, 77009\, United States
-CATEGORIES:Market
-ATTACH;FMTTYPE=image/jpeg:https://badastronautbeer.com/wp-content/uploads/2024/06/good-vibes-2nd-sundays-scaled.jpg
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;TZID=UTC:20260715T150000
 DTEND;TZID=UTC:20260715T190000
 DTSTAMP:20250623T211246Z
@@ -459,5 +417,47 @@ LOCATION:Bad Astronaut Brewery\, 1519 Fulton Street\, Houston\, TX\, 77009\, Uni
 CATEGORIES:Live Event
 ATTACH;FMTTYPE=image/png:https://badastronautbeer.com/wp-content/uploads/2025/08/713v3.png
 ORGANIZER;CN="Bad Astronaut Brewery":MAILTO:info@badastronautbeer.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260808T130000
+DTEND;TZID=UTC:20260808T190000
+DTSTAMP:20250325T213110Z
+CREATED:20240630T192217Z
+LAST-MODIFIED:20250325T213110Z
+UID:10001209-1786194000-1786215600@badastronautbeer.com
+SUMMARY:Second Saturday POP UP ART MARKET
+DESCRIPTION:Second Saturday POP UP Art Market\nEvery Second Saturday | 1 PM – 7 PM | Free \nFeaturing Artist Los-2Wins Dela Parra & Invited Artists \nPlease send vender inquiries to Daniel Parra: DaniRoseGold@gmail.com
+URL:https://badastronautbeer.com/event/second-saturday-pop-up-art-market/2026-08-08/
+LOCATION:Bad Astronaut Brewery\, 1519 Fulton Street\, Houston\, TX\, 77009\, United States
+ATTACH;FMTTYPE=image/jpeg:https://badastronautbeer.com/wp-content/uploads/2024/06/5bdb390d-63c9-417c-b09d-f7e3aa05a42c.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260809T110000
+DTEND;TZID=UTC:20260809T220000
+DTSTAMP:20250627T211952Z
+CREATED:20250623T211737Z
+LAST-MODIFIED:20250627T211952Z
+UID:10005257-1786273200-1786312800@badastronautbeer.com
+SUMMARY:HAPPY HOUR: Sunday Funday!
+DESCRIPTION:HAPPY HOUR DAILY SPECIAL \nSUNDAY FUNDAY \n$2 OFF ALL BEVERAGES (Sodas Not Included) All Day!
+URL:https://badastronautbeer.com/event/happy-hour-sunday-funday/2026-08-09/
+LOCATION:Bad Astronaut Brewry\, 1519 Fulton Street\, Houston\, TX\, 77009\, United States
+CATEGORIES:Happy Hour
+ATTACH;FMTTYPE=image/jpeg:https://badastronautbeer.com/wp-content/uploads/2025/06/Copy-of-happy-hour-Instagram-Post-45-4.jpg
+ORGANIZER;CN="Bad Astronaut Brewery":MAILTO:info@badastronautbeer.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20260809T130000
+DTEND;TZID=UTC:20260809T180000
+DTSTAMP:20250910T221108Z
+CREATED:20240630T194917Z
+LAST-MODIFIED:20250910T221108Z
+UID:10001329-1786280400-1786298400@badastronautbeer.com
+SUMMARY:Thorn & Moon Mystical Market
+DESCRIPTION:THORN & MOON Presents \nGood Vibes Mystical Market\nEvery Second Sunday| 1 PM – 6 PM | Free Entry \nArt\, Vendors\, Tarot\, Cosplay & Music! Shop a curated selection of talented local artists and magickal vendors! Oddities! Art! Esoteric & Apothecary Wares! Enjoy a tarot reading from one of the mystics! Great food and delicious craft brews! All ages FREE event – bring the kiddos and fur babies  \n 
+URL:https://badastronautbeer.com/event/thorn-moon-mystical-market/2026-08-09/
+LOCATION:Bad Astronaut Brewery\, 1519 Fulton Street\, Houston\, TX\, 77009\, United States
+CATEGORIES:Market
+ATTACH;FMTTYPE=image/jpeg:https://badastronautbeer.com/wp-content/uploads/2024/06/good-vibes-2nd-sundays-scaled.jpg
 END:VEVENT
 END:VCALENDAR

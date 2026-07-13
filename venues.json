@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-12T05:03:24.614Z",
+  "generated": "2026-07-13T04:52:26.739Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -499,40 +499,6 @@
             },
             "rss": {
               "href": "external-erjcc-houston.rss",
-              "type": "application/rss+xml"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "name": "eureka-heights-brew-co",
-      "friendlyName": "Eureka Heights Brewery",
-      "description": "Eureka Heights Brewery",
-      "tags": [
-        "Beer",
-        "The Heights"
-      ],
-      "geo": {
-        "lat": 29.7823,
-        "lng": -95.4181,
-        "label": "Eureka Heights Brewery, 2454 Sawyer St, Houston, TX 77007"
-      },
-      "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=Eureka%20Heights%20Brewery%2C%202454%20Sawyer%20St%2C%20Houston%2C%20TX%2077007"
-      },
-      "kind": "external",
-      "calendars": [
-        {
-          "name": "eureka-heights-brew-co",
-          "friendlyName": "Eureka Heights Brewery",
-          "links": {
-            "ics": {
-              "href": "external-eureka-heights-brew-co.ics",
-              "type": "text/calendar"
-            },
-            "rss": {
-              "href": "external-eureka-heights-brew-co.rss",
               "type": "application/rss+xml"
             }
           }
@@ -1215,6 +1181,44 @@
       ]
     },
     {
+      "name": "post-houston",
+      "friendlyName": "POST Houston",
+      "description": "POST Houston",
+      "url": "https://posthtx.com/event",
+      "tags": [
+        "Art",
+        "Music",
+        "Nightlife",
+        "Food",
+        "Downtown"
+      ],
+      "geo": {
+        "lat": 29.7569,
+        "lng": -95.3594,
+        "label": "POST Houston, 510 Main St, Houston, TX 77002"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=POST%20Houston%2C%20510%20Main%20St%2C%20Houston%2C%20TX%2077002"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "post-houston",
+          "friendlyName": "POST Houston",
+          "links": {
+            "ics": {
+              "href": "post-houston-post-houston.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "post-houston-post-houston.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "project-row-houses",
       "friendlyName": "Project Row Houses",
       "description": "Project Row Houses",
@@ -1351,6 +1355,43 @@
             },
             "rss": {
               "href": "rooftop-cinema-club-houston-rooftop-cinema-club-houston.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "shrine-of-the-black-madonna",
+      "friendlyName": "Shrine of the Black Madonna Cultural Center & Bookstore",
+      "description": "Shrine of the Black Madonna Cultural Center & Bookstore",
+      "url": "https://shrinebookstore.com/",
+      "tags": [
+        "Books",
+        "Community",
+        "Cultural",
+        "Third Ward"
+      ],
+      "geo": {
+        "lat": 29.7368,
+        "lng": -95.344,
+        "label": "Shrine of the Black Madonna Cultural Center & Bookstore, 5309 Martin Luther King Blvd, Houston, TX 77021"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Shrine%20of%20the%20Black%20Madonna%20Cultural%20Center%20%26%20Bookstore%2C%205309%20Martin%20Luther%20King%20Blvd%2C%20Houston%2C%20TX%2077021"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "shrine-of-the-black-madonna",
+          "friendlyName": "Shrine of the Black Madonna",
+          "links": {
+            "ics": {
+              "href": "shrine-of-the-black-madonna-shrine-of-the-black-madonna.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "shrine-of-the-black-madonna-shrine-of-the-black-madonna.rss",
               "type": "application/rss+xml"
             }
           }
