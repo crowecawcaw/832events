@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-13T04:51:59.212Z",
+  "lastUpdated": "2026-07-14T04:51:50.836Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -381,23 +381,6 @@
       ]
     },
     {
-      "name": "murder-by-the-book",
-      "description": "Murder By The Book",
-      "friendlyLink": "https://www.murderbooks.com/events",
-      "calendars": [
-        {
-          "name": "murder-by-the-book",
-          "friendlyName": "Murder By The Book",
-          "icsUrl": "murder-by-the-book-murder-by-the-book.ics",
-          "rssUrl": "murder-by-the-book-murder-by-the-book.rss",
-          "tags": [
-            "Books",
-            "West University"
-          ]
-        }
-      ]
-    },
-    {
       "name": "post-houston",
       "description": "POST Houston",
       "friendlyLink": "https://posthtx.com/event",
@@ -642,19 +625,6 @@
       ]
     },
     {
-      "name": "bad-astronaut-brewery",
-      "friendlyName": "Bad Astronaut Brewery",
-      "description": "Brewery and taproom north of downtown Houston hosting happy hours, art markets, gaming tournaments, run club events, and community programming.",
-      "icsUrl": "external-bad-astronaut-brewery.ics",
-      "originalIcsUrl": "https://badastronautbeer.com/?post_type=tribe_events&ical=1&eventDisplay=list",
-      "infoUrl": "https://badastronautbeer.com/",
-      "tags": [
-        "Beer",
-        "Brewery",
-        "Near Northside"
-      ]
-    },
-    {
       "name": "ccs-houston",
       "friendlyName": "CCS Houston",
       "description": "Comic and creative events in Houston",
@@ -713,6 +683,30 @@
       "tags": [
         "Art",
         "Community",
+        "Museum District"
+      ]
+    },
+    {
+      "name": "eureka-heights-brew-co",
+      "friendlyName": "Eureka Heights Brewery",
+      "icsUrl": "external-eureka-heights-brew-co.ics",
+      "originalIcsUrl": "https://www.eurekaheights.com/?post_type=tribe_events&ical=1&eventDisplay=list",
+      "tags": [
+        "Beer",
+        "The Heights"
+      ]
+    },
+    {
+      "name": "hermann-park",
+      "friendlyName": "Hermann Park Conservancy",
+      "description": "Hermann Park Conservancy",
+      "icsUrl": "external-hermann-park.ics",
+      "originalIcsUrl": "https://hermannpark.org/events/?ical=1",
+      "infoUrl": "https://hermannpark.org/events/",
+      "tags": [
+        "Parks",
+        "Community",
+        "Hermann Park",
         "Museum District"
       ]
     },
@@ -831,7 +825,6 @@
     "Arts",
     "Beer",
     "Books",
-    "Brewery",
     "Cinema",
     "Comedy",
     "Community",
@@ -847,6 +840,7 @@
     "FarmersMarket",
     "Food",
     "FoodFestival",
+    "Hermann Park",
     "Hiking",
     "Jazz",
     "Kids",
@@ -879,7 +873,6 @@
     "Upper Kirby",
     "Uptown",
     "Wedgewood",
-    "West University",
     "Workshops"
   ]
 }

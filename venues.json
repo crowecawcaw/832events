@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-13T04:52:26.739Z",
+  "generated": "2026-07-14T04:52:08.225Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -66,42 +66,6 @@
             },
             "rss": {
               "href": "external-axelrad-beer-garden.rss",
-              "type": "application/rss+xml"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "name": "bad-astronaut-brewery",
-      "friendlyName": "Bad Astronaut Brewery",
-      "description": "Brewery and taproom north of downtown Houston hosting happy hours, art markets, gaming tournaments, run club events, and community programming.",
-      "url": "https://badastronautbeer.com/",
-      "tags": [
-        "Beer",
-        "Brewery",
-        "Near Northside"
-      ],
-      "geo": {
-        "lat": 29.7683,
-        "lng": -95.3628,
-        "label": "Bad Astronaut Brewery, Houston, TX"
-      },
-      "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=Bad%20Astronaut%20Brewery%2C%20Houston%2C%20TX"
-      },
-      "kind": "external",
-      "calendars": [
-        {
-          "name": "bad-astronaut-brewery",
-          "friendlyName": "Bad Astronaut Brewery",
-          "links": {
-            "ics": {
-              "href": "external-bad-astronaut-brewery.ics",
-              "type": "text/calendar"
-            },
-            "rss": {
-              "href": "external-bad-astronaut-brewery.rss",
               "type": "application/rss+xml"
             }
           }
@@ -506,6 +470,40 @@
       ]
     },
     {
+      "name": "eureka-heights-brew-co",
+      "friendlyName": "Eureka Heights Brewery",
+      "description": "Eureka Heights Brewery",
+      "tags": [
+        "Beer",
+        "The Heights"
+      ],
+      "geo": {
+        "lat": 29.7823,
+        "lng": -95.4181,
+        "label": "Eureka Heights Brewery, 2454 Sawyer St, Houston, TX 77007"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Eureka%20Heights%20Brewery%2C%202454%20Sawyer%20St%2C%20Houston%2C%20TX%2077007"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "eureka-heights-brew-co",
+          "friendlyName": "Eureka Heights Brewery",
+          "links": {
+            "ics": {
+              "href": "external-eureka-heights-brew-co.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-eureka-heights-brew-co.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "good-on-paper-bookshop",
       "friendlyName": "Good on Paper Books and Stationery",
       "description": "Good on Paper Books and Stationery",
@@ -571,6 +569,43 @@
             },
             "rss": {
               "href": "heights-mercantile-heights-mercantile.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "hermann-park",
+      "friendlyName": "Hermann Park Conservancy",
+      "description": "Hermann Park Conservancy",
+      "url": "https://hermannpark.org/events/",
+      "tags": [
+        "Parks",
+        "Community",
+        "Hermann Park",
+        "Museum District"
+      ],
+      "geo": {
+        "lat": 29.7356,
+        "lng": -95.4654,
+        "label": "Hermann Park, 6001 Fannin St, Houston, TX 77030"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Hermann%20Park%2C%206001%20Fannin%20St%2C%20Houston%2C%20TX%2077030"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "hermann-park",
+          "friendlyName": "Hermann Park Conservancy",
+          "links": {
+            "ics": {
+              "href": "external-hermann-park.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-hermann-park.rss",
               "type": "application/rss+xml"
             }
           }
@@ -1139,41 +1174,6 @@
             },
             "rss": {
               "href": "mcgonigels-mucky-duck-mcgonigels-mucky-duck.rss",
-              "type": "application/rss+xml"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "name": "murder-by-the-book",
-      "friendlyName": "Murder By The Book",
-      "description": "Murder By The Book",
-      "url": "https://www.murderbooks.com/events",
-      "tags": [
-        "Books",
-        "West University"
-      ],
-      "geo": {
-        "lat": 29.7255,
-        "lng": -95.4175,
-        "label": "Murder By The Book, 2342 Bissonnet St, Houston, TX 77005"
-      },
-      "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=Murder%20By%20The%20Book%2C%202342%20Bissonnet%20St%2C%20Houston%2C%20TX%2077005"
-      },
-      "kind": "ripper",
-      "calendars": [
-        {
-          "name": "murder-by-the-book",
-          "friendlyName": "Murder By The Book",
-          "links": {
-            "ics": {
-              "href": "murder-by-the-book-murder-by-the-book.ics",
-              "type": "text/calendar"
-            },
-            "rss": {
-              "href": "murder-by-the-book-murder-by-the-book.rss",
               "type": "application/rss+xml"
             }
           }
