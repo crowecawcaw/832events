@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-15T05:19:17.715Z",
+  "lastUpdated": "2026-07-16T05:56:48.453Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -432,6 +432,24 @@
             "Comedy",
             "Entertainment",
             "Downtown"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "rice-public-events",
+      "description": "Rice University",
+      "friendlyLink": "https://events.rice.edu/",
+      "calendars": [
+        {
+          "name": "rice-public-events",
+          "friendlyName": "Rice University - Open to the Public",
+          "icsUrl": "rice-public-events-rice-public-events.ics",
+          "rssUrl": "rice-public-events-rice-public-events.rss",
+          "tags": [
+            "Education",
+            "Art",
+            "Museum District"
           ]
         }
       ]
