@@ -1,5 +1,5 @@
 {
-  "buildTime": "2026-07-17T07:06:45.697Z",
+  "buildTime": "2026-07-17T14:07:13.077Z",
   "totalErrors": 6,
   "configErrors": [],
   "sources": [
@@ -29,8 +29,8 @@
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1778,
-    "eventsWithGeo": 1545,
+    "totalEvents": 1779,
+    "eventsWithGeo": 1546,
     "eventsWithoutGeo": 233,
     "geocodeErrors": 0
   },
@@ -66,35 +66,35 @@
       "source": null,
       "url": "https://www.readhouston.com/events?format=json",
       "cachedAt": "2026-07-16T05:53:24.701Z",
-      "ageHours": 25,
+      "ageHours": 32,
       "error": "Browserbase fetch failed: HTTP 500 — {\"statusCode\":500,\"error\":\"Internal Server Error\",\"message\":\"Internal Server Error\"}"
     },
     {
       "source": null,
       "url": "https://www.readhouston.com/events?month=august-2026&view=calendar&format=json",
       "cachedAt": "2026-07-16T05:53:25.290Z",
-      "ageHours": 25,
+      "ageHours": 32,
       "error": "Browserbase fetch failed: HTTP 500 — {\"statusCode\":500,\"error\":\"Internal Server Error\",\"message\":\"Internal Server Error\"}"
     },
     {
       "source": null,
       "url": "https://www.readhouston.com/events?month=september-2026&view=calendar&format=json",
       "cachedAt": "2026-07-16T05:53:25.798Z",
-      "ageHours": 25,
+      "ageHours": 32,
       "error": "Browserbase fetch failed: HTTP 500 — {\"statusCode\":500,\"error\":\"Internal Server Error\",\"message\":\"Internal Server Error\"}"
     },
     {
       "source": null,
       "url": "https://www.readhouston.com/events?month=october-2026&view=calendar&format=json",
       "cachedAt": "2026-07-16T05:53:26.375Z",
-      "ageHours": 25,
+      "ageHours": 32,
       "error": "Browserbase fetch failed: HTTP 500 — {\"statusCode\":500,\"error\":\"Internal Server Error\",\"message\":\"Internal Server Error\"}"
     },
     {
       "source": null,
       "url": "https://www.readhouston.com/events?month=november-2026&view=calendar&format=json",
       "cachedAt": "2026-07-16T05:53:26.896Z",
-      "ageHours": 25,
+      "ageHours": 32,
       "error": "Browserbase fetch failed: HTTP 500 — {\"statusCode\":500,\"error\":\"Internal Server Error\",\"message\":\"Internal Server Error\"}"
     }
   ],
@@ -532,8 +532,8 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1079,
-    "totalEvents": 1778,
+    "eventsWithImage": 1080,
+    "totalEvents": 1779,
     "venuesWithImage": 0,
     "totalVenues": 51,
     "unresolvable": 0
@@ -3552,7 +3552,7 @@
   "costStats": {
     "eventsWithCost": 418,
     "freeEvents": 257,
-    "totalEvents": 1778,
+    "totalEvents": 1779,
     "unresolvable": 0
   },
   "costGaps": [
@@ -9694,14 +9694,14 @@
     {
       "name": "tag-farmersmarket",
       "type": "Aggregate",
-      "events": 38,
+      "events": 39,
       "expectEmpty": false,
       "source": "tag-farmersmarket"
     },
     {
       "name": "tag-the-heights",
       "type": "Aggregate",
-      "events": 70,
+      "events": 71,
       "expectEmpty": false,
       "source": "tag-the-heights"
     },
@@ -10128,7 +10128,7 @@
     {
       "name": "tag-makersmarket",
       "type": "Aggregate",
-      "events": 29,
+      "events": 30,
       "expectEmpty": false,
       "source": "tag-makersmarket"
     },
@@ -10156,7 +10156,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1788,
+      "events": 1789,
       "expectEmpty": false,
       "source": "tag-all"
     },
