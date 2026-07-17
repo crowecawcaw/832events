@@ -151,6 +151,15 @@ appear.
 **Purpose:** grow the catalog. A single daily workflow discovers new sources
 and implements the best ones in one run:
 
+- **Crawl** (deterministic pre-step, `scripts/discovery-crawl.ts`) — before the
+  agent runs, a fixed Brave-search crawl fingerprints and *verifies* new domains
+  (fetching each candidate `.ics` to confirm a real, upcoming feed) and emits a
+  ranked shortlist artifact (`output/discovery-shortlist.json`). The agent works
+  that shortlist top-down (STEP 0) instead of doing its own web search, and files
+  a `notviable` candidate for each rejection — the crawler's only memory, since it
+  keeps no state on `main`. It's `continue-on-error`, so a crawl hiccup never
+  blocks the run (the agent just falls back to its own discovery). See
+  [`discovery-crawler.md`](./discovery-crawler.md).
 - **Discover** (`skills/source-discovery/SKILL.md` steps 1–5) — scan for new
   event sources in your city, quality-gate them, and record candidates in
   `docs/source-candidates/` (git history is the log). Flag dead sources.
