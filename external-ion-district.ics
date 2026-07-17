@@ -49,22 +49,9 @@ DTSTART:20271107T070000
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260716T180000
-DTEND;TZID=America/Chicago:20260716T200000
-DTSTAMP:20260716T005322
-CREATED:20260701T204045Z
-LAST-MODIFIED:20260701T204045Z
-UID:10005169-1784224800-1784232000@iondistrict.com
-SUMMARY:Houston Linux User Group
-DESCRIPTION:Are you interested or already invested in the Linux Operating System?\nJoin us at the Houston Linux User Group\, one of the oldest user groups involved with the Linux Operating System. We discuss new trends in operating system usage\, software development\, and current technological trends\, as well as provide one-on-one training or class-based instruction. Learn about how to get more out of your computer or how to leverage any of the Linux-based computational platforms.\nAll are welcome to attend\, regardless of whether you’re a seasoned Linux professional intent on networking or a new Linux user struggling with installation or the command line.\nThis monthly meeting includes all of the standard Houston Linux User Group meeting activities\, which include meet-and-greet\, presentations of personal projects\, multi-meeting classes\, as well as organizational and coordinating announcements. \nVisit our website at: https://www.houstonlinux.org/\nVisit our calendar and the agenda of each week’s meeting at: https://calendar.google.com/calendar/u/0/embed?src=houstonlinuxusergroup@gmail.com \nJoin us on social media.\nDiscord: https://discord.gg/MPzYfeJz\nReddit: https://www.reddit.com/r/houstonlinuxusergroup/
-URL:https://iondistrict.com/event/houston-linux-user-group-6/
-LOCATION:Ion – Conference Room 029 – 030\, 4201 Main St\, Houston\, TX\, 77002\, United States
-ATTACH;FMTTYPE=image/png:https://iondistrict.com/wp-content/uploads/2026/06/HLUG_Crest.png?ver=1781010980
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260717T083000
 DTEND;TZID=America/Chicago:20260717T100000
-DTSTAMP:20260716T005322
+DTSTAMP:20260717T011326
 CREATED:20260610T160322Z
 LAST-MODIFIED:20260713T214530Z
 UID:10005117-1784277000-1784282400@iondistrict.com
@@ -78,7 +65,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260717T083000
 DTEND;TZID=America/Chicago:20260717T103000
-DTSTAMP:20260716T005322
+DTSTAMP:20260717T011326
 CREATED:20250729T190850Z
 LAST-MODIFIED:20250825T225437Z
 UID:10004072-1784277000-1784284200@iondistrict.com
@@ -90,9 +77,22 @@ CATEGORIES:3rd Party Registration,Academic Network,Community Event,Corporate Inn
 ATTACH;FMTTYPE=image/jpeg:https://iondistrict.com/wp-content/uploads/2024/07/CoJ1.jpg?ver=1721850637
 END:VEVENT
 BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260717T090000
+DTEND;TZID=America/Chicago:20260717T103000
+DTSTAMP:20260717T011326
+CREATED:20260716T181240Z
+LAST-MODIFIED:20260716T181240Z
+UID:10005189-1784278800-1784284200@iondistrict.com
+SUMMARY:⭕️Cybersecurity Circle⭕️
+DESCRIPTION:Our mission is to DEFEAT CYBER CRIMINALS by making cybersecurity knowledge accessible and relatable to everyone. This event creates a supportive environment for individuals starting their cybersecurity journey\, those transitioning into the field\, and professionals navigating job transitions—including those rebuilding confidence after layoffs. Together\, we strengthen our collective defense against cyber threats while fostering career growth and community connections.\nThe ⭕️Cybersecurity Circle⭕️ unites practitioners of all levels in an inclusive community committed to defeating cybercrime through shared knowledge\, collaboration\, and continuous learning. Together\, we’re securing our digital world—one hack at a time
+URL:https://iondistrict.com/event/%e2%ad%95%ef%b8%8fcybersecurity-circle%e2%ad%95%ef%b8%8f-24/
+LOCATION:Ion\, 4201 Main Street\, Houston\, TX\, 77002\, United States
+ATTACH;FMTTYPE=image/png:https://iondistrict.com/wp-content/uploads/2026/01/⭕️CYBERSECURITY-CIRCLE⭕️.png?ver=1767643977
+END:VEVENT
+BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260717T100000
 DTEND;TZID=America/Chicago:20260717T110000
-DTSTAMP:20260716T005322
+DTSTAMP:20260717T011326
 CREATED:20260701T204157Z
 LAST-MODIFIED:20260701T204157Z
 UID:10005170-1784282400-1784286000@iondistrict.com
@@ -106,7 +106,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260717T100000
 DTEND;TZID=America/Chicago:20260717T113000
-DTSTAMP:20260716T005322
+DTSTAMP:20260717T011326
 CREATED:20260529T191632Z
 LAST-MODIFIED:20260529T191632Z
 UID:10005093-1784282400-1784287800@iondistrict.com
@@ -118,7 +118,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260717T100000
 DTEND;TZID=America/Chicago:20260717T113000
-DTSTAMP:20260716T005322
+DTSTAMP:20260717T011326
 CREATED:20260616T201151Z
 LAST-MODIFIED:20260616T201151Z
 UID:10005129-1784282400-1784287800@iondistrict.com
@@ -132,7 +132,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260717T100000
 DTEND;TZID=America/Chicago:20260717T120000
-DTSTAMP:20260716T005322
+DTSTAMP:20260717T011326
 CREATED:20260514T164836Z
 LAST-MODIFIED:20260610T202351Z
 UID:10005009-1784282400-1784289600@iondistrict.com
@@ -145,7 +145,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260721T080000
 DTEND;TZID=America/Chicago:20260721T110000
-DTSTAMP:20260716T005322
+DTSTAMP:20260717T011326
 CREATED:20260715T162236Z
 LAST-MODIFIED:20260715T162236Z
 UID:10005186-1784620800-1784631600@iondistrict.com
@@ -159,7 +159,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260721T173000
 DTEND;TZID=America/Chicago:20260721T183000
-DTSTAMP:20260716T005322
+DTSTAMP:20260717T011326
 CREATED:20260126T191906Z
 LAST-MODIFIED:20260713T162526Z
 UID:10004772-1784655000-1784658600@iondistrict.com
@@ -173,7 +173,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260723T180000
 DTEND;TZID=America/Chicago:20260723T190000
-DTSTAMP:20260716T005322
+DTSTAMP:20260717T011326
 CREATED:20251215T174738Z
 LAST-MODIFIED:20260709T162049Z
 UID:10004383-1784829600-1784833200@iondistrict.com
@@ -187,7 +187,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260723T180000
 DTEND;TZID=America/Chicago:20260723T193000
-DTSTAMP:20260716T005322
+DTSTAMP:20260717T011326
 CREATED:20260713T162917Z
 LAST-MODIFIED:20260713T162917Z
 UID:10005178-1784829600-1784835000@iondistrict.com
@@ -200,7 +200,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260724T083000
 DTEND;TZID=America/Chicago:20260724T103000
-DTSTAMP:20260716T005322
+DTSTAMP:20260717T011326
 CREATED:20250729T190850Z
 LAST-MODIFIED:20250825T225437Z
 UID:10004073-1784881800-1784889000@iondistrict.com
@@ -212,9 +212,22 @@ CATEGORIES:3rd Party Registration,Academic Network,Community Event,Corporate Inn
 ATTACH;FMTTYPE=image/jpeg:https://iondistrict.com/wp-content/uploads/2024/07/CoJ1.jpg?ver=1721850637
 END:VEVENT
 BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260724T090000
+DTEND;TZID=America/Chicago:20260724T103000
+DTSTAMP:20260717T011326
+CREATED:20260716T181305Z
+LAST-MODIFIED:20260716T181305Z
+UID:10005191-1784883600-1784889000@iondistrict.com
+SUMMARY:⭕️Cybersecurity Circle⭕️
+DESCRIPTION:Our mission is to DEFEAT CYBER CRIMINALS by making cybersecurity knowledge accessible and relatable to everyone. This event creates a supportive environment for individuals starting their cybersecurity journey\, those transitioning into the field\, and professionals navigating job transitions—including those rebuilding confidence after layoffs. Together\, we strengthen our collective defense against cyber threats while fostering career growth and community connections.\nThe ⭕️Cybersecurity Circle⭕️ unites practitioners of all levels in an inclusive community committed to defeating cybercrime through shared knowledge\, collaboration\, and continuous learning. Together\, we’re securing our digital world—one hack at a time
+URL:https://iondistrict.com/event/%e2%ad%95%ef%b8%8fcybersecurity-circle%e2%ad%95%ef%b8%8f-25/
+LOCATION:Ion\, 4201 Main Street\, Houston\, TX\, 77002\, United States
+ATTACH;FMTTYPE=image/png:https://iondistrict.com/wp-content/uploads/2026/01/⭕️CYBERSECURITY-CIRCLE⭕️.png?ver=1767643977
+END:VEVENT
+BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260724T100000
 DTEND;TZID=America/Chicago:20260724T113000
-DTSTAMP:20260716T005322
+DTSTAMP:20260717T011326
 CREATED:20260616T201209Z
 LAST-MODIFIED:20260616T201209Z
 UID:10005130-1784887200-1784892600@iondistrict.com
@@ -228,7 +241,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260728T180000
 DTEND;TZID=America/Chicago:20260728T193000
-DTSTAMP:20260716T005322
+DTSTAMP:20260717T011326
 CREATED:20260713T162152Z
 LAST-MODIFIED:20260713T162152Z
 UID:10005187-1785261600-1785267000@iondistrict.com
@@ -241,7 +254,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260728T180000
 DTEND;TZID=America/Chicago:20260728T193000
-DTSTAMP:20260716T005322
+DTSTAMP:20260717T011326
 CREATED:20260715T204109Z
 LAST-MODIFIED:20260715T204109Z
 UID:10005179-1785261600-1785267000@iondistrict.com
@@ -254,7 +267,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260730T083000
 DTEND;TZID=America/Chicago:20260730T100000
-DTSTAMP:20260716T005322
+DTSTAMP:20260717T011326
 CREATED:20260706T210118Z
 LAST-MODIFIED:20260715T161132Z
 UID:10005172-1785400200-1785405600@iondistrict.com
@@ -268,7 +281,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260731T083000
 DTEND;TZID=America/Chicago:20260731T103000
-DTSTAMP:20260716T005322
+DTSTAMP:20260717T011326
 CREATED:20250729T190850Z
 LAST-MODIFIED:20250825T225437Z
 UID:10004074-1785486600-1785493800@iondistrict.com
@@ -280,9 +293,22 @@ CATEGORIES:3rd Party Registration,Academic Network,Community Event,Corporate Inn
 ATTACH;FMTTYPE=image/jpeg:https://iondistrict.com/wp-content/uploads/2024/07/CoJ1.jpg?ver=1721850637
 END:VEVENT
 BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260731T090000
+DTEND;TZID=America/Chicago:20260731T103000
+DTSTAMP:20260717T011326
+CREATED:20260716T181342Z
+LAST-MODIFIED:20260716T181342Z
+UID:10005193-1785488400-1785493800@iondistrict.com
+SUMMARY:⭕️Cybersecurity Circle⭕️
+DESCRIPTION:Our mission is to DEFEAT CYBER CRIMINALS by making cybersecurity knowledge accessible and relatable to everyone. This event creates a supportive environment for individuals starting their cybersecurity journey\, those transitioning into the field\, and professionals navigating job transitions—including those rebuilding confidence after layoffs. Together\, we strengthen our collective defense against cyber threats while fostering career growth and community connections.\nThe ⭕️Cybersecurity Circle⭕️ unites practitioners of all levels in an inclusive community committed to defeating cybercrime through shared knowledge\, collaboration\, and continuous learning. Together\, we’re securing our digital world—one hack at a time
+URL:https://iondistrict.com/event/%e2%ad%95%ef%b8%8fcybersecurity-circle%e2%ad%95%ef%b8%8f-26/
+LOCATION:Ion\, 4201 Main Street\, Houston\, TX\, 77002\, United States
+ATTACH;FMTTYPE=image/png:https://iondistrict.com/wp-content/uploads/2026/01/⭕️CYBERSECURITY-CIRCLE⭕️.png?ver=1767643977
+END:VEVENT
+BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260731T100000
 DTEND;TZID=America/Chicago:20260731T113000
-DTSTAMP:20260716T005322
+DTSTAMP:20260717T011326
 CREATED:20260616T201224Z
 LAST-MODIFIED:20260616T201224Z
 UID:10005131-1785492000-1785497400@iondistrict.com
@@ -296,7 +322,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260731T100000
 DTEND;TZID=America/Chicago:20260731T120000
-DTSTAMP:20260716T005322
+DTSTAMP:20260717T011326
 CREATED:20260610T202452Z
 LAST-MODIFIED:20260610T202452Z
 UID:10005118-1785492000-1785499200@iondistrict.com
@@ -309,7 +335,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260731T100000
 DTEND;TZID=America/Chicago:20260731T120000
-DTSTAMP:20260716T005322
+DTSTAMP:20260717T011326
 CREATED:20260616T201530Z
 LAST-MODIFIED:20260616T201530Z
 UID:10005136-1785492000-1785499200@iondistrict.com

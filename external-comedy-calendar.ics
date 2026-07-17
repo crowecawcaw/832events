@@ -49,45 +49,6 @@ DTSTART:20271107T060000
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VTIMEZONE
-TZID:America/Los_Angeles
-BEGIN:DAYLIGHT
-TZOFFSETFROM:-0800
-TZOFFSETTO:-0700
-TZNAME:PDT
-DTSTART:20250309T100000
-END:DAYLIGHT
-BEGIN:STANDARD
-TZOFFSETFROM:-0700
-TZOFFSETTO:-0800
-TZNAME:PST
-DTSTART:20251102T090000
-END:STANDARD
-BEGIN:DAYLIGHT
-TZOFFSETFROM:-0800
-TZOFFSETTO:-0700
-TZNAME:PDT
-DTSTART:20260308T100000
-END:DAYLIGHT
-BEGIN:STANDARD
-TZOFFSETFROM:-0700
-TZOFFSETTO:-0800
-TZNAME:PST
-DTSTART:20261101T090000
-END:STANDARD
-BEGIN:DAYLIGHT
-TZOFFSETFROM:-0800
-TZOFFSETTO:-0700
-TZNAME:PDT
-DTSTART:20270314T100000
-END:DAYLIGHT
-BEGIN:STANDARD
-TZOFFSETFROM:-0700
-TZOFFSETTO:-0800
-TZNAME:PST
-DTSTART:20271107T090000
-END:STANDARD
-END:VTIMEZONE
-BEGIN:VTIMEZONE
 TZID:America/Chicago
 BEGIN:DAYLIGHT
 TZOFFSETFROM:-0600
@@ -124,6 +85,45 @@ TZOFFSETFROM:-0500
 TZOFFSETTO:-0600
 TZNAME:CST
 DTSTART:20271107T070000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:20250309T100000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:20251102T090000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:20260308T100000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:20261101T090000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:20270314T100000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:20271107T090000
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VTIMEZONE
@@ -174,111 +174,45 @@ TZNAME:MST
 DTSTART:20250101T000000
 END:STANDARD
 END:VTIMEZONE
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20260716T190000
-DTEND;TZID=America/New_York:20260716T210000
-DTSTAMP:20260323T022800Z
-CREATED:20260323T022800Z
-LAST-MODIFIED:20260323T022800Z
-UID:10003790-1784228400-1784235600@comedycalendar.com
-SUMMARY:Zach Rushing: The Redneck Logic Tour LIVE at Raleigh Improv
-DESCRIPTION:Official TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you. \nAbout the Performer\nZach Rushing is a Mississippi-born comedian who has built a loyal following by being unapologetically himself. Known for his sharp wit\, Southern charm\, and relatable storytelling\, Zach brings a refreshing authenticity to the stage that resonates with audiences across the country. \nHe rose to prominence through his viral social media presence and his popular Not-So-Rich-And-Famous Tour\, where he delivered honest\, hilarious takes on everyday life\, pop culture\, and the Southern experience. His comedy is rooted in real life — the kind of humor that makes you laugh because it hits a little too close to home. \nBeyond comedy\, Zach is the owner and CEO of Triple B Outdoors\, a brand built around his love for hunting\, fishing\, and the great outdoors. His genuine passion for the simple things in life makes him a uniquely inspiring and entertaining performer in today’s comedy landscape. \nEvent Details\nDate: Thursday\, July 16\, 2026 \nTime: 7:00 PM (Doors open at 5:30 PM) \nVenue: Raleigh Improv\, 1224 Parkside Main St\, Cary\, NC 27519 \nTicket Prices: $45.73 – $153.25 \nAge Restrictions: This is a comedy club show — guests under 21 must be accompanied by a parent or guardian. Please check with the venue for specific policies. \nAbout the Venue\nThe Raleigh Improv is one of the Triangle area’s premier comedy destinations\, located at 1224 Parkside Main St in Cary\, NC — just minutes from downtown Raleigh. Part of the nationally recognized Improv comedy club chain\, the Raleigh Improv has hosted some of the biggest names in stand-up comedy. \nThe venue features a classic comedy club layout with tiered seating\, ensuring great sightlines from virtually every seat in the house. The intimate atmosphere creates a personal connection between the performer and the audience that larger arenas simply can’t replicate. \nThe Raleigh Improv also offers a full food and beverage menu\, so guests can enjoy dinner and drinks while taking in the show. Parking is available in the surrounding Parkside Town Commons shopping center. The venue is easily accessible from I-40 and US-1\, making it convenient for guests coming from Raleigh\, Durham\, Chapel Hill\, and surrounding areas. \nWhat to Expect\nZach Rushing’s Redneck Logic Tour promises an evening of high-energy\, laugh-out-loud stand-up comedy. Expect Zach’s signature blend of Southern storytelling\, self-deprecating humor\, and sharp observations about life\, culture\, and the outdoors. \nThis is a solo headlining show\, so fans will get a full set from Zach himself. His performances are known for being interactive and energetic — he feeds off the crowd and delivers a show that feels personal and spontaneous every single night. \nWhether you’re a longtime fan or discovering Zach Rushing for the first time\, this is a night of comedy you won’t want to miss. Arrive early to grab a good seat and enjoy dinner before the show kicks off. \nTicket Information\nPrice Range: $45.73 – $153.25 \nTickets are available through official channels and resale platforms. Grab your seats before they sell out! \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
-URL:https://comedycalendar.com/event/zach-rushing-the-redneck-logic-tour-live-at-raleigh-improv/
-LOCATION:Raleigh Improv\, 1224 Parkside Main St\, Cary\, NC\, 27519\, United States Of America
-ATTACH;FMTTYPE=image/jpeg:https://i.ticketweb.com/i/00/12/78/76/14_Original.jpg?v=4
-GEO:35.8490976;-78.8909556
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Raleigh Improv 1224 Parkside Main St Cary NC 27519 United States Of America;X-APPLE-RADIUS=500;X-TITLE=1224 Parkside Main St:geo:-78.8909556,35.8490976
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20260716T190000
-DTEND;TZID=America/New_York:20260716T210000
-DTSTAMP:20260602T200052Z
-CREATED:20260602T194345Z
-LAST-MODIFIED:20260602T200052Z
-UID:10005267-1784228400-1784235600@comedycalendar.com
-SUMMARY:Comedy Cellar Las Vegas Showcase (Early)
-DESCRIPTION:This post contains affiliate links. We may earn a commission at no extra cost to you. \n\n  \n     Official Tickets\n   \n  \n     Resale Tickets\n  \n\nComedy Cellar Las Vegas brings one of the most legendary names in stand-up comedy to the heart of Las Vegas. Located inside the Rio Hotel & Casino\, this intimate comedy club is the West Coast home of New York City’s world-famous Comedy Cellar\, the venue that helped launch the careers of comedy icons including Dave Chappelle\, Chris Rock\, Jon Stewart\, Ray Romano\, Amy Schumer\, Aziz Ansari\, and countless others. \nUnlike traditional comedy shows featuring a single headliner\, Comedy Cellar presents a carefully curated lineup of professional comedians every night. Audiences can expect multiple performers during each show\, featuring a mix of nationally touring headliners\, television favorites\, Comedy Central veterans\, Netflix performers\, and rising stars from around the world. \nNo two shows are exactly alike\, making every visit a unique experience. Surprise drop-in appearances from major comedians performing elsewhere in Las Vegas have become part of the club’s reputation\, giving audiences the chance to see comedy superstars in an intimate setting. \nEvent Details\nVenue: Comedy Cellar Las Vegas at Rio Hotel & Casino\nLocation: 3700 W Flamingo Rd\, Las Vegas\, NV 89103\nShow Schedule: Nightly performances throughout the year\nAge Requirement: Recommended for audiences 18+ due to mature comedy content \nAbout the Venue\nOpened in 2018\, Comedy Cellar Las Vegas was designed to recreate the atmosphere and energy of the original Greenwich Village club that has become one of the most respected comedy venues in the world. The 300-seat showroom offers excellent sightlines and an intimate setting that allows audiences to experience stand-up comedy exactly as it was meant to be seen: up close and personal. \nThe venue combines the excitement of a Las Vegas night out with the authentic feel of a classic New York comedy club. Guests can enjoy a comfortable showroom environment while watching some of the best comedians working today perform in a setting that encourages spontaneity\, crowd interaction\, and unforgettable moments. \nConveniently located inside the Rio Hotel & Casino just minutes from the Las Vegas Strip\, the venue offers easy access for both tourists and local comedy fans. \nWhat to Expect\nExpect a fast-paced evening featuring multiple comedians performing throughout the show. The Comedy Cellar is known for showcasing a wide variety of comedic styles\, from observational humor and storytelling to sharp social commentary\, crowd work\, and cutting-edge stand-up. \nWhether you’re discovering a future comedy star or watching a seasoned veteran perfect their craft\, every show delivers the authentic comedy club experience that has made the Comedy Cellar one of the most respected brands in stand-up comedy. \nFor comedy fans visiting Las Vegas\, Comedy Cellar is widely considered one of the best places in the city to experience live stand-up comedy any night of the week.
-URL:https://comedycalendar.com/event/comedy-cellar-las-vegas-showcase-early/2026-07-16/
-LOCATION:Comedy Cellar Las Vegas at Rio Hotel & Casino\, 3700 W Flamingo Rd\, Las Vegas\, NV\, 89103\, United States
-ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fc4/a6703ea9-a17b-4211-b9dc-7308aa0b2fc4_RETINA_PORTRAIT_16_9.jpg
-GEO:36.1172452;-115.1861279
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Comedy Cellar Las Vegas at Rio Hotel & Casino 3700 W Flamingo Rd Las Vegas NV 89103 United States;X-APPLE-RADIUS=500;X-TITLE=3700 W Flamingo Rd:geo:-115.1861279,36.1172452
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20260716T193000
-DTEND;TZID=America/New_York:20260716T213000
-DTSTAMP:20260515T013411Z
-CREATED:20260314T180000Z
-LAST-MODIFIED:20260515T013411Z
-UID:10002880-1784230200-1784237400@comedycalendar.com
-SUMMARY:Conor Janda LIVE at Cobb's Comedy Club
-DESCRIPTION:Official TicketsResale Tickets \nAbout the Performer\nConor Janda is a sharp\, witty stand-up comedian who has been making waves on the national comedy circuit with his clever writing and relatable storytelling. Known for his dry humor and self-deprecating style\, Janda has a gift for finding the absurdity in everyday life and turning it into laugh-out-loud material. \nA regular on the club circuit and a rising presence in the comedy world\, Conor Janda has earned a reputation as one of the most consistently funny performers working today. His sets are tight\, well-crafted\, and delivered with a natural ease that makes even the most complex observations feel effortless. \nWhether you’re a longtime fan or catching him for the first time\, Conor Janda’s show at Cobb’s Comedy Club promises to be a memorable night of stand-up comedy. \nEvent Details\nDate: Thursday\, July 16\, 2026\nTime: 7:30 PM PDT\nVenue: Cobb’s Comedy Club\, 915 Columbus Avenue\, San Francisco\, CA 94133\nAge Restriction: 18+ / 2 Beverage Minimum\nTicket Price Range: $28 – $47 \nAbout the Venue\nCobb’s Comedy Club is one of San Francisco’s most iconic comedy destinations\, nestled in the vibrant North Beach neighborhood at 915 Columbus Avenue. With a capacity of approximately 400 guests\, the club delivers an intimate\, up-close experience that makes every seat feel like the best in the house. \nThe venue features a full bar and table service\, so you can enjoy cocktails\, beer\, wine\, and food throughout the performance. The classic comedy club layout — tables and chairs arranged around a central stage — ensures excellent sightlines and a communal atmosphere that amplifies the laughs. \nCobb’s is easily accessible by public transit and is surrounded by some of San Francisco’s best restaurants and bars\, making it a perfect spot for a full night out. Parking is available in nearby garages throughout the North Beach area. \nWhat to Expect\nThis is a solo stand-up performance by Conor Janda — a full evening of his signature observational and self-deprecating comedy. Expect a polished\, well-paced show with sharp writing and plenty of big laughs from start to finish. \nThe 18+ age restriction and 2-beverage minimum are in effect. Doors typically open 30–45 minutes before showtime\, so arrive early to get settled and enjoy a pre-show drink before the laughs kick off. \nTicket Information\nPrice Range: $28 – $47 (before taxes and fees)\nTickets are available through Ticketmaster (official) and VividSeats (resale). \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
-URL:https://comedycalendar.com/event/conor-janda-live-at-cobbs-comedy-club/
-LOCATION:Cobb’s Comedy Club\, 915 Columbus Avenue\, San Francisco\, California\, 94133\, United States Of America
-ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/cce/74ba1e03-7c44-40ae-9617-8c4290604cce_TABLET_LANDSCAPE_LARGE_16_9.jpg
-GEO:37.8029543;-122.4143041
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Cobb’s Comedy Club 915 Columbus Avenue San Francisco California 94133 United States Of America;X-APPLE-RADIUS=500;X-TITLE=915 Columbus Avenue:geo:-122.4143041,37.8029543
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Los_Angeles:20260716T193000
-DTEND;TZID=America/Los_Angeles:20260716T213000
-DTSTAMP:20260502T035443Z
-CREATED:20260322T040000Z
-LAST-MODIFIED:20260502T035443Z
-UID:10004443-1784230200-1784237400@comedycalendar.com
-SUMMARY:Nurse John LIVE at Oxnard Levity Live
-DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nOfficial Tickets\nResale Tickets \nNurse John LIVE at Oxnard Levity Live\nGet ready for a hilarious night of stand-up comedy as Nurse John brings his acclaimed “Short Staffed” tour to Oxnard Levity Live on July 16\, 2026. Known for his sharp wit and relatable humor\, Nurse John delivers a comedy experience you won’t want to miss. \nEvent Details\nDate: Thursday\, July 16\, 2026\nTime: 7:30 PM PDT\nVenue: Oxnard Levity Live\nAddress: 591 Collection Blvd\, Oxnard\, CA 93036\nAge Requirement: 21+ Event\nMinimum Purchase: Two-item minimum per person in the showroom \nAbout Nurse John\nNurse John is a rising stand-up comedian who has built a massive following with his unique blend of observational humor and storytelling. His “Short Staffed” tour has been selling out venues across the country\, bringing his signature comedic style to audiences everywhere. With a background that gives him plenty of material\, Nurse John delivers laughs that are both sharp and deeply relatable. \nWhat to Expect\n\nA full evening of stand-up comedy from one of the hottest acts on tour\nSharp\, witty material drawn from real-life experiences\nAn intimate club setting at Oxnard Levity Live\nFull bar and dining service available throughout the show\nGeneral admission seating (first-come\, first-served)\nAn unforgettable night of laughs in Oxnard\, CA\n\nVenue Information\nOxnard Levity Live is one of Southern California’s premier comedy clubs\, located at 591 Collection Blvd in Oxnard\, CA. The intimate showroom offers excellent sightlines from every seat\, full bar service\, and a two-item minimum purchase per guest. \nTicket Information\nTickets range from $43.19 to $113.80. This is a 21+ event — valid photo ID required. All sales are final. Ticket resale is strictly prohibited by the venue. \nOfficial Tickets\nResale Tickets \nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
-URL:https://comedycalendar.com/event/nurse-john-live-at-oxnard-levity-live/
-LOCATION:Oxnard Levity Live\, 591 Collection Blvd\, Oxnard\, CA\, 93036\, United States
-ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/f9d/9e426efc-1298-4cae-abd4-c3e3d4848f9d_TABLET_LANDSCAPE_LARGE_16_9.jpg
-GEO:34.2406237;-119.1764375
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Oxnard Levity Live 591 Collection Blvd Oxnard CA 93036 United States;X-APPLE-RADIUS=500;X-TITLE=591 Collection Blvd:geo:-119.1764375,34.2406237
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20260716T200000
-DTEND;TZID=America/New_York:20260716T220000
-DTSTAMP:20260515T013415Z
-CREATED:20260314T180000Z
-LAST-MODIFIED:20260515T013415Z
-UID:10002881-1784232000-1784239200@comedycalendar.com
-SUMMARY:Joey Avery LIVE at Punch Line Comedy Club San Francisco
-DESCRIPTION:Official TicketsResale Tickets \nAbout the Performer\nJoey Avery is a standout stand-up comedian celebrated for his sharp wit\, magnetic stage presence\, and ability to connect with audiences through honest\, hilarious storytelling. His comedy draws from real-life experiences\, delivering laughs with a warmth and authenticity that keeps crowds coming back for more. \nAvery recently released his debut comedy special Live in San Francisco\, which was met with widespread acclaim and introduced him to a national audience. His material is clever\, well-crafted\, and delivered with the kind of confident ease that only comes from years of honing his craft on stages across the country. \nCatching Joey Avery live is a treat — his shows are energetic\, personal\, and packed with the kind of comedy that leaves you quoting lines on the drive home. Don’t miss your chance to see him at one of San Francisco’s premier comedy clubs. \nEvent Details\nDate: Thursday\, July 16\, 2026 (also Fri July 17 & Sat July 18)\nTime: 8:00 PM PDT (Thu) | 7:30 PM & 9:45 PM (Fri) | 7:00 PM & 9:15 PM (Sat)\nVenue: Punch Line Comedy Club – San Francisco\, 444 Battery Street\, San Francisco\, CA 94111\nAge Restriction: 18+ / 2 Beverage Minimum\nTicket Price Range: $32 – $52 \nAbout the Venue\nPunch Line Comedy Club – San Francisco is one of the most legendary comedy venues in the country\, located at 444 Battery Street in the heart of the Financial District. Since opening in 1978\, Punch Line has been the launching pad for some of the biggest names in comedy\, including Robin Williams\, Ellen DeGeneres\, and Jerry Seinfeld. \nThe club seats approximately 300 guests in a cozy\, table-and-chair setup that creates an intimate atmosphere perfect for stand-up comedy. A full bar and food menu are available throughout the show\, and the staff is known for their attentive\, friendly service. \nThe venue is conveniently located near public transit and within walking distance of several parking garages. Whether you’re a first-time visitor or a regular\, Punch Line delivers a world-class comedy experience every single night. \nWhat to Expect\nJoey Avery performs multiple shows across the weekend of July 16–18\, giving you several opportunities to catch this rising star live. Each show is a full stand-up set featuring his best material\, delivered with the energy and precision that has made him one of the most talked-about comedians on the circuit. \nThe 18+ age restriction and 2-beverage minimum are in effect for all shows. Doors open approximately 30–45 minutes before showtime — arrive early to secure a great seat and enjoy a pre-show drink. \nTicket Information\nPrice Range: $32 – $52 (before taxes and fees)\nTickets are available through Ticketmaster (official) and VividSeats (resale). \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
-URL:https://comedycalendar.com/event/joey-avery-live-at-punch-line-comedy-club-san-francisco/
-LOCATION:Punch Line Comedy Club – San Francisco\, 444 Battery Street\, San Francisco\, California\, 94111\, United States Of America
-ATTACH;FMTTYPE=image/jpeg:https://media.ticketmaster.com/en-us/dam/a/110/92fc9dde-d495-4d5f-a295-e594e797b110_TABLET_LANDSCAPE_LARGE_16_9.jpg
-GEO:37.795486;-122.4001359
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Punch Line Comedy Club – San Francisco 444 Battery Street San Francisco California 94111 United States Of America;X-APPLE-RADIUS=500;X-TITLE=444 Battery Street:geo:-122.4001359,37.795486
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Los_Angeles:20260716T200000
-DTEND;TZID=America/Los_Angeles:20260716T220000
-DTSTAMP:20260519T233311Z
-CREATED:20260423T040000Z
-LAST-MODIFIED:20260519T233311Z
-UID:10004711-1784232000-1784239200@comedycalendar.com
-SUMMARY:Kiki Yeung & Esther Ku: Sweet and Sour Chicks LIVE at San Jose Improv
-DESCRIPTION:Official Tickets\nResale Tickets\n\nAbout Kiki Yeung & Esther Ku\nKiki Yeung and Esther Ku are two powerhouse Asian-American stand-up comedians joining forces for their hilarious Sweet and Sour Chicks tour. Both comedians have built devoted followings through their fearless\, boundary-pushing comedy that tackles identity\, culture\, relationships\, and the absurdities of everyday life. \nEsther Ku is known for her bold\, unapologetic humor and has appeared on Comedy Central and numerous national stages. Kiki Yeung brings sharp wit and relatable storytelling to the stage\, earning acclaim for her unique perspective as an Asian-American woman in comedy. Together\, they deliver a dynamic double-bill that is both hilarious and refreshingly honest. \nEvent Details\n\nDate: Thursday\, July 16\, 2026\nTime: 8:00 PM (doors open at 7:00 PM)\nVenue: San Jose Improv\, 62 S Second St\, San Jose\, CA 95113\nNote: This is a special one-night-only event\nAge Restriction: 21+ (valid photo ID required)\n\nAbout the Venue\nThe San Jose Improv is the Bay Area’s go-to comedy destination\, nestled in the heart of downtown San Jose. This intimate club-style venue holds approximately 250 guests and is part of the iconic Improv comedy club chain that has launched the careers of countless comedy legends. \nThe venue offers a full bar and food menu\, comfortable seating with excellent sightlines\, and a lively atmosphere that makes every show feel like a special event. Conveniently located near downtown parking garages and public transit\, it’s easy to make a full night out of your visit. \nWhat to Expect\nThe Sweet and Sour Chicks show is a high-energy double-bill featuring both Kiki Yeung and Esther Ku performing their best material back-to-back. Expect sharp cultural commentary\, personal storytelling\, and plenty of laughs as these two comedians play off each other’s energy. \nThis is a rare opportunity to see two of the most exciting voices in Asian-American comedy on the same stage in an intimate setting. The show runs approximately 90 minutes and is not to be missed. \nTicket Information\nTickets are priced at approximately $30 – $60 depending on seating and availability. \n\nOfficial Tickets\nResale Tickets\n\nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
-URL:https://comedycalendar.com/event/kiki-yeung-esther-ku-sweet-and-sour-chicks-live-at-san-jose-improv/
-LOCATION:San Jose Improv\, 62 S Second St\, San Jose\, California\, 95113\, United States
-ATTACH;FMTTYPE=image/jpeg:https://i.ticketweb.com/i/00/13/43/37/83_Edp.jpg?v=3
-GEO:37.3356413;-121.8883224
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=San Jose Improv 62 S Second St San Jose California 95113 United States;X-APPLE-RADIUS=500;X-TITLE=62 S Second St:geo:-121.8883224,37.3356413
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20260716T213000
-DTEND;TZID=America/New_York:20260716T233000
-DTSTAMP:20260602T200151Z
-CREATED:20260602T200119Z
-LAST-MODIFIED:20260602T200151Z
-UID:10005845-1784237400-1784244600@comedycalendar.com
-SUMMARY:Comedy Cellar Las Vegas (Late)
-DESCRIPTION:This post contains affiliate links. We may earn a commission at no extra cost to you. \n\nOfficial Tickets\n\nResale Tickets\n\nComedy Cellar Las Vegas brings one of the most legendary names in stand-up comedy to the heart of Las Vegas. Located inside the Rio Hotel & Casino\, this intimate comedy club is the West Coast home of New York City’s world-famous Comedy Cellar\, the venue that helped launch the careers of comedy icons including Dave Chappelle\, Chris Rock\, Jon Stewart\, Ray Romano\, Amy Schumer\, Aziz Ansari\, and countless others. \nUnlike traditional comedy shows featuring a single headliner\, Comedy Cellar presents a carefully curated lineup of professional comedians every night. Audiences can expect multiple performers during each show\, featuring a mix of nationally touring headliners\, television favorites\, Comedy Central veterans\, Netflix performers\, and rising stars from around the world. \nNo two shows are exactly alike\, making every visit a unique experience. Surprise drop-in appearances from major comedians performing elsewhere in Las Vegas have become part of the club’s reputation\, giving audiences the chance to see comedy superstars in an intimate setting. \nEvent Details\nVenue: Comedy Cellar Las Vegas at Rio Hotel & Casino\nLocation: 3700 W Flamingo Rd\, Las Vegas\, NV 89103\nShow Schedule: Nightly performances throughout the year\nAge Requirement: Recommended for audiences 18+ due to mature comedy content \nAbout the Venue\nOpened in 2018\, Comedy Cellar Las Vegas was designed to recreate the atmosphere and energy of the original Greenwich Village club that has become one of the most respected comedy venues in the world. The 300-seat showroom offers excellent sightlines and an intimate setting that allows audiences to experience stand-up comedy exactly as it was meant to be seen: up close and personal. \nThe venue combines the excitement of a Las Vegas night out with the authentic feel of a classic New York comedy club. Guests can enjoy a comfortable showroom environment while watching some of the best comedians working today perform in a setting that encourages spontaneity\, crowd interaction\, and unforgettable moments. \nConveniently located inside the Rio Hotel & Casino just minutes from the Las Vegas Strip\, the venue offers easy access for both tourists and local comedy fans. \nWhat to Expect\nExpect a fast-paced evening featuring multiple comedians performing throughout the show. The Comedy Cellar is known for showcasing a wide variety of comedic styles\, from observational humor and storytelling to sharp social commentary\, crowd work\, and cutting-edge stand-up. \nWhether you’re discovering a future comedy star or watching a seasoned veteran perfect their craft\, every show delivers the authentic comedy club experience that has made the Comedy Cellar one of the most respected brands in stand-up comedy. \nFor comedy fans visiting Las Vegas\, Comedy Cellar is widely considered one of the best places in the city to experience live stand-up comedy any night of the week.
-URL:https://comedycalendar.com/event/comedy-cellar-las-vegas-late/2026-07-16/
-LOCATION:Comedy Cellar Las Vegas at Rio Hotel & Casino\, 3700 W Flamingo Rd\, Las Vegas\, NV\, 89103\, United States
-ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fc4/a6703ea9-a17b-4211-b9dc-7308aa0b2fc4_RETINA_PORTRAIT_16_9.jpg
-GEO:36.1172452;-115.1861279
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Comedy Cellar Las Vegas at Rio Hotel & Casino 3700 W Flamingo Rd Las Vegas NV 89103 United States;X-APPLE-RADIUS=500;X-TITLE=3700 W Flamingo Rd:geo:-115.1861279,36.1172452
-END:VEVENT
+BEGIN:VTIMEZONE
+TZID:America/Detroit
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:20250309T070000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:20251102T060000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:20260308T070000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:20261101T060000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:20270314T070000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:20271107T060000
+END:STANDARD
+END:VTIMEZONE
 BEGIN:VEVENT
 DTSTART;TZID=America/New_York:20260717T190000
 DTEND;TZID=America/New_York:20260717T210000
@@ -624,5 +558,111 @@ LOCATION:Brea Improv\, 180 South Brea Blvd\, Brea\, CA\, 92821\, United States
 ATTACH;FMTTYPE=image/png:https://comedycalendar.com/wp-content/uploads/2026/06/23_Edp-lmRkNR.png
 GEO:33.9183365;-117.8988084
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Brea Improv 180 South Brea Blvd Brea CA 92821 United States;X-APPLE-RADIUS=500;X-TITLE=180 South Brea Blvd:geo:-117.8988084,33.9183365
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260718T193000
+DTEND;TZID=America/New_York:20260718T220000
+DTSTAMP:20260323T041246Z
+CREATED:20260323T041246Z
+LAST-MODIFIED:20260323T041246Z
+UID:10003803-1784403000-1784412000@comedycalendar.com
+SUMMARY:The Second City "The Best of The Second City" LIVE at Birchmere
+DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nOfficial Tickets\nResale Tickets \nThe Second City “The Best of The Second City” LIVE at Birchmere\nThe legendary Second City comedy troupe brings their acclaimed “Best of The Second City” revue to the iconic Birchmere in Alexandria\, VA for one unforgettable night of sketch comedy\, improv\, and laughs. This touring production showcases the very best material from one of the most celebrated comedy institutions in the world — the birthplace of legends like Tina Fey\, Stephen Colbert\, and Bill Murray. \nEvent Details\nDate: Saturday\, July 18\, 2026\nTime: 7:30 PM (Doors open at 6:00 PM)\nVenue: Birchmere\nAddress: 3701 Mt. Vernon Ave\, Alexandria\, VA 22305\nAge Requirement: All ages welcome (everyone requires a ticket)\nParking: Free on-site parking available \nAbout The Second City\nThe Second City is the world’s premier comedy club\, theater\, and school of improvisation\, founded in Chicago in 1959. With alumni including Tina Fey\, Stephen Colbert\, Bill Murray\, John Belushi\, Gilda Radner\, and dozens more comedy legends\, The Second City has shaped modern comedy for over six decades. Their touring productions bring the best of their revue-style sketch comedy to audiences across North America. \nWhat to Expect\n\nA high-energy evening of sketch comedy and improvisation from one of comedy’s most storied institutions\nHilarious scenes\, songs\, and characters drawn from The Second City’s legendary catalog\nA talented ensemble cast of performers trained in the Second City tradition\nSharp\, witty commentary on modern life delivered with expert comedic timing\nAn intimate setting at the beloved Birchmere venue in Alexandria\nA show suitable for comedy fans of all backgrounds and ages\n\nVenue Information\nThe Birchmere is one of the most beloved music and comedy venues in the Washington\, DC area\, located at 3701 Mt. Vernon Ave in Alexandria\, VA. Known for its intimate atmosphere and excellent sightlines\, the Birchmere offers free on-site parking and a full-service bar and restaurant. The venue is fully handicap accessible. \nTicket Information\nTickets start at $55 (face value) or $70.20 through Ticketmaster. Resale tickets are also available through VividSeats. There is an 8-ticket limit per order. Will Call opens at 5 PM the night of the show. \nOfficial Tickets\nResale Tickets \nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
+URL:https://comedycalendar.com/event/the-second-city-the-best-of-the-second-city-live-at-birchmere/
+LOCATION:Birchmere\, 3701 Mt. Vernon Ave\, Alexandria\, VA\, 22305\, United States
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/e/f4e/b36c09ad-3149-4fb7-a029-1c722a438f4e_RETINA_PORTRAIT_16_9.jpg
+GEO:38.839991;-77.0613932
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Birchmere 3701 Mt. Vernon Ave Alexandria VA 22305 United States;X-APPLE-RADIUS=500;X-TITLE=3701 Mt. Vernon Ave:geo:-77.0613932,38.839991
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260718T200000
+DTEND;TZID=America/New_York:20260718T220000
+DTSTAMP:20260326T193629Z
+CREATED:20260322T180000Z
+LAST-MODIFIED:20260326T193629Z
+UID:10004016-1784404800-1784412000@comedycalendar.com
+SUMMARY:Rodney Carrington LIVE at MGM Northfield Park - Center Stage
+DESCRIPTION:Official TicketsResale Tickets \nAbout the Performer\nRodney Carrington is one of America’s most beloved comedians — a blue-collar entertainer who combines stand-up comedy with country music in a way that is uniquely\, hilariously his own. Born and raised in Texas\, Carrington has been making audiences laugh and sing along for over three decades. \nHis breakthrough came with the 1998 album Hangin’ With Rodney\, and he has since released eight comedy albums\, starred in his own ABC sitcom Rodney\, co-written and co-starred with Toby Keith in the feature film Beer For My Horses\, and released a Netflix special Here Comes the Truth. He is consistently ranked among America’s Top 10 highest-grossing comedians. \nFans can expect a raucous\, laugh-out-loud night of stand-up comedy and musical comedy\, featuring Rodney’s signature songs and stories about life\, love\, and everything in between. His shows are known for being wildly funny and genuinely heartfelt — a rare combination that keeps fans coming back year after year. \nEvent Details\nDate: Saturday\, July 18\, 2026 \nTime: 8:00 PM \nVenue: MGM Northfield Park – Center Stage\, 10777 Northfield Road\, Northfield\, OH 44067 \nAge Restriction: \nAbout the Venue\nMGM Northfield Park – Center Stage is Northeast Ohio’s premier casino entertainment venue\, located just 20 miles south of Cleveland inside the MGM Northfield Park complex off I-271 in Northfield\, Ohio. \nCenter Stage offers a world-class entertainment experience with excellent sightlines\, a full-service bar\, and the lively atmosphere of a casino showroom. The venue’s intimate layout ensures every seat delivers a great view of the stage\, making it one of the best places in the region to catch a live comedy show. \nAmple on-site parking\, easy highway access\, a full casino floor\, and multiple dining options throughout the complex make MGM Northfield Park the ideal destination for a complete evening of entertainment in Northeast Ohio. \nWhat to Expect\nRodney Carrington delivers a full evening of stand-up comedy and musical comedy that blends laugh-out-loud jokes with his signature country songs. His shows are high-energy\, crowd-pleasing\, and packed with the kind of humor that makes you feel right at home. \nExpect an opener to kick off the night before Rodney takes the stage for a headlining set that covers everything from relationships and family to the absurdities of everyday life — all with his trademark Texas charm and comedic timing. \nNote: This is a 21+ event. Content is for mature audiences. Please bring valid government-issued ID. \nTicket Information\nPrice Range: $30 – $85 (prices may vary based on demand) \nSecure your seats through official Ticketmaster channels or find resale tickets via VividSeats. \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
+URL:https://comedycalendar.com/event/rodney-carrington-live-at-mgm-northfield-park-center-stage/
+LOCATION:MGM Northfield Park – Center Stage\, 10777 Northfield Road\, Northfield\, OH\, 44067\, USA
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/2a5/511e89de-d97c-4259-b7b9-d7c9724552a5_RETINA_PORTRAIT_3_2.jpg
+GEO:41.348669;-81.5242506
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=MGM Northfield Park – Center Stage 10777 Northfield Road Northfield OH 44067 USA;X-APPLE-RADIUS=500;X-TITLE=10777 Northfield Road:geo:-81.5242506,41.348669
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260718T200000
+DTEND;TZID=America/New_York:20260718T220000
+DTSTAMP:20260401T040000Z
+CREATED:20260401T040000Z
+LAST-MODIFIED:20260401T040000Z
+UID:10004538-1784404800-1784412000@comedycalendar.com
+SUMMARY:Jerry Seinfeld LIVE at Premier Theater at Foxwoods Resort Casino
+DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nOfficial Tickets\nResale Tickets \nJerry Seinfeld LIVE at Premier Theater at Foxwoods Resort Casino\nOne of the greatest stand-up comedians of all time\, Jerry Seinfeld\, brings his legendary live show to the Premier Theater at Foxwoods Resort Casino in Mashantucket\, CT on July 18\, 2026. Known for his sharp observational humor and impeccable timing\, Seinfeld continues to sell out venues worldwide with his signature wit and storytelling. \nEvent Details\nDate: Saturday\, July 18\, 2026\nTime: 8:00 PM ET (Doors open at 7:00 PM)\nVenue: Premier Theater at Foxwoods Resort Casino\nAddress: 39 Norwich Westerly Road\, Mashantucket\, CT 06339\nAge Requirement: All Ages\nParking: On-site parking available \nAbout Jerry Seinfeld\nJerry Seinfeld is one of the most successful and beloved comedians in the world\, best known for co-creating and starring in the iconic NBC sitcom Seinfeld\, which ran from 1989 to 1998 and remains one of the greatest TV shows ever made. Beyond television\, Seinfeld has never stopped performing stand-up comedy\, releasing acclaimed specials including 23 Hours to Kill (2020) on Netflix. His observational comedy about everyday life\, relationships\, and the quirks of modern existence has made him a timeless voice in comedy. \nWhat to Expect\n\nWorld-class stand-up comedy from a true legend of the craft\nSharp\, observational humor about everyday life and human behavior\nImpeccable comedic timing honed over decades of performing\nAn intimate theater setting at the Premier Theater at Foxwoods\nA night of non-stop laughter you won’t soon forget\nOne of the most sought-after live comedy experiences of 2026\n\nVenue Information\nThe Premier Theater at Foxwoods Resort Casino is one of New England’s premier entertainment venues\, located within the world-famous Foxwoods Resort Casino in Mashantucket\, Connecticut. The theater offers excellent sightlines\, top-notch acoustics\, and a full-service casino resort experience before and after the show. \nTicket Information\nTickets for Jerry Seinfeld at Foxwoods start at $137. This is a highly anticipated show — tickets are expected to sell out quickly. Secure your seats now through official Ticketmaster or resale options via VividSeats. \nOfficial Tickets\nResale Tickets \nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
+URL:https://comedycalendar.com/event/jerry-seinfeld-live-at-premier-theater-at-foxwoods-resort-casino/
+LOCATION:Premier Theater at Foxwoods Resort Casino\, 39 Norwich Westerly Road\, Mashantucket\, CT\, 6339\, United States Of America
+ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/04/5f0ebea2-3344-4065-8ea3-1a9f6412b9d2_RETINA_LANDSCAPE_16_9-7ufweZ.jpg
+GEO:41.4758112;-71.9626466
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Premier Theater at Foxwoods Resort Casino 39 Norwich Westerly Road Mashantucket CT 6339 United States Of America;X-APPLE-RADIUS=500;X-TITLE=39 Norwich Westerly Road:geo:-71.9626466,41.4758112
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Detroit:20260718T200000
+DTEND;TZID=America/Detroit:20260718T220000
+DTSTAMP:20260515T013622Z
+CREATED:20260502T040000Z
+LAST-MODIFIED:20260515T013622Z
+UID:10004835-1784404800-1784412000@comedycalendar.com
+SUMMARY:Maz Jobrani LIVE at Sound Board at MotorCity Casino Hotel
+DESCRIPTION:Official TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you. \nAbout the Performer\nMaz Jobrani is one of the most celebrated Iranian-American comedians working today\, known for his sharp wit\, cultural observations\, and ability to bridge worlds through laughter. \nA founding member of the legendary Axis of Evil Comedy Tour\, Maz has built a career on turning his immigrant experience into universal comedy gold. His stand-up tackles everything from family dynamics and cultural clashes to politics and everyday absurdities — all delivered with warmth\, energy\, and precision timing. \nMaz has appeared on numerous TV shows and films\, including his own Netflix special “Brown and Friendly\,” and has been a regular on late-night television. His comedy resonates deeply with diverse audiences who appreciate his ability to find humor in the human condition regardless of background. \nEvent Details\nDate: Saturday\, July 18\, 2026 \nTime: 8:00 PM \nVenue: Sound Board at MotorCity Casino Hotel \nAddress: 2901 Grand River Ave\, Detroit\, MI 48201 \nAge Restrictions: Please check venue for age requirements. \nAbout the Venue\nThe Sound Board at MotorCity Casino Hotel is one of Detroit’s premier intimate concert and comedy venues\, nestled inside the vibrant MotorCity Casino Hotel complex on Grand River Avenue. \nWith a capacity of approximately 1\,700 guests\, the Sound Board offers an exceptional viewing experience from virtually every seat in the house. The venue features state-of-the-art sound and lighting systems\, a full bar\, and a sophisticated atmosphere that sets the stage for an unforgettable night out. \nThe MotorCity Casino Hotel complex provides ample amenities including on-site parking\, multiple dining options\, and the full casino experience before or after the show. The venue is easily accessible from downtown Detroit and surrounding suburbs. \nWhat to Expect\nMaz Jobrani delivers a high-energy\, crowd-pleasing performance that blends personal storytelling with sharp social commentary. Expect plenty of laughs about cultural identity\, family life\, and the quirks of modern American society. \nHis shows are known for their inclusive atmosphere — Maz has a gift for making everyone in the room feel seen and heard\, regardless of their background. This is a solo stand-up performance\, so you’ll get a full evening of Maz at his best. \nThe intimate setting of the Sound Board means you’ll be close to the action\, making for a truly personal comedy experience. Arrive early to grab a drink and settle in before the show begins. \nTicket Information\nPrice Range: From $60 (resale prices may vary) \nSecure your seats now before they sell out. Tickets are available through Ticketmaster (official) and VividSeats (resale). \nOfficial TicketsResale Tickets
+URL:https://comedycalendar.com/event/maz-jobrani-live-at-sound-board-at-motorcity-casino-hotel/
+LOCATION:Sound Board at MotorCity Casino Hotel\, 2901 Grand River Ave\, Detroit\, MI\, 48201\, USA
+ATTACH;FMTTYPE=image/jpeg:https://media.ticketmaster.com/en-us/dam/a/4ea/cd004bac-3aba-452b-9815-b4f443c4a4ea_TABLET_LANDSCAPE_LARGE_16_9.jpg
+GEO:42.3383929;-83.0685616
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Sound Board at MotorCity Casino Hotel 2901 Grand River Ave Detroit MI 48201 USA;X-APPLE-RADIUS=500;X-TITLE=2901 Grand River Ave:geo:-83.0685616,42.3383929
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260718T210000
+DTEND;TZID=America/New_York:20260718T230000
+DTSTAMP:20260714T165702Z
+CREATED:20260623T165756Z
+LAST-MODIFIED:20260714T165702Z
+UID:10006091-1784408400-1784415600@comedycalendar.com
+SUMMARY:SO LIT Saturday Blackbird Ordinary Comedy Night
+DESCRIPTION:So Lit Saturday: nonstop comedy\, guaranteed seating\, shots\, and a Miami afterparty that keeps the night alive. Free Shots at 9PM.\n\n\nSO LIT Saturday at Blackbird Ordinary 🔥\n \nHere’s how to start off your Saturday nights…in one of the best nightclubs in Brickell. \nWe’re setting the weekend on fire with comedy\, cocktails\, and crowdwork\, all happening inside Blackbird Ordinary\, Miami’s most iconic nightlife spot. \n🎤 Comedy Show | 9–10:30PMThe night kicks off in the back room\, where it transforms into a full-blown comedy club. Hosted by Manny Garavito (Miami’s Best Comedian) and JJ (Manny’s favorite Miami comedian)\, expect laughs that go from wild to wild af real quick. \nThese two have spent years building Miami’s funniest nights\, and now they’re bringing the energy\, the people\, and the afterparty vibes all under one roof. \nTicket Options \nFree SeatingFirst come\, first served. Whatever seats are not purchased will be available to anyone who arrives early. Once they’re gone\, they’re gone. \n$25 Guaranteed Seating + FREE Shot After 9pmSecure your spot without rushing. We’ll hold your seats until you arrive and welcome you with your shot even if you show up after 9 PM. Limited seating available. \n$50 VIP Experience (Guaranteed Seating\, FREE Shot After 9PM\, VIP Bottle Afterparty Access AND Merch)Everything included: guaranteed seating\, a free shot even after 9 PM\, access to our bottle section for the afterparty with Manny and JJ\, plus exclusive Miami Comedy merch to take home. VERY Limited space. \n \nThis is So Lit Saturday at Blackbird Ordinary—where Brickell weekends hit different.
+URL:https://comedycalendar.com/event/so-lit-saturday-blackbird-ordinary-comedy-night-22/
+LOCATION:Blackbird Ordinary\, Southwest 1st Avenue 729\, Miami\, FL\, 33130\, United States
+CATEGORIES:Showcase
+ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/06/3d87d3d883e225c53c2c702488594df1-Hdt6Sk.tmp_-PYBfmp.jpg
+GEO:25.7666715;-80.1951345
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Blackbird Ordinary Southwest 1st Avenue 729 Miami FL 33130 United States;X-APPLE-RADIUS=500;X-TITLE=Southwest 1st Avenue 729:geo:-80.1951345,25.7666715
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260718T211500
+DTEND;TZID=America/New_York:20260718T230000
+DTSTAMP:20260515T013627Z
+CREATED:20260321T000000Z
+LAST-MODIFIED:20260515T013627Z
+UID:10003526-1784409300-1784415600@comedycalendar.com
+SUMMARY:Andrew Dismukes LIVE at Punch Line Philly (Saturday Late Show)
+DESCRIPTION:Official TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you. \nAbout Andrew Dismukes\nAndrew Dismukes is one of the most exciting voices in stand-up comedy today. Best known as a cast member on Saturday Night Live\, Dismukes earned a devoted following with his sharp character work\, absurdist humor\, and impeccable comedic timing. \nA Texas native\, he brings a uniquely deadpan yet explosive energy to the stage. His live stand-up goes deeper than what you’ve seen on TV — expect personal storytelling\, ridiculous premises\, and a performance style that keeps the audience completely engaged from start to finish. \nThe Saturday late show at Punch Line Philly is the perfect way to end your weekend on a high note. Andrew Dismukes is guaranteed to deliver a night you won’t forget. \nEvent Details\nDate: Saturday\, July 18\, 2026 \nShow Time: 9:15 PM (Late Show) \nVenue: Punch Line Philly — 33 E. Laurel Street\, Philadelphia\, PA 19123 \nAge Restrictions: 18+ (valid ID required) \nContent Warning: Adult language and themes \nAbout the Venue\nPunch Line Philly is Philadelphia’s most celebrated comedy club\, located at 33 E. Laurel Street in the Northern Liberties neighborhood. The intimate venue holds approximately 300 guests in a setting designed specifically for stand-up comedy\, with excellent sightlines and acoustics from every seat. \nThe club features a full bar and food menu\, so you can enjoy cocktails\, craft beers\, and bites throughout the show. Saturday late shows at Punch Line Philly are legendary for their electric atmosphere — the crowd is always ready to have a great time\, and the energy in the room is unmatched. \nParking is available nearby\, and the venue is easily accessible by public transit. Punch Line Philly is consistently ranked among the best comedy clubs on the East Coast. \nWhat to Expect\nThis is a solo stand-up performance by Andrew Dismukes running approximately 60–75 minutes. The Saturday late show crowd is always one of the most enthusiastic of the weekend\, creating an incredible shared experience between performer and audience. \nDoors open approximately 30 minutes before showtime. Arrive early to grab a drink and find your seat. A two-drink minimum applies at most tables. \nTicket Information\nPrice Range: $52 – $112 (fees included) \nTickets are available through Ticketmaster (official) and VividSeats (resale). Saturday late shows sell out extremely fast — grab your tickets now before they’re gone! \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
+URL:https://comedycalendar.com/event/andrew-dismukes-live-at-punch-line-philly-saturday-late-show/
+LOCATION:Punch Line Philly\, 33 E. Laurel Street\, Philadelphia\, PA\, 19123\, United States
+ATTACH;FMTTYPE=image/jpeg:https://media.ticketmaster.com/en-us/dam/a/4fd/c4204539-de6d-4d5a-b27c-c1ec6915d4fd_TABLET_LANDSCAPE_LARGE_16_9.jpg
+GEO:39.9652742;-75.1351879
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Punch Line Philly 33 E. Laurel Street Philadelphia PA 19123 United States;X-APPLE-RADIUS=500;X-TITLE=33 E. Laurel Street:geo:-75.1351879,39.9652742
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260718T211500
+DTEND;TZID=America/Chicago:20260718T231500
+DTSTAMP:20260525T000105Z
+CREATED:20260401T040000Z
+LAST-MODIFIED:20260525T000105Z
+UID:10004598-1784409300-1784416500@comedycalendar.com
+SUMMARY:Aries Spears LIVE at Funny Bone Comedy Club - Omaha (Sat Late)
+DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nOfficial Tickets\nResale Tickets \nAries Spears LIVE at Funny Bone – Omaha\nGet ready for a night of non-stop laughs as stand-up comedy powerhouse Aries Spears takes the stage at Funny Bone Comedy Club in Omaha\, Nebraska. Known for his razor-sharp wit and explosive energy\, Aries Spears delivers a comedy experience you won’t forget. \nEvent Details\nDate: Saturday\, July 18\, 2026\nTime: 9:15 PM (Doors open at 8:30 PM)\nVenue: Funny Bone Comedy Club\, 710 N 114th St\, Suite 210\, Omaha\, NE 68154\nAge Requirement: 18+ (Valid photo ID required)\nTicket Price: $37 – $42 \nAbout Aries Spears\nAries Spears is a veteran stand-up comedian and actor best known for his long run on MADtv\, where his uncanny celebrity impressions made him a household name. With decades of experience on stage and screen\, Spears brings a high-energy\, no-holds-barred style to every performance. He has appeared on numerous TV specials and continues to tour nationally to sold-out crowds. \nWhat to Expect\n\nHigh-energy stand-up comedy from a MADtv legend\nHilarious celebrity impressions and sharp observational humor\nAn intimate comedy club atmosphere\nFull bar and dinner menu available\nA late-night Saturday show for the ultimate comedy night out\n\nTicket Information\nTickets for the Saturday 9:15 PM late show start at $37. Seating is general admission. \nOfficial Tickets\nResale Tickets \nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you.\nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
+URL:https://comedycalendar.com/event/aries-spears-live-at-funny-bone-comedy-club-omaha-sat-late/
+LOCATION:Funny Bone Comedy Club – Omaha\, 710 N 114th St Suite 210\, Omaha\, NE\, 68154
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fe8/f5d847b2-3439-4e8f-8b98-efc6f1cb9fe8_RETINA_LANDSCAPE_16_9.jpg
+GEO:41.2661592;-96.093382
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Funny Bone Comedy Club – Omaha 710 N 114th St Suite 210 Omaha NE 68154;X-APPLE-RADIUS=500;X-TITLE=710 N 114th St Suite 210:geo:-96.093382,41.2661592
 END:VEVENT
 END:VCALENDAR

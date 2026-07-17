@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-16T05:57:02.722Z",
+  "generated": "2026-07-17T06:18:17.848Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -676,41 +676,6 @@
             },
             "rss": {
               "href": "house-of-blues-houston-house-of-blues-houston.rss",
-              "type": "application/rss+xml"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "name": "houston-arboretum",
-      "friendlyName": "Houston Arboretum & Nature Center",
-      "description": "Nature hikes, bird walks, children's programs, yoga in the park, wildlife workshops, and volunteer events at this urban nature sanctuary in Memorial Park.",
-      "url": "https://houstonarboretum.org/events/",
-      "tags": [
-        "Parks",
-        "Memorial"
-      ],
-      "geo": {
-        "lat": 29.7671,
-        "lng": -95.4572,
-        "label": "Houston Arboretum & Nature Center, 4501 Woodway Dr, Houston, TX 77024"
-      },
-      "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=Houston%20Arboretum%20%26%20Nature%20Center%2C%204501%20Woodway%20Dr%2C%20Houston%2C%20TX%2077024"
-      },
-      "kind": "external",
-      "calendars": [
-        {
-          "name": "houston-arboretum",
-          "friendlyName": "Houston Arboretum & Nature Center",
-          "links": {
-            "ics": {
-              "href": "external-houston-arboretum.ics",
-              "type": "text/calendar"
-            },
-            "rss": {
-              "href": "external-houston-arboretum.rss",
               "type": "application/rss+xml"
             }
           }
