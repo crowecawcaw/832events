@@ -51,7 +51,9 @@ jobs:
     - name: Setup Node.js environment
       uses: actions/setup-node@v4
       with:
-        node-version: '20'
+        # Single Node pin for every workflow — bump .nvmrc to upgrade. (Node 20
+        # is deprecation-warned on GitHub runners.)
+        node-version-file: '.nvmrc'
         cache: 'npm'
         cache-dependency-path: |
           package-lock.json

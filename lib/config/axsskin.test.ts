@@ -132,6 +132,13 @@ describe('AXSSkinRipper shared module', () => {
             const __dirname = dirname(fileURLToPath(import.meta.url));
             const ajaxJson = readFileSync(join(__dirname, 'sample-data-axs-ajax.json'), 'utf-8');
 
+            // The sample data has fixed event dates (Jul 2026) and rip()
+            // drops events older than 6h, so freeze the clock before those
+            // dates — otherwise this test starts failing once real time
+            // passes them. Fake only Date: rip() awaits mocked fetches, and
+            // faking timer functions would hang those promises.
+            vi.useFakeTimers({ now: new Date('2026-07-01T12:00:00Z'), toFake: ['Date'] });
+
             class TestRipper extends AXSSkinRipper {
                 protected venueId = 'test';
                 protected location = LOCATION;
@@ -179,6 +186,7 @@ describe('AXSSkinRipper shared module', () => {
             // Should have events from both pages (deduped)
             expect(result[0].events.length).toBeGreaterThan(2);
 
+            vi.useRealTimers();
             vi.restoreAllMocks();
         });
     });

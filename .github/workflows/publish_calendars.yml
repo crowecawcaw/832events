@@ -2,7 +2,12 @@ name: Generate Calendars and Publish to GitHub Pages
 
 on:
   schedule:
-    - cron: "0 0 * * *" # Daily
+    # Off-peak minute instead of top-of-hour to avoid the midnight thundering
+    # herd. (This replaces a former `jitter` job that slept up to 3h on a
+    # runner — the sleep burned runner time and, worse, being skipped on
+    # non-schedule events made GitHub transitively skip downstream jobs that
+    # had no explicit `if`, so check-errors never ran on push builds.)
+    - cron: "43 2 * * *" # Daily
   push:
     branches:
       - main
@@ -14,22 +19,16 @@ on:
         default: false
 
 jobs:
-  jitter:
-    runs-on: ubuntu-latest
-    if: github.event_name == 'schedule'
-    steps:
-      - name: Random jitter (up to 3 hours)
-        run: sleep $((RANDOM % 10800))
-
   build:
-    needs: [jitter]
-    if: always() && (needs.jitter.result == 'success' || needs.jitter.result == 'skipped')
     uses: ./.github/workflows/build-calendars.yml
     permissions:
       contents: read
     secrets: inherit
 
   check-errors:
+    # Explicit condition (not the default success()) so this can never be
+    # transitively skipped if a job is ever inserted upstream of build again.
+    if: needs.build.result == 'success'
     runs-on: ubuntu-latest
     needs: build
     steps:
@@ -41,20 +40,23 @@ jobs:
       run: (( $ERROR_COUNT == 0 ))
 
   update-history:
-    # Record today's event/calendar counts and regenerate the README graph,
-    # committing any change to main. Pushing with the default GITHUB_TOKEN does
-    # NOT retrigger this workflow (GitHub suppresses token-driven workflow
-    # recursion), so there's no build loop. Runs only for our own builds (push
-    # to main / schedule / manual), never for PRs (this workflow has no PR
-    # trigger anyway). Best-effort: the script exits 0 if the build produced no
-    # output, so this never turns a publish run red.
+    # Record today's event/calendar counts and regenerate the README graph.
+    # This used to commit straight to main, but main's ruleset (required
+    # "build / build" status check) rejects every such push with GH013, so the
+    # graph silently stopped updating. The accumulated history now lives on
+    # the unprotected `event-history` data branch: restore it from there
+    # (seeding from the copies committed on main the first time), append
+    # today's point, and force-push a fresh snapshot. Force-push is lossless —
+    # the full point history lives inside event-history.json itself, and the
+    # README embeds the SVG from that branch. Best-effort: the script exits 0
+    # if the build produced no output, so this never turns a publish run red.
     if: always()
     permissions:
       contents: write
     runs-on: ubuntu-latest
     needs: build
     concurrency:
-      group: event-history-main
+      group: event-history-data
       cancel-in-progress: false
     steps:
       - name: Checkout main
@@ -62,6 +64,13 @@ jobs:
         with:
           ref: main
           fetch-depth: 1
+      - name: Restore history from data branch
+        run: |
+          if git fetch origin event-history; then
+            git checkout FETCH_HEAD -- event-history.json docs/event-history.svg
+          else
+            echo "No event-history branch yet; seeding from the copies on main."
+          fi
       - name: Download build output
         uses: actions/download-artifact@v4
         continue-on-error: true   # build may have failed before uploading output/
@@ -71,10 +80,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version-file: '.nvmrc'
       - name: Update event history graph
         run: node scripts/update-event-history.mjs
-      - name: Commit and push if changed
+      - name: Commit and push to data branch
         run: |
           if git diff --quiet -- event-history.json docs/event-history.svg; then
             echo "No change in event history; nothing to commit."
@@ -84,11 +93,14 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add event-history.json docs/event-history.svg
           git commit -m "Update event/calendar coverage graph"
-          git push origin main
+          git push --force origin HEAD:refs/heads/event-history
 
   deploy:
-    # Always run this deploy, even if the build failed. This is so we get newest results even if a calendar had errors
-    if: always()
+    # Deploy whatever the build managed to upload — a build that failed late
+    # (e.g. on the URL check) has already uploaded a usable site artifact.
+    # When the build died before uploading, the download below finds nothing
+    # and the remaining steps are skipped instead of failing a second job.
+    if: always() && needs.build.result != 'cancelled'
     permissions:
       contents: write   # peaceiris pushes the built site to the gh-pages branch
     runs-on: ubuntu-latest
@@ -101,6 +113,8 @@ jobs:
       cancel-in-progress: false
     steps:
       - name: Download artifact
+        id: download
+        continue-on-error: true   # absent when the build failed before upload
         uses: actions/download-artifact@v4
         with:
           name: github-pages
@@ -111,18 +125,21 @@ jobs:
       # must NOT wipe the preview/ subtree, so carry it forward into the new
       # publish dir before the (clean) deploy below.
       - name: Preserve existing PR previews
+        if: steps.download.outcome == 'success'
         uses: actions/checkout@v4
         continue-on-error: true   # gh-pages may not exist on the first deploy
         with:
           ref: gh-pages
           path: gh-pages-current
       - name: Merge previews into publish dir
+        if: steps.download.outcome == 'success'
         run: |
           if [ -d gh-pages-current/preview ]; then
             cp -r gh-pages-current/preview output/preview
           fi
 
       - name: Deploy to GitHub Pages
+        if: steps.download.outcome == 'success'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -141,12 +158,18 @@ jobs:
   build-error-responder:
     # Run the Claude Code action to investigate and fix build errors, in place
     # of the former account-scheduled "build-error responder" routine.
-    # Runs on any build with errors (push, schedule, or manual dispatch).
-    # Does NOT run on PRs (this workflow doesn't trigger on PRs).
+    # Fires when the build reported source errors OR when the build job failed
+    # outright (typecheck / tests / generation crashed — in that case
+    # error-count is empty, and this is exactly when auto-repair matters most:
+    # a hard build failure also blocks the site deploy).
+    # Does NOT run on push events (a human just pushed and is watching).
     # Skips if CLAUDE_CODE_OAUTH_TOKEN is not configured (as a secret).
     # Rate-limited to at most once per rolling 24h window via the Actions cache.
     # A workflow_dispatch run with force_routine=true bypasses the rate limit.
-    if: always() && github.event_name != 'push' && needs.build.outputs.error-count != '' && needs.build.outputs.error-count != '0'
+    if: >-
+      always() && github.event_name != 'push' &&
+      (needs.build.result == 'failure' ||
+       (needs.build.outputs.error-count != '' && needs.build.outputs.error-count != '0'))
     runs-on: ubuntu-latest
     needs: build
     permissions:
@@ -238,10 +261,21 @@ jobs:
           plugins: 'code-review@claude-code-plugins'
           claude_args: "--max-turns 120 --model haiku"
           prompt: |
-            A daily build finished with ${{ needs.build.outputs.error-count }}
-            error(s) (commit ${{ github.sha }}, run
-            ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}).
-            Read skills/build-report/SKILL.md and follow it completely to
+            A daily build finished with build job result
+            "${{ needs.build.result }}" and error count
+            "${{ needs.build.outputs.error-count }}" (commit ${{ github.sha }},
+            run ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}).
+
+            If the build job FAILED outright (result "failure", empty error
+            count), the calendars were never generated and the site deploy is
+            blocked. Do NOT follow the build-report skill in that case:
+            instead reproduce the failure locally (npm run typecheck,
+            npm run test:all — the failing step is visible in the run linked
+            above via `gh run view ${{ github.run_id }} --log-failed`), fix
+            the underlying breakage, and open a PR.
+
+            Otherwise (build succeeded with source errors), read
+            skills/build-report/SKILL.md and follow it completely to
             triage and fix the errors, opening PR(s) as the skill directs.
 
             IMPORTANT — any PR you open here is autonomous: opened from GitHub

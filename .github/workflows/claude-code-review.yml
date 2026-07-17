@@ -1,5 +1,10 @@
 name: Claude Code Review
 
+# ⚠️ CURRENTLY DISABLED in the Actions UI (2026-06-14) — PRs get NO automatic
+# review, so treat human review as the merge gate. Prompts/docs that say "wait
+# for Claude Code Review" don't apply while this is off. Re-enable from the
+# Actions tab (the file is kept for that); no file change needed.
+
 on:
   pull_request:
     types: [opened, synchronize, ready_for_review, reopened]
