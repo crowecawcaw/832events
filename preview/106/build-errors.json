@@ -1,53 +1,8 @@
 {
-  "buildTime": "2026-07-17T06:55:42.598Z",
-  "totalErrors": 12,
+  "buildTime": "2026-07-17T07:02:26.844Z",
+  "totalErrors": 6,
   "configErrors": [],
   "sources": [
-    {
-      "source": "heights-theater",
-      "calendar": "heights-theater",
-      "type": "Ripper",
-      "errorCount": 1,
-      "parseErrorCount": 1,
-      "uncertaintyCount": 0,
-      "errors": [
-        {
-          "type": "ParseError",
-          "reason": "Failed to fetch AXS events for venue 126116: Error: AXS fetch error: HTTP 403 for https://www.axs.com/venues/126116/the-heights-theater-houston-tickets",
-          "context": "venueSlug: the-heights-theater-houston-tickets"
-        }
-      ]
-    },
-    {
-      "source": "houston-improv",
-      "calendar": "houston-improv",
-      "type": "Ripper",
-      "errorCount": 1,
-      "parseErrorCount": 1,
-      "uncertaintyCount": 0,
-      "errors": [
-        {
-          "type": "ParseError",
-          "reason": "Failed to fetch AXS events for venue 130678: Error: AXS fetch error: HTTP 403 for https://www.axs.com/venues/130678/houston-improv-houston-tickets",
-          "context": "venueSlug: houston-improv-houston-tickets"
-        }
-      ]
-    },
-    {
-      "source": "houston-zoo",
-      "calendar": "houston-zoo",
-      "type": "Ripper",
-      "errorCount": 1,
-      "parseErrorCount": 1,
-      "uncertaintyCount": 0,
-      "errors": [
-        {
-          "type": "ParseError",
-          "reason": "Missing date string for event",
-          "context": "Title: Community Heroes Appreciation Days"
-        }
-      ]
-    },
     {
       "source": "pride-houston",
       "calendar": "pride-houston",
@@ -62,65 +17,13 @@
           "context": "pride-houston"
         }
       ]
-    },
-    {
-      "source": "scout-bar",
-      "calendar": "scout-bar",
-      "type": "Ripper",
-      "errorCount": 1,
-      "parseErrorCount": 1,
-      "uncertaintyCount": 0,
-      "errors": [
-        {
-          "type": "ParseError",
-          "reason": "Failed to fetch AXS events for venue 130538: Error: AXS fetch error: HTTP 403 for https://www.axs.com/venues/130538/scout-bar-houston",
-          "context": "venueSlug: scout-bar-houston"
-        }
-      ]
-    },
-    {
-      "source": "stereo-live-houston",
-      "calendar": "stereo-live-houston",
-      "type": "Ripper",
-      "errorCount": 1,
-      "parseErrorCount": 1,
-      "uncertaintyCount": 0,
-      "errors": [
-        {
-          "type": "ParseError",
-          "reason": "Failed to fetch AXS events for venue 126004: Error: AXS fetch error: HTTP 403 for https://www.axs.com/venues/126004/stereo-live-houston-houston-tickets",
-          "context": "venueSlug: stereo-live-houston-houston-tickets"
-        }
-      ]
-    },
-    {
-      "source": "toyota-center",
-      "calendar": "toyota-center",
-      "type": "Ripper",
-      "errorCount": 1,
-      "parseErrorCount": 1,
-      "uncertaintyCount": 0,
-      "errors": [
-        {
-          "type": "ParseError",
-          "reason": "Failed to fetch AXS events for venue 101329: Error: AXS fetch error: HTTP 403 for https://www.axs.com/venues/101329/toyota-center-houston-tickets",
-          "context": "venueSlug: toyota-center-houston-tickets"
-        }
-      ]
     }
   ],
-  "externalCalendarFailures": [
-    {
-      "name": "buffalo-bayou-partnership",
-      "friendlyName": "Buffalo Bayou Partnership",
-      "url": "https://buffalobayou.org/events/?ical=1",
-      "error": "Error: HTTP 403: "
-    }
-  ],
+  "externalCalendarFailures": [],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1777,
-    "eventsWithGeo": 1544,
+    "totalEvents": 1778,
+    "eventsWithGeo": 1545,
     "eventsWithoutGeo": 233,
     "geocodeErrors": 0
   },
@@ -133,21 +36,15 @@
   "zeroEventCalendars": [
     "arena-theatre-arena-theatre",
     "aurora-picture-show-aurora-picture-show",
-    "heights-theater-heights-theater",
     "heritage-society-heritage-society",
-    "houston-improv-houston-improv",
     "mossrose-bookshop-mossrose-bookshop",
     "nrg-arena-nrg-arena",
     "nrg-stadium-nrg-stadium",
     "pride-houston-pride-houston",
     "read-houston-read-houston",
     "saint-arnold-brewing-company-saint-arnold-brewing-company",
-    "scout-bar-scout-bar",
-    "stereo-live-houston-stereo-live-houston",
-    "toyota-center-toyota-center",
     "tag-film",
     "tag-history",
-    "tag-spring-branch",
     "tag-events",
     "tag-concerts",
     "tag-fifa",
@@ -342,13 +239,6 @@
     },
     {
       "source": "ripper",
-      "name": "heights-theater",
-      "label": "The Heights Theater, 339 W 19th St, Houston, TX 77008",
-      "lat": 29.8027,
-      "lng": -95.411
-    },
-    {
-      "source": "ripper",
       "name": "heritage-society",
       "label": "The Heritage Society, 1100 Bagby Street, Houston, TX 77002",
       "lat": 29.760728,
@@ -430,13 +320,6 @@
       "label": "Houston Heights Association, Houston, TX 77008",
       "lat": 29.7948,
       "lng": -95.398
-    },
-    {
-      "source": "ripper",
-      "name": "houston-improv",
-      "label": "Houston Improv, 7620 Katy Freeway, Houston, TX 77024",
-      "lat": 29.7695,
-      "lng": -95.4975
     },
     {
       "source": "ripper",
@@ -580,13 +463,6 @@
     },
     {
       "source": "ripper",
-      "name": "scout-bar",
-      "label": "Scout Bar, 18307 Egret Bay Blvd, Houston, TX 77058",
-      "lat": 29.5699,
-      "lng": -95.1248
-    },
-    {
-      "source": "ripper",
       "name": "shrine-of-the-black-madonna",
       "label": "Shrine of the Black Madonna Cultural Center & Bookstore, 5309 Martin Luther King Blvd, Houston, TX 77021",
       "lat": 29.7368,
@@ -621,13 +497,6 @@
       "lng": -95.349
     },
     {
-      "source": "ripper",
-      "name": "toyota-center",
-      "label": "Toyota Center, 1510 Polk St, Houston, TX 77002",
-      "lat": 29.7589,
-      "lng": -95.3677
-    },
-    {
       "source": "external",
       "name": "tuts",
       "label": "Theatre Under The Stars at Hobby Center, 800 Bagby St, Houston, TX 77002",
@@ -657,8 +526,8 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1078,
-    "totalEvents": 1777,
+    "eventsWithImage": 1079,
+    "totalEvents": 1778,
     "venuesWithImage": 0,
     "totalVenues": 51,
     "unresolvable": 0
@@ -3677,7 +3546,7 @@
   "costStats": {
     "eventsWithCost": 418,
     "freeEvents": 257,
-    "totalEvents": 1777,
+    "totalEvents": 1778,
     "unresolvable": 0
   },
   "costGaps": [
@@ -5046,6 +4915,13 @@
       "summary": "Best Friends Day at Houston Zoo",
       "date": "2026-08-08T10:00-05:00[America/Chicago]",
       "url": "https://www.houstonzoo.org/events/best-friends-day/"
+    },
+    {
+      "source": "houston-zoo",
+      "eventId": "community-heroes-appreciation-days-2026-07-16-0696b268",
+      "summary": "Community Heroes Appreciation Days",
+      "date": "2026-07-16T10:00-05:00[America/Chicago]",
+      "url": "https://www.houstonzoo.org/events/community-heroes-day/"
     },
     {
       "source": "houston-zoo",
@@ -9586,13 +9462,6 @@
       "source": "heights-mercantile"
     },
     {
-      "name": "heights-theater-heights-theater",
-      "type": "Ripper",
-      "events": 0,
-      "expectEmpty": false,
-      "source": "heights-theater"
-    },
-    {
       "name": "heritage-society-heritage-society",
       "type": "Ripper",
       "events": 0,
@@ -9621,16 +9490,9 @@
       "source": "houston-grand-opera"
     },
     {
-      "name": "houston-improv-houston-improv",
-      "type": "Ripper",
-      "events": 0,
-      "expectEmpty": false,
-      "source": "houston-improv"
-    },
-    {
       "name": "houston-zoo-houston-zoo",
       "type": "Ripper",
-      "events": 6,
+      "events": 7,
       "expectEmpty": false,
       "source": "houston-zoo"
     },
@@ -9768,13 +9630,6 @@
       "source": "sawyer-yards"
     },
     {
-      "name": "scout-bar-scout-bar",
-      "type": "Ripper",
-      "events": 0,
-      "expectEmpty": false,
-      "source": "scout-bar"
-    },
-    {
       "name": "shrine-of-the-black-madonna-shrine-of-the-black-madonna",
       "type": "Ripper",
       "events": 2,
@@ -9794,13 +9649,6 @@
       "events": 10,
       "expectEmpty": false,
       "source": "space-center-houston"
-    },
-    {
-      "name": "stereo-live-houston-stereo-live-houston",
-      "type": "Ripper",
-      "events": 0,
-      "expectEmpty": false,
-      "source": "stereo-live-houston"
     },
     {
       "name": "texas-parks-wildlife-houston-texas-parks-wildlife-houston",
@@ -9829,13 +9677,6 @@
       "events": 129,
       "expectEmpty": false,
       "source": "the-secret-group"
-    },
-    {
-      "name": "toyota-center-toyota-center",
-      "type": "Ripper",
-      "events": 0,
-      "expectEmpty": false,
-      "source": "toyota-center"
     },
     {
       "name": "white-oak-music-hall-white-oak-music-hall",
@@ -9938,7 +9779,7 @@
     {
       "name": "tag-museum-district",
       "type": "Aggregate",
-      "events": 137,
+      "events": 138,
       "expectEmpty": false,
       "source": "tag-museum-district"
     },
@@ -9973,7 +9814,7 @@
     {
       "name": "tag-family",
       "type": "Aggregate",
-      "events": 33,
+      "events": 34,
       "expectEmpty": false,
       "source": "tag-family"
     },
@@ -10076,30 +9917,16 @@
       "source": "tag-opera"
     },
     {
-      "name": "tag-comedy",
-      "type": "Aggregate",
-      "events": 259,
-      "expectEmpty": false,
-      "source": "tag-comedy"
-    },
-    {
-      "name": "tag-spring-branch",
-      "type": "Aggregate",
-      "events": 0,
-      "expectEmpty": false,
-      "source": "tag-spring-branch"
-    },
-    {
       "name": "tag-animals",
       "type": "Aggregate",
-      "events": 6,
+      "events": 7,
       "expectEmpty": false,
       "source": "tag-animals"
     },
     {
       "name": "tag-parks",
       "type": "Aggregate",
-      "events": 211,
+      "events": 212,
       "expectEmpty": false,
       "source": "tag-parks"
     },
@@ -10193,6 +10020,13 @@
       "events": 0,
       "expectEmpty": false,
       "source": "tag-fifa"
+    },
+    {
+      "name": "tag-comedy",
+      "type": "Aggregate",
+      "events": 259,
+      "expectEmpty": false,
+      "source": "tag-comedy"
     },
     {
       "name": "tag-entertainment",
@@ -10316,7 +10150,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1787,
+      "events": 1788,
       "expectEmpty": false,
       "source": "tag-all"
     },
