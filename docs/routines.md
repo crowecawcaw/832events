@@ -103,12 +103,23 @@ before landing anything.
   responder follows the same self-validate-then-PR pattern.
 
   For **content-only** PRs (sources/, docs/, allowed-removals/, the caches),
-  the pipeline then **enables GitHub auto-merge** on its own PR, so it merges
-  automatically once the required `build / build` check (pr-preview) goes
-  green — no manual click. It never pushes to `main` or self-merges directly;
-  GitHub does the merge when the check passes. A PR that touches anything else
-  (workflows, engine code, config) is left for the owner — the pipeline only
-  enables auto-merge when every changed file is content.
+  the pipeline then makes the PR **self-merging** in two steps:
+
+  1. **Enable GitHub auto-merge** on its own PR (`gh pr merge --auto`).
+  2. **Dispatch `pr-checks.yml` on the PR branch.** A bot-opened PR never
+     triggers `pr-preview.yml` (the `GITHUB_TOKEN` recursion guard suppresses
+     it), so without this the required `build / build` check would sit at
+     "Expected" forever. `workflow_dispatch` is *exempt* from that guard;
+     `pr-checks.yml` calls the same reusable `build-calendars.yml`, producing
+     a check run named exactly `build / build` on the PR head. When it passes,
+     GitHub merges the PR — no manual click, no privileged PAT.
+
+  It never pushes to `main` or self-merges directly; GitHub does the merge
+  when the check passes. A PR that touches anything else (workflows, engine
+  code, config) is left for the owner — the pipeline only enables auto-merge
+  when every changed file is content. Note: the auto-merge commit is itself a
+  `GITHUB_TOKEN` event, so it does not trigger an immediate publish — merged
+  content deploys with the next nightly build.
 
 This needs two one-time repo settings (see `docs/SETUP.md` → "Native
 auto-merge"): enable **Allow auto-merge**, and protect `main` with **Require

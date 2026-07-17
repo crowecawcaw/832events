@@ -13,6 +13,11 @@ on:
         required: false
         default: "./"
         type: string
+      base-ref:
+        description: "Base branch for new-source detection when the triggering event has no github.base_ref (e.g. workflow_dispatch via pr-checks.yml). Ignored on pull_request events, which set github.base_ref themselves."
+        required: false
+        default: ""
+        type: string
     outputs:
       error-count:
         description: "Number of errors during calendar generation"
@@ -43,10 +48,10 @@ jobs:
         fetch-depth: 0
 
     - name: Fetch base ref for new source detection
-      if: github.base_ref != ''
+      if: github.base_ref != '' || inputs.base-ref != ''
       run: |
-        git fetch origin ${{ github.base_ref }}
-        echo "GITHUB_BASE_REF=${{ github.base_ref }}" >> $GITHUB_ENV
+        git fetch origin ${{ github.base_ref || inputs.base-ref }}
+        echo "GITHUB_BASE_REF=${{ github.base_ref || inputs.base-ref }}" >> $GITHUB_ENV
 
     - name: Setup Node.js environment
       uses: actions/setup-node@v4
