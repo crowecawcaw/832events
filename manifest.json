@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-17T06:29:07.894Z",
+  "lastUpdated": "2026-07-17T07:06:40.179Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -149,6 +149,25 @@
       ]
     },
     {
+      "name": "downtown-houston-events",
+      "description": "Downtown Houston",
+      "friendlyLink": "https://downtownhouston.org/calendar",
+      "calendars": [
+        {
+          "name": "downtown-houston-events",
+          "friendlyName": "Downtown Houston Events",
+          "icsUrl": "downtown-houston-events-downtown-houston-events.ics",
+          "rssUrl": "downtown-houston-events-downtown-houston-events.rss",
+          "tags": [
+            "Downtown",
+            "Community",
+            "Arts",
+            "Culture"
+          ]
+        }
+      ]
+    },
+    {
       "name": "encore-houston",
       "description": "ENCORE Day and Night",
       "friendlyLink": "https://www.eventbriteapi.com/",
@@ -161,6 +180,23 @@
           "tags": [
             "Music",
             "Nightlife",
+            "Midtown"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ensemble-theatre-houston",
+      "description": "Ensemble Theatre Houston",
+      "friendlyLink": "https://www.ensemblehouston.com/",
+      "calendars": [
+        {
+          "name": "ensemble-theatre-houston",
+          "friendlyName": "Ensemble Theatre Houston",
+          "icsUrl": "ensemble-theatre-houston-ensemble-theatre-houston.ics",
+          "rssUrl": "ensemble-theatre-houston-ensemble-theatre-houston.rss",
+          "tags": [
+            "Theater",
             "Midtown"
           ]
         }
@@ -490,6 +526,23 @@
       ]
     },
     {
+      "name": "sawyer-yards",
+      "description": "Sawyer Yards",
+      "friendlyLink": "https://www.sawyeryards.com/",
+      "calendars": [
+        {
+          "name": "sawyer-yards",
+          "friendlyName": "Sawyer Yards",
+          "icsUrl": "sawyer-yards-sawyer-yards.ics",
+          "rssUrl": "sawyer-yards-sawyer-yards.rss",
+          "tags": [
+            "Art",
+            "Near Northside"
+          ]
+        }
+      ]
+    },
+    {
       "name": "shrine-of-the-black-madonna",
       "description": "Shrine of the Black Madonna Cultural Center & Bookstore",
       "friendlyLink": "https://shrinebookstore.com/",
@@ -746,6 +799,19 @@
       ]
     },
     {
+      "name": "hobby-center",
+      "friendlyName": "Hobby Center for the Performing Arts",
+      "description": "Houston's premier performing arts center hosting Broadway touring productions, concerts, comedy, and dance performances in Downtown Houston.",
+      "icsUrl": "external-hobby-center.ics",
+      "originalIcsUrl": "https://www.thehobbycenter.org/?post_type=tribe_events&ical=1&eventDisplay=list",
+      "infoUrl": "https://www.thehobbycenter.org/events/",
+      "tags": [
+        "Arts",
+        "Downtown",
+        "Music"
+      ]
+    },
+    {
       "name": "holocaust-museum-houston",
       "friendlyName": "Holocaust Museum Houston",
       "description": "Education and remembrance museum with programming including educator workshops, author talks, film screenings, and community lectures",
@@ -866,6 +932,7 @@
     "Concert",
     "Culinary",
     "Cultural",
+    "Culture",
     "Downtown",
     "EaDo",
     "Education",

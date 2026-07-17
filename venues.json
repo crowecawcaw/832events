@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-17T06:29:13.440Z",
+  "generated": "2026-07-17T07:06:45.693Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -434,6 +434,41 @@
       ]
     },
     {
+      "name": "ensemble-theatre-houston",
+      "friendlyName": "Ensemble Theatre Houston",
+      "description": "Ensemble Theatre Houston",
+      "url": "https://www.ensemblehouston.com/",
+      "tags": [
+        "Theater",
+        "Midtown"
+      ],
+      "geo": {
+        "lat": 29.7301,
+        "lng": -95.4105,
+        "label": "Ensemble Theatre Houston, 3535 Main St, Houston, TX 77002"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Ensemble%20Theatre%20Houston%2C%203535%20Main%20St%2C%20Houston%2C%20TX%2077002"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "ensemble-theatre-houston",
+          "friendlyName": "Ensemble Theatre Houston",
+          "links": {
+            "ics": {
+              "href": "ensemble-theatre-houston-ensemble-theatre-houston.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "ensemble-theatre-houston-ensemble-theatre-houston.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "erjcc-houston",
       "friendlyName": "ERJCC Houston",
       "description": "Educational, cultural and community events at the Jewish community center in Houston",
@@ -606,6 +641,42 @@
             },
             "rss": {
               "href": "external-hermann-park.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "hobby-center",
+      "friendlyName": "Hobby Center for the Performing Arts",
+      "description": "Houston's premier performing arts center hosting Broadway touring productions, concerts, comedy, and dance performances in Downtown Houston.",
+      "url": "https://www.thehobbycenter.org/events/",
+      "tags": [
+        "Arts",
+        "Downtown",
+        "Music"
+      ],
+      "geo": {
+        "lat": 29.7563,
+        "lng": -95.3717,
+        "label": "Hobby Center for the Performing Arts, 800 Bagby St, Houston, TX 77002"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Hobby%20Center%20for%20the%20Performing%20Arts%2C%20800%20Bagby%20St%2C%20Houston%2C%20TX%2077002"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "hobby-center",
+          "friendlyName": "Hobby Center for the Performing Arts",
+          "links": {
+            "ics": {
+              "href": "external-hobby-center.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-hobby-center.rss",
               "type": "application/rss+xml"
             }
           }
@@ -1426,6 +1497,41 @@
             },
             "rss": {
               "href": "rooftop-cinema-club-houston-rooftop-cinema-club-houston.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "sawyer-yards",
+      "friendlyName": "Sawyer Yards",
+      "description": "Sawyer Yards",
+      "url": "https://www.sawyeryards.com/",
+      "tags": [
+        "Art",
+        "Near Northside"
+      ],
+      "geo": {
+        "lat": 29.7698,
+        "lng": -95.3839,
+        "label": "Sawyer Yards, 2101 Winter Street, Houston, TX 77007"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Sawyer%20Yards%2C%202101%20Winter%20Street%2C%20Houston%2C%20TX%2077007"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "sawyer-yards",
+          "friendlyName": "Sawyer Yards",
+          "links": {
+            "ics": {
+              "href": "sawyer-yards-sawyer-yards.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "sawyer-yards-sawyer-yards.rss",
               "type": "application/rss+xml"
             }
           }
