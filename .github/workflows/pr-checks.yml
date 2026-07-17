@@ -1,0 +1,46 @@
+name: PR Checks (dispatch)
+
+# Manually-dispatchable stand-in for pr-preview's required "build / build"
+# check, for PRs that CANNOT trigger CI on their own: PRs opened by the
+# source pipeline (and any other bot) use the workflow GITHUB_TOKEN, whose
+# events never start workflow runs (GitHub's anti-recursion guard) — so the
+# required check stays "Expected" forever and native auto-merge never fires.
+#
+# workflow_dispatch is EXEMPT from that guard, so the pipeline agent
+# dispatches this workflow on its own PR branch right after enabling
+# auto-merge (see source-pipeline.yml STEP 3). The `build` job below calls
+# the same reusable build-calendars.yml as pr-preview, so the resulting
+# check run is named exactly "build / build" on the branch head — which is
+# what the ruleset requires — and GitHub merges the PR when it passes.
+#
+# base-ref is pinned to main so the new-source gates (a brand-new source
+# must yield ≥1 event) run exactly as they would on a real pull_request
+# event, where github.base_ref provides it.
+#
+# Dispatching requires write access to the repo (the pipeline's token has
+# it; outsiders don't), and branches here are always repo-internal — fork
+# PRs can't reach this.
+
+on:
+  workflow_dispatch:
+    inputs:
+      pr:
+        description: "PR number this check run is for (informational)"
+        required: false
+        type: string
+
+run-name: "PR Checks${{ inputs.pr && format(' for #{0}', inputs.pr) || '' }} (${{ github.ref_name }})"
+
+concurrency:
+  group: pr-checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    uses: ./.github/workflows/build-calendars.yml
+    permissions:
+      contents: read
+    secrets: inherit
+    with:
+      artifact-name: pr-checks-${{ github.run_id }}
+      base-ref: main
