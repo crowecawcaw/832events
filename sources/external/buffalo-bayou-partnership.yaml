@@ -1,4 +1,8 @@
 name: buffalo-bayou-partnership
+# DISABLED 2026-07-17: the feed returns HTTP 403 even through Browserbase
+# (proxy: true was tried in the same change), so CI cannot fetch it at all.
+# Re-enable if the site lifts its bot blocking, or find an alternative feed.
+disabled: true
 # Fetched via Browserbase: the site returns HTTP 403 to GitHub Actions IPs.
 proxy: true
 friendlyname: "Buffalo Bayou Partnership"
