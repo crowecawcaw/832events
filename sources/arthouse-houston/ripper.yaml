@@ -1,4 +1,9 @@
 name: arthouse-houston
+# DISABLED 2026-07-17: schedule is an Eventive widget rendered client-side;
+# Browserbase's fetch API does not execute it, so even proxy: true finds no
+# event elements. Re-enable by rewriting the ripper against the Eventive API
+# (api.eventive.org) instead of scraping the page.
+disabled: true
 description: "Arthouse Houston"
 url: https://arthousehtx.eventive.org/schedule
 friendlyLink: https://arthousehtx.eventive.org/schedule

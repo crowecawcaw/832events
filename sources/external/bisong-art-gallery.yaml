@@ -1,4 +1,8 @@
 name: bisong-art-gallery
+# DISABLED 2026-07-17: the ICS export is gone — /events/?ical=1 (and the
+# tribe_events ical URL) now return HTML, so the feed no longer parses.
+# Re-enable if the site restores its calendar export, or convert to a ripper.
+disabled: true
 friendlyname: "Bisong Art Gallery"
 description: "Houston art gallery hosting exhibitions and cultural events"
 icsUrl: "https://bisonggallery.com/events/?ical=1"

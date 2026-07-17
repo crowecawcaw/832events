@@ -1,4 +1,6 @@
 name: buffalo-bayou-partnership
+# Fetched via Browserbase: the site returns HTTP 403 to GitHub Actions IPs.
+proxy: true
 friendlyname: "Buffalo Bayou Partnership"
 description: "Outdoor recreation and cultural programming along Buffalo Bayou — guided bayou boat cruises, wellness walks, sound-healing meditation, and tours at Allen's Landing, the Cistern, and Buffalo Bayou Park."
 icsUrl: "https://buffalobayou.org/events/?ical=1"

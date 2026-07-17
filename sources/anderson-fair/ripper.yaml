@@ -1,4 +1,10 @@
 name: anderson-fair
+# DISABLED 2026-07-17: andersonfair.net removed its Squarespace /events
+# collection (hard 404); shows are now sold as commerce PRODUCTS under
+# /show-tickets (dates embedded in product titles like "Sunny Jim Sept 18"),
+# which the squarespace event parser cannot read. Re-enable with a small
+# products-collection parser, or when the venue restores an events page.
+disabled: true
 type: squarespace
 proxy: true
 description: "Anderson Fair"

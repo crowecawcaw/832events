@@ -1,4 +1,6 @@
 name: hobby-center
+# Fetched via Browserbase: the site returns HTTP 403 to GitHub Actions IPs.
+proxy: true
 friendlyname: "Hobby Center for the Performing Arts"
 description: "Houston's premier performing arts center hosting Broadway touring productions, concerts, comedy, and dance performances in Downtown Houston."
 icsUrl: "https://www.thehobbycenter.org/?post_type=tribe_events&ical=1&eventDisplay=list"

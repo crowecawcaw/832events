@@ -1,4 +1,9 @@
 name: river-oaks-theatre
+# DISABLED 2026-07-17: events are rendered client-side by an Eventive widget
+# that Browserbase's fetch API does not execute, so even proxy: true sees no
+# event elements. Re-enable by rewriting the ripper against the Eventive API
+# (api.eventive.org) instead of scraping the page.
+disabled: true
 description: "River Oaks Theatre"
 url: https://www.theriveroakstheatre.com/
 friendlyLink: https://www.theriveroakstheatre.com/

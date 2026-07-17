@@ -1,6 +1,9 @@
 name: ensemble-theatre-houston
 description: "Ensemble Theatre Houston"
-url: https://www.ensemblehouston.com/2025-26-season
+# NOTE: season page rolls over yearly (404s the previous season's URL) — the
+# 2025-26 page died mid-2026. Update the path each season, or teach the ripper
+# to discover the current season link from the homepage nav.
+url: https://ensemblehouston.com/2026-2027-season
 friendlyLink: https://www.ensemblehouston.com/
 tags: [Theater, Midtown]
 geo:
