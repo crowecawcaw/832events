@@ -1,0 +1,278 @@
+// Builds and posts the "📅 Calendar Preview" PR comment for pr-preview.yml.
+//
+// Extracted from an inline actions/github-script block so the comment builder
+// is unit-testable (preview-comment.test.ts) and so build outputs reach it via
+// environment variables instead of being template-interpolated into script
+// source (calendar names containing quotes/backticks could break — or
+// inject — the inline script).
+//
+// CommonJS (.cjs): actions/github-script loads this with require(), and the
+// repo's package.json is "type": "module".
+'use strict';
+
+const fs = require('fs');
+
+function buildCommentBody({
+    errorCount,
+    previewUrl,
+    headSha,
+    zeroEventCalendarsRaw,
+    newZeroEventSourcesRaw,
+    buildErrors,
+    newSourceSummary,
+}) {
+    const zeroEventCalendars = (zeroEventCalendarsRaw || '').trim().split('\n').filter(Boolean);
+    const zeroEventSection = zeroEventCalendars.length > 0
+        ? `\n\n<details>\n<summary>⚠️ ${zeroEventCalendars.length} calendar(s) with 0 events</summary>\n\n${zeroEventCalendars.map(c => `- \`${c}\``).join('\n')}\n\n</details>`
+        : '\n\n✅ All calendars have events';
+
+    // Build the status badge from the split counts so the headline doesn't
+    // conflate parse errors (real bugs) with uncertainty (agent todos,
+    // non-fatal). Uncertainty still counts toward `totalErrors` per the
+    // design — we just label it distinctly.
+    const parseErrorTotal = (buildErrors.sources || []).reduce(
+        (a, s) => a + (s.parseErrorCount ?? s.errorCount ?? 0), 0
+    ) + (buildErrors.configErrors || []).length
+        + (buildErrors.externalCalendarFailures || []).length
+        + (buildErrors.geocodeErrors || []).length;
+    const uncertaintyOutstanding = buildErrors.uncertaintyStats?.outstanding ?? 0;
+    const proxyStaleServes = buildErrors.proxyStaleServes || [];
+    const badgeParts = [];
+    if (parseErrorTotal > 0) badgeParts.push(`❌ ${parseErrorTotal} parse error(s)`);
+    if (uncertaintyOutstanding > 0) badgeParts.push(`❓ ${uncertaintyOutstanding} uncertain`);
+    if (proxyStaleServes.length > 0) badgeParts.push(`🕒 ${proxyStaleServes.length} stale browserbase`);
+    const errorBadge = badgeParts.length > 0 ? badgeParts.join(' · ') : '✅ No errors';
+
+    const unexpectedNonEmpty = buildErrors.unexpectedNonEmptyCalendars || [];
+    const unexpectedNonEmptySection = unexpectedNonEmpty.length > 0
+        ? `\n\n<details>\n<summary>ℹ️ ${unexpectedNonEmpty.length} calendar(s) marked expectEmpty but have events</summary>\n\n${unexpectedNonEmpty.map(c => `- \`${c.name}\`: ${c.events} events — consider removing expectEmpty`).join('\n')}\n\n</details>`
+        : '';
+
+    // New zero-event sources that have never appeared in production
+    const newZeroEventSources = (newZeroEventSourcesRaw || '').trim().split('\n').filter(Boolean);
+    const newZeroEventSourcesSection = newZeroEventSources.length > 0
+        ? `\n\n🚫 **${newZeroEventSources.length} new source(s) with 0 events that have never appeared in production.** These will fail the build:\n${newZeroEventSources.map(s => `- \`${s}\``).join('\n')}\n\nRemove them or fix the ripper type/URL.`
+        : '';
+
+    // New sources with parse errors that are not yet in production
+    const newSourceParseErrors = buildErrors.newSourceParseErrors || [];
+    const newSourceParseErrorsSection = newSourceParseErrors.length > 0
+        ? `\n\n🚫 **${newSourceParseErrors.length} new source(s) with parse errors.** These must be fixed before merging:\n${newSourceParseErrors.map(s => `- \`${s.source}/${s.calendar}\`: ${s.errorCount} parse error(s)`).join('\n')}`
+        : '';
+
+    // HTML entities (&amp; etc.) in URL fields — always fatal (a broken
+    // link). Fix: decode in the ripper or write the literal in YAML.
+    const urlEntityErrors = buildErrors.urlEntityErrors || [];
+    const urlEntitySection = urlEntityErrors.length > 0
+        ? `\n\n🔗 **${urlEntityErrors.length} URL field(s) contain HTML entities.** These must be fixed before merging — decode the entity in the ripper (\`html-entities\`) or write the literal character in YAML:\n${urlEntityErrors.map(e => `- \`${e.source}${e.calendar ? '/' + e.calendar : ''}\` ${e.field} (${e.entities.join(', ')}): ${e.value}`).join('\n')}`
+        : '';
+
+    // Geo coverage stats
+    const geoStats = buildErrors.geoStats;
+    const geoSection = geoStats
+        ? `\n\n**🗺️ Geo coverage:** ${geoStats.eventsWithGeo.toLocaleString()} / ${geoStats.totalEvents.toLocaleString()} events (${Math.round(geoStats.eventsWithGeo / geoStats.totalEvents * 100)}%)` +
+          (geoStats.geocodeErrors > 0 ? ` — ⚠️ ${geoStats.geocodeErrors} geocode error(s)` : ' — ✅ No geocode errors')
+        : '';
+
+    // Photo coverage stats. Gaps are todos for the photo-resolver skill —
+    // informational, not a build-block.
+    const photoStats = buildErrors.photoStats;
+    const photoGaps = buildErrors.photoGaps || { venueGaps: [], eventGaps: [] };
+    let photoSection = '';
+    if (photoStats && (photoStats.totalEvents > 0 || photoStats.totalVenues > 0)) {
+        const evPct = photoStats.totalEvents > 0 ? Math.round(photoStats.eventsWithImage / photoStats.totalEvents * 100) : 0;
+        const vnPct = photoStats.totalVenues > 0 ? Math.round(photoStats.venuesWithImage / photoStats.totalVenues * 100) : 0;
+        const gapCount = (photoGaps.venueGaps?.length || 0) + (photoGaps.eventGaps?.length || 0);
+        photoSection = `\n\n**🖼️ Photo coverage:** ${photoStats.eventsWithImage.toLocaleString()} / ${photoStats.totalEvents.toLocaleString()} events (${evPct}%), ${photoStats.venuesWithImage.toLocaleString()} / ${photoStats.totalVenues.toLocaleString()} venues (${vnPct}%)` +
+            (gapCount > 0 ? ` — ${gapCount} missing (run the photo-resolver skill)` : ' — ✅ Fully covered');
+    }
+
+    // Cost coverage stats. Gaps are todos for the cost-resolver skill —
+    // informational, not a build-block.
+    const costStats = buildErrors.costStats;
+    const costGaps = buildErrors.costGaps || [];
+    let costSection = '';
+    if (costStats && costStats.totalEvents > 0) {
+        const costPct = Math.round(costStats.eventsWithCost / costStats.totalEvents * 100);
+        costSection = `\n\n**💲 Cost coverage:** ${costStats.eventsWithCost.toLocaleString()} / ${costStats.totalEvents.toLocaleString()} events (${costPct}%), ${costStats.freeEvents.toLocaleString()} free` +
+            (costGaps.length > 0 ? ` — ${costGaps.length.toLocaleString()} missing (run the cost-resolver skill)` : ' — ✅ Fully covered');
+    }
+
+    // Event-uncertainty stats. Outstanding entries are todos for the
+    // event-uncertainty-resolver skill — informational, not a build-block.
+    const uStats = buildErrors.uncertaintyStats;
+    const uEvents = buildErrors.uncertainEvents || [];
+    let uncertaintySection = '';
+    if (uStats && (uStats.outstanding + uStats.resolvedFromCache + uStats.acknowledgedUnresolvable > 0)) {
+        const summary = `**❓ Uncertain events:** ${uStats.outstanding} outstanding, ${uStats.resolvedFromCache} resolved from cache, ${uStats.acknowledgedUnresolvable} unresolvable`;
+        if (uEvents.length > 0) {
+            const sample = uEvents.slice(0, 20).map(e => {
+                const link = e.event.url ? `[link](${e.event.url})` : '—';
+                const fields = e.unknownFields.join(', ');
+                return `- \`${e.source}\` ${e.event.summary} (${e.event.date}) — missing: ${fields} ${link}`;
+            }).join('\n');
+            const more = uEvents.length > 20 ? `\n\n_…and ${uEvents.length - 20} more. Run the event-uncertainty-resolver skill to investigate._` : '\n\n_Run the event-uncertainty-resolver skill to investigate._';
+            uncertaintySection = `\n\n${summary}\n<details>\n<summary>Show outstanding entries</summary>\n\n${sample}${more}\n\n</details>`;
+        } else {
+            uncertaintySection = `\n\n${summary}`;
+        }
+    }
+
+    // Stale serves: a source whose live fetch failed and was satisfied from a
+    // cached copy older than the TTL. Counted in totalErrors.
+    // See docs/fetch-cache.md.
+    let proxyStaleSection = '';
+    if (proxyStaleServes.length > 0) {
+        const rows = proxyStaleServes.map(s =>
+            `| \`${s.source || s.url}\` | ${s.ageHours}h | ${s.cachedAt} | ${s.error} |`
+        ).join('\n');
+        proxyStaleSection = `\n\n**🕒 ${proxyStaleServes.length} source(s) served from stale cache.** The live fetch failed and a copy older than the TTL was used — investigate the source.\n<details>\n<summary>Show stale serves</summary>\n\n| Source | Age | Cached at | Error |\n|--------|-----|-----------|-------|\n${rows}\n\n</details>`;
+    }
+
+    // New source summary — event counts and sample events for sources not in production
+    let newSourceSection = '\n\n✅ No new sources in this PR';
+    if (newSourceSummary && newSourceSummary.length > 0) {
+        const typeLabel = (t) => t === 'External' ? 'External' : t === 'Recurring' ? 'Recurring' : 'Ripper';
+        const formatDate = (dateStr) => {
+            try {
+                const d = new Date(dateStr);
+                if (isNaN(d.getTime())) return dateStr;
+                return d.toLocaleString('en-US', { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true });
+            } catch { return dateStr; }
+        };
+        const parts = newSourceSummary.map(s => {
+            const header = `**${s.source}** (${typeLabel(s.type)}) — ${s.eventCount} events`;
+            if (s.sampleEvents.length > 0) {
+                const rows = s.sampleEvents.map(e =>
+                    `| ${e.summary} | ${formatDate(e.date)} | ${e.location || '—'} |`
+                ).join('\n');
+                return `${header}\n<details>\n<summary>Sample events</summary>\n\n| Event | Date | Location |\n|-------|------|----------|\n${rows}\n\n</details>`;
+            }
+            return header;
+        });
+        newSourceSection = `\n\n## 🆕 New Sources in This PR\n\n${parts.join('\n\n')}`;
+    }
+
+    let errorSection = '';
+    if (parseInt(errorCount) > 0) {
+        const lines = [];
+        const configErrors = buildErrors.configErrors || [];
+        const sourceErrors = buildErrors.sources || [];
+        const externalFailures = buildErrors.externalCalendarFailures || [];
+
+        if (configErrors.length > 0) {
+            lines.push(`**Config errors (${configErrors.length}):**`);
+            configErrors.forEach(e => {
+                lines.push(`- \`${e.path || e.type || 'unknown'}\`: ${e.reason || 'No reason provided'}`);
+            });
+            lines.push('');
+        }
+
+        // Show only calendars with real parse errors here (uncertainty errors
+        // already appear in their own "❓ Uncertain events" section above, so
+        // listing them again under "Parse errors" would be double-counting).
+        // `parseErrorCount` is the new breakout field; fall back to errorCount
+        // for older builds.
+        const sourceParseErrors = sourceErrors
+            .map(s => ({ ...s, _parse: s.parseErrorCount ?? s.errorCount ?? 0 }))
+            .filter(s => s._parse > 0);
+        if (sourceParseErrors.length > 0) {
+            const totalSourceErrors = sourceParseErrors.reduce((a, s) => a + s._parse, 0);
+            lines.push(`**Parse errors in ${sourceParseErrors.length} calendar(s) (${totalSourceErrors} total):**`);
+            sourceParseErrors.forEach(s => {
+                lines.push(`- \`${s.source || 'unknown'}/${s.calendar || 'unknown'}\`: ${s._parse} parse error(s)`);
+            });
+            lines.push('');
+        }
+
+        if (externalFailures.length > 0) {
+            lines.push(`**External calendar failures (${externalFailures.length}):**`);
+            externalFailures.forEach(f => {
+                lines.push(`- \`${f.name || 'unknown'}\`: ${f.error || 'Unknown error'}`);
+            });
+            lines.push('');
+        }
+
+        if (lines.length > 0) {
+            errorSection = `\n\n<details>\n<summary>🔍 ${errorCount} error(s) — click to expand</summary>\n\n${lines.join('\n')}\n</details>`;
+        }
+    }
+
+    return [
+        '## 📅 Calendar Preview',
+        '',
+        `**Status:** ${errorBadge}`,
+        `**Preview:** [View Calendar Index](${previewUrl})`,
+        `**Commit:** ${headSha}`,
+        geoSection,
+        photoSection,
+        costSection,
+        uncertaintySection,
+        proxyStaleSection,
+        newSourceSection,
+        errorSection,
+        zeroEventSection,
+        unexpectedNonEmptySection,
+        newZeroEventSourcesSection,
+        newSourceParseErrorsSection,
+        urlEntitySection,
+        '',
+        '> 🔗 Preview deployed to GitHub Pages'
+    ].join('\n');
+}
+
+// Entry point for actions/github-script. Reads the build-report JSONs from
+// the downloaded artifact (output/) and upserts the single preview comment.
+async function run({ github, context, env }) {
+    let buildErrors = { configErrors: [], sources: [], externalCalendarFailures: [] };
+    try {
+        buildErrors = JSON.parse(fs.readFileSync('output/build-errors.json', 'utf8'));
+    } catch (e) {
+        // File unavailable or parse failed — skip detailed breakdown
+    }
+
+    let newSourceSummary = null;
+    try {
+        newSourceSummary = JSON.parse(fs.readFileSync('output/new-source-summary.json', 'utf8'));
+    } catch (e) {
+        // new-source-summary.json not available — show default
+    }
+
+    const body = buildCommentBody({
+        errorCount: env.ERROR_COUNT,
+        previewUrl: env.PREVIEW_URL,
+        headSha: env.HEAD_SHA,
+        zeroEventCalendarsRaw: env.ZERO_EVENT_CALENDARS,
+        newZeroEventSourcesRaw: env.NEW_ZERO_EVENT_SOURCES,
+        buildErrors,
+        newSourceSummary,
+    });
+
+    const { data: comments } = await github.rest.issues.listComments({
+        owner: context.repo.owner,
+        repo: context.repo.repo,
+        issue_number: context.issue.number,
+    });
+
+    const botComment = comments.find(comment =>
+        comment.user.type === 'Bot' && comment.body.includes('📅 Calendar Preview')
+    );
+
+    if (botComment) {
+        await github.rest.issues.updateComment({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            comment_id: botComment.id,
+            body: body,
+        });
+    } else {
+        await github.rest.issues.createComment({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: context.issue.number,
+            body: body,
+        });
+    }
+}
+
+module.exports = { buildCommentBody, run };

@@ -179,10 +179,11 @@ so two discovery PRs never conflict on rebase. Feature ideas in `ideas.md`.
 
 ## Development workflow
 
-> Automated review: `.github/workflows/claude-code-review.yml` runs
-> automatically on every PR push and posts review comments — there's no trigger
-> to send. `claude.yml` answers `@claude` mentions. A template copy without these
-> workflows/secret has no auto-reviewer; treat human review as the gate.
+> Automated review: `.github/workflows/claude-code-review.yml` is currently
+> DISABLED in the Actions UI (as are `claude-sources.yml` and
+> `discovery-crawler.yml`), so PRs get **no automatic review** — treat human
+> review as the gate and don't wait for a review that will never arrive.
+> `claude.yml` (enabled) answers `@claude` mentions from the repo owner.
 
 **Never push to `main`.** Branch → commit → PR. Before pushing, fetch and rebase
 **only if behind**:

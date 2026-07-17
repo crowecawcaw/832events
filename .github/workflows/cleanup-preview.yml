@@ -8,9 +8,11 @@ on:
 # branch so stale previews don't accumulate. GitHub Pages serves from a branch,
 # so this is a plain git delete + push.
 concurrency:
-  # Same lane as the main publish and preview deploys — never push to gh-pages
-  # concurrently.
-  group: gh-pages-deploy
+  # Keyed per PR, NOT the shared gh-pages-deploy lane: GitHub keeps only ONE
+  # queued run per concurrency group, so when several PRs close at once the
+  # extra cleanups were CANCELLED and their previews left behind. Racing
+  # pushes to gh-pages are handled by this job's rebase-and-retry loop below.
+  group: gh-pages-cleanup-${{ github.event.number }}
   cancel-in-progress: false
 
 jobs:

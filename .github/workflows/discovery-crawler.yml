@@ -1,5 +1,11 @@
 name: Discovery Crawler
 
+# ⚠️ CURRENTLY DISABLED in the Actions UI (2026-07-06). Before re-enabling,
+# note the "Commit ledger + metrics" step pushes directly to main, which the
+# repo ruleset now REJECTS (GH013: required "build / build" status check) —
+# point that push at an unprotected data branch first, like the
+# `event-history` branch used by publish_calendars.yml's update-history job.
+
 # Deterministic Houston event-source discovery. A normal crawler (no LLM) runs
 # a fixed list of Brave searches, dedups against what we already pull from, and
 # records new domains in docs/discovery-ledger.json with per-run metrics in

@@ -1,5 +1,8 @@
 name: Claude Source Pipeline
 
+# ⚠️ CURRENTLY DISABLED in the Actions UI (2026-07-06) — no scheduled source
+# discovery runs. Re-enable from the Actions tab; the file is kept for that.
+
 # Discovers new Houston event sources AND implements them in a single daily run,
 # opening ONE human-review PR. (This replaces the old two-workflow split —
 # claude-discovery.yml + claude-implementation.yml — and the push-markdown-to-
