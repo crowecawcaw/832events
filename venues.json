@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-17T06:18:17.848Z",
+  "generated": "2026-07-17T06:29:13.440Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -683,6 +683,41 @@
       ]
     },
     {
+      "name": "houston-arboretum",
+      "friendlyName": "Houston Arboretum & Nature Center",
+      "description": "Nature hikes, bird walks, children's programs, yoga in the park, wildlife workshops, and volunteer events at this urban nature sanctuary in Memorial Park.",
+      "url": "https://houstonarboretum.org/events/",
+      "tags": [
+        "Parks",
+        "Memorial"
+      ],
+      "geo": {
+        "lat": 29.7671,
+        "lng": -95.4572,
+        "label": "Houston Arboretum & Nature Center, 4501 Woodway Dr, Houston, TX 77024"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Houston%20Arboretum%20%26%20Nature%20Center%2C%204501%20Woodway%20Dr%2C%20Houston%2C%20TX%2077024"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "houston-arboretum",
+          "friendlyName": "Houston Arboretum & Nature Center",
+          "links": {
+            "ics": {
+              "href": "external-houston-arboretum.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-houston-arboretum.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "houston-center-for-photography",
       "friendlyName": "Houston Center for Photography",
       "description": "Houston Center for Photography",
@@ -1139,6 +1174,41 @@
             },
             "rss": {
               "href": "mcgonigels-mucky-duck-mcgonigels-mucky-duck.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "murder-by-the-book",
+      "friendlyName": "Murder By The Book",
+      "description": "Murder By The Book",
+      "url": "https://www.murderbooks.com/events",
+      "tags": [
+        "Books",
+        "West University"
+      ],
+      "geo": {
+        "lat": 29.7255,
+        "lng": -95.4175,
+        "label": "Murder By The Book, 2342 Bissonnet St, Houston, TX 77005"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Murder%20By%20The%20Book%2C%202342%20Bissonnet%20St%2C%20Houston%2C%20TX%2077005"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "murder-by-the-book",
+          "friendlyName": "Murder By The Book",
+          "links": {
+            "ics": {
+              "href": "murder-by-the-book-murder-by-the-book.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "murder-by-the-book-murder-by-the-book.rss",
               "type": "application/rss+xml"
             }
           }

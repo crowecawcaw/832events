@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-07-17T06:18:17.855Z",
-  "totalErrors": 22,
+  "buildTime": "2026-07-17T06:29:13.445Z",
+  "totalErrors": 18,
   "configErrors": [],
   "sources": [
     {
@@ -105,21 +105,6 @@
           "type": "ParseError",
           "reason": "Missing date string for event",
           "context": "Title: Community Heroes Appreciation Days"
-        }
-      ]
-    },
-    {
-      "source": "murder-by-the-book",
-      "calendar": "murder-by-the-book",
-      "type": "Ripper",
-      "errorCount": 1,
-      "parseErrorCount": 1,
-      "uncertaintyCount": 0,
-      "errors": [
-        {
-          "type": "ParseError",
-          "reason": "Ripper crashed: Error: Murder By The Book fetch failed: HTTP 403 ",
-          "context": ""
         }
       ]
     },
@@ -240,49 +225,18 @@
       "error": "Error: HTTP 403: "
     },
     {
-      "name": "houston-arboretum",
-      "friendlyName": "Houston Arboretum & Nature Center",
-      "url": "https://houstonarboretum.org/?post_type=tribe_events&ical=1&eventDisplay=list",
-      "error": "Error: HTTP 503: "
-    },
-    {
-      "name": "islamic-society-greater-houston",
-      "friendlyName": "Islamic Society of Greater Houston",
-      "url": "https://isgh.org/?post_type=tribe_events&ical=1",
-      "error": "Error: HTTP 403: "
-    },
-    {
       "name": "walking-stick-brewing",
       "friendlyName": "Walking Stick Brewing",
       "url": "https://walkingstickbrewing.com/?post_type=tribe_events&ical=1&eventDisplay=list",
       "error": "Error: HTTP 403: "
     }
   ],
-  "geocodeErrors": [
-    {
-      "type": "GeocodeError",
-      "location": "Birchmere, 3701 Mt. Vernon Ave, Alexandria, VA, 22305, United States",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "MGM Northfield Park – Center Stage, 10777 Northfield Road, Northfield, OH, 44067, USA",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Sound Board at MotorCity Casino Hotel, 2901 Grand River Ave, Detroit, MI, 48201, USA",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    }
-  ],
+  "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1621,
-    "eventsWithGeo": 1403,
+    "totalEvents": 1654,
+    "eventsWithGeo": 1436,
     "eventsWithoutGeo": 218,
-    "geocodeErrors": 3
+    "geocodeErrors": 0
   },
   "uncertainEvents": [],
   "uncertaintyStats": {
@@ -301,7 +255,6 @@
     "heritage-society-heritage-society",
     "houston-improv-houston-improv",
     "mossrose-bookshop-mossrose-bookshop",
-    "murder-by-the-book-murder-by-the-book",
     "nrg-arena-nrg-arena",
     "nrg-stadium-nrg-stadium",
     "pride-houston-pride-houston",
@@ -318,16 +271,15 @@
     "tag-culture",
     "tag-history",
     "tag-spring-branch",
-    "tag-west-university",
     "tag-events",
     "tag-concerts",
     "tag-fifa",
     "tag-literary",
     "tag-river-oaks",
     "tag-brewery",
-    "tag-memorial",
     "tag-garden-oaks",
-    "external-houston-cinema-arts-society"
+    "external-houston-cinema-arts-society",
+    "external-islamic-society-greater-houston"
   ],
   "expectedEmptyCalendars": [],
   "proxyStaleServes": [
@@ -335,35 +287,35 @@
       "source": null,
       "url": "https://www.readhouston.com/events?format=json",
       "cachedAt": "2026-07-16T05:53:24.701Z",
-      "ageHours": 24,
+      "ageHours": 25,
       "error": "Browserbase fetch failed: HTTP 500 — {\"statusCode\":500,\"error\":\"Internal Server Error\",\"message\":\"Internal Server Error\"}"
     },
     {
       "source": null,
       "url": "https://www.readhouston.com/events?month=august-2026&view=calendar&format=json",
       "cachedAt": "2026-07-16T05:53:25.290Z",
-      "ageHours": 24,
+      "ageHours": 25,
       "error": "Browserbase fetch failed: HTTP 500 — {\"statusCode\":500,\"error\":\"Internal Server Error\",\"message\":\"Internal Server Error\"}"
     },
     {
       "source": null,
       "url": "https://www.readhouston.com/events?month=september-2026&view=calendar&format=json",
       "cachedAt": "2026-07-16T05:53:25.798Z",
-      "ageHours": 24,
+      "ageHours": 25,
       "error": "Browserbase fetch failed: HTTP 500 — {\"statusCode\":500,\"error\":\"Internal Server Error\",\"message\":\"Internal Server Error\"}"
     },
     {
       "source": null,
       "url": "https://www.readhouston.com/events?month=october-2026&view=calendar&format=json",
       "cachedAt": "2026-07-16T05:53:26.375Z",
-      "ageHours": 24,
+      "ageHours": 25,
       "error": "Browserbase fetch failed: HTTP 500 — {\"statusCode\":500,\"error\":\"Internal Server Error\",\"message\":\"Internal Server Error\"}"
     },
     {
       "source": null,
       "url": "https://www.readhouston.com/events?month=november-2026&view=calendar&format=json",
       "cachedAt": "2026-07-16T05:53:26.896Z",
-      "ageHours": 24,
+      "ageHours": 25,
       "error": "Browserbase fetch failed: HTTP 500 — {\"statusCode\":500,\"error\":\"Internal Server Error\",\"message\":\"Internal Server Error\"}"
     }
   ],
@@ -857,10 +809,10 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1045,
-    "totalEvents": 1621,
+    "eventsWithImage": 1078,
+    "totalEvents": 1654,
     "venuesWithImage": 0,
-    "totalVenues": 46,
+    "totalVenues": 48,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -996,6 +948,13 @@
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=House%20of%20Blues%20Houston%2C%201204%20Caroline%20St%2C%20Houston%2C%20TX%2077002"
       },
       {
+        "source": "external",
+        "name": "houston-arboretum",
+        "label": "Houston Arboretum & Nature Center, 4501 Woodway Dr, Houston, TX 77024",
+        "url": "https://houstonarboretum.org/events/",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Houston%20Arboretum%20%26%20Nature%20Center%2C%204501%20Woodway%20Dr%2C%20Houston%2C%20TX%2077024"
+      },
+      {
         "source": "ripper",
         "name": "houston-center-for-photography",
         "label": "Houston Center for Photography, 1441 W Alabama St, Houston, TX 77006",
@@ -1083,6 +1042,13 @@
         "label": "McGonigel's Mucky Duck, 2425 Norfolk St, Houston, TX 77098",
         "url": "https://mcgonigels.com/",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=McGonigel's%20Mucky%20Duck%2C%202425%20Norfolk%20St%2C%20Houston%2C%20TX%2077098"
+      },
+      {
+        "source": "ripper",
+        "name": "murder-by-the-book",
+        "label": "Murder By The Book, 2342 Bissonnet St, Houston, TX 77005",
+        "url": "https://www.murderbooks.com/events",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Murder%20By%20The%20Book%2C%202342%20Bissonnet%20St%2C%20Houston%2C%20TX%2077005"
       },
       {
         "source": "ripper",
@@ -3257,7 +3223,7 @@
   "costStats": {
     "eventsWithCost": 418,
     "freeEvents": 257,
-    "totalEvents": 1621,
+    "totalEvents": 1654,
     "unresolvable": 0
   },
   "costGaps": [
@@ -5231,6 +5197,27 @@
       "summary": "The Flinns",
       "date": "2026-09-24T18:00-05:00[America/Chicago]",
       "url": "https://www.mcgonigels.com/shows/the-flinns-early-show-3/"
+    },
+    {
+      "source": "murder-by-the-book",
+      "eventId": "julia-london-2026-07-18",
+      "summary": "Julia London",
+      "date": "2026-07-18T15:00-05:00[America/Chicago]",
+      "url": "https://www.murderbooks.com/London"
+    },
+    {
+      "source": "murder-by-the-book",
+      "eventId": "lauren-nossett-in-conversation-with-ashley-winstead-2026-07-28",
+      "summary": "Lauren Nossett in conversation with Ashley Winstead",
+      "date": "2026-07-28T18:30-05:00[America/Chicago]",
+      "url": "https://www.murderbooks.com/Nossett"
+    },
+    {
+      "source": "murder-by-the-book",
+      "eventId": "miranda-smith-and-mallory-arnold-in-conversation-with-abby-dunn-2026-07-22",
+      "summary": "Miranda Smith and Mallory Arnold in conversation with Abby Dunn",
+      "date": "2026-07-22T18:30-05:00[America/Chicago]",
+      "url": "https://www.murderbooks.com/Smith-Arnold"
     },
     {
       "source": "post-houston",
@@ -8674,7 +8661,7 @@
     {
       "name": "murder-by-the-book-murder-by-the-book",
       "type": "Ripper",
-      "events": 0,
+      "events": 3,
       "expectEmpty": false,
       "source": "murder-by-the-book"
     },
@@ -9066,7 +9053,7 @@
     {
       "name": "tag-books",
       "type": "Aggregate",
-      "events": 17,
+      "events": 20,
       "expectEmpty": false,
       "source": "tag-books"
     },
@@ -9115,7 +9102,7 @@
     {
       "name": "tag-parks",
       "type": "Aggregate",
-      "events": 181,
+      "events": 211,
       "expectEmpty": false,
       "source": "tag-parks"
     },
@@ -9178,7 +9165,7 @@
     {
       "name": "tag-west-university",
       "type": "Aggregate",
-      "events": 0,
+      "events": 3,
       "expectEmpty": false,
       "source": "tag-west-university"
     },
@@ -9297,7 +9284,7 @@
     {
       "name": "tag-memorial",
       "type": "Aggregate",
-      "events": 0,
+      "events": 30,
       "expectEmpty": false,
       "source": "tag-memorial"
     },
@@ -9339,7 +9326,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1661,
+      "events": 1694,
       "expectEmpty": false,
       "source": "tag-all"
     },
@@ -9407,6 +9394,13 @@
       "source": "holocaust-museum-houston"
     },
     {
+      "name": "external-houston-arboretum",
+      "type": "External",
+      "events": 30,
+      "expectEmpty": false,
+      "source": "houston-arboretum"
+    },
+    {
       "name": "external-houston-cinema-arts-society",
       "type": "External",
       "events": 0,
@@ -9447,6 +9441,13 @@
       "events": 22,
       "expectEmpty": false,
       "source": "ion-district"
+    },
+    {
+      "name": "external-islamic-society-greater-houston",
+      "type": "External",
+      "events": 0,
+      "expectEmpty": false,
+      "source": "islamic-society-greater-houston"
     },
     {
       "name": "external-levy-park-houston",

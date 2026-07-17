@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-17T06:17:57.554Z",
+  "lastUpdated": "2026-07-17T06:29:07.894Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -381,6 +381,23 @@
       ]
     },
     {
+      "name": "murder-by-the-book",
+      "description": "Murder By The Book",
+      "friendlyLink": "https://www.murderbooks.com/events",
+      "calendars": [
+        {
+          "name": "murder-by-the-book",
+          "friendlyName": "Murder By The Book",
+          "icsUrl": "murder-by-the-book-murder-by-the-book.ics",
+          "rssUrl": "murder-by-the-book-murder-by-the-book.rss",
+          "tags": [
+            "Books",
+            "West University"
+          ]
+        }
+      ]
+    },
+    {
       "name": "post-houston",
       "description": "POST Houston",
       "friendlyLink": "https://posthtx.com/event",
@@ -741,6 +758,18 @@
       ]
     },
     {
+      "name": "houston-arboretum",
+      "friendlyName": "Houston Arboretum & Nature Center",
+      "description": "Nature hikes, bird walks, children's programs, yoga in the park, wildlife workshops, and volunteer events at this urban nature sanctuary in Memorial Park.",
+      "icsUrl": "external-houston-arboretum.ics",
+      "originalIcsUrl": "https://houstonarboretum.org/?post_type=tribe_events&ical=1&eventDisplay=list",
+      "infoUrl": "https://houstonarboretum.org/events/",
+      "tags": [
+        "Parks",
+        "Memorial"
+      ]
+    },
+    {
       "name": "houston-farmers-market",
       "friendlyName": "Houston Farmers Market",
       "icsUrl": "external-houston-farmers-market.ics",
@@ -852,6 +881,7 @@
     "Kids",
     "MakersMarket",
     "Medical Center",
+    "Memorial",
     "Midtown",
     "Montrose",
     "Museum",
@@ -878,6 +908,7 @@
     "Upper Kirby",
     "Uptown",
     "Wedgewood",
+    "West University",
     "Workshops"
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-17T06:18:17.858Z",
+  "generated": "2026-07-17T06:29:13.447Z",
   "tags": [
     {
       "name": "Animals",
@@ -73,8 +73,8 @@
       "name": "Books",
       "slug": "books",
       "category": "Activities",
-      "eventCount": 17,
-      "calendarCount": 4,
+      "eventCount": 20,
+      "calendarCount": 5,
       "links": {
         "ics": {
           "href": "tag-books.ics",
@@ -444,6 +444,23 @@
       }
     },
     {
+      "name": "Memorial",
+      "slug": "memorial",
+      "category": "Neighborhoods",
+      "eventCount": 30,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-memorial.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-memorial.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
       "name": "Midtown",
       "slug": "midtown",
       "category": "Neighborhoods",
@@ -634,8 +651,8 @@
       "name": "Parks",
       "slug": "parks",
       "category": "Community",
-      "eventCount": 181,
-      "calendarCount": 4,
+      "eventCount": 211,
+      "calendarCount": 5,
       "links": {
         "ics": {
           "href": "tag-parks.ics",
@@ -881,6 +898,23 @@
         },
         "rss": {
           "href": "tag-wedgewood.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "West University",
+      "slug": "west-university",
+      "category": "Neighborhoods",
+      "eventCount": 3,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-west-university.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-west-university.rss",
           "type": "application/rss+xml"
         }
       }
