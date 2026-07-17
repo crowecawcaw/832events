@@ -9,10 +9,14 @@ name: Claude Source Pipeline
 # This file was renamed from claude-sources.yml (2026-07-17) to clear its
 # manually-disabled state: GitHub keys "disabled in the Actions UI" to the
 # workflow PATH, so the rename re-enables it without admin access. It is the
-# canonical source-discovery pipeline; the experimental discovery-crawler.yml
-# (deterministic Brave-search crawler) was deleted at the same time — its
-# daily ledger push to main was rejected by the ruleset (GH013) and it
-# duplicated this pipeline's job with more moving parts.
+# canonical source-discovery pipeline.
+#
+# The deterministic Brave-search crawler (formerly a standalone
+# discovery-crawler.yml) is now the `crawl` PRE-STEP below, feeding the Claude
+# `sources` job a verified shortlist instead of running as a competing pipeline.
+# Its old daily ledger/metrics/shortlist push to main was rejected by the branch
+# ruleset (GH013); the rebuilt crawler keeps NO state on main — see the `crawl`
+# job comment and docs/discovery-crawler.md.
 #
 # A PR opened from this Action uses the Actions default token, so it will NOT
 # trigger CI or the automated Claude Code Review (bot-authored events don't start
@@ -35,9 +39,55 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  sources:
-    # Skips silently on template copies that haven't set the OAuth token.
+  # Deterministic pre-step: a fixed Brave-search crawl + domain fingerprint that
+  # hands the agent a verified shortlist so it doesn't burn tokens on WebSearch.
+  # NO STATE ON MAIN by design — a daily blob push is blocked by the branch
+  # ruleset (GH013), and it duplicated the pipeline's memory. The crawler's only
+  # memory is git itself: sources/** (integrated) and docs/source-candidates/*
+  # (evaluated); the agent records rejections there via its PR, closing the loop.
+  # continue-on-error so a crawler hiccup (Brave down, budget spent) NEVER blocks
+  # the daily source run — the agent falls back to its own discovery.
+  crawl:
     if: ${{ github.repository == 'crowecawcaw/832events' }}
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    permissions:
+      contents: read
+    outputs:
+      shortlist_size: ${{ steps.crawl.outputs.shortlist_size }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Run deterministic crawl
+        id: crawl
+        env:
+          BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
+        run: npm run discovery-crawl -- --rotate
+
+      - name: Upload shortlist artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: discovery-shortlist
+          path: output/discovery-shortlist.json
+          retention-days: 3
+
+  sources:
+    # Runs after crawl regardless of its outcome (crawl is best-effort). Still
+    # skips silently on template copies that haven't set the OAuth token / repo.
+    needs: crawl
+    if: ${{ always() && github.repository == 'crowecawcaw/832events' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -49,6 +99,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
+
+      - name: Download crawl shortlist
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: discovery-shortlist
+          path: output
 
       - name: Run Claude Code (discover + implement)
         uses: anthropics/claude-code-action@v1
@@ -72,6 +129,19 @@ jobs:
             sources, then implement the best ones and open ONE PR for human review.
             Candidate tracking lives in docs/source-candidates/ — one YAML file
             per candidate, named <slug>.yaml (slug = lowercased, hyphenated name).
+
+            STEP 0 — SHORTLIST. The deterministic crawl pre-step may have left a
+            pre-verified starting set at output/discovery-shortlist.json. If that
+            file exists AND its "items" array is non-empty, treat it as your
+            discovery input: work the items TOP-DOWN (they are already deduped
+            against sources/** and docs/source-candidates/, and tier-1 items carry
+            a VERIFIED .ics feed) through the SKILL's quality gates, instead of
+            doing your own web-search discovery. For every shortlist item you
+            evaluate and REJECT, write a docs/source-candidates/<slug>.yaml with
+            status "notviable" and a one-line reason — this is the crawler's ONLY
+            memory, so recording the rejection is what keeps future crawls from
+            re-surfacing the domain. If the file is missing or its items array is
+            empty, fall back to STEP 1 discovery as usual.
 
             STEP 1 — DISCOVER. Follow skills/source-discovery/SKILL.md steps 1-5:
             scan for new Houston event sources, quality-gate them (check they
