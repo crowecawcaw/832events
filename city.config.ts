@@ -90,6 +90,7 @@ const cityConfig = {
         "Energy Corridor",
         "Spring Branch",
         "Bellaire",
+        "Braeswood",
         "West University",
         "Sharpstown",
         "Garden Oaks",

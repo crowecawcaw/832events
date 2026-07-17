@@ -363,6 +363,8 @@ const KNOWN_VENUE_COORDS: Record<string, GeoCoords> = {
   "birchmere": { lat: 38.8400, lng: -77.0614 },
   "mgm northfield park": { lat: 41.3485, lng: -81.5227 },
   "sound board at motorcity casino hotel": { lat: 42.3397, lng: -83.0678 },
+  // Houston Botanic Garden in Braeswood area (Tribe Events ICS feed).
+  "houston botanic garden": { lat: 29.6919, lng: -95.4189 },
 };
 
 /**

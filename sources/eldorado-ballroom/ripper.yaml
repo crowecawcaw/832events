@@ -1,0 +1,18 @@
+name: eldorado-ballroom
+type: eventbrite
+proxy: true
+description: "Eldorado Ballroom"
+url: https://www.theeldoradoballroom.com/
+friendlyLink: https://www.theeldoradoballroom.com/
+tags: [Music, Jazz, Community, "Third Ward"]
+geo:
+  lat: 29.73
+  lng: -95.362
+  label: "Eldorado Ballroom, 2310 Elgin St, Houston, TX 77004"
+calendars:
+  - name: eldorado-ballroom
+    friendlyname: "Eldorado Ballroom"
+    timezone: America/Chicago
+    config:
+      organizerId: "66985790043"
+      defaultLocation: "Eldorado Ballroom, 2310 Elgin St, Houston, TX 77004"

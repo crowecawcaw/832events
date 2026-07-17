@@ -1,5 +1,5 @@
 name: Eldorado Ballroom
-status: investigating
+status: added
 platform: Eventbrite
 url: https://www.theeldoradoballroom.com/
 tags:
@@ -8,10 +8,11 @@ tags:
   - Community
   - Third Ward
 firstSeen: 2026-06-15
-lastChecked: 2026-06-23
+lastChecked: 2026-07-17
 notes: Eventbrite organizer (66985790043) has 0 upcoming events as of June 23, 2026. Events were listed on Eventbrite/Songkick earlier (e.g., Gena/Karriem Riggins on Apr 3, 2026 — now past). Historic jazz venue (est. 1939) operated by Lucille's Hospitality Group under Project Row Houses. Will likely resume events; defer until events appear in Eventbrite API.
 impl:
   type: eventbrite
+  proxy: true
   organizerId: "66985790043"
   observedEventCount: 0
   builtEventCount: 0

@@ -1,0 +1,21 @@
+name: wonky-power-records
+friendlyname: Wonky Power Records
+description: "Wonky Power Records"
+url: "https://www.wonkypower.com/"
+friendlyLink: "https://www.wonkypower.com/"
+proxy: true
+type: dice
+tags: [Music, Nightlife, "Second Ward"]
+geo:
+  lat: 29.7545192
+  lng: -95.3344193
+  label: "Wonky Power Records, 3534 Navigation Blvd, Houston, TX 77003"
+  osmId: 11093177
+  osmType: way
+calendars:
+  - name: wonky-power-records
+    friendlyname: Wonky Power Records
+    timezone: America/Chicago
+    config:
+      venueName: "Wonky Power Records"
+      defaultLocation: "3534 Navigation Blvd, Houston, TX 77003"

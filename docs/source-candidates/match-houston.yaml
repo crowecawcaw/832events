@@ -1,5 +1,5 @@
 name: MATCH Houston
-status: investigating
+status: added
 platform: Tribe Events (ICS, unverified)
 url: https://matchouston.org/calendar
 tags:
@@ -7,8 +7,9 @@ tags:
   - Art
   - Midtown
 firstSeen: 2026-06-16
-lastChecked: 2026-06-18
+lastChecked: 2026-07-17
 notes: "External ICS feed created at sources/external/match-houston.yaml. Live fetch of Tribe Events ICS endpoint returned 0 events. Verify ICS URL: https://matchouston.org/?post_type=tribe_events&ical=1&eventDisplay=list"
 impl:
+  proxy: true
   icsUrl: https://matchouston.org/?post_type=tribe_events&ical=1&eventDisplay=list
   builtEventCount: 0

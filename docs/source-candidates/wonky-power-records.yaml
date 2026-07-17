@@ -1,10 +1,15 @@
 name: Wonky Power Records
-status: candidate
+status: added
 platform: DICE
 url: https://www.wonkypower.com/
 tags:
   - Music
   - Nightlife
 firstSeen: 2026-07-03
-lastChecked: 2026-07-03
-notes: DICE-powered music venue; confirmed DICE widget present. Requires DICE_API_KEY environment variable.
+lastChecked: 2026-07-17
+notes: DICE-powered music venue; implemented with proxy:true for Browserbase JS execution in CI.
+impl:
+  type: dice
+  proxy: true
+  venueName: "Wonky Power Records"
+  location: "3534 Navigation Blvd, Houston, TX 77003"
