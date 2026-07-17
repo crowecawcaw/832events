@@ -1,0 +1,668 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Find Upcoming Comedy Shows Near You | Comedy Calendar - ECPv6.17.0//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Find Upcoming Comedy Shows Near You | Comedy Calendar
+X-ORIGINAL-URL:https://comedycalendar.com
+X-WR-CALDESC:Events for Find Upcoming Comedy Shows Near You | Comedy Calendar
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-Robots-Tag:noindex
+X-PUBLISHED-TTL:PT1H
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:20250309T070000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:20251102T060000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:20260308T070000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:20261101T060000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:20270314T070000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:20271107T060000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20250309T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20251102T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20260308T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20261101T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20270314T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20271107T070000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:20250309T100000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:20251102T090000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:20260308T100000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:20261101T090000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:20270314T100000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:20271107T090000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:America/Toronto
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:20250309T070000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:20251102T060000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:20260308T070000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:20261101T060000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:20270314T070000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:20271107T060000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:America/Phoenix
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0700
+TZNAME:MST
+DTSTART:20250101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:America/Detroit
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:20250309T070000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:20251102T060000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:20260308T070000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:20261101T060000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:20270314T070000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:20271107T060000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260717T190000
+DTEND;TZID=America/New_York:20260717T210000
+DTSTAMP:20260515T013425Z
+CREATED:20260314T180000Z
+LAST-MODIFIED:20260515T013425Z
+UID:10002882-1784314800-1784322000@comedycalendar.com
+SUMMARY:D.L. Hughley LIVE at Cobb's Comedy Club
+DESCRIPTION:Official TicketsResale Tickets \nAbout the Performer\nD.L. Hughley is a comedy legend — one of the original Kings of Comedy and one of the most respected voices in stand-up. With a career spanning more than three decades\, Hughley has built a reputation for fearless\, politically charged comedy that tackles race\, culture\, and the absurdities of American life with razor-sharp wit and undeniable charisma. \nA bestselling author\, radio host\, actor\, and activist\, D.L. Hughley brings far more than just jokes to the stage. His performances are part stand-up\, part social commentary — deeply funny and deeply thought-provoking in equal measure. He has released multiple acclaimed comedy specials and continues to tour relentlessly\, delivering some of the most talked-about shows on the circuit. \nSeeing D.L. Hughley live is an experience unlike any other. His command of the stage\, his ability to read a room\, and his fearless willingness to go where other comedians won’t make every performance unforgettable. \nEvent Details\nDate: Friday\, July 17\, 2026 (also Saturday\, July 18)\nTime: 7:00 PM & 9:30 PM PDT (Fri) | 7:00 PM & 9:30 PM PDT (Sat)\nVenue: Cobb’s Comedy Club\, 915 Columbus Avenue\, San Francisco\, CA 94133\nAge Restriction: 18+ / 2 Beverage Minimum\nTicket Price Range: $40 – $70 \nAbout the Venue\nCobb’s Comedy Club is San Francisco’s premier stand-up destination\, located at 915 Columbus Avenue in the iconic North Beach neighborhood. With a capacity of around 400 guests\, Cobb’s offers an intimate setting where every seat delivers a great view of the stage. \nThe club features a full bar and dining service\, with cocktails\, beer\, wine\, and food available throughout the show. The classic comedy club layout — tables and chairs arranged around a central stage — creates a lively\, communal atmosphere that makes the laughs feel even bigger. \nCobb’s has hosted virtually every major name in comedy over its storied history\, and its reputation as one of the best rooms in the country is well-earned. Parking is available in nearby garages\, and the venue is easily accessible by BART and Muni. \nWhat to Expect\nD.L. Hughley performs four shows across the weekend of July 17–18\, giving fans multiple opportunities to catch this comedy icon live. Each performance is a full stand-up set — sharp\, funny\, and unapologetically honest — delivered by one of the greatest to ever do it. \nExpect big laughs\, bold takes\, and the kind of comedy that stays with you long after the show ends. The 18+ age restriction and 2-beverage minimum are in effect. Arrive early to secure a great seat and enjoy a drink before the show begins. \nTicket Information\nPrice Range: $40 – $70 (before taxes and fees)\nTickets are available through Ticketmaster (official) and VividSeats (resale). \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
+URL:https://comedycalendar.com/event/dl-hughley-live-at-cobbs-comedy-club/
+LOCATION:Cobb’s Comedy Club\, 915 Columbus Avenue\, San Francisco\, California\, 94133\, United States Of America
+ATTACH;FMTTYPE=image/jpeg:https://media.ticketmaster.com/en-us/dam/a/4af/a7091ede-2fb7-4276-a6fc-5d1f208d74af_TABLET_LANDSCAPE_LARGE_16_9.jpg
+GEO:37.8029543;-122.4143041
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Cobb’s Comedy Club 915 Columbus Avenue San Francisco California 94133 United States Of America;X-APPLE-RADIUS=500;X-TITLE=915 Columbus Avenue:geo:-122.4143041,37.8029543
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260717T190000
+DTEND;TZID=America/New_York:20260717T210000
+DTSTAMP:20260515T013516Z
+CREATED:20260321T000000Z
+LAST-MODIFIED:20260515T013516Z
+UID:10003521-1784314800-1784322000@comedycalendar.com
+SUMMARY:Andrew Dismukes LIVE at Punch Line Philly
+DESCRIPTION:Official TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you. \nAbout Andrew Dismukes\nAndrew Dismukes is one of the most exciting comedians to emerge from the Saturday Night Live universe in recent years. A cast member on NBC’s SNL since Season 46\, Dismukes first joined the show as a writer in Season 43\, earning Emmy nominations for Outstanding Writing for a Variety Series in 2018 and 2019 before stepping in front of the camera as a featured player and later a repertory cast member. \nBefore SNL\, Dismukes honed his stand-up chops at the University of Texas at Austin\, where he was the runner-up in the “Funniest Person in Austin” contest in 2016. His stand-up style is sharp\, clever\, and deeply personal — blending absurdist observations with self-aware humor that showcases the same comedic instincts that made him a standout on one of television’s most demanding stages. Seeing Dismukes perform live stand-up is a rare treat for fans who know him from TV. \nEvent Details\nDate: Friday\, July 17\, 2026 \nTime: 7:00 PM (Doors open approximately 30 minutes before showtime) \nVenue: Punch Line Philly — 33 E. Laurel Street\, Philadelphia\, PA 19123 \nAge Restriction: 21+ event with a 2-drink minimum \nTicket Prices: $32 – $72 (plus fees) \nAbout Punch Line Philly\nPunch Line Philly is Philadelphia’s premier stand-up comedy club\, located at 33 E. Laurel Street in the vibrant Northern Liberties neighborhood. The intimate venue seats approximately 300 guests and is purpose-built to deliver the best possible comedy experience — every seat is close to the stage\, and the energy in the room is electric from the moment the lights go down. \nThe club features a full bar and food service\, with a 2-drink minimum per guest. The layout ensures excellent sightlines from every seat\, and the warm\, lively atmosphere makes Punch Line Philly the ideal setting for a world-class stand-up show. The venue has hosted some of the biggest names in comedy and remains Philadelphia’s top destination for live laughs. \nParking is available in nearby lots and on surrounding streets. The venue is also accessible via SEPTA public transportation. Arrive early to grab a great seat and enjoy a drink before the show. \nWhat to Expect\nAndrew Dismukes live is a treat for comedy fans of all kinds. Whether you’ve followed his work on SNL or are discovering him for the first time\, his stand-up set delivers the same sharp wit and comedic precision that has made him one of television’s most beloved performers. Expect clever material\, great timing\, and the kind of performance that reminds you why live comedy is so special. \nThis is a Friday night show — the perfect way to kick off the weekend with serious laughs. The intimate Punch Line Philly setting means you’ll be up close with one of comedy’s brightest rising stars. \nTicket Information\nPrice Range: $32 – $72 (plus applicable fees) \nTickets are available through Ticketmaster (official) and VividSeats (resale). Andrew Dismukes shows sell out fast — grab your seats now! \nOfficial TicketsResale Tickets
+URL:https://comedycalendar.com/event/andrew-dismukes-live-at-punch-line-philly/
+LOCATION:Punch Line Philly\, 33 E. Laurel Street\, Philadelphia\, PA\, 19123\, United States
+ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/03/a6675b28-8ab7-4b56-956e-e83dbfd4c597_CUSTOM-MqYaiu.jpg
+GEO:39.9652742;-75.1351879
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Punch Line Philly 33 E. Laurel Street Philadelphia PA 19123 United States;X-APPLE-RADIUS=500;X-TITLE=33 E. Laurel Street:geo:-75.1351879,39.9652742
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260717T190000
+DTEND;TZID=America/Chicago:20260717T210000
+DTSTAMP:20260525T002005Z
+CREATED:20260401T040000Z
+LAST-MODIFIED:20260525T002005Z
+UID:10004521-1784314800-1784322000@comedycalendar.com
+SUMMARY:Aries Spears LIVE at Funny Bone Comedy Club - Omaha (Fri Early)
+DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nOfficial Tickets\nResale Tickets \nAries Spears LIVE at Funny Bone Comedy Club – Omaha\nGet ready for a night of non-stop laughs as stand-up comedy powerhouse Aries Spears takes the stage at Funny Bone Comedy Club in Omaha\, Nebraska. Known for his razor-sharp wit and explosive energy\, Aries Spears delivers a comedy experience you won’t forget. \nEvent Details\nDate: Friday\, July 17\, 2026\nTime: 7:00 PM (Doors open at 6:00 PM)\nVenue: Funny Bone Comedy Club – Omaha\nAddress: 710 N 114th St\, Suite 210\, Omaha\, NE 68154\nAge Requirement: 18+ (Valid photo ID required)\nTicket Price: $37 – $42 \nAbout Aries Spears\nAries Spears is a veteran stand-up comedian and actor best known for his long run on MADtv\, where his uncanny celebrity impressions made him a household name. With decades of experience on stage and screen\, Spears brings a high-energy\, no-holds-barred style to every performance. He has appeared on numerous TV specials and continues to tour nationally to sold-out crowds. \nWhat to Expect\n\nHigh-energy stand-up comedy from a MADtv legend\nHilarious celebrity impressions and sharp observational humor\nAn intimate comedy club atmosphere at Omaha’s Funny Bone\nFull bar and dinner menu available\nA night of laughs you’ll be talking about for weeks\n\nVenue Information\nFunny Bone Comedy Club – Omaha is located at 710 N 114th St\, Suite 210 in Omaha\, Nebraska. The club features a full bar and dinner menu\, offering a complete entertainment experience in an intimate setting perfect for live comedy. \nTicket Information\nTickets for the Friday 7:00 PM early show start at $37. Seating is general admission. Tickets are available through Ticketmaster (official) or VividSeats (resale). \nOfficial Tickets\nResale Tickets \nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you.\nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
+URL:https://comedycalendar.com/event/aries-spears-live-at-funny-bone-comedy-club-omaha-fri-early/
+LOCATION:Funny Bone Comedy Club – Omaha\, 710 N 114th St Suite 210\, Omaha\, NE\, 68154
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fe8/f5d847b2-3439-4e8f-8b98-efc6f1cb9fe8_RETINA_LANDSCAPE_16_9.jpg
+GEO:41.2661592;-96.093382
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Funny Bone Comedy Club – Omaha 710 N 114th St Suite 210 Omaha NE 68154;X-APPLE-RADIUS=500;X-TITLE=710 N 114th St Suite 210:geo:-96.093382,41.2661592
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260717T190000
+DTEND;TZID=America/Chicago:20260717T210000
+DTSTAMP:20260515T013521Z
+CREATED:20260401T040000Z
+LAST-MODIFIED:20260515T013521Z
+UID:10004536-1784314800-1784322000@comedycalendar.com
+SUMMARY:William Montgomery LIVE at Punch Line Houston
+DESCRIPTION:Official TicketsResale Tickets \nAbout the Performer\nWilliam Montgomery is a rising star in the stand-up comedy world\, known for his razor-sharp wit\, relatable storytelling\, and ability to turn everyday observations into laugh-out-loud moments. His comedy style blends self-deprecating humor with sharp social commentary\, drawing audiences in with his natural charisma and impeccable timing. \nMontgomery has been making waves on the comedy circuit\, earning rave reviews from fans and critics alike. With a perfect 5.0 rating on Ticketmaster from fans who’ve seen him live\, he’s quickly becoming one of the most talked-about comedians on the touring circuit. Fans describe his shows as “incredible\,” “non-stop laughter\,” and “a must-see experience.” \nKnown for his association with the Kill Tony podcast universe\, William Montgomery has built a dedicated following who appreciate his unique voice and fearless approach to comedy. Whether he’s riffing on personal experiences or diving into absurdist territory\, Montgomery keeps audiences engaged from the first joke to the last. \nEvent Details\n\nDate: Friday\, July 17\, 2026\nShow Time: 7:00 PM (Doors open at 6:00 PM)\nVenue: Punch Line Houston\nAddress: 1204 Caroline Street\, Houston\, TX 77002\nAge Restriction: 18+ Event\nBeverage Policy: 2 Beverage Minimum per person inside the showroom\n\nA second show is also available on Friday\, July 17 at 9:15 PM\, and additional shows on Saturday\, July 18 at 7:00 PM and 9:15 PM. Check Ticketmaster for all available show times. \nAbout the Venue\nPunch Line Houston is one of Houston’s premier comedy clubs\, located in the heart of downtown at 1204 Caroline Street. Part of the nationally recognized Punch Line Comedy Club brand\, this intimate venue offers an up-close and personal comedy experience that larger arenas simply can’t match. \nThe club features a cozy\, club-style atmosphere with excellent sightlines from every seat. The venue is cashless and accepts VISA\, Mastercard\, American Express\, and Discover. Valet service is available at most shows\, and surface and garage parking is available nearby with skybridge access from the Green Street garage located on Clay between Main and Fannin. \nPunch Line Houston is an 18+ venue. Guests should arrive early — doors open one hour prior to early shows and 30 minutes prior to late shows. The venue enforces a strict no-phone policy inside the showroom\, so come ready to be fully present and enjoy the laughs. No large bags or backpacks are permitted. \nWhat to Expect\nWilliam Montgomery’s live show is a high-energy\, laugh-packed experience from start to finish. Fans who’ve seen him describe the show as non-stop entertainment\, with Montgomery commanding the stage with confidence and delivering punchlines that hit hard every time. \nExpect a full stand-up set featuring William’s signature blend of personal storytelling\, sharp observational humor\, and crowd interaction. The intimate setting of Punch Line Houston makes this an especially memorable experience — you’ll feel like you’re part of the show\, not just watching it. \nThis is a solo headlining performance\, giving Montgomery the full stage to showcase his best material. Whether you’re a longtime fan or discovering him for the first time\, this show promises to be an unforgettable night of comedy. \nTicket Information\nPrice Range: $38 – $70 (includes fees) \nTickets are available through Ticketmaster (official) and VividSeats (resale). Secure your seats early — William Montgomery shows sell out fast! \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
+URL:https://comedycalendar.com/event/william-montgomery-live-at-punch-line-houston/
+LOCATION:Punch Line Houston\, 1204 Caroline Street\, Houston\, TX\, 77002\, United States
+ATTACH;FMTTYPE=image/jpeg:https://media.ticketmaster.com/en-us/dam/a/f35/a0d328a8-70ee-420b-9617-d788c7291f35_TABLET_LANDSCAPE_LARGE_16_9.jpg
+GEO:29.7533552;-95.3641123
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Punch Line Houston 1204 Caroline Street Houston TX 77002 United States;X-APPLE-RADIUS=500;X-TITLE=1204 Caroline Street:geo:-95.3641123,29.7533552
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260717T190000
+DTEND;TZID=America/New_York:20260717T210000
+DTSTAMP:20260602T200052Z
+CREATED:20260602T194345Z
+LAST-MODIFIED:20260602T200052Z
+UID:10005268-1784314800-1784322000@comedycalendar.com
+SUMMARY:Comedy Cellar Las Vegas Showcase (Early)
+DESCRIPTION:This post contains affiliate links. We may earn a commission at no extra cost to you. \n\n  \n     Official Tickets\n   \n  \n     Resale Tickets\n  \n\nComedy Cellar Las Vegas brings one of the most legendary names in stand-up comedy to the heart of Las Vegas. Located inside the Rio Hotel & Casino\, this intimate comedy club is the West Coast home of New York City’s world-famous Comedy Cellar\, the venue that helped launch the careers of comedy icons including Dave Chappelle\, Chris Rock\, Jon Stewart\, Ray Romano\, Amy Schumer\, Aziz Ansari\, and countless others. \nUnlike traditional comedy shows featuring a single headliner\, Comedy Cellar presents a carefully curated lineup of professional comedians every night. Audiences can expect multiple performers during each show\, featuring a mix of nationally touring headliners\, television favorites\, Comedy Central veterans\, Netflix performers\, and rising stars from around the world. \nNo two shows are exactly alike\, making every visit a unique experience. Surprise drop-in appearances from major comedians performing elsewhere in Las Vegas have become part of the club’s reputation\, giving audiences the chance to see comedy superstars in an intimate setting. \nEvent Details\nVenue: Comedy Cellar Las Vegas at Rio Hotel & Casino\nLocation: 3700 W Flamingo Rd\, Las Vegas\, NV 89103\nShow Schedule: Nightly performances throughout the year\nAge Requirement: Recommended for audiences 18+ due to mature comedy content \nAbout the Venue\nOpened in 2018\, Comedy Cellar Las Vegas was designed to recreate the atmosphere and energy of the original Greenwich Village club that has become one of the most respected comedy venues in the world. The 300-seat showroom offers excellent sightlines and an intimate setting that allows audiences to experience stand-up comedy exactly as it was meant to be seen: up close and personal. \nThe venue combines the excitement of a Las Vegas night out with the authentic feel of a classic New York comedy club. Guests can enjoy a comfortable showroom environment while watching some of the best comedians working today perform in a setting that encourages spontaneity\, crowd interaction\, and unforgettable moments. \nConveniently located inside the Rio Hotel & Casino just minutes from the Las Vegas Strip\, the venue offers easy access for both tourists and local comedy fans. \nWhat to Expect\nExpect a fast-paced evening featuring multiple comedians performing throughout the show. The Comedy Cellar is known for showcasing a wide variety of comedic styles\, from observational humor and storytelling to sharp social commentary\, crowd work\, and cutting-edge stand-up. \nWhether you’re discovering a future comedy star or watching a seasoned veteran perfect their craft\, every show delivers the authentic comedy club experience that has made the Comedy Cellar one of the most respected brands in stand-up comedy. \nFor comedy fans visiting Las Vegas\, Comedy Cellar is widely considered one of the best places in the city to experience live stand-up comedy any night of the week.
+URL:https://comedycalendar.com/event/comedy-cellar-las-vegas-showcase-early/2026-07-17/
+LOCATION:Comedy Cellar Las Vegas at Rio Hotel & Casino\, 3700 W Flamingo Rd\, Las Vegas\, NV\, 89103\, United States
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fc4/a6703ea9-a17b-4211-b9dc-7308aa0b2fc4_RETINA_PORTRAIT_16_9.jpg
+GEO:36.1172452;-115.1861279
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Comedy Cellar Las Vegas at Rio Hotel & Casino 3700 W Flamingo Rd Las Vegas NV 89103 United States;X-APPLE-RADIUS=500;X-TITLE=3700 W Flamingo Rd:geo:-115.1861279,36.1172452
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260717T190000
+DTEND;TZID=America/Los_Angeles:20260717T220000
+DTSTAMP:20260515T013429Z
+CREATED:20260314T180000Z
+LAST-MODIFIED:20260515T013429Z
+UID:10002883-1784314800-1784325600@comedycalendar.com
+SUMMARY:Nate Bargatze: Big Dumb Eyes World Tour LIVE at SAP Center at San Jose
+DESCRIPTION:Official TicketsResale Tickets \nAbout the Performer\nNate Bargatze is one of the biggest names in stand-up comedy today — a clean\, family-friendly comedian from Nashville\, Tennessee\, whose laid-back Southern charm and masterful storytelling have made him a household name. Known as “The Great Nate\,” Bargatze has sold out arenas across the country and earned a reputation as one of the most beloved live performers in the business. \nHis comedy is warm\, relatable\, and brilliantly crafted — drawing from his life as a husband\, father\, and son of a clown (yes\, really). Nate’s specials on Netflix\, including The Greatest Average American and Hello World\, have introduced him to millions of fans worldwide and cemented his status as a comedy superstar. \nThe Big Dumb Eyes World Tour is Bargatze’s most ambitious tour yet\, bringing his signature brand of wholesome\, hilarious comedy to arenas across the globe. This is a rare chance to see one of comedy’s biggest stars in the Bay Area — don’t miss it. \nEvent Details\nDate: Friday\, July 17\, 2026\nTime: 7:00 PM PDT\nVenue: SAP Center at San Jose\, 525 W Santa Clara St\, San Jose\, CA 95113\nTicket Price Range: $65 – $150 \nAbout the Venue\nSAP Center at San Jose is one of the premier entertainment arenas in the Bay Area\, located at 525 W Santa Clara Street in downtown San Jose. With a capacity of approximately 17\,500 for concerts and events\, SAP Center is home to the San Jose Sharks NHL team and hosts some of the biggest touring acts in the world. \nThe arena features state-of-the-art sound and lighting systems\, multiple concession areas\, full bar service\, and a variety of seating options from floor-level to upper bowl. Parking is available in several nearby garages and surface lots\, and the venue is conveniently located near the SAP Center Light Rail station for easy public transit access. \nSeeing Nate Bargatze at SAP Center means experiencing his comedy at full arena scale — a massive production with incredible energy from thousands of fans all laughing together. It’s a truly special experience. \nWhat to Expect\nThe Big Dumb Eyes World Tour is a full arena stand-up show featuring Nate Bargatze’s best new material alongside fan favorites. Expect a polished\, high-production performance with Bargatze’s signature storytelling style — slow-burn setups\, perfectly timed punchlines\, and the kind of wholesome humor that appeals to audiences of all ages. \nThis is an all-ages show\, making it a perfect night out for the whole family. Doors typically open 60–90 minutes before showtime. Arrive early to find your seats and grab concessions before the show begins. \nTicket Information\nPrice Range: $65 – $150 (before taxes and fees)\nTickets are available through Ticketmaster (official) and VividSeats (resale). \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
+URL:https://comedycalendar.com/event/nate-bargatze-big-dumb-eyes-world-tour-live-at-sap-center-at-san-jose/
+LOCATION:SAP Center at San Jose\, 525 W Santa Clara St\, San Jose\, California\, 95113\, United States
+ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/02/969958b2-3e23-41ae-a1e8-8be73f5463af_CUSTOM-IMFUca.jpg
+GEO:37.3328955;-121.9010841
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=SAP Center at San Jose 525 W Santa Clara St San Jose California 95113 United States;X-APPLE-RADIUS=500;X-TITLE=525 W Santa Clara St:geo:-121.9010841,37.3328955
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260717T193000
+DTEND;TZID=America/New_York:20260717T213000
+DTSTAMP:20260515T013526Z
+CREATED:20260401T040000Z
+LAST-MODIFIED:20260515T013526Z
+UID:10004547-1784316600-1784323800@comedycalendar.com
+SUMMARY:Lucas Zelnick LIVE at Music Box at the Borgata
+DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nOfficial Tickets\nResale Tickets \nLucas Zelnick LIVE at Music Box at the Borgata\nNew York City’s sharpest rising stand-up comedian\, Lucas Zelnick\, brings his meticulously crafted\, punch-heavy comedy to the intimate Music Box at the Borgata in Atlantic City for one unforgettable night on Friday\, July 17\, 2026. Known for his viral crowd interactions and razor-sharp material\, Zelnick is one of the most exciting voices in comedy today — and this Atlantic City show is a rare chance to see him in an intimate venue setting. \nEvent Details\nDate: Friday\, July 17\, 2026\nTime: 7:30 PM ET\nVenue: Music Box at the Borgata\nAddress: One Borgata Way\, Atlantic City\, NJ 08401\nAge Requirement: All ages welcome\nParking: Available at Borgata Hotel Casino & Spa parking facilities \nAbout Lucas Zelnick\nLucas Zelnick is a New York City-born stand-up comedian whose sharp\, punch-heavy material playfully interrogates his Upper East Side upbringing. After graduating from Williams College and earning an MBA from Stanford\, he co-founded Sesh Comedy on the Lower East Side before selling it to tour nationally. His viral clips spotlight nimble crowd interactions\, yet his shows lean on meticulously built jokes and a clear comedic point of view. Zelnick has been featured on Comedy Central Stand-Up Featuring and Don’t Tell Comedy\, and regularly appears at the Comedy Cellar while headlining theaters and clubs across the country. \nWhat to Expect\n\nSharp\, punch-heavy stand-up comedy with a clear point of view\nHilarious crowd interaction and spontaneous moments\nMaterial drawn from his unique Upper East Side upbringing and Stanford MBA background\nAn intimate Music Box setting that puts you close to the action\nOne of comedy’s fastest-rising headliners at the peak of his game\nA full evening of non-stop laughs in Atlantic City’s premier comedy venue\n\nVenue Information\nThe Music Box at the Borgata is Atlantic City’s premier intimate entertainment venue\, located inside the world-class Borgata Hotel Casino & Spa at One Borgata Way. With a capacity of approximately 1\,000 guests\, the Music Box offers an up-close and personal experience that larger arenas simply can’t match. The venue features excellent sightlines\, top-tier sound and lighting\, and easy access to Borgata’s award-winning restaurants and casino floor. \nTicket Information\nTickets for Lucas Zelnick at Music Box at the Borgata start from $231 on resale markets. Official tickets are available through Ticketmaster. Secure your seats early — this intimate venue fills up fast for top comedy headliners. \nOfficial Tickets\nResale Tickets \nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
+URL:https://comedycalendar.com/event/lucas-zelnick-live-at-music-box-at-the-borgata/
+LOCATION:Music Box at the Borgata\, One Borgata Way\, Atlantic City\, NJ\, 8401\, United States Of America
+ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/04/d159fec3-07af-41d8-94fd-1d1e884be121_CUSTOM-VRfrrC.jpg
+GEO:39.3787665;-74.4310969
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Music Box at the Borgata One Borgata Way Atlantic City NJ 8401 United States Of America;X-APPLE-RADIUS=500;X-TITLE=One Borgata Way:geo:-74.4310969,39.3787665
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260717T193000
+DTEND;TZID=America/New_York:20260717T220000
+DTSTAMP:20260515T013532Z
+CREATED:20260315T090000Z
+LAST-MODIFIED:20260515T013532Z
+UID:10002955-1784316600-1784325600@comedycalendar.com
+SUMMARY:Ryan Long LIVE at The Wilbur
+DESCRIPTION:Official TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you. \nAbout the Performer\nRyan Long is a comedian\, podcaster\, and filmmaker originally from Toronto who has amassed billions of views across his viral sketches\, street interviews\, and stand-up clips. Known for his sharp political satire\, his man-on-the-street videos\, and his ability to skewer both sides of the political aisle with equal wit\, Ryan has built one of the most loyal and diverse fanbases in comedy. \nHis live stand-up shows bring all of that energy to the stage in a full-length performance that fans have been waiting to see. Ryan’s comedy is smart\, fearless\, and brilliantly crafted — the kind of stand-up that makes you laugh and think at the same time. \nWith billions of online views and a rapidly growing live following\, Ryan Long at The Wilbur is one of the most exciting comedy shows coming to Boston this summer. \nEvent Details\n\nDate: Friday\, July 17\, 2026\nTime: 7:30 PM ET\nVenue: The Wilbur\, 246 Tremont St\, Boston\, MA 02116\nTickets from: $63\n\nAbout the Venue\nThe Wilbur is one of Boston’s most beloved and intimate comedy venues\, located in the heart of the Theater District at 246 Tremont Street. With a capacity of approximately 1\,000 guests\, The Wilbur offers an up-close and personal experience that is perfect for Ryan’s sharp and engaging performance style. \nThe venue features excellent sightlines from every seat\, a full bar\, and a warm\, historic atmosphere that makes every show feel special. Originally built in 1914\, The Wilbur has been lovingly restored and is now one of the premier comedy destinations on the East Coast. \nParking is available at nearby garages in the Theater District\, and the venue is easily accessible via the MBTA Green and Orange Lines at Boylston and Back Bay stations. \nWhat to Expect\nExpect a sharp\, funny\, and brilliantly entertaining evening of stand-up comedy as Ryan Long takes the stage at The Wilbur. This is a solo performance showcasing Ryan’s signature blend of political satire\, observational humor\, and the kind of fearless comedy that has made him one of the most talked-about comedians online. \nSuitable for audiences 16 and older. A perfect summer night out for fans of smart\, sharp stand-up comedy. \nTicket Information\nTickets from $63. Purchase official tickets through Ticketmaster or find resale tickets via VividSeats. \nOfficial TicketsResale Tickets
+URL:https://comedycalendar.com/event/ryan-long-live-at-the-wilbur/
+LOCATION:The Wilbur\, 246 Tremont St.\, Boston\, MA\, 2116
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/e84/6987917a-5bcc-4f1c-b69f-06bbf9422e84_TABLET_LANDSCAPE_LARGE_16_9.jpg
+GEO:42.3507311;-71.0647252
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=The Wilbur 246 Tremont St. Boston MA 2116;X-APPLE-RADIUS=500;X-TITLE=246 Tremont St.:geo:-71.0647252,42.3507311
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Toronto:20260717T200000
+DTEND;TZID=America/Toronto:20260717T223000
+DTSTAMP:20260515T013552Z
+CREATED:20260328T014500Z
+LAST-MODIFIED:20260515T013552Z
+UID:10004301-1784318400-1784327400@comedycalendar.com
+SUMMARY:Jerry Seinfeld LIVE at OLG Stage at Fallsview Casino
+DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nOfficial Tickets\nResale Tickets \nJerry Seinfeld LIVE at OLG Stage at Fallsview Casino\nComedy legend Jerry Seinfeld returns to the OLG Stage at Fallsview Casino in Niagara Falls for an evening of iconic stand-up comedy. The creator and star of Seinfeld delivers razor-sharp observations about everyday life that have made him one of the greatest comedians of all time. \nEvent Details\nDate: Friday\, July 17\, 2026\nTime: 8:00 PM\nVenue: OLG Stage at Fallsview Casino\nAddress: 6366 Stanley Ave\, Niagara Falls\, ON L2G 3Y5 \nAbout Jerry Seinfeld\nJerry Seinfeld is one of the most successful comedians in history\, best known for co-creating and starring in the iconic TV series Seinfeld. He has been performing stand-up comedy for over four decades and continues to tour extensively\, delivering his signature observational humor to sold-out audiences worldwide. \nWhat to Expect\n\nIconic observational comedy from a living legend\nRazor-sharp wit and perfectly crafted jokes\nA world-class venue experience at Fallsview Casino\nStunning Niagara Falls backdrop\nAn unforgettable night of comedy history\n\nVenue Information\nThe OLG Stage at Fallsview Casino is a premier entertainment venue at 6366 Stanley Ave in Niagara Falls\, Ontario. \nTicket Information\nTickets start at $103. Don’t miss this rare opportunity to see a comedy legend live! \nOfficial Tickets\nResale Tickets \nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you.\nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
+URL:https://comedycalendar.com/event/jerry-seinfeld-live-at-olg-stage-at-fallsview-casino/
+LOCATION:OLG Stage at Fallsview Casino\, 6366 Stanley Ave\, Niagara Falls\, ON\, L2G 3Y5\, Canada
+ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/03/5f0ebea2-3344-4065-8ea3-1a9f6412b9d2_EVENT_DETAIL_PAGE_16_9-inmPD8.jpg
+GEO:43.0829695;-79.0839706
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=OLG Stage at Fallsview Casino 6366 Stanley Ave Niagara Falls ON L2G 3Y5 Canada;X-APPLE-RADIUS=500;X-TITLE=6366 Stanley Ave:geo:-79.0839706,43.0829695
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260717T200000
+DTEND;TZID=America/New_York:20260717T230000
+DTSTAMP:20260515T013541Z
+CREATED:20260321T000000Z
+LAST-MODIFIED:20260515T013541Z
+UID:10003522-1784318400-1784329200@comedycalendar.com
+SUMMARY:Shane Gillis & Special Guests LIVE at Lincoln Financial Field
+DESCRIPTION:Official TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you. \nAbout Shane Gillis\nShane Gillis is one of the hottest names in stand-up comedy today. The Pennsylvania native — born and raised in Mechanicsburg\, PA — has become a cultural phenomenon\, selling out arenas and stadiums across the country with his unapologetically bold\, blue-collar humor. His comedy is raw\, honest\, and deeply rooted in the American experience\, resonating with audiences who appreciate comedy that doesn’t pull its punches. \nGillis gained national attention through his podcast “Matt and Shane’s Secret Podcast” and his stand-up specials\, including “Live in Austin” and “Beautiful Dogs” on Netflix. He returned to Saturday Night Live as a host in 2024 to massive acclaim\, cementing his status as one of the defining comedic voices of his generation. This Lincoln Financial Field show is a homecoming of sorts — Gillis performing in his home state of Pennsylvania for one of the biggest comedy events the city has ever seen. \nEvent Details\nDate: Friday\, July 17\, 2026 \nTime: 8:00 PM \nVenue: Lincoln Financial Field — 1 Lincoln Financial Field Way\, Philadelphia\, PA 19148 \nTicket Prices: $30 – $268 (plus fees; premium suites available) \nAbout Lincoln Financial Field\nLincoln Financial Field — affectionately known as “The Linc” — is the iconic home of the Philadelphia Eagles and one of the most recognizable sports and entertainment venues in the United States. Located at 1 Lincoln Financial Field Way in South Philadelphia\, the stadium holds approximately 69\,000 fans and offers a world-class entertainment experience at every level. \nThe Linc features multiple concourse levels with food and beverage options\, premium club spaces\, luxury suites\, and state-of-the-art sound and lighting systems. For a comedy show of this scale\, the production will be designed to ensure every fan — from the front row to the upper deck — has an incredible experience. The stadium’s massive video boards and sound system make it one of the most technically impressive venues in the country. \nParking is available in the stadium’s surrounding lots (advance purchase recommended for major events). The venue is accessible via SEPTA’s Broad Street Line (AT&T Station) and by car via I-95 and I-76. This is a massive event — plan to arrive early and enjoy the full stadium atmosphere. \nWhat to Expect\nThis is not just a comedy show — it’s a historic event. Shane Gillis performing at Lincoln Financial Field represents one of the largest stand-up comedy shows ever staged in Philadelphia. Expect a full evening of Gillis’s signature brand of comedy\, joined by a lineup of special guests that promises to make this an unforgettable night. \nThe energy of a stadium crowd experiencing live comedy together is unlike anything else in entertainment. Whether you’re a longtime Gillis fan or just looking for the biggest comedy event of the summer\, this show delivers on every level. Grab your tickets early — this one will sell out. \nTicket Information\nPrice Range: $30 – $268 (plus applicable fees; premium suites from $205) \nTickets are available through Ticketmaster (official) and VividSeats (resale). This is one of the most anticipated comedy events of 2026 — don’t miss it! \nOfficial TicketsResale Tickets
+URL:https://comedycalendar.com/event/shane-gillis-and-special-guests-live-at-lincoln-financial-field/
+LOCATION:Lincoln Financial Field\, 1 Lincoln Financial Field Way\, Philadelphia\, PA\, 19148\, United States
+ATTACH;FMTTYPE=image/jpeg:https://media.ticketmaster.com/en-us/dam/a/c9c/72c0dadb-0756-4489-9fdb-573562cf5c9c_TABLET_LANDSCAPE_LARGE_16_9.jpg
+GEO:39.903058;-75.1665428
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Lincoln Financial Field 1 Lincoln Financial Field Way Philadelphia PA 19148 United States;X-APPLE-RADIUS=500;X-TITLE=1 Lincoln Financial Field Way:geo:-75.1665428,39.903058
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260717T203000
+DTEND;TZID=America/New_York:20260717T223000
+DTSTAMP:20260515T013557Z
+CREATED:20260310T220000Z
+LAST-MODIFIED:20260515T013557Z
+UID:10002749-1784320200-1784327400@comedycalendar.com
+SUMMARY:Gary Owen: No Hard Feelings Tour LIVE at The Venetian Theatre
+DESCRIPTION:Official TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you. \nAbout the Performer\nGary Owen is one of America’s most beloved stand-up comedians — a fearless\, high-energy performer whose no-filter storytelling\, sharp observations\, and genuine connection with audiences have made him a fan favorite for over two decades. Known as “America’s Funniest Serviceman” from his early days winning the title at the Navy’s talent competition\, Gary has built a remarkable career in stand-up\, film\, and television. \nBest known for his roles in films like Think Like a Man\, Ride Along\, and Almost Christmas\, Gary Owen brings the same authenticity and energy to his stand-up that has made him a Hollywood star. His comedy draws from his own life — growing up in Cincinnati\, his experiences in the military\, his family life\, and his unique perspective as a comedian who has always crossed cultural boundaries with ease. \nThe No Hard Feelings Tour brings Gary Owen to The Venetian Theatre for two nights — July 17 and 18 — for what promises to be an unforgettable Las Vegas comedy experience. \nEvent Details\n\nDates: Friday\, July 17 & Saturday\, July 18\, 2026\nTime: 8:30 PM\nVenue: The Venetian Theatre at The Venetian Resort\nAddress: 3355 S Las Vegas Blvd\, Las Vegas\, NV 89109\n\nAbout the Venue\nThe Venetian Theatre at The Venetian Resort is one of Las Vegas’s most celebrated entertainment venues\, located inside the iconic Venetian Resort at 3355 S Las Vegas Blvd. Seating approximately 1\,800 guests\, the theater is known for its elegant design\, excellent acoustics\, and the intimate atmosphere that makes every performance feel special. \nThe Venetian Theatre has hosted some of the biggest names in comedy and entertainment\, and its mid-size format makes it the perfect venue for a high-energy stand-up show like Gary Owen’s No Hard Feelings Tour. Every seat offers a great view of the stage\, and the venue’s warm atmosphere ensures a fantastic crowd experience. \nValet and self-parking are available at The Venetian Resort. The resort offers world-class dining\, shopping\, and casino entertainment\, making it easy to turn a Gary Owen show into a full Las Vegas night out. \nWhat to Expect\nThis is a solo stand-up performance by Gary Owen featuring material from his No Hard Feelings Tour. The show runs approximately 75–90 minutes and features Gary’s signature high-energy comedy — hilarious stories about life\, family\, relationships\, and the world around us\, delivered with the warmth and authenticity that have made him one of the most beloved comedians working today. \nGary Owen’s live shows are known for their incredible energy and the deep bond he builds with his audience. He has a rare ability to make everyone in the room feel included and seen — his comedy is both brilliantly funny and genuinely heartfelt. \nTicket Information\nPrice Range: $74 – $250 \nTickets available through Ticketmaster (official) and VividSeats (resale). Grab your seats before they sell out! \nOfficial TicketsResale Tickets
+URL:https://comedycalendar.com/event/gary-owen-no-hard-feelings-tour-venetian-theatre-las-vegas-july/
+LOCATION:The Venetian Theatre\, 3355 S Las Vegas Blvd\, Las Vegas\, NV\, 89109\, United States
+ATTACH;FMTTYPE=image/jpeg:https://media.ticketmaster.com/en-us/dam/a/abf/6eb4a789-e1f0-4d3c-aa1e-fca35eff7abf_TABLET_LANDSCAPE_LARGE_16_9.jpg
+GEO:36.1207802;-115.1682697
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=The Venetian Theatre 3355 S Las Vegas Blvd Las Vegas NV 89109 United States;X-APPLE-RADIUS=500;X-TITLE=3355 S Las Vegas Blvd:geo:-115.1682697,36.1207802
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260717T210000
+DTEND;TZID=America/New_York:20260717T230000
+DTSTAMP:20260525T002710Z
+CREATED:20260322T180000Z
+LAST-MODIFIED:20260525T002710Z
+UID:10004413-1784322000-1784329200@comedycalendar.com
+SUMMARY:Rodney Carrington LIVE at Turfway Park
+DESCRIPTION:Official TicketsResale Tickets \nAbout the Performer\nRodney Carrington is a multi-talented comedian\, actor\, and country music artist who has been making audiences laugh for over two decades. Known for his outrageous\, adult-oriented humor and his ability to blend stand-up comedy with live musical performances\, Rodney has built one of the most loyal fanbases in the comedy world. \nHis comedy albums have gone platinum\, his TV series Rodney ran on ABC\, and his live shows are legendary for their high energy\, crowd interaction\, and the kind of no-holds-barred humor that keeps fans coming back year after year. Rodney’s unique style — part stand-up\, part musical comedy — makes every show a one-of-a-kind experience. \nWhether he’s strumming his guitar or delivering rapid-fire punchlines\, Rodney Carrington delivers an evening of pure\, unfiltered entertainment that leaves audiences in tears of laughter. \nEvent Details\n\nDate: Friday\, July 17\, 2026\nTime: 9:00 PM\nVenue: Turfway Park\, 7500 Turfway Road\, Florence\, KY 41042\nAge Restrictions: Ages 21 & over only\nTicket Price Range: $84 – $150\n\nAbout the Venue\nTurfway Park is a premier entertainment and racing destination located in Florence\, Kentucky\, just south of Cincinnati. The venue offers a unique outdoor concert and event experience set against the backdrop of one of the region’s most storied horse racing facilities. \nLocated at 7500 Turfway Road in Florence\, KY\, the venue is easily accessible from both Louisville and Cincinnati\, making it a great destination for fans from across the region. The outdoor setting creates a lively\, festive atmosphere perfect for a late-night comedy show. \nAmple parking is available on-site at Turfway Park. Please note this is a 21+ event — valid photo ID is required for entry. Dress comfortably for an outdoor summer evening show. \nWhat to Expect\nRodney Carrington delivers a high-energy\, adults-only stand-up and musical comedy performance. This is a full headline show featuring Rodney’s signature blend of raunchy humor\, country music\, and crowd-pleasing entertainment. \nExpect plenty of audience interaction\, live guitar performances\, and the kind of outrageous comedy that has made Rodney one of the most beloved performers on the touring circuit. This is a late-night show — perfect for a summer Friday night out with friends. \nDoors typically open before showtime. Arrive early to grab drinks and find your spot before Rodney takes the stage for an unforgettable evening of comedy and music. \nTicket Information\nTickets range from $84 to $150 depending on seat location. Purchase official tickets through Ticketmaster or find resale tickets through VividSeats. Must be 21+ to attend. \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
+URL:https://comedycalendar.com/event/rodney-carrington-live-at-turfway-park/
+LOCATION:Turfway Park Racing & Gaming\, 7500 Turfway Road\, Florence\, KY\, 41042
+ATTACH;FMTTYPE=image/jpeg:https://media.ticketmaster.com/en-us/dam/a/2a5/511e89de-d97c-4259-b7b9-d7c9724552a5_TABLET_LANDSCAPE_LARGE_16_9.jpg
+GEO:39.0223706;-84.6356491
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Turfway Park Racing & Gaming 7500 Turfway Road Florence KY 41042;X-APPLE-RADIUS=500;X-TITLE=7500 Turfway Road:geo:-84.6356491,39.0223706
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260717T210000
+DTEND;TZID=America/New_York:20260717T230000
+DTSTAMP:20260714T165658Z
+CREATED:20260623T165752Z
+LAST-MODIFIED:20260714T165658Z
+UID:10006090-1784322000-1784329200@comedycalendar.com
+SUMMARY:Thank You Miami Stand Up Comedy Show (Friday)
+DESCRIPTION:Kick off Friday right: craft beers on tap\, late-night bites & Miami‘s funniest comics. Laugh\, sip & start your weekend like a local legend.\n\n\n\n\nYou Can’t Go Wrong On A Friday Night By Doing Something Different.\nLaughs. \nCraft Beers. \nAnd a dining menu that satisfies the munchies: https://thankyoumiami.godaddysites.com/menu \nSkip the lines at nightclubs and the overpriced cocktails — start your weekend with a local comedy night that’s pure Miami. \nTickets & Seating \n🎟 First Come\, First Serve \n\nFree entry\nSeating not guaranteed — show up early for the good spots\n\n🍻 Guaranteed Preferred Seating + BOGO Drinks — $25 \n\nGuaranteed main-area seating during showtime\nBuy-One-Get-One-Free drinks\n\n👕 Guaranteed Preferred Seating + BOGO Drinks + T-Shirt — $35 \n\nEverything above\, plus a limited-edition Miami Comedy T-shirt. Look like you’ve been here since day one\, even if it’s your first Friday.\n\n(Because space is limited\, seated guests are asked to order at least one drink or menu item. Easy.) \n\n\nLooking for a Promo Code? \nText “MIAMI” to (786) 610-5571 \n\n\n\nCelebrate 10 Years of Laughter with the Miami Comedy Anniversary Shirt!\nCelebrate a decade of laughs with the Miami Comedy 10-Year Anniversary Shirt! This exclusive\, limited-edition design marks a milestone in our journey of bringing joy to Miami. Every purchase supports the Miami Comedy community\, helping us grow and continue spreading laughter across the city. \nThis collectible shirt is one-of-a-kind—once it’s sold out\, it’s gone forever. Don’t miss your chance to own a stylish piece of Miami comedy history and be part of something truly special. Grab yours now and celebrate 10 years of laughs with us! \nSizes S – XL available. \n\n\nMedia\n\nWatch all our videos about Thank You Miami Comedy Night: https://youtube.com/playlist?list=PLWygUR7TT1rBo8XBgJ9aP2M4ZkLc8uAbd\nSee all the fun we’re having on this show! Photos available here: https://miamicomedy.com/tag/thank-you-miami+photography/\n\nAbout Thank You Miami Beer House and Cocina.\nThank You Miami Beer House and Cocina is the newest hip bar located in Flagler and 17th. This bar gives thanks to the city by offering a large selection of beers and food as well as LIVE entertainment. \n\n\n\nAbout Miami Comedy\nMiamiComedy.com has produced independent comedy events for years. Over time we’ve built a platform where you can laugh everyday in Miami! We present to you authentic local and national performers and curate entertaining live shows for locals who love to laugh and enjoy the true art of stand up comedy. As seen on Amazon Prime Video “Respect the Light” the Miami New Times\, Culture Crusaders\, the Miami Improv and UNATION. We create unforgettably funny pop up shows all over the Magic City\, in all your favorite bars\, restaurants\, lounges\, theaters and virtual! We make each experience unique with its own environment\, line up\, drinking\, social groups and dining menus! \nQuestions? Special Occasions? Event Planning? Birthdays?\nGet in contact with me here: \nText: 786-610-5571 \nEmail: manny@miamicomedy.com \nChat: miamicomedy.com
+URL:https://comedycalendar.com/event/thank-you-miami-stand-up-comedy-show-friday-44/
+LOCATION:Thank You Miami Cocina & Beer House\, 1701 West Flagler Street\, #Suite 101\, Miami\, FL\, 33135\, United States
+CATEGORIES:Showcase
+ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/05/6a7ebf7a30a5bbeb3a8c1f6f9956d3a1-33Iu1E.tmp_-otl08m.jpg
+GEO:25.7731522;-80.2232127
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Thank You Miami Cocina & Beer House 1701 West Flagler Street #Suite 101 Miami FL 33135 United States;X-APPLE-RADIUS=500;X-TITLE=1701 West Flagler Street\, #Suite 101:geo:-80.2232127,25.7731522
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260717T211500
+DTEND;TZID=America/New_York:20260717T230000
+DTSTAMP:20260515T013613Z
+CREATED:20260321T000000Z
+LAST-MODIFIED:20260515T013613Z
+UID:10003524-1784322900-1784329200@comedycalendar.com
+SUMMARY:Andrew Dismukes LIVE at Punch Line Philly (Late Show)
+DESCRIPTION:Official TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you. \nAbout Andrew Dismukes\nAndrew Dismukes is a rising star in stand-up comedy\, best known as a cast member on Saturday Night Live. His sharp character work and absurdist humor made him a fan favorite on the show\, and his live performances take that energy to a whole new level. \nA Texas native\, Dismukes brings a deadpan yet high-energy style to the stage\, blending clever wordplay with unexpected physical comedy. His stand-up is filled with self-deprecating storytelling and ridiculous premises built to their most hilarious conclusions. \nThis late show is perfect for night owls who want to cap off their Friday with a night of world-class comedy. \nEvent Details\nDate: Friday\, July 17\, 2026 \nShow Time: 9:15 PM (Late Show) \nVenue: Punch Line Philly — 33 E. Laurel Street\, Philadelphia\, PA 19123 \nAge Restrictions: 18+ (valid ID required) \nContent Warning: Adult language and themes \nAbout the Venue\nPunch Line Philly is Philadelphia’s premier stand-up comedy club\, nestled in the Northern Liberties neighborhood at 33 E. Laurel Street. The intimate venue holds approximately 300 guests and is purpose-built for comedy — with excellent sightlines\, top-notch acoustics\, and a lively atmosphere. \nThe club features a full bar and food menu\, so you can enjoy cocktails\, craft beers\, and bites throughout the show. The late show crowd tends to be especially energetic\, making for a fantastic shared experience with fellow comedy fans. \nParking is available nearby\, and the venue is easily accessible by public transit. Punch Line Philly consistently delivers world-class stand-up in an intimate setting that larger venues simply can’t match. \nWhat to Expect\nThis is the late show performance by Andrew Dismukes — a solo stand-up set running approximately 60–75 minutes. Expect the same high-energy\, laugh-packed performance as the early show\, with Dismukes known for keeping the energy electric from the first joke to the last. \nDoors open approximately 30 minutes before showtime. Arrive early to grab a drink and settle in. A two-drink minimum applies at most tables. \nTicket Information\nPrice Range: $52 – $112 (fees included) \nTickets are available through Ticketmaster (official) and VividSeats (resale). Late shows often sell out quickly — don’t miss out! \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
+URL:https://comedycalendar.com/event/andrew-dismukes-live-at-punch-line-philly-late-show-july-seventeen/
+LOCATION:Punch Line Philly\, 33 E. Laurel Street\, Philadelphia\, PA\, 19123\, United States
+ATTACH;FMTTYPE=image/jpeg:https://media.ticketmaster.com/en-us/dam/a/4fd/c4204539-de6d-4d5a-b27c-c1ec6915d4fd_TABLET_LANDSCAPE_LARGE_16_9.jpg
+GEO:39.9652742;-75.1351879
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Punch Line Philly 33 E. Laurel Street Philadelphia PA 19123 United States;X-APPLE-RADIUS=500;X-TITLE=33 E. Laurel Street:geo:-75.1351879,39.9652742
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260717T213000
+DTEND;TZID=America/New_York:20260717T233000
+DTSTAMP:20260602T200151Z
+CREATED:20260602T200119Z
+LAST-MODIFIED:20260602T200151Z
+UID:10005846-1784323800-1784331000@comedycalendar.com
+SUMMARY:Comedy Cellar Las Vegas (Late)
+DESCRIPTION:This post contains affiliate links. We may earn a commission at no extra cost to you. \n\nOfficial Tickets\n\nResale Tickets\n\nComedy Cellar Las Vegas brings one of the most legendary names in stand-up comedy to the heart of Las Vegas. Located inside the Rio Hotel & Casino\, this intimate comedy club is the West Coast home of New York City’s world-famous Comedy Cellar\, the venue that helped launch the careers of comedy icons including Dave Chappelle\, Chris Rock\, Jon Stewart\, Ray Romano\, Amy Schumer\, Aziz Ansari\, and countless others. \nUnlike traditional comedy shows featuring a single headliner\, Comedy Cellar presents a carefully curated lineup of professional comedians every night. Audiences can expect multiple performers during each show\, featuring a mix of nationally touring headliners\, television favorites\, Comedy Central veterans\, Netflix performers\, and rising stars from around the world. \nNo two shows are exactly alike\, making every visit a unique experience. Surprise drop-in appearances from major comedians performing elsewhere in Las Vegas have become part of the club’s reputation\, giving audiences the chance to see comedy superstars in an intimate setting. \nEvent Details\nVenue: Comedy Cellar Las Vegas at Rio Hotel & Casino\nLocation: 3700 W Flamingo Rd\, Las Vegas\, NV 89103\nShow Schedule: Nightly performances throughout the year\nAge Requirement: Recommended for audiences 18+ due to mature comedy content \nAbout the Venue\nOpened in 2018\, Comedy Cellar Las Vegas was designed to recreate the atmosphere and energy of the original Greenwich Village club that has become one of the most respected comedy venues in the world. The 300-seat showroom offers excellent sightlines and an intimate setting that allows audiences to experience stand-up comedy exactly as it was meant to be seen: up close and personal. \nThe venue combines the excitement of a Las Vegas night out with the authentic feel of a classic New York comedy club. Guests can enjoy a comfortable showroom environment while watching some of the best comedians working today perform in a setting that encourages spontaneity\, crowd interaction\, and unforgettable moments. \nConveniently located inside the Rio Hotel & Casino just minutes from the Las Vegas Strip\, the venue offers easy access for both tourists and local comedy fans. \nWhat to Expect\nExpect a fast-paced evening featuring multiple comedians performing throughout the show. The Comedy Cellar is known for showcasing a wide variety of comedic styles\, from observational humor and storytelling to sharp social commentary\, crowd work\, and cutting-edge stand-up. \nWhether you’re discovering a future comedy star or watching a seasoned veteran perfect their craft\, every show delivers the authentic comedy club experience that has made the Comedy Cellar one of the most respected brands in stand-up comedy. \nFor comedy fans visiting Las Vegas\, Comedy Cellar is widely considered one of the best places in the city to experience live stand-up comedy any night of the week.
+URL:https://comedycalendar.com/event/comedy-cellar-las-vegas-late/2026-07-17/
+LOCATION:Comedy Cellar Las Vegas at Rio Hotel & Casino\, 3700 W Flamingo Rd\, Las Vegas\, NV\, 89103\, United States
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fc4/a6703ea9-a17b-4211-b9dc-7308aa0b2fc4_RETINA_PORTRAIT_16_9.jpg
+GEO:36.1172452;-115.1861279
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Comedy Cellar Las Vegas at Rio Hotel & Casino 3700 W Flamingo Rd Las Vegas NV 89103 United States;X-APPLE-RADIUS=500;X-TITLE=3700 W Flamingo Rd:geo:-115.1861279,36.1172452
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260717T214500
+DTEND;TZID=America/Chicago:20260717T234500
+DTSTAMP:20260525T000532Z
+CREATED:20260401T040000Z
+LAST-MODIFIED:20260525T000532Z
+UID:10004579-1784324700-1784331900@comedycalendar.com
+SUMMARY:Aries Spears LIVE at Funny Bone Comedy Club - Omaha (Fri Late)
+DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nOfficial Tickets\nResale Tickets \nAries Spears LIVE at Funny Bone – Omaha\nGet ready for a night of non-stop laughs as stand-up comedy powerhouse Aries Spears takes the stage at Funny Bone Comedy Club in Omaha\, Nebraska. Known for his razor-sharp wit and explosive energy\, Aries Spears delivers a comedy experience you won’t forget. \nEvent Details\nDate: Friday\, July 17\, 2026\nTime: 9:45 PM (Doors open at 9:00 PM)\nVenue: Funny Bone Comedy Club\, 710 N 114th St\, Suite 210\, Omaha\, NE 68154\nAge Requirement: 18+ (Valid photo ID required)\nTicket Price: $37 – $42 \nAbout Aries Spears\nAries Spears is a veteran stand-up comedian and actor best known for his long run on MADtv\, where his uncanny celebrity impressions made him a household name. With decades of experience on stage and screen\, Spears brings a high-energy\, no-holds-barred style to every performance. He has appeared on numerous TV specials and continues to tour nationally to sold-out crowds. \nWhat to Expect\n\nHigh-energy stand-up comedy from a MADtv legend\nHilarious celebrity impressions and sharp observational humor\nAn intimate comedy club atmosphere\nFull bar and dinner menu available\nA late-night show perfect for night owls who love to laugh\n\nTicket Information\nTickets for the Friday 9:45 PM late show start at $37. Seating is general admission. \nOfficial Tickets\nResale Tickets \nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you.\nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
+URL:https://comedycalendar.com/event/aries-spears-live-at-funny-bone-comedy-club-omaha-fri-late/
+LOCATION:Funny Bone Comedy Club – Omaha\, 710 N 114th St Suite 210\, Omaha\, NE\, 68154
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fe8/f5d847b2-3439-4e8f-8b98-efc6f1cb9fe8_RETINA_LANDSCAPE_16_9.jpg
+GEO:41.2661592;-96.093382
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Funny Bone Comedy Club – Omaha 710 N 114th St Suite 210 Omaha NE 68154;X-APPLE-RADIUS=500;X-TITLE=710 N 114th St Suite 210:geo:-96.093382,41.2661592
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260717T220000
+DTEND;TZID=America/New_York:20260718T000000
+DTSTAMP:20260708T040000Z
+CREATED:20260708T040000Z
+LAST-MODIFIED:20260708T040000Z
+UID:10006323-1784325600-1784332800@comedycalendar.com
+SUMMARY:Thank Comedy Its Friday Late Night Stand Up Show LIVE at The Comic Strip
+DESCRIPTION:This post contains affiliate links. We may earn a commission at no extra cost to you. \nGet Tickets \nAbout the Show\nKick off the weekend the right way at the iconic Comic Strip Live with “Thank Comedy It’s Friday” — New York City’s premier late-night stand-up comedy show. Featuring hilarious sets from top comedians seen on Netflix\, HBO\, Comedy Central\, BET\, and viral social media platforms\, this is the perfect way to shake off the week. \nDJ E.M. provides a live show soundtrack to keep the energy high all night long. Bring your friends\, grab a drink\, and enjoy an evening packed with jokes\, good vibes\, and great company. \nEvent Details\nDate: July 17\, 2026Time: Doors open at 10:00 PM; Showtime starts at 10:30 PMVenue: The Comic Strip (Comic Strip Live)Address: 1568 2nd Avenue\, New York\, NY 10028City: New York\, NYPrice: $25.00 General AdmissionAge Restriction: 21+ with valid IDNote: Two-item minimum purchase per person required \nAbout the Venue\nThe Comic Strip is one of New York City’s most iconic comedy clubs\, located at 1568 2nd Avenue on the Upper East Side. A legendary launching pad for countless comedy careers\, this intimate venue has hosted some of the biggest names in stand-up. Accessible via the 77th St (6 train) and 86th St (Q train) subway stations. \nWhat to Expect\nExpect a high-energy late-night comedy experience with a rotating lineup of top-tier talent from Netflix and Comedy Central. The live DJ soundtrack keeps the atmosphere electric from the moment you walk in until the last punchline lands. \nThis is the ultimate Friday night out in NYC — laughs\, drinks\, and great vibes at one of the city’s most storied comedy venues. \nTicket Information\nTickets are available through Fever. General Admission is $25.00. Must be 21+ with valid ID. A two-item minimum purchase per person is required at the event. \nGet Tickets
+URL:https://comedycalendar.com/event/thank-comedy-its-friday-late-night-stand-up-show-live-at-the-comic-strip-jul-b/
+LOCATION:The Comic Strip\, 1568 2nd Avenue\, New York\, NY 10028\, New York\, NY\, 10028\, United States
+ATTACH;FMTTYPE=image/jpeg:https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/5d2619f6-48b3-11f1-af1d-da134b150e66.jpeg
+GEO:40.7748283;-73.9536392
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=The Comic Strip 1568 2nd Avenue New York NY 10028 New York NY 10028 United States;X-APPLE-RADIUS=500;X-TITLE=1568 2nd Avenue\, New York\, NY 10028:geo:-73.9536392,40.7748283
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260718T183000
+DTEND;TZID=America/Chicago:20260718T203000
+DTSTAMP:20260525T000355Z
+CREATED:20260401T040837Z
+LAST-MODIFIED:20260525T000355Z
+UID:10004590-1784399400-1784406600@comedycalendar.com
+SUMMARY:Aries Spears LIVE at Funny Bone Comedy Club - Omaha (Sat Early)
+DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nOfficial Tickets\nResale Tickets \nAries Spears LIVE at Funny Bone – Omaha\nGet ready for a night of non-stop laughs as stand-up comedy powerhouse Aries Spears takes the stage at Funny Bone Comedy Club in Omaha\, Nebraska. Known for his razor-sharp wit and explosive energy\, Aries Spears delivers a comedy experience you won’t forget. \nEvent Details\nDate: Saturday\, July 18\, 2026\nTime: 6:30 PM (Doors open at 5:30 PM)\nVenue: Funny Bone Comedy Club\, 710 N 114th St\, Suite 210\, Omaha\, NE 68154\nAge Requirement: 18+ (Valid photo ID required)\nTicket Price: $37 – $42 \nAbout Aries Spears\nAries Spears is a veteran stand-up comedian and actor best known for his long run on MADtv\, where his uncanny celebrity impressions made him a household name. With decades of experience on stage and screen\, Spears brings a high-energy\, no-holds-barred style to every performance. He has appeared on numerous TV specials and continues to tour nationally to sold-out crowds. \nWhat to Expect\n\nHigh-energy stand-up comedy from a MADtv legend\nHilarious celebrity impressions and sharp observational humor\nAn intimate comedy club atmosphere\nFull bar and dinner menu available\nA perfect Saturday night out with friends or a date\n\nTicket Information\nTickets for the Saturday 6:30 PM early show start at $37. Seating is general admission. \nOfficial Tickets\nResale Tickets \nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you.\nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
+URL:https://comedycalendar.com/event/aries-spears-live-at-funny-bone-comedy-club-omaha-sat-early/
+LOCATION:Funny Bone Comedy Club – Omaha\, 710 N 114th St Suite 210\, Omaha\, NE\, 68154
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fe8/f5d847b2-3439-4e8f-8b98-efc6f1cb9fe8_RETINA_LANDSCAPE_16_9.jpg
+GEO:41.2661592;-96.093382
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Funny Bone Comedy Club – Omaha 710 N 114th St Suite 210 Omaha NE 68154;X-APPLE-RADIUS=500;X-TITLE=710 N 114th St Suite 210:geo:-96.093382,41.2661592
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260718T190000
+DTEND;TZID=America/New_York:20260718T210000
+DTSTAMP:20260515T013617Z
+CREATED:20260321T000000Z
+LAST-MODIFIED:20260515T013617Z
+UID:10003525-1784401200-1784408400@comedycalendar.com
+SUMMARY:Andrew Dismukes LIVE at Punch Line Philly (Saturday Show)
+DESCRIPTION:Official TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you. \nAbout Andrew Dismukes\nAndrew Dismukes is one of comedy’s most exciting rising talents\, widely recognized from his time as a cast member on Saturday Night Live. His ability to inhabit bizarre characters while maintaining sharp comedic timing made him a standout on the show\, and his live stand-up performances are even more impressive. \nHailing from Texas\, Dismukes brings a uniquely deadpan yet explosive energy to the stage. His comedy weaves together absurdist premises\, relatable observations\, and unexpected twists that keep audiences laughing throughout the entire set. \nSaturday nights at Punch Line Philly are always electric\, and Andrew Dismukes is the perfect headliner to make this one unforgettable. \nEvent Details\nDate: Saturday\, July 18\, 2026 \nShow Time: 7:00 PM \nVenue: Punch Line Philly — 33 E. Laurel Street\, Philadelphia\, PA 19123 \nAge Restrictions: 18+ (valid ID required) \nContent Warning: Adult language and themes \nAbout the Venue\nPunch Line Philly is Philadelphia’s top comedy destination\, located at 33 E. Laurel Street in the vibrant Northern Liberties neighborhood. The club seats approximately 300 guests in an intimate\, purpose-built comedy setting with excellent sightlines and acoustics from every seat. \nThe venue offers a full bar and food menu\, making it easy to enjoy a complete night out. Saturday shows at Punch Line Philly are especially popular\, drawing enthusiastic crowds ready for a great time. Parking is available nearby\, and the venue is accessible by public transit. \nPunch Line Philly has earned its reputation as one of the best comedy clubs on the East Coast\, consistently booking top-tier national talent in an atmosphere that feels both professional and welcoming. \nWhat to Expect\nThis is a solo stand-up performance by Andrew Dismukes running approximately 60–75 minutes. His Saturday show is known for being especially high-energy\, with the weekend crowd bringing an infectious enthusiasm that elevates the entire performance. \nDoors open approximately 30–45 minutes before showtime. Arrive early to secure your spot\, order a drink\, and enjoy the pre-show atmosphere. A two-drink minimum applies at most tables. \nTicket Information\nPrice Range: $52 – $112 (fees included) \nTickets are available through Ticketmaster (official) and VividSeats (resale). Saturday shows sell out fast — secure your seats now! \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
+URL:https://comedycalendar.com/event/andrew-dismukes-live-at-punch-line-philly-july-eighteen/
+LOCATION:Punch Line Philly\, 33 E. Laurel Street\, Philadelphia\, PA\, 19123\, United States
+ATTACH;FMTTYPE=image/jpeg:https://media.ticketmaster.com/en-us/dam/a/4fd/c4204539-de6d-4d5a-b27c-c1ec6915d4fd_TABLET_LANDSCAPE_LARGE_16_9.jpg
+GEO:39.9652742;-75.1351879
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Punch Line Philly 33 E. Laurel Street Philadelphia PA 19123 United States;X-APPLE-RADIUS=500;X-TITLE=33 E. Laurel Street:geo:-75.1351879,39.9652742
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260718T190000
+DTEND;TZID=America/New_York:20260718T210000
+DTSTAMP:20260602T200052Z
+CREATED:20260602T194345Z
+LAST-MODIFIED:20260602T200052Z
+UID:10005269-1784401200-1784408400@comedycalendar.com
+SUMMARY:Comedy Cellar Las Vegas Showcase (Early)
+DESCRIPTION:This post contains affiliate links. We may earn a commission at no extra cost to you. \n\n  \n     Official Tickets\n   \n  \n     Resale Tickets\n  \n\nComedy Cellar Las Vegas brings one of the most legendary names in stand-up comedy to the heart of Las Vegas. Located inside the Rio Hotel & Casino\, this intimate comedy club is the West Coast home of New York City’s world-famous Comedy Cellar\, the venue that helped launch the careers of comedy icons including Dave Chappelle\, Chris Rock\, Jon Stewart\, Ray Romano\, Amy Schumer\, Aziz Ansari\, and countless others. \nUnlike traditional comedy shows featuring a single headliner\, Comedy Cellar presents a carefully curated lineup of professional comedians every night. Audiences can expect multiple performers during each show\, featuring a mix of nationally touring headliners\, television favorites\, Comedy Central veterans\, Netflix performers\, and rising stars from around the world. \nNo two shows are exactly alike\, making every visit a unique experience. Surprise drop-in appearances from major comedians performing elsewhere in Las Vegas have become part of the club’s reputation\, giving audiences the chance to see comedy superstars in an intimate setting. \nEvent Details\nVenue: Comedy Cellar Las Vegas at Rio Hotel & Casino\nLocation: 3700 W Flamingo Rd\, Las Vegas\, NV 89103\nShow Schedule: Nightly performances throughout the year\nAge Requirement: Recommended for audiences 18+ due to mature comedy content \nAbout the Venue\nOpened in 2018\, Comedy Cellar Las Vegas was designed to recreate the atmosphere and energy of the original Greenwich Village club that has become one of the most respected comedy venues in the world. The 300-seat showroom offers excellent sightlines and an intimate setting that allows audiences to experience stand-up comedy exactly as it was meant to be seen: up close and personal. \nThe venue combines the excitement of a Las Vegas night out with the authentic feel of a classic New York comedy club. Guests can enjoy a comfortable showroom environment while watching some of the best comedians working today perform in a setting that encourages spontaneity\, crowd interaction\, and unforgettable moments. \nConveniently located inside the Rio Hotel & Casino just minutes from the Las Vegas Strip\, the venue offers easy access for both tourists and local comedy fans. \nWhat to Expect\nExpect a fast-paced evening featuring multiple comedians performing throughout the show. The Comedy Cellar is known for showcasing a wide variety of comedic styles\, from observational humor and storytelling to sharp social commentary\, crowd work\, and cutting-edge stand-up. \nWhether you’re discovering a future comedy star or watching a seasoned veteran perfect their craft\, every show delivers the authentic comedy club experience that has made the Comedy Cellar one of the most respected brands in stand-up comedy. \nFor comedy fans visiting Las Vegas\, Comedy Cellar is widely considered one of the best places in the city to experience live stand-up comedy any night of the week.
+URL:https://comedycalendar.com/event/comedy-cellar-las-vegas-showcase-early/2026-07-18/
+LOCATION:Comedy Cellar Las Vegas at Rio Hotel & Casino\, 3700 W Flamingo Rd\, Las Vegas\, NV\, 89103\, United States
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fc4/a6703ea9-a17b-4211-b9dc-7308aa0b2fc4_RETINA_PORTRAIT_16_9.jpg
+GEO:36.1172452;-115.1861279
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Comedy Cellar Las Vegas at Rio Hotel & Casino 3700 W Flamingo Rd Las Vegas NV 89103 United States;X-APPLE-RADIUS=500;X-TITLE=3700 W Flamingo Rd:geo:-115.1861279,36.1172452
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260718T190000
+DTEND;TZID=America/New_York:20260718T210000
+DTSTAMP:20260708T201229Z
+CREATED:20260708T200000Z
+LAST-MODIFIED:20260708T201229Z
+UID:10006315-1784401200-1784408400@comedycalendar.com
+SUMMARY:The Setup: Speakeasy Comedy New York LIVE at ReVision Lounge and Gallery
+DESCRIPTION:This post contains affiliate links. We may earn a commission at no extra cost to you. \nGet Tickets \nAbout the Show\nThe Setup: Speakeasy Comedy New York transforms ReVision Lounge and Gallery into a close-quarters comedy secret in the heart of the Lower East Side. Comics seen on Netflix\, HBO\, and Comedy Central deliver close-range punchlines in an intimate\, low-lit setting unlike any other in NYC. \nWith shifting lineups and a singular East Village atmosphere — bathtub couches\, bike-chain lights\, and brick walls — every show is a one-of-a-kind experience built for lasting memories. \nEvent Details\nDate: July 18\, 2026 (additional dates available — select during purchase)\nTime: Doors open at 6:30 PM; Show starts at 7:00 PM\nVenue: ReVision Lounge and Gallery\nAddress: 219 Avenue B\, New York\, NY 10009\nCity: New York\, NY\nPrice: $15.00\nAge Restriction: 21 and over with valid ID\nDuration: 2 hours \nAbout the Venue\nReVision Lounge and Gallery is a unique Lower East Side bar and gallery space in the East Village. The venue features eclectic décor including bathtub couches\, instrument lights\, and recycled-money bar details\, creating a hidden\, speakeasy-like atmosphere perfect for intimate live comedy. \nWhat to Expect\nArrive early to grab drinks and claim prime general-admission seats before the show begins. The Setup NYC features a rotating lineup of comics with credits from Netflix\, HBO\, and Comedy Central performing in an unusually close setting where every punchline lands with maximum impact. \nThe intimate format and unique venue design make this one of New York City’s most memorable comedy experiences. Note: the venue is not wheelchair accessible. \nTicket Information\nTickets are available through Fever. General Admission is $15.00. A 2-for-1 ticket option may also be available. All sales are final. \nGet Tickets
+URL:https://comedycalendar.com/event/the-setup-speakeasy-comedy-new-york-live-at-revision-lounge-and-gallery/
+LOCATION:ReVision Lounge and Gallery\, 219 Avenue B\, New York\, NY\, 10009\, United States
+ATTACH;FMTTYPE=image/jpeg:https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/f74eb54c-6cfd-11f1-8cc2-3aa0170c6417.jpeg
+GEO:40.728901;-73.978213
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=ReVision Lounge and Gallery 219 Avenue B New York NY 10009 United States;X-APPLE-RADIUS=500;X-TITLE=219 Avenue B:geo:-73.978213,40.728901
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Phoenix:20260718T190000
+DTEND;TZID=America/Phoenix:20260718T220000
+DTSTAMP:20260424T120000Z
+CREATED:20260424T120000Z
+LAST-MODIFIED:20260424T120000Z
+UID:10004757-1784401200-1784412000@comedycalendar.com
+SUMMARY:Marc Maron: Yammering into the Void Tour LIVE at Rialto Theatre
+DESCRIPTION:Official Tickets\nResale Tickets\n\nAbout the Performer\nMarc Maron is a legendary stand-up comedian\, actor\, and podcaster whose raw\, confessional style has earned him a devoted following over three decades in comedy. Best known as the host of the massively influential WTF with Marc Maron podcast\, Maron has also starred in the critically acclaimed IFC series Maron and appeared in numerous films and TV shows. \nHis stand-up is deeply personal\, brutally honest\, and darkly funny — exploring themes of anxiety\, addiction\, relationships\, and the absurdity of modern life. Maron has released several acclaimed Netflix specials including Too Real\, End Times Fun\, and From Bleak to Dark\, each showcasing his evolution as a storyteller and comedian. \nThe Yammering into the Void Tour promises all-new material from one of comedy’s most authentic and compelling voices. If you appreciate comedy that makes you think as much as it makes you laugh\, this is the show for you. \nEvent Details\n\nDate: Saturday\, July 18\, 2026\nDoors: 6:00 PM | Show Time: 7:00 PM\nVenue: Rialto Theatre\, 318 Congress St\, Tucson\, AZ 85701\nTicket Price Range: $61 – $364\nAge Restrictions: All ages welcome\n\nAbout the Venue\nThe Rialto Theatre is one of Tucson’s most beloved and historic entertainment venues\, located in the vibrant downtown arts district on Congress Street. Originally built in 1920\, the Rialto has been beautifully restored and now serves as a premier mid-size venue with a capacity of approximately 1\,300 guests. \nThe venue features a general admission floor area\, reserved balcony seating\, and excellent acoustics that make every performance feel intimate and immersive. The Rialto’s historic architecture — with its ornate details and warm lighting — creates a truly special atmosphere for live comedy and music events. \nStreet parking and nearby parking garages are available in the downtown area. The venue is surrounded by great restaurants and bars\, making it easy to turn the evening into a full night out in Tucson’s lively downtown scene. \nWhat to Expect\nMarc Maron’s Yammering into the Void Tour is a solo stand-up performance featuring brand-new material. Expect Maron’s signature stream-of-consciousness storytelling\, sharp cultural observations\, and deeply personal confessions delivered with his trademark intensity and wit. \nThe show runs approximately 75–90 minutes. Maron’s performances are known for their conversational intimacy — even in a packed venue\, it feels like he’s talking directly to you. This is a rare opportunity to see one of comedy’s most respected voices perform live in an intimate setting. \nDoors open at 6:00 PM. Arrive early to grab a drink at the bar and soak in the Rialto’s historic atmosphere before the show. \nTicket Information\nTickets range from $61 to $364 depending on seat location. Official tickets are available through Ticketmaster. Resale tickets are available through VividSeats. \n\nOfficial Tickets\nResale Tickets\n\nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
+URL:https://comedycalendar.com/event/marc-maron-yammering-into-the-void-tour-live-at-rialto-theatre/
+LOCATION:Rialto Theatre-Tucson\, 318 Congress St\, Tucson\, AZ\, 85701\, USA
+ATTACH;FMTTYPE=image/jpeg:https://a.vsstatic.com/mobile/app/theater/marc-maron.jpg
+GEO:32.2215888;-110.9664973
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Rialto Theatre-Tucson 318 Congress St Tucson AZ 85701 USA;X-APPLE-RADIUS=500;X-TITLE=318 Congress St:geo:-110.9664973,32.2215888
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260718T190000
+DTEND;TZID=America/Los_Angeles:20260718T220000
+DTSTAMP:20260531T224100Z
+CREATED:20260531T224100Z
+LAST-MODIFIED:20260531T224100Z
+UID:10005179-1784401200-1784412000@comedycalendar.com
+SUMMARY:Andrew Schulz LIVE at Brea Improv
+DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nOfficial Tickets (Ticketmaster) \nResale Tickets (VividSeats) \nAndrew Schulz LIVE at Brea Improv\nOne of the most influential voices in modern comedy\, Andrew Schulz brings his fearless\, unfiltered stand-up to the Brea Improv for two shows on July 18\, 2026. \nHis Netflix special LIFE spent 15 consecutive days in the U.S. Top 10 and appeared in the Top 10 across 13 countries. This is a rare intimate club performance from a comedian who regularly sells out arenas. \nEvent Details\nDate: Saturday\, July 18\, 2026\nTime: 7:00 PM PDT (Doors open at 5:30 PM)\nVenue: Brea Improv\nAddress: 180 S Brea Blvd\, Brea\, CA 92821\nAge Requirement: 21+\nSeating: General Admission\, first-come first-served\nNote: Two-item minimum purchase required \nAbout Andrew Schulz\nAndrew Schulz is a New York-native comedian whose Netflix special LIFE became a global hit in 2025. He sold out Madison Square Garden twice\, headlined the Kia Forum and Crypto.com Arena\, and his podcast Flagrant has crossed 1.4 billion total views on YouTube. He is known for his bold\, unfiltered comedy that covers politics\, pop culture\, and everything in between. \nWhat to Expect\n\nFearless\, unfiltered stand-up from a Netflix and arena headliner\nSharp commentary on culture\, politics\, and everyday life\nA rare intimate club performance from a major comedy star\n21+ show with full bar and two-item minimum\nTwo shows available — early and late\n\nVenue Information\nBrea Improv is located at 180 S Brea Blvd in Brea\, CA. Part of the legendary Improv comedy club chain in Orange County\, CA. \nTicket Information\nOfficial tickets are sold out. Resale tickets available on VividSeats from $184. \nOfficial Tickets (Ticketmaster) \nResale Tickets (VividSeats) \nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
+URL:https://comedycalendar.com/event/andrew-schulz-live-at-brea-improv/
+LOCATION:Brea Improv\, 180 South Brea Blvd\, Brea\, CA\, 92821\, United States
+ATTACH;FMTTYPE=image/png:https://comedycalendar.com/wp-content/uploads/2026/06/23_Edp-lmRkNR.png
+GEO:33.9183365;-117.8988084
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Brea Improv 180 South Brea Blvd Brea CA 92821 United States;X-APPLE-RADIUS=500;X-TITLE=180 South Brea Blvd:geo:-117.8988084,33.9183365
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260718T193000
+DTEND;TZID=America/New_York:20260718T220000
+DTSTAMP:20260323T041246Z
+CREATED:20260323T041246Z
+LAST-MODIFIED:20260323T041246Z
+UID:10003803-1784403000-1784412000@comedycalendar.com
+SUMMARY:The Second City "The Best of The Second City" LIVE at Birchmere
+DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nOfficial Tickets\nResale Tickets \nThe Second City “The Best of The Second City” LIVE at Birchmere\nThe legendary Second City comedy troupe brings their acclaimed “Best of The Second City” revue to the iconic Birchmere in Alexandria\, VA for one unforgettable night of sketch comedy\, improv\, and laughs. This touring production showcases the very best material from one of the most celebrated comedy institutions in the world — the birthplace of legends like Tina Fey\, Stephen Colbert\, and Bill Murray. \nEvent Details\nDate: Saturday\, July 18\, 2026\nTime: 7:30 PM (Doors open at 6:00 PM)\nVenue: Birchmere\nAddress: 3701 Mt. Vernon Ave\, Alexandria\, VA 22305\nAge Requirement: All ages welcome (everyone requires a ticket)\nParking: Free on-site parking available \nAbout The Second City\nThe Second City is the world’s premier comedy club\, theater\, and school of improvisation\, founded in Chicago in 1959. With alumni including Tina Fey\, Stephen Colbert\, Bill Murray\, John Belushi\, Gilda Radner\, and dozens more comedy legends\, The Second City has shaped modern comedy for over six decades. Their touring productions bring the best of their revue-style sketch comedy to audiences across North America. \nWhat to Expect\n\nA high-energy evening of sketch comedy and improvisation from one of comedy’s most storied institutions\nHilarious scenes\, songs\, and characters drawn from The Second City’s legendary catalog\nA talented ensemble cast of performers trained in the Second City tradition\nSharp\, witty commentary on modern life delivered with expert comedic timing\nAn intimate setting at the beloved Birchmere venue in Alexandria\nA show suitable for comedy fans of all backgrounds and ages\n\nVenue Information\nThe Birchmere is one of the most beloved music and comedy venues in the Washington\, DC area\, located at 3701 Mt. Vernon Ave in Alexandria\, VA. Known for its intimate atmosphere and excellent sightlines\, the Birchmere offers free on-site parking and a full-service bar and restaurant. The venue is fully handicap accessible. \nTicket Information\nTickets start at $55 (face value) or $70.20 through Ticketmaster. Resale tickets are also available through VividSeats. There is an 8-ticket limit per order. Will Call opens at 5 PM the night of the show. \nOfficial Tickets\nResale Tickets \nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
+URL:https://comedycalendar.com/event/the-second-city-the-best-of-the-second-city-live-at-birchmere/
+LOCATION:Birchmere\, 3701 Mt. Vernon Ave\, Alexandria\, VA\, 22305\, United States
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/e/f4e/b36c09ad-3149-4fb7-a029-1c722a438f4e_RETINA_PORTRAIT_16_9.jpg
+GEO:38.839991;-77.0613932
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Birchmere 3701 Mt. Vernon Ave Alexandria VA 22305 United States;X-APPLE-RADIUS=500;X-TITLE=3701 Mt. Vernon Ave:geo:-77.0613932,38.839991
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260718T200000
+DTEND;TZID=America/New_York:20260718T220000
+DTSTAMP:20260326T193629Z
+CREATED:20260322T180000Z
+LAST-MODIFIED:20260326T193629Z
+UID:10004016-1784404800-1784412000@comedycalendar.com
+SUMMARY:Rodney Carrington LIVE at MGM Northfield Park - Center Stage
+DESCRIPTION:Official TicketsResale Tickets \nAbout the Performer\nRodney Carrington is one of America’s most beloved comedians — a blue-collar entertainer who combines stand-up comedy with country music in a way that is uniquely\, hilariously his own. Born and raised in Texas\, Carrington has been making audiences laugh and sing along for over three decades. \nHis breakthrough came with the 1998 album Hangin’ With Rodney\, and he has since released eight comedy albums\, starred in his own ABC sitcom Rodney\, co-written and co-starred with Toby Keith in the feature film Beer For My Horses\, and released a Netflix special Here Comes the Truth. He is consistently ranked among America’s Top 10 highest-grossing comedians. \nFans can expect a raucous\, laugh-out-loud night of stand-up comedy and musical comedy\, featuring Rodney’s signature songs and stories about life\, love\, and everything in between. His shows are known for being wildly funny and genuinely heartfelt — a rare combination that keeps fans coming back year after year. \nEvent Details\nDate: Saturday\, July 18\, 2026 \nTime: 8:00 PM \nVenue: MGM Northfield Park – Center Stage\, 10777 Northfield Road\, Northfield\, OH 44067 \nAge Restriction: \nAbout the Venue\nMGM Northfield Park – Center Stage is Northeast Ohio’s premier casino entertainment venue\, located just 20 miles south of Cleveland inside the MGM Northfield Park complex off I-271 in Northfield\, Ohio. \nCenter Stage offers a world-class entertainment experience with excellent sightlines\, a full-service bar\, and the lively atmosphere of a casino showroom. The venue’s intimate layout ensures every seat delivers a great view of the stage\, making it one of the best places in the region to catch a live comedy show. \nAmple on-site parking\, easy highway access\, a full casino floor\, and multiple dining options throughout the complex make MGM Northfield Park the ideal destination for a complete evening of entertainment in Northeast Ohio. \nWhat to Expect\nRodney Carrington delivers a full evening of stand-up comedy and musical comedy that blends laugh-out-loud jokes with his signature country songs. His shows are high-energy\, crowd-pleasing\, and packed with the kind of humor that makes you feel right at home. \nExpect an opener to kick off the night before Rodney takes the stage for a headlining set that covers everything from relationships and family to the absurdities of everyday life — all with his trademark Texas charm and comedic timing. \nNote: This is a 21+ event. Content is for mature audiences. Please bring valid government-issued ID. \nTicket Information\nPrice Range: $30 – $85 (prices may vary based on demand) \nSecure your seats through official Ticketmaster channels or find resale tickets via VividSeats. \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
+URL:https://comedycalendar.com/event/rodney-carrington-live-at-mgm-northfield-park-center-stage/
+LOCATION:MGM Northfield Park – Center Stage\, 10777 Northfield Road\, Northfield\, OH\, 44067\, USA
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/2a5/511e89de-d97c-4259-b7b9-d7c9724552a5_RETINA_PORTRAIT_3_2.jpg
+GEO:41.348669;-81.5242506
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=MGM Northfield Park – Center Stage 10777 Northfield Road Northfield OH 44067 USA;X-APPLE-RADIUS=500;X-TITLE=10777 Northfield Road:geo:-81.5242506,41.348669
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260718T200000
+DTEND;TZID=America/New_York:20260718T220000
+DTSTAMP:20260401T040000Z
+CREATED:20260401T040000Z
+LAST-MODIFIED:20260401T040000Z
+UID:10004538-1784404800-1784412000@comedycalendar.com
+SUMMARY:Jerry Seinfeld LIVE at Premier Theater at Foxwoods Resort Casino
+DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nOfficial Tickets\nResale Tickets \nJerry Seinfeld LIVE at Premier Theater at Foxwoods Resort Casino\nOne of the greatest stand-up comedians of all time\, Jerry Seinfeld\, brings his legendary live show to the Premier Theater at Foxwoods Resort Casino in Mashantucket\, CT on July 18\, 2026. Known for his sharp observational humor and impeccable timing\, Seinfeld continues to sell out venues worldwide with his signature wit and storytelling. \nEvent Details\nDate: Saturday\, July 18\, 2026\nTime: 8:00 PM ET (Doors open at 7:00 PM)\nVenue: Premier Theater at Foxwoods Resort Casino\nAddress: 39 Norwich Westerly Road\, Mashantucket\, CT 06339\nAge Requirement: All Ages\nParking: On-site parking available \nAbout Jerry Seinfeld\nJerry Seinfeld is one of the most successful and beloved comedians in the world\, best known for co-creating and starring in the iconic NBC sitcom Seinfeld\, which ran from 1989 to 1998 and remains one of the greatest TV shows ever made. Beyond television\, Seinfeld has never stopped performing stand-up comedy\, releasing acclaimed specials including 23 Hours to Kill (2020) on Netflix. His observational comedy about everyday life\, relationships\, and the quirks of modern existence has made him a timeless voice in comedy. \nWhat to Expect\n\nWorld-class stand-up comedy from a true legend of the craft\nSharp\, observational humor about everyday life and human behavior\nImpeccable comedic timing honed over decades of performing\nAn intimate theater setting at the Premier Theater at Foxwoods\nA night of non-stop laughter you won’t soon forget\nOne of the most sought-after live comedy experiences of 2026\n\nVenue Information\nThe Premier Theater at Foxwoods Resort Casino is one of New England’s premier entertainment venues\, located within the world-famous Foxwoods Resort Casino in Mashantucket\, Connecticut. The theater offers excellent sightlines\, top-notch acoustics\, and a full-service casino resort experience before and after the show. \nTicket Information\nTickets for Jerry Seinfeld at Foxwoods start at $137. This is a highly anticipated show — tickets are expected to sell out quickly. Secure your seats now through official Ticketmaster or resale options via VividSeats. \nOfficial Tickets\nResale Tickets \nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
+URL:https://comedycalendar.com/event/jerry-seinfeld-live-at-premier-theater-at-foxwoods-resort-casino/
+LOCATION:Premier Theater at Foxwoods Resort Casino\, 39 Norwich Westerly Road\, Mashantucket\, CT\, 6339\, United States Of America
+ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/04/5f0ebea2-3344-4065-8ea3-1a9f6412b9d2_RETINA_LANDSCAPE_16_9-7ufweZ.jpg
+GEO:41.4758112;-71.9626466
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Premier Theater at Foxwoods Resort Casino 39 Norwich Westerly Road Mashantucket CT 6339 United States Of America;X-APPLE-RADIUS=500;X-TITLE=39 Norwich Westerly Road:geo:-71.9626466,41.4758112
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Detroit:20260718T200000
+DTEND;TZID=America/Detroit:20260718T220000
+DTSTAMP:20260515T013622Z
+CREATED:20260502T040000Z
+LAST-MODIFIED:20260515T013622Z
+UID:10004835-1784404800-1784412000@comedycalendar.com
+SUMMARY:Maz Jobrani LIVE at Sound Board at MotorCity Casino Hotel
+DESCRIPTION:Official TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you. \nAbout the Performer\nMaz Jobrani is one of the most celebrated Iranian-American comedians working today\, known for his sharp wit\, cultural observations\, and ability to bridge worlds through laughter. \nA founding member of the legendary Axis of Evil Comedy Tour\, Maz has built a career on turning his immigrant experience into universal comedy gold. His stand-up tackles everything from family dynamics and cultural clashes to politics and everyday absurdities — all delivered with warmth\, energy\, and precision timing. \nMaz has appeared on numerous TV shows and films\, including his own Netflix special “Brown and Friendly\,” and has been a regular on late-night television. His comedy resonates deeply with diverse audiences who appreciate his ability to find humor in the human condition regardless of background. \nEvent Details\nDate: Saturday\, July 18\, 2026 \nTime: 8:00 PM \nVenue: Sound Board at MotorCity Casino Hotel \nAddress: 2901 Grand River Ave\, Detroit\, MI 48201 \nAge Restrictions: Please check venue for age requirements. \nAbout the Venue\nThe Sound Board at MotorCity Casino Hotel is one of Detroit’s premier intimate concert and comedy venues\, nestled inside the vibrant MotorCity Casino Hotel complex on Grand River Avenue. \nWith a capacity of approximately 1\,700 guests\, the Sound Board offers an exceptional viewing experience from virtually every seat in the house. The venue features state-of-the-art sound and lighting systems\, a full bar\, and a sophisticated atmosphere that sets the stage for an unforgettable night out. \nThe MotorCity Casino Hotel complex provides ample amenities including on-site parking\, multiple dining options\, and the full casino experience before or after the show. The venue is easily accessible from downtown Detroit and surrounding suburbs. \nWhat to Expect\nMaz Jobrani delivers a high-energy\, crowd-pleasing performance that blends personal storytelling with sharp social commentary. Expect plenty of laughs about cultural identity\, family life\, and the quirks of modern American society. \nHis shows are known for their inclusive atmosphere — Maz has a gift for making everyone in the room feel seen and heard\, regardless of their background. This is a solo stand-up performance\, so you’ll get a full evening of Maz at his best. \nThe intimate setting of the Sound Board means you’ll be close to the action\, making for a truly personal comedy experience. Arrive early to grab a drink and settle in before the show begins. \nTicket Information\nPrice Range: From $60 (resale prices may vary) \nSecure your seats now before they sell out. Tickets are available through Ticketmaster (official) and VividSeats (resale). \nOfficial TicketsResale Tickets
+URL:https://comedycalendar.com/event/maz-jobrani-live-at-sound-board-at-motorcity-casino-hotel/
+LOCATION:Sound Board at MotorCity Casino Hotel\, 2901 Grand River Ave\, Detroit\, MI\, 48201\, USA
+ATTACH;FMTTYPE=image/jpeg:https://media.ticketmaster.com/en-us/dam/a/4ea/cd004bac-3aba-452b-9815-b4f443c4a4ea_TABLET_LANDSCAPE_LARGE_16_9.jpg
+GEO:42.3383929;-83.0685616
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Sound Board at MotorCity Casino Hotel 2901 Grand River Ave Detroit MI 48201 USA;X-APPLE-RADIUS=500;X-TITLE=2901 Grand River Ave:geo:-83.0685616,42.3383929
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260718T210000
+DTEND;TZID=America/New_York:20260718T230000
+DTSTAMP:20260714T165702Z
+CREATED:20260623T165756Z
+LAST-MODIFIED:20260714T165702Z
+UID:10006091-1784408400-1784415600@comedycalendar.com
+SUMMARY:SO LIT Saturday Blackbird Ordinary Comedy Night
+DESCRIPTION:So Lit Saturday: nonstop comedy\, guaranteed seating\, shots\, and a Miami afterparty that keeps the night alive. Free Shots at 9PM.\n\n\nSO LIT Saturday at Blackbird Ordinary 🔥\n \nHere’s how to start off your Saturday nights…in one of the best nightclubs in Brickell. \nWe’re setting the weekend on fire with comedy\, cocktails\, and crowdwork\, all happening inside Blackbird Ordinary\, Miami’s most iconic nightlife spot. \n🎤 Comedy Show | 9–10:30PMThe night kicks off in the back room\, where it transforms into a full-blown comedy club. Hosted by Manny Garavito (Miami’s Best Comedian) and JJ (Manny’s favorite Miami comedian)\, expect laughs that go from wild to wild af real quick. \nThese two have spent years building Miami’s funniest nights\, and now they’re bringing the energy\, the people\, and the afterparty vibes all under one roof. \nTicket Options \nFree SeatingFirst come\, first served. Whatever seats are not purchased will be available to anyone who arrives early. Once they’re gone\, they’re gone. \n$25 Guaranteed Seating + FREE Shot After 9pmSecure your spot without rushing. We’ll hold your seats until you arrive and welcome you with your shot even if you show up after 9 PM. Limited seating available. \n$50 VIP Experience (Guaranteed Seating\, FREE Shot After 9PM\, VIP Bottle Afterparty Access AND Merch)Everything included: guaranteed seating\, a free shot even after 9 PM\, access to our bottle section for the afterparty with Manny and JJ\, plus exclusive Miami Comedy merch to take home. VERY Limited space. \n \nThis is So Lit Saturday at Blackbird Ordinary—where Brickell weekends hit different.
+URL:https://comedycalendar.com/event/so-lit-saturday-blackbird-ordinary-comedy-night-22/
+LOCATION:Blackbird Ordinary\, Southwest 1st Avenue 729\, Miami\, FL\, 33130\, United States
+CATEGORIES:Showcase
+ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/06/3d87d3d883e225c53c2c702488594df1-Hdt6Sk.tmp_-PYBfmp.jpg
+GEO:25.7666715;-80.1951345
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Blackbird Ordinary Southwest 1st Avenue 729 Miami FL 33130 United States;X-APPLE-RADIUS=500;X-TITLE=Southwest 1st Avenue 729:geo:-80.1951345,25.7666715
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260718T211500
+DTEND;TZID=America/New_York:20260718T230000
+DTSTAMP:20260515T013627Z
+CREATED:20260321T000000Z
+LAST-MODIFIED:20260515T013627Z
+UID:10003526-1784409300-1784415600@comedycalendar.com
+SUMMARY:Andrew Dismukes LIVE at Punch Line Philly (Saturday Late Show)
+DESCRIPTION:Official TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you. \nAbout Andrew Dismukes\nAndrew Dismukes is one of the most exciting voices in stand-up comedy today. Best known as a cast member on Saturday Night Live\, Dismukes earned a devoted following with his sharp character work\, absurdist humor\, and impeccable comedic timing. \nA Texas native\, he brings a uniquely deadpan yet explosive energy to the stage. His live stand-up goes deeper than what you’ve seen on TV — expect personal storytelling\, ridiculous premises\, and a performance style that keeps the audience completely engaged from start to finish. \nThe Saturday late show at Punch Line Philly is the perfect way to end your weekend on a high note. Andrew Dismukes is guaranteed to deliver a night you won’t forget. \nEvent Details\nDate: Saturday\, July 18\, 2026 \nShow Time: 9:15 PM (Late Show) \nVenue: Punch Line Philly — 33 E. Laurel Street\, Philadelphia\, PA 19123 \nAge Restrictions: 18+ (valid ID required) \nContent Warning: Adult language and themes \nAbout the Venue\nPunch Line Philly is Philadelphia’s most celebrated comedy club\, located at 33 E. Laurel Street in the Northern Liberties neighborhood. The intimate venue holds approximately 300 guests in a setting designed specifically for stand-up comedy\, with excellent sightlines and acoustics from every seat. \nThe club features a full bar and food menu\, so you can enjoy cocktails\, craft beers\, and bites throughout the show. Saturday late shows at Punch Line Philly are legendary for their electric atmosphere — the crowd is always ready to have a great time\, and the energy in the room is unmatched. \nParking is available nearby\, and the venue is easily accessible by public transit. Punch Line Philly is consistently ranked among the best comedy clubs on the East Coast. \nWhat to Expect\nThis is a solo stand-up performance by Andrew Dismukes running approximately 60–75 minutes. The Saturday late show crowd is always one of the most enthusiastic of the weekend\, creating an incredible shared experience between performer and audience. \nDoors open approximately 30 minutes before showtime. Arrive early to grab a drink and find your seat. A two-drink minimum applies at most tables. \nTicket Information\nPrice Range: $52 – $112 (fees included) \nTickets are available through Ticketmaster (official) and VividSeats (resale). Saturday late shows sell out extremely fast — grab your tickets now before they’re gone! \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
+URL:https://comedycalendar.com/event/andrew-dismukes-live-at-punch-line-philly-saturday-late-show/
+LOCATION:Punch Line Philly\, 33 E. Laurel Street\, Philadelphia\, PA\, 19123\, United States
+ATTACH;FMTTYPE=image/jpeg:https://media.ticketmaster.com/en-us/dam/a/4fd/c4204539-de6d-4d5a-b27c-c1ec6915d4fd_TABLET_LANDSCAPE_LARGE_16_9.jpg
+GEO:39.9652742;-75.1351879
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Punch Line Philly 33 E. Laurel Street Philadelphia PA 19123 United States;X-APPLE-RADIUS=500;X-TITLE=33 E. Laurel Street:geo:-75.1351879,39.9652742
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260718T211500
+DTEND;TZID=America/Chicago:20260718T231500
+DTSTAMP:20260525T000105Z
+CREATED:20260401T040000Z
+LAST-MODIFIED:20260525T000105Z
+UID:10004598-1784409300-1784416500@comedycalendar.com
+SUMMARY:Aries Spears LIVE at Funny Bone Comedy Club - Omaha (Sat Late)
+DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nOfficial Tickets\nResale Tickets \nAries Spears LIVE at Funny Bone – Omaha\nGet ready for a night of non-stop laughs as stand-up comedy powerhouse Aries Spears takes the stage at Funny Bone Comedy Club in Omaha\, Nebraska. Known for his razor-sharp wit and explosive energy\, Aries Spears delivers a comedy experience you won’t forget. \nEvent Details\nDate: Saturday\, July 18\, 2026\nTime: 9:15 PM (Doors open at 8:30 PM)\nVenue: Funny Bone Comedy Club\, 710 N 114th St\, Suite 210\, Omaha\, NE 68154\nAge Requirement: 18+ (Valid photo ID required)\nTicket Price: $37 – $42 \nAbout Aries Spears\nAries Spears is a veteran stand-up comedian and actor best known for his long run on MADtv\, where his uncanny celebrity impressions made him a household name. With decades of experience on stage and screen\, Spears brings a high-energy\, no-holds-barred style to every performance. He has appeared on numerous TV specials and continues to tour nationally to sold-out crowds. \nWhat to Expect\n\nHigh-energy stand-up comedy from a MADtv legend\nHilarious celebrity impressions and sharp observational humor\nAn intimate comedy club atmosphere\nFull bar and dinner menu available\nA late-night Saturday show for the ultimate comedy night out\n\nTicket Information\nTickets for the Saturday 9:15 PM late show start at $37. Seating is general admission. \nOfficial Tickets\nResale Tickets \nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you.\nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
+URL:https://comedycalendar.com/event/aries-spears-live-at-funny-bone-comedy-club-omaha-sat-late/
+LOCATION:Funny Bone Comedy Club – Omaha\, 710 N 114th St Suite 210\, Omaha\, NE\, 68154
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fe8/f5d847b2-3439-4e8f-8b98-efc6f1cb9fe8_RETINA_LANDSCAPE_16_9.jpg
+GEO:41.2661592;-96.093382
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Funny Bone Comedy Club – Omaha 710 N 114th St Suite 210 Omaha NE 68154;X-APPLE-RADIUS=500;X-TITLE=710 N 114th St Suite 210:geo:-96.093382,41.2661592
+END:VEVENT
+END:VCALENDAR
