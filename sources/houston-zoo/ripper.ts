@@ -299,18 +299,12 @@ export default class HoustonZooRipper implements IRipper {
                     // The URL should already be absolute based on the fetch we saw
                 }
 
-                // Extract date string from span.date
+                // Extract date string from span.date. It is occasionally
+                // empty (e.g. multi-week promo cards like "Community Heroes
+                // Appreciation Days") — parseDateRange then falls back to the
+                // container's data-date attribute, so don't error out early.
                 const dateSpan = textColumn.querySelector("span.date");
                 const dateStr = dateSpan?.textContent?.trim() || "";
-
-                if (!dateStr) {
-                    errors.push({
-                        type: "ParseError",
-                        reason: "Missing date string for event",
-                        context: `Title: ${title}`,
-                    });
-                    continue;
-                }
 
                 // Parse the date range
                 const { startDate, endDate, timeStr } = parseDateRange(dateStr, dataDate);
@@ -318,7 +312,7 @@ export default class HoustonZooRipper implements IRipper {
                 if (!startDate) {
                     errors.push({
                         type: "ParseError",
-                        reason: `Cannot parse date string: "${dateStr}"`,
+                        reason: `Cannot parse date string: "${dateStr}" (data-date: "${dataDate}")`,
                         context: `Title: ${title}`,
                     });
                     continue;

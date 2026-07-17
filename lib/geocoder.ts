@@ -357,6 +357,12 @@ const KNOWN_VENUE_COORDS: Record<string, GeoCoords> = {
   // Partnership feed). Nominatim returns no result for the feed's
   // "Waugh Drive Bat Bridge, 1" location string.
   "waugh drive bat bridge, 1": { lat: 29.7573, lng: -95.3936 },
+  // Out-of-town venues from the external comedy-calendar feed. Nominatim can't
+  // resolve the feed's full location strings (venue name + suite-style commas),
+  // so pin them directly; prefix match covers the trailing address text.
+  "birchmere": { lat: 38.8400, lng: -77.0614 },
+  "mgm northfield park": { lat: 41.3485, lng: -81.5227 },
+  "sound board at motorcity casino hotel": { lat: 42.3397, lng: -83.0678 },
 };
 
 /**

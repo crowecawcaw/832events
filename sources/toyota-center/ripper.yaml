@@ -1,4 +1,9 @@
 name: toyota-center
+# DISABLED 2026-07-17: axs.com returns HTTP 403 to both direct CI fetches
+# (curl) and Browserbase (proxy: true), so this venue cannot be ripped from
+# CI at all. Re-enable by switching to an alternative integration — the
+# venue's own website (axsskin ripper) or Ticketmaster if it is listed there.
+disabled: true
 type: axs
 proxy: true
 description: "Toyota Center"

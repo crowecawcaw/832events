@@ -30,9 +30,11 @@ const MAX_PAGES = 10;
  */
 export class AXSRipper implements IRipper {
     private fetchFn: FetchFn | null = null;
+    private useProxy = false;
 
     public async rip(ripper: Ripper): Promise<RipperCalendar[]> {
         this.fetchFn = getFetchForConfig(ripper.config);
+        this.useProxy = !!ripper.config.proxy;
 
         const calendars: { [key: string]: { events: RipperEvent[], friendlyName: string, tags: string[] } } = {};
         for (const c of ripper.config.calendars) {
@@ -104,6 +106,19 @@ export class AXSRipper implements IRipper {
     }
 
     private async fetchPage(url: string): Promise<string> {
+        // proxy: true → Browserbase via the proxy-aware fetch (bypasses the
+        // bot detection that 403s GitHub-runner IPs, and gets the shared fetch
+        // cache). This fetchFn was previously obtained but never used, which
+        // silently made `proxy: true` a no-op for AXS sources. Direct (no
+        // proxy) keeps using curl: Node's fetch (undici) has a TLS fingerprint
+        // AXS's Cloudflare rejects even from residential IPs.
+        if (this.useProxy && this.fetchFn) {
+            const res = await this.fetchFn(url);
+            if (res.status !== 200) {
+                throw new Error(`AXS fetch error: HTTP ${res.status} for ${url}`);
+            }
+            return await res.text();
+        }
         return this.fetchPageViaCurl(url);
     }
 
