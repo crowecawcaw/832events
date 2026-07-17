@@ -1,13 +1,18 @@
 name: Claude Source Pipeline
 
-# ⚠️ CURRENTLY DISABLED in the Actions UI (2026-07-06) — no scheduled source
-# discovery runs. Re-enable from the Actions tab; the file is kept for that.
-
 # Discovers new Houston event sources AND implements them in a single daily run,
 # opening ONE human-review PR. (This replaces the old two-workflow split —
 # claude-discovery.yml + claude-implementation.yml — and the push-markdown-to-
 # main-then-read-it-an-hour-later dance. Candidate tracking lives in
 # docs/source-candidates/ — one YAML file per candidate.)
+#
+# This file was renamed from claude-sources.yml (2026-07-17) to clear its
+# manually-disabled state: GitHub keys "disabled in the Actions UI" to the
+# workflow PATH, so the rename re-enables it without admin access. It is the
+# canonical source-discovery pipeline; the experimental discovery-crawler.yml
+# (deterministic Brave-search crawler) was deleted at the same time — its
+# daily ledger push to main was rejected by the ruleset (GH013) and it
+# duplicated this pipeline's job with more moving parts.
 #
 # A PR opened from this Action uses the Actions default token, so it will NOT
 # trigger CI or the automated Claude Code Review (bot-authored events don't start
@@ -26,7 +31,7 @@ on:
         type: string
 
 concurrency:
-  group: claude-sources
+  group: source-pipeline
   cancel-in-progress: false
 
 jobs:

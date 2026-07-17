@@ -180,10 +180,10 @@ so two discovery PRs never conflict on rebase. Feature ideas in `ideas.md`.
 ## Development workflow
 
 > Automated review: `.github/workflows/claude-code-review.yml` is currently
-> DISABLED in the Actions UI (as are `claude-sources.yml` and
-> `discovery-crawler.yml`), so PRs get **no automatic review** — treat human
+> DISABLED in the Actions UI, so PRs get **no automatic review** — treat human
 > review as the gate and don't wait for a review that will never arrive.
-> `claude.yml` (enabled) answers `@claude` mentions from the repo owner.
+> `claude.yml` (enabled) answers `@claude` mentions from the repo owner, and
+> `source-pipeline.yml` (enabled) runs the daily source discovery.
 
 **Never push to `main`.** Branch → commit → PR. Before pushing, fetch and rebase
 **only if behind**:

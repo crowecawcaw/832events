@@ -277,7 +277,7 @@ Anthropic-account routines or extra secrets. The reference instance runs
    `build-error-responder` job in `publish_calendars.yml` runs the action
    (rate-limited to once per 24 h via the Actions cache) when a build has
    errors, and skips silently when the OAuth token is unset.
-2. **Source pipeline** — one scheduled workflow, `claude-sources.yml` (daily
+2. **Source pipeline** — one scheduled workflow, `source-pipeline.yml` (daily
    08:30 UTC). It runs `skills/source-discovery/SKILL.md`: discovers new
    sources, records them in `docs/source-candidates/`, builds up to 5
    pending candidates, and opens a single human-review PR.

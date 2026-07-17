@@ -30,7 +30,7 @@ cadence, and scope to taste by editing the workflow file.
 | Workflow | File | Trigger | Runs |
 |---|---|---|---|
 | [Build-error responder](#1-build-error-responder) | `publish_calendars.yml` (`build-error-responder` job) | After a build with errors (≤ once per 24 h) | `skills/build-report/SKILL.md` |
-| [Source pipeline](#2-source-pipeline) | `claude-sources.yml` | `schedule` (daily 08:30 UTC) + `workflow_dispatch` | `skills/source-discovery/SKILL.md` |
+| [Source pipeline](#2-source-pipeline) | `source-pipeline.yml` | `schedule` (daily 08:30 UTC) + `workflow_dispatch` | `skills/source-discovery/SKILL.md` |
 
 Both authenticate with the same `CLAUDE_CODE_OAUTH_TOKEN` secret and
 skip silently on a copy that hasn't set it (or, on a fork whose
@@ -164,7 +164,7 @@ and implements the best ones in one run:
 
 If discovery turns up nothing and no candidates are implementable, it opens no PR.
 
-**Trigger & cadence:** `.github/workflows/claude-sources.yml` (`schedule` daily
+**Trigger & cadence:** `.github/workflows/source-pipeline.yml` (`schedule` daily
 08:30 UTC); also supports `workflow_dispatch` for a manual run.
 
 **Secrets & repo coupling:** `CLAUDE_CODE_OAUTH_TOKEN`.

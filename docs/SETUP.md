@@ -148,7 +148,7 @@ cadences for each are in [`docs/routines.md`](./routines.md):
   `build-error-responder` job in `publish_calendars.yml` runs after a daily
   build with errors (rate-limited to once per 24 h; bypass with a manual
   run and `force_routine=true`).
-- **Source pipeline** — one scheduled workflow, `claude-sources.yml` (daily
+- **Source pipeline** — one scheduled workflow, `source-pipeline.yml` (daily
   08:30 UTC). It discovers new sources, records them in
   `docs/source-candidates/`, builds up to 5 pending candidates, and opens one
   PR (`skills/source-discovery/SKILL.md`). For a **content-only** PR it enables
@@ -190,7 +190,7 @@ until it's done):
 
 Security model: this replaces the old `auto-merge-claude-prs.yml` janitor,
 which enforced a path allowlist in workflow code. The guard now lives in the
-bot prompts (`claude-sources.yml` / `discovery-crawler.yml`): a pipeline only
+bot prompts (`source-pipeline.yml`): a pipeline only
 enables auto-merge when **every changed file is calendar content** (`sources/`,
 `docs/`, `allowed-removals/`, caches); a PR touching `.github/`, `scripts/`,
 `lib/`, `web/`, or config is left for you to review and merge. This is a
