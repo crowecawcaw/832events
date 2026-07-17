@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-07-17T06:40:47.594Z",
-  "totalErrors": 15,
+  "buildTime": "2026-07-17T06:55:42.598Z",
+  "totalErrors": 12,
   "configErrors": [],
   "sources": [
     {
@@ -28,7 +28,7 @@
       "errors": [
         {
           "type": "ParseError",
-          "reason": "Failed to fetch AXS events for venue 130678: Error: Browserbase fetch failed: HTTP 429 — {\"statusCode\":429,\"error\":\"Too Many Requests\",\"message\":\"You've exceeded your max concurrent fetch requests limit (limit 5, currently 5). Please contact support to increase your limit.\"}",
+          "reason": "Failed to fetch AXS events for venue 130678: Error: AXS fetch error: HTTP 403 for https://www.axs.com/venues/130678/houston-improv-houston-tickets",
           "context": "venueSlug: houston-improv-houston-tickets"
         }
       ]
@@ -111,17 +111,17 @@
   ],
   "externalCalendarFailures": [
     {
-      "name": "walking-stick-brewing",
-      "friendlyName": "Walking Stick Brewing",
-      "url": "https://walkingstickbrewing.com/?post_type=tribe_events&ical=1&eventDisplay=list",
+      "name": "buffalo-bayou-partnership",
+      "friendlyName": "Buffalo Bayou Partnership",
+      "url": "https://buffalobayou.org/events/?ical=1",
       "error": "Error: HTTP 403: "
     }
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1712,
-    "eventsWithGeo": 1497,
-    "eventsWithoutGeo": 215,
+    "totalEvents": 1777,
+    "eventsWithGeo": 1544,
+    "eventsWithoutGeo": 233,
     "geocodeErrors": 0
   },
   "uncertainEvents": [],
@@ -133,7 +133,6 @@
   "zeroEventCalendars": [
     "arena-theatre-arena-theatre",
     "aurora-picture-show-aurora-picture-show",
-    "downtown-houston-events-downtown-houston-events",
     "heights-theater-heights-theater",
     "heritage-society-heritage-society",
     "houston-improv-houston-improv",
@@ -147,7 +146,6 @@
     "stereo-live-houston-stereo-live-houston",
     "toyota-center-toyota-center",
     "tag-film",
-    "tag-culture",
     "tag-history",
     "tag-spring-branch",
     "tag-events",
@@ -155,7 +153,6 @@
     "tag-fifa",
     "tag-literary",
     "tag-brewery",
-    "tag-garden-oaks",
     "external-bad-astronaut-brewery",
     "external-houston-cinema-arts-society",
     "external-islamic-society-greater-houston"
@@ -167,35 +164,14 @@
       "url": "https://www.readhouston.com/events?format=json",
       "cachedAt": "2026-07-16T05:53:24.701Z",
       "ageHours": 25,
-      "error": "Browserbase fetch failed: HTTP 429 — {\"statusCode\":429,\"error\":\"Too Many Requests\",\"message\":\"You've exceeded your max concurrent fetch requests limit (limit 5, currently 5). Please contact support to increase your limit.\"}"
-    },
-    {
-      "source": "downtown-houston-events",
-      "url": "https://downtownhouston.org/calendar",
-      "cachedAt": "2026-07-05T14:18:07.310Z",
-      "ageHours": 280,
-      "error": "Browserbase fetch failed: HTTP 429 — {\"statusCode\":429,\"error\":\"Too Many Requests\",\"message\":\"You've exceeded your max concurrent fetch requests limit (limit 5, currently 5). Please contact support to increase your limit.\"}"
-    },
-    {
-      "source": "buffalo-bayou-partnership",
-      "url": "https://buffalobayou.org/events/?ical=1",
-      "cachedAt": "2026-06-20T13:03:16.266Z",
-      "ageHours": 642,
-      "error": "Browserbase fetch failed: HTTP 429 — {\"statusCode\":429,\"error\":\"Too Many Requests\",\"message\":\"You've exceeded your max concurrent fetch requests limit (limit 5, currently 5). Please contact support to increase your limit.\"}"
-    },
-    {
-      "source": "sawyer-yards",
-      "url": "https://www.sawyeryards.com/events/upcoming-events",
-      "cachedAt": "2026-07-05T14:18:09.188Z",
-      "ageHours": 280,
-      "error": "Browserbase fetch failed: HTTP 429 — {\"statusCode\":429,\"error\":\"Too Many Requests\",\"message\":\"You've exceeded your max concurrent fetch requests limit (limit 5, currently 5). Please contact support to increase your limit.\"}"
+      "error": "Browserbase fetch failed: HTTP 500 — {\"statusCode\":500,\"error\":\"Internal Server Error\",\"message\":\"Internal Server Error\"}"
     },
     {
       "source": null,
       "url": "https://www.readhouston.com/events?month=august-2026&view=calendar&format=json",
       "cachedAt": "2026-07-16T05:53:25.290Z",
       "ageHours": 25,
-      "error": "Browserbase fetch failed: HTTP 429 — {\"statusCode\":429,\"error\":\"Too Many Requests\",\"message\":\"You've exceeded your max concurrent fetch requests limit (limit 5, currently 5). Please contact support to increase your limit.\"}"
+      "error": "Browserbase fetch failed: HTTP 500 — {\"statusCode\":500,\"error\":\"Internal Server Error\",\"message\":\"Internal Server Error\"}"
     },
     {
       "source": null,
@@ -666,13 +642,6 @@
       "lng": -95.4232
     },
     {
-      "source": "external",
-      "name": "walking-stick-brewing",
-      "label": "Walking Stick Brewing Company, 956 Judiway St, Houston, TX 77018",
-      "lat": 29.8125,
-      "lng": -95.4458
-    },
-    {
       "source": "recurring",
       "name": "wedgewood-farmers-market",
       "label": "Wedgewood area, Houston, TX",
@@ -688,8 +657,8 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1081,
-    "totalEvents": 1712,
+    "eventsWithImage": 1078,
+    "totalEvents": 1777,
     "venuesWithImage": 0,
     "totalVenues": 51,
     "unresolvable": 0
@@ -1269,6 +1238,396 @@
         "eventId": "the-crusaders-experience-2026-07-22",
         "summary": "The Crusaders Experience",
         "date": "2026-07-22T19:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "2026-premium-world-cup-watch-party-experience-2026-07-17",
+        "summary": "2026 Premium World Cup Watch Party Experience",
+        "date": "2026-07-17T12:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "2026-premium-world-cup-watch-party-experience-2026-07-18",
+        "summary": "2026 Premium World Cup Watch Party Experience",
+        "date": "2026-07-18T12:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "2026-premium-world-cup-watch-party-experience-2026-07-19",
+        "summary": "2026 Premium World Cup Watch Party Experience",
+        "date": "2026-07-19T12:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "america-250-exhibit-the-american-revolution-experience-2026-07-17",
+        "summary": "America 250 Exhibit: The American Revolution Experience",
+        "date": "2026-07-17T10:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "america-250-exhibit-the-american-revolution-experience-2026-07-18",
+        "summary": "America 250 Exhibit: The American Revolution Experience",
+        "date": "2026-07-18T10:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "beat-the-bomb-summer-mission-america250-edition-2026-07-17",
+        "summary": "Beat The Bomb Summer Mission: America250 Edition",
+        "date": "2026-07-17T14:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "beat-the-bomb-summer-mission-america250-edition-2026-07-18",
+        "summary": "Beat The Bomb Summer Mission: America250 Edition",
+        "date": "2026-07-18T14:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "beat-the-bomb-summer-mission-america250-edition-2026-07-19",
+        "summary": "Beat The Bomb Summer Mission: America250 Edition",
+        "date": "2026-07-19T14:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "beat-the-bomb-summer-mission-america250-edition-2026-07-22",
+        "summary": "Beat The Bomb Summer Mission: America250 Edition",
+        "date": "2026-07-22T14:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "beat-the-bomb-summer-mission-america250-edition-2026-07-23",
+        "summary": "Beat The Bomb Summer Mission: America250 Edition",
+        "date": "2026-07-23T14:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "bumper-and-cruiser-boats-2026-07-17",
+        "summary": "Bumper and Cruiser Boats",
+        "date": "2026-07-17T10:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "bumper-and-cruiser-boats-2026-07-18",
+        "summary": "Bumper and Cruiser Boats",
+        "date": "2026-07-18T10:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "bumper-and-cruiser-boats-2026-07-19",
+        "summary": "Bumper and Cruiser Boats",
+        "date": "2026-07-19T10:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "bumper-and-cruiser-boats-2026-07-20",
+        "summary": "Bumper and Cruiser Boats",
+        "date": "2026-07-20T10:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "bumper-and-cruiser-boats-2026-07-21",
+        "summary": "Bumper and Cruiser Boats",
+        "date": "2026-07-21T10:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "bumper-and-cruiser-boats-2026-07-22",
+        "summary": "Bumper and Cruiser Boats",
+        "date": "2026-07-22T10:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "bumper-and-cruiser-boats-2026-07-23",
+        "summary": "Bumper and Cruiser Boats",
+        "date": "2026-07-23T10:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "candles-cocktails-a-curated-candle-making-experience-2026-07-18",
+        "summary": "Candles & Cocktails: A Curated Candle Making Experience",
+        "date": "2026-07-18T17:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "danielle-reich-trio-jazz-brunch-2026-07-19",
+        "summary": "Danielle Reich Trio Jazz Brunch",
+        "date": "2026-07-19T12:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "fifa-fan-festival-houston-2026-07-18",
+        "summary": "FIFA Fan Festival Houston",
+        "date": "2026-07-18T14:30-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "fifa-fan-festival-houston-2026-07-19",
+        "summary": "FIFA Fan Festival Houston",
+        "date": "2026-07-19T12:30-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "fitbreak-hip-hop-dance-fitness-2026-07-21",
+        "summary": "FitBreak: Hip-Hop Dance Fitness",
+        "date": "2026-07-21T18:30-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "flow-breath-2026-07-18",
+        "summary": "Flow & Breath",
+        "date": "2026-07-18T10:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "flow-breath-2026-07-22",
+        "summary": "Flow & Breath",
+        "date": "2026-07-22T18:30-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "grupo-frontera-2026-07-23",
+        "summary": "Grupo Frontera",
+        "date": "2026-07-23T20:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "horizon-a-new-interactive-art-installation-coming-to-avenida-houston-2026-07-17",
+        "summary": "Horizon, A New Interactive Art Installation Coming to Avenida Houston",
+        "date": "2026-07-17T08:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "horizon-a-new-interactive-art-installation-coming-to-avenida-houston-2026-07-18",
+        "summary": "Horizon, A New Interactive Art Installation Coming to Avenida Houston",
+        "date": "2026-07-18T08:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "horizon-a-new-interactive-art-installation-coming-to-avenida-houston-2026-07-19",
+        "summary": "Horizon, A New Interactive Art Installation Coming to Avenida Houston",
+        "date": "2026-07-19T08:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "horizon-a-new-interactive-art-installation-coming-to-avenida-houston-2026-07-20",
+        "summary": "Horizon, A New Interactive Art Installation Coming to Avenida Houston",
+        "date": "2026-07-20T08:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "horizon-a-new-interactive-art-installation-coming-to-avenida-houston-2026-07-21",
+        "summary": "Horizon, A New Interactive Art Installation Coming to Avenida Houston",
+        "date": "2026-07-21T08:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "horizon-a-new-interactive-art-installation-coming-to-avenida-houston-2026-07-22",
+        "summary": "Horizon, A New Interactive Art Installation Coming to Avenida Houston",
+        "date": "2026-07-22T08:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "horizon-a-new-interactive-art-installation-coming-to-avenida-houston-2026-07-23",
+        "summary": "Horizon, A New Interactive Art Installation Coming to Avenida Houston",
+        "date": "2026-07-23T08:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "jammin-tarts-club-burlesque-live-band-2026-07-18",
+        "summary": "Jammin' Tarts Club: Burlesque & Live Band",
+        "date": "2026-07-18T20:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "kickboxing-2026-07-20",
+        "summary": "Kickboxing",
+        "date": "2026-07-20T18:30-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "market-square-cup-2026-07-17",
+        "summary": "Market Square Cup",
+        "date": "2026-07-17T18:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "moulin-rouge-the-musical-2026-07-17",
+        "summary": "Moulin Rouge! The Musical",
+        "date": "2026-07-17T19:30-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "moulin-rouge-the-musical-2026-07-18",
+        "summary": "Moulin Rouge! The Musical",
+        "date": "2026-07-18T19:30-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "moulin-rouge-the-musical-2026-07-19",
+        "summary": "Moulin Rouge! The Musical",
+        "date": "2026-07-19T19:30-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "movies-under-the-stars-mean-girls-2026-07-23",
+        "summary": "Movies Under the Stars: Mean Girls",
+        "date": "2026-07-23T20:30-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "prairie-rendezvous-2026-07-18",
+        "summary": "Prairie Rendezvous",
+        "date": "2026-07-18T11:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "sip-n-bloom-floral-experience-workshop-2026-07-23",
+        "summary": "Sip n’ Bloom Floral Experience Workshop",
+        "date": "2026-07-23T18:30-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "sip-score-celebrate-2026-07-17",
+        "summary": "Sip, Score & Celebrate",
+        "date": "2026-07-17T20:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "sip-score-celebrate-2026-07-18",
+        "summary": "Sip, Score & Celebrate",
+        "date": "2026-07-18T20:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "sip-score-celebrate-2026-07-19",
+        "summary": "Sip, Score & Celebrate",
+        "date": "2026-07-19T20:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "soccer-fan-happy-hour-at-xochi-2026-07-18",
+        "summary": "Soccer Fan Happy Hour at Xochi",
+        "date": "2026-07-18T11:30-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "soccer-fan-happy-hour-at-xochi-2026-07-19",
+        "summary": "Soccer Fan Happy Hour at Xochi",
+        "date": "2026-07-19T10:30-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "soccer-fan-happy-hour-at-zaranda-2026-07-18",
+        "summary": "Soccer Fan Happy Hour at Zaranda",
+        "date": "2026-07-18T11:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "soccer-fan-happy-hour-at-zaranda-2026-07-19",
+        "summary": "Soccer Fan Happy Hour at Zaranda",
+        "date": "2026-07-19T11:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "soccer-summer-kicks-and-coffee-at-discovery-green-2026-07-18",
+        "summary": "Soccer Summer: Kicks and Coffee at Discovery Green",
+        "date": "2026-07-18T10:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "stella-artois-fifa-world-cup-watch-party-2026-07-17",
+        "summary": "Stella Artois FIFA World Cup™ Watch Party",
+        "date": "2026-07-17T11:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "stella-artois-fifa-world-cup-watch-party-2026-07-18",
+        "summary": "Stella Artois FIFA World Cup™ Watch Party",
+        "date": "2026-07-18T11:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "stella-artois-fifa-world-cup-watch-party-2026-07-19",
+        "summary": "Stella Artois FIFA World Cup™ Watch Party",
+        "date": "2026-07-19T11:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "summer-break-houston-rockets-skills-camps-presented-by-adidas-2026-07-17",
+        "summary": "Summer Break Houston Rockets Skills Camps presented by Adidas",
+        "date": "2026-07-17T09:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "sunday-concert-series-for-houston-s-summer-of-soccer-2026-07-19",
+        "summary": "Sunday Concert Series for Houston's Summer of Soccer",
+        "date": "2026-07-19T17:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "trivia-nights-harry-potter-2026-07-21",
+        "summary": "Trivia Nights: Harry Potter",
+        "date": "2026-07-21T18:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "undercurrents-by-rafael-lozano-hemmer-2026-07-17",
+        "summary": "\"Undercurrents\" by Rafael Lozano-Hemmer",
+        "date": "2026-07-17T10:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "undercurrents-by-rafael-lozano-hemmer-2026-07-18",
+        "summary": "\"Undercurrents\" by Rafael Lozano-Hemmer",
+        "date": "2026-07-18T10:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "undercurrents-by-rafael-lozano-hemmer-2026-07-19",
+        "summary": "\"Undercurrents\" by Rafael Lozano-Hemmer",
+        "date": "2026-07-19T10:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "undercurrents-by-rafael-lozano-hemmer-2026-07-20",
+        "summary": "\"Undercurrents\" by Rafael Lozano-Hemmer",
+        "date": "2026-07-20T10:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "undercurrents-by-rafael-lozano-hemmer-2026-07-21",
+        "summary": "\"Undercurrents\" by Rafael Lozano-Hemmer",
+        "date": "2026-07-21T10:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "undercurrents-by-rafael-lozano-hemmer-2026-07-22",
+        "summary": "\"Undercurrents\" by Rafael Lozano-Hemmer",
+        "date": "2026-07-22T10:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "undercurrents-by-rafael-lozano-hemmer-2026-07-23",
+        "summary": "\"Undercurrents\" by Rafael Lozano-Hemmer",
+        "date": "2026-07-23T10:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "undercurrents-in-the-cistern-2026-07-18",
+        "summary": "Undercurrents in the Cistern",
+        "date": "2026-07-18T10:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "undercurrents-in-the-cistern-2026-07-23",
+        "summary": "Undercurrents in the Cistern",
+        "date": "2026-07-23T10:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "zumba-2026-07-23",
+        "summary": "Zumba",
+        "date": "2026-07-23T18:30-05:00[America/Chicago]"
       },
       {
         "source": "ensemble-theatre-houston",
@@ -1992,6 +2351,13 @@
       },
       {
         "source": "sawyer-yards",
+        "eventId": "anomalous-2026-08-29",
+        "summary": "Anomalous",
+        "date": "2026-08-29T18:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/anomalous"
+      },
+      {
+        "source": "sawyer-yards",
         "eventId": "chicanx-photographers-as-documentary-historians-2026-08-13",
         "summary": "Chicanx Photographers as Documentary Historians",
         "date": "2026-08-13T19:00-05:00[America/Chicago]",
@@ -2041,6 +2407,13 @@
       },
       {
         "source": "sawyer-yards",
+        "eventId": "endless-summer-jeanne-jones-sarah-luna-ellen-h-ray-2026-08-07",
+        "summary": "Endless Summer: Jeanne Jones, Sarah Luna, Ellen H Ray",
+        "date": "2026-08-07T18:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/endless-summer-pool-parties-picnics-and-popsicles"
+      },
+      {
+        "source": "sawyer-yards",
         "eventId": "form-and-figure-2026-08-08",
         "summary": "Form and Figure",
         "date": "2026-08-08T17:00-05:00[America/Chicago]",
@@ -2052,13 +2425,6 @@
         "summary": "HEART OF HOUSTON",
         "date": "2026-09-10T17:00-05:00[America/Chicago]",
         "url": "https://www.sawyeryards.com/do/heart-of-houston"
-      },
-      {
-        "source": "sawyer-yards",
-        "eventId": "in-the-pit-real-talk-from-latinx-music-photographers-2026-07-16",
-        "summary": "In the Pit: Real Talk from Latinx Music Photographers",
-        "date": "2026-07-16T19:00-05:00[America/Chicago]",
-        "url": "https://www.sawyeryards.com/do/in-the-pit-real-talk-from-latinx-music-photographers"
       },
       {
         "source": "sawyer-yards",
@@ -2097,10 +2463,24 @@
       },
       {
         "source": "sawyer-yards",
+        "eventId": "rebecca-pugh-to-the-horizon-2026-07-25",
+        "summary": "Rebecca Pugh: To the Horizon",
+        "date": "2026-07-25T12:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/rebecca-pugh-to-the-horizon"
+      },
+      {
+        "source": "sawyer-yards",
         "eventId": "running-with-the-beasts-a-poetry-book-launch-2026-07-26",
         "summary": "Running With The Beasts – A Poetry Book Launch",
         "date": "2026-07-26T14:30-05:00[America/Chicago]",
         "url": "https://www.sawyeryards.com/do/running-with-the-beasts--a-poetry-book-launch"
+      },
+      {
+        "source": "sawyer-yards",
+        "eventId": "second-saturday-open-art-studios-2026-08-08",
+        "summary": "Second Saturday Open Art Studios",
+        "date": "2026-08-08T12:00-05:00[America/Chicago]",
+        "url": "https://www.sawyeryards.com/do/second-saturday-open-art-studios-1"
       },
       {
         "source": "sawyer-yards",
@@ -3297,7 +3677,7 @@
   "costStats": {
     "eventsWithCost": 418,
     "freeEvents": 257,
-    "totalEvents": 1712,
+    "totalEvents": 1777,
     "unresolvable": 0
   },
   "costGaps": [
@@ -3794,6 +4174,396 @@
       "eventId": "the-crusaders-experience-2026-07-22",
       "summary": "The Crusaders Experience",
       "date": "2026-07-22T19:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "2026-premium-world-cup-watch-party-experience-2026-07-17",
+      "summary": "2026 Premium World Cup Watch Party Experience",
+      "date": "2026-07-17T12:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "2026-premium-world-cup-watch-party-experience-2026-07-18",
+      "summary": "2026 Premium World Cup Watch Party Experience",
+      "date": "2026-07-18T12:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "2026-premium-world-cup-watch-party-experience-2026-07-19",
+      "summary": "2026 Premium World Cup Watch Party Experience",
+      "date": "2026-07-19T12:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "america-250-exhibit-the-american-revolution-experience-2026-07-17",
+      "summary": "America 250 Exhibit: The American Revolution Experience",
+      "date": "2026-07-17T10:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "america-250-exhibit-the-american-revolution-experience-2026-07-18",
+      "summary": "America 250 Exhibit: The American Revolution Experience",
+      "date": "2026-07-18T10:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "beat-the-bomb-summer-mission-america250-edition-2026-07-17",
+      "summary": "Beat The Bomb Summer Mission: America250 Edition",
+      "date": "2026-07-17T14:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "beat-the-bomb-summer-mission-america250-edition-2026-07-18",
+      "summary": "Beat The Bomb Summer Mission: America250 Edition",
+      "date": "2026-07-18T14:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "beat-the-bomb-summer-mission-america250-edition-2026-07-19",
+      "summary": "Beat The Bomb Summer Mission: America250 Edition",
+      "date": "2026-07-19T14:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "beat-the-bomb-summer-mission-america250-edition-2026-07-22",
+      "summary": "Beat The Bomb Summer Mission: America250 Edition",
+      "date": "2026-07-22T14:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "beat-the-bomb-summer-mission-america250-edition-2026-07-23",
+      "summary": "Beat The Bomb Summer Mission: America250 Edition",
+      "date": "2026-07-23T14:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "bumper-and-cruiser-boats-2026-07-17",
+      "summary": "Bumper and Cruiser Boats",
+      "date": "2026-07-17T10:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "bumper-and-cruiser-boats-2026-07-18",
+      "summary": "Bumper and Cruiser Boats",
+      "date": "2026-07-18T10:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "bumper-and-cruiser-boats-2026-07-19",
+      "summary": "Bumper and Cruiser Boats",
+      "date": "2026-07-19T10:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "bumper-and-cruiser-boats-2026-07-20",
+      "summary": "Bumper and Cruiser Boats",
+      "date": "2026-07-20T10:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "bumper-and-cruiser-boats-2026-07-21",
+      "summary": "Bumper and Cruiser Boats",
+      "date": "2026-07-21T10:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "bumper-and-cruiser-boats-2026-07-22",
+      "summary": "Bumper and Cruiser Boats",
+      "date": "2026-07-22T10:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "bumper-and-cruiser-boats-2026-07-23",
+      "summary": "Bumper and Cruiser Boats",
+      "date": "2026-07-23T10:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "candles-cocktails-a-curated-candle-making-experience-2026-07-18",
+      "summary": "Candles & Cocktails: A Curated Candle Making Experience",
+      "date": "2026-07-18T17:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "danielle-reich-trio-jazz-brunch-2026-07-19",
+      "summary": "Danielle Reich Trio Jazz Brunch",
+      "date": "2026-07-19T12:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "fifa-fan-festival-houston-2026-07-18",
+      "summary": "FIFA Fan Festival Houston",
+      "date": "2026-07-18T14:30-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "fifa-fan-festival-houston-2026-07-19",
+      "summary": "FIFA Fan Festival Houston",
+      "date": "2026-07-19T12:30-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "fitbreak-hip-hop-dance-fitness-2026-07-21",
+      "summary": "FitBreak: Hip-Hop Dance Fitness",
+      "date": "2026-07-21T18:30-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "flow-breath-2026-07-18",
+      "summary": "Flow & Breath",
+      "date": "2026-07-18T10:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "flow-breath-2026-07-22",
+      "summary": "Flow & Breath",
+      "date": "2026-07-22T18:30-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "grupo-frontera-2026-07-23",
+      "summary": "Grupo Frontera",
+      "date": "2026-07-23T20:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "horizon-a-new-interactive-art-installation-coming-to-avenida-houston-2026-07-17",
+      "summary": "Horizon, A New Interactive Art Installation Coming to Avenida Houston",
+      "date": "2026-07-17T08:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "horizon-a-new-interactive-art-installation-coming-to-avenida-houston-2026-07-18",
+      "summary": "Horizon, A New Interactive Art Installation Coming to Avenida Houston",
+      "date": "2026-07-18T08:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "horizon-a-new-interactive-art-installation-coming-to-avenida-houston-2026-07-19",
+      "summary": "Horizon, A New Interactive Art Installation Coming to Avenida Houston",
+      "date": "2026-07-19T08:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "horizon-a-new-interactive-art-installation-coming-to-avenida-houston-2026-07-20",
+      "summary": "Horizon, A New Interactive Art Installation Coming to Avenida Houston",
+      "date": "2026-07-20T08:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "horizon-a-new-interactive-art-installation-coming-to-avenida-houston-2026-07-21",
+      "summary": "Horizon, A New Interactive Art Installation Coming to Avenida Houston",
+      "date": "2026-07-21T08:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "horizon-a-new-interactive-art-installation-coming-to-avenida-houston-2026-07-22",
+      "summary": "Horizon, A New Interactive Art Installation Coming to Avenida Houston",
+      "date": "2026-07-22T08:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "horizon-a-new-interactive-art-installation-coming-to-avenida-houston-2026-07-23",
+      "summary": "Horizon, A New Interactive Art Installation Coming to Avenida Houston",
+      "date": "2026-07-23T08:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "jammin-tarts-club-burlesque-live-band-2026-07-18",
+      "summary": "Jammin' Tarts Club: Burlesque & Live Band",
+      "date": "2026-07-18T20:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "kickboxing-2026-07-20",
+      "summary": "Kickboxing",
+      "date": "2026-07-20T18:30-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "market-square-cup-2026-07-17",
+      "summary": "Market Square Cup",
+      "date": "2026-07-17T18:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "moulin-rouge-the-musical-2026-07-17",
+      "summary": "Moulin Rouge! The Musical",
+      "date": "2026-07-17T19:30-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "moulin-rouge-the-musical-2026-07-18",
+      "summary": "Moulin Rouge! The Musical",
+      "date": "2026-07-18T19:30-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "moulin-rouge-the-musical-2026-07-19",
+      "summary": "Moulin Rouge! The Musical",
+      "date": "2026-07-19T19:30-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "movies-under-the-stars-mean-girls-2026-07-23",
+      "summary": "Movies Under the Stars: Mean Girls",
+      "date": "2026-07-23T20:30-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "prairie-rendezvous-2026-07-18",
+      "summary": "Prairie Rendezvous",
+      "date": "2026-07-18T11:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "sip-n-bloom-floral-experience-workshop-2026-07-23",
+      "summary": "Sip n’ Bloom Floral Experience Workshop",
+      "date": "2026-07-23T18:30-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "sip-score-celebrate-2026-07-17",
+      "summary": "Sip, Score & Celebrate",
+      "date": "2026-07-17T20:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "sip-score-celebrate-2026-07-18",
+      "summary": "Sip, Score & Celebrate",
+      "date": "2026-07-18T20:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "sip-score-celebrate-2026-07-19",
+      "summary": "Sip, Score & Celebrate",
+      "date": "2026-07-19T20:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "soccer-fan-happy-hour-at-xochi-2026-07-18",
+      "summary": "Soccer Fan Happy Hour at Xochi",
+      "date": "2026-07-18T11:30-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "soccer-fan-happy-hour-at-xochi-2026-07-19",
+      "summary": "Soccer Fan Happy Hour at Xochi",
+      "date": "2026-07-19T10:30-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "soccer-fan-happy-hour-at-zaranda-2026-07-18",
+      "summary": "Soccer Fan Happy Hour at Zaranda",
+      "date": "2026-07-18T11:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "soccer-fan-happy-hour-at-zaranda-2026-07-19",
+      "summary": "Soccer Fan Happy Hour at Zaranda",
+      "date": "2026-07-19T11:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "soccer-summer-kicks-and-coffee-at-discovery-green-2026-07-18",
+      "summary": "Soccer Summer: Kicks and Coffee at Discovery Green",
+      "date": "2026-07-18T10:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "stella-artois-fifa-world-cup-watch-party-2026-07-17",
+      "summary": "Stella Artois FIFA World Cup™ Watch Party",
+      "date": "2026-07-17T11:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "stella-artois-fifa-world-cup-watch-party-2026-07-18",
+      "summary": "Stella Artois FIFA World Cup™ Watch Party",
+      "date": "2026-07-18T11:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "stella-artois-fifa-world-cup-watch-party-2026-07-19",
+      "summary": "Stella Artois FIFA World Cup™ Watch Party",
+      "date": "2026-07-19T11:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "summer-break-houston-rockets-skills-camps-presented-by-adidas-2026-07-17",
+      "summary": "Summer Break Houston Rockets Skills Camps presented by Adidas",
+      "date": "2026-07-17T09:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "sunday-concert-series-for-houston-s-summer-of-soccer-2026-07-19",
+      "summary": "Sunday Concert Series for Houston's Summer of Soccer",
+      "date": "2026-07-19T17:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "trivia-nights-harry-potter-2026-07-21",
+      "summary": "Trivia Nights: Harry Potter",
+      "date": "2026-07-21T18:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "undercurrents-by-rafael-lozano-hemmer-2026-07-17",
+      "summary": "\"Undercurrents\" by Rafael Lozano-Hemmer",
+      "date": "2026-07-17T10:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "undercurrents-by-rafael-lozano-hemmer-2026-07-18",
+      "summary": "\"Undercurrents\" by Rafael Lozano-Hemmer",
+      "date": "2026-07-18T10:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "undercurrents-by-rafael-lozano-hemmer-2026-07-19",
+      "summary": "\"Undercurrents\" by Rafael Lozano-Hemmer",
+      "date": "2026-07-19T10:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "undercurrents-by-rafael-lozano-hemmer-2026-07-20",
+      "summary": "\"Undercurrents\" by Rafael Lozano-Hemmer",
+      "date": "2026-07-20T10:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "undercurrents-by-rafael-lozano-hemmer-2026-07-21",
+      "summary": "\"Undercurrents\" by Rafael Lozano-Hemmer",
+      "date": "2026-07-21T10:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "undercurrents-by-rafael-lozano-hemmer-2026-07-22",
+      "summary": "\"Undercurrents\" by Rafael Lozano-Hemmer",
+      "date": "2026-07-22T10:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "undercurrents-by-rafael-lozano-hemmer-2026-07-23",
+      "summary": "\"Undercurrents\" by Rafael Lozano-Hemmer",
+      "date": "2026-07-23T10:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "undercurrents-in-the-cistern-2026-07-18",
+      "summary": "Undercurrents in the Cistern",
+      "date": "2026-07-18T10:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "undercurrents-in-the-cistern-2026-07-23",
+      "summary": "Undercurrents in the Cistern",
+      "date": "2026-07-23T10:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "zumba-2026-07-23",
+      "summary": "Zumba",
+      "date": "2026-07-23T18:30-05:00[America/Chicago]"
     },
     {
       "source": "ensemble-theatre-houston",
@@ -6694,6 +7464,13 @@
     },
     {
       "source": "sawyer-yards",
+      "eventId": "anomalous-2026-08-29",
+      "summary": "Anomalous",
+      "date": "2026-08-29T18:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/anomalous"
+    },
+    {
+      "source": "sawyer-yards",
       "eventId": "chicanx-photographers-as-documentary-historians-2026-08-13",
       "summary": "Chicanx Photographers as Documentary Historians",
       "date": "2026-08-13T19:00-05:00[America/Chicago]",
@@ -6743,6 +7520,13 @@
     },
     {
       "source": "sawyer-yards",
+      "eventId": "endless-summer-jeanne-jones-sarah-luna-ellen-h-ray-2026-08-07",
+      "summary": "Endless Summer: Jeanne Jones, Sarah Luna, Ellen H Ray",
+      "date": "2026-08-07T18:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/endless-summer-pool-parties-picnics-and-popsicles"
+    },
+    {
+      "source": "sawyer-yards",
       "eventId": "form-and-figure-2026-08-08",
       "summary": "Form and Figure",
       "date": "2026-08-08T17:00-05:00[America/Chicago]",
@@ -6754,13 +7538,6 @@
       "summary": "HEART OF HOUSTON",
       "date": "2026-09-10T17:00-05:00[America/Chicago]",
       "url": "https://www.sawyeryards.com/do/heart-of-houston"
-    },
-    {
-      "source": "sawyer-yards",
-      "eventId": "in-the-pit-real-talk-from-latinx-music-photographers-2026-07-16",
-      "summary": "In the Pit: Real Talk from Latinx Music Photographers",
-      "date": "2026-07-16T19:00-05:00[America/Chicago]",
-      "url": "https://www.sawyeryards.com/do/in-the-pit-real-talk-from-latinx-music-photographers"
     },
     {
       "source": "sawyer-yards",
@@ -6799,10 +7576,24 @@
     },
     {
       "source": "sawyer-yards",
+      "eventId": "rebecca-pugh-to-the-horizon-2026-07-25",
+      "summary": "Rebecca Pugh: To the Horizon",
+      "date": "2026-07-25T12:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/rebecca-pugh-to-the-horizon"
+    },
+    {
+      "source": "sawyer-yards",
       "eventId": "running-with-the-beasts-a-poetry-book-launch-2026-07-26",
       "summary": "Running With The Beasts – A Poetry Book Launch",
       "date": "2026-07-26T14:30-05:00[America/Chicago]",
       "url": "https://www.sawyeryards.com/do/running-with-the-beasts--a-poetry-book-launch"
+    },
+    {
+      "source": "sawyer-yards",
+      "eventId": "second-saturday-open-art-studios-2026-08-08",
+      "summary": "Second Saturday Open Art Studios",
+      "date": "2026-08-08T12:00-05:00[America/Chicago]",
+      "url": "https://www.sawyeryards.com/do/second-saturday-open-art-studios-1"
     },
     {
       "source": "sawyer-yards",
@@ -8762,7 +9553,7 @@
     {
       "name": "downtown-houston-events-downtown-houston-events",
       "type": "Ripper",
-      "events": 0,
+      "events": 65,
       "expectEmpty": false,
       "source": "downtown-houston-events"
     },
@@ -8972,7 +9763,7 @@
     {
       "name": "sawyer-yards-sawyer-yards",
       "type": "Ripper",
-      "events": 24,
+      "events": 27,
       "expectEmpty": false,
       "source": "sawyer-yards"
     },
@@ -9098,7 +9889,7 @@
     {
       "name": "tag-downtown",
       "type": "Aggregate",
-      "events": 209,
+      "events": 271,
       "expectEmpty": false,
       "source": "tag-downtown"
     },
@@ -9112,7 +9903,7 @@
     {
       "name": "tag-arts",
       "type": "Aggregate",
-      "events": 33,
+      "events": 98,
       "expectEmpty": false,
       "source": "tag-arts"
     },
@@ -9140,7 +9931,7 @@
     {
       "name": "tag-art",
       "type": "Aggregate",
-      "events": 300,
+      "events": 303,
       "expectEmpty": false,
       "source": "tag-art"
     },
@@ -9245,14 +10036,14 @@
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 296,
+      "events": 361,
       "expectEmpty": false,
       "source": "tag-community"
     },
     {
       "name": "tag-culture",
       "type": "Aggregate",
-      "events": 0,
+      "events": 65,
       "expectEmpty": false,
       "source": "tag-culture"
     },
@@ -9308,7 +10099,7 @@
     {
       "name": "tag-parks",
       "type": "Aggregate",
-      "events": 214,
+      "events": 211,
       "expectEmpty": false,
       "source": "tag-parks"
     },
@@ -9350,7 +10141,7 @@
     {
       "name": "tag-near-northside",
       "type": "Aggregate",
-      "events": 131,
+      "events": 134,
       "expectEmpty": false,
       "source": "tag-near-northside"
     },
@@ -9523,16 +10314,9 @@
       "source": "tag-theatre"
     },
     {
-      "name": "tag-garden-oaks",
-      "type": "Aggregate",
-      "events": 0,
-      "expectEmpty": false,
-      "source": "tag-garden-oaks"
-    },
-    {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1722,
+      "events": 1787,
       "expectEmpty": false,
       "source": "tag-all"
     },
@@ -9549,13 +10333,6 @@
       "events": 0,
       "expectEmpty": false,
       "source": "bad-astronaut-brewery"
-    },
-    {
-      "name": "external-buffalo-bayou-partnership",
-      "type": "External",
-      "events": 30,
-      "expectEmpty": false,
-      "source": "buffalo-bayou-partnership"
     },
     {
       "name": "external-ccs-houston",

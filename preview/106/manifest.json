@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-17T06:40:42.244Z",
+  "lastUpdated": "2026-07-17T06:55:35.697Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -144,6 +144,25 @@
             "Music",
             "Jazz",
             "Montrose"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "downtown-houston-events",
+      "description": "Downtown Houston",
+      "friendlyLink": "https://downtownhouston.org/calendar",
+      "calendars": [
+        {
+          "name": "downtown-houston-events",
+          "friendlyName": "Downtown Houston Events",
+          "icsUrl": "downtown-houston-events-downtown-houston-events.ics",
+          "rssUrl": "downtown-houston-events-downtown-houston-events.rss",
+          "tags": [
+            "Downtown",
+            "Community",
+            "Arts",
+            "Culture"
           ]
         }
       ]
@@ -694,18 +713,6 @@
       ]
     },
     {
-      "name": "buffalo-bayou-partnership",
-      "friendlyName": "Buffalo Bayou Partnership",
-      "description": "Outdoor recreation and cultural programming along Buffalo Bayou — guided bayou boat cruises, wellness walks, sound-healing meditation, and tours at Allen's Landing, the Cistern, and Buffalo Bayou Park.",
-      "icsUrl": "external-buffalo-bayou-partnership.ics",
-      "originalIcsUrl": "https://buffalobayou.org/events/?ical=1",
-      "infoUrl": "https://buffalobayou.org/events/",
-      "tags": [
-        "Parks",
-        "Downtown"
-      ]
-    },
-    {
       "name": "ccs-houston",
       "friendlyName": "CCS Houston",
       "description": "Comic and creative events in Houston",
@@ -925,6 +932,7 @@
     "Concert",
     "Culinary",
     "Cultural",
+    "Culture",
     "Downtown",
     "EaDo",
     "Education",
