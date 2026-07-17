@@ -136,11 +136,22 @@ describe("createBrowserbaseFetch", () => {
         process.env.BROWSERBASE_API_KEY = "my-api-key";
         const fetchFn = createBrowserbaseFetch();
 
-        mockFetch.mockResolvedValueOnce(fakeResponse("some long error message that should be truncated because it exceeds two hundred characters".repeat(3), 500));
+        // A 5xx from Browserbase is retried once, so mock the failure twice
+        // and fast-forward through the retry pause.
+        vi.useFakeTimers();
+        const body = "some long error message that should be truncated because it exceeds two hundred characters".repeat(3);
+        mockFetch
+            .mockResolvedValueOnce(fakeResponse(body, 500))
+            .mockResolvedValueOnce(fakeResponse(body, 500));
 
-        await expect(fetchFn("https://example.com/")).rejects.toThrow(
+        const pending = fetchFn("https://example.com/");
+        const assertion = expect(pending).rejects.toThrow(
             "Browserbase fetch failed: HTTP 500 — some long error message that should be truncated because it exceeds two hundred characterssome long error message that should be truncated because it exceeds"
         );
+        await vi.advanceTimersByTimeAsync(3000);
+        await assertion;
+        expect(mockFetch).toHaveBeenCalledTimes(2);
+        vi.useRealTimers();
     });
 
     it("throws on malformed JSON response from Browserbase API", async () => {
@@ -383,5 +394,70 @@ describe("withCache (generic, over an arbitrary fetch fn)", () => {
         const res = await fetchFn(URL, { method: "POST", body: '{"q":1}' });
         expect(live).toHaveBeenCalledTimes(1);
         expect(await res.text()).toBe("POSTED");
+    });
+});
+
+describe("browserbase concurrency limit", () => {
+    beforeEach(() => {
+        vi.resetAllMocks();
+        resetFetchCache();
+        process.env.BROWSERBASE_API_KEY = "test-key";
+    });
+
+    afterEach(() => {
+        delete process.env.BROWSERBASE_API_KEY;
+        vi.useRealTimers();
+    });
+
+    function browserbaseApiResponse(): Response {
+        return new Response(
+            JSON.stringify({ statusCode: 200, content: "ok", contentType: "text/html" }),
+            { status: 200 },
+        );
+    }
+
+    it("never runs more than 4 Browserbase fetches concurrently", async () => {
+        let active = 0;
+        let peak = 0;
+        mockFetch.mockImplementation(async () => {
+            active++;
+            peak = Math.max(peak, active);
+            await new Promise((r) => setTimeout(r, 10));
+            active--;
+            return browserbaseApiResponse();
+        });
+
+        const fetchFn = createBrowserbaseFetch();
+        await Promise.all(
+            Array.from({ length: 12 }, (_, i) => fetchFn(`https://example.com/${i}`)),
+        );
+
+        expect(mockFetch).toHaveBeenCalledTimes(12);
+        expect(peak).toBeLessThanOrEqual(4);
+        expect(peak).toBeGreaterThan(1); // sanity: the test actually ran concurrently
+    });
+
+    it("retries once after a Browserbase-side 429", async () => {
+        vi.useFakeTimers();
+        mockFetch
+            .mockResolvedValueOnce(new Response("too many", { status: 429 }))
+            .mockResolvedValueOnce(browserbaseApiResponse());
+
+        const fetchFn = createBrowserbaseFetch();
+        const pending = fetchFn("https://example.com/retry");
+        await vi.advanceTimersByTimeAsync(3000);
+        const res = await pending;
+
+        expect(mockFetch).toHaveBeenCalledTimes(2);
+        expect(res.status).toBe(200);
+        expect(await res.text()).toBe("ok");
+    });
+
+    it("does not retry a non-transient Browserbase failure", async () => {
+        mockFetch.mockResolvedValue(new Response("forbidden", { status: 403 }));
+
+        const fetchFn = createBrowserbaseFetch();
+        await expect(fetchFn("https://example.com/blocked")).rejects.toThrow("HTTP 403");
+        expect(mockFetch).toHaveBeenCalledTimes(1);
     });
 });

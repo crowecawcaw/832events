@@ -1,4 +1,8 @@
 name: walking-stick-brewing
+# DISABLED 2026-07-17: the feed returns HTTP 403 even through Browserbase
+# (proxy: true was already set), so CI cannot fetch it at all. Re-enable if
+# the site lifts its bot blocking, or find an alternative feed.
+disabled: true
 friendlyname: "Walking Stick Brewing"
 description: "Walking Stick Brewing Company, Houston brewery with live music and events"
 icsUrl: "https://walkingstickbrewing.com/?post_type=tribe_events&ical=1&eventDisplay=list"

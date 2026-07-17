@@ -118,6 +118,29 @@ export function getFetchForConfig(config: { proxy?: boolean }): FetchFn {
     return withCache(directFetch);
 }
 
+// Browserbase allows at most 5 concurrent /v1/fetch requests per account;
+// exceeding it returns HTTP 429 ("max concurrent fetch requests limit"). The
+// build rips all sources in parallel, so every Browserbase call is gated
+// through this small semaphore — 4 slots, leaving one for any other consumer
+// of the same key. Each completion wakes exactly one waiter, so `active`
+// never exceeds the limit.
+const BROWSERBASE_MAX_CONCURRENT = 4;
+let browserbaseActive = 0;
+const browserbaseWaiters: Array<() => void> = [];
+
+async function withBrowserbaseSlot<T>(fn: () => Promise<T>): Promise<T> {
+    if (browserbaseActive >= BROWSERBASE_MAX_CONCURRENT) {
+        await new Promise<void>((resolve) => browserbaseWaiters.push(resolve));
+    }
+    browserbaseActive++;
+    try {
+        return await fn();
+    } finally {
+        browserbaseActive--;
+        browserbaseWaiters.shift()?.();
+    }
+}
+
 /** Performs a single live Browserbase API fetch. Throws if the key is unset
  *  or the API call fails. */
 async function browserbaseLiveFetch(
@@ -151,9 +174,23 @@ async function browserbaseLiveFetch(
 
 /** Browserbase fetch as a plain FetchFn (no caching) — the live arm wrapped by
  *  `withCache`. Browserbase executes JavaScript and follows redirects, bypassing
- *  bot detection (e.g. SiteGround sgcaptcha, NinjaFirewall). */
+ *  bot detection (e.g. SiteGround sgcaptcha, NinjaFirewall). Calls are gated by
+ *  the concurrency semaphore above, and a 429/5xx from Browserbase itself
+ *  (transient instability, or another key consumer racing the limit) gets one
+ *  retry after a short pause. */
 const browserbaseFetchFn: FetchFn = async (url: string | URL) => {
-    const data = await browserbaseLiveFetch(String(url));
+    const attempt = () => withBrowserbaseSlot(() => browserbaseLiveFetch(String(url)));
+    let data;
+    try {
+        data = await attempt();
+    } catch (err) {
+        const message = err instanceof Error ? err.message : String(err);
+        if (!/Browserbase fetch failed: HTTP (429|5\d\d)/.test(message)) {
+            throw err;
+        }
+        await new Promise((resolve) => setTimeout(resolve, 3000));
+        data = await attempt();
+    }
     return new Response(data.content, {
         status: data.statusCode,
         headers: { "Content-Type": data.contentType },
