@@ -1,0 +1,218 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Eureka Heights Brewery - ECPv6.16.4.1//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Eureka Heights Brewery
+X-ORIGINAL-URL:https://www.eurekaheights.com
+X-WR-CALDESC:Events for Eureka Heights Brewery
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-Robots-Tag:noindex
+X-PUBLISHED-TTL:PT1H
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20250309T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20251102T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20260308T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20261101T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20270314T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20271107T070000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260718T140000
+DTEND;TZID=America/Chicago:20260718T190000
+DTSTAMP:20260702T152130Z
+CREATED:20260702T152130Z
+LAST-MODIFIED:20260702T152130Z
+UID:9984-1784383200-1784401200@www.eurekaheights.com
+SUMMARY:Divine Market/ AJL Event
+DESCRIPTION:Divine Market is a curated vendor market with local artisans. Get your shopping done by supporting local and having a beer while you’re at it.
+URL:https://www.eurekaheights.com/event/divine-market-ajl-event-2026-07-18/
+LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
+CATEGORIES:Tap Room
+ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2026/07/4.png
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260719T160000
+DTEND;TZID=America/Chicago:20260719T160000
+DTSTAMP:20260702T152225Z
+CREATED:20260702T152225Z
+LAST-MODIFIED:20260702T152225Z
+UID:9996-1784476800-1784476800@www.eurekaheights.com
+SUMMARY:Lego Party
+DESCRIPTION:Come check out this awesome party event of building Lego sets and drinking beer! Our friends at Houston Toy Museum will be pre-selling Lego sets\, so you can come out and exercise your brain without your smartphone!
+URL:https://www.eurekaheights.com/event/lego-party-2026-07-19/
+LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
+CATEGORIES:Tap Room
+ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2026/07/5.png
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260721T183000
+DTEND;TZID=America/Chicago:20260721T183000
+DTSTAMP:20260702T152315Z
+CREATED:20260702T152315Z
+LAST-MODIFIED:20260702T152315Z
+UID:9993-1784658600-1784658600@www.eurekaheights.com
+SUMMARY:Bonsai How To Class
+DESCRIPTION:Bonsai Bar is a night of fun at a local venue near you that you don’t want to miss! Beginner workshops are perfect for you to learn everything you need to know to walk away with your very own tiny tree. So grab a friend\, your beverage of choice\, and get ready for a great 2 hours of everything bonsai.  \nhttps://bonsaibar.com/pages/workshops
+URL:https://www.eurekaheights.com/event/bonsai-how-to-class-2026-07-21/
+LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
+CATEGORIES:Tap Room
+ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2026/07/6.png
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260722T190000
+DTEND;TZID=America/Chicago:20260722T190000
+DTSTAMP:20250618T133753Z
+CREATED:20250618T133753Z
+LAST-MODIFIED:20250618T133753Z
+UID:9804-1784746800-1784746800@www.eurekaheights.com
+SUMMARY:Trivia Night
+DESCRIPTION:It’s the battle of the brains! Join us every Wednesday at 7 PM as we test how much random knowledge you’ve retained since high school.\nWarning: Side effects may include smugness and unexpected brain farts. \n 
+URL:https://www.eurekaheights.com/event/trivia-night-2025-06-25/2026-07-22/
+LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
+CATEGORIES:Tap Room
+ATTACH;FMTTYPE=image/jpeg:https://www.eurekaheights.com/wp-content/uploads/2025/06/general-trivia.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260723T173000
+DTEND;TZID=America/Chicago:20260723T183000
+DTSTAMP:20250610T125033Z
+CREATED:20250610T125033Z
+LAST-MODIFIED:20250610T125033Z
+UID:9818-1784827800-1784831400@www.eurekaheights.com
+SUMMARY:Laces Out Run Club
+DESCRIPTION:Every Thursday at 5:30 and 6:30 PM\, our Laces Out Run Club members start on a route of their choosing\, ranging from a 2\, 3.5\, 5\, or 8 mile run. After their run\, they receive $2 off beers the rest of the evening! \nREWARDS \n🎽 10 runs: EH headband\n🎽 25 runs: Laces Out shirt\n🎽 50 runs: Running shorts\n🎽 100 runs: Singlet \n  \n  \n  \n 
+URL:https://www.eurekaheights.com/event/laces-out-run-club-2025/2026-07-23/
+LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
+CATEGORIES:Tap Room
+ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2025/06/11.png
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260724T183000
+DTEND;TZID=America/Chicago:20260724T183000
+DTSTAMP:20260702T152334Z
+CREATED:20260702T152334Z
+LAST-MODIFIED:20260702T152334Z
+UID:9998-1784917800-1784917800@www.eurekaheights.com
+SUMMARY:Paint and Sip
+DESCRIPTION:Join us for a fun afternoon of painting your pet’s portrait while sipping on a delicious selection at the Eureka Heights. No painting experience is necessary – just bring your creativity and cheer!\n\nhttps://www.eventbrite.com/e/pet-portrait-sip-design-at-eureka-heights-tickets-1992010524101
+URL:https://www.eurekaheights.com/event/paint-and-sip-2026-07-24/
+LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
+CATEGORIES:Tap Room
+ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2026/07/7.png
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260725T120000
+DTEND;TZID=America/Chicago:20260725T180000
+DTSTAMP:20260702T152347Z
+CREATED:20260702T152347Z
+LAST-MODIFIED:20260702T152347Z
+UID:10002-1784980800-1785002400@www.eurekaheights.com
+SUMMARY:Space City Pinball Tournament
+DESCRIPTION:Pinball wizards\, unite! Come try your hand at one of the ten awesome pinball games from our friends at Wormhole! 10 Stern pinball games\, beer\, and prizes!
+URL:https://www.eurekaheights.com/event/space-city-pinball-tournament-2026-07-25/
+LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
+CATEGORIES:Tap Room
+ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2026/07/8.png
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260726T150000
+DTEND;TZID=America/Chicago:20260726T210000
+DTSTAMP:20260702T152403Z
+CREATED:20260702T152403Z
+LAST-MODIFIED:20260702T152403Z
+UID:10005-1785078000-1785099600@www.eurekaheights.com
+SUMMARY:Astros Market
+DESCRIPTION:Local curated vendors and musicians come together to showase their talents! Come grab a pint and support local artists
+URL:https://www.eurekaheights.com/event/astros-market-2026-07-26/
+LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
+CATEGORIES:Tap Room
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260728T170000
+DTEND;TZID=America/Chicago:20260728T170000
+DTSTAMP:20260706T132215Z
+CREATED:20260702T152446Z
+LAST-MODIFIED:20260706T132215Z
+UID:10007-1785258000-1785258000@www.eurekaheights.com
+SUMMARY:High Five Membership Night/ EH Books and Brews
+DESCRIPTION:High Five Member night is every Tuesday where Members receive $4 pints. We will be doing a special members night on the last Tuesday of the quarter.
+URL:https://www.eurekaheights.com/event/high-five-membership-night-eh-books-and-brews-2026-07-28/
+LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
+CATEGORIES:Tap Room
+ATTACH;FMTTYPE=image/jpeg:https://www.eurekaheights.com/wp-content/uploads/2026/07/EH-Events-Calendar-July-2026.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260729T190000
+DTEND;TZID=America/Chicago:20260729T190000
+DTSTAMP:20250618T133753Z
+CREATED:20250618T133753Z
+LAST-MODIFIED:20250618T133753Z
+UID:9805-1785351600-1785351600@www.eurekaheights.com
+SUMMARY:Trivia Night
+DESCRIPTION:It’s the battle of the brains! Join us every Wednesday at 7 PM as we test how much random knowledge you’ve retained since high school.\nWarning: Side effects may include smugness and unexpected brain farts. \n 
+URL:https://www.eurekaheights.com/event/trivia-night-2025-06-25/2026-07-29/
+LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
+CATEGORIES:Tap Room
+ATTACH;FMTTYPE=image/jpeg:https://www.eurekaheights.com/wp-content/uploads/2025/06/general-trivia.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260730T173000
+DTEND;TZID=America/Chicago:20260730T183000
+DTSTAMP:20250610T125033Z
+CREATED:20250610T125033Z
+LAST-MODIFIED:20250610T125033Z
+UID:9820-1785432600-1785436200@www.eurekaheights.com
+SUMMARY:Laces Out Run Club
+DESCRIPTION:Every Thursday at 5:30 and 6:30 PM\, our Laces Out Run Club members start on a route of their choosing\, ranging from a 2\, 3.5\, 5\, or 8 mile run. After their run\, they receive $2 off beers the rest of the evening! \nREWARDS \n🎽 10 runs: EH headband\n🎽 25 runs: Laces Out shirt\n🎽 50 runs: Running shorts\n🎽 100 runs: Singlet \n  \n  \n  \n 
+URL:https://www.eurekaheights.com/event/laces-out-run-club-2025/2026-07-30/
+LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
+CATEGORIES:Tap Room
+ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2025/06/11.png
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260731T173000
+DTEND;TZID=America/Chicago:20260731T203000
+DTSTAMP:20260702T152504Z
+CREATED:20260702T152504Z
+LAST-MODIFIED:20260702T152504Z
+UID:10012-1785519000-1785529800@www.eurekaheights.com
+SUMMARY:HSPCA Pinball Fundraiser- Flippers & Puppers
+DESCRIPTION:Join us as we raise funds for puppies by playing pinball! We’ll be partnering with the HSPCA for this play in tournament\, where you can go head to head in a flipper style competition\, while drinking beer\, and donating to a great cause. $20 buy in and $2 off beers for participants!
+URL:https://www.eurekaheights.com/event/hspca-pinball-fundraiser-flippers-puppers-2026-07-31/
+LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
+CATEGORIES:Tap Room
+ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2026/07/image21.png
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,55 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:832.events
+METHOD:PUBLISH
+X-WR-CALNAME:Lawndale Art Center
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://lawndaleartcenter.o
+ rg/wp-content/uploads/BIG-SLIDESHOW-2026-420x420.png
+ATTACH;FMTTYPE=image/png:https://lawndaleartcenter.org/wp-content/uploads/B
+ IG-SLIDESHOW-2026-420x420.png
+UID:BD162EioOcUeaQtvo04ty
+SUMMARY:The Big Slide Show
+DTSTAMP:20260718T100435Z
+DTSTART:20260718T190000Z
+DESCRIPTION:https://lawndaleartcenter.org/event/the-big-slide-show-12/
+URL:https://lawndaleartcenter.org/event/the-big-slide-show-12/
+GEO:29.7185;-95.3895
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://lawndaleartcenter.o
+ rg/wp-content/uploads/BIG-SLIDESHOW-2026-420x420.png
+ATTACH;FMTTYPE=image/png:https://lawndaleartcenter.org/wp-content/uploads/B
+ IG-SLIDESHOW-2026-420x420.png
+UID:tnHwOP2yirXpVD9SHbEYB
+SUMMARY:The Big Slide Show
+DTSTAMP:20260718T100435Z
+DTSTART:20260801T190000Z
+DESCRIPTION:https://lawndaleartcenter.org/event/the-big-slide-show-13/
+URL:https://lawndaleartcenter.org/event/the-big-slide-show-13/
+GEO:29.7185;-95.3895
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://lawndaleartcenter.o
+ rg/wp-content/uploads/aug2026-420x525.png
+ATTACH;FMTTYPE=image/png:https://lawndaleartcenter.org/wp-content/uploads/a
+ ug2026-420x525.png
+UID:pf8dzp8-ExmCg20E2ivkP
+SUMMARY:Poets Garden HTX Writing Workshop (August 2026)
+DTSTAMP:20260718T100435Z
+DTSTART:20260822T180000Z
+DESCRIPTION:https://lawndaleartcenter.org/event/poets-garden-htx-writing-wo
+	rkshop-august-2026/
+URL:https://lawndaleartcenter.org/event/poets-garden-htx-writing-workshop-a
+	ugust-2026/
+GEO:29.7185;-95.3895
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+END:VCALENDAR
