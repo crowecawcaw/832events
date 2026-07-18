@@ -1,0 +1,13 @@
+name: htx-events-community-impact
+status: notviable
+url: https://htxevents.communityimpact.com/calendars/all-events
+description: "Community Impact - HTX Events Calendar"
+type: custom_html
+last_checked: 2026-07-18
+notes: |
+  - Tier-2 secondary aggregator (Community Impact curates Houston events)
+  - Quality: Curated multi-category event listings
+  - Event volume: 8-15+ events (Music, Dance, Food, Performance categories visible)
+  - Location: Multiple venues (citywide)
+  - Integration: Custom HTML ripper (requires .ts code + test)
+  - Caution: Secondary aggregator - likely high overlap with primary sources; deprioritized in favor of tier-1 direct sources

@@ -1,0 +1,13 @@
+name: broadway-world-houston
+status: notviable
+url: https://broadwayworld.com/houston/regionalshows.cfm
+description: "BroadwayWorld - Houston Theater"
+type: custom_html
+last_checked: 2026-07-18
+notes: |
+  - Tier-2 secondary aggregator (listings from multiple venues)
+  - Quality: Curated theater listings
+  - Event volume: 4-8 events (visible: A Streetcar Named Desire, Moulin Rouge, Joseph, Xanadu)
+  - Location: Multiple venues (Houston Theater District area)
+  - Integration: Custom HTML ripper (requires .ts code + test)
+  - Caution: Aggregator source - likely high overlap with direct venue sources; deprioritized in favor of tier-1 direct sources
