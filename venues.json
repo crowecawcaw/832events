@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-18T05:13:42.896Z",
+  "generated": "2026-07-18T10:07:12.661Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -966,6 +966,40 @@
       ]
     },
     {
+      "name": "houston-maritime-museum",
+      "friendlyName": "Houston Maritime Museum",
+      "description": "Houston Maritime Museum",
+      "tags": [
+        "Museum",
+        "Downtown"
+      ],
+      "geo": {
+        "lat": 29.745,
+        "lng": -95.373,
+        "label": "Houston Maritime Museum, Buffalo Bayou Park"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Houston%20Maritime%20Museum%2C%20Buffalo%20Bayou%20Park"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "houston-maritime-museum",
+          "friendlyName": "Houston Maritime Museum",
+          "links": {
+            "ics": {
+              "href": "external-houston-maritime-museum.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-houston-maritime-museum.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "houston-zoo",
       "friendlyName": "Houston Zoo",
       "description": "Houston Zoo",
@@ -1390,42 +1424,6 @@
             },
             "rss": {
               "href": "punch-line-comedy-club-punch-line-comedy-club.rss",
-              "type": "application/rss+xml"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "name": "rice-public-events",
-      "friendlyName": "Rice University",
-      "description": "Rice University",
-      "url": "https://events.rice.edu/",
-      "tags": [
-        "Education",
-        "Art",
-        "Museum District"
-      ],
-      "geo": {
-        "lat": 29.7174,
-        "lng": -95.4018,
-        "label": "Rice University, 6100 Main St, Houston, TX 77005"
-      },
-      "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=Rice%20University%2C%206100%20Main%20St%2C%20Houston%2C%20TX%2077005"
-      },
-      "kind": "ripper",
-      "calendars": [
-        {
-          "name": "rice-public-events",
-          "friendlyName": "Rice University - Open to the Public",
-          "links": {
-            "ics": {
-              "href": "rice-public-events-rice-public-events.ics",
-              "type": "text/calendar"
-            },
-            "rss": {
-              "href": "rice-public-events-rice-public-events.rss",
               "type": "application/rss+xml"
             }
           }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-18T05:13:36.245Z",
+  "lastUpdated": "2026-07-18T10:07:06.670Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -490,24 +490,6 @@
       ]
     },
     {
-      "name": "rice-public-events",
-      "description": "Rice University",
-      "friendlyLink": "https://events.rice.edu/",
-      "calendars": [
-        {
-          "name": "rice-public-events",
-          "friendlyName": "Rice University - Open to the Public",
-          "icsUrl": "rice-public-events-rice-public-events.ics",
-          "rssUrl": "rice-public-events-rice-public-events.rss",
-          "tags": [
-            "Education",
-            "Art",
-            "Museum District"
-          ]
-        }
-      ]
-    },
-    {
       "name": "rooftop-cinema-club-houston",
       "description": "Rooftop Cinema Club Houston",
       "friendlyLink": "https://rooftopcinemaclub.com/us/houston/uptown",
@@ -866,6 +848,16 @@
       "tags": [
         "The Heights",
         "Community"
+      ]
+    },
+    {
+      "name": "houston-maritime-museum",
+      "friendlyName": "Houston Maritime Museum",
+      "icsUrl": "external-houston-maritime-museum.ics",
+      "originalIcsUrl": "https://houstonmaritime.org/events/?ical=1",
+      "tags": [
+        "Museum",
+        "Downtown"
       ]
     },
     {
