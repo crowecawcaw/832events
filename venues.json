@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-19T05:40:02.974Z",
+  "generated": "2026-07-19T10:14:04.352Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -1314,6 +1314,42 @@
             },
             "rss": {
               "href": "murder-by-the-book-murder-by-the-book.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "new-magnolia-brewing",
+      "friendlyName": "New Magnolia Brewing",
+      "description": "Brewery and bar in Montrose featuring live music, comedy, art events, and community gatherings.",
+      "url": "https://newmagnoliabrewing.com/",
+      "tags": [
+        "Beer",
+        "Brewery",
+        "Montrose"
+      ],
+      "geo": {
+        "lat": 29.7298,
+        "lng": -95.4158,
+        "label": "New Magnolia Brewing, Houston, TX"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=New%20Magnolia%20Brewing%2C%20Houston%2C%20TX"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "new-magnolia-brewing",
+          "friendlyName": "New Magnolia Brewing",
+          "links": {
+            "ics": {
+              "href": "external-new-magnolia-brewing.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-new-magnolia-brewing.rss",
               "type": "application/rss+xml"
             }
           }
