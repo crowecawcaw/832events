@@ -1,0 +1,81 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Houston Maritime Center &amp; Museum - ECPv6.15.20//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Houston Maritime Center &amp; Museum
+X-ORIGINAL-URL:https://houstonmaritime.org
+X-WR-CALDESC:Events for Houston Maritime Center &amp; Museum
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-Robots-Tag:noindex
+X-PUBLISHED-TTL:PT1H
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20250309T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20251102T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20260308T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20261101T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20270314T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20271107T070000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260722T180000
+DTEND;TZID=America/Chicago:20260722T193000
+DTSTAMP:20260719T051058
+CREATED:20260701T201435Z
+LAST-MODIFIED:20260702T151227Z
+UID:10002131-1784743200-1784748600@houstonmaritime.org
+SUMMARY:Wheelhouse Wednesday Lecture Series: Freedom Needed A Harbor
+DESCRIPTION:Please join us on Wednesday\, July 22nd from 6-7:30pm as we rechristen our monthly lecture series\, “Wheelhouse Wednesday.” Our guest for this inaugural lecture will be Darren Shelton\, Vice President at Moran Shipping and HMCM Board member\, presenting “Freedom Needed A Harbor: Celebrating 250 Years of American Freedom Through the Story of the Houston Ship Channel.” \nTickets are $5
+URL:https://houstonmaritime.org/event/wheelhouse-wednesday-freedom-needed-a-harbor/
+LOCATION:Houston Maritime Center & Museum\, 2940 Riverby Rd\, Suite 200\, Houston\, TX\, 77020\, United States
+CATEGORIES:Lecture Series
+ATTACH;FMTTYPE=image/png:https://houstonmaritime.org/wp-content/uploads/Wheelhouse-Wednesday-Darren-Shelton-1-2.png
+ORGANIZER;CN="Houston Maritime Museum":MAILTO:info@houstonmaritime.org
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261025T130000
+DTEND;TZID=America/Chicago:20261025T160000
+DTSTAMP:20260719T051058
+CREATED:20260709T174311Z
+LAST-MODIFIED:20260709T174311Z
+UID:10002133-1792933200-1792944000@houstonmaritime.org
+SUMMARY:Family Day: Boo on the Bayou 2026
+DESCRIPTION:Save the Date to join us for our Boo on the Bayou Family Day! FREE entry to the museum 1-4pm. Come join us for maritime crafts\, engaging activities and hands-on learning as we celebrate our home in the East End! The event is FREE but we will ask you to please register. Registration will open soon. Hope to see you there. \n  \n 
+URL:https://houstonmaritime.org/event/family-day-boo-on-the-bayou-2026/
+LOCATION:Houston Maritime Center & Museum\, 2940 Riverby Rd\, Suite 200\, Houston\, TX\, 77020\, United States
+CATEGORIES:Family Day
+ATTACH;FMTTYPE=image/jpeg:https://houstonmaritime.org/wp-content/uploads/Boo-on-the-Bayou-2026.pdf.jpg
+ORGANIZER;CN="Houston Maritime Museum":MAILTO:info@houstonmaritime.org
+END:VEVENT
+END:VCALENDAR
