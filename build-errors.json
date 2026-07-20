@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-07-19T10:14:04.356Z",
-  "totalErrors": 11,
+  "buildTime": "2026-07-20T05:57:50.392Z",
+  "totalErrors": 7,
   "configErrors": [],
   "sources": [
     {
@@ -48,37 +48,12 @@
       "error": "Error: HTTP 403: "
     }
   ],
-  "geocodeErrors": [
-    {
-      "type": "GeocodeError",
-      "location": "Architecture Center Houston (ArCH)",
-      "source": "downtown-houston-events",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Waller Feed Store",
-      "source": "songkick-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Saint Andrew’s Hall, 431 E Congress St, Detroit, MI, 48226, USA",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Seminole Hard Rock Tampa Event Center, 5223 N. Orient Road, Tampa, Florida, 33610, United States",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    }
-  ],
+  "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1631,
-    "eventsWithGeo": 1419,
-    "eventsWithoutGeo": 212,
-    "geocodeErrors": 4
+    "totalEvents": 1611,
+    "eventsWithGeo": 1405,
+    "eventsWithoutGeo": 206,
+    "geocodeErrors": 0
   },
   "uncertainEvents": [],
   "uncertaintyStats": {
@@ -111,35 +86,35 @@
       "source": null,
       "url": "https://www.readhouston.com/events?format=json",
       "cachedAt": "2026-07-16T05:53:24.701Z",
-      "ageHours": 76,
+      "ageHours": 96,
       "error": "Browserbase fetch failed: HTTP 500 — {\"statusCode\":500,\"error\":\"Internal Server Error\",\"message\":\"Internal Server Error\"}"
     },
     {
       "source": null,
       "url": "https://www.readhouston.com/events?month=august-2026&view=calendar&format=json",
       "cachedAt": "2026-07-16T05:53:25.290Z",
-      "ageHours": 76,
+      "ageHours": 96,
       "error": "Browserbase fetch failed: HTTP 500 — {\"statusCode\":500,\"error\":\"Internal Server Error\",\"message\":\"Internal Server Error\"}"
     },
     {
       "source": null,
       "url": "https://www.readhouston.com/events?month=september-2026&view=calendar&format=json",
       "cachedAt": "2026-07-16T05:53:25.798Z",
-      "ageHours": 76,
+      "ageHours": 96,
       "error": "Browserbase fetch failed: HTTP 500 — {\"statusCode\":500,\"error\":\"Internal Server Error\",\"message\":\"Internal Server Error\"}"
     },
     {
       "source": null,
       "url": "https://www.readhouston.com/events?month=october-2026&view=calendar&format=json",
       "cachedAt": "2026-07-16T05:53:26.375Z",
-      "ageHours": 76,
+      "ageHours": 96,
       "error": "Browserbase fetch failed: HTTP 500 — {\"statusCode\":500,\"error\":\"Internal Server Error\",\"message\":\"Internal Server Error\"}"
     },
     {
       "source": null,
       "url": "https://www.readhouston.com/events?month=november-2026&view=calendar&format=json",
       "cachedAt": "2026-07-16T05:53:26.896Z",
-      "ageHours": 76,
+      "ageHours": 96,
       "error": "Browserbase fetch failed: HTTP 500 — {\"statusCode\":500,\"error\":\"Internal Server Error\",\"message\":\"Internal Server Error\"}"
     }
   ],
@@ -591,8 +566,8 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 993,
-    "totalEvents": 1631,
+    "eventsWithImage": 988,
+    "totalEvents": 1611,
     "venuesWithImage": 0,
     "totalVenues": 52,
     "unresolvable": 0
@@ -1002,20 +977,6 @@
       },
       {
         "source": "childrens-museum-houston",
-        "eventId": "ice-cream-party-2026-07-19-bc3b8ae1",
-        "summary": "Ice Cream Party",
-        "date": "2026-07-19T10:00-05:00[America/Chicago]",
-        "url": "https://www.cmhouston.org/events/ice-cream-party"
-      },
-      {
-        "source": "childrens-museum-houston",
-        "eventId": "ice-cream-party-2026-07-19-bc3b8ae1",
-        "summary": "Ice Cream Party",
-        "date": "2026-07-19T10:00-05:00[America/Chicago]",
-        "url": "https://www.cmhouston.org/events/ice-cream-party"
-      },
-      {
-        "source": "childrens-museum-houston",
         "eventId": "it-s-my-party-and-i-ll-cry-if-i-want-to-2026-08-08-0331235c",
         "summary": "It’s My Party (and I’ll Cry If I Want To!)",
         "date": "2026-08-08T10:00-05:00[America/Chicago]",
@@ -1072,6 +1033,13 @@
       },
       {
         "source": "childrens-museum-houston",
+        "eventId": "sensory-friendly-day-2026-10-19-4b2269cc",
+        "summary": "Sensory Friendly Day",
+        "date": "2026-10-19T10:00-05:00[America/Chicago]",
+        "url": "https://www.cmhouston.org/events/sensory-friendly-day-1"
+      },
+      {
+        "source": "childrens-museum-houston",
         "eventId": "spiderman-s-web-slinging-party-2026-08-01-a3fe26b4",
         "summary": "Spiderman’s Web-Slinging Party",
         "date": "2026-08-01T10:00-05:00[America/Chicago]",
@@ -1094,12 +1062,6 @@
         "eventId": "i-said-what-i-said-2026-08-15",
         "summary": "I Said What I Said",
         "date": "2026-08-15T20:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "cullen-performance-hall",
-        "eventId": "new-student-orientation-2026-07-16",
-        "summary": "New Student Orientation",
-        "date": "2026-07-16T08:00-05:00[America/Chicago]"
       },
       {
         "source": "cullen-performance-hall",
@@ -1577,13 +1539,6 @@
         "summary": "HCP Photobook Club - Wendy Watriss",
         "date": "2026-07-19T14:00-05:00[America/Chicago]",
         "url": "https://www.edu.hcponline.org/events/hcp-photobook-club-wendy-watriss"
-      },
-      {
-        "source": "houston-center-for-photography",
-        "eventId": "opening-reception-learning-curve-18-2026-07-16",
-        "summary": "Opening Reception: Learning Curve 18",
-        "date": "2026-07-16T18:00-05:00[America/Chicago]",
-        "url": "https://www.edu.hcponline.org/events/learning-curve-18-opening-reception"
       },
       {
         "source": "htxoutdoors",
@@ -2468,12 +2423,6 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
-        "eventId": "all-about-nature-2026-07-19",
-        "summary": "All About Nature",
-        "date": "2026-07-19T13:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
         "eventId": "all-about-nature-2026-07-26",
         "summary": "All About Nature",
         "date": "2026-07-26T13:00-05:00[America/Chicago]"
@@ -2483,12 +2432,6 @@
         "eventId": "all-about-snakes-2026-07-25",
         "summary": "All About Snakes",
         "date": "2026-07-25T15:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
-        "eventId": "all-about-us-a-guided-hike-2026-07-19",
-        "summary": "All About Us: a Guided Hike",
-        "date": "2026-07-19T10:00-05:00[America/Chicago]"
       },
       {
         "source": "texas-parks-wildlife-houston",
@@ -2525,12 +2468,6 @@
         "eventId": "all-about-us-a-guided-hike-2026-08-09",
         "summary": "All About Us: a Guided Hike",
         "date": "2026-08-09T10:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
-        "eventId": "alligator-talk-2026-07-19",
-        "summary": "Alligator Talk",
-        "date": "2026-07-19T15:00-05:00[America/Chicago]"
       },
       {
         "source": "texas-parks-wildlife-houston",
@@ -2579,12 +2516,6 @@
         "eventId": "bay-exploration-2026-09-12",
         "summary": "Bay Exploration🌊",
         "date": "2026-09-12T09:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
-        "eventId": "beach-walk-2026-07-19",
-        "summary": "Beach Walk",
-        "date": "2026-07-19T09:00-05:00[America/Chicago]"
       },
       {
         "source": "texas-parks-wildlife-houston",
@@ -2711,12 +2642,6 @@
         "eventId": "first-saturday-hike-2026-10-03",
         "summary": "First Saturday Hike",
         "date": "2026-10-03T10:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
-        "eventId": "fishing-with-a-ranger-2026-07-19",
-        "summary": "Fishing with a Ranger",
-        "date": "2026-07-19T09:00-05:00[America/Chicago]"
       },
       {
         "source": "texas-parks-wildlife-houston",
@@ -3038,12 +2963,6 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
-        "eventId": "paws-and-plaster-2026-07-19",
-        "summary": "Paws and Plaster",
-        "date": "2026-07-19T11:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
         "eventId": "perseids-watch-party-2026-08-12",
         "summary": "Perseids Watch Party!",
         "date": "2026-08-12T20:30-05:00[America/Chicago]"
@@ -3053,12 +2972,6 @@
         "eventId": "pollinator-camouflage-adaptation-craft-2026-08-01",
         "summary": "Pollinator Camouflage Adaptation Craft",
         "date": "2026-08-01T08:30-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
-        "eventId": "pond-life-2026-07-19",
-        "summary": "Pond Life",
-        "date": "2026-07-19T11:00-05:00[America/Chicago]"
       },
       {
         "source": "texas-parks-wildlife-houston",
@@ -3089,18 +3002,6 @@
         "eventId": "second-saturdays-with-steve-the-lancastrian-system-of-education-2026-08-08",
         "summary": "Second Saturdays with Steve: The Lancastrian System of Education",
         "date": "2026-08-08T12:30-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
-        "eventId": "skulls-and-shells-2026-07-19",
-        "summary": "Skulls and Shells",
-        "date": "2026-07-19T14:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
-        "eventId": "spectacular-snakes-2026-07-19",
-        "summary": "Spectacular Snakes!",
-        "date": "2026-07-19T14:00-05:00[America/Chicago]"
       },
       {
         "source": "texas-parks-wildlife-houston",
@@ -3179,7 +3080,7 @@
   "costStats": {
     "eventsWithCost": 404,
     "freeEvents": 253,
-    "totalEvents": 1631,
+    "totalEvents": 1611,
     "unresolvable": 0
   },
   "costGaps": [
@@ -3332,6 +3233,13 @@
     },
     {
       "source": "713-music-hall",
+      "eventId": "tm-G5dIZ_u5cOlXy",
+      "summary": "Linea Personal: TODO Ø NADA",
+      "date": "2026-10-18T20:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/linea-personal-todo-nada-houston-texas-10-18-2026/event/3A0064D2ED82BFB9"
+    },
+    {
+      "source": "713-music-hall",
       "eventId": "tm-G5dIZ_ungomSy",
       "summary": "Stephen Wilson Jr. - Gary The Torch Tour",
       "date": "2026-10-03T19:30-05:00[America/Chicago]",
@@ -3378,13 +3286,6 @@
       "summary": "Sevendust & Theory of a Deadman: The Dead / Seven Tour",
       "date": "2026-09-09T19:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/sevendust-theory-of-a-deadman-the-houston-texas-09-09-2026/event/3A00649DD990C2C6"
-    },
-    {
-      "source": "bayou-music-center",
-      "eventId": "tm-G5dIZ_aNfJic9",
-      "summary": "Bop To The Top",
-      "date": "2026-07-18T21:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/bop-to-the-top-houston-texas-07-18-2026/event/3A006498D49ACB57"
     },
     {
       "source": "bayou-music-center",
@@ -3507,20 +3408,6 @@
     },
     {
       "source": "childrens-museum-houston",
-      "eventId": "ice-cream-party-2026-07-19-bc3b8ae1",
-      "summary": "Ice Cream Party",
-      "date": "2026-07-19T10:00-05:00[America/Chicago]",
-      "url": "https://www.cmhouston.org/events/ice-cream-party"
-    },
-    {
-      "source": "childrens-museum-houston",
-      "eventId": "ice-cream-party-2026-07-19-bc3b8ae1",
-      "summary": "Ice Cream Party",
-      "date": "2026-07-19T10:00-05:00[America/Chicago]",
-      "url": "https://www.cmhouston.org/events/ice-cream-party"
-    },
-    {
-      "source": "childrens-museum-houston",
       "eventId": "it-s-my-party-and-i-ll-cry-if-i-want-to-2026-08-08-0331235c",
       "summary": "It’s My Party (and I’ll Cry If I Want To!)",
       "date": "2026-08-08T10:00-05:00[America/Chicago]",
@@ -3577,6 +3464,13 @@
     },
     {
       "source": "childrens-museum-houston",
+      "eventId": "sensory-friendly-day-2026-10-19-4b2269cc",
+      "summary": "Sensory Friendly Day",
+      "date": "2026-10-19T10:00-05:00[America/Chicago]",
+      "url": "https://www.cmhouston.org/events/sensory-friendly-day-1"
+    },
+    {
+      "source": "childrens-museum-houston",
       "eventId": "spiderman-s-web-slinging-party-2026-08-01-a3fe26b4",
       "summary": "Spiderman’s Web-Slinging Party",
       "date": "2026-08-01T10:00-05:00[America/Chicago]",
@@ -3599,12 +3493,6 @@
       "eventId": "i-said-what-i-said-2026-08-15",
       "summary": "I Said What I Said",
       "date": "2026-08-15T20:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "cullen-performance-hall",
-      "eventId": "new-student-orientation-2026-07-16",
-      "summary": "New Student Orientation",
-      "date": "2026-07-16T08:00-05:00[America/Chicago]"
     },
     {
       "source": "cullen-performance-hall",
@@ -4211,13 +4099,6 @@
     },
     {
       "source": "house-of-blues-houston",
-      "eventId": "tm-G5dIZ_704zvUY",
-      "summary": "Stryper",
-      "date": "2026-07-18T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/stryper-houston-texas-07-18-2026/event/3A00644915E01DB0"
-    },
-    {
-      "source": "house-of-blues-houston",
       "eventId": "tm-G5dIZ_7R4wWRz",
       "summary": "Thunder From Down Under",
       "date": "2026-07-29T19:00-05:00[America/Chicago]",
@@ -4455,13 +4336,6 @@
       "url": "https://www.edu.hcponline.org/events/hcp-photobook-club-wendy-watriss"
     },
     {
-      "source": "houston-center-for-photography",
-      "eventId": "opening-reception-learning-curve-18-2026-07-16",
-      "summary": "Opening Reception: Learning Curve 18",
-      "date": "2026-07-16T18:00-05:00[America/Chicago]",
-      "url": "https://www.edu.hcponline.org/events/learning-curve-18-opening-reception"
-    },
-    {
       "source": "houston-grand-opera",
       "eventId": "the-butler-studio-showcase-2026-09-13",
       "summary": "The Butler Studio Showcase",
@@ -4488,13 +4362,6 @@
       "summary": "Best Friends Day at Houston Zoo",
       "date": "2026-08-08T10:00-05:00[America/Chicago]",
       "url": "https://www.houstonzoo.org/events/best-friends-day/"
-    },
-    {
-      "source": "houston-zoo",
-      "eventId": "community-heroes-appreciation-days-2026-07-16-0696b268",
-      "summary": "Community Heroes Appreciation Days",
-      "date": "2026-07-16T10:00-05:00[America/Chicago]",
-      "url": "https://www.houstonzoo.org/events/community-heroes-day/"
     },
     {
       "source": "houston-zoo",
@@ -5569,13 +5436,6 @@
     },
     {
       "source": "punch-line-comedy-club",
-      "eventId": "tm-G5dIZ_17NnsYx",
-      "summary": "Los Tíos Comedy Tour headlined by Flo Hernandez",
-      "date": "2026-07-19T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/los-tios-comedy-tour-headlined-by-houston-texas-07-19-2026/event/3A0064A123AB1C22"
-    },
-    {
-      "source": "punch-line-comedy-club",
       "eventId": "tm-G5dIZ_17xj-QW",
       "summary": "Chris Andrade: M.U.T.A.R (en Español)",
       "date": "2026-08-20T19:30-05:00[America/Chicago]",
@@ -5706,13 +5566,6 @@
       "summary": "Jeffrey Keller",
       "date": "2026-10-09T21:15-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/jeffrey-keller-houston-texas-10-09-2026/event/3A006470B87BAAA1"
-    },
-    {
-      "source": "punch-line-comedy-club",
-      "eventId": "tm-G5dIZ_6frb03e",
-      "summary": "William Montgomery",
-      "date": "2026-07-18T21:15-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/william-montgomery-houston-texas-07-18-2026/event/3A0064751E624482"
     },
     {
       "source": "punch-line-comedy-club",
@@ -6765,12 +6618,6 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
-      "eventId": "all-about-nature-2026-07-19",
-      "summary": "All About Nature",
-      "date": "2026-07-19T13:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
       "eventId": "all-about-nature-2026-07-26",
       "summary": "All About Nature",
       "date": "2026-07-26T13:00-05:00[America/Chicago]"
@@ -6780,12 +6627,6 @@
       "eventId": "all-about-snakes-2026-07-25",
       "summary": "All About Snakes",
       "date": "2026-07-25T15:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
-      "eventId": "all-about-us-a-guided-hike-2026-07-19",
-      "summary": "All About Us: a Guided Hike",
-      "date": "2026-07-19T10:00-05:00[America/Chicago]"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -6822,12 +6663,6 @@
       "eventId": "all-about-us-a-guided-hike-2026-08-09",
       "summary": "All About Us: a Guided Hike",
       "date": "2026-08-09T10:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
-      "eventId": "alligator-talk-2026-07-19",
-      "summary": "Alligator Talk",
-      "date": "2026-07-19T15:00-05:00[America/Chicago]"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -6876,12 +6711,6 @@
       "eventId": "bay-exploration-2026-09-12",
       "summary": "Bay Exploration🌊",
       "date": "2026-09-12T09:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
-      "eventId": "beach-walk-2026-07-19",
-      "summary": "Beach Walk",
-      "date": "2026-07-19T09:00-05:00[America/Chicago]"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -7008,12 +6837,6 @@
       "eventId": "first-saturday-hike-2026-10-03",
       "summary": "First Saturday Hike",
       "date": "2026-10-03T10:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
-      "eventId": "fishing-with-a-ranger-2026-07-19",
-      "summary": "Fishing with a Ranger",
-      "date": "2026-07-19T09:00-05:00[America/Chicago]"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -7335,12 +7158,6 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
-      "eventId": "paws-and-plaster-2026-07-19",
-      "summary": "Paws and Plaster",
-      "date": "2026-07-19T11:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
       "eventId": "perseids-watch-party-2026-08-12",
       "summary": "Perseids Watch Party!",
       "date": "2026-08-12T20:30-05:00[America/Chicago]"
@@ -7350,12 +7167,6 @@
       "eventId": "pollinator-camouflage-adaptation-craft-2026-08-01",
       "summary": "Pollinator Camouflage Adaptation Craft",
       "date": "2026-08-01T08:30-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
-      "eventId": "pond-life-2026-07-19",
-      "summary": "Pond Life",
-      "date": "2026-07-19T11:00-05:00[America/Chicago]"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -7386,18 +7197,6 @@
       "eventId": "second-saturdays-with-steve-the-lancastrian-system-of-education-2026-08-08",
       "summary": "Second Saturdays with Steve: The Lancastrian System of Education",
       "date": "2026-08-08T12:30-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
-      "eventId": "skulls-and-shells-2026-07-19",
-      "summary": "Skulls and Shells",
-      "date": "2026-07-19T14:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
-      "eventId": "spectacular-snakes-2026-07-19",
-      "summary": "Spectacular Snakes!",
-      "date": "2026-07-19T14:00-05:00[America/Chicago]"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -7491,13 +7290,6 @@
       "summary": "Into the Deep",
       "date": "2026-07-18T17:00-05:00[America/Chicago]",
       "url": "https://thedeluxetheater.com/events/into-the-deep/"
-    },
-    {
-      "source": "the-deluxe-theater",
-      "eventId": "yoga-in-the-5th-2026-07-16",
-      "summary": "Yoga In The 5th",
-      "date": "2026-07-16T18:30-05:00[America/Chicago]",
-      "url": "https://thedeluxetheater.com/events/yoga-in-the-5th/"
     },
     {
       "source": "the-mood-room",
@@ -7851,13 +7643,6 @@
     },
     {
       "source": "white-oak-music-hall",
-      "eventId": "tm-G5dIZ_d9KtX_M",
-      "summary": "High Fade: Twice as Nice Tour",
-      "date": "2026-07-18T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/high-fade-twice-as-nice-tour-houston-texas-07-18-2026/event/3A006435D3A7E677"
-    },
-    {
-      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_F28-D3T",
       "summary": "The Body",
       "date": "2026-08-01T19:00-05:00[America/Chicago]",
@@ -8096,6 +7881,13 @@
     },
     {
       "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_ukyqW7_",
+      "summary": "La Reezy",
+      "date": "2026-10-19T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/la-reezy-houston-texas-10-19-2026/event/3A0064D1B977D119"
+    },
+    {
+      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_uQbA6Je",
       "summary": "Automatic",
       "date": "2026-09-13T19:00-05:00[America/Chicago]",
@@ -8162,7 +7954,7 @@
     {
       "name": "713-music-hall-713-music-hall",
       "type": "Ripper",
-      "events": 23,
+      "events": 24,
       "expectEmpty": false,
       "source": "713-music-hall"
     },
@@ -8183,7 +7975,7 @@
     {
       "name": "bayou-music-center-bayou-music-center",
       "type": "Ripper",
-      "events": 17,
+      "events": 16,
       "expectEmpty": false,
       "source": "bayou-music-center"
     },
@@ -8204,7 +7996,7 @@
     {
       "name": "childrens-museum-houston-main",
       "type": "Ripper",
-      "events": 17,
+      "events": 16,
       "expectEmpty": false,
       "source": "childrens-museum-houston"
     },
@@ -8218,7 +8010,7 @@
     {
       "name": "cullen-performance-hall-cullen-performance-hall",
       "type": "Ripper",
-      "events": 15,
+      "events": 14,
       "expectEmpty": false,
       "source": "cullen-performance-hall"
     },
@@ -8274,14 +8066,14 @@
     {
       "name": "house-of-blues-houston-house-of-blues-houston",
       "type": "Ripper",
-      "events": 50,
+      "events": 49,
       "expectEmpty": false,
       "source": "house-of-blues-houston"
     },
     {
       "name": "houston-center-for-photography-houston-center-for-photography",
       "type": "Ripper",
-      "events": 3,
+      "events": 2,
       "expectEmpty": false,
       "source": "houston-center-for-photography"
     },
@@ -8295,7 +8087,7 @@
     {
       "name": "houston-zoo-houston-zoo",
       "type": "Ripper",
-      "events": 9,
+      "events": 8,
       "expectEmpty": false,
       "source": "houston-zoo"
     },
@@ -8393,7 +8185,7 @@
     {
       "name": "punch-line-comedy-club-punch-line-comedy-club",
       "type": "Ripper",
-      "events": 94,
+      "events": 92,
       "expectEmpty": false,
       "source": "punch-line-comedy-club"
     },
@@ -8456,14 +8248,14 @@
     {
       "name": "texas-parks-wildlife-houston-texas-parks-wildlife-houston",
       "type": "Ripper",
-      "events": 119,
+      "events": 110,
       "expectEmpty": false,
       "source": "texas-parks-wildlife-houston"
     },
     {
       "name": "the-deluxe-theater-the-deluxe-theater",
       "type": "Ripper",
-      "events": 4,
+      "events": 3,
       "expectEmpty": false,
       "source": "the-deluxe-theater"
     },
@@ -8519,7 +8311,7 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 656,
+      "events": 651,
       "expectEmpty": false,
       "source": "tag-music"
     },
@@ -8533,21 +8325,21 @@
     {
       "name": "tag-downtown",
       "type": "Aggregate",
-      "events": 261,
+      "events": 259,
       "expectEmpty": false,
       "source": "tag-downtown"
     },
     {
       "name": "tag-theater",
       "type": "Aggregate",
-      "events": 20,
+      "events": 18,
       "expectEmpty": false,
       "source": "tag-theater"
     },
     {
       "name": "tag-arts",
       "type": "Aggregate",
-      "events": 85,
+      "events": 84,
       "expectEmpty": false,
       "source": "tag-arts"
     },
@@ -8568,7 +8360,7 @@
     {
       "name": "tag-midtown",
       "type": "Aggregate",
-      "events": 63,
+      "events": 62,
       "expectEmpty": false,
       "source": "tag-midtown"
     },
@@ -8582,7 +8374,7 @@
     {
       "name": "tag-museum-district",
       "type": "Aggregate",
-      "events": 50,
+      "events": 48,
       "expectEmpty": false,
       "source": "tag-museum-district"
     },
@@ -8603,7 +8395,7 @@
     {
       "name": "tag-education",
       "type": "Aggregate",
-      "events": 213,
+      "events": 204,
       "expectEmpty": false,
       "source": "tag-education"
     },
@@ -8617,21 +8409,21 @@
     {
       "name": "tag-family",
       "type": "Aggregate",
-      "events": 36,
+      "events": 34,
       "expectEmpty": false,
       "source": "tag-family"
     },
     {
       "name": "tag-kids",
       "type": "Aggregate",
-      "events": 17,
+      "events": 16,
       "expectEmpty": false,
       "source": "tag-kids"
     },
     {
       "name": "tag-museum",
       "type": "Aggregate",
-      "events": 18,
+      "events": 17,
       "expectEmpty": false,
       "source": "tag-museum"
     },
@@ -8645,21 +8437,21 @@
     {
       "name": "tag-performingarts",
       "type": "Aggregate",
-      "events": 16,
+      "events": 15,
       "expectEmpty": false,
       "source": "tag-performingarts"
     },
     {
       "name": "tag-university",
       "type": "Aggregate",
-      "events": 15,
+      "events": 14,
       "expectEmpty": false,
       "source": "tag-university"
     },
     {
       "name": "tag-university-of-houston",
       "type": "Aggregate",
-      "events": 15,
+      "events": 14,
       "expectEmpty": false,
       "source": "tag-university-of-houston"
     },
@@ -8673,7 +8465,7 @@
     {
       "name": "tag-montrose",
       "type": "Aggregate",
-      "events": 259,
+      "events": 255,
       "expectEmpty": false,
       "source": "tag-montrose"
     },
@@ -8708,7 +8500,7 @@
     {
       "name": "tag-photography",
       "type": "Aggregate",
-      "events": 3,
+      "events": 2,
       "expectEmpty": false,
       "source": "tag-photography"
     },
@@ -8722,21 +8514,21 @@
     {
       "name": "tag-animals",
       "type": "Aggregate",
-      "events": 9,
+      "events": 8,
       "expectEmpty": false,
       "source": "tag-animals"
     },
     {
       "name": "tag-parks",
       "type": "Aggregate",
-      "events": 183,
+      "events": 173,
       "expectEmpty": false,
       "source": "tag-parks"
     },
     {
       "name": "tag-outdoor-recreation",
       "type": "Aggregate",
-      "events": 168,
+      "events": 159,
       "expectEmpty": false,
       "source": "tag-outdoor-recreation"
     },
@@ -8771,7 +8563,7 @@
     {
       "name": "tag-near-northside",
       "type": "Aggregate",
-      "events": 131,
+      "events": 130,
       "expectEmpty": false,
       "source": "tag-near-northside"
     },
@@ -8827,14 +8619,14 @@
     {
       "name": "tag-comedy",
       "type": "Aggregate",
-      "events": 247,
+      "events": 245,
       "expectEmpty": false,
       "source": "tag-comedy"
     },
     {
       "name": "tag-entertainment",
       "type": "Aggregate",
-      "events": 107,
+      "events": 105,
       "expectEmpty": false,
       "source": "tag-entertainment"
     },
@@ -8883,14 +8675,14 @@
     {
       "name": "tag-nature",
       "type": "Aggregate",
-      "events": 119,
+      "events": 110,
       "expectEmpty": false,
       "source": "tag-nature"
     },
     {
       "name": "tag-performance",
       "type": "Aggregate",
-      "events": 4,
+      "events": 3,
       "expectEmpty": false,
       "source": "tag-performance"
     },
@@ -8960,7 +8752,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1641,
+      "events": 1621,
       "expectEmpty": false,
       "source": "tag-all"
     },
