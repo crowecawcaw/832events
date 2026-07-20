@@ -1,0 +1,254 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ion District - ECPv6.16.3//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Ion District
+X-ORIGINAL-URL:https://iondistrict.com
+X-WR-CALDESC:Events for Ion District
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-Robots-Tag:noindex
+X-PUBLISHED-TTL:PT1H
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20250309T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20251102T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20260308T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20261101T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20270314T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20271107T070000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260721T080000
+DTEND;TZID=America/Chicago:20260721T110000
+DTSTAMP:20260720T063430
+CREATED:20260715T162236Z
+LAST-MODIFIED:20260715T162236Z
+UID:10005186-1784620800-1784631600@iondistrict.com
+SUMMARY:Greater Houston Business Procurement Breakfast
+DESCRIPTION:Join the B2G Victory Team and come by their table at the Greater Houston Business Procurement Forum (GHBP). \nBreakfast Served: 8:00AM- 9:00AM \nThe GHBP is excited to: \n\nProvide a venue that “Makes Business Happen” for Houston’s small and minority business community and the community at large.\nConnects key contacts that lead to contracts and financing\nFacilitate  management and technical assistance\nAssist in the growth and development of the Houston Community\nGenerates real business Success Stories\n\nFor more information about the Greater Houston Business Procurement (GHBP) Forum\, visit: https://ghbpf.org/contact/#calendar-fe92efaa-617b-4a09-bd7f-7e198bdab716-event-m681n7cz
+URL:https://iondistrict.com/event/greater-houston-business-procurement-breakfast-10/
+LOCATION:Ion\, 4201 Main Street\, Houston\, TX\, 77002\, United States
+CATEGORIES:Academic Network,Corporate Innovators,Founders & Startups,General Community,Investors & Capital,Mentorship,Networking,Start Here
+ATTACH;FMTTYPE=image/jpeg:https://iondistrict.com/wp-content/uploads/2024/01/321A8335.jpg?ver=1765822093
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260721T173000
+DTEND;TZID=America/Chicago:20260721T183000
+DTSTAMP:20260720T063430
+CREATED:20260126T191906Z
+LAST-MODIFIED:20260713T162526Z
+UID:10004772-1784655000-1784658600@iondistrict.com
+SUMMARY:Angel Investing 101
+DESCRIPTION:Register here: https://luma.com/w1itcerp \nIn a world where only the very wealthy\, well connected\, and major institutions have access to premium investment opportunities\, which have created massive wealth for a small portion of the population\, the Innovation Center for Urban Entrepreneurship team believes the key to closing income and wealth gaps globally is to democratize access to opportunities across the investment ecosystem. \nJoin the Innovation Center for Urban Entrepreneurship team for an evening of learning\, discussion and possibilities as we explore the basics of angel investing and the role it plays in bringing new products and services to market and the impact it has on wealth and job creation.. At this event\, you’ll learn the key components to successfully navigate the critical-path of investing in private\, early-stage companies. \nThis session is ideal for the following investment related stakeholders: \n\nProspective Angel Investors who want to learn more about the world of Angel Investing\nInvestment Advisors (RIA/FA) who are looking for alternative investments for their clients\nEntrepreneurs who want to learn more about what Angels are looking for in their deals\nEntrepreneurs who want to meet/network with Angel Investors\n\nIon District Investor Activation Program: \nThe Houston Ion District Investor Activation Program along with Urban Capital Network is helping build an equitable climatetech industry capable of rapid deployment by addressing a fundamental challenge: the region’s lack of funding for early-stage climatetech startups\, and especially for those led by underrepresented founders. \nThis program from Greentown Labs and the Ion brings early-stage investors from Greater Houston—a region playing a pivotal role in the energy transition—into the fold\, offering education on climatetech investing\, channeling a pool of capital to young startups\, and catalyzing a thriving climatetech investment ecosystem that prioritizes diversity\, equity\, and inclusion. \nIf you would like to join the program\, please fill out this form\, and if you have additional questions\, please contact Juliana Bernal Martinez at jbernal@greentownlabs.com.
+URL:https://iondistrict.com/event/angel-investing-101-8/
+LOCATION:Ion – Conference Room 029 – 030\, 4201 Main St\, Houston\, TX\, 77002\, United States
+CATEGORIES:Founders & Startups,Investors & Capital,Networking
+ATTACH;FMTTYPE=image/jpeg:https://iondistrict.com/wp-content/uploads/2025/12/DSC_0268-scaled.jpg?ver=1765821642
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260723T180000
+DTEND;TZID=America/Chicago:20260723T190000
+DTSTAMP:20260720T063430
+CREATED:20251215T174738Z
+LAST-MODIFIED:20260717T184413Z
+UID:10004383-1784829600-1784833200@iondistrict.com
+SUMMARY:NASA Tech Talks: Optimizing Sensorimotor Performance During Space Exploration
+DESCRIPTION:We want HOU! Join us to discover NASA’s toughest tech challenges—and apply your skills and expertise to solve them. \nLiving in an altered gravity environment\, such as microgravity or the lunar surface\, drives adaptative changes in how the brain utilizes sensory information to maintain spatial awareness and control of movement. Dr. Scott Wood will describe how these challenges may impact critical mission tasks astronauts are required to complete\, and some of the technology that has been developed to optimize their performance while mitigating these sensorimotor risks. The development of assessment and interventional tools has benefitted from clinical developments to support patient populations. The need for more autonomous operations during exploration missions will also motivate future opportunities for technology sharing with terrestrial medicine. \nPlease join us after the talk for drinks and networking at Second Draught! \nAbout the Speakers \nScott Wood is a neuroscientist for NASA’s Human Health and Performance Directorate at the Johnson Space Center in Houston\, TX. He has been the Co-Lead for the Crew Health Countermeasures portfolio for the Mars Campaign Office charged with developing technologies and countermeasures for exploration missions. He is also the Sensorimotor Discipline Lead for the Health and Countermeasures Element with the Human Research Program (HRP). As part of the Neuroscience Laboratory\, he has participated in numerous flight studies and supports neurological functional tests used for medical assessments. Dr. Wood began his research career at NASA while completing his doctorate at the Baylor College of Medicine in Houston\, TX. In addition to his spaceflight research\, he has also conducted research in clinical and military aerospace laboratories. \nMontgomery B. Goforth   has more than 40 years of experience as both Engineer and Manager in a variety of highly technical space and defense-related efforts.  After working for a small defense contractor specializing in anti-submarine warfare\, he joined NASA’s Johnson Space Center in 1990.  He has held leadership positions in multiple JSC Directorates and Program Offices. In his previous role as Assistant Director of the JSC Engineering Directorate\, he established a framework to better focus Engineering’s efforts towards Human Spaceflight technology and systems development consistent with JSC and Agency goals for exploration. Mr. Goforth is now serving as Acting Director of the Business Development & Technology Integration Office at JSC\, and as the JSC Chief Technologist.  In these capacities he will be helping to expand the Houston Aerospace Community through the identification of opportunities to develop space/terrestrial technologies of interest to JSC and Human Space Exploration.  Mr. Goforth was born in East Texas\, raised in Southern California and Arizona\, and graduated from Rice University (BSME 1982\, MSME 1987). \nAbout NASA Tech Talks \nIn these presentations\, occurring the fourth Thursdays of the month\, Mr. Montgomery Goforth and other aerospace subject matter experts will discuss the technology development challenges faced by NASA’s Johnson Space Center and the surrounding Aerospace community in our ongoing efforts as the hub of human spaceflight. Presentations will focus on the ways in which these challenges\, and the associated opportunities\, can be leveraged by Houston’s innovation community. We will continue to identify potential space/terrestrial technologies of interest to Human Spaceflight.  Past NASA Tech Talks have included topics such as: \n\nFrom Space to Startup: Leveraging NASA Technology and Innovation to Propel Your Growing Enterprise\nDisruptive Filter Technology for Spacecraft Water Treatment:  The New Promise of Graphene\nLunar dust capture using novel multiplexed inertial filter\nLunar Passive Fuel Cell Technologies:\nMicrobes in Space
+URL:https://iondistrict.com/event/nasa-tech-talks-20/
+LOCATION:Ion\, 4201 Main Street\, Houston\, TX\, 77002\, United States
+CATEGORIES:Aerospace,Founders & Startups,General Community
+ATTACH;FMTTYPE=image/jpeg:https://iondistrict.com/wp-content/uploads/2025/12/DSC_0352-scaled.jpg?ver=1765820213
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260723T180000
+DTEND;TZID=America/Chicago:20260723T193000
+DTSTAMP:20260720T063430
+CREATED:20260713T162917Z
+LAST-MODIFIED:20260713T162917Z
+UID:10005178-1784829600-1784835000@iondistrict.com
+SUMMARY:FirstCheck: Smart Angels Do Smart Deals (Online Only)
+DESCRIPTION:Register here: https://luma.com/6qr1fm8g​ \nThis is the class where you stop learning about investing and start operating like a Smart Angel Investor. \nYou’ll learn how disciplined investors evaluate opportunities and begin making your own invest-or-pass decisions. After this course\, you’ll have structured evaluation criteria\, the ability to justify a decision\, and the beginning of an investor’s discipline.
+URL:https://iondistrict.com/event/firstcheck-smart-angels-do-smart-deals-2/
+LOCATION:Ion\, 4201 Main Street\, Houston\, TX\, 77002\, United States
+ATTACH;FMTTYPE=image/jpeg:https://iondistrict.com/wp-content/uploads/2026/07/Angel-Investing-101-Valuation-and-Term-Sheets.jpg?ver=1783560406
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260724T083000
+DTEND;TZID=America/Chicago:20260724T103000
+DTSTAMP:20260720T063430
+CREATED:20250729T190850Z
+LAST-MODIFIED:20250825T225437Z
+UID:10004073-1784881800-1784889000@iondistrict.com
+SUMMARY:Ion Networking with Cup of Joey
+DESCRIPTION:What is the purpose of Cup of Joey? It is to create a connected culture of coffee shop-open networking across our region. Every Friday morning\, you’ll have the opportunity to meet new and expand your current networks\, talk about tech\, inspire innovation\, and create community. \nSo\, what is the difference between a cup of joe and a Cup of Joe-Y? It is the WHY. It’s not what you do. It is why you do it! \nAt the Ion\, these are questions that we want to explore with the tech and innovation community. So\, show up\, be friendly\, and make new connections. Know your why\, and we will get to the future together. \nThe future is only a cup away. \nRegister Here: https://www.cupofjoey.org/
+URL:https://iondistrict.com/event/ion-networking-with-cup-of-joey-34/2026-07-24/
+LOCATION:Ion – Lobby\, 4201 Main St.\, Houston\, 77002\, United States
+CATEGORIES:3rd Party Registration,Academic Network,Community Event,Corporate Innovators,Founders & Startups,General Community,Investors & Capital,Networking,Office Hours,Start Here
+ATTACH;FMTTYPE=image/jpeg:https://iondistrict.com/wp-content/uploads/2024/07/CoJ1.jpg?ver=1721850637
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260724T090000
+DTEND;TZID=America/Chicago:20260724T103000
+DTSTAMP:20260720T063430
+CREATED:20260716T181305Z
+LAST-MODIFIED:20260716T181305Z
+UID:10005191-1784883600-1784889000@iondistrict.com
+SUMMARY:⭕️Cybersecurity Circle⭕️
+DESCRIPTION:Our mission is to DEFEAT CYBER CRIMINALS by making cybersecurity knowledge accessible and relatable to everyone. This event creates a supportive environment for individuals starting their cybersecurity journey\, those transitioning into the field\, and professionals navigating job transitions—including those rebuilding confidence after layoffs. Together\, we strengthen our collective defense against cyber threats while fostering career growth and community connections.\nThe ⭕️Cybersecurity Circle⭕️ unites practitioners of all levels in an inclusive community committed to defeating cybercrime through shared knowledge\, collaboration\, and continuous learning. Together\, we’re securing our digital world—one hack at a time
+URL:https://iondistrict.com/event/%e2%ad%95%ef%b8%8fcybersecurity-circle%e2%ad%95%ef%b8%8f-25/
+LOCATION:Ion\, 4201 Main Street\, Houston\, TX\, 77002\, United States
+ATTACH;FMTTYPE=image/png:https://iondistrict.com/wp-content/uploads/2026/01/⭕️CYBERSECURITY-CIRCLE⭕️.png?ver=1767643977
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260724T100000
+DTEND;TZID=America/Chicago:20260724T113000
+DTSTAMP:20260720T063430
+CREATED:20260616T201209Z
+LAST-MODIFIED:20260616T201209Z
+UID:10005130-1784887200-1784892600@iondistrict.com
+SUMMARY:SCORE Office Hours
+DESCRIPTION:About SCORE Office Hours \nSCORE is the nation’s largest network of volunteer\, expert business mentors. Since 1964\, SCORE has helped more than 11 million entrepreneurs start\, grow\, or successfully exit a business. SCORE’s 10\,000 volunteers provide free\, expert mentoring\, resources\, and education in all 50 U.S. states and territories. \nOffice Hours with SCORE take place each Friday morning. Additional partners will be on-site the second Friday of each month (excluding holidays)
+URL:https://iondistrict.com/event/score-office-hours-45/
+LOCATION:Ion\, 4201 Main Street\, Houston\, TX\, 77002\, United States
+CATEGORIES:Founders & Startups,General Community,Networking,Office Hours,Start Here
+ATTACH;FMTTYPE=image/jpeg:https://iondistrict.com/wp-content/uploads/2023/05/6H1A1559-HDR-Edit-scaled.jpg?ver=1715034396
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260728T180000
+DTEND;TZID=America/Chicago:20260728T193000
+DTSTAMP:20260720T063430
+CREATED:20260713T162152Z
+LAST-MODIFIED:20260713T162152Z
+UID:10005187-1785261600-1785267000@iondistrict.com
+SUMMARY:FirstCheck: Smart Angels Do Smart Deals
+DESCRIPTION:Register here: https://luma.com/6qr1fm8g​ \nThis is the class where you stop learning about investing and start operating like a Smart Angel Investor. \nYou’ll learn how disciplined investors evaluate opportunities and begin making your own invest-or-pass decisions. After this course\, you’ll have structured evaluation criteria\, the ability to justify a decision\, and the beginning of an investor’s discipline.
+URL:https://iondistrict.com/event/firstcheck-smart-angels-do-smart-deals/
+LOCATION:Ion\, 4201 Main Street\, Houston\, TX\, 77002\, United States
+ATTACH;FMTTYPE=image/jpeg:https://iondistrict.com/wp-content/uploads/2026/07/Angel-Investing-101-Valuation-and-Term-Sheets.jpg?ver=1783560406
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260728T180000
+DTEND;TZID=America/Chicago:20260728T193000
+DTSTAMP:20260720T063430
+CREATED:20260715T204109Z
+LAST-MODIFIED:20260715T204109Z
+UID:10005179-1785261600-1785267000@iondistrict.com
+SUMMARY:FirstCheck: Smart Angels Do Smart Deals (Online Only)
+DESCRIPTION:Register here: https://luma.com/6qr1fm8g​ \nThis is the class where you stop learning about investing and start operating like a Smart Angel Investor. \nYou’ll learn how disciplined investors evaluate opportunities and begin making your own invest-or-pass decisions. After this course\, you’ll have structured evaluation criteria\, the ability to justify a decision\, and the beginning of an investor’s discipline.
+URL:https://iondistrict.com/event/firstcheck-smart-angels-do-smart-deals-3/
+LOCATION:Ion\, 4201 Main Street\, Houston\, TX\, 77002\, United States
+ATTACH;FMTTYPE=image/jpeg:https://iondistrict.com/wp-content/uploads/2026/07/Angel-Investing-101-Valuation-and-Term-Sheets.jpg?ver=1783560406
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260730T083000
+DTEND;TZID=America/Chicago:20260730T100000
+DTSTAMP:20260720T063430
+CREATED:20260706T210118Z
+LAST-MODIFIED:20260715T161132Z
+UID:10005172-1785400200-1785405600@iondistrict.com
+SUMMARY:NASA Stories at the Ion: Building the Moon Base: Challenges and Opportunities at the Lunar South Pole
+DESCRIPTION:Building the Moon Base: Challenges and Opportunities at the Lunar South Pole \nIn this presentation\, Moon Base Principal Systems Engineer Shatel Bhakta shares the many challenges NASA must overcome to realize an enduring presence in the lunar South Pole region. He’ll also talk about his journey at NASA\, the importance of human space exploration\, and what NASA needs from the next generation of aerospace engineers. \nAbout the Speaker \nShatel Bhakta serves as the principal systems engineer for NASA’s Moon Base. In that role\, he takes a system-of-systems view of Moon Base infrastructure\, ensuring that all components work together to support NASA’s goal of an enduring human presence in the lunar South Pole region. \nPrior to working on the Moon Base\, Bhakta served as NASA’s lunar architecture lead\, guiding a multidisciplinary team across NASA centers to develop a roadmap for crewed exploration of the Moon. This included developing associated conceptual reference missions\, concept of operations\, site planning guidance\, trades and analysis\, system element conceptualization\, and system-of-systems integration. \nBhakta earned his undergraduate degree in mechanical engineering from The University of Texas at Austin and his graduate degree in space architecture from the University of Houston. He is a licensed professional engineer in the state of Texas. \n 
+URL:https://iondistrict.com/event/nasa-stories-at-the-ion-building-the-moon-base-challenges-and-opportunities-at-the-lunar-south-pole/
+LOCATION:Ion – Forum Stairs\, 4201 Main St.\, Houston\, TX\, 77002\, United States
+CATEGORIES:Aerospace,Founders & Startups,General Community,Keynote,Networking
+ATTACH;FMTTYPE=image/jpeg:https://iondistrict.com/wp-content/uploads/2026/07/26-ION_NASAStories_July_V1_Newsletter@2x.jpg?ver=1784131881
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260731T083000
+DTEND;TZID=America/Chicago:20260731T103000
+DTSTAMP:20260720T063430
+CREATED:20250729T190850Z
+LAST-MODIFIED:20250825T225437Z
+UID:10004074-1785486600-1785493800@iondistrict.com
+SUMMARY:Ion Networking with Cup of Joey
+DESCRIPTION:What is the purpose of Cup of Joey? It is to create a connected culture of coffee shop-open networking across our region. Every Friday morning\, you’ll have the opportunity to meet new and expand your current networks\, talk about tech\, inspire innovation\, and create community. \nSo\, what is the difference between a cup of joe and a Cup of Joe-Y? It is the WHY. It’s not what you do. It is why you do it! \nAt the Ion\, these are questions that we want to explore with the tech and innovation community. So\, show up\, be friendly\, and make new connections. Know your why\, and we will get to the future together. \nThe future is only a cup away. \nRegister Here: https://www.cupofjoey.org/
+URL:https://iondistrict.com/event/ion-networking-with-cup-of-joey-34/2026-07-31/
+LOCATION:Ion – Lobby\, 4201 Main St.\, Houston\, 77002\, United States
+CATEGORIES:3rd Party Registration,Academic Network,Community Event,Corporate Innovators,Founders & Startups,General Community,Investors & Capital,Networking,Office Hours,Start Here
+ATTACH;FMTTYPE=image/jpeg:https://iondistrict.com/wp-content/uploads/2024/07/CoJ1.jpg?ver=1721850637
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260731T090000
+DTEND;TZID=America/Chicago:20260731T103000
+DTSTAMP:20260720T063430
+CREATED:20260716T181342Z
+LAST-MODIFIED:20260716T181342Z
+UID:10005193-1785488400-1785493800@iondistrict.com
+SUMMARY:⭕️Cybersecurity Circle⭕️
+DESCRIPTION:Our mission is to DEFEAT CYBER CRIMINALS by making cybersecurity knowledge accessible and relatable to everyone. This event creates a supportive environment for individuals starting their cybersecurity journey\, those transitioning into the field\, and professionals navigating job transitions—including those rebuilding confidence after layoffs. Together\, we strengthen our collective defense against cyber threats while fostering career growth and community connections.\nThe ⭕️Cybersecurity Circle⭕️ unites practitioners of all levels in an inclusive community committed to defeating cybercrime through shared knowledge\, collaboration\, and continuous learning. Together\, we’re securing our digital world—one hack at a time
+URL:https://iondistrict.com/event/%e2%ad%95%ef%b8%8fcybersecurity-circle%e2%ad%95%ef%b8%8f-26/
+LOCATION:Ion\, 4201 Main Street\, Houston\, TX\, 77002\, United States
+ATTACH;FMTTYPE=image/png:https://iondistrict.com/wp-content/uploads/2026/01/⭕️CYBERSECURITY-CIRCLE⭕️.png?ver=1767643977
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260731T100000
+DTEND;TZID=America/Chicago:20260731T113000
+DTSTAMP:20260720T063430
+CREATED:20260616T201224Z
+LAST-MODIFIED:20260616T201224Z
+UID:10005131-1785492000-1785497400@iondistrict.com
+SUMMARY:SCORE Office Hours
+DESCRIPTION:About SCORE Office Hours \nSCORE is the nation’s largest network of volunteer\, expert business mentors. Since 1964\, SCORE has helped more than 11 million entrepreneurs start\, grow\, or successfully exit a business. SCORE’s 10\,000 volunteers provide free\, expert mentoring\, resources\, and education in all 50 U.S. states and territories. \nOffice Hours with SCORE take place each Friday morning. Additional partners will be on-site the second Friday of each month (excluding holidays)
+URL:https://iondistrict.com/event/score-office-hours-46/
+LOCATION:Ion\, 4201 Main Street\, Houston\, TX\, 77002\, United States
+CATEGORIES:Founders & Startups,General Community,Networking,Office Hours,Start Here
+ATTACH;FMTTYPE=image/jpeg:https://iondistrict.com/wp-content/uploads/2023/05/6H1A1559-HDR-Edit-scaled.jpg?ver=1715034396
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260731T100000
+DTEND;TZID=America/Chicago:20260731T120000
+DTSTAMP:20260720T063430
+CREATED:20260610T202452Z
+LAST-MODIFIED:20260610T202452Z
+UID:10005118-1785492000-1785499200@iondistrict.com
+SUMMARY:NASA Office Hours
+DESCRIPTION:NASA is bringing its expertise to Houston’s innovation hub! Every other Friday\, join us for NASA’s office hours\, designed to bridge the gap between Houston’s innovators\, entrepreneurs\, and startups with NASA’s elite experts\, capabilities\, and technology.  \n\nLicense the Future: Discover how to utilize NASA-developed technologies and intellectual property for your own projects.\nPartner for Growth: Explore how to grow your own goals and NASA’s mission together by leveraging unique human spaceflight capabilities and expertise from NASA Johnson Space Center.\nBuild the Sector: Help us grow Houston’s commercial space ecosystem.\n\nCome with a vision\, leave with a partnership. \nJust come walk up and say hello\, or sign up in advance here.
+URL:https://iondistrict.com/event/nasa-office-hours-14/
+LOCATION:Ion\, 4201 Main Street\, Houston\, TX\, 77002\, United States
+ATTACH;FMTTYPE=image/png:https://iondistrict.com/wp-content/uploads/2026/04/32-Image-Placeholder.png?ver=1777486289
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260731T100000
+DTEND;TZID=America/Chicago:20260731T120000
+DTSTAMP:20260720T063430
+CREATED:20260616T201530Z
+LAST-MODIFIED:20260616T201530Z
+UID:10005136-1785492000-1785499200@iondistrict.com
+SUMMARY:NASA Office Hours
+DESCRIPTION:NASA is bringing its expertise to Houston’s innovation hub! Every other Friday\, join us for NASA’s office hours\, designed to bridge the gap between Houston’s innovators\, entrepreneurs\, and startups with NASA’s elite experts\, capabilities\, and technology.  \n\nLicense the Future: Discover how to utilize NASA-developed technologies and intellectual property for your own projects.\nPartner for Growth: Explore how to grow your own goals and NASA’s mission together by leveraging unique human spaceflight capabilities and expertise from NASA Johnson Space Center.\nBuild the Sector: Help us grow Houston’s commercial space ecosystem.\n\nCome with a vision\, leave with a partnership. \nJust come walk up and say hello\, or sign up in advance here.
+URL:https://iondistrict.com/event/nasa-office-hours-17/
+LOCATION:Ion\, 4201 Main Street\, Houston\, TX\, 77002\, United States
+ATTACH;FMTTYPE=image/png:https://iondistrict.com/wp-content/uploads/2026/04/32-Image-Placeholder.png?ver=1777486289
+END:VEVENT
+END:VCALENDAR
