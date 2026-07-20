@@ -1,0 +1,17 @@
+name: Japan-America Society of Houston
+status: added
+url: https://www.jas-hou.org/events
+platform: Squarespace
+tags:
+  - JapaneseCulture
+  - Arts
+  - PerformingArts
+  - Community
+  - "Museum District"
+firstSeen: "2026-07-20"
+lastChecked: "2026-07-20"
+pr: 832-source-pipeline-2026-07-20
+impl:
+  type: squarespace
+  note: Config-only Squarespace ripper using built-in type; 5 events verified in build test
+notes: "Cultural institution with regular programming (language classes, performances, cultural talks). Built with Squarespace ripper type."

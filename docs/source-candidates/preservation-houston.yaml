@@ -1,0 +1,17 @@
+name: Preservation Houston
+status: added
+url: https://www.preservationhouston.org/calendar/
+platform: Squarespace
+tags:
+  - HistoricPreservation
+  - Architecture
+  - Community
+  - Downtown
+  - Tours
+firstSeen: "2026-07-20"
+lastChecked: "2026-07-20"
+pr: 832-source-pipeline-2026-07-20
+impl:
+  type: squarespace
+  note: Config-only Squarespace ripper using built-in type; 5 events verified in build test
+notes: "Established 1978 with regular Houston-focused programming (walking tours, lectures, annual gala). Built with Squarespace ripper type."
