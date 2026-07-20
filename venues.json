@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-20T05:57:50.387Z",
+  "generated": "2026-07-20T11:39:23.042Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -1108,6 +1108,44 @@
       ]
     },
     {
+      "name": "japan-america-society-houston",
+      "friendlyName": "Japan-America Society of Houston",
+      "description": "Japan-America Society of Houston",
+      "url": "https://www.jas-hou.org/events",
+      "tags": [
+        "JapaneseCulture",
+        "Arts",
+        "PerformingArts",
+        "Community",
+        "Museum District"
+      ],
+      "geo": {
+        "lat": 29.7209,
+        "lng": -95.3925,
+        "label": "Japan-America Society of Houston"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Japan-America%20Society%20of%20Houston"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "japan-america-society-houston",
+          "friendlyName": "Japan-America Society of Houston",
+          "links": {
+            "ics": {
+              "href": "japan-america-society-houston-japan-america-society-houston.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "japan-america-society-houston-japan-america-society-houston.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "kindred-stories",
       "friendlyName": "Kindred Stories",
       "description": "Kindred Stories",
@@ -1388,6 +1426,44 @@
             },
             "rss": {
               "href": "post-houston-post-houston.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "preservation-houston",
+      "friendlyName": "Preservation Houston",
+      "description": "Preservation Houston",
+      "url": "https://www.preservationhouston.org/calendar",
+      "tags": [
+        "HistoricPreservation",
+        "Architecture",
+        "Community",
+        "Tours",
+        "Downtown"
+      ],
+      "geo": {
+        "lat": 29.7589,
+        "lng": -95.3677,
+        "label": "Preservation Houston"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Preservation%20Houston"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "preservation-houston",
+          "friendlyName": "Preservation Houston",
+          "links": {
+            "ics": {
+              "href": "preservation-houston-preservation-houston.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "preservation-houston-preservation-houston.rss",
               "type": "application/rss+xml"
             }
           }

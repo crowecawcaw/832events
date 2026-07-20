@@ -6,9 +6,9 @@ METHOD:PUBLISH
 X-WR-CALNAME:Sawyer Yards
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:5RBZwHOMtvaGQz-1-5iFK
+UID:ufEFhF5p4Cq2WqlD7KIkV
 SUMMARY:Second Saturday Open Art Studios
-DTSTAMP:20260720T055728Z
+DTSTAMP:20260720T113845Z
 DTSTART:20260808T170000Z
 DESCRIPTION:https://www.sawyeryards.com/do/second-saturday-open-art-studios
 	-1
@@ -19,9 +19,21 @@ TRANSP:TRANSPARENT
 DURATION:PT5H
 END:VEVENT
 BEGIN:VEVENT
-UID:DlYB8F_0H-iulJ6IS1erM
+UID:tE1Kkh0LyVKITIn7LOHFC
+SUMMARY:The Silos Third Saturday
+DTSTAMP:20260720T113845Z
+DTSTART:20260815T170000Z
+DESCRIPTION:https://www.sawyeryards.com/do/the-silos-third-saturday-2026
+URL:https://www.sawyeryards.com/do/the-silos-third-saturday-2026
+GEO:29.7698;-95.3839
+LOCATION:2101 Winter Street\, Houston\, TX 77007
+TRANSP:TRANSPARENT
+DURATION:PT5H
+END:VEVENT
+BEGIN:VEVENT
+UID:58XdeEb3_uFTjiWvl7QqM
 SUMMARY:Silver Street Third Saturday
-DTSTAMP:20260720T055728Z
+DTSTAMP:20260720T113845Z
 DTSTART:20260815T170000Z
 DESCRIPTION:https://www.sawyeryards.com/do/silver-street-third-saturday-202
 	6
@@ -32,57 +44,9 @@ TRANSP:TRANSPARENT
 DURATION:PT5H
 END:VEVENT
 BEGIN:VEVENT
-UID:Z1kdpNGVyGEpzkOtCtudl
-SUMMARY:The Silos Third Saturday
-DTSTAMP:20260720T055728Z
-DTSTART:20260815T170000Z
-DESCRIPTION:https://www.sawyeryards.com/do/the-silos-third-saturday-2026
-URL:https://www.sawyeryards.com/do/the-silos-third-saturday-2026
-GEO:29.7698;-95.3839
-LOCATION:2101 Winter Street\, Houston\, TX 77007
-TRANSP:TRANSPARENT
-DURATION:PT5H
-END:VEVENT
-BEGIN:VEVENT
-UID:hZOPzz7ooCgGwA9Dr2gWL
-SUMMARY:Live Photo Session: Aqui Estoy
-DTSTAMP:20260720T055728Z
-DTSTART:20260719T170000Z
-DESCRIPTION:https://www.sawyeryards.com/do/live-photo-session-aqui-estoy
-URL:https://www.sawyeryards.com/do/live-photo-session-aqui-estoy
-GEO:29.7698;-95.3839
-LOCATION:2101 Winter Street\, Houston\, TX 77007
-TRANSP:TRANSPARENT
-DURATION:PT5H
-END:VEVENT
-BEGIN:VEVENT
-UID:lgeQ8aJOihcXTlxpj1a_7
-SUMMARY:Vinyl Voices Podcast Taping
-DTSTAMP:20260720T055728Z
-DTSTART:20260724T000000Z
-DESCRIPTION:https://www.sawyeryards.com/do/vinyl-voices-podcast-taping
-URL:https://www.sawyeryards.com/do/vinyl-voices-podcast-taping
-GEO:29.7698;-95.3839
-LOCATION:2101 Winter Street\, Houston\, TX 77007
-TRANSP:TRANSPARENT
-DURATION:PT3H
-END:VEVENT
-BEGIN:VEVENT
-UID:xvxCMHTT3oRe0R836Qp_n
-SUMMARY:Summer Sizzle at The Silos
-DTSTAMP:20260720T055728Z
-DTSTART:20260723T230000Z
-DESCRIPTION:https://www.sawyeryards.com/do/summer-sizzle-at-the-silos
-URL:https://www.sawyeryards.com/do/summer-sizzle-at-the-silos
-GEO:29.7698;-95.3839
-LOCATION:2101 Winter Street\, Houston\, TX 77007
-TRANSP:TRANSPARENT
-DURATION:PT2H
-END:VEVENT
-BEGIN:VEVENT
-UID:TXRHcWS4O0KBGQfJ5Crap
+UID:m2fkDXwZwVG3FP2BbXpMP
 SUMMARY:The Memory of Matter
-DTSTAMP:20260720T055728Z
+DTSTAMP:20260720T113845Z
 DTSTART:20260723T224500Z
 DESCRIPTION:https://www.sawyeryards.com/do/the-memory-of-matter
 URL:https://www.sawyeryards.com/do/the-memory-of-matter
@@ -92,9 +56,33 @@ TRANSP:TRANSPARENT
 DURATION:PT1H15M
 END:VEVENT
 BEGIN:VEVENT
-UID:cbfJ2naufwzPbOMGxaLFx
+UID:j4mIcA3AvUtkSZLwvCIto
+SUMMARY:Summer Sizzle at The Silos
+DTSTAMP:20260720T113845Z
+DTSTART:20260723T230000Z
+DESCRIPTION:https://www.sawyeryards.com/do/summer-sizzle-at-the-silos
+URL:https://www.sawyeryards.com/do/summer-sizzle-at-the-silos
+GEO:29.7698;-95.3839
+LOCATION:2101 Winter Street\, Houston\, TX 77007
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+UID:kW1AWoeCVsCGJajOIqKxm
+SUMMARY:Vinyl Voices Podcast Taping
+DTSTAMP:20260720T113845Z
+DTSTART:20260724T000000Z
+DESCRIPTION:https://www.sawyeryards.com/do/vinyl-voices-podcast-taping
+URL:https://www.sawyeryards.com/do/vinyl-voices-podcast-taping
+GEO:29.7698;-95.3839
+LOCATION:2101 Winter Street\, Houston\, TX 77007
+TRANSP:TRANSPARENT
+DURATION:PT3H
+END:VEVENT
+BEGIN:VEVENT
+UID:mdh3slJw0n-RUahNTI9J0
 SUMMARY:Rebecca Pugh: To the Horizon
-DTSTAMP:20260720T055728Z
+DTSTAMP:20260720T113845Z
 DTSTART:20260725T170000Z
 DESCRIPTION:https://www.sawyeryards.com/do/rebecca-pugh-to-the-horizon
 URL:https://www.sawyeryards.com/do/rebecca-pugh-to-the-horizon
@@ -104,9 +92,9 @@ TRANSP:TRANSPARENT
 DURATION:PT1H30M
 END:VEVENT
 BEGIN:VEVENT
-UID:w7HaDjhUBn5cVdFCDNhy3
+UID:xNT7opYA8O7sXCtw81BB-
 SUMMARY:Studio Conversations: Inside the Process with Erika Alonso
-DTSTAMP:20260720T055728Z
+DTSTAMP:20260720T113845Z
 DTSTART:20260725T230000Z
 DESCRIPTION:https://www.sawyeryards.com/do/studio-conversations-inside-the-
 	process-with-erika-alonso
@@ -118,9 +106,9 @@ TRANSP:TRANSPARENT
 DURATION:PT2H
 END:VEVENT
 BEGIN:VEVENT
-UID:9eAvNNxCKF6KJcpRkli31
+UID:Obmmu5XcZi61G2lnesAPt
 SUMMARY:Live Photo Session: Latinx Music Subcultures
-DTSTAMP:20260720T055728Z
+DTSTAMP:20260720T113845Z
 DTSTART:20260725T170000Z
 DESCRIPTION:https://www.sawyeryards.com/do/live-photo-session-latinx-music-
 	subcultures
@@ -132,9 +120,9 @@ TRANSP:TRANSPARENT
 DURATION:PT5H
 END:VEVENT
 BEGIN:VEVENT
-UID:LSPahSnn_0dom6lcAhVeq
+UID:V2CIxdAPkwonRPGWgRQQ_
 SUMMARY:Claire Loft: État d'esprit
-DTSTAMP:20260720T055728Z
+DTSTAMP:20260720T113845Z
 DTSTART:20260725T230000Z
 DESCRIPTION:https://www.sawyeryards.com/do/claire-loft-etat-desprit
 URL:https://www.sawyeryards.com/do/claire-loft-etat-desprit
@@ -144,23 +132,9 @@ TRANSP:TRANSPARENT
 DURATION:PT3H
 END:VEVENT
 BEGIN:VEVENT
-UID:YTsKl4E2MK7b4ejWyl4SV
-SUMMARY:Running With The Beasts – A Poetry Book Launch
-DTSTAMP:20260720T055728Z
-DTSTART:20260726T193000Z
-DESCRIPTION:https://www.sawyeryards.com/do/running-with-the-beasts--a-poetr
-	y-book-launch
-URL:https://www.sawyeryards.com/do/running-with-the-beasts--a-poetry-book-l
-	aunch
-GEO:29.7698;-95.3839
-LOCATION:2101 Winter Street\, Houston\, TX 77007
-TRANSP:TRANSPARENT
-DURATION:PT2H
-END:VEVENT
-BEGIN:VEVENT
-UID:_jMkp5sDHVpt0BRcNtoWX
+UID:fwXVB8FQMvYvPsrwh2YTi
 SUMMARY:Painting with Suzanne Acrylic Painting Party
-DTSTAMP:20260720T055728Z
+DTSTAMP:20260720T113845Z
 DTSTART:20260726T200000Z
 DESCRIPTION:https://www.sawyeryards.com/do/painting-with-suzanne-acrylic-pa
 	inting-party
@@ -172,9 +146,23 @@ TRANSP:TRANSPARENT
 DURATION:PT2H
 END:VEVENT
 BEGIN:VEVENT
-UID:R3adJadTfWyFv6uxht8Zg
+UID:TgeF8Z0fh9xOgZpJSjqEM
+SUMMARY:Running With The Beasts – A Poetry Book Launch
+DTSTAMP:20260720T113845Z
+DTSTART:20260726T193000Z
+DESCRIPTION:https://www.sawyeryards.com/do/running-with-the-beasts--a-poetr
+	y-book-launch
+URL:https://www.sawyeryards.com/do/running-with-the-beasts--a-poetry-book-l
+	aunch
+GEO:29.7698;-95.3839
+LOCATION:2101 Winter Street\, Houston\, TX 77007
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+UID:YWbzInSABsjHdWCP1kMdD
 SUMMARY:Crafts + Community Support Day: Back-to-School Supply Drive
-DTSTAMP:20260720T055728Z
+DTSTAMP:20260720T113845Z
 DTSTART:20260801T170000Z
 DESCRIPTION:https://www.sawyeryards.com/do/crafts-community-support-day-bac
 	k-to-school-supply-drive
@@ -186,9 +174,9 @@ TRANSP:TRANSPARENT
 DURATION:PT5H
 END:VEVENT
 BEGIN:VEVENT
-UID:CmsYrNT3r3L3Na4rotJZ3
+UID:LKMUB5CNmtCEhMxohf69P
 SUMMARY:Con Sangre y Corazón - Portrait of Our Community
-DTSTAMP:20260720T055728Z
+DTSTAMP:20260720T113845Z
 DTSTART:20260807T000000Z
 DESCRIPTION:https://www.sawyeryards.com/do/con-sangre-y-corazon-portrait-of
 	-our-community
@@ -200,9 +188,9 @@ TRANSP:TRANSPARENT
 DURATION:PT3H
 END:VEVENT
 BEGIN:VEVENT
-UID:IxR6ylkhbW3A6dCev4v7x
+UID:VLLRwQ1HDz-M8NMn4PYJd
 SUMMARY:Endless Summer: Jeanne Jones\, Sarah Luna\, Ellen H Ray
-DTSTAMP:20260720T055728Z
+DTSTAMP:20260720T113845Z
 DTSTART:20260807T230000Z
 DESCRIPTION:https://www.sawyeryards.com/do/endless-summer-pool-parties-picn
 	ics-and-popsicles
@@ -214,9 +202,9 @@ TRANSP:TRANSPARENT
 DURATION:PT2H
 END:VEVENT
 BEGIN:VEVENT
-UID:0vAndlcUKunLcSjPQcwfI
+UID:sbYqtWzpqU59qKMWCwzW2
 SUMMARY:Form and Figure
-DTSTAMP:20260720T055728Z
+DTSTAMP:20260720T113845Z
 DTSTART:20260808T220000Z
 DESCRIPTION:https://www.sawyeryards.com/do/form-and-figure
 URL:https://www.sawyeryards.com/do/form-and-figure
@@ -226,9 +214,9 @@ TRANSP:TRANSPARENT
 DURATION:PT2H
 END:VEVENT
 BEGIN:VEVENT
-UID:3VpGFTviLr5CryMK_hk_v
+UID:B35OI_4iokEFhZC0XUZ4J
 SUMMARY:Open Gallery\, Community Art Market\, & Classic Car Display
-DTSTAMP:20260720T055728Z
+DTSTAMP:20260720T113845Z
 DTSTART:20260808T170000Z
 DESCRIPTION:https://www.sawyeryards.com/do/open-gallery-community-art-marke
 	t-and-classic-car-display
@@ -240,9 +228,9 @@ TRANSP:TRANSPARENT
 DURATION:PT5H
 END:VEVENT
 BEGIN:VEVENT
-UID:2Sl3afjODanYRs0pxu58T
+UID:KeAkyNdkgaheTE33Jb34k
 SUMMARY:Chicanx Photographers as Documentary Historians
-DTSTAMP:20260720T055728Z
+DTSTAMP:20260720T113845Z
 DTSTART:20260814T000000Z
 DESCRIPTION:https://www.sawyeryards.com/do/chicanx-photographers-as-documen
 	tary-historians
@@ -254,9 +242,9 @@ TRANSP:TRANSPARENT
 DURATION:PT2H
 END:VEVENT
 BEGIN:VEVENT
-UID:s5tNicH44pclN95b64wAM
+UID:4qTvqbTUaINsBmTF3_Rjf
 SUMMARY:Crafts + Community Support Day: Food Drive
-DTSTAMP:20260720T055728Z
+DTSTAMP:20260720T113845Z
 DTSTART:20260815T170000Z
 DESCRIPTION:https://www.sawyeryards.com/do/crafts-community-support-day-foo
 	d-drive
@@ -267,9 +255,9 @@ TRANSP:TRANSPARENT
 DURATION:PT5H
 END:VEVENT
 BEGIN:VEVENT
-UID:K8igMRq-3zYDSLptzDKr4
+UID:4h4P6X4ThYUlTKehaUS3n
 SUMMARY:Closing Reception: Casa De Cultura
-DTSTAMP:20260720T055728Z
+DTSTAMP:20260720T113845Z
 DTSTART:20260822T220000Z
 DESCRIPTION:https://www.sawyeryards.com/do/closing-reception-casa-de-cultur
 	a
@@ -280,9 +268,9 @@ TRANSP:TRANSPARENT
 DURATION:PT3H
 END:VEVENT
 BEGIN:VEVENT
-UID:uaOJ8hnFyDO8AmAF3DBiA
+UID:PdUdCVrG7DB2_0gC_K7fy
 SUMMARY:El Ensayo
-DTSTAMP:20260720T055728Z
+DTSTAMP:20260720T113845Z
 DTSTART:20260829T180000Z
 DESCRIPTION:https://www.sawyeryards.com/do/el-ensayo
 URL:https://www.sawyeryards.com/do/el-ensayo
@@ -292,9 +280,9 @@ TRANSP:TRANSPARENT
 DURATION:PT1H
 END:VEVENT
 BEGIN:VEVENT
-UID:H--cY2YGe7QWlP6glyyV0
+UID:ZfLHeaArWT1FzWoAIv0Nh
 SUMMARY:HEART OF HOUSTON
-DTSTAMP:20260720T055728Z
+DTSTAMP:20260720T113845Z
 DTSTART:20260910T220000Z
 DESCRIPTION:https://www.sawyeryards.com/do/heart-of-houston
 URL:https://www.sawyeryards.com/do/heart-of-houston
@@ -304,9 +292,9 @@ TRANSP:TRANSPARENT
 DURATION:PT3H
 END:VEVENT
 BEGIN:VEVENT
-UID:KJXX8LuLOoqGSJttSNWnb
+UID:mHkRutK6oqhwQ9ptU2pys
 SUMMARY:Anomalous
-DTSTAMP:20260720T055728Z
+DTSTAMP:20260720T113845Z
 DTSTART:20260912T230000Z
 DESCRIPTION:https://www.sawyeryards.com/do/anomalous
 URL:https://www.sawyeryards.com/do/anomalous
