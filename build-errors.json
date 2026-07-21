@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-07-20T11:39:23.047Z",
-  "totalErrors": 8,
+  "buildTime": "2026-07-21T05:38:58.715Z",
+  "totalErrors": 3,
   "configErrors": [],
   "sources": [
     {
@@ -51,55 +51,18 @@
   ],
   "externalCalendarFailures": [
     {
-      "name": "bad-astronaut-brewery",
-      "friendlyName": "Bad Astronaut Brewery",
-      "url": "https://badastronautbeer.com/?post_type=tribe_events&ical=1&eventDisplay=list",
-      "error": "Error: HTTP 403: "
-    },
-    {
       "name": "islamic-society-greater-houston",
       "friendlyName": "Islamic Society of Greater Houston",
       "url": "https://isgh.org/?post_type=tribe_events&ical=1",
       "error": "Error: HTTP 403: "
     }
   ],
-  "geocodeErrors": [
-    {
-      "type": "GeocodeError",
-      "location": "Park 8 Event Center",
-      "source": "songkick-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Place",
-      "source": "songkick-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Noto Htx",
-      "source": "songkick-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Neal S Blaisdell Concert Hall, 777 Ward Avenue, Honolulu, HI, 96814, United States",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Addison Improv, 4980 Belt Line Road #250, Dallas, TX, 75254, United States Of America",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    }
-  ],
+  "geocodeErrors": [],
   "geoStats": {
     "totalEvents": 1604,
     "eventsWithGeo": 1396,
     "eventsWithoutGeo": 208,
-    "geocodeErrors": 5
+    "geocodeErrors": 0
   },
   "uncertainEvents": [],
   "uncertaintyStats": {
@@ -124,6 +87,7 @@
     "tag-concerts",
     "tag-fifa",
     "tag-literary",
+    "external-bad-astronaut-brewery",
     "external-houston-cinema-arts-society"
   ],
   "expectedEmptyCalendars": [],
@@ -590,7 +554,7 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 985,
+    "eventsWithImage": 987,
     "totalEvents": 1604,
     "venuesWithImage": 0,
     "totalVenues": 54,
@@ -1033,13 +997,6 @@
         "summary": "Kindness Connection",
         "date": "2026-07-30T10:00-05:00[America/Chicago]",
         "url": "https://www.cmhouston.org/events/kindness-connection"
-      },
-      {
-        "source": "childrens-museum-houston",
-        "eventId": "little-builders-playtime-2026-07-20-ed9c4beb",
-        "summary": "Little Builders Playtime",
-        "date": "2026-07-20T10:00-05:00[America/Chicago]",
-        "url": "https://www.cmhouston.org/events/little-builders-playtime"
       },
       {
         "source": "childrens-museum-houston",
@@ -1666,6 +1623,13 @@
         "summary": "Space City 10 MILER",
         "date": "2026-10-11T06:45-05:00[America/Chicago]",
         "url": "https://htxoutdoors.com/events/space-city-10-miler/"
+      },
+      {
+        "source": "htxoutdoors",
+        "eventId": "toughest-10k-galveston-2026-10-18",
+        "summary": "Toughest 10K Galveston",
+        "date": "2026-10-18T07:00-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/toughest-10k-galveston/"
       },
       {
         "source": "htxoutdoors",
@@ -2809,12 +2773,6 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
-        "eventId": "interpretive-center-open-8-30am-to-2-30pm-bastrop-state-park-2026-07-20",
-        "summary": "Interpretive Center Open 8:30am to 2:30pm - Bastrop State Park",
-        "date": "2026-07-20T08:30-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
         "eventId": "interpretive-center-open-8-30am-to-2-30pm-bastrop-state-park-2026-07-27",
         "summary": "Interpretive Center Open 8:30am to 2:30pm - Bastrop State Park",
         "date": "2026-07-27T08:30-05:00[America/Chicago]"
@@ -3440,13 +3398,6 @@
       "summary": "Kindness Connection",
       "date": "2026-07-30T10:00-05:00[America/Chicago]",
       "url": "https://www.cmhouston.org/events/kindness-connection"
-    },
-    {
-      "source": "childrens-museum-houston",
-      "eventId": "little-builders-playtime-2026-07-20-ed9c4beb",
-      "summary": "Little Builders Playtime",
-      "date": "2026-07-20T10:00-05:00[America/Chicago]",
-      "url": "https://www.cmhouston.org/events/little-builders-playtime"
     },
     {
       "source": "childrens-museum-houston",
@@ -4545,6 +4496,13 @@
     },
     {
       "source": "htxoutdoors",
+      "eventId": "toughest-10k-galveston-2026-10-18",
+      "summary": "Toughest 10K Galveston",
+      "date": "2026-10-18T07:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/toughest-10k-galveston/"
+    },
+    {
+      "source": "htxoutdoors",
       "eventId": "toughest-10k-kemah-2026-09-20",
       "summary": "Toughest 10K Kemah",
       "date": "2026-09-20T06:30-05:00[America/Chicago]",
@@ -4913,6 +4871,13 @@
       "summary": "Pierre Bensusan",
       "date": "2026-10-06T19:00-05:00[America/Chicago]",
       "url": "https://www.mcgonigels.com/shows/pierre-bensusan-early-show/"
+    },
+    {
+      "source": "mcgonigels-mucky-duck",
+      "eventId": "mcgonigels-32411",
+      "summary": "Good Morning Bedlam",
+      "date": "2026-10-20T19:00-05:00[America/Chicago]",
+      "url": "https://www.mcgonigels.com/shows/good-morning-bedlam-early-show-2/"
     },
     {
       "source": "mcgonigels-mucky-duck",
@@ -7043,12 +7008,6 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
-      "eventId": "interpretive-center-open-8-30am-to-2-30pm-bastrop-state-park-2026-07-20",
-      "summary": "Interpretive Center Open 8:30am to 2:30pm - Bastrop State Park",
-      "date": "2026-07-20T08:30-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
       "eventId": "interpretive-center-open-8-30am-to-2-30pm-bastrop-state-park-2026-07-27",
       "summary": "Interpretive Center Open 8:30am to 2:30pm - Bastrop State Park",
       "date": "2026-07-27T08:30-05:00[America/Chicago]"
@@ -7689,6 +7648,13 @@
     },
     {
       "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_COGFd-J",
+      "summary": "Rebecca Black - Exhibitionism on Tour",
+      "date": "2026-10-03T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/rebecca-black-exhibitionism-on-tour-houston-texas-10-03-2026/event/3A0064E80C203866"
+    },
+    {
+      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_CrmBEj-",
       "summary": "RUSSELL! THE AMERICAN SWEETHARTT TOUR",
       "date": "2026-09-27T19:00-05:00[America/Chicago]",
@@ -8049,7 +8015,7 @@
     {
       "name": "childrens-museum-houston-main",
       "type": "Ripper",
-      "events": 17,
+      "events": 16,
       "expectEmpty": false,
       "source": "childrens-museum-houston"
     },
@@ -8147,7 +8113,7 @@
     {
       "name": "htxoutdoors-htxoutdoors",
       "type": "Ripper",
-      "events": 27,
+      "events": 28,
       "expectEmpty": false,
       "source": "htxoutdoors"
     },
@@ -8189,7 +8155,7 @@
     {
       "name": "mcgonigels-mucky-duck-mcgonigels-mucky-duck",
       "type": "Ripper",
-      "events": 88,
+      "events": 89,
       "expectEmpty": false,
       "source": "mcgonigels-mucky-duck"
     },
@@ -8315,7 +8281,7 @@
     {
       "name": "texas-parks-wildlife-houston-texas-parks-wildlife-houston",
       "type": "Ripper",
-      "events": 110,
+      "events": 109,
       "expectEmpty": false,
       "source": "texas-parks-wildlife-houston"
     },
@@ -8343,7 +8309,7 @@
     {
       "name": "white-oak-music-hall-white-oak-music-hall",
       "type": "Ripper",
-      "events": 85,
+      "events": 86,
       "expectEmpty": false,
       "source": "white-oak-music-hall"
     },
@@ -8364,7 +8330,7 @@
     {
       "name": "tag-upper-kirby",
       "type": "Aggregate",
-      "events": 109,
+      "events": 110,
       "expectEmpty": false,
       "source": "tag-upper-kirby"
     },
@@ -8378,7 +8344,7 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 653,
+      "events": 654,
       "expectEmpty": false,
       "source": "tag-music"
     },
@@ -8441,7 +8407,7 @@
     {
       "name": "tag-museum-district",
       "type": "Aggregate",
-      "events": 52,
+      "events": 51,
       "expectEmpty": false,
       "source": "tag-museum-district"
     },
@@ -8462,7 +8428,7 @@
     {
       "name": "tag-education",
       "type": "Aggregate",
-      "events": 203,
+      "events": 202,
       "expectEmpty": false,
       "source": "tag-education"
     },
@@ -8476,21 +8442,21 @@
     {
       "name": "tag-family",
       "type": "Aggregate",
-      "events": 34,
+      "events": 33,
       "expectEmpty": false,
       "source": "tag-family"
     },
     {
       "name": "tag-kids",
       "type": "Aggregate",
-      "events": 17,
+      "events": 16,
       "expectEmpty": false,
       "source": "tag-kids"
     },
     {
       "name": "tag-museum",
       "type": "Aggregate",
-      "events": 18,
+      "events": 17,
       "expectEmpty": false,
       "source": "tag-museum"
     },
@@ -8532,14 +8498,14 @@
     {
       "name": "tag-montrose",
       "type": "Aggregate",
-      "events": 256,
+      "events": 255,
       "expectEmpty": false,
       "source": "tag-montrose"
     },
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 324,
+      "events": 325,
       "expectEmpty": false,
       "source": "tag-community"
     },
@@ -8588,7 +8554,7 @@
     {
       "name": "tag-parks",
       "type": "Aggregate",
-      "events": 170,
+      "events": 169,
       "expectEmpty": false,
       "source": "tag-parks"
     },
@@ -8602,14 +8568,14 @@
     {
       "name": "tag-hiking",
       "type": "Aggregate",
-      "events": 27,
+      "events": 28,
       "expectEmpty": false,
       "source": "tag-hiking"
     },
     {
       "name": "tag-sports",
       "type": "Aggregate",
-      "events": 27,
+      "events": 28,
       "expectEmpty": false,
       "source": "tag-sports"
     },
@@ -8637,7 +8603,7 @@
     {
       "name": "tag-near-northside",
       "type": "Aggregate",
-      "events": 129,
+      "events": 130,
       "expectEmpty": false,
       "source": "tag-near-northside"
     },
@@ -8770,7 +8736,7 @@
     {
       "name": "tag-nature",
       "type": "Aggregate",
-      "events": 110,
+      "events": 109,
       "expectEmpty": false,
       "source": "tag-nature"
     },
@@ -8857,6 +8823,13 @@
       "events": 5043,
       "expectEmpty": false,
       "source": "axelrad-beer-garden"
+    },
+    {
+      "name": "external-bad-astronaut-brewery",
+      "type": "External",
+      "events": 0,
+      "expectEmpty": false,
+      "source": "bad-astronaut-brewery"
     },
     {
       "name": "external-ccs-houston",
