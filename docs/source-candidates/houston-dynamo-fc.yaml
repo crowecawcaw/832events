@@ -1,0 +1,20 @@
+name: Houston Dynamo FC
+status: added
+platform: Ticketmaster
+url: https://www.houstondynamofc.com/
+tags:
+  - Sports
+  - Soccer
+  - Downtown
+firstSeen: 2026-07-22
+lastChecked: 2026-07-22
+pr: pending
+notes: MLS soccer team; 15 events (matches schedule). Ticketmaster Discovery API venue ID KovZpaFrke at Shell Energy Stadium. Successfully built and verified.
+impl:
+  venueId: "KovZpaFrke"
+  venueName: "Shell Energy Stadium"
+  observedEventCount: 15
+  geo:
+    lat: 29.7629
+    lng: -95.2413
+    label: "Shell Energy Stadium, 1 Dynamo St, Houston, TX 77054"
