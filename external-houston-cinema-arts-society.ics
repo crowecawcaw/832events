@@ -62,7 +62,7 @@ window._googlesitekitConsents = {"ad_personalization":"denied","ad_storage":"den
 </script>
 <!-- End Google tag (gtag.js) consent mode dataLayer added by Site Kit -->
 
-	<!-- This site is optimized with the Yoast SEO plugin v28.0 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<!-- This site is optimized with the Yoast SEO plugin v28.1 - https://yoast.com/product/yoast-seo-wordpress/ -->
 	<title>Events - HCAS</title>
 	<meta name="description" content="HCAS offers a wide variety of film screenings and related programming throughout the year." />
 	<link rel="canonical" href="https://www.cinemahtx.org/events/" />
@@ -150,7 +150,7 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 <script id="wp-api-fetch-js" src="https://www.cinemahtx.org/wp-includes/js/dist/api-fetch.min.js?ver=d7efe4dc1468d36c39b8"></script>
 <script id="wp-api-fetch-js-after">
 wp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( "https://www.cinemahtx.org/wp-json/" ) );
-wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "720c522238" );
+wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "2b7786d2b9" );
 wp.apiFetch.use( wp.apiFetch.nonceMiddleware );
 wp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );
 wp.apiFetch.nonceEndpoint = "https://www.cinemahtx.org/wp-admin/admin-ajax.php?action=rest-nonce";
@@ -205,6 +205,11 @@ var uc_block = {"title":"UpdraftCentral","description":"Manage your WordPress si
 //# sourceURL=uc-gutenberg-blocks-js-extra
 </script>
 <script id="uc-gutenberg-blocks-js" src="https://www.cinemahtx.org/wp-content/plugins/updraftcentral/js/uc-block.min.js?ver=0.8.32"></script>
+<script id="facebook-signal-js-extra">
+var facebookSignalConfig = {"cookieName":"wc_facebook_signals_state","ajaxUrl":"https://www.cinemahtx.org/wp-admin/admin-ajax.php","signalsAction":"fbpix_set_pixel_signals","signalsNonce":"2c452173ed"};
+//# sourceURL=facebook-signal-js-extra
+</script>
+<script id="facebook-signal-js" src="https://www.cinemahtx.org/wp-content/plugins/official-facebook-pixel/core/../js/facebook_signal.js?ver=5.2.1"></script>
 
 <!-- Google tag (gtag.js) snippet added by Site Kit -->
 <!-- Google Analytics snippet added by Site Kit -->
@@ -221,7 +226,7 @@ gtag("config", "AW-10880636276");
 //# sourceURL=google_gtagjs-js-after
 </script>
 <script id="ptb-js-extra">
-var ptb = {"url":"https://www.cinemahtx.org/wp-content/plugins/themify-ptb/public/","ver":"2.3.2","include":"https://www.cinemahtx.org/wp-includes/js/","is_themify":"1","jqmeter":"https://www.cinemahtx.org/wp-content/plugins/themify-ptb/public/js/jqmeter.min.js","ajaxurl":"https://www.cinemahtx.org/wp-admin/admin-ajax.php","comments_nonce":"b31feb4292","comments_error":"Could not post your comment. Please try again.","comments_title_one":"1 Comment","comments_title_many":"%s Comments","lng":"en","map_key":"AIzaSyBraps1yMt1naOCBOPl8BAzSW8FNq3lzZ0","modules":{"gallery":{"js":"https://www.cinemahtx.org/wp-content/plugins/themify-ptb/public/js/modules/gallery.js","selector":".ptb_extra_showcase, .ptb_extra_gallery_masonry .ptb_extra_gallery"},"map":{"js":"https://www.cinemahtx.org/wp-content/plugins/themify-ptb/public/js/modules/map.js","selector":".ptb_extra_map"},"progress_bar":{"js":"https://www.cinemahtx.org/wp-content/plugins/themify-ptb/public/js/modules/progress_bar.js","selector":".ptb_extra_progress_bar"},"rating":{"js":"https://www.cinemahtx.org/wp-content/plugins/themify-ptb/public/js/modules/rating.js","selector":".ptb_extra_rating"},"video":{"js":"https://www.cinemahtx.org/wp-content/plugins/themify-ptb/public/js/modules/video.js","selector":".ptb_extra_show_video"},"accordion":{"js":"https://www.cinemahtx.org/wp-content/plugins/themify-ptb/public/js/modules/accordion.js","selector":".ptb_extra_accordion"},"lightbox":{"js":"https://www.cinemahtx.org/wp-content/plugins/themify-ptb/public/js/modules/lightbox.js","selector":".ptb_lightbox, .ptb_extra_lightbox, .ptb_extra_video_lightbox"},"masonry":{"js":"https://www.cinemahtx.org/wp-content/plugins/themify-ptb/public/js/modules/masonry.js","selector":".ptb_masonry"},"post_filter":{"js":"https://www.cinemahtx.org/wp-content/plugins/themify-ptb/public/js/modules/post_filter.js","selector":".ptb-post-filter"},"comments":{"js":"https://www.cinemahtx.org/wp-content/plugins/themify-ptb/public/js/modules/comments.js","selector":".ptb_comments"}}};
+var ptb = {"url":"https://www.cinemahtx.org/wp-content/plugins/themify-ptb/public/","ver":"2.3.2","include":"https://www.cinemahtx.org/wp-includes/js/","is_themify":"1","jqmeter":"https://www.cinemahtx.org/wp-content/plugins/themify-ptb/public/js/jqmeter.min.js","ajaxurl":"https://www.cinemahtx.org/wp-admin/admin-ajax.php","comments_nonce":"a1d0dbaafa","comments_error":"Could not post your comment. Please try again.","comments_title_one":"1 Comment","comments_title_many":"%s Comments","lng":"en","map_key":"AIzaSyBraps1yMt1naOCBOPl8BAzSW8FNq3lzZ0","modules":{"gallery":{"js":"https://www.cinemahtx.org/wp-content/plugins/themify-ptb/public/js/modules/gallery.js","selector":".ptb_extra_showcase, .ptb_extra_gallery_masonry .ptb_extra_gallery"},"map":{"js":"https://www.cinemahtx.org/wp-content/plugins/themify-ptb/public/js/modules/map.js","selector":".ptb_extra_map"},"progress_bar":{"js":"https://www.cinemahtx.org/wp-content/plugins/themify-ptb/public/js/modules/progress_bar.js","selector":".ptb_extra_progress_bar"},"rating":{"js":"https://www.cinemahtx.org/wp-content/plugins/themify-ptb/public/js/modules/rating.js","selector":".ptb_extra_rating"},"video":{"js":"https://www.cinemahtx.org/wp-content/plugins/themify-ptb/public/js/modules/video.js","selector":".ptb_extra_show_video"},"accordion":{"js":"https://www.cinemahtx.org/wp-content/plugins/themify-ptb/public/js/modules/accordion.js","selector":".ptb_extra_accordion"},"lightbox":{"js":"https://www.cinemahtx.org/wp-content/plugins/themify-ptb/public/js/modules/lightbox.js","selector":".ptb_lightbox, .ptb_extra_lightbox, .ptb_extra_video_lightbox"},"masonry":{"js":"https://www.cinemahtx.org/wp-content/plugins/themify-ptb/public/js/modules/masonry.js","selector":".ptb_masonry"},"post_filter":{"js":"https://www.cinemahtx.org/wp-content/plugins/themify-ptb/public/js/modules/post_filter.js","selector":".ptb-post-filter"},"comments":{"js":"https://www.cinemahtx.org/wp-content/plugins/themify-ptb/public/js/modules/comments.js","selector":".ptb_comments"}}};
 //# sourceURL=ptb-js-extra
 </script>
 <script id="ptb-js" defer="defer" src="https://www.cinemahtx.org/wp-content/plugins/themify-ptb/public/js/ptb-public.js?ver=2.3.2"></script>
@@ -249,7 +254,19 @@ var ptb = {"url":"https://www.cinemahtx.org/wp-content/plugins/themify-ptb/publi
 		animation:themifyAnimatedBG 30000ms infinite alternate
 	}
 	</style>
-	<meta name="google-site-verification" content="a1cOpb704FBYY1hmoZZ4fCorPdiFY6g37miiSUQmxyU" />
+	
+<!-- Meta Pixel Code -->
+<script data-service="facebook" data-category="marketing" type="text/plain">
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+</script>
+<!-- End Meta Pixel Code -->
+<script type='text/javascript'>FacebookSignal.init({"held":false,"ajaxUrl":"https:\/\/www.cinemahtx.org\/wp-admin\/admin-ajax.php","releaseAction":"fbpix_release_signals","pixelId":"996066803265367","attribution":{},"capig":"1"});FacebookSignal.initPixel("996066803265367",{},{"agent":"wordpress_0_fbl4b-7.0.2-5.2.1","includeCapiIntegration":true});</script><script data-service="facebook" data-category="marketing" type="text/plain">
+    fbq('track', 'PageView', []);
+  </script><meta name="google-site-verification" content="a1cOpb704FBYY1hmoZZ4fCorPdiFY6g37miiSUQmxyU" />
 <!-- Google Tag Manager snippet added by Site Kit -->
 <script>
 			( function( w, d, s, l, i ) {
@@ -371,6 +388,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</noscript>
 		<!-- End Google Tag Manager (noscript) snippet added by Site Kit -->
 		<svg id="tf_svg" style="display:none"><defs><symbol id="tf-ti-arrow-top-right" viewBox="0 0 32 32"><path d="M30.13 1.88h-17v1.87h13.74L7.5 23.13l1.31 1.37L28.25 5.06v13.75h1.88V1.87z"/></symbol><symbol id="tf-ti-search" viewBox="0 0 32 32"><path d="m31.25 29.875-1.313 1.313-9.75-9.75a12.019 12.019 0 0 1-7.938 3c-6.75 0-12.25-5.5-12.25-12.25 0-3.25 1.25-6.375 3.563-8.688C5.875 1.25 8.937-.063 12.25-.063c6.75 0 12.25 5.5 12.25 12.25 0 3-1.125 5.813-3 7.938zm-19-7.312c5.688 0 10.313-4.688 10.313-10.375S17.938 1.813 12.25 1.813c-2.813 0-5.375 1.125-7.313 3.063-2 1.938-3.063 4.563-3.063 7.313 0 5.688 4.625 10.375 10.375 10.375z"/></symbol><symbol id="tf-fab-facebook" viewBox="0 0 17 32"><path d="M13.5 5.31q-1.13 0-1.78.38t-.85.94-.18 1.43V12H16l-.75 5.69h-4.56V32H4.8V17.7H0V12h4.8V7.5q0-3.56 2-5.53T12.13 0q2.68 0 4.37.25v5.06h-3z"/></symbol><symbol id="tf-fab-twitter" viewBox="0 0 32 32"><path d="M28.69 9.5q.06.25.06.81 0 3.32-1.25 6.6t-3.53 6-5.9 4.4-8 1.7Q4.56 29 0 26.05q.69.07 1.56.07 4.57 0 8.2-2.82-2.2 0-3.85-1.28T3.63 18.8q.62.07 1.19.07.87 0 1.75-.2-1.5-.3-2.7-1.24T2 15.16t-.69-2.9v-.13q1.38.8 2.94.87-2.94-2-2.94-5.5 0-1.75.94-3.31Q4.7 7.25 8.22 9.06t7.53 2q-.12-.75-.12-1.5 0-2.69 1.9-4.62T22.13 3Q25 3 26.94 5.06q2.25-.43 4.19-1.56-.75 2.31-2.88 3.63 1.88-.25 3.75-1.07-1.37 2-3.31 3.44z"/></symbol><symbol id="tf-fab-instagram" viewBox="0 0 32 32"><path d="M14 8.81q3 0 5.1 2.1t2.09 5.1-2.1 5.08T14 23.2t-5.1-2.1T6.82 16t2.1-5.1T14 8.82zm0 11.88q1.94 0 3.31-1.38T18.7 16t-1.38-3.31T14 11.3t-3.31 1.38T9.3 16t1.38 3.31T14 20.7zM23.13 8.5q0 .69-.47 1.19t-1.16.5-1.19-.5-.5-1.19.5-1.16 1.19-.46 1.16.46.46 1.16zm4.8 1.75Q28 11.94 28 16t-.06 5.75q-.19 3.81-2.28 5.9t-5.9 2.23Q18.05 30 14 30t-5.75-.13q-3.81-.18-5.87-2.25-.82-.75-1.32-1.75t-.72-1.93-.21-2.2Q0 20.07 0 16t.13-5.81Q.3 6.44 2.38 4.37q2.06-2.12 5.87-2.31Q9.94 2 14 2t5.75.06q3.81.19 5.9 2.28t2.29 5.9zm-3 14q.2-.5.32-1.28t.19-1.88.06-1.78V12.7l-.06-1.78-.19-1.88-.31-1.28q-.75-1.94-2.69-2.69-.5-.18-1.28-.31t-1.88-.19-1.75-.06H10.7l-1.78.06-1.88.19-1.28.31q-1.94.75-2.69 2.7-.18.5-.31 1.27t-.19 1.88-.06 1.75v6l.03 1.53.1 1.6.18 1.34.25 1.12q.82 1.94 2.69 2.69.5.19 1.28.31t1.88.19 1.75.06h6.65l1.78-.06 1.88-.19 1.28-.31q1.94-.81 2.69-2.69z"/></symbol><symbol id="tf-fab-youtube" viewBox="0 0 36 32"><path d="M34.38 7.75q.18.75.34 1.88t.22 2.21.1 2.03.02 1.57V16q0 5.63-.68 8.31-.32 1.07-1.13 1.88t-1.94 1.12q-1.19.32-4.5.47t-6.06.22H18q-10.7 0-13.31-.69-2.44-.68-3.07-3-.31-1.18-.47-3.28T.94 17.5V16q0-5.56.68-8.25.32-1.12 1.13-1.94T4.69 4.7q1.18-.31 4.5-.47T15.25 4H18q10.69 0 13.31.69 1.13.31 1.94 1.12t1.13 1.94zM14.5 21.13 23.44 16l-8.94-5.06v10.19z"/></symbol><symbol id="tf-fab-vimeo" viewBox="0 0 32 32"><path d="M25.19 2q1.19 0 2 .81t.81 2V27.2q0 1.19-.81 2t-2 .81H2.8q-1.19 0-2-.81t-.81-2V4.8q0-1.19.81-2t2-.81h22.4zm-1.63 9.31q.2-4-2.94-4.06-4.18-.12-5.68 4.75.94-.56 1.97-.28t.84 1.65q-.06 1.07-1.31 3.07-1.7 2.62-2.44 1.75-.75-.94-1.81-7.44-.57-3.5-2.88-3.25-.44.06-.94.31t-1.15.78-1.13.94l-1.4 1.22-1.38 1.19 1 1.25q1.31-.94 1.56-.94.75 0 1.32 1.47t1.62 5.34q.44 1.57.63 2.44 1.25 3.25 3 3.25 2.87 0 7-5.37 4-5.13 4.12-8.07z"/></symbol><symbol id="tf-fab-tiktok" viewBox="0 0 28 32"><path d="M28 13.12c-2.75 0-5.44-.85-7.67-2.45v11.17a10.16 10.16 0 1 1-8.77-10.07v5.62a4.66 4.66 0 1 0 3.27 4.45V0h5.5a7.63 7.63 0 0 0 3.48 6.4A7.57 7.57 0 0 0 28 7.66Zm0 0"/></symbol><symbol id="tf-fab-letterboxd" viewBox="0 0 640 512"><path d="M521.3 128C586.9 128 640 181.1 640 246.6s-53.1 118.6-118.7 118.6c-42.5 0-79.7-22.3-100.7-55.8c11.4-18.2 18-39.7 18-62.8s-6.6-44.6-18-62.8l0 0 .8-1.2c20.8-32.3 56.8-53.9 97.9-54.6l2 0zM320 128c42.5 0 79.7 22.3 100.7 55.8c-11.4 18.2-18 39.7-18 62.8s6.6 44.6 18 62.8l0 0-.8 1.2c-20.8 32.3-56.8 53.9-97.9 54.6l-2 0c-42.5 0-79.7-22.3-100.7-55.8c11.4-18.2 18-39.7 18-62.8s-6.6-44.6-18-62.8l0 0 .8-1.2c20.8-32.3 56.8-53.9 97.9-54.6l2 0zm-201.3 0c42.5 0 79.7 22.3 100.7 55.8c-11.4 18.2-18 39.7-18 62.8s6.6 44.6 18 62.8l0 0-.8 1.2c-20.8 32.3-56.8 53.9-97.9 54.6l-2 0C53.1 365.1 0 312.1 0 246.6S53.1 128 118.7 128z"/></symbol><style id="tf_fonts_style">.tf_fa.tf-fab-youtube{width:1.125em}</style></defs></svg><script> </script><noscript><iframe data-no-script src="https://www.googletagmanager.com/ns.html?id=GTM-G-5TNK6VJGLM" height="0" width="0" style="display:none"></iframe></noscript><script async data-no-optimize="1" data-noptimize="1" data-cfasync="false" data-ga="G-5TNK6VJGLM" src="data:text/javascript;base64,KGE9PntmdW5jdGlvbiBlKCl7YS5kYXRhTGF5ZXIucHVzaChhcmd1bWVudHMpfWEuZGF0YUxheWVyPWEuZGF0YUxheWVyfHxbXSxlKCJqcyIsbmV3IERhdGUpLGUoImNvbmZpZyIsZG9jdW1lbnQuY3VycmVudFNjcmlwdC5kYXRhc2V0LmdhKSxlKCJldmVudCIsInBhZ2VfdmlldyIpfSkod2luZG93KTs="></script><script type="text/plain" data-service="google-analytics" data-category="statistics" async data-no-optimize="1" data-noptimize="1" data-cfasync="false" data-cmplz-src="https://www.googletagmanager.com/gtag/js?id=G-5TNK6VJGLM"></script>
+<!-- Meta Pixel Code -->
+<noscript>
+<div class="cmplz-placeholder-parent"><img class="cmplz-placeholder-element cmplz-image" data-category="marketing" data-service="general" data-src-cmplz="https://www.facebook.com/tr?id=996066803265367&amp;ev=PageView&amp;noscript=1" height="1" width="1" style="display:none" alt="fbpx"
+ data-no-script src="https://www.cinemahtx.org/wp-content/plugins/complianz-gdpr/assets/images/placeholders/default-minimal.jpg"  /></div>
+</noscript>
+<!-- End Meta Pixel Code -->
+
 <div id="pagewrap" class="hfeed site">
 
 			<div id="headerwrap" >
@@ -612,7 +636,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 				<!-- Submit Button -->
 				<button type="submit" class="yikes-easy-mc-submit-button yikes-easy-mc-submit-button-3 btn btn-primary "> <span class="yikes-mailchimp-submit-button-span-text">Submit</span></button>				<!-- Nonce Security Check -->
-				<input type="hidden" id="yikes_easy_mc_new_subscriber_3" name="yikes_easy_mc_new_subscriber" value="8812a9c987">
+				<input type="hidden" id="yikes_easy_mc_new_subscriber_3" name="yikes_easy_mc_new_subscriber" value="114a406466">
 				<input type="hidden" name="_wp_http_referer" value="/events/?ical=1" />
 			</form>
 			<!-- Mailchimp Form generated by Easy Forms for Mailchimp v6.9.0 (https://wordpress.org/plugins/yikes-inc-easy-mailchimp-extender/) -->
@@ -670,7 +694,61 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	</div><!-- /#footerwrap -->
 </div><!-- /#pagewrap -->
 <!-- wp_footer -->
-<script type="speculationrules">
+        <!-- Meta Pixel Event Code -->
+        <script type='text/javascript'>
+        (function () {
+            function runPixelCode( response ) {
+                if ( ! response || ! response.data || ! response.data.fb_pxl_code ) {
+                    return;
+                }
+
+                try {
+                    new Function( response.data.fb_pxl_code )();
+                } catch ( e ) {
+                    console && console.warn
+                        && console.warn( 'Meta Pixel response parsing failed. Please check if your pixel is connected.', e );
+                }
+            }
+
+            var radio = window.nfRadio
+                || ( window.Backbone && window.Backbone.Radio );
+            if ( radio && radio.channel ) {
+                radio.channel( 'forms' ).on( 'submit:response', runPixelCode );
+            }
+
+            if ( window.jQuery ) {
+                window.jQuery( document ).on(
+                    'nfFormSubmitResponse',
+                    function ( event, data ) {
+                        if ( data && data.response ) {
+                            runPixelCode( data.response );
+                        }
+                    }
+                );
+            }
+        })();
+        </script>
+        <!-- End Meta Pixel Event Code -->
+                <!-- Meta Pixel Event Code -->
+        <script type='text/javascript'>
+        (function ( $ ) {
+            if ( ! $ || typeof document === 'undefined' ) {
+                return;
+            }
+            // WPForms triggers this jQuery event and passes the AJAX response object.
+            $( document ).on( 'wpformsAjaxSubmitSuccess', function ( event, data ) {
+                if ( data && data.data && data.data.fb_pxl_code ) {
+                    try {
+                        new Function( data.data.fb_pxl_code )();
+                    } catch ( e ) {
+                        console && console.warn && console.warn( 'Meta Pixel eval failed', e );
+                    }
+                }
+            } );
+        })( window.jQuery );
+        </script>
+        <!-- End Meta Pixel Event Code -->
+        <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/themify-ultra-child/*","/wp-content/themes/themify-ultra/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
 
@@ -832,10 +910,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div><script id="wp-importmap" type="importmap">
 {"imports":{"@wordpress/route":"https://www.cinemahtx.org/wp-includes/js/dist/script-modules/route/index.min.js?ver=c5843b6c5e84b352f43b"}}
 </script>
-            <!--googleoff:all-->
+    <!-- Meta Pixel Event Code -->
+    <script type='text/javascript'>
+        document.addEventListener( 'wpcf7mailsent', function( event ) {
+        if( "fb_pxl_code" in event.detail.apiResponse){
+            eval(event.detail.apiResponse.fb_pxl_code);
+        }
+        }, false );
+    </script>
+    <!-- End Meta Pixel Event Code -->
+        <div id="fb-pxl-ajax-code"></div>            <!--googleoff:all-->
             <!--noindex-->
             <!--noptimize-->
-            <script id="tf_vars" data-no-optimize="1" data-noptimize="1" data-no-minify="1" data-cfasync="false" defer="defer" src="data:text/javascript;base64,dmFyIHRoZW1pZnlTY3JpcHQgPSB7ImhlYWRlclR5cGUiOiJoZWFkZXItaG9yaXpvbnRhbCIsInN0aWNreV9oZWFkZXIiOiIiLCJwYWdlTG9hZGVyRWZmZWN0IjoiIiwiaW5maW5pdGVFbmFibGUiOiIwIn07CnZhciB0YkxvY2FsU2NyaXB0ID0geyJzY3JvbGxIaWdobGlnaHQiOnsic3BlZWQiOjkwMC4wMX0sImFkZG9ucyI6eyJzdmQiOnsic2VsZWN0b3IiOiJbZGF0YS10Yl9zbGlkZXJfdmlkZW9zXSIsImpzIjoiaHR0cHM6Ly93d3cuY2luZW1haHR4Lm9yZy93cC1jb250ZW50L3BsdWdpbnMvYnVpbGRlci1iZy12aWRlby1zbGlkZXIvYXNzZXRzL3NjcmlwdHMuanMiLCJ2ZXIiOiIzLjUuNCJ9fX07CnZhciB0aGVtaWZ5X3ZhcnMgPSB7Im1lbnVfcG9pbnQiOiIxMjAwIiwiYnJlYWtwb2ludHMiOnsidGFibGV0X2xhbmRzY2FwZSI6Wzc2OSwxMDI0XSwidGFibGV0IjpbNDgxLDc2OF0sIm1vYmlsZSI6NDgwfSwid3AiOiI3LjAuMiIsImFqYXhfdXJsIjoiaHR0cHM6Ly93d3cuY2luZW1haHR4Lm9yZy93cC1hZG1pbi9hZG1pbi1hamF4LnBocCIsIm5vbmNlIjoiZWYyMjc2YzJhYyIsIm1hcF9rZXkiOiJBSXphU3lCcmFwczF5TXQxbmFPQ0JPUGw4QkF6U1c4Rk5xM2x6WjAiLCJhenVyZV9rZXkiOiIiLCJvc21fdGlsZV91cmwiOiJodHRwczovL3tzfS5iYXNlbWFwcy5jYXJ0b2Nkbi5jb20vcmFzdGVydGlsZXMvdm95YWdlci97en0ve3h9L3t5fXtyfS5wbmciLCJvc21fdGlsZV9hdHRyaWJ1dGlvbiI6Ilx1MDBhOSA8YSBocmVmPVwiaHR0cHM6Ly93d3cub3BlbnN0cmVldG1hcC5vcmcvY29weXJpZ2h0XCI+T3BlblN0cmVldE1hcDwvYT4gY29udHJpYnV0b3JzIFx1MDBhOSA8YSBocmVmPVwiaHR0cHM6Ly9jYXJ0by5jb20vYXR0cmlidXRpb25zXCI+Q0FSVE88L2E+IiwibWVudV90b29sdGlwcyI6W10sInBsdWdpbl91cmwiOiJodHRwczovL3d3dy5jaW5lbWFodHgub3JnL3dwLWNvbnRlbnQvcGx1Z2lucyIsImNvbnRlbnRfdXJsIjoiaHR0cHM6Ly93d3cuY2luZW1haHR4Lm9yZy93cC1jb250ZW50IiwiaW5jbHVkZXNfdXJsIjoiaHR0cHM6Ly93d3cuY2luZW1haHR4Lm9yZy93cC1pbmNsdWRlcy8iLCJsYXp5X3RocmVzaG9sZCI6IjMwMCIsInRoZW1lX3YiOiI4LjIuNSIsImVtYWlsU3ViIjoiQ2hlY2sgdGhpcyBvdXQhIiwibm9wIjoiQ2hlY2sgdGhpcyBvdXQhIiwibGlnaHRib3giOnsiaTE4biI6eyJ0Q291bnRlciI6IiVjdXJyJSBvZiAldG90YWwlIn19LCJkb25lIjp7InRmX21lZ2FtZW51Ijp0cnVlLCJ0Yl90ZXh0Ijp0cnVlLCJ0Yl9zdHlsZSI6dHJ1ZSwidGZfc2VhcmNoX2Zvcm0iOnRydWUsInRmX3RoZW1lX3dpZGdldF90ZXh0Ijp0cnVlLCJ0Zl90aGVtZV9zb2NpYWxfbGlua3MiOnRydWUsInRmX3RoZW1lX3dpZGdldF90aGVtaWZ5X3NvY2lhbF9saW5rcyI6dHJ1ZX19Ow=="></script>
+            <script id="tf_vars" data-no-optimize="1" data-noptimize="1" data-no-minify="1" data-cfasync="false" defer="defer" src="data:text/javascript;base64,dmFyIHRoZW1pZnlTY3JpcHQgPSB7ImhlYWRlclR5cGUiOiJoZWFkZXItaG9yaXpvbnRhbCIsInN0aWNreV9oZWFkZXIiOiIiLCJwYWdlTG9hZGVyRWZmZWN0IjoiIiwiaW5maW5pdGVFbmFibGUiOiIwIn07CnZhciB0YkxvY2FsU2NyaXB0ID0geyJzY3JvbGxIaWdobGlnaHQiOnsic3BlZWQiOjkwMC4wMX0sImFkZG9ucyI6eyJzdmQiOnsic2VsZWN0b3IiOiJbZGF0YS10Yl9zbGlkZXJfdmlkZW9zXSIsImpzIjoiaHR0cHM6Ly93d3cuY2luZW1haHR4Lm9yZy93cC1jb250ZW50L3BsdWdpbnMvYnVpbGRlci1iZy12aWRlby1zbGlkZXIvYXNzZXRzL3NjcmlwdHMuanMiLCJ2ZXIiOiIzLjUuNCJ9fX07CnZhciB0aGVtaWZ5X3ZhcnMgPSB7Im1lbnVfcG9pbnQiOiIxMjAwIiwiYnJlYWtwb2ludHMiOnsidGFibGV0X2xhbmRzY2FwZSI6Wzc2OSwxMDI0XSwidGFibGV0IjpbNDgxLDc2OF0sIm1vYmlsZSI6NDgwfSwid3AiOiI3LjAuMiIsImFqYXhfdXJsIjoiaHR0cHM6Ly93d3cuY2luZW1haHR4Lm9yZy93cC1hZG1pbi9hZG1pbi1hamF4LnBocCIsIm5vbmNlIjoiYjNjZWE4ODI0NiIsIm1hcF9rZXkiOiJBSXphU3lCcmFwczF5TXQxbmFPQ0JPUGw4QkF6U1c4Rk5xM2x6WjAiLCJhenVyZV9rZXkiOiIiLCJvc21fdGlsZV91cmwiOiJodHRwczovL3tzfS5iYXNlbWFwcy5jYXJ0b2Nkbi5jb20vcmFzdGVydGlsZXMvdm95YWdlci97en0ve3h9L3t5fXtyfS5wbmciLCJvc21fdGlsZV9hdHRyaWJ1dGlvbiI6Ilx1MDBhOSA8YSBocmVmPVwiaHR0cHM6Ly93d3cub3BlbnN0cmVldG1hcC5vcmcvY29weXJpZ2h0XCI+T3BlblN0cmVldE1hcDwvYT4gY29udHJpYnV0b3JzIFx1MDBhOSA8YSBocmVmPVwiaHR0cHM6Ly9jYXJ0by5jb20vYXR0cmlidXRpb25zXCI+Q0FSVE88L2E+IiwibWVudV90b29sdGlwcyI6W10sInBsdWdpbl91cmwiOiJodHRwczovL3d3dy5jaW5lbWFodHgub3JnL3dwLWNvbnRlbnQvcGx1Z2lucyIsImNvbnRlbnRfdXJsIjoiaHR0cHM6Ly93d3cuY2luZW1haHR4Lm9yZy93cC1jb250ZW50IiwiaW5jbHVkZXNfdXJsIjoiaHR0cHM6Ly93d3cuY2luZW1haHR4Lm9yZy93cC1pbmNsdWRlcy8iLCJsYXp5X3RocmVzaG9sZCI6IjMwMCIsInRoZW1lX3YiOiI4LjIuNSIsImVtYWlsU3ViIjoiQ2hlY2sgdGhpcyBvdXQhIiwibm9wIjoiQ2hlY2sgdGhpcyBvdXQhIiwibGlnaHRib3giOnsiaTE4biI6eyJ0Q291bnRlciI6IiVjdXJyJSBvZiAldG90YWwlIn19LCJkb25lIjp7InRmX21lZ2FtZW51Ijp0cnVlLCJ0Yl90ZXh0Ijp0cnVlLCJ0Yl9zdHlsZSI6dHJ1ZSwidGZfc2VhcmNoX2Zvcm0iOnRydWUsInRmX3RoZW1lX3dpZGdldF90ZXh0Ijp0cnVlLCJ0Zl90aGVtZV9zb2NpYWxfbGlua3MiOnRydWUsInRmX3RoZW1lX3dpZGdldF90aGVtaWZ5X3NvY2lhbF9saW5rcyI6dHJ1ZX19Ow=="></script>
             <!--/noptimize-->
             <!--/noindex-->
             <!--googleon:all-->
@@ -843,7 +930,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script id="themify-main-script-js" defer="defer" data-v="8.5.3" data-pl-href="https://www.cinemahtx.org/wp-content/plugins/fake.css" data-no-optimize="1" data-noptimize="1" src="https://www.cinemahtx.org/wp-content/themes/themify-ultra/themify/js/main.js?ver=8.5.3"></script>
 <script id="select2-js" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.min.js?ver=7.0.2"></script>
 <script id="hcas-events-js-extra">
-var WPD_CRM_Properties = {"ajaxurl":"https://www.cinemahtx.org/wp-admin/admin-ajax.php","nonce":"5e4e6d1e45"};
+var WPD_CRM_Properties = {"ajaxurl":"https://www.cinemahtx.org/wp-admin/admin-ajax.php","nonce":"6254b10cac"};
 //# sourceURL=hcas-events-js-extra
 </script>
 <script id="hcas-events-js" src="https://www.cinemahtx.org/wp-content/plugins/hcas-events/assets/js/hcas-events.js?ver=7.0.2"></script>
@@ -854,12 +941,12 @@ var consent_api = {"consent_type":"optout","waitfor_consent_hook":"","cookie_exp
 </script>
 <script id="wp-consent-api-js" src="https://www.cinemahtx.org/wp-content/plugins/wp-consent-api/assets/js/wp-consent-api.min.js?ver=2.0.1"></script>
 <script id="cmplz-cookiebanner-js-extra">
-var complianz = {"prefix":"cmplz_","user_banner_id":"2","set_cookies":[],"block_ajax_content":"","banner_version":"11","version":"7.5.0","store_consent":"","do_not_track_enabled":"","consenttype":"optout","region":"us","geoip":"","dismiss_timeout":"","disable_cookiebanner":"","soft_cookiewall":"","dismiss_on_scroll":"","cookie_expiry":"365","url":"https://www.cinemahtx.org/wp-json/complianz/v1/","locale":"lang=en&locale=en_US","set_cookies_on_root":"","cookie_domain":"","current_policy_id":"29","cookie_path":"/","categories":{"statistics":"statistics","marketing":"marketing"},"tcf_active":"","placeholdertext":"Click to accept {category} cookies and enable this content","css_file":"https://www.cinemahtx.org/wp-content/uploads/complianz/css/banner-{banner_id}-{type}.css?v=11","page_links":{"us":{"cookie-statement":{"title":"","url":"https://www.cinemahtx.org/oscar-ready-buzzy-biopic-about-jackie-kennedy-will-be-featured-at-houston-cinema-arts-festival/"},"privacy-statement":{"title":"Privacy Statement","url":"https://www.cinemahtx.org/privacy/"},"impressum":{"title":"Impressum","url":"https://www.cinemahtx.org/contact/"}},"eu":{"impressum":{"title":"Impressum","url":"https://www.cinemahtx.org/contact/"}},"uk":{"impressum":{"title":"Impressum","url":"https://www.cinemahtx.org/contact/"}},"ca":{"impressum":{"title":"Impressum","url":"https://www.cinemahtx.org/contact/"}},"au":{"impressum":{"title":"Impressum","url":"https://www.cinemahtx.org/contact/"}},"za":{"impressum":{"title":"Impressum","url":"https://www.cinemahtx.org/contact/"}},"br":{"impressum":{"title":"Impressum","url":"https://www.cinemahtx.org/contact/"}}},"tm_categories":"","forceEnableStats":"","preview":"","clean_cookies":"","aria_label":"Click to accept {category} cookies and enable this content"};
+var complianz = {"prefix":"cmplz_","user_banner_id":"2","set_cookies":[],"block_ajax_content":"","banner_version":"12","version":"7.5.0","store_consent":"","do_not_track_enabled":"","consenttype":"optout","region":"us","geoip":"","dismiss_timeout":"","disable_cookiebanner":"","soft_cookiewall":"","dismiss_on_scroll":"","cookie_expiry":"365","url":"https://www.cinemahtx.org/wp-json/complianz/v1/","locale":"lang=en&locale=en_US","set_cookies_on_root":"","cookie_domain":"","current_policy_id":"29","cookie_path":"/","categories":{"statistics":"statistics","marketing":"marketing"},"tcf_active":"","placeholdertext":"Click to accept {category} cookies and enable this content","css_file":"https://www.cinemahtx.org/wp-content/uploads/complianz/css/banner-{banner_id}-{type}.css?v=12","page_links":{"us":{"cookie-statement":{"title":"","url":"https://www.cinemahtx.org/events/"},"privacy-statement":{"title":"Privacy Statement","url":"https://www.cinemahtx.org/privacy/"},"impressum":{"title":"Impressum","url":"https://www.cinemahtx.org/contact/"}},"eu":{"impressum":{"title":"Impressum","url":"https://www.cinemahtx.org/contact/"}},"uk":{"impressum":{"title":"Impressum","url":"https://www.cinemahtx.org/contact/"}},"ca":{"impressum":{"title":"Impressum","url":"https://www.cinemahtx.org/contact/"}},"au":{"impressum":{"title":"Impressum","url":"https://www.cinemahtx.org/contact/"}},"za":{"impressum":{"title":"Impressum","url":"https://www.cinemahtx.org/contact/"}},"br":{"impressum":{"title":"Impressum","url":"https://www.cinemahtx.org/contact/"}}},"tm_categories":"","forceEnableStats":"","preview":"","clean_cookies":"","aria_label":"Click to accept {category} cookies and enable this content"};
 //# sourceURL=cmplz-cookiebanner-js-extra
 </script>
 <script defer id="cmplz-cookiebanner-js" src="https://www.cinemahtx.org/wp-content/plugins/complianz-gdpr/cookiebanner/js/complianz.min.js?ver=1782495591"></script>
 <script id="yikes-easy-mc-ajax-js-extra">
-var yikes_mailchimp_ajax = {"ajax_url":"https://www.cinemahtx.org/wp-admin/admin-ajax.php","page_data":"9064","interest_group_checkbox_error":"This field is required.","preloader_url":"https://www.cinemahtx.org/wp-content/plugins/yikes-inc-easy-mailchimp-extender/includes/images/ripple.svg","loading_dots":"https://www.cinemahtx.org/wp-content/plugins/yikes-inc-easy-mailchimp-extender/includes/images/bars.svg","ajax_security_nonce":"625bdfdc00","feedback_message_placement":"before"};
+var yikes_mailchimp_ajax = {"ajax_url":"https://www.cinemahtx.org/wp-admin/admin-ajax.php","page_data":"9064","interest_group_checkbox_error":"This field is required.","preloader_url":"https://www.cinemahtx.org/wp-content/plugins/yikes-inc-easy-mailchimp-extender/includes/images/ripple.svg","loading_dots":"https://www.cinemahtx.org/wp-content/plugins/yikes-inc-easy-mailchimp-extender/includes/images/bars.svg","ajax_security_nonce":"6c7aa6f808","feedback_message_placement":"before"};
 //# sourceURL=yikes-easy-mc-ajax-js-extra
 </script>
 <script id="yikes-easy-mc-ajax-js" src="https://www.cinemahtx.org/wp-content/plugins/yikes-inc-easy-mailchimp-extender/public/js/yikes-mc-ajax-forms.min.js?ver=6.9.0"></script>

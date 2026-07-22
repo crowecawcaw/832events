@@ -49,45 +49,6 @@ DTSTART:20271107T060000
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VTIMEZONE
-TZID:America/Los_Angeles
-BEGIN:DAYLIGHT
-TZOFFSETFROM:-0800
-TZOFFSETTO:-0700
-TZNAME:PDT
-DTSTART:20250309T100000
-END:DAYLIGHT
-BEGIN:STANDARD
-TZOFFSETFROM:-0700
-TZOFFSETTO:-0800
-TZNAME:PST
-DTSTART:20251102T090000
-END:STANDARD
-BEGIN:DAYLIGHT
-TZOFFSETFROM:-0800
-TZOFFSETTO:-0700
-TZNAME:PDT
-DTSTART:20260308T100000
-END:DAYLIGHT
-BEGIN:STANDARD
-TZOFFSETFROM:-0700
-TZOFFSETTO:-0800
-TZNAME:PST
-DTSTART:20261101T090000
-END:STANDARD
-BEGIN:DAYLIGHT
-TZOFFSETFROM:-0800
-TZOFFSETTO:-0700
-TZNAME:PDT
-DTSTART:20270314T100000
-END:DAYLIGHT
-BEGIN:STANDARD
-TZOFFSETFROM:-0700
-TZOFFSETTO:-0800
-TZNAME:PST
-DTSTART:20271107T090000
-END:STANDARD
-END:VTIMEZONE
-BEGIN:VTIMEZONE
 TZID:America/Detroit
 BEGIN:DAYLIGHT
 TZOFFSETFROM:-0500
@@ -124,6 +85,45 @@ TZOFFSETFROM:-0400
 TZOFFSETTO:-0500
 TZNAME:EST
 DTSTART:20271107T060000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:20250309T100000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:20251102T090000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:20260308T100000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:20261101T090000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:20270314T100000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:20271107T090000
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VTIMEZONE
@@ -165,143 +165,6 @@ TZNAME:CST
 DTSTART:20271107T070000
 END:STANDARD
 END:VTIMEZONE
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20260720T190000
-DTEND;TZID=America/New_York:20260720T210000
-DTSTAMP:20260602T200052Z
-CREATED:20260602T194345Z
-LAST-MODIFIED:20260602T200052Z
-UID:10005271-1784574000-1784581200@comedycalendar.com
-SUMMARY:Comedy Cellar Las Vegas Showcase (Early)
-DESCRIPTION:This post contains affiliate links. We may earn a commission at no extra cost to you. \n\n  \n     Official Tickets\n   \n  \n     Resale Tickets\n  \n\nComedy Cellar Las Vegas brings one of the most legendary names in stand-up comedy to the heart of Las Vegas. Located inside the Rio Hotel & Casino\, this intimate comedy club is the West Coast home of New York City’s world-famous Comedy Cellar\, the venue that helped launch the careers of comedy icons including Dave Chappelle\, Chris Rock\, Jon Stewart\, Ray Romano\, Amy Schumer\, Aziz Ansari\, and countless others. \nUnlike traditional comedy shows featuring a single headliner\, Comedy Cellar presents a carefully curated lineup of professional comedians every night. Audiences can expect multiple performers during each show\, featuring a mix of nationally touring headliners\, television favorites\, Comedy Central veterans\, Netflix performers\, and rising stars from around the world. \nNo two shows are exactly alike\, making every visit a unique experience. Surprise drop-in appearances from major comedians performing elsewhere in Las Vegas have become part of the club’s reputation\, giving audiences the chance to see comedy superstars in an intimate setting. \nEvent Details\nVenue: Comedy Cellar Las Vegas at Rio Hotel & Casino\nLocation: 3700 W Flamingo Rd\, Las Vegas\, NV 89103\nShow Schedule: Nightly performances throughout the year\nAge Requirement: Recommended for audiences 18+ due to mature comedy content \nAbout the Venue\nOpened in 2018\, Comedy Cellar Las Vegas was designed to recreate the atmosphere and energy of the original Greenwich Village club that has become one of the most respected comedy venues in the world. The 300-seat showroom offers excellent sightlines and an intimate setting that allows audiences to experience stand-up comedy exactly as it was meant to be seen: up close and personal. \nThe venue combines the excitement of a Las Vegas night out with the authentic feel of a classic New York comedy club. Guests can enjoy a comfortable showroom environment while watching some of the best comedians working today perform in a setting that encourages spontaneity\, crowd interaction\, and unforgettable moments. \nConveniently located inside the Rio Hotel & Casino just minutes from the Las Vegas Strip\, the venue offers easy access for both tourists and local comedy fans. \nWhat to Expect\nExpect a fast-paced evening featuring multiple comedians performing throughout the show. The Comedy Cellar is known for showcasing a wide variety of comedic styles\, from observational humor and storytelling to sharp social commentary\, crowd work\, and cutting-edge stand-up. \nWhether you’re discovering a future comedy star or watching a seasoned veteran perfect their craft\, every show delivers the authentic comedy club experience that has made the Comedy Cellar one of the most respected brands in stand-up comedy. \nFor comedy fans visiting Las Vegas\, Comedy Cellar is widely considered one of the best places in the city to experience live stand-up comedy any night of the week.
-URL:https://comedycalendar.com/event/comedy-cellar-las-vegas-showcase-early/2026-07-20/
-LOCATION:Comedy Cellar Las Vegas at Rio Hotel & Casino\, 3700 W Flamingo Rd\, Las Vegas\, NV\, 89103\, United States
-ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fc4/a6703ea9-a17b-4211-b9dc-7308aa0b2fc4_RETINA_PORTRAIT_16_9.jpg
-GEO:36.1172452;-115.1861279
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Comedy Cellar Las Vegas at Rio Hotel & Casino 3700 W Flamingo Rd Las Vegas NV 89103 United States;X-APPLE-RADIUS=500;X-TITLE=3700 W Flamingo Rd:geo:-115.1861279,36.1172452
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Los_Angeles:20260720T203000
-DTEND;TZID=America/Los_Angeles:20260720T223000
-DTSTAMP:20260604T193252Z
-CREATED:20260602T190000Z
-LAST-MODIFIED:20260604T193252Z
-UID:10006015-1784579400-1784586600@comedycalendar.com
-SUMMARY:Mark Schiff LIVE at Laugh Factory Las Vegas
-DESCRIPTION:Official Tickets \nAbout the Performer\nMark Schiff is a veteran stand-up comedian with over four decades of experience making audiences laugh across the country. A close friend and frequent collaborator of Jerry Seinfeld\, Mark is widely respected in the comedy world for his clean\, clever\, and deeply relatable humor. \nHis comedy draws from real life — family\, relationships\, aging\, and the absurdities of everyday existence — delivered with the kind of warmth and precision that only a true comedy craftsman can achieve. Mark has appeared on The Tonight Show\, Late Night with David Letterman\, and numerous other television programs\, and has released multiple acclaimed stand-up specials. \nSeeing Mark Schiff live at the Laugh Factory in Las Vegas is a treat for fans of classic\, well-crafted stand-up comedy. His shows are consistently funny\, heartfelt\, and leave audiences feeling genuinely uplifted. \nEvent Details\n\nDate: Monday\, July 20\, 2026 (runs through July 22)\nTime: 8:30 PM\nVenue: Laugh Factory at Horseshoe Las Vegas\, 3645 S Las Vegas Blvd\, Las Vegas\, NV 89109\nShow Duration: Approximately 90 minutes\n\nAbout the Venue\nThe Laugh Factory at Horseshoe Las Vegas is one of the premier comedy destinations on the Las Vegas Strip. Located inside the iconic Horseshoe Hotel and Casino at 3645 S Las Vegas Blvd\, this club is part of the legendary Laugh Factory brand that has been a cornerstone of American stand-up comedy for decades. \nThe venue features tiered seating with excellent sightlines\, a full-service bar\, and an intimate atmosphere that puts you close to the action. The Laugh Factory’s rotating roster of headliners ensures there’s always something new and exciting to see\, making it a must-visit for comedy fans on the Strip. \nParking is available at the Horseshoe Las Vegas parking garage. The venue is conveniently located on the Strip and easily accessible from surrounding hotels and attractions. \nWhat to Expect\nMark Schiff’s Las Vegas engagement at the Laugh Factory is a multi-night stand-up showcase featuring his signature blend of clean\, observational humor and personal storytelling. Expect an evening of genuine laughs delivered by one of comedy’s most respected veterans. \nThe show runs approximately 90 minutes and may include an opening act. Mark’s warm stage presence and masterful timing create an atmosphere that feels both intimate and electric. This is the kind of comedy show that reminds you why live stand-up is one of the greatest forms of entertainment. \nTicket Information\nPrice Range: $30 – $55 (fees may apply) \nTickets are available through Ticketmaster (official). Don’t miss your chance to see a comedy legend live in Las Vegas! \nOfficial Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
-URL:https://comedycalendar.com/event/mark-schiff-live-at-laugh-factory-las-vegas/
-LOCATION:Laugh Factory at Horseshoe Las Vegas\, 3645 S Las Vegas Blvd\, Las Vegas\, NV\, 89109\, USA
-ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/06/7ed77c01-a1f5-4d0d-9243-cbc0a49daafa_CUSTOM-q7Gv63.jpg
-GEO:36.112302;-115.1674427
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Laugh Factory at Horseshoe Las Vegas 3645 S Las Vegas Blvd Las Vegas NV 89109 USA;X-APPLE-RADIUS=500;X-TITLE=3645 S Las Vegas Blvd:geo:-115.1674427,36.112302
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20260720T210000
-DTEND;TZID=America/New_York:20260720T230000
-DTSTAMP:20260714T165713Z
-CREATED:20260623T165800Z
-LAST-MODIFIED:20260714T165713Z
-UID:10006092-1784581200-1784588400@comedycalendar.com
-SUMMARY:Thank You Miami Stand Up Comedy Show (Monday)
-DESCRIPTION:Laugh like a local Mondays:  craft beers\, food menu\, seating reservations\, and Buy-One-Get-One-Free drinks on select beers when you RSVP.\n\n\n\n\nYour Secret Monday Comedy Hangout.\nBecause Mondays can also be a part of the weekend… \nSkip the lonely nightlife\, skip the tourist traps — this is the comedy night locals who love to laugh are in the know about. \nCraft beers on tap rotation. \nA full kitchen serving the late night munchies. \nAnd Miami‘s funniest comics perform in a lively little room where everyone’s in on the joke. \nIt’s the reset button for your week: laughter\, connection\, and the thrill of discovering something different in Miami. \nTickets & Seating \n🎟 First Come\, First Serve \n\nFree entry\nSeating not guaranteed (show up early to claim a spot)\n\n🍻 Guaranteed Preferred Seating + BOGO Drinks — $25 \n\nGuaranteed main-area seating during showtime\nBuy-One-Get-One-Free drinks wristband\nNo seat hunting\, no stress\n\n👕 Guaranteed Preferred Seating + BOGO Drinks + T-Shirt — $35 \n\nEverything above\, plus a limited-edition Miami Comedy T-shirt\nLook like you’ve been here since day one\, even if it’s your first Monday\n\n(Because space is limited\, seated guests are asked to order at least one drink or menu item. Easy.) \nLooking for a Promo Code? \nText “MIAMI” to (786) 610-5571 \nThe Vibe \nDate night that actually feels like a date. \nAfter work hang that does not end past midnight (unless you want it to). \nCelebrations without the bottle sparklers. \nYou can talk at your table. You can hear the jokes. You leave smiling. \n\n\n\nCelebrate 10 Years of Laughter with the Miami Comedy Anniversary Shirt!\nCelebrate a decade of laughs with the Miami Comedy 10-Year Anniversary Shirt! This exclusive\, limited-edition design marks a milestone in our journey of bringing joy to Miami. Every purchase supports the Miami Comedy community\, helping us grow and continue spreading laughter across the city. \nThis collectible shirt is one-of-a-kind—once it’s sold out\, it’s gone forever. Don’t miss your chance to own a stylish piece of Miami comedy history and be part of something truly special. Grab yours now and celebrate 10 years of laughs with us! \nSizes S – XL available. \n\n\nMedia\n\nWatch all our videos about Thank You Miami Comedy Night: https://youtube.com/playlist?list=PLWygUR7TT1rBo8XBgJ9aP2M4ZkLc8uAbd\nSee all the fun we’re having on this show! Photos available here: https://miamicomedy.com/tag/thank-you-miami+photography/\n \n\n\nThank You Miami Bar and Miami Comedy get together to bring you a weekly comedy and drink and dining event. Featuring local working comedians and special guest performances! \nAbout Thank You Miami Beer House and Cocina.\nThank You Miami Beer House and Cocina is the newest hip bar located in Flagler and 17th. This bar gives thanks to the city by offering a large selection of beers and food as well as LIVE entertainment. \n\n\n\nAbout Miami Comedy\nMiamiComedy.com has produced independent comedy events for years. Over time we’ve built a platform where you can laugh everyday in Miami! We present to you authentic local and national performers and curate entertaining live shows for locals who love to laugh and enjoy the true art of stand up comedy. As seen on Amazon Prime Video “Respect the Light” the Miami New Times\, Culture Crusaders\, the Miami Improv and UNATION. We create unforgettably funny pop up shows all over the Magic City\, in all your favorite bars\, restaurants\, lounges\, theaters and virtual! We make each experience unique with its own environment\, line up\, drinking\, social groups and dining menus! \nQuestions? Special Occasions? Event Planning? Birthdays?\nGet in contact with us here: \nText: 786-610-5571 \nEmail: manny@miamicomedy.com \nChat: miamicomedy.co
-URL:https://comedycalendar.com/event/thank-you-miami-stand-up-comedy-show-monday-46/
-LOCATION:Thank You Miami Cocina & Beer House\, 1701 West Flagler Street\, #Suite 101\, Miami\, FL\, 33135\, United States
-CATEGORIES:Showcase
-ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/05/cd40d6774c1eabf6a906feae94d477c6-y0D7vH.tmp_-ibejUg.jpg
-GEO:25.7731522;-80.2232127
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Thank You Miami Cocina & Beer House 1701 West Flagler Street #Suite 101 Miami FL 33135 United States;X-APPLE-RADIUS=500;X-TITLE=1701 West Flagler Street\, #Suite 101:geo:-80.2232127,25.7731522
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Los_Angeles:20260720T213000
-DTEND;TZID=America/Los_Angeles:20260720T230000
-DTSTAMP:20260515T013641Z
-CREATED:20260401T040000Z
-LAST-MODIFIED:20260515T013641Z
-UID:10004607-1784583000-1784588400@comedycalendar.com
-SUMMARY:Luenell LIVE at Jimmy Kimmel's Comedy Club
-DESCRIPTION:Official TicketsResale Tickets \nAbout the Performer\nLuenell is one of the most electrifying and fearless stand-up comedians in the game\, known for her explosive energy\, raw honesty\, and unapologetically bold humor. \nShe gained widespread recognition through her breakout role in the hit film Borat and has since appeared in Hotel Transylvania\, Coming 2 America\, and numerous television specials\, cementing her status as a comedy powerhouse. \nLuenell’s stand-up is a force of nature — loud\, proud\, and hilarious — tackling everything from relationships and pop culture to her own life experiences with a no-filter authenticity that audiences absolutely love. \nEvent Details\n\nDate: Monday\, July 20\, 2026\nShow Time: 9:30 PM (doors open earlier)\nVenue: Jimmy Kimmel’s Comedy Club\, 3545 S Las Vegas Blvd\, Las Vegas\, NV 89109\nAge Restriction: 18+ Event\nTicket Prices: From $63\n\nAbout the Venue\nJimmy Kimmel’s Comedy Club is one of the premier comedy destinations on the Las Vegas Strip\, located on the iconic LINQ Promenade at 3545 S Las Vegas Blvd. \nThe intimate venue seats approximately 300 guests and features a state-of-the-art sound system\, excellent sightlines from every seat\, and full bar service throughout the show. \nThe club’s cozy atmosphere creates an up-close-and-personal comedy experience unlike the large arena shows Vegas is known for. Parking is available at the LINQ Hotel parking garage\, and the venue is easily accessible via the Las Vegas Monorail. \nThe LINQ Promenade itself offers a variety of dining and entertainment options before and after the show\, making it a perfect evening destination on the Strip. \nWhat to Expect\nLuenell delivers a headline solo stand-up performance that is guaranteed to be one of the most energetic and entertaining shows you’ll see in Las Vegas. \nExpect a high-octane\, laugh-until-you-cry performance where Luenell’s magnetic stage presence and fearless humor take center stage. She commands the room from the moment she walks out\, and her connection with the audience is electric. \nThis is a 18+ event\, and Luenell’s material is adult-oriented\, unfiltered\, and absolutely hilarious. Arrive early to secure your seats and enjoy the full experience at this intimate venue. \nTicket Information\nTickets start from $63 and are available through official and resale channels. \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
-URL:https://comedycalendar.com/event/luenell-live-at-jimmy-kimmels-comedy-club/
-LOCATION:Jimmy Kimmel’s Comedy Club\, 3545 S Las Vegas Blvd\, Las Vegas\, NV\, 89109\, USA
-ATTACH;FMTTYPE=image/jpeg:https://media.ticketmaster.com/en-us/dam/a/daf/69fa9b15-055a-4910-b9f1-42dbe9eb2daf_TABLET_LANDSCAPE_LARGE_16_9.jpg
-GEO:36.11759;-115.168698
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Jimmy Kimmel’s Comedy Club 3545 S Las Vegas Blvd Las Vegas NV 89109 USA;X-APPLE-RADIUS=500;X-TITLE=3545 S Las Vegas Blvd:geo:-115.168698,36.11759
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20260720T213000
-DTEND;TZID=America/New_York:20260720T233000
-DTSTAMP:20260602T200151Z
-CREATED:20260602T200119Z
-LAST-MODIFIED:20260602T200151Z
-UID:10005849-1784583000-1784590200@comedycalendar.com
-SUMMARY:Comedy Cellar Las Vegas (Late)
-DESCRIPTION:This post contains affiliate links. We may earn a commission at no extra cost to you. \n\nOfficial Tickets\n\nResale Tickets\n\nComedy Cellar Las Vegas brings one of the most legendary names in stand-up comedy to the heart of Las Vegas. Located inside the Rio Hotel & Casino\, this intimate comedy club is the West Coast home of New York City’s world-famous Comedy Cellar\, the venue that helped launch the careers of comedy icons including Dave Chappelle\, Chris Rock\, Jon Stewart\, Ray Romano\, Amy Schumer\, Aziz Ansari\, and countless others. \nUnlike traditional comedy shows featuring a single headliner\, Comedy Cellar presents a carefully curated lineup of professional comedians every night. Audiences can expect multiple performers during each show\, featuring a mix of nationally touring headliners\, television favorites\, Comedy Central veterans\, Netflix performers\, and rising stars from around the world. \nNo two shows are exactly alike\, making every visit a unique experience. Surprise drop-in appearances from major comedians performing elsewhere in Las Vegas have become part of the club’s reputation\, giving audiences the chance to see comedy superstars in an intimate setting. \nEvent Details\nVenue: Comedy Cellar Las Vegas at Rio Hotel & Casino\nLocation: 3700 W Flamingo Rd\, Las Vegas\, NV 89103\nShow Schedule: Nightly performances throughout the year\nAge Requirement: Recommended for audiences 18+ due to mature comedy content \nAbout the Venue\nOpened in 2018\, Comedy Cellar Las Vegas was designed to recreate the atmosphere and energy of the original Greenwich Village club that has become one of the most respected comedy venues in the world. The 300-seat showroom offers excellent sightlines and an intimate setting that allows audiences to experience stand-up comedy exactly as it was meant to be seen: up close and personal. \nThe venue combines the excitement of a Las Vegas night out with the authentic feel of a classic New York comedy club. Guests can enjoy a comfortable showroom environment while watching some of the best comedians working today perform in a setting that encourages spontaneity\, crowd interaction\, and unforgettable moments. \nConveniently located inside the Rio Hotel & Casino just minutes from the Las Vegas Strip\, the venue offers easy access for both tourists and local comedy fans. \nWhat to Expect\nExpect a fast-paced evening featuring multiple comedians performing throughout the show. The Comedy Cellar is known for showcasing a wide variety of comedic styles\, from observational humor and storytelling to sharp social commentary\, crowd work\, and cutting-edge stand-up. \nWhether you’re discovering a future comedy star or watching a seasoned veteran perfect their craft\, every show delivers the authentic comedy club experience that has made the Comedy Cellar one of the most respected brands in stand-up comedy. \nFor comedy fans visiting Las Vegas\, Comedy Cellar is widely considered one of the best places in the city to experience live stand-up comedy any night of the week.
-URL:https://comedycalendar.com/event/comedy-cellar-las-vegas-late/2026-07-20/
-LOCATION:Comedy Cellar Las Vegas at Rio Hotel & Casino\, 3700 W Flamingo Rd\, Las Vegas\, NV\, 89103\, United States
-ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fc4/a6703ea9-a17b-4211-b9dc-7308aa0b2fc4_RETINA_PORTRAIT_16_9.jpg
-GEO:36.1172452;-115.1861279
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Comedy Cellar Las Vegas at Rio Hotel & Casino 3700 W Flamingo Rd Las Vegas NV 89103 United States;X-APPLE-RADIUS=500;X-TITLE=3700 W Flamingo Rd:geo:-115.1861279,36.1172452
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20260721T190000
-DTEND;TZID=America/New_York:20260721T210000
-DTSTAMP:20260326T200000Z
-CREATED:20260326T200000Z
-LAST-MODIFIED:20260326T200000Z
-UID:10004054-1784660400-1784667600@comedycalendar.com
-SUMMARY:Sammy Obeid LIVE at Pittsburgh Improv
-DESCRIPTION:Official TicketsResale Tickets \nAbout the Performer\nSammy Obeid is a Lebanese-Palestinian American comedian born in Oakland\, California\, who double-majored in Business and Mathematics at UC Berkeley — and then turned down a job at Google to pursue stand-up comedy. That decision paid off in a big way. \nObeid is best known as the host of 100 Humans on Netflix\, and has appeared on NBC’s Last Comic Standing\, America’s Got Talent\, and TBS’s Conan. He holds a world record for performing stand-up comedy 1\,001 nights in a row — a remarkable feat that was featured in both Time Magazine and The New York Times. \nSammy’s comedy is smart\, sharp\, and deeply personal — blending his unique background in math and business with relatable observations about life\, culture\, and the human experience. His shows are known for being intellectually engaging while remaining laugh-out-loud funny from start to finish. \nEvent Details\nDate: Tuesday\, July 21\, 2026 \nTime: 7:00 PM (Doors open at 5:30 PM) \nVenue: Pittsburgh Improv\, 166 E. Bridge St\, Homestead\, PA 15120 \nAge Restriction: Ages 21 and up \nNote: This is a one-night-only special event at the Pittsburgh Improv. \nAbout the Venue\nThe Pittsburgh Improv is located at 166 E. Bridge Street in Homestead\, PA — just minutes from downtown Pittsburgh. As part of the nationally recognized Improv Comedy Club chain\, the Pittsburgh Improv is one of the premier comedy venues in the region. \nThe club features a full-service restaurant and bar\, making it a perfect destination for a complete night out. The intimate showroom seats approximately 300 guests\, ensuring every seat has a great sightline to the stage. The venue’s warm\, welcoming atmosphere is ideal for the kind of thoughtful\, engaging comedy that Sammy Obeid delivers. \nParking is available nearby\, and the venue is easily accessible from major highways. The Pittsburgh Improv consistently brings top national touring comedians to the Pittsburgh area\, and Sammy Obeid is a standout addition to their summer 2026 lineup. \nWhat to Expect\nSammy Obeid delivers a stand-up performance that is as smart as it is funny. Expect sharp observations\, personal storytelling\, and a comedian who can make complex ideas hilarious. This is a solo stand-up show — expect 60–75 minutes of intelligent\, engaging comedy. \nSammy’s unique background — from UC Berkeley math major to Netflix host to world record holder — gives him a perspective unlike any other comedian working today. His shows are perfect for fans who love comedy that makes you think as much as it makes you laugh. \nPlease note: This is an ages 21 and up event. Valid ID is required at the door. Third-party tickets will not be honored — purchase only from authorized sellers. \nTicket Information\nPrice Range: $25 – $50 (plus fees) \nTickets are available through official channels and resale marketplaces. This is a one-night-only show\, so purchase early to secure your spot! \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
-URL:https://comedycalendar.com/event/sammy-obeid-live-at-pittsburgh-improv/
-LOCATION:Pittsburgh Improv\, 166 E. Bridge St\, Homestead\, Pennsylvania\, 15120\, United States
-ATTACH;FMTTYPE=image/jpeg:https://i.ticketweb.com/i/00/08/98/03/51/Original.jpg
-GEO:40.4089383;-79.9149412
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Pittsburgh Improv 166 E. Bridge St Homestead Pennsylvania 15120 United States;X-APPLE-RADIUS=500;X-TITLE=166 E. Bridge St:geo:-79.9149412,40.4089383
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20260721T190000
-DTEND;TZID=America/New_York:20260721T210000
-DTSTAMP:20260602T200052Z
-CREATED:20260602T194345Z
-LAST-MODIFIED:20260602T200052Z
-UID:10005272-1784660400-1784667600@comedycalendar.com
-SUMMARY:Comedy Cellar Las Vegas Showcase (Early)
-DESCRIPTION:This post contains affiliate links. We may earn a commission at no extra cost to you. \n\n  \n     Official Tickets\n   \n  \n     Resale Tickets\n  \n\nComedy Cellar Las Vegas brings one of the most legendary names in stand-up comedy to the heart of Las Vegas. Located inside the Rio Hotel & Casino\, this intimate comedy club is the West Coast home of New York City’s world-famous Comedy Cellar\, the venue that helped launch the careers of comedy icons including Dave Chappelle\, Chris Rock\, Jon Stewart\, Ray Romano\, Amy Schumer\, Aziz Ansari\, and countless others. \nUnlike traditional comedy shows featuring a single headliner\, Comedy Cellar presents a carefully curated lineup of professional comedians every night. Audiences can expect multiple performers during each show\, featuring a mix of nationally touring headliners\, television favorites\, Comedy Central veterans\, Netflix performers\, and rising stars from around the world. \nNo two shows are exactly alike\, making every visit a unique experience. Surprise drop-in appearances from major comedians performing elsewhere in Las Vegas have become part of the club’s reputation\, giving audiences the chance to see comedy superstars in an intimate setting. \nEvent Details\nVenue: Comedy Cellar Las Vegas at Rio Hotel & Casino\nLocation: 3700 W Flamingo Rd\, Las Vegas\, NV 89103\nShow Schedule: Nightly performances throughout the year\nAge Requirement: Recommended for audiences 18+ due to mature comedy content \nAbout the Venue\nOpened in 2018\, Comedy Cellar Las Vegas was designed to recreate the atmosphere and energy of the original Greenwich Village club that has become one of the most respected comedy venues in the world. The 300-seat showroom offers excellent sightlines and an intimate setting that allows audiences to experience stand-up comedy exactly as it was meant to be seen: up close and personal. \nThe venue combines the excitement of a Las Vegas night out with the authentic feel of a classic New York comedy club. Guests can enjoy a comfortable showroom environment while watching some of the best comedians working today perform in a setting that encourages spontaneity\, crowd interaction\, and unforgettable moments. \nConveniently located inside the Rio Hotel & Casino just minutes from the Las Vegas Strip\, the venue offers easy access for both tourists and local comedy fans. \nWhat to Expect\nExpect a fast-paced evening featuring multiple comedians performing throughout the show. The Comedy Cellar is known for showcasing a wide variety of comedic styles\, from observational humor and storytelling to sharp social commentary\, crowd work\, and cutting-edge stand-up. \nWhether you’re discovering a future comedy star or watching a seasoned veteran perfect their craft\, every show delivers the authentic comedy club experience that has made the Comedy Cellar one of the most respected brands in stand-up comedy. \nFor comedy fans visiting Las Vegas\, Comedy Cellar is widely considered one of the best places in the city to experience live stand-up comedy any night of the week.
-URL:https://comedycalendar.com/event/comedy-cellar-las-vegas-showcase-early/2026-07-21/
-LOCATION:Comedy Cellar Las Vegas at Rio Hotel & Casino\, 3700 W Flamingo Rd\, Las Vegas\, NV\, 89103\, United States
-ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fc4/a6703ea9-a17b-4211-b9dc-7308aa0b2fc4_RETINA_PORTRAIT_16_9.jpg
-GEO:36.1172452;-115.1861279
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Comedy Cellar Las Vegas at Rio Hotel & Casino 3700 W Flamingo Rd Las Vegas NV 89103 United States;X-APPLE-RADIUS=500;X-TITLE=3700 W Flamingo Rd:geo:-115.1861279,36.1172452
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20260721T210000
-DTEND;TZID=America/New_York:20260721T230000
-DTSTAMP:20260714T165718Z
-CREATED:20260623T165804Z
-LAST-MODIFIED:20260714T165718Z
-UID:10006093-1784667600-1784674800@comedycalendar.com
-SUMMARY:TOO LIT Tuesday Blackbird Ordinary Comedy Night
-DESCRIPTION:Too Lit Tuesday: Miami comedy\, guaranteed seats\, shots\, and an afterparty that turns a Tuesday into the weekend. Free Shots at 9PM.\n\n\nTuesdays Just Got TOO LIT at Blackbird Ordinary 🔥 \nWe’re back in Brickell doing what we do best…making Tuesdays feel like the weekend. \nFrom 9 to 10:30\, the back room turns into a comedy stage. It’s Manny (known for being Miami’s Best Comedian) and JJ (Manny’s Favorite Miami Comedian) teaming up to give you one of the wildest and most outlandish Tuesday nights you’ll ever find in Brickell. \nFor years JJ and Manny have built a Tuesday night community in Brickell and always went to the afterparty with the gang. \nIf you’ve ever been to a Blackbird afterparty with us\, you already know the vibe. \nNOW we’re bringing the comedy show AND the afterparty to the same spot. \nNo shared rides\, no walking across the street; just straight-up laughs\, shots\, bottle service as the afterparty continues during the famous Yes Ma’am event that makes Tuesday in Brickell legendary in nightlife. \n🎤 Comedy Show: 9–10:30PM \n🥂 Free Shot: Arrive by 9PM and get one on us \nTicket Options\nFree SeatingFirst come\, first served. Whatever seats are not purchased will be available to anyone who arrives early. Once they’re gone\, they’re gone. \n$25 Guaranteed Seating + FREE Shot After 9pmSecure your spot without rushing. We’ll hold your seats until you arrive and welcome you with your shot even if you show up after 9 PM. Limited seating available. \n$50 VIP Experience (Guaranteed Seating\, FREE Shot After 9PM\, VIP Bottle Afterparty Access AND Merch)Everything included: guaranteed seating\, a free shot even after 9 PM\, access to our bottle section for the afterparty with Manny and JJ\, plus exclusive Miami Comedy merch to take home. VERY Limited space.
-URL:https://comedycalendar.com/event/too-lit-tuesday-blackbird-ordinary-comedy-night-35/
-LOCATION:Blackbird Ordinary\, Southwest 1st Avenue 729\, Miami\, FL\, 33130\, United States
-CATEGORIES:Showcase
-ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/05/9b428c0ea8703892381afa84fd89e835-zQ4ldU.tmp_-Ra4BNR.jpg
-GEO:25.7666715;-80.1951345
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Blackbird Ordinary Southwest 1st Avenue 729 Miami FL 33130 United States;X-APPLE-RADIUS=500;X-TITLE=Southwest 1st Avenue 729:geo:-80.1951345,25.7666715
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20260721T213000
-DTEND;TZID=America/New_York:20260721T233000
-DTSTAMP:20260602T200151Z
-CREATED:20260602T200119Z
-LAST-MODIFIED:20260602T200151Z
-UID:10005850-1784669400-1784676600@comedycalendar.com
-SUMMARY:Comedy Cellar Las Vegas (Late)
-DESCRIPTION:This post contains affiliate links. We may earn a commission at no extra cost to you. \n\nOfficial Tickets\n\nResale Tickets\n\nComedy Cellar Las Vegas brings one of the most legendary names in stand-up comedy to the heart of Las Vegas. Located inside the Rio Hotel & Casino\, this intimate comedy club is the West Coast home of New York City’s world-famous Comedy Cellar\, the venue that helped launch the careers of comedy icons including Dave Chappelle\, Chris Rock\, Jon Stewart\, Ray Romano\, Amy Schumer\, Aziz Ansari\, and countless others. \nUnlike traditional comedy shows featuring a single headliner\, Comedy Cellar presents a carefully curated lineup of professional comedians every night. Audiences can expect multiple performers during each show\, featuring a mix of nationally touring headliners\, television favorites\, Comedy Central veterans\, Netflix performers\, and rising stars from around the world. \nNo two shows are exactly alike\, making every visit a unique experience. Surprise drop-in appearances from major comedians performing elsewhere in Las Vegas have become part of the club’s reputation\, giving audiences the chance to see comedy superstars in an intimate setting. \nEvent Details\nVenue: Comedy Cellar Las Vegas at Rio Hotel & Casino\nLocation: 3700 W Flamingo Rd\, Las Vegas\, NV 89103\nShow Schedule: Nightly performances throughout the year\nAge Requirement: Recommended for audiences 18+ due to mature comedy content \nAbout the Venue\nOpened in 2018\, Comedy Cellar Las Vegas was designed to recreate the atmosphere and energy of the original Greenwich Village club that has become one of the most respected comedy venues in the world. The 300-seat showroom offers excellent sightlines and an intimate setting that allows audiences to experience stand-up comedy exactly as it was meant to be seen: up close and personal. \nThe venue combines the excitement of a Las Vegas night out with the authentic feel of a classic New York comedy club. Guests can enjoy a comfortable showroom environment while watching some of the best comedians working today perform in a setting that encourages spontaneity\, crowd interaction\, and unforgettable moments. \nConveniently located inside the Rio Hotel & Casino just minutes from the Las Vegas Strip\, the venue offers easy access for both tourists and local comedy fans. \nWhat to Expect\nExpect a fast-paced evening featuring multiple comedians performing throughout the show. The Comedy Cellar is known for showcasing a wide variety of comedic styles\, from observational humor and storytelling to sharp social commentary\, crowd work\, and cutting-edge stand-up. \nWhether you’re discovering a future comedy star or watching a seasoned veteran perfect their craft\, every show delivers the authentic comedy club experience that has made the Comedy Cellar one of the most respected brands in stand-up comedy. \nFor comedy fans visiting Las Vegas\, Comedy Cellar is widely considered one of the best places in the city to experience live stand-up comedy any night of the week.
-URL:https://comedycalendar.com/event/comedy-cellar-las-vegas-late/2026-07-21/
-LOCATION:Comedy Cellar Las Vegas at Rio Hotel & Casino\, 3700 W Flamingo Rd\, Las Vegas\, NV\, 89103\, United States
-ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fc4/a6703ea9-a17b-4211-b9dc-7308aa0b2fc4_RETINA_PORTRAIT_16_9.jpg
-GEO:36.1172452;-115.1861279
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Comedy Cellar Las Vegas at Rio Hotel & Casino 3700 W Flamingo Rd Las Vegas NV 89103 United States;X-APPLE-RADIUS=500;X-TITLE=3700 W Flamingo Rd:geo:-115.1861279,36.1172452
-END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/New_York:20260722T190000
 DTEND;TZID=America/New_York:20260722T210000
@@ -350,9 +213,9 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/New_York:20260722T210000
 DTEND;TZID=America/New_York:20260722T223000
-DTSTAMP:20260714T165721Z
+DTSTAMP:20260721T171155Z
 CREATED:20260529T060306Z
-LAST-MODIFIED:20260714T165721Z
+LAST-MODIFIED:20260721T171155Z
 UID:10005031-1784754000-1784759400@comedycalendar.com
 SUMMARY:Wingman Wednesdays Miami’s Social Comedy Show
 DESCRIPTION:Blackbird Ordinary. Meet new people. Laugh at hilarious dating stories. Join the conversation. Ladies drink free during showtime 9-10:30 PM.\n\n\nA fun night out where people happen to meet. \nWingman Wednesdays is Miami’s social comedy show where dating\, relationships\, and modern romance become the night’s entertainment. Hosted by Miami’s Best Comedian Manny Garavito and Miami’s Best Master of Ceremonies Luke Prince\, the show stirs up live comedy\, tasteful crowd interaction\, audience stories\, terrible dating advice\, red flags\, green flags\, first dates on the spot\, and the hilarious realities of navigating Miami’s social scene. \nWhether you’re single\, taken\, in the alphabet\, somewhere in between\, or just here to watch the tea spill\, you’ll be part of a night filled with laughs\, unexpected moments\, and real conversations. Audience participation is encouraged but never required\, making it just as fun to watch as it is to jump in. \nBring your friends\, your situationships\, your worst dating stories\, but most importantly your sense of humor. \nLadies drink free during showtime from 9:00 PM to 10:30 PM. \nComedy. Cocktails. Questionable decisions. \nTopics include but are not limited to: \nBrickell finance bros \nYacht season \nSugar daddy retirement plans \nInstagram followers \n“What do you do?” stress tests \nPenthouse with air matresses \nDating apps \nGym culture \nPlastic surgery \nSpiritual girls \nHow to Ghost 101 \nToxic Green Flags \n…And enough unsolicited dating advice to keep everyone single a little longer. \nCome watch. Come participate. Or just sit back and enjoy the turbulence. \nTicket Options \nGeneral Admission (FREE: frist come\, first serve)\nFirst come\, first served. Whatever seats are not purchased will be available to anyone who arrives early. Once they’re gone\, they’re gone. \n$25 Guaranteed Seating + Wingmen for Hire\nSkip the rush and secure your seats in advance. Plus\, you’ll be guaranteed an opportunity to join Manny and Luke on stage for live crowd interaction\, dating advice\, matchmaking attempts\, relationship advice\, or whatever romantic turbulence the evening encounters. Limited spots available. \n$50 VIP Flight Crew Experience (Guaranteed Seating\, Wingmen for Hire\, VIP Bottle Afterparty Access AND Merch)\nEverything included: guaranteed seating\, Wingman for hire\, access to our bottle section for the afterparty with Manny and Luke\, plus exclusive Miami Comedy merch to take home. VERY Limited spots.
@@ -377,6 +240,21 @@ LOCATION:Comedy Cellar Las Vegas at Rio Hotel & Casino\, 3700 W Flamingo Rd\, La
 ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fc4/a6703ea9-a17b-4211-b9dc-7308aa0b2fc4_RETINA_PORTRAIT_16_9.jpg
 GEO:36.1172452;-115.1861279
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Comedy Cellar Las Vegas at Rio Hotel & Casino 3700 W Flamingo Rd Las Vegas NV 89103 United States;X-APPLE-RADIUS=500;X-TITLE=3700 W Flamingo Rd:geo:-115.1861279,36.1172452
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260723T180000
+DTEND;TZID=America/Chicago:20260723T230000
+DTSTAMP:20260720T210000Z
+CREATED:20260720T210000Z
+LAST-MODIFIED:20260720T210000Z
+UID:10006369-1784829600-1784847600@comedycalendar.com
+SUMMARY:Chicago Comedy Club LIVE at Foundation Room at House of Blues Chicago
+DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nOfficial Tickets\nResale Tickets \nChicago Comedy Club LIVE at Foundation Room at House of Blues Chicago\nChicago Comedy Club brings its signature blend of stand-up comedy to the intimate and upscale Foundation Room at House of Blues Chicago. This weekly comedy showcase features top local and touring comedians in one of Chicago’s most unique venues. \nEvent Details\nDate: Thursday\, July 23\, 2026\nDoors: 6:00 PM | Show: 7:30 PM\nVenue: Foundation Room at House of Blues Chicago\nAddress: 329 N Dearborn St\, Chicago\, IL 60654\nAge Requirement: 21+ (Valid ID required)\nSeating: Standing Room Only / General Admission\nParking: Valet parking available at Marina City complex \nAbout Chicago Comedy Club\nChicago Comedy Club is a premier comedy showcase that brings together the best stand-up comedians performing in Chicago. Known for its high-energy shows and top-tier talent\, the club has become a staple of Chicago’s vibrant comedy scene. Every performance features a rotating lineup of hilarious performers guaranteed to keep you laughing all night. \nWhat to Expect\n\nHigh-energy stand-up comedy from top performers\nIntimate VIP-style setting in the Foundation Room\nFull bar service with a 2-item minimum purchase\nDoors open at 6PM\, show begins at 7:30PM\n21+ event — valid photo ID required\nStanding room only venue with great sightlines\n\nVenue Information\nThe Foundation Room at House of Blues Chicago is an exclusive\, members-style lounge located at 329 N Dearborn St in the heart of Chicago. This intimate venue offers a luxurious atmosphere with full bar service\, making it the perfect setting for an unforgettable comedy night. \nTicket Information\nTickets are available now through Ticketmaster. There is an 8-ticket limit per order. Resale tickets may also be available through VividSeats. \nOfficial Tickets\nResale Tickets \nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you.\nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
+URL:https://comedycalendar.com/event/chicago-comedy-club-live-at-foundation-room-at-house-of-blues-chicago/
+LOCATION:Foundation Room at House of Blues Chicago\, 329 N Dearborn St\, Chicago\, IL\, 60654\, USA
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/a52/caff524e-ffb2-4438-89b4-b2fd7af24a52_TABLET_LANDSCAPE_LARGE_16_9.jpg
+GEO:41.8882351;-87.6291025
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Foundation Room at House of Blues Chicago 329 N Dearborn St Chicago IL 60654 USA;X-APPLE-RADIUS=500;X-TITLE=329 N Dearborn St:geo:-87.6291025,41.8882351
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260723T190000
@@ -452,6 +330,21 @@ LOCATION:Cobb’s Comedy Club\, 915 Columbus Avenue\, San Francisco\, California
 ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/04/d8b6b3d8-6cde-458c-a874-add59997305c_RETINA_PORTRAIT_16_9-j6h8sB.jpg
 GEO:37.8029543;-122.4143041
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Cobb’s Comedy Club 915 Columbus Avenue San Francisco California 94133 United States Of America;X-APPLE-RADIUS=500;X-TITLE=915 Columbus Avenue:geo:-122.4143041,37.8029543
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260723T193000
+DTEND;TZID=America/Los_Angeles:20260723T220000
+DTSTAMP:20260720T170000Z
+CREATED:20260720T170000Z
+LAST-MODIFIED:20260720T170000Z
+UID:10006340-1784835000-1784844000@comedycalendar.com
+SUMMARY:Andrew Schulz LIVE at Brea Improv
+DESCRIPTION:Official TicketsResale Tickets \nAndrew Schulz\, one of the most fearless voices in modern stand-up comedy\, brings his unfiltered style to the Brea Improv for an intimate club performance on July 23\, 2026. \nHis Netflix special LIFE spent 15 consecutive days in the U.S. Top 10 and appeared in the Top 10 across 13 countries. He has sold out Madison Square Garden twice and headlined arenas across North America. \nEvent Details\n\nDate: Thursday\, July 23\, 2026\nTime: 7:30 PM PDT\nVenue: Brea Improv\nAddress: 180 S Brea Blvd\, Brea\, CA 92821\nAge Requirement: 21+\nTickets From: $54\n\nAbout Andrew Schulz\nAndrew Schulz is a New York-native comedian whose Netflix special LIFE became a global hit in 2025. His podcast Flagrant has crossed 1.4 billion total views on YouTube. Known for bold\, unfiltered comedy covering politics\, pop culture\, and everything in between. \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
+URL:https://comedycalendar.com/event/andrew-schulz-live-at-brea-improv-july-23/
+LOCATION:Brea Improv\, 180 South Brea Blvd\, Brea\, CA\, 92821\, United States
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/991/65f6fed1-0151-4433-aa42-bf07bc332991_RETINA_PORTRAIT_3_2.jpg
+GEO:33.9183365;-117.8988084
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Brea Improv 180 South Brea Blvd Brea CA 92821 United States;X-APPLE-RADIUS=500;X-TITLE=180 South Brea Blvd:geo:-117.8988084,33.9183365
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Los_Angeles:20260723T200000
@@ -544,6 +437,21 @@ GEO:36.1172452;-115.1861279
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Comedy Cellar Las Vegas at Rio Hotel & Casino 3700 W Flamingo Rd Las Vegas NV 89103 United States;X-APPLE-RADIUS=500;X-TITLE=3700 W Flamingo Rd:geo:-115.1861279,36.1172452
 END:VEVENT
 BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260724T190000
+DTEND;TZID=America/Chicago:20260724T210000
+DTSTAMP:20260720T210000Z
+CREATED:20260720T210000Z
+LAST-MODIFIED:20260720T210000Z
+UID:10006370-1784919600-1784926800@comedycalendar.com
+SUMMARY:Jess Hilarious LIVE at Chicago Improv
+DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nOfficial Tickets\nResale Tickets \nJess Hilarious LIVE at Chicago Improv\nJess Hilarious brings her explosive stand-up comedy to the Chicago Improv in Schaumburg for a night of non-stop laughs. Known for her wild energy and razor-sharp wit\, Jess delivers a show that will have you in stitches from start to finish. \nEvent Details\nDate: Friday\, July 24\, 2026\nTime: 7:00 PM\nVenue: Chicago Improv\nAddress: 5 Woodfield Mall K120B\, Schaumburg\, IL 60173\nAge Requirement: 21+ (Valid ID required)\nSeating: General Admission (first-come\, first-served)\nMinimum: 2-item food/drink minimum per person \nAbout Jess Hilarious\nJess Hilarious is a comedian\, actress\, and media personality best known for her viral social media presence and her role on Wild ‘N Out. She has appeared on The Breakfast Club and numerous comedy specials\, building a massive fanbase with her unfiltered\, high-energy comedic style. Her stand-up shows are known for being raw\, relatable\, and absolutely hilarious. \nWhat to Expect\n\nHigh-energy stand-up from one of comedy’s hottest rising stars\nUnfiltered\, relatable humor that keeps the crowd roaring\nIntimate comedy club atmosphere at Chicago Improv\nFull food and drink service (2-item minimum)\n21+ event — valid photo ID required\nGeneral admission seating — arrive early for best seats\n\nVenue Information\nChicago Improv is located inside Woodfield Mall in Schaumburg\, IL\, one of the premier comedy clubs in the Chicago area. The venue offers a full menu and bar service in an intimate showroom setting perfect for live comedy. \nTicket Information\nTickets range from $46.19 to $65.73. Available through Ticketmaster and VividSeats. Ticket resale is strictly prohibited by the venue. All sales are final. \nOfficial Tickets\nResale Tickets \nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you.\nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
+URL:https://comedycalendar.com/event/jess-hilarious-live-at-chicago-improv/
+LOCATION:Chicago Improv\, 5 Woodfield Mall\, Schaumburg\, IL\, 60173\, USA
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/bab/90b52ca2-47bd-4bdb-8981-4eec81d35bab_TABLET_LANDSCAPE_LARGE_16_9.jpg
+GEO:42.0453811;-88.0375314
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Chicago Improv 5 Woodfield Mall Schaumburg IL 60173 USA;X-APPLE-RADIUS=500;X-TITLE=5 Woodfield Mall:geo:-88.0375314,42.0453811
+END:VEVENT
+BEGIN:VEVENT
 DTSTART;TZID=America/New_York:20260724T190000
 DTEND;TZID=America/New_York:20260724T220000
 DTSTAMP:20260515T013748Z
@@ -617,5 +525,96 @@ LOCATION:Cobb’s Comedy Club\, 915 Columbus Avenue\, San Francisco\, California
 ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/04/4930c598-e875-481d-93cf-166ed6418c07_RETINA_PORTRAIT_16_9-xZb3nD.jpg
 GEO:37.8029543;-122.4143041
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Cobb’s Comedy Club 915 Columbus Avenue San Francisco California 94133 United States Of America;X-APPLE-RADIUS=500;X-TITLE=915 Columbus Avenue:geo:-122.4143041,37.8029543
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260724T193000
+DTEND;TZID=America/Los_Angeles:20260724T220000
+DTSTAMP:20260401T040032Z
+CREATED:20260401T040032Z
+LAST-MODIFIED:20260401T040032Z
+UID:10004639-1784921400-1784930400@comedycalendar.com
+SUMMARY:Maz Jobrani LIVE at San Jose Improv
+DESCRIPTION:Official TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you. \nAbout the Performer\nMaz Jobrani is one of the most celebrated comedians in the world\, known for his sharp wit\, cross-cultural storytelling\, and ability to connect with audiences from all walks of life. Born in Iran and raised in the United States\, Maz has built a career on finding the humor in the immigrant experience\, family life\, and the absurdities of modern society. \nHe is a founding member of the legendary Axis of Evil Comedy Tour\, which aired on Comedy Central\, and has released multiple acclaimed specials including Immigrant on Netflix (filmed at the Kennedy Center) and his most recent special The Birds and the Bees\, available on YouTube. Maz has appeared on The Late Show with Stephen Colbert\, The Late Late Show with James Corden\, and NPR’s Wait Wait Don’t Tell Me. \nHis comedy is warm\, intelligent\, and universally relatable — whether you’re laughing at his parenting stories\, his observations about American culture\, or his hilarious takes on international travel. Maz is a master storyteller who leaves audiences in stitches from start to finish. \nEvent Details\nDate: Friday\, July 24\, 2026 \nShow Time: 7:30 PM (Doors open approximately 6:30 PM) \nVenue: San Jose Improv\, 62 S Second St\, San Jose\, CA 95113 \nAge Restrictions: 18+ (valid ID required). Content may include adult themes. \nShow Duration: Approximately 90 minutes to 2 hours. \nAbout the Venue\nThe San Jose Improv is the Bay Area’s premier stand-up comedy club\, located in the heart of downtown San Jose at 62 S Second St. This intimate venue seats approximately 250-300 guests in a classic comedy club layout\, with tables and chairs arranged for an up-close\, personal experience with the performer. \nThe club features a full bar and food menu\, so you can enjoy drinks and bites throughout the show. The intimate setting means every seat is a great seat — you’ll feel like Maz is performing just for you. The venue has a lively\, energetic atmosphere that makes every show feel like a special event. \nParking is available in nearby garages and street parking throughout downtown San Jose. The venue is also accessible via VTA light rail and is a short walk from the San Jose Diridon Station. Arrive early to grab a drink and settle in before the show begins. \nWhat to Expect\nThis is a full-length solo stand-up performance by Maz Jobrani\, featuring his latest material. Expect a night of sharp\, culturally rich comedy that blends personal stories with broader social observations. Maz is known for his energetic stage presence and his ability to work the crowd\, making each show feel unique and spontaneous. \nThe show typically runs 90 minutes to two hours\, with Maz performing his full set. There may be an opening act to warm up the crowd before Maz takes the stage. This is an intimate club setting\, so the laughs feel personal and the energy is electric. \nWhether you’re a longtime fan or discovering Maz for the first time\, this is a night of comedy you won’t soon forget. Grab your tickets before they sell out — the San Jose Improv fills up fast for headliners of this caliber! \nTicket Information\nPrice Range: $43 – $100+ (fees may apply) \nTickets are available through Ticketmaster/TicketWeb (official) and VividSeats (resale). Both options are backed by buyer guarantees. \nOfficial TicketsResale Tickets
+URL:https://comedycalendar.com/event/maz-jobrani-live-at-san-jose-improv/
+LOCATION:San Jose Improv\, 62 S Second St\, San Jose\, California\, 95113\, United States
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/4ea/cd004bac-3aba-452b-9815-b4f443c4a4ea_RETINA_PORTRAIT_3_2.jpg
+GEO:37.3356413;-121.8883224
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=San Jose Improv 62 S Second St San Jose California 95113 United States;X-APPLE-RADIUS=500;X-TITLE=62 S Second St:geo:-121.8883224,37.3356413
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260724T200000
+DTEND;TZID=America/New_York:20260724T213000
+DTSTAMP:20260515T013807Z
+CREATED:20260322T170000Z
+LAST-MODIFIED:20260515T013807Z
+UID:10003690-1784923200-1784928600@comedycalendar.com
+SUMMARY:Adam Ray: WHO IS ME Tour LIVE at Hard Rock Live Orlando
+DESCRIPTION:Official TicketsResale Tickets \nAbout the Performer\nAdam Ray is one of the most versatile and hilarious comedians in the game today. Best known for his uncanny Dr. Phil impression that went viral and led to a recurring role alongside Marshawn Lynch\, Adam has built a massive following through his stand-up comedy\, podcast\, and social media presence. \nHis podcast About Last Night is one of the most popular comedy podcasts in the country\, featuring candid conversations with fellow comedians\, athletes\, and celebrities. Adam has appeared on The Tonight Show\, Conan\, Comedy Central\, and has toured extensively across North America. \nAdam’s comedy style is high-energy\, character-driven\, and deeply funny — blending sharp observational humor with impressions\, storytelling\, and crowd work. His live shows are known for being unpredictable and wildly entertaining from start to finish. \nEvent Details\nDate: Friday\, July 24\, 2026 \nTime: 8:00 PM – 9:30 PM \nVenue: Hard Rock Live Orlando\, 6050 Universal Blvd\, Orlando\, FL 32819 \nAge Restriction: Ages 18+ Only \nTicket Prices: $35 – $45 \nAbout the Venue\nHard Rock Live Orlando is Central Florida’s premier live entertainment destination\, situated at Universal CityWalk right next to Universal Orlando Resort. With a capacity of approximately 3\,000 guests\, the venue delivers an intimate yet electric atmosphere for comedy and concert events alike. \nThe venue features world-class acoustics\, a full bar and dining options\, and seating across multiple sections including center floor\, left\, right\, and balcony areas. Balcony tables offer a premium experience and can be reserved by calling the box office at (407) 351-5483. \nParking is conveniently available at Universal CityWalk’s parking garages. The surrounding area offers a wide variety of dining and entertainment options\, making it easy to turn the evening into a full night out in Orlando. \nWhat to Expect\nAdam Ray’s WHO IS ME Tour is a full-length stand-up comedy show featuring his signature blend of impressions\, character work\, and sharp observational humor. Expect a high-energy\, 90-minute performance that will have you laughing from the opening minute to the final bow. \nThis is an 18+ event\, so the material will be unfiltered and adult-oriented. Whether you know Adam from his Dr. Phil impression\, his podcast\, or his stand-up specials\, this show promises to be an unforgettable night of comedy in Orlando. \nTicket Information\nPrice Range: $35 – $45 (all-in pricing\, fees included before taxes) \nPurchase official tickets through Ticketmaster or find resale options through VividSeats. \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
+URL:https://comedycalendar.com/event/adam-ray-who-is-me-tour-live-at-hard-rock-live-orlando/
+LOCATION:Hard Rock Live Orlando\, 6050 Universal Blvd\, Orlando\, FL\, 32819\, United States Of America
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/8d6/a01d8edf-195c-4361-b3ce-7836d62f08d6_TABLET_LANDSCAPE_LARGE_16_9.jpg
+GEO:28.4736856;-81.4676439
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Hard Rock Live Orlando 6050 Universal Blvd Orlando FL 32819 United States Of America;X-APPLE-RADIUS=500;X-TITLE=6050 Universal Blvd:geo:-81.4676439,28.4736856
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260724T200000
+DTEND;TZID=America/Los_Angeles:20260724T220000
+DTSTAMP:20260515T040048Z
+CREATED:20260401T040000Z
+LAST-MODIFIED:20260515T040048Z
+UID:10004513-1784923200-1784930400@comedycalendar.com
+SUMMARY:Jeff Dunham: Artificial Intelligence LIVE at Emerald Queen Casino
+DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nOfficial Tickets\nResale Tickets \nJeff Dunham: Artificial Intelligence LIVE at Emerald Queen Casino\nComedy superstar Jeff Dunham is bringing his record-breaking Artificial Intelligence tour to the Emerald Queen Casino Event Center in Tacoma\, WA. Known for his hilarious cast of puppet characters\, Dunham delivers a one-of-a-kind comedy experience that has made him one of the best-selling stand-up comedians of all time. Don’t miss this unforgettable night of laughs on July 24\, 2026! \nEvent Details\nDate: Friday\, July 24\, 2026\nTime: 8:00 PM (Doors open at 7:00 PM)\nVenue: Emerald Queen Casino Event Center\nAddress: 2920 East R Street\, Tacoma\, WA 98404\nAge Requirement:\nParking: Ample parking available in multiple garages at EQC Tacoma \nAbout Jeff Dunham\nJeff Dunham is one of the most successful stand-up comedians in the world\, known for his unique blend of ventriloquism and comedy. His beloved characters — including Walter\, Peanut\, Achmed the Dead Terrorist\, and Bubba J — have made him a household name. Dunham holds the Guinness World Record for the most tickets sold for a stand-up comedy tour and has sold out arenas across the globe. \nWhat to Expect\n\nHilarious ventriloquism featuring Jeff’s iconic puppet characters\nNew material from the Artificial Intelligence tour\nA world-class comedy performance in an intimate casino event center setting\nFull bar service available (21+ event)\nState-of-the-art sound and lighting at the EQC Event Center\nAn evening of non-stop laughs for comedy fans of all backgrounds\n\nVenue Information\nThe Emerald Queen Casino Event Center is a state-of-the-art event space with stadium seating for 1\,800+ guests\, located at EQC Tacoma — just 20 miles south of SeaTac Airport. The venue features six dining options\, a sports bar\, and ample parking in multiple garages. \nTicket Information\nTickets go on sale to the general public on April 3\, 2026. Artist pre-sale runs April 1–3\, 2026. There is a ticket limit of 8 tickets per person. All sales are final. This is a 21+ event — valid photo ID required for entry. \nOfficial Tickets\nResale Tickets \nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
+URL:https://comedycalendar.com/event/jeff-dunham-artificial-intelligence-live-at-emerald-queen-casino/
+LOCATION:Emerald Queen Casino\, 2920 East R Street\, Tacoma\, Washington\, 98404\, United States
+ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/03/f9528726-9c07-4c43-b46e-f0b25ebcc676_TABLET_LANDSCAPE_LARGE_16_9-ydZfUX.jpg
+GEO:47.237621;-122.407289
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Emerald Queen Casino 2920 East R Street Tacoma Washington 98404 United States;X-APPLE-RADIUS=500;X-TITLE=2920 East R Street:geo:-122.407289,47.237621
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260724T200000
+DTEND;TZID=America/Chicago:20260724T220000
+DTSTAMP:20260720T210000Z
+CREATED:20260720T210000Z
+LAST-MODIFIED:20260720T210000Z
+UID:10006371-1784923200-1784930400@comedycalendar.com
+SUMMARY:Joe Kilgallon LIVE at CG's Comedy Club
+DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nOfficial Tickets\nResale Tickets \nJoe Kilgallon LIVE at CG’s Comedy Club\nJoe Kilgallon brings his sharp\, straight-shooting stand-up comedy to CG’s Comedy Club in Bolingbrook for a night of laughs. Described by the Chicago Tribune as having “a straight shooting\, no-nonsense style\,” Kilgallon is a Chicago comedy favorite. \nEvent Details\nDate: Friday\, July 24\, 2026\nTime: 8:00 PM\nVenue: CG’s Comedy Club\nAddress: 619 E. Boughton Rd.\, Ste. 125\, Bolingbrook\, IL 60440\nAge Requirement: 21+ (Valid ID required)\nPhone: (630) 410-8906 \nAbout Joe Kilgallon\nJoe Kilgallon is a Chicago-based stand-up comedian known for his sharp wit and relatable observational humor. Praised by the Chicago Tribune for his straight-shooting style\, Kilgallon has built a loyal following in the Chicago comedy scene and beyond. His performances are consistently praised for their clever writing and natural stage presence. \nWhat to Expect\n\nSharp\, observational stand-up comedy\nIntimate comedy club setting at CG’s Comedy Club\nFull bar service available\nShow starts at 8:00 PM sharp\n21+ event — valid photo ID required\nGreat night out in the Bolingbrook/Chicago suburbs\n\nVenue Information\nCG’s Comedy Club is located at 619 E. Boughton Rd. in Bolingbrook\, IL\, a popular comedy destination in the Chicago suburbs. The club features a full bar and an intimate showroom atmosphere perfect for live stand-up comedy. \nTicket Information\nTickets are available through Ticketmaster and VividSeats. All shows are 21 and up. Contact the venue at (630) 410-8906 for more information. \nOfficial Tickets\nResale Tickets \nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you.\nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
+URL:https://comedycalendar.com/event/joe-kilgallon-live-at-cgs-comedy-club/
+LOCATION:CG’s Comedy Club\, 619 E. Boughton Rd.\, Bolingbrook\, IL\, 60440\, USA
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/c/50a/fa9caa1f-73a1-411e-b507-ec56fa59650a_106061_TABLET_LANDSCAPE_LARGE_16_9.jpg
+GEO:41.7174244;-88.0429376
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=CG’s Comedy Club 619 E. Boughton Rd. Bolingbrook IL 60440 USA;X-APPLE-RADIUS=500;X-TITLE=619 E. Boughton Rd.:geo:-88.0429376,41.7174244
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260724T200000
+DTEND;TZID=America/Chicago:20260724T230000
+DTSTAMP:20260401T040000Z
+CREATED:20260401T040000Z
+LAST-MODIFIED:20260401T040000Z
+UID:10004512-1784923200-1784934000@comedycalendar.com
+SUMMARY:Andrew Santino LIVE at Ameristar Casino Resort Spa St. Charles
+DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you.Official Tickets Resale Tickets \nAndrew Santino LIVE at Ameristar Casino Resort Spa St. Charles\nAndrew Santino\, one of comedy’s most electrifying performers\, brings his razor-sharp wit and high-energy stand-up to the Ameristar Casino Resort Spa in St. Charles\, Missouri on July 24\, 2026. Known for his bold storytelling and fearless humor\, this is a must-see night of laughs in the St. Louis area. \nEvent Details\nDate: Friday\, July 24\, 2026Time: 8:00 PM (Doors open at 7:00 PM)Venue: Ameristar Casino Resort Spa St. CharlesAddress: One Ameristar Blvd\, Saint Charles\, MO 63301Age Requirement: 21+ (Casino property) \nAbout Andrew Santino\nAndrew Santino is a comedian\, actor\, and podcast host best known for his roles on the Showtime series Shameless and the hit comedy Dave. He is also the co-host of the wildly popular podcast Bad Friends alongside Bobby Lee\, which has amassed millions of listeners worldwide. His stand-up specials have earned him a devoted fanbase for his unfiltered\, hilarious takes on life. \nWhat to Expect\n\nHigh-energy stand-up comedy from one of the hottest names in the game\nBold\, unfiltered humor covering relationships\, pop culture\, and everyday absurdity\nAn intimate casino showroom experience with great sightlines\nA night of non-stop laughs in a world-class entertainment venue\nPossible surprise guests or special moments from this touring comedian\n\nVenue Information\nAmeristar Casino Resort Spa St. Charles is a premier entertainment destination located just outside St. Louis in Saint Charles\, Missouri. The venue features a state-of-the-art showroom\, world-class dining\, and a full casino floor\, making it the perfect setting for a memorable night out. \nTicket Information\nTickets for Andrew Santino at Ameristar Casino Resort Spa St. Charles start at approximately $40. Secure your seats early as this show is expected to sell out. Use the presale code SANTINO for early access. \nOfficial Tickets Resale TicketsThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you.All sales are final. Show times subject to change. Valid photo ID may be required for entry.
+URL:https://comedycalendar.com/event/andrew-santino-live-at-ameristar-casino-resort-spa-st-charles/
+LOCATION:Ameristar Casino Resort Spa St. Charles\, 1 Ameristar Blvd\, Saint Charles\, MO\, 63301\, United States
+ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/04/98cb1375-6bbc-492a-a72b-cec9fde559ad_TABLET_LANDSCAPE_LARGE_16_9-JdioCm.jpg
+GEO:38.7678808;-90.4850407
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Ameristar Casino Resort Spa St. Charles 1 Ameristar Blvd Saint Charles MO 63301 United States;X-APPLE-RADIUS=500;X-TITLE=1 Ameristar Blvd:geo:-90.4850407,38.7678808
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260724T210000
+DTEND;TZID=America/New_York:20260724T230000
+DTSTAMP:20260721T171202Z
+CREATED:20260630T165831Z
+LAST-MODIFIED:20260721T171202Z
+UID:10006101-1784926800-1784934000@comedycalendar.com
+SUMMARY:Thank You Miami Stand Up Comedy Show (Friday)
+DESCRIPTION:Kick off Friday right: craft beers on tap\, late-night bites & Miami‘s funniest comics. Laugh\, sip & start your weekend like a local legend.\n\n\n\n\nYou Can’t Go Wrong On A Friday Night By Doing Something Different.\nLaughs. \nCraft Beers. \nAnd a dining menu that satisfies the munchies: https://thankyoumiami.godaddysites.com/menu \nSkip the lines at nightclubs and the overpriced cocktails — start your weekend with a local comedy night that’s pure Miami. \nTickets & Seating \n🎟 First Come\, First Serve \n\nFree entry\nSeating not guaranteed — show up early for the good spots\n\n🍻 Guaranteed Preferred Seating + BOGO Drinks — $25 \n\nGuaranteed main-area seating during showtime\nBuy-One-Get-One-Free drinks\n\n👕 Guaranteed Preferred Seating + BOGO Drinks + T-Shirt — $35 \n\nEverything above\, plus a limited-edition Miami Comedy T-shirt. Look like you’ve been here since day one\, even if it’s your first Friday.\n\n(Because space is limited\, seated guests are asked to order at least one drink or menu item. Easy.) \n\n\nLooking for a Promo Code? \nText “MIAMI” to (786) 610-5571 \n\n\n\nCelebrate 10 Years of Laughter with the Miami Comedy Anniversary Shirt!\nCelebrate a decade of laughs with the Miami Comedy 10-Year Anniversary Shirt! This exclusive\, limited-edition design marks a milestone in our journey of bringing joy to Miami. Every purchase supports the Miami Comedy community\, helping us grow and continue spreading laughter across the city. \nThis collectible shirt is one-of-a-kind—once it’s sold out\, it’s gone forever. Don’t miss your chance to own a stylish piece of Miami comedy history and be part of something truly special. Grab yours now and celebrate 10 years of laughs with us! \nSizes S – XL available. \n\n\nMedia\n\nWatch all our videos about Thank You Miami Comedy Night: https://youtube.com/playlist?list=PLWygUR7TT1rBo8XBgJ9aP2M4ZkLc8uAbd\nSee all the fun we’re having on this show! Photos available here: https://miamicomedy.com/tag/thank-you-miami+photography/\n\nAbout Thank You Miami Beer House and Cocina.\nThank You Miami Beer House and Cocina is the newest hip bar located in Flagler and 17th. This bar gives thanks to the city by offering a large selection of beers and food as well as LIVE entertainment. \n\n\n\nAbout Miami Comedy\nMiamiComedy.com has produced independent comedy events for years. Over time we’ve built a platform where you can laugh everyday in Miami! We present to you authentic local and national performers and curate entertaining live shows for locals who love to laugh and enjoy the true art of stand up comedy. As seen on Amazon Prime Video “Respect the Light” the Miami New Times\, Culture Crusaders\, the Miami Improv and UNATION. We create unforgettably funny pop up shows all over the Magic City\, in all your favorite bars\, restaurants\, lounges\, theaters and virtual! We make each experience unique with its own environment\, line up\, drinking\, social groups and dining menus! \nQuestions? Special Occasions? Event Planning? Birthdays?\nGet in contact with me here: \nText: 786-610-5571 \nEmail: manny@miamicomedy.com \nChat: miamicomedy.com
+URL:https://comedycalendar.com/event/thank-you-miami-stand-up-comedy-show-friday-45/
+LOCATION:Thank You Miami Cocina & Beer House\, 1701 West Flagler Street\, #Suite 101\, Miami\, FL\, 33135\, United States
+CATEGORIES:Showcase
+ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/05/6a7ebf7a30a5bbeb3a8c1f6f9956d3a1-33Iu1E.tmp_-otl08m.jpg
+GEO:25.7731522;-80.2232127
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Thank You Miami Cocina & Beer House 1701 West Flagler Street #Suite 101 Miami FL 33135 United States;X-APPLE-RADIUS=500;X-TITLE=1701 West Flagler Street\, #Suite 101:geo:-80.2232127,25.7731522
 END:VEVENT
 END:VCALENDAR
