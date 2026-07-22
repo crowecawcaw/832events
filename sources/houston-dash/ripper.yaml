@@ -1,0 +1,19 @@
+name: houston-dash
+friendlyname: "Houston Dash"
+description: "Professional NWSL women's soccer team at Shell Energy Stadium"
+type: ticketmaster
+url: "https://www.houstondynamofc.com/houstondash"
+friendlyLink: "https://www.houstondynamofc.com/houstondash"
+tags: ["Sports", "Soccer", "Downtown", "Women"]
+geo:
+  lat: 29.7629
+  lng: -95.2413
+  label: "Shell Energy Stadium, 1 Dynamo St, Houston, TX 77054"
+calendars:
+  - name: houston-dash
+    friendlyname: "Houston Dash"
+    timezone: America/Chicago
+    config:
+      venueId: "KovZpaFrke"
+      venueName: "Shell Energy Stadium"
+      venueAddress: "1 Dynamo St, Houston, TX 77054"

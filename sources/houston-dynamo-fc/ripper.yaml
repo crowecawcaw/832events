@@ -1,0 +1,19 @@
+name: houston-dynamo-fc
+friendlyname: "Houston Dynamo FC"
+description: "Professional MLS soccer team at Shell Energy Stadium"
+type: ticketmaster
+url: "https://www.houstondynamofc.com/"
+friendlyLink: "https://www.houstondynamofc.com/"
+tags: ["Sports", "Soccer", "Downtown"]
+geo:
+  lat: 29.7629
+  lng: -95.2413
+  label: "Shell Energy Stadium, 1 Dynamo St, Houston, TX 77054"
+calendars:
+  - name: houston-dynamo-fc
+    friendlyname: "Houston Dynamo FC"
+    timezone: America/Chicago
+    config:
+      venueId: "KovZpaFrke"
+      venueName: "Shell Energy Stadium"
+      venueAddress: "1 Dynamo St, Houston, TX 77054"
