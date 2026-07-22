@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-22T05:39:15.728Z",
+  "generated": "2026-07-22T10:55:56.786Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -505,6 +505,40 @@
       ]
     },
     {
+      "name": "eureka-heights-brew-co",
+      "friendlyName": "Eureka Heights Brewery",
+      "description": "Eureka Heights Brewery",
+      "tags": [
+        "Beer",
+        "The Heights"
+      ],
+      "geo": {
+        "lat": 29.7823,
+        "lng": -95.4181,
+        "label": "Eureka Heights Brewery, 2454 Sawyer St, Houston, TX 77007"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Eureka%20Heights%20Brewery%2C%202454%20Sawyer%20St%2C%20Houston%2C%20TX%2077007"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "eureka-heights-brew-co",
+          "friendlyName": "Eureka Heights Brewery",
+          "links": {
+            "ics": {
+              "href": "external-eureka-heights-brew-co.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-eureka-heights-brew-co.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "good-on-paper-bookshop",
       "friendlyName": "Good on Paper Books and Stationery",
       "description": "Good on Paper Books and Stationery",
@@ -784,6 +818,79 @@
             },
             "rss": {
               "href": "houston-center-for-photography-houston-center-for-photography.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "houston-dash",
+      "friendlyName": "Houston Dash",
+      "description": "Professional NWSL women's soccer team at Shell Energy Stadium",
+      "url": "https://www.houstondynamofc.com/houstondash",
+      "tags": [
+        "Sports",
+        "Soccer",
+        "Downtown",
+        "Women"
+      ],
+      "geo": {
+        "lat": 29.7629,
+        "lng": -95.2413,
+        "label": "Shell Energy Stadium, 1 Dynamo St, Houston, TX 77054"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Shell%20Energy%20Stadium%2C%201%20Dynamo%20St%2C%20Houston%2C%20TX%2077054"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "houston-dash",
+          "friendlyName": "Houston Dash",
+          "links": {
+            "ics": {
+              "href": "houston-dash-houston-dash.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "houston-dash-houston-dash.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "houston-dynamo-fc",
+      "friendlyName": "Houston Dynamo FC",
+      "description": "Professional MLS soccer team at Shell Energy Stadium",
+      "url": "https://www.houstondynamofc.com/",
+      "tags": [
+        "Sports",
+        "Soccer",
+        "Downtown"
+      ],
+      "geo": {
+        "lat": 29.7629,
+        "lng": -95.2413,
+        "label": "Shell Energy Stadium, 1 Dynamo St, Houston, TX 77054"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Shell%20Energy%20Stadium%2C%201%20Dynamo%20St%2C%20Houston%2C%20TX%2077054"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "houston-dynamo-fc",
+          "friendlyName": "Houston Dynamo FC",
+          "links": {
+            "ics": {
+              "href": "houston-dynamo-fc-houston-dynamo-fc.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "houston-dynamo-fc-houston-dynamo-fc.rss",
               "type": "application/rss+xml"
             }
           }

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-22T05:39:15.740Z",
+  "generated": "2026-07-22T10:55:56.796Z",
   "tags": [
     {
       "name": "Animals",
@@ -73,8 +73,8 @@
       "name": "Beer",
       "slug": "beer",
       "category": "Activities",
-      "eventCount": 32,
-      "calendarCount": 2,
+      "eventCount": 41,
+      "calendarCount": 3,
       "links": {
         "ics": {
           "href": "tag-beer.ics",
@@ -243,8 +243,8 @@
       "name": "Downtown",
       "slug": "downtown",
       "category": "Neighborhoods",
-      "eventCount": 265,
-      "calendarCount": 10,
+      "eventCount": 295,
+      "calendarCount": 12,
       "links": {
         "ics": {
           "href": "tag-downtown.ics",
@@ -818,11 +818,28 @@
       }
     },
     {
+      "name": "Soccer",
+      "slug": "soccer",
+      "category": "Other",
+      "eventCount": 30,
+      "calendarCount": 2,
+      "links": {
+        "ics": {
+          "href": "tag-soccer.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-soccer.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
       "name": "Sports",
       "slug": "sports",
       "category": "Activities",
-      "eventCount": 27,
-      "calendarCount": 1,
+      "eventCount": 57,
+      "calendarCount": 3,
       "links": {
         "ics": {
           "href": "tag-sports.ics",
@@ -855,8 +872,8 @@
       "name": "The Heights",
       "slug": "the-heights",
       "category": "Neighborhoods",
-      "eventCount": 56,
-      "calendarCount": 5,
+      "eventCount": 65,
+      "calendarCount": 6,
       "links": {
         "ics": {
           "href": "tag-the-heights.ics",
@@ -1034,6 +1051,23 @@
         },
         "rss": {
           "href": "tag-west-university.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Women",
+      "slug": "women",
+      "category": "Other",
+      "eventCount": 15,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-women.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-women.rss",
           "type": "application/rss+xml"
         }
       }

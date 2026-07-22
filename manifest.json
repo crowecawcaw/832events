@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-22T05:38:47.487Z",
+  "lastUpdated": "2026-07-22T10:55:49.788Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -269,6 +269,45 @@
             "Arts",
             "Photography",
             "Montrose"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "houston-dash",
+      "friendlyName": "Houston Dash",
+      "description": "Professional NWSL women's soccer team at Shell Energy Stadium",
+      "friendlyLink": "https://www.houstondynamofc.com/houstondash",
+      "calendars": [
+        {
+          "name": "houston-dash",
+          "friendlyName": "Houston Dash",
+          "icsUrl": "houston-dash-houston-dash.ics",
+          "rssUrl": "houston-dash-houston-dash.rss",
+          "tags": [
+            "Sports",
+            "Soccer",
+            "Downtown",
+            "Women"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "houston-dynamo-fc",
+      "friendlyName": "Houston Dynamo FC",
+      "description": "Professional MLS soccer team at Shell Energy Stadium",
+      "friendlyLink": "https://www.houstondynamofc.com/",
+      "calendars": [
+        {
+          "name": "houston-dynamo-fc",
+          "friendlyName": "Houston Dynamo FC",
+          "icsUrl": "houston-dynamo-fc-houston-dynamo-fc.ics",
+          "rssUrl": "houston-dynamo-fc-houston-dynamo-fc.rss",
+          "tags": [
+            "Sports",
+            "Soccer",
+            "Downtown"
           ]
         }
       ]
@@ -797,6 +836,16 @@
       ]
     },
     {
+      "name": "eureka-heights-brew-co",
+      "friendlyName": "Eureka Heights Brewery",
+      "icsUrl": "external-eureka-heights-brew-co.ics",
+      "originalIcsUrl": "https://www.eurekaheights.com/?post_type=tribe_events&ical=1&eventDisplay=list",
+      "tags": [
+        "Beer",
+        "The Heights"
+      ]
+    },
+    {
       "name": "hermann-park",
       "friendlyName": "Hermann Park Conservancy",
       "description": "Hermann Park Conservancy",
@@ -1016,6 +1065,7 @@
     "PerformingArts",
     "Photography",
     "Restaurant",
+    "Soccer",
     "Sports",
     "Tech",
     "The Heights",
@@ -1029,6 +1079,7 @@
     "Uptown",
     "Wedgewood",
     "West University",
+    "Women",
     "Workshops"
   ]
 }

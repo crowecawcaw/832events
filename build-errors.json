@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-07-22T05:39:15.733Z",
-  "totalErrors": 10,
+  "buildTime": "2026-07-22T10:55:56.791Z",
+  "totalErrors": 3,
   "configErrors": [],
   "sources": [
     {
@@ -51,10 +51,10 @@
   ],
   "externalCalendarFailures": [
     {
-      "name": "eureka-heights-brew-co",
-      "friendlyName": "Eureka Heights Brewery",
-      "url": "https://www.eurekaheights.com/?post_type=tribe_events&ical=1&eventDisplay=list",
-      "error": "Error: HTTP 415: "
+      "name": "bad-astronaut-brewery",
+      "friendlyName": "Bad Astronaut Brewery",
+      "url": "https://badastronautbeer.com/?post_type=tribe_events&ical=1&eventDisplay=list",
+      "error": "Error: HTTP 403: "
     },
     {
       "name": "islamic-society-greater-houston",
@@ -63,55 +63,12 @@
       "error": "Error: HTTP 403: "
     }
   ],
-  "geocodeErrors": [
-    {
-      "type": "GeocodeError",
-      "location": "Woodville, TX - Alan Shivers Library",
-      "source": "texas-parks-wildlife-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Foundation Room at House of Blues Chicago, 329 N Dearborn St, Chicago, IL, 60654, USA",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Chicago Improv, 5 Woodfield Mall, Schaumburg, IL, 60173, USA",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Hard Rock Live Orlando, 6050 Universal Blvd, Orlando, FL, 32819, United States Of America",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Emerald Queen Casino, 2920 East R Street, Tacoma, Washington, 98404, United States",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "CG’s Comedy Club, 619 E. Boughton Rd., Bolingbrook, IL, 60440, USA",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Ameristar Casino Resort Spa St. Charles, 1 Ameristar Blvd, Saint Charles, MO, 63301, United States",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    }
-  ],
+  "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1628,
-    "eventsWithGeo": 1395,
+    "totalEvents": 1667,
+    "eventsWithGeo": 1434,
     "eventsWithoutGeo": 233,
-    "geocodeErrors": 7
+    "geocodeErrors": 0
   },
   "uncertainEvents": [],
   "uncertaintyStats": {
@@ -136,7 +93,6 @@
     "tag-concerts",
     "tag-fifa",
     "tag-literary",
-    "external-bad-astronaut-brewery",
     "external-houston-cinema-arts-society"
   ],
   "expectedEmptyCalendars": [],
@@ -341,6 +297,20 @@
       "label": "Houston, TX",
       "lat": 29.7489,
       "lng": -95.3676
+    },
+    {
+      "source": "ripper",
+      "name": "houston-dash",
+      "label": "Shell Energy Stadium, 1 Dynamo St, Houston, TX 77054",
+      "lat": 29.7629,
+      "lng": -95.2413
+    },
+    {
+      "source": "ripper",
+      "name": "houston-dynamo-fc",
+      "label": "Shell Energy Stadium, 1 Dynamo St, Houston, TX 77054",
+      "lat": 29.7629,
+      "lng": -95.2413
     },
     {
       "source": "external",
@@ -603,10 +573,10 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 983,
-    "totalEvents": 1628,
+    "eventsWithImage": 1021,
+    "totalEvents": 1667,
     "venuesWithImage": 0,
-    "totalVenues": 53,
+    "totalVenues": 56,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -709,6 +679,12 @@
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=ERJCC%20Houston%2C%205600%20North%20Braeswood%20Blvd%2C%20Houston%2C%20TX%2077096"
       },
       {
+        "source": "external",
+        "name": "eureka-heights-brew-co",
+        "label": "Eureka Heights Brewery, 2454 Sawyer St, Houston, TX 77007",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Eureka%20Heights%20Brewery%2C%202454%20Sawyer%20St%2C%20Houston%2C%20TX%2077007"
+      },
+      {
         "source": "ripper",
         "name": "good-on-paper-bookshop",
         "label": "Good on Paper Books, 250 W 19th St Suite D, Houston, TX 77008",
@@ -762,6 +738,20 @@
         "label": "Houston Center for Photography, 1441 W Alabama St, Houston, TX 77006",
         "url": "https://www.edu.hcponline.org/events",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Houston%20Center%20for%20Photography%2C%201441%20W%20Alabama%20St%2C%20Houston%2C%20TX%2077006"
+      },
+      {
+        "source": "ripper",
+        "name": "houston-dash",
+        "label": "Shell Energy Stadium, 1 Dynamo St, Houston, TX 77054",
+        "url": "https://www.houstondynamofc.com/houstondash",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Shell%20Energy%20Stadium%2C%201%20Dynamo%20St%2C%20Houston%2C%20TX%2077054"
+      },
+      {
+        "source": "ripper",
+        "name": "houston-dynamo-fc",
+        "label": "Shell Energy Stadium, 1 Dynamo St, Houston, TX 77054",
+        "url": "https://www.houstondynamofc.com/",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Shell%20Energy%20Stadium%2C%201%20Dynamo%20St%2C%20Houston%2C%20TX%2077054"
       },
       {
         "source": "external",
@@ -3298,7 +3288,7 @@
   "costStats": {
     "eventsWithCost": 399,
     "freeEvents": 253,
-    "totalEvents": 1628,
+    "totalEvents": 1667,
     "unresolvable": 0
   },
   "costGaps": [
@@ -4555,6 +4545,216 @@
       "summary": "HCP Photobook Club - Wendy Watriss",
       "date": "2026-07-19T14:00-05:00[America/Chicago]",
       "url": "https://www.edu.hcponline.org/events/hcp-photobook-club-wendy-watriss"
+    },
+    {
+      "source": "houston-dash",
+      "eventId": "tm-Z7r9jZ1A7Oxb6",
+      "summary": "Houston Dash vs. Washington Spirit",
+      "date": "2026-10-04T18:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7Oxb6"
+    },
+    {
+      "source": "houston-dash",
+      "eventId": "tm-Z7r9jZ1A7Oxb7",
+      "summary": "Houston Dash vs. Kansas City Current",
+      "date": "2026-08-08T19:45-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7Oxb7"
+    },
+    {
+      "source": "houston-dash",
+      "eventId": "tm-Z7r9jZ1A7OxbA",
+      "summary": "Houston Dash vs. Chicago Stars FC",
+      "date": "2026-08-19T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OxbA"
+    },
+    {
+      "source": "houston-dash",
+      "eventId": "tm-Z7r9jZ1A7Oxbd",
+      "summary": "Houston Dash vs. NJ/NY Gotham FC",
+      "date": "2026-08-01T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7Oxbd"
+    },
+    {
+      "source": "houston-dash",
+      "eventId": "tm-Z7r9jZ1A7Oxbe",
+      "summary": "Houston Dash vs. Bay FC",
+      "date": "2026-07-24T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7Oxbe"
+    },
+    {
+      "source": "houston-dash",
+      "eventId": "tm-Z7r9jZ1A7OxbF",
+      "summary": "Houston Dash vs. Orlando Pride",
+      "date": "2026-10-18T12:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OxbF"
+    },
+    {
+      "source": "houston-dash",
+      "eventId": "tm-Z7r9jZ1A7Oxbk",
+      "summary": "Houston Dash vs. Utah Royals FC",
+      "date": "2026-09-12T19:45-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7Oxbk"
+    },
+    {
+      "source": "houston-dash",
+      "eventId": "tm-Z7r9jZ1A7ro7M",
+      "summary": "Houston Dynamo vs. D.C. United",
+      "date": "2026-07-22T19:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7ro7M"
+    },
+    {
+      "source": "houston-dash",
+      "eventId": "tm-Z7r9jZ1A7ro7y",
+      "summary": "Houston Dynamo vs. Los Angeles Galaxy",
+      "date": "2026-08-15T19:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7ro7y"
+    },
+    {
+      "source": "houston-dash",
+      "eventId": "tm-Z7r9jZ1A7ro7z",
+      "summary": "Houston Dynamo vs. Austin FC",
+      "date": "2026-07-25T19:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7ro7z"
+    },
+    {
+      "source": "houston-dash",
+      "eventId": "tm-Z7r9jZ1A7roA7",
+      "summary": "Houston Dynamo vs. FC Dallas",
+      "date": "2026-10-17T19:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7roA7"
+    },
+    {
+      "source": "houston-dash",
+      "eventId": "tm-Z7r9jZ1A7roAd",
+      "summary": "Houston Dynamo vs. Sporting Kansas City",
+      "date": "2026-09-26T19:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7roAd"
+    },
+    {
+      "source": "houston-dash",
+      "eventId": "tm-Z7r9jZ1A7roAe",
+      "summary": "Houston Dynamo vs. FC Cincinnati",
+      "date": "2026-09-19T19:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7roAe"
+    },
+    {
+      "source": "houston-dash",
+      "eventId": "tm-Z7r9jZ1A7roAv",
+      "summary": "Houston Dynamo vs. Real Salt Lake",
+      "date": "2026-09-09T19:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7roAv"
+    },
+    {
+      "source": "houston-dash",
+      "eventId": "tm-Z7r9jZ1A7roAZ",
+      "summary": "Houston Dynamo vs. San Jose Earthquakes",
+      "date": "2026-08-29T19:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7roAZ"
+    },
+    {
+      "source": "houston-dynamo-fc",
+      "eventId": "tm-Z7r9jZ1A7Oxb6",
+      "summary": "Houston Dash vs. Washington Spirit",
+      "date": "2026-10-04T18:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7Oxb6"
+    },
+    {
+      "source": "houston-dynamo-fc",
+      "eventId": "tm-Z7r9jZ1A7Oxb7",
+      "summary": "Houston Dash vs. Kansas City Current",
+      "date": "2026-08-08T19:45-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7Oxb7"
+    },
+    {
+      "source": "houston-dynamo-fc",
+      "eventId": "tm-Z7r9jZ1A7OxbA",
+      "summary": "Houston Dash vs. Chicago Stars FC",
+      "date": "2026-08-19T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OxbA"
+    },
+    {
+      "source": "houston-dynamo-fc",
+      "eventId": "tm-Z7r9jZ1A7Oxbd",
+      "summary": "Houston Dash vs. NJ/NY Gotham FC",
+      "date": "2026-08-01T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7Oxbd"
+    },
+    {
+      "source": "houston-dynamo-fc",
+      "eventId": "tm-Z7r9jZ1A7Oxbe",
+      "summary": "Houston Dash vs. Bay FC",
+      "date": "2026-07-24T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7Oxbe"
+    },
+    {
+      "source": "houston-dynamo-fc",
+      "eventId": "tm-Z7r9jZ1A7OxbF",
+      "summary": "Houston Dash vs. Orlando Pride",
+      "date": "2026-10-18T12:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OxbF"
+    },
+    {
+      "source": "houston-dynamo-fc",
+      "eventId": "tm-Z7r9jZ1A7Oxbk",
+      "summary": "Houston Dash vs. Utah Royals FC",
+      "date": "2026-09-12T19:45-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7Oxbk"
+    },
+    {
+      "source": "houston-dynamo-fc",
+      "eventId": "tm-Z7r9jZ1A7ro7M",
+      "summary": "Houston Dynamo vs. D.C. United",
+      "date": "2026-07-22T19:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7ro7M"
+    },
+    {
+      "source": "houston-dynamo-fc",
+      "eventId": "tm-Z7r9jZ1A7ro7y",
+      "summary": "Houston Dynamo vs. Los Angeles Galaxy",
+      "date": "2026-08-15T19:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7ro7y"
+    },
+    {
+      "source": "houston-dynamo-fc",
+      "eventId": "tm-Z7r9jZ1A7ro7z",
+      "summary": "Houston Dynamo vs. Austin FC",
+      "date": "2026-07-25T19:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7ro7z"
+    },
+    {
+      "source": "houston-dynamo-fc",
+      "eventId": "tm-Z7r9jZ1A7roA7",
+      "summary": "Houston Dynamo vs. FC Dallas",
+      "date": "2026-10-17T19:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7roA7"
+    },
+    {
+      "source": "houston-dynamo-fc",
+      "eventId": "tm-Z7r9jZ1A7roAd",
+      "summary": "Houston Dynamo vs. Sporting Kansas City",
+      "date": "2026-09-26T19:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7roAd"
+    },
+    {
+      "source": "houston-dynamo-fc",
+      "eventId": "tm-Z7r9jZ1A7roAe",
+      "summary": "Houston Dynamo vs. FC Cincinnati",
+      "date": "2026-09-19T19:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7roAe"
+    },
+    {
+      "source": "houston-dynamo-fc",
+      "eventId": "tm-Z7r9jZ1A7roAv",
+      "summary": "Houston Dynamo vs. Real Salt Lake",
+      "date": "2026-09-09T19:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7roAv"
+    },
+    {
+      "source": "houston-dynamo-fc",
+      "eventId": "tm-Z7r9jZ1A7roAZ",
+      "summary": "Houston Dynamo vs. San Jose Earthquakes",
+      "date": "2026-08-29T19:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7roAZ"
     },
     {
       "source": "houston-grand-opera",
@@ -8588,6 +8788,20 @@
       "source": "houston-center-for-photography"
     },
     {
+      "name": "houston-dash-houston-dash",
+      "type": "Ripper",
+      "events": 15,
+      "expectEmpty": false,
+      "source": "houston-dash"
+    },
+    {
+      "name": "houston-dynamo-fc-houston-dynamo-fc",
+      "type": "Ripper",
+      "events": 15,
+      "expectEmpty": false,
+      "source": "houston-dynamo-fc"
+    },
+    {
       "name": "houston-grand-opera-houston-grand-opera",
       "type": "Ripper",
       "events": 1,
@@ -8814,7 +9028,7 @@
     {
       "name": "tag-the-heights",
       "type": "Aggregate",
-      "events": 56,
+      "events": 65,
       "expectEmpty": false,
       "source": "tag-the-heights"
     },
@@ -8849,7 +9063,7 @@
     {
       "name": "tag-downtown",
       "type": "Aggregate",
-      "events": 265,
+      "events": 295,
       "expectEmpty": false,
       "source": "tag-downtown"
     },
@@ -9029,6 +9243,27 @@
       "source": "tag-photography"
     },
     {
+      "name": "tag-sports",
+      "type": "Aggregate",
+      "events": 57,
+      "expectEmpty": false,
+      "source": "tag-sports"
+    },
+    {
+      "name": "tag-soccer",
+      "type": "Aggregate",
+      "events": 30,
+      "expectEmpty": false,
+      "source": "tag-soccer"
+    },
+    {
+      "name": "tag-women",
+      "type": "Aggregate",
+      "events": 15,
+      "expectEmpty": false,
+      "source": "tag-women"
+    },
+    {
       "name": "tag-opera",
       "type": "Aggregate",
       "events": 1,
@@ -9064,13 +9299,6 @@
       "source": "tag-hiking"
     },
     {
-      "name": "tag-sports",
-      "type": "Aggregate",
-      "events": 27,
-      "expectEmpty": false,
-      "source": "tag-sports"
-    },
-    {
       "name": "tag-japaneseculture",
       "type": "Aggregate",
       "events": 4,
@@ -9087,7 +9315,7 @@
     {
       "name": "tag-beer",
       "type": "Aggregate",
-      "events": 32,
+      "events": 41,
       "expectEmpty": false,
       "source": "tag-beer"
     },
@@ -9304,7 +9532,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1638,
+      "events": 1677,
       "expectEmpty": false,
       "source": "tag-all"
     },
@@ -9314,13 +9542,6 @@
       "events": 5043,
       "expectEmpty": false,
       "source": "axelrad-beer-garden"
-    },
-    {
-      "name": "external-bad-astronaut-brewery",
-      "type": "External",
-      "events": 0,
-      "expectEmpty": false,
-      "source": "bad-astronaut-brewery"
     },
     {
       "name": "external-ccs-houston",
@@ -9356,6 +9577,13 @@
       "events": 3,
       "expectEmpty": false,
       "source": "erjcc-houston"
+    },
+    {
+      "name": "external-eureka-heights-brew-co",
+      "type": "External",
+      "events": 9,
+      "expectEmpty": false,
+      "source": "eureka-heights-brew-co"
     },
     {
       "name": "external-hermann-park",

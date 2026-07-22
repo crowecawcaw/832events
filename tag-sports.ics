@@ -6,9 +6,91 @@ METHOD:PUBLISH
 X-WR-CALNAME:Sports Events
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:CfV4yZhwi61ow4V2l_FfH
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /a/3a3/da2cc604-6d62-48ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/3a3/da2cc604-6d62-48
+ ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+UID:WAC0dl4lg5O5QzOD9mr-E
+SUMMARY:Houston Dynamo vs. D.C. United
+DTSTAMP:20260722T105542Z
+DTSTART:20260723T003000Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7ro7M\n\nFrom Housto
+	n Dash
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7ro7M
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dash
+CATEGORIES:Houston Dash
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /a/3a3/da2cc604-6d62-48ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/3a3/da2cc604-6d62-48
+ ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+UID:qfyclfLVAfhAs4cXIaO8s
+SUMMARY:Houston Dynamo vs. D.C. United
+DTSTAMP:20260722T105542Z
+DTSTART:20260723T003000Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7ro7M\n\nFrom Housto
+	n Dynamo FC
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7ro7M
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dynamo-fc
+CATEGORIES:Houston Dynamo FC
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /c/f9a/3c3c0a9d-033f-47b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jp
+ g
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/c/f9a/3c3c0a9d-033f-47
+ b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jpg
+UID:2gaZb_ajzvFBDadIh4usv
+SUMMARY:Houston Dash vs. Bay FC
+DTSTAMP:20260722T105542Z
+DTSTART:20260725T000000Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7Oxbe\n\nFrom Housto
+	n Dash
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7Oxbe
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dash
+CATEGORIES:Houston Dash
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /c/f9a/3c3c0a9d-033f-47b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jp
+ g
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/c/f9a/3c3c0a9d-033f-47
+ b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jpg
+UID:GSQsTHkJW7O1JzEkZZl7w
+SUMMARY:Houston Dash vs. Bay FC
+DTSTAMP:20260722T105542Z
+DTSTART:20260725T000000Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7Oxbe\n\nFrom Housto
+	n Dynamo FC
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7Oxbe
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dynamo-fc
+CATEGORIES:Houston Dynamo FC
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+UID:WUY5IEYSshIOeJ19THzIT
 SUMMARY:White Water Kayaking 101 Weekend
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20260725T000000Z
 DESCRIPTION:[water-sport]\nPublic - An Epic Weekend of Adventure and Skill-
 	Building\n\nhttps://htxoutdoors.com/events/white-water-kayaking-101-weeken
@@ -20,9 +102,9 @@ TRANSP:TRANSPARENT
 DURATION:PT43H
 END:VEVENT
 BEGIN:VEVENT
-UID:N-wG4TpMCkla3h0NoW20g
+UID:mJCTtT12ftxZawONwYtNo
 SUMMARY:Evening Forest Hike
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20260725T000000Z
 DESCRIPTION:[hiking]\nWhether you’re looking to relax\, enjoy nature\, or m
 	eet others in the community\, this hike offers the perfect midweek reset.\
@@ -35,9 +117,9 @@ TRANSP:TRANSPARENT
 DURATION:PT1H30M
 END:VEVENT
 BEGIN:VEVENT
-UID:8HjG8gQWOsA_g-xuNAuLN
+UID:pm2NfbwOGqdI_b3mgphvr
 SUMMARY:Memorial Park Hike – early morning
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20260725T123000Z
 DESCRIPTION:[hiking]\nJoin us for an early morning hike in the shady Memori
 	al Trails.\n\nhttps://htxoutdoors.com/events/memorial-park-hike-3/\n\nFrom
@@ -49,9 +131,9 @@ TRANSP:TRANSPARENT
 DURATION:PT2H
 END:VEVENT
 BEGIN:VEVENT
-UID:pR3rq15SNYdVkzFOBjtIx
+UID:pH4v0zthvSLK3IWe3eHCA
 SUMMARY:Disc Golf at TC Jester Park
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20260725T130000Z
 DESCRIPTION:[social]\nDoesn't matter if you are a beginner or a pro at disc
 	 golf. This is a fun round on all the holes. Just make sure you have some 
@@ -64,9 +146,49 @@ TRANSP:TRANSPARENT
 DURATION:PT2H30M
 END:VEVENT
 BEGIN:VEVENT
-UID:3rlwlJMivEVrZyGrrCpua
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /a/3a3/da2cc604-6d62-48ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/3a3/da2cc604-6d62-48
+ ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+UID:bgfHtlcdY_AoijTt7qLHQ
+SUMMARY:Houston Dynamo vs. Austin FC
+DTSTAMP:20260722T105542Z
+DTSTART:20260726T003000Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7ro7z\n\nFrom Housto
+	n Dash
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7ro7z
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dash
+CATEGORIES:Houston Dash
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /a/3a3/da2cc604-6d62-48ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/3a3/da2cc604-6d62-48
+ ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+UID:SsbqHg9H46B_oNfHCPLOf
+SUMMARY:Houston Dynamo vs. Austin FC
+DTSTAMP:20260722T105542Z
+DTSTART:20260726T003000Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7ro7z\n\nFrom Housto
+	n Dynamo FC
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7ro7z
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dynamo-fc
+CATEGORIES:Houston Dynamo FC
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+UID:ee_bYCL5CHJk365b3Hu0_
 SUMMARY:Elevation Training in Buffalo Bayou
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20260728T003000Z
 DESCRIPTION:[training]\nJoin me for a unique training/workout in the Downto
 	n Houston area.\n\nhttps://htxoutdoors.com/events/elevation-training-in-bu
@@ -82,9 +204,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://htxoutdoors.com/wp
  -content/uploads/sites/7/2017/11/Blue-Full-Moon-1024x576-150x150.jpg
 ATTACH;FMTTYPE=image/jpeg:https://htxoutdoors.com/wp-content/uploads/sites/
  7/2017/11/Blue-Full-Moon-1024x576-150x150.jpg
-UID:7c6An94R9Fy4UyCDVcHsv
+UID:f8Ftnbqoy0ONAr6kMvcIe
 SUMMARY:Full Moon Hike
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20260729T005000Z
 DESCRIPTION:[hiking]\nJoin us for a Full Moon Hike — a free outdoor adventu
 	re designed to help you get outside\, breathe a little deeper\, and meet p
@@ -102,9 +224,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://htxoutdoors.com/wp
  768-1-150x150.jpg
 ATTACH;FMTTYPE=image/jpeg:https://htxoutdoors.com/wp-content/uploads/sites/
  7/2026/07/Early-Morning-Kayaking-Armand-Bayou-1024x768-1-150x150.jpg
-UID:cSlLrjRTMaOmWt74r6jMA
+UID:ooAXMsB3N8dqgrEkZpMdl
 SUMMARY:Early Morning Kayaking Armand Bayou
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20260801T123000Z
 DESCRIPTION:[kayaking]\nJoin us for an easy paddle on flat water in a uniqu
 	e freshwater estuary environment for a couple of hours. This is a small sl
@@ -118,9 +240,9 @@ TRANSP:TRANSPARENT
 DURATION:PT3H30M
 END:VEVENT
 BEGIN:VEVENT
-UID:Us0Acren7inFK0jeBt6Pr
+UID:KXZ67g3m1GqId4IaaU_iO
 SUMMARY:Mountain Biking
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20260801T150000Z
 DESCRIPTION:[cycling]\nReady to trade pavement for shady singletrack? Join 
 	us for a fun mountain bike ride at Jack Brooks Park\, one of the southeast
@@ -133,9 +255,93 @@ TRANSP:TRANSPARENT
 DURATION:PT1H
 END:VEVENT
 BEGIN:VEVENT
-UID:mYrgdo3b0x1kB1dj-1rlK
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /c/f9a/3c3c0a9d-033f-47b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jp
+ g
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/c/f9a/3c3c0a9d-033f-47
+ b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jpg
+UID:341pAFZhJYGbG6EyGdexa
+SUMMARY:Houston Dash vs. NJ/NY Gotham FC
+DTSTAMP:20260722T105542Z
+DTSTART:20260802T000000Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7Oxbd\n\nFrom Housto
+	n Dash
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7Oxbd
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dash
+CATEGORIES:Houston Dash
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /c/f9a/3c3c0a9d-033f-47b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jp
+ g
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/c/f9a/3c3c0a9d-033f-47
+ b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jpg
+UID:05-q2Q-7kPwdjC60mjlR7
+SUMMARY:Houston Dash vs. NJ/NY Gotham FC
+DTSTAMP:20260722T105542Z
+DTSTART:20260802T000000Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7Oxbd\n\nFrom Housto
+	n Dynamo FC
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7Oxbd
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dynamo-fc
+CATEGORIES:Houston Dynamo FC
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /c/f9a/3c3c0a9d-033f-47b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jp
+ g
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/c/f9a/3c3c0a9d-033f-47
+ b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jpg
+UID:blTYSX7SjnkUWTamFpoDa
+SUMMARY:Houston Dash vs. Kansas City Current
+DTSTAMP:20260722T105542Z
+DTSTART:20260809T004500Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7Oxb7\n\nFrom Housto
+	n Dash
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7Oxb7
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dash
+CATEGORIES:Houston Dash
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /c/f9a/3c3c0a9d-033f-47b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jp
+ g
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/c/f9a/3c3c0a9d-033f-47
+ b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jpg
+UID:fwZH9-i2JsE38dzRNQOu8
+SUMMARY:Houston Dash vs. Kansas City Current
+DTSTAMP:20260722T105542Z
+DTSTART:20260809T004500Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7Oxb7\n\nFrom Housto
+	n Dynamo FC
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7Oxb7
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dynamo-fc
+CATEGORIES:Houston Dynamo FC
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+UID:a6q25vJ2Qcxc2NKZrLXyt
 SUMMARY:Ice Skating Galleria
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20260809T180000Z
 DESCRIPTION:[skating]\nLet's hit the ice.\n\nhttps://htxoutdoors.com/events
 	/ice-skating-galleria/\n\nFrom HTXoutdoors
@@ -146,9 +352,9 @@ TRANSP:TRANSPARENT
 DURATION:PT2H
 END:VEVENT
 BEGIN:VEVENT
-UID:swEGOjlqUoc9sPxXABVhC
+UID:djTQAu8eOozuSfA1Z6W_q
 SUMMARY:Intro to Kayak Roll Pool Party
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20260810T230000Z
 DESCRIPTION:[water-sport]\nWant to work on your roll between White Water Ka
 	yaking sessions? Event Leader Rob has a great property with an outdoor poo
@@ -162,9 +368,9 @@ TRANSP:TRANSPARENT
 DURATION:PT4H
 END:VEVENT
 BEGIN:VEVENT
-UID:cGHhOZpIeHEpAm0GoMRGK
+UID:NWpQ-VJl7afMwA6XBhkmZ
 SUMMARY:Backpacking in Grand Teton National Park
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20260814T180000Z
 DESCRIPTION:[hiking]\nJoin us for an unforgettable backpacking adventure in
 	 Glacier National Park this Summer!\n\nhttps://htxoutdoors.com/events/back
@@ -177,9 +383,9 @@ TRANSP:TRANSPARENT
 DURATION:PT219H
 END:VEVENT
 BEGIN:VEVENT
-UID:xJJs_FcXTWqVL-8zgXz-W
+UID:HzPHclO5r023vMcQzc5EH
 SUMMARY:Evening Forest Hike
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20260815T000000Z
 DESCRIPTION:[hiking]\nWhether you’re looking to relax\, enjoy nature\, or m
 	eet others in the community\, this hike offers the perfect midweek reset.\
@@ -196,9 +402,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://htxoutdoors.com/wp
  -content/uploads/sites/7/2024/02/SUP-Friendswood-3-150x150.jpg
 ATTACH;FMTTYPE=image/jpeg:https://htxoutdoors.com/wp-content/uploads/sites/
  7/2024/02/SUP-Friendswood-3-150x150.jpg
-UID:nfBrYuFIOQLgkqhfyDW4H
+UID:mhuUwVadtQk4WeyM-f_ew
 SUMMARY:SUP & Kayak Social
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20260815T130000Z
 DESCRIPTION:[water-sport]\nCool off with a little SUP action! We'll bring S
 	tand Up Paddleboards to share.\nIf you’ve never SUP’ed before\, we’ll show
@@ -212,9 +418,91 @@ TRANSP:TRANSPARENT
 DURATION:PT4H
 END:VEVENT
 BEGIN:VEVENT
-UID:-0T-udYKC5ObjV1NCVYxA
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /a/3a3/da2cc604-6d62-48ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/3a3/da2cc604-6d62-48
+ ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+UID:NCMq17EJvR1utU9-n1K3W
+SUMMARY:Houston Dynamo vs. Los Angeles Galaxy
+DTSTAMP:20260722T105542Z
+DTSTART:20260816T003000Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7ro7y\n\nFrom Housto
+	n Dash
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7ro7y
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dash
+CATEGORIES:Houston Dash
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /a/3a3/da2cc604-6d62-48ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/3a3/da2cc604-6d62-48
+ ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+UID:Ol8G-bfveUpbGKAZ8yfsh
+SUMMARY:Houston Dynamo vs. Los Angeles Galaxy
+DTSTAMP:20260722T105542Z
+DTSTART:20260816T003000Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7ro7y\n\nFrom Housto
+	n Dynamo FC
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7ro7y
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dynamo-fc
+CATEGORIES:Houston Dynamo FC
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /c/f9a/3c3c0a9d-033f-47b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jp
+ g
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/c/f9a/3c3c0a9d-033f-47
+ b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jpg
+UID:zhsqPLXaoyecbdqNYOlth
+SUMMARY:Houston Dash vs. Chicago Stars FC
+DTSTAMP:20260722T105542Z
+DTSTART:20260820T000000Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7OxbA\n\nFrom Housto
+	n Dash
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7OxbA
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dash
+CATEGORIES:Houston Dash
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /c/f9a/3c3c0a9d-033f-47b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jp
+ g
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/c/f9a/3c3c0a9d-033f-47
+ b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jpg
+UID:KctLzqbljE5aMze3eAIgC
+SUMMARY:Houston Dash vs. Chicago Stars FC
+DTSTAMP:20260722T105542Z
+DTSTART:20260820T000000Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7OxbA\n\nFrom Housto
+	n Dynamo FC
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7OxbA
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dynamo-fc
+CATEGORIES:Houston Dynamo FC
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+UID:yEW-i8GX54K5oRarLaL0R
 SUMMARY:White Water Kayaking 101 Weekend
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20260822T000000Z
 DESCRIPTION:[water-sport]\nPublic - An Epic Weekend of Adventure and Skill-
 	Building\n\nhttps://htxoutdoors.com/events/white-water-kayaking-101-weeken
@@ -230,9 +518,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://htxoutdoors.com/wp
  -content/uploads/sites/7/2017/11/Blue-Full-Moon-1024x576-150x150.jpg
 ATTACH;FMTTYPE=image/jpeg:https://htxoutdoors.com/wp-content/uploads/sites/
  7/2017/11/Blue-Full-Moon-1024x576-150x150.jpg
-UID:FiVbFl9MN_AqBt3GMHGME
+UID:Ro9DYouUS79K-znHbzOJZ
 SUMMARY:Full Moon Hike
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20260828T002000Z
 DESCRIPTION:[hiking]\nJoin us for a Full Moon Hike — a free outdoor adventu
 	re designed to help you get outside\, breathe a little deeper\, and meet p
@@ -245,9 +533,9 @@ TRANSP:TRANSPARENT
 DURATION:PT1H40M
 END:VEVENT
 BEGIN:VEVENT
-UID:G61A2hRiy25cjYHjcqPzg
+UID:C_bqxkvve0R_6rJnXloyn
 SUMMARY:Evening Forest Hike
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20260829T000000Z
 DESCRIPTION:[hiking]\nWhether you’re looking to relax\, enjoy nature\, or m
 	eet others in the community\, this hike offers the perfect midweek reset.\
@@ -260,9 +548,49 @@ TRANSP:TRANSPARENT
 DURATION:PT1H30M
 END:VEVENT
 BEGIN:VEVENT
-UID:VnG6smlpG0BByxbwB170O
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /a/3a3/da2cc604-6d62-48ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/3a3/da2cc604-6d62-48
+ ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+UID:SevAmr3FMuEsDNL04_y8R
+SUMMARY:Houston Dynamo vs. San Jose Earthquakes
+DTSTAMP:20260722T105542Z
+DTSTART:20260830T003000Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7roAZ\n\nFrom Housto
+	n Dash
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7roAZ
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dash
+CATEGORIES:Houston Dash
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /a/3a3/da2cc604-6d62-48ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/3a3/da2cc604-6d62-48
+ ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+UID:Lc9vRkz_lbya7xrFkstR3
+SUMMARY:Houston Dynamo vs. San Jose Earthquakes
+DTSTAMP:20260722T105542Z
+DTSTART:20260830T003000Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7roAZ\n\nFrom Housto
+	n Dynamo FC
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7roAZ
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dynamo-fc
+CATEGORIES:Houston Dynamo FC
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+UID:5g3RK-wBpPusVXWoSdPFC
 SUMMARY:African Safari Adventure
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20260903T130000Z
 DESCRIPTION:[social]\nImmerse yourself in the wilds of Africa!! Botswana is
 	 one of the few remaining destinations in Africa that still provides a goo
@@ -275,9 +603,9 @@ TRANSP:TRANSPARENT
 DURATION:PT201H
 END:VEVENT
 BEGIN:VEVENT
-UID:9J02rGS9gLbeI-RE9qWB1
+UID:hNFT8eUFaFYGeK7hBLon_
 SUMMARY:Annual Beneeezy Purple Monkey Fun Run
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20260905T120000Z
 DESCRIPTION:[running]\nThe Annyual Beneezy Purple Monkey Fun Run is a race 
 	for everyone!\n\nhttps://htxoutdoors.com/events/annual-beneeezy-purple-mon
@@ -289,9 +617,49 @@ TRANSP:TRANSPARENT
 DURATION:PT3H
 END:VEVENT
 BEGIN:VEVENT
-UID:kyfEAv0DhPD1xz6uEbLH4
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /a/3a3/da2cc604-6d62-48ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/3a3/da2cc604-6d62-48
+ ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+UID:jR7G3NgQeDnV14lxMUM8u
+SUMMARY:Houston Dynamo vs. Real Salt Lake
+DTSTAMP:20260722T105542Z
+DTSTART:20260910T003000Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7roAv\n\nFrom Housto
+	n Dash
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7roAv
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dash
+CATEGORIES:Houston Dash
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /a/3a3/da2cc604-6d62-48ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/3a3/da2cc604-6d62-48
+ ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+UID:GwRwSAjIzVb7Blr2rs4KH
+SUMMARY:Houston Dynamo vs. Real Salt Lake
+DTSTAMP:20260722T105542Z
+DTSTART:20260910T003000Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7roAv\n\nFrom Housto
+	n Dynamo FC
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7roAv
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dynamo-fc
+CATEGORIES:Houston Dynamo FC
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+UID:iYK-Q4H0Urg1Nf_6n2Zkv
 SUMMARY:Glacier Backpacking Trip
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20260912T170000Z
 DESCRIPTION:[camping]\nReady for a scenic backpacking route in Glacier Nati
 	onal Park? This is a point-to-point traverse over Gunsight Pass… alpine vi
@@ -305,9 +673,51 @@ TRANSP:TRANSPARENT
 DURATION:PT120H
 END:VEVENT
 BEGIN:VEVENT
-UID:uiAA2bO-gQeho2zQLg5ME
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /c/f9a/3c3c0a9d-033f-47b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jp
+ g
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/c/f9a/3c3c0a9d-033f-47
+ b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jpg
+UID:7kTIjyY9gLW9gqlcPqtvN
+SUMMARY:Houston Dash vs. Utah Royals FC
+DTSTAMP:20260722T105542Z
+DTSTART:20260913T004500Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7Oxbk\n\nFrom Housto
+	n Dash
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7Oxbk
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dash
+CATEGORIES:Houston Dash
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /c/f9a/3c3c0a9d-033f-47b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jp
+ g
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/c/f9a/3c3c0a9d-033f-47
+ b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jpg
+UID:5xdydxY3gjPTIPpKYi954
+SUMMARY:Houston Dash vs. Utah Royals FC
+DTSTAMP:20260722T105542Z
+DTSTART:20260913T004500Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7Oxbk\n\nFrom Housto
+	n Dynamo FC
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7Oxbk
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dynamo-fc
+CATEGORIES:Houston Dynamo FC
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+UID:ryBxCRoLmPUYOrmWI0pMH
 SUMMARY:Intro to Kayak Roll Pool Party
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20260914T230000Z
 DESCRIPTION:[water-sport]\nWant to work on your roll between White Water Ka
 	yaking sessions? Event Leader Rob has a great property with an outdoor poo
@@ -321,9 +731,9 @@ TRANSP:TRANSPARENT
 DURATION:PT4H
 END:VEVENT
 BEGIN:VEVENT
-UID:e9UrA4vPD1CMgzfjHe6rW
+UID:qLMKd0w3xI9SN53AP5Eqi
 SUMMARY:Glacier Camping Trip
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20260917T170000Z
 DESCRIPTION:[camping]\nReady for one of the most iconic trip in Glacier Nat
 	ional Park? Alpine views\, waterfalls\, turquoise lakes\, and a true backc
@@ -340,9 +750,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://htxoutdoors.com/wp
  -content/uploads/sites/7/2024/02/SUP-Friendswood-3-150x150.jpg
 ATTACH;FMTTYPE=image/jpeg:https://htxoutdoors.com/wp-content/uploads/sites/
  7/2024/02/SUP-Friendswood-3-150x150.jpg
-UID:LhcmW3Vxsf8y-hPDfAnYs
+UID:zQBrOB_n1VA0cCkbPNXHy
 SUMMARY:SUP & Kayak Social
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20260919T130000Z
 DESCRIPTION:[water-sport]\nCool off with a little SUP action! We'll bring S
 	tand Up Paddleboards to share.\nIf you’ve never SUP’ed before\, we’ll show
@@ -356,9 +766,49 @@ TRANSP:TRANSPARENT
 DURATION:PT4H
 END:VEVENT
 BEGIN:VEVENT
-UID:DvwX6q_0XhQoS7jW-L9Bp
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /a/3a3/da2cc604-6d62-48ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/3a3/da2cc604-6d62-48
+ ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+UID:gez1f0xsjpl4E7pJs_69E
+SUMMARY:Houston Dynamo vs. FC Cincinnati
+DTSTAMP:20260722T105542Z
+DTSTART:20260920T003000Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7roAe\n\nFrom Housto
+	n Dash
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7roAe
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dash
+CATEGORIES:Houston Dash
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /a/3a3/da2cc604-6d62-48ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/3a3/da2cc604-6d62-48
+ ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+UID:bnASE4JkdrjLFAXKgebDJ
+SUMMARY:Houston Dynamo vs. FC Cincinnati
+DTSTAMP:20260722T105542Z
+DTSTART:20260920T003000Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7roAe\n\nFrom Housto
+	n Dynamo FC
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7roAe
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dynamo-fc
+CATEGORIES:Houston Dynamo FC
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+UID:0E-dImK2oHoOiYAKGFnGY
 SUMMARY:Toughest 10K Kemah
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20260920T113000Z
 DESCRIPTION:[running]\nGet ready for an exhilarating experience at the Toug
 	hest 10K Kemah!\n\nhttps://htxoutdoors.com/events/toughest-10k-kemah-2/\n\
@@ -370,9 +820,9 @@ TRANSP:TRANSPARENT
 DURATION:PT3H30M
 END:VEVENT
 BEGIN:VEVENT
-UID:-qCbM9QdMhzTwEWp3KRv3
+UID:G5DQDsbmkJt5dTo3g6Wsw
 SUMMARY:White Water Kayaking 101 Weekend
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20260926T000000Z
 DESCRIPTION:[water-sport]\nPublic - An Epic Weekend of Adventure and Skill-
 	Building\n\nhttps://htxoutdoors.com/events/white-water-kayaking-101-weeken
@@ -388,9 +838,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://htxoutdoors.com/wp
  -content/uploads/sites/7/2017/11/Blue-Full-Moon-1024x576-150x150.jpg
 ATTACH;FMTTYPE=image/jpeg:https://htxoutdoors.com/wp-content/uploads/sites/
  7/2017/11/Blue-Full-Moon-1024x576-150x150.jpg
-UID:S399grJ34t-jgOmz6tHqD
+UID:azQn6waN_P2UGLqWoN56s
 SUMMARY:Full Moon Hike
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20260926T235000Z
 DESCRIPTION:[hiking]\nJoin us for a Full Moon Hike — a free outdoor adventu
 	re designed to help you get outside\, breathe a little deeper\, and meet p
@@ -403,9 +853,91 @@ TRANSP:TRANSPARENT
 DURATION:PT1H40M
 END:VEVENT
 BEGIN:VEVENT
-UID:jWWZ6mCLi8OX0YqpbiHov
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /a/3a3/da2cc604-6d62-48ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/3a3/da2cc604-6d62-48
+ ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+UID:NtCQwPvZPo4N9MqPnUmsT
+SUMMARY:Houston Dynamo vs. Sporting Kansas City
+DTSTAMP:20260722T105542Z
+DTSTART:20260927T003000Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7roAd\n\nFrom Housto
+	n Dash
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7roAd
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dash
+CATEGORIES:Houston Dash
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /a/3a3/da2cc604-6d62-48ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/3a3/da2cc604-6d62-48
+ ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+UID:d9Y3SAYWY1ZjlU9nnKbl8
+SUMMARY:Houston Dynamo vs. Sporting Kansas City
+DTSTAMP:20260722T105542Z
+DTSTART:20260927T003000Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7roAd\n\nFrom Housto
+	n Dynamo FC
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7roAd
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dynamo-fc
+CATEGORIES:Houston Dynamo FC
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /c/f9a/3c3c0a9d-033f-47b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jp
+ g
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/c/f9a/3c3c0a9d-033f-47
+ b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jpg
+UID:4k4hMNuWxq8Qu0u2UTIBy
+SUMMARY:Houston Dash vs. Washington Spirit
+DTSTAMP:20260722T105542Z
+DTSTART:20261004T230000Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7Oxb6\n\nFrom Housto
+	n Dash
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7Oxb6
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dash
+CATEGORIES:Houston Dash
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /c/f9a/3c3c0a9d-033f-47b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jp
+ g
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/c/f9a/3c3c0a9d-033f-47
+ b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jpg
+UID:XtkeOy1AwS8v5zcHNknP1
+SUMMARY:Houston Dash vs. Washington Spirit
+DTSTAMP:20260722T105542Z
+DTSTART:20261004T230000Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7Oxb6\n\nFrom Housto
+	n Dynamo FC
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7Oxb6
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dynamo-fc
+CATEGORIES:Houston Dynamo FC
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+UID:IuMWI5OmskIsY7VNlyTGm
 SUMMARY:Space City 10 MILER
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20261011T114500Z
 DESCRIPTION:[running]\nCome out to this competitive\, certified 10-mile sin
 	gle-loop course in Clear Lake\, run with us along the amazing Armand Bayou
@@ -418,9 +950,49 @@ TRANSP:TRANSPARENT
 DURATION:PT4H45M
 END:VEVENT
 BEGIN:VEVENT
-UID:uPpuqJnqUlDWNHH1lKPBG
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /a/3a3/da2cc604-6d62-48ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/3a3/da2cc604-6d62-48
+ ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+UID:GOkjfzfbmlsq6O3xOP4y5
+SUMMARY:Houston Dynamo vs. FC Dallas
+DTSTAMP:20260722T105542Z
+DTSTART:20261018T003000Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7roA7\n\nFrom Housto
+	n Dash
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7roA7
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dash
+CATEGORIES:Houston Dash
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /a/3a3/da2cc604-6d62-48ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/3a3/da2cc604-6d62-48
+ ed-adbf-946d3e7273a3_TABLET_LANDSCAPE_16_9.jpg
+UID:3rXbRrys_508fcvFySLjW
+SUMMARY:Houston Dynamo vs. FC Dallas
+DTSTAMP:20260722T105542Z
+DTSTART:20261018T003000Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7roA7\n\nFrom Housto
+	n Dynamo FC
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7roA7
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dynamo-fc
+CATEGORIES:Houston Dynamo FC
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+UID:uM9EfohhFDeyuY4neJSTl
 SUMMARY:Toughest 10K Galveston
-DTSTAMP:20260722T053839Z
+DTSTAMP:20260722T105542Z
 DTSTART:20261018T120000Z
 DESCRIPTION:[running]\nGet ready for an exhilarating experience at the Toug
 	hest 10K Galveston!\n\nhttps://htxoutdoors.com/events/toughest-10k-galvest
@@ -430,5 +1002,47 @@ X-CALRIPPER-SOURCE:htxoutdoors
 CATEGORIES:HTXoutdoors
 TRANSP:TRANSPARENT
 DURATION:PT3H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /c/f9a/3c3c0a9d-033f-47b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jp
+ g
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/c/f9a/3c3c0a9d-033f-47
+ b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jpg
+UID:7IfB5FHm8RjBr60EpcmAS
+SUMMARY:Houston Dash vs. Orlando Pride
+DTSTAMP:20260722T105542Z
+DTSTART:20261018T170000Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7OxbF\n\nFrom Housto
+	n Dash
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7OxbF
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dash
+CATEGORIES:Houston Dash
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam
+ /c/f9a/3c3c0a9d-033f-47b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jp
+ g
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/c/f9a/3c3c0a9d-033f-47
+ b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_16_9.jpg
+UID:hpTcYUTIL4ZHl4KM1tgHk
+SUMMARY:Houston Dash vs. Orlando Pride
+DTSTAMP:20260722T105542Z
+DTSTART:20261018T170000Z
+DESCRIPTION:https://www.ticketmaster.com/event/Z7r9jZ1A7OxbF\n\nFrom Housto
+	n Dynamo FC
+URL:https://www.ticketmaster.com/event/Z7r9jZ1A7OxbF
+GEO:29.7629;-95.2413
+LOCATION:Shell Energy Stadium\, South Rice Avenue & Westpark Drive\, Housto
+	n\, TX
+X-CALRIPPER-SOURCE:houston-dynamo-fc
+CATEGORIES:Houston Dynamo FC
+TRANSP:TRANSPARENT
+DURATION:PT2H
 END:VEVENT
 END:VCALENDAR
