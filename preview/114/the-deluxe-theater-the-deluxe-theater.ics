@@ -1,0 +1,51 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:832.events
+METHOD:PUBLISH
+X-WR-CALNAME:The DeLUXE Theater Houston
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://thedeluxetheater.co
+ m/wp-content/uploads/2026/07/facf0acd-ef41-42d4-a363-b28d33d65760.png
+ATTACH;FMTTYPE=image/png:https://thedeluxetheater.com/wp-content/uploads/20
+ 26/07/facf0acd-ef41-42d4-a363-b28d33d65760.png
+UID:uhX7z9kZiE4SCyWBWmjiG
+SUMMARY:Blues On The Bayou
+DTSTAMP:20260722T105320Z
+DTSTART:20260719T200000Z
+DESCRIPTION:Blues on the Bayou is a community celebration of Houston’s blue
+	s tradition featuring an open mic/jam session\, live blues performances\, 
+	comedy\, food\, drinks\, and fellowship. Musicians of all skill levels are
+	 invited to bring their voice or instrument and perform using a full profe
+	ssional backline. Wh\n\nhttps://thedeluxetheater.com/events/blues-on-the-b
+	ayou/
+URL:https://thedeluxetheater.com/events/blues-on-the-bayou/
+GEO:29.7186;-95.3468
+LOCATION:3303 Lyons Ave Houston\, TX 77020
+TRANSP:TRANSPARENT
+DURATION:PT6H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thedeluxetheater.c
+ om/wp-content/uploads/2026/06/1.jpg
+ATTACH;FMTTYPE=image/jpeg:https://thedeluxetheater.com/wp-content/uploads/2
+ 026/06/1.jpg
+UID:pLEEpJ3IF4KidsJEjI_uN
+SUMMARY:Forever Con: Presented By The DeLUXE Theater
+DTSTAMP:20260722T105320Z
+DTSTART:20260725T170000Z
+DESCRIPTION:Welcome to Forever Con!\nJoin us for Forever Con Fun! This fami
+	ly friendly event features a double film screening\, vendors\, panels\, gi
+	veaways and much fore. Forever Con is all about good vibes\, cool cosplays
+	\, and nonstop fun. Whether you’re into comics\, games\, or just meeting n
+	ew friends\, this is the\n\nhttps://thedeluxetheater.com/events/forever-co
+	n-presented-by-the-deluxe-theater/
+URL:https://thedeluxetheater.com/events/forever-con-presented-by-the-deluxe
+	-theater/
+GEO:29.7186;-95.3468
+LOCATION:3303 Lyons Ave Houston\, TX 77020
+TRANSP:TRANSPARENT
+DURATION:PT9H
+END:VEVENT
+END:VCALENDAR
