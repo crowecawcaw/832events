@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-22T10:55:56.786Z",
+  "generated": "2026-07-23T05:45:22.104Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -462,42 +462,6 @@
             },
             "rss": {
               "href": "ensemble-theatre-houston-ensemble-theatre-houston.rss",
-              "type": "application/rss+xml"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "name": "erjcc-houston",
-      "friendlyName": "ERJCC Houston",
-      "description": "Educational, cultural and community events at the Jewish community center in Houston",
-      "url": "https://www.erjcchouston.org/events/",
-      "tags": [
-        "Art",
-        "Community",
-        "Museum District"
-      ],
-      "geo": {
-        "lat": 29.7261,
-        "lng": -95.4012,
-        "label": "ERJCC Houston, 5600 North Braeswood Blvd, Houston, TX 77096"
-      },
-      "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=ERJCC%20Houston%2C%205600%20North%20Braeswood%20Blvd%2C%20Houston%2C%20TX%2077096"
-      },
-      "kind": "external",
-      "calendars": [
-        {
-          "name": "erjcc-houston",
-          "friendlyName": "ERJCC Houston",
-          "links": {
-            "ics": {
-              "href": "external-erjcc-houston.ics",
-              "type": "text/calendar"
-            },
-            "rss": {
-              "href": "external-erjcc-houston.rss",
               "type": "application/rss+xml"
             }
           }
@@ -1318,43 +1282,6 @@
             },
             "rss": {
               "href": "lawndale-art-center-lawndale-art-center.rss",
-              "type": "application/rss+xml"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "name": "levy-park-houston",
-      "friendlyName": "Levy Park Houston",
-      "description": "Levy Park Houston",
-      "url": "https://www.levyparkhouston.org/calendar/",
-      "tags": [
-        "Parks",
-        "Community",
-        "Upper Kirby",
-        "Outdoor Recreation"
-      ],
-      "geo": {
-        "lat": 29.7419,
-        "lng": -95.4169,
-        "label": "Levy Park, 3801 Main St, Houston, TX 77002"
-      },
-      "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=Levy%20Park%2C%203801%20Main%20St%2C%20Houston%2C%20TX%2077002"
-      },
-      "kind": "external",
-      "calendars": [
-        {
-          "name": "levy-park-houston",
-          "friendlyName": "Levy Park Houston",
-          "links": {
-            "ics": {
-              "href": "external-levy-park-houston.ics",
-              "type": "text/calendar"
-            },
-            "rss": {
-              "href": "external-levy-park-houston.rss",
               "type": "application/rss+xml"
             }
           }
