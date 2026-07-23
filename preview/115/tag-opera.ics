@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:832.events
+METHOD:PUBLISH
+X-WR-CALNAME:Opera Events
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://www.datocms-assets
+ .com/95816/1772563002-hgo-2025-2026-studio-showcase-photographer-lynn-lane
+ -323-1.jpg
+ATTACH;FMTTYPE=image/jpeg:https://www.datocms-assets.com/95816/1772563002-h
+ go-2025-2026-studio-showcase-photographer-lynn-lane-323-1.jpg
+UID:0yuse6vzgj_fEyIu1DxwN
+SUMMARY:The Butler Studio Showcase
+DTSTAMP:20260723T104923Z
+DTSTART:20260914T000000Z
+DESCRIPTION:https://www.houstongrandopera.org/on-stage/studio-showcase\n\nF
+	rom Houston Grand Opera
+URL:https://www.houstongrandopera.org/on-stage/studio-showcase
+GEO:29.7237;-95.3937
+LOCATION:Wortham Theater Center\, 500 Main St\, Houston\, TX 77002
+X-CALRIPPER-SOURCE:houston-grand-opera
+CATEGORIES:Houston Grand Opera
+TRANSP:TRANSPARENT
+DURATION:PT3H
+END:VEVENT
+END:VCALENDAR
