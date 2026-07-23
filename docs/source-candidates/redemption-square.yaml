@@ -1,0 +1,20 @@
+name: Redemption Square
+status: investigating
+platform: squarespace
+url: https://brass-alpaca-tjll.squarespace.com/event-calendar
+tags:
+  - Community
+  - Recreation
+  - FarmersMarket
+  - FitnessAndWellness
+  - Venues
+  - Near Northside
+firstSeen: "2026-07-23"
+lastChecked: "2026-07-23"
+notes: "Squarespace site shows 258+ itemCount in collection metadata but JSON ?format=json endpoint does not expose items/upcoming/past arrays (only metadata). Appears to load events client-side. Squarespace ripper expects items in JSON response - this template variation doesn't provide them. Reinvestigate with custom HTML scraper or if Squarespace template is updated."
+impl:
+  type: squarespace
+  geo:
+    lat: 29.9201296
+    lng: -95.20305959999996
+    label: "Redemption Square, 250 Assay Street, Houston, TX 77044"
