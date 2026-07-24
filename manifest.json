@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-24T05:38:34.106Z",
+  "lastUpdated": "2026-07-24T10:57:35.687Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -493,6 +493,25 @@
       ]
     },
     {
+      "name": "notsuoh",
+      "description": "Notsuoh",
+      "friendlyLink": "https://www.notsuoh.com/events",
+      "calendars": [
+        {
+          "name": "notsuoh",
+          "friendlyName": "Notsuoh",
+          "icsUrl": "notsuoh-notsuoh.ics",
+          "rssUrl": "notsuoh-notsuoh.rss",
+          "tags": [
+            "Music",
+            "Nightlife",
+            "Arts",
+            "Downtown"
+          ]
+        }
+      ]
+    },
+    {
       "name": "post-houston",
       "description": "POST Houston",
       "friendlyLink": "https://posthtx.com/event",
@@ -711,6 +730,23 @@
       ]
     },
     {
+      "name": "warehouse-live",
+      "description": "Warehouse Live Midtown",
+      "friendlyLink": "https://warehouselivemidtown.com/calendar/",
+      "calendars": [
+        {
+          "name": "warehouse-live",
+          "friendlyName": "Warehouse Live Midtown",
+          "icsUrl": "warehouse-live-warehouse-live.ics",
+          "rssUrl": "warehouse-live-warehouse-live.rss",
+          "tags": [
+            "Music",
+            "EaDo"
+          ]
+        }
+      ]
+    },
+    {
       "name": "white-oak-music-hall",
       "description": "White Oak Music Hall",
       "friendlyLink": "https://www.whiteoakmusichall.com/shows",
@@ -820,6 +856,19 @@
         "FarmersMarket",
         "Community",
         "Energy Corridor"
+      ]
+    },
+    {
+      "name": "erjcc-houston",
+      "friendlyName": "ERJCC Houston",
+      "description": "Educational, cultural and community events at the Jewish community center in Houston",
+      "icsUrl": "external-erjcc-houston.ics",
+      "originalIcsUrl": "https://www.erjcchouston.org/events/?ical=1",
+      "infoUrl": "https://www.erjcchouston.org/events/",
+      "tags": [
+        "Art",
+        "Community",
+        "Museum District"
       ]
     },
     {
@@ -961,6 +1010,20 @@
         "Community",
         "Tech",
         "Midtown"
+      ]
+    },
+    {
+      "name": "levy-park-houston",
+      "friendlyName": "Levy Park Houston",
+      "description": "Levy Park Houston",
+      "icsUrl": "external-levy-park-houston.ics",
+      "originalIcsUrl": "https://www.levyparkhouston.org/events-calendar/?ical=1",
+      "infoUrl": "https://www.levyparkhouston.org/calendar/",
+      "tags": [
+        "Parks",
+        "Community",
+        "Upper Kirby",
+        "Outdoor Recreation"
       ]
     },
     {

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-24T05:38:41.966Z",
+  "generated": "2026-07-24T10:57:54.725Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -462,6 +462,42 @@
             },
             "rss": {
               "href": "ensemble-theatre-houston-ensemble-theatre-houston.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "erjcc-houston",
+      "friendlyName": "ERJCC Houston",
+      "description": "Educational, cultural and community events at the Jewish community center in Houston",
+      "url": "https://www.erjcchouston.org/events/",
+      "tags": [
+        "Art",
+        "Community",
+        "Museum District"
+      ],
+      "geo": {
+        "lat": 29.7261,
+        "lng": -95.4012,
+        "label": "ERJCC Houston, 5600 North Braeswood Blvd, Houston, TX 77096"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=ERJCC%20Houston%2C%205600%20North%20Braeswood%20Blvd%2C%20Houston%2C%20TX%2077096"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "erjcc-houston",
+          "friendlyName": "ERJCC Houston",
+          "links": {
+            "ics": {
+              "href": "external-erjcc-houston.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-erjcc-houston.rss",
               "type": "application/rss+xml"
             }
           }
@@ -1289,6 +1325,43 @@
       ]
     },
     {
+      "name": "levy-park-houston",
+      "friendlyName": "Levy Park Houston",
+      "description": "Levy Park Houston",
+      "url": "https://www.levyparkhouston.org/calendar/",
+      "tags": [
+        "Parks",
+        "Community",
+        "Upper Kirby",
+        "Outdoor Recreation"
+      ],
+      "geo": {
+        "lat": 29.7419,
+        "lng": -95.4169,
+        "label": "Levy Park, 3801 Main St, Houston, TX 77002"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Levy%20Park%2C%203801%20Main%20St%2C%20Houston%2C%20TX%2077002"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "levy-park-houston",
+          "friendlyName": "Levy Park Houston",
+          "links": {
+            "ics": {
+              "href": "external-levy-park-houston.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-levy-park-houston.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "mcgonigels-mucky-duck",
       "friendlyName": "McGonigel's Mucky Duck",
       "description": "McGonigel's Mucky Duck",
@@ -1388,6 +1461,43 @@
             },
             "rss": {
               "href": "external-new-magnolia-brewing.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "notsuoh",
+      "friendlyName": "Notsuoh",
+      "description": "Notsuoh",
+      "url": "https://www.notsuoh.com/events",
+      "tags": [
+        "Music",
+        "Nightlife",
+        "Arts",
+        "Downtown"
+      ],
+      "geo": {
+        "lat": 29.7603,
+        "lng": -95.3866,
+        "label": "Notsuoh, 314 Main St, Houston, TX 77002"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Notsuoh%2C%20314%20Main%20St%2C%20Houston%2C%20TX%2077002"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "notsuoh",
+          "friendlyName": "Notsuoh",
+          "links": {
+            "ics": {
+              "href": "notsuoh-notsuoh.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "notsuoh-notsuoh.rss",
               "type": "application/rss+xml"
             }
           }
@@ -1855,6 +1965,41 @@
             },
             "rss": {
               "href": "recurring-urban-harvest.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "warehouse-live",
+      "friendlyName": "Warehouse Live Midtown",
+      "description": "Warehouse Live Midtown",
+      "url": "https://warehouselivemidtown.com/calendar/",
+      "tags": [
+        "Music",
+        "EaDo"
+      ],
+      "geo": {
+        "lat": 29.7597,
+        "lng": -95.3619,
+        "label": "Warehouse Live, 813 St Emanuel, Houston, TX 77003"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Warehouse%20Live%2C%20813%20St%20Emanuel%2C%20Houston%2C%20TX%2077003"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "warehouse-live",
+          "friendlyName": "Warehouse Live Midtown",
+          "links": {
+            "ics": {
+              "href": "warehouse-live-warehouse-live.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "warehouse-live-warehouse-live.rss",
               "type": "application/rss+xml"
             }
           }

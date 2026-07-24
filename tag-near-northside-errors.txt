@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "type": "ParseError",
+    "reason": "Cannot parse time: \"6pm Art Reception\"",
+    "context": "Beyond Skin Deep: Tattoo Artist Showcase: 6pm Art Reception"
+  },
+  {
+    "type": "ParseError",
+    "reason": "Failed to fetch event 17328: HTTP 429",
+    "context": "https://thedeluxetheater.com/events/the-marriage-of-figaro-12/"
+  },
+  {
+    "type": "ParseError",
+    "reason": "Failed to fetch event 17327: HTTP 429",
+    "context": "https://thedeluxetheater.com/events/the-marriage-of-figaro-11/"
+  }
+]
