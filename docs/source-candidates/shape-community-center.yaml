@@ -5,8 +5,6 @@ description: "SHAPE COMMUNITY CENTER - Events"
 type: squarespace
 last_checked: 2026-07-18
 notes: |
-  - Tier-2 Squarespace platform
-  - Quality: Direct venue calendar
-  - Event volume: 4-10 events (visible: Freedom Tour, International Food Festival, Pan-African Cultural Festival, Kwanzaa Umoja)
-  - Location: Fixed venue (Third Ward, Houston)
-  - Integration: Built-in Squarespace ripper (config-only, no custom code)
+  Squarespace ripper implementation returned 0 events (2026-07-24).
+  Events visible on live site but not in Squarespace JSON API — may need custom HTML ripper or verification of endpoint.
+  Re-check periodically for Squarespace format changes.
