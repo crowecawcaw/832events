@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-07-23T05:45:22.110Z",
-  "totalErrors": 4,
+  "buildTime": "2026-07-24T05:38:41.971Z",
+  "totalErrors": 3,
   "configErrors": [],
   "sources": [
     {
@@ -63,19 +63,12 @@
       "error": "Error: HTTP 403: "
     }
   ],
-  "geocodeErrors": [
-    {
-      "type": "GeocodeError",
-      "location": "Estacionamiento Ex Food Town",
-      "source": "songkick-houston",
-      "reason": "Nominatim returned no results"
-    }
-  ],
+  "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1648,
-    "eventsWithGeo": 1400,
-    "eventsWithoutGeo": 248,
-    "geocodeErrors": 1
+    "totalEvents": 1652,
+    "eventsWithGeo": 1407,
+    "eventsWithoutGeo": 245,
+    "geocodeErrors": 0
   },
   "uncertainEvents": [],
   "uncertaintyStats": {
@@ -582,8 +575,8 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 990,
-    "totalEvents": 1648,
+    "eventsWithImage": 999,
+    "totalEvents": 1652,
     "venuesWithImage": 0,
     "totalVenues": 54,
     "unresolvable": 0
@@ -993,6 +986,13 @@
       },
       {
         "source": "childrens-museum-houston",
+        "eventId": "gabby-s-dollhouse-meowseum-discovery-days-2026-10-23-62f68b23",
+        "summary": "Gabby's Dollhouse MEOWseum Discovery Days",
+        "date": "2026-10-23T10:00-05:00[America/Chicago]",
+        "url": "https://www.cmhouston.org/events/gabbys-dollhouse"
+      },
+      {
+        "source": "childrens-museum-houston",
         "eventId": "it-s-my-party-and-i-ll-cry-if-i-want-to-2026-08-08-0331235c",
         "summary": "It’s My Party (and I’ll Cry If I Want To!)",
         "date": "2026-08-08T10:00-05:00[America/Chicago]",
@@ -1085,12 +1085,6 @@
         "eventId": "i-said-what-i-said-2026-08-15",
         "summary": "I Said What I Said",
         "date": "2026-08-15T20:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "cullen-performance-hall",
-        "eventId": "new-student-orientation-2026-07-20",
-        "summary": "New Student Orientation",
-        "date": "2026-07-20T08:00-05:00[America/Chicago]"
       },
       {
         "source": "cullen-performance-hall",
@@ -2546,12 +2540,6 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
-        "eventId": "armadillo-antics-2026-07-23",
-        "summary": "Armadillo Antics",
-        "date": "2026-07-23T14:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
         "eventId": "armadillo-antics-2026-07-25",
         "summary": "Armadillo Antics",
         "date": "2026-07-25T14:00-05:00[America/Chicago]"
@@ -2723,12 +2711,6 @@
         "eventId": "crabbing-101-2026-07-25",
         "summary": "Crabbing 101",
         "date": "2026-07-25T13:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
-        "eventId": "critters-of-east-texas-2026-07-23",
-        "summary": "Critters of East Texas",
-        "date": "2026-07-23T15:00-05:00[America/Chicago]"
       },
       {
         "source": "texas-parks-wildlife-houston",
@@ -3158,12 +3140,6 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
-        "eventId": "nature-hike-2026-07-23",
-        "summary": "Nature Hike",
-        "date": "2026-07-23T10:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
         "eventId": "nature-hike-2026-07-30",
         "summary": "Nature Hike",
         "date": "2026-07-30T10:00-05:00[America/Chicago]"
@@ -3369,9 +3345,9 @@
     ]
   },
   "costStats": {
-    "eventsWithCost": 389,
-    "freeEvents": 246,
-    "totalEvents": 1648,
+    "eventsWithCost": 390,
+    "freeEvents": 247,
+    "totalEvents": 1652,
     "unresolvable": 0
   },
   "costGaps": [
@@ -3615,6 +3591,13 @@
     },
     {
       "source": "bayou-music-center",
+      "eventId": "tm-G5dIZ_FPFtpvh",
+      "summary": "Theresa Caputo Live! The Experience",
+      "date": "2026-10-22T19:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/theresa-caputo-live-the-experience-houston-texas-10-22-2026/event/3A00648948A5605B"
+    },
+    {
+      "source": "bayou-music-center",
       "eventId": "tm-G5dIZ_FXx36y1",
       "summary": "Black Label Society",
       "date": "2026-09-02T19:30-05:00[America/Chicago]",
@@ -3696,6 +3679,13 @@
       "summary": "Friendship Party",
       "date": "2026-07-30T10:00-05:00[America/Chicago]",
       "url": "https://www.cmhouston.org/events/friendship-party"
+    },
+    {
+      "source": "childrens-museum-houston",
+      "eventId": "gabby-s-dollhouse-meowseum-discovery-days-2026-10-23-62f68b23",
+      "summary": "Gabby's Dollhouse MEOWseum Discovery Days",
+      "date": "2026-10-23T10:00-05:00[America/Chicago]",
+      "url": "https://www.cmhouston.org/events/gabbys-dollhouse"
     },
     {
       "source": "childrens-museum-houston",
@@ -3791,12 +3781,6 @@
       "eventId": "i-said-what-i-said-2026-08-15",
       "summary": "I Said What I Said",
       "date": "2026-08-15T20:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "cullen-performance-hall",
-      "eventId": "new-student-orientation-2026-07-20",
-      "summary": "New Student Orientation",
-      "date": "2026-07-20T08:00-05:00[America/Chicago]"
     },
     {
       "source": "cullen-performance-hall",
@@ -4425,6 +4409,13 @@
     },
     {
       "source": "house-of-blues-houston",
+      "eventId": "tm-G5dIZ_aDfpgPX",
+      "summary": "Rocky Horror Picture Show",
+      "date": "2026-10-23T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/rocky-horror-picture-show-houston-texas-10-23-2026/event/3A00649ED45B597E"
+    },
+    {
+      "source": "house-of-blues-houston",
       "eventId": "tm-G5dIZ_akXl-n_",
       "summary": "Buckcherry & Black Stone Cherry",
       "date": "2026-09-01T18:00-05:00[America/Chicago]",
@@ -4604,13 +4595,6 @@
       "summary": "Pouya - The Forever Glades Tour",
       "date": "2026-10-03T19:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/pouya-the-forever-glades-tour-houston-texas-10-03-2026/event/3A0064C8A2CC8939"
-    },
-    {
-      "source": "house-of-blues-houston",
-      "eventId": "tm-G5dIZ_kE7ciKF",
-      "summary": "The Marvelous Miss Gender starring BOSCO - Ages 18+ w/ Valid ID",
-      "date": "2026-07-22T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/the-marvelous-miss-gender-starring-bosco-houston-texas-07-22-2026/event/3A006469C4B6C4C8"
     },
     {
       "source": "house-of-blues-houston",
@@ -4842,6 +4826,13 @@
       "summary": "Houston Dynamo vs. San Jose Earthquakes",
       "date": "2026-08-29T19:30-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7roAZ"
+    },
+    {
+      "source": "houston-grand-opera",
+      "eventId": "susannah-2026-10-23",
+      "summary": "Susannah",
+      "date": "2026-10-23T19:00-05:00[America/Chicago]",
+      "url": "https://www.houstongrandopera.org/on-stage/susannah"
     },
     {
       "source": "houston-grand-opera",
@@ -5265,6 +5256,13 @@
     },
     {
       "source": "lawndale-art-center",
+      "eventId": "gulf-coast-reading-2026-10-23",
+      "summary": "Gulf Coast Reading",
+      "date": "2026-10-23T19:00-05:00[America/Chicago]",
+      "url": "https://lawndaleartcenter.org/event/gulf-coast-reading-43/"
+    },
+    {
+      "source": "lawndale-art-center",
       "eventId": "poets-garden-htx-writing-workshop-august-2026-2026-08-22",
       "summary": "Poets Garden HTX Writing Workshop (August 2026)",
       "date": "2026-08-22T13:00-05:00[America/Chicago]",
@@ -5440,6 +5438,13 @@
     },
     {
       "source": "mcgonigels-mucky-duck",
+      "eventId": "mcgonigels-32327",
+      "summary": "Charlie Mars",
+      "date": "2026-10-22T20:30-05:00[America/Chicago]",
+      "url": "https://www.mcgonigels.com/shows/charlie-mars-3/"
+    },
+    {
+      "source": "mcgonigels-mucky-duck",
       "eventId": "mcgonigels-32359",
       "summary": "Pierre Bensusan",
       "date": "2026-10-06T19:00-05:00[America/Chicago]",
@@ -5451,6 +5456,13 @@
       "summary": "Jazz Night with Montagem",
       "date": "2026-09-26T20:30-05:00[America/Chicago]",
       "url": "https://www.mcgonigels.com/shows/jazz-night-featuring-montagem-2/"
+    },
+    {
+      "source": "mcgonigels-mucky-duck",
+      "eventId": "mcgonigels-32376",
+      "summary": "Hadden Sayers",
+      "date": "2026-10-23T18:00-05:00[America/Chicago]",
+      "url": "https://www.mcgonigels.com/shows/hadden-sayers-band-early-show-2/"
     },
     {
       "source": "mcgonigels-mucky-duck",
@@ -6147,13 +6159,6 @@
     },
     {
       "source": "punch-line-comedy-club",
-      "eventId": "tm-G5dIZ_6B_7EtH",
-      "summary": "Dulcé Sloan",
-      "date": "2026-07-23T19:30-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/dulce-sloan-houston-texas-07-23-2026/event/3A00647E99127A7C"
-    },
-    {
-      "source": "punch-line-comedy-club",
       "eventId": "tm-G5dIZ_6B_F9n0",
       "summary": "Dulcé Sloan",
       "date": "2026-07-25T19:00-05:00[America/Chicago]",
@@ -6588,6 +6593,13 @@
     },
     {
       "source": "punch-line-comedy-club",
+      "eventId": "tm-G5dIZ_u8B72e9",
+      "summary": "Pauly Shore",
+      "date": "2026-10-23T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/pauly-shore-houston-texas-10-23-2026/event/3A0064D43A10F097"
+    },
+    {
+      "source": "punch-line-comedy-club",
       "eventId": "tm-G5dIZ_u8P7WL_",
       "summary": "Janeane Garofalo",
       "date": "2026-10-17T19:00-05:00[America/Chicago]",
@@ -6627,6 +6639,13 @@
       "summary": "Chinedu",
       "date": "2026-09-27T19:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/chinedu-houston-texas-09-27-2026/event/3A0064D4F6725A1D"
+    },
+    {
+      "source": "punch-line-comedy-club",
+      "eventId": "tm-G5dIZ_uKy-k4D",
+      "summary": "Josh Gondelman",
+      "date": "2026-10-22T19:30-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/josh-gondelman-houston-texas-10-22-2026/event/3A0064D4F984657B"
     },
     {
       "source": "punch-line-comedy-club",
@@ -7331,12 +7350,6 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
-      "eventId": "armadillo-antics-2026-07-23",
-      "summary": "Armadillo Antics",
-      "date": "2026-07-23T14:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
       "eventId": "armadillo-antics-2026-07-25",
       "summary": "Armadillo Antics",
       "date": "2026-07-25T14:00-05:00[America/Chicago]"
@@ -7508,12 +7521,6 @@
       "eventId": "crabbing-101-2026-07-25",
       "summary": "Crabbing 101",
       "date": "2026-07-25T13:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
-      "eventId": "critters-of-east-texas-2026-07-23",
-      "summary": "Critters of East Texas",
-      "date": "2026-07-23T15:00-05:00[America/Chicago]"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -7943,12 +7950,6 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
-      "eventId": "nature-hike-2026-07-23",
-      "summary": "Nature Hike",
-      "date": "2026-07-23T10:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
       "eventId": "nature-hike-2026-07-30",
       "summary": "Nature Hike",
       "date": "2026-07-30T10:00-05:00[America/Chicago]"
@@ -8300,6 +8301,27 @@
     },
     {
       "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_2QH7Cmo",
+      "summary": "Los Mirlos",
+      "date": "2026-09-06T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/los-mirlos-houston-texas-09-06-2026/event/3A0064F6BC10EB91"
+    },
+    {
+      "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_2Qshc4t",
+      "summary": "Glimmers & Rematch: The Cut Your Teeth Tour",
+      "date": "2026-09-29T18:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/glimmers-rematch-the-cut-your-teeth-houston-texas-09-29-2026/event/3A0064F6B16ED569"
+    },
+    {
+      "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_51b1gyr",
+      "summary": "Graham St. Clair Band",
+      "date": "2026-10-23T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/graham-st-clair-band-houston-texas-10-23-2026/event/3A0064B2982B5E5E"
+    },
+    {
+      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_5cvw-JW",
       "summary": "LOVE SPELLS - LOVE IS THE LAW WORLD TOUR",
       "date": "2026-09-16T19:00-05:00[America/Chicago]",
@@ -8528,6 +8550,13 @@
       "summary": "The Body",
       "date": "2026-08-01T19:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/the-body-houston-texas-08-01-2026/event/3A006483D087B4BF"
+    },
+    {
+      "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_FCBMgTG",
+      "summary": "Culture Wars",
+      "date": "2026-10-23T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/culture-wars-houston-texas-10-23-2026/event/3A006483BADF5FCC"
     },
     {
       "source": "white-oak-music-hall",
@@ -8863,7 +8892,7 @@
     {
       "name": "bayou-music-center-bayou-music-center",
       "type": "Ripper",
-      "events": 17,
+      "events": 18,
       "expectEmpty": false,
       "source": "bayou-music-center"
     },
@@ -8884,7 +8913,7 @@
     {
       "name": "childrens-museum-houston-main",
       "type": "Ripper",
-      "events": 15,
+      "events": 16,
       "expectEmpty": false,
       "source": "childrens-museum-houston"
     },
@@ -8898,7 +8927,7 @@
     {
       "name": "cullen-performance-hall-cullen-performance-hall",
       "type": "Ripper",
-      "events": 14,
+      "events": 13,
       "expectEmpty": false,
       "source": "cullen-performance-hall"
     },
@@ -8982,7 +9011,7 @@
     {
       "name": "houston-grand-opera-houston-grand-opera",
       "type": "Ripper",
-      "events": 1,
+      "events": 2,
       "expectEmpty": false,
       "source": "houston-grand-opera"
     },
@@ -9031,14 +9060,14 @@
     {
       "name": "lawndale-art-center-lawndale-art-center",
       "type": "Ripper",
-      "events": 3,
+      "events": 4,
       "expectEmpty": false,
       "source": "lawndale-art-center"
     },
     {
       "name": "mcgonigels-mucky-duck-mcgonigels-mucky-duck",
       "type": "Ripper",
-      "events": 93,
+      "events": 95,
       "expectEmpty": false,
       "source": "mcgonigels-mucky-duck"
     },
@@ -9094,14 +9123,14 @@
     {
       "name": "project-row-houses-project-row-houses",
       "type": "Ripper",
-      "events": 147,
+      "events": 148,
       "expectEmpty": false,
       "source": "project-row-houses"
     },
     {
       "name": "punch-line-comedy-club-punch-line-comedy-club",
       "type": "Ripper",
-      "events": 92,
+      "events": 93,
       "expectEmpty": false,
       "source": "punch-line-comedy-club"
     },
@@ -9164,7 +9193,7 @@
     {
       "name": "texas-parks-wildlife-houston-texas-parks-wildlife-houston",
       "type": "Ripper",
-      "events": 149,
+      "events": 146,
       "expectEmpty": false,
       "source": "texas-parks-wildlife-houston"
     },
@@ -9192,7 +9221,7 @@
     {
       "name": "white-oak-music-hall-white-oak-music-hall",
       "type": "Ripper",
-      "events": 89,
+      "events": 93,
       "expectEmpty": false,
       "source": "white-oak-music-hall"
     },
@@ -9206,14 +9235,14 @@
     {
       "name": "tag-the-heights",
       "type": "Aggregate",
-      "events": 64,
+      "events": 62,
       "expectEmpty": false,
       "source": "tag-the-heights"
     },
     {
       "name": "tag-upper-kirby",
       "type": "Aggregate",
-      "events": 94,
+      "events": 96,
       "expectEmpty": false,
       "source": "tag-upper-kirby"
     },
@@ -9227,28 +9256,28 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 659,
+      "events": 664,
       "expectEmpty": false,
       "source": "tag-music"
     },
     {
       "name": "tag-nightlife",
       "type": "Aggregate",
-      "events": 107,
+      "events": 108,
       "expectEmpty": false,
       "source": "tag-nightlife"
     },
     {
       "name": "tag-downtown",
       "type": "Aggregate",
-      "events": 296,
+      "events": 298,
       "expectEmpty": false,
       "source": "tag-downtown"
     },
     {
       "name": "tag-theater",
       "type": "Aggregate",
-      "events": 17,
+      "events": 16,
       "expectEmpty": false,
       "source": "tag-theater"
     },
@@ -9276,21 +9305,21 @@
     {
       "name": "tag-midtown",
       "type": "Aggregate",
-      "events": 60,
+      "events": 61,
       "expectEmpty": false,
       "source": "tag-midtown"
     },
     {
       "name": "tag-art",
       "type": "Aggregate",
-      "events": 214,
+      "events": 216,
       "expectEmpty": false,
       "source": "tag-art"
     },
     {
       "name": "tag-museum-district",
       "type": "Aggregate",
-      "events": 50,
+      "events": 52,
       "expectEmpty": false,
       "source": "tag-museum-district"
     },
@@ -9311,7 +9340,7 @@
     {
       "name": "tag-education",
       "type": "Aggregate",
-      "events": 238,
+      "events": 235,
       "expectEmpty": false,
       "source": "tag-education"
     },
@@ -9325,21 +9354,21 @@
     {
       "name": "tag-family",
       "type": "Aggregate",
-      "events": 34,
+      "events": 35,
       "expectEmpty": false,
       "source": "tag-family"
     },
     {
       "name": "tag-kids",
       "type": "Aggregate",
-      "events": 15,
+      "events": 16,
       "expectEmpty": false,
       "source": "tag-kids"
     },
     {
       "name": "tag-museum",
       "type": "Aggregate",
-      "events": 15,
+      "events": 16,
       "expectEmpty": false,
       "source": "tag-museum"
     },
@@ -9360,14 +9389,14 @@
     {
       "name": "tag-university",
       "type": "Aggregate",
-      "events": 14,
+      "events": 13,
       "expectEmpty": false,
       "source": "tag-university"
     },
     {
       "name": "tag-university-of-houston",
       "type": "Aggregate",
-      "events": 14,
+      "events": 13,
       "expectEmpty": false,
       "source": "tag-university-of-houston"
     },
@@ -9381,14 +9410,14 @@
     {
       "name": "tag-montrose",
       "type": "Aggregate",
-      "events": 246,
+      "events": 244,
       "expectEmpty": false,
       "source": "tag-montrose"
     },
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 306,
+      "events": 307,
       "expectEmpty": false,
       "source": "tag-community"
     },
@@ -9444,7 +9473,7 @@
     {
       "name": "tag-opera",
       "type": "Aggregate",
-      "events": 1,
+      "events": 2,
       "expectEmpty": false,
       "source": "tag-opera"
     },
@@ -9458,14 +9487,14 @@
     {
       "name": "tag-parks",
       "type": "Aggregate",
-      "events": 192,
+      "events": 189,
       "expectEmpty": false,
       "source": "tag-parks"
     },
     {
       "name": "tag-outdoor-recreation",
       "type": "Aggregate",
-      "events": 176,
+      "events": 173,
       "expectEmpty": false,
       "source": "tag-outdoor-recreation"
     },
@@ -9486,21 +9515,21 @@
     {
       "name": "tag-third-ward",
       "type": "Aggregate",
-      "events": 152,
+      "events": 153,
       "expectEmpty": false,
       "source": "tag-third-ward"
     },
     {
       "name": "tag-beer",
       "type": "Aggregate",
-      "events": 40,
+      "events": 38,
       "expectEmpty": false,
       "source": "tag-beer"
     },
     {
       "name": "tag-near-northside",
       "type": "Aggregate",
-      "events": 137,
+      "events": 141,
       "expectEmpty": false,
       "source": "tag-near-northside"
     },
@@ -9577,14 +9606,14 @@
     {
       "name": "tag-comedy",
       "type": "Aggregate",
-      "events": 232,
+      "events": 233,
       "expectEmpty": false,
       "source": "tag-comedy"
     },
     {
       "name": "tag-entertainment",
       "type": "Aggregate",
-      "events": 105,
+      "events": 106,
       "expectEmpty": false,
       "source": "tag-entertainment"
     },
@@ -9633,7 +9662,7 @@
     {
       "name": "tag-nature",
       "type": "Aggregate",
-      "events": 149,
+      "events": 146,
       "expectEmpty": false,
       "source": "tag-nature"
     },
@@ -9710,7 +9739,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1658,
+      "events": 1662,
       "expectEmpty": false,
       "source": "tag-all"
     },
@@ -9759,7 +9788,7 @@
     {
       "name": "external-eureka-heights-brew-co",
       "type": "External",
-      "events": 9,
+      "events": 7,
       "expectEmpty": false,
       "source": "eureka-heights-brew-co"
     },
