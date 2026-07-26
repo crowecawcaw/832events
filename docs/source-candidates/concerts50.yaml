@@ -1,0 +1,10 @@
+name: Concerts 50
+status: notviable
+url: https://concerts50.com/upcoming-concerts-in-texas/houston
+platform: custom
+notes: >
+  Dynamic single-page app with no visible event listings for Houston.
+  Crawler found 0 upcoming events. Events appear to load via JavaScript API
+  (appAPI at /api/user-account/v1/) which requires authentication/browser execution.
+  Not viable for static scraping without browser automation.
+lastChecked: 2026-07-26

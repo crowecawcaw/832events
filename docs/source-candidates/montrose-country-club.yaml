@@ -1,0 +1,10 @@
+name: Montrose Country Club
+status: notviable
+url: https://www.themontrosecountryclub.com/events
+platform: squarespace
+notes: >
+  Squarespace site with events page, but events collection is empty (itemCount: 0).
+  While they advertise weekly events (brunch, parties, DJs), they don't publish them
+  through Squarespace's event system or any public feed. No ICS or API available.
+  Would require custom HTML scraper to extract event info from description text only.
+lastChecked: 2026-07-26
