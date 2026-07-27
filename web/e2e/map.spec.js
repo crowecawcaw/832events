@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test'
-import { installDataMocks } from './mock-routes.js'
+import { installDataMocks, overrideEventsIndex } from './mock-routes.js'
 
 // Map-view smoke tests. These exercise the real built bundle: temporal-group
 // markers, the drill-down panel, and (critically) that clicking a pin never
@@ -17,19 +17,19 @@ function futureJoda(days, hour = 19) {
   return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:00:00${sign}${pad(Math.floor(a / 60))}:${pad(a % 60)}`
 }
 
-const WHITE_OAK = { lat: 29.78, lng: -95.38 }
-const NRG = { lat: 29.68, lng: -95.41 } // ~11km south, won't spatially cluster with White Oak
+const NEUMOS = { lat: 47.61, lng: -122.32 }
+const BELLEVUE = { lat: 47.6101, lng: -122.2015 } // ~9km east, won't spatially cluster with Neumos
 
-// One conceptual event running three nights at White Oak Music Hall (-> a single
-// badged group marker) plus a one-off at NRG Stadium (-> a plain marker), both geocoded.
+// One conceptual event running three nights at Neumos (-> a single badged group
+// marker) plus a one-off in Bellevue (-> a plain marker), both geocoded.
 const mapEvents = [
   ...[2, 3, 4].map((d) => ({
-    icsUrl: 'test-ripper-cal1.ics', summary: 'Long Run Musical', location: 'White Oak Music Hall, The Heights',
-    date: futureJoda(d), url: `https://example.com/run/${d}`, ...WHITE_OAK,
+    icsUrl: 'test-ripper-cal1.ics', summary: 'Long Run Musical', location: 'Neumos, Capitol Hill',
+    date: futureJoda(d), url: `https://example.com/run/${d}`, ...NEUMOS,
   })),
   {
-    icsUrl: 'test-ripper-cal1.ics', summary: 'One Night Only', location: 'NRG Stadium',
-    date: futureJoda(5), url: 'https://example.com/one', ...NRG,
+    icsUrl: 'test-ripper-cal1.ics', summary: 'One Night Only', location: 'Bellevue',
+    date: futureJoda(5), url: 'https://example.com/one', ...BELLEVUE,
   },
 ]
 
@@ -37,9 +37,9 @@ const json = (body) => ({ status: 200, contentType: 'application/json', body: JS
 
 test.beforeEach(async ({ page }) => {
   await installDataMocks(page)
-  // Override the events index with geocoded, map-friendly fixtures (this route
-  // is registered after installDataMocks', so it takes precedence).
-  await page.route('**/events-index.json', (route) => route.fulfill(json(mapEvents)))
+  // Override the events corpus with geocoded, map-friendly fixtures (these
+  // routes are registered after installDataMocks', so they take precedence).
+  await overrideEventsIndex(page, mapEvents)
 
   const pageErrors = []
   page.on('pageerror', (err) => pageErrors.push(err))
@@ -50,9 +50,10 @@ test.afterEach(async ({ page }) => {
   expect(page.__pageErrors ?? [], 'no uncaught page errors').toEqual([])
 })
 
-// Boot the app, reveal the map, and return the *visible* map container. On
-// mobile the desktop column map is also in the DOM (display:none), so every
-// query is scoped to the visible container to avoid strict-mode ambiguity.
+// Boot the app, reveal the map, and return the *visible* map container. The
+// desktop map column only mounts at the desktop breakpoint (see
+// map-mount.spec.js), but queries stay scoped to the visible container so the
+// helper is robust at any viewport.
 async function openMap(page) {
   await page.goto('/')
   await expect(page.getByText('Neumos')).toBeVisible()
@@ -142,6 +143,8 @@ test('the panel closes via its close button', async ({ page }) => {
 // sheet with the preview mode toggle. Clicking a pin must not crash.
 test.describe('mobile', () => {
   test.use({ viewport: { width: 390, height: 844 }, hasTouch: true, isMobile: true })
+  // isMobile is a Chromium-only emulation feature; Firefox rejects it outright.
+  test.skip(({ browserName }) => browserName === 'firefox', 'isMobile not supported in Firefox')
 
   test('clicking a pin opens the draggable bottom sheet without errors', async ({ page }) => {
     const map = await openMap(page)

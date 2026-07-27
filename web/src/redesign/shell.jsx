@@ -1,12 +1,17 @@
 // App shell chrome: top bar, desktop rail, mobile bottom nav, map panel, toast.
 
-import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
+import { useState, useEffect, useRef, useMemo, useCallback, lazy, Suspense } from 'react'
 import { Ico } from './icons.jsx'
-import { useApp832 } from './context.js'
+import { useApp206 } from './context.js'
 import { Brand } from './atoms.jsx'
-import { EventsMap } from '../components/EventsMap.jsx'
 import { eventKey } from '../lib/eventKey.js'
-import { DATE_WINDOW_STOPS, describeWindow } from './viewModels.js'
+
+// Lazy-load the Leaflet map stack (leaflet + react-leaflet + cluster plugin + CSS)
+// so it lands in its own async chunk instead of the entry bundle. Many sessions
+// never reveal the map; even when shown, the app becomes interactive before the
+// ~150 KB+ map engine parses. See docs/web-performance-plan.md N-1.
+const EventsMap = lazy(() => import('../components/EventsMap.jsx').then((m) => ({ default: m.EventsMap })))
+import { DATE_WINDOW_STOPS, describeWindow, isDateRange, normalizeDateRange } from './viewModels.js'
 
 const NAV_ITEMS = [
   { id: 'discover', label: 'Discover', icon: Ico.spark },
@@ -26,7 +31,7 @@ const DATE_WINDOW_COMMIT_MS = 180
 // app-wide `query` (which drives filtering), so typing never rebuilds the index
 // per keystroke.
 export function TopBar() {
-  const app = useApp832()
+  const app = useApp206()
   const items = NAV_ITEMS.filter((it) => it.id !== 'you')
   const [text, setText] = useState(app.query)
   const [focused, setFocused] = useState(false)
@@ -37,12 +42,35 @@ export function TopBar() {
   const [searchOpen, setSearchOpen] = useState(false)
   const wrapRef = useRef(null)
   const inputRef = useRef(null)
+  // The <input> is UNCONTROLLED (defaultValue, no `value` prop): the DOM owns the
+  // text so React re-renders never re-apply a `value` mid-keystroke. On Android,
+  // re-applying a controlled `value` during an IME composition (Gboard autocorrect
+  // / prediction / swipe) truncates the composition and drops characters — and the
+  // TopBar re-renders on async events (debounced query commit, deferred queryKeySet)
+  // that can land mid-composition. `text` is only a MIRROR of the DOM value, kept
+  // for the clear button / suggestions visibility and the debounce; it never feeds
+  // back into the input. External query changes (clear chip, deep link, suggestion)
+  // are pushed into the DOM via the ref, guarded so we never echo our own debounced
+  // commit back over in-flight typing.
+  const lastPushedRef = useRef(app.query)
+  const pushQuery = (v) => { lastPushedRef.current = v; app.setQuery(v) }
+  const setInputValue = (v) => { setText(v); if (inputRef.current) inputRef.current.value = v }
+  // The live DOM value, preferred over the `text` mirror at commit time: on Android
+  // the mirror can lag the DOM by a final composed segment, so committing the DOM
+  // value avoids losing it on Enter / blur / debounce.
+  const currentValue = () => inputRef.current?.value ?? text
 
-  // Keep the input in sync when the query is cleared elsewhere (e.g. chip ✕).
-  useEffect(() => { setText(app.query) }, [app.query])
+  // Adopt app.query only when it changed to something we did NOT push — an external
+  // clear/deep-link — never the echo of our own debounced commit.
+  useEffect(() => {
+    if (app.query !== lastPushedRef.current) {
+      lastPushedRef.current = app.query
+      setInputValue(app.query)
+    }
+  }, [app.query]) // eslint-disable-line react-hooks/exhaustive-deps
   // Debounce commits into the global query.
   useEffect(() => {
-    const id = setTimeout(() => { if (text !== app.query) app.setQuery(text) }, 200)
+    const id = setTimeout(() => { const v = currentValue(); if (v !== app.query) pushQuery(v) }, 200)
     return () => clearTimeout(id)
   }, [text]) // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -57,12 +85,12 @@ export function TopBar() {
     return () => document.removeEventListener('mousedown', onDown)
   }, [focused])
 
-  const commit = (v) => { setText(v); app.setQuery(v); setFocused(false); setSearchOpen(false) }
-  const clear = () => { setText(''); app.setQuery(''); inputRef.current?.focus() }
+  const commit = (v) => { setInputValue(v); pushQuery(v); setFocused(false); setSearchOpen(false) }
+  const clear = () => { setInputValue(''); pushQuery(''); inputRef.current?.focus() }
   // Collapse the mobile overlay, keeping whatever query is committed.
-  const closeSearch = () => { app.setQuery(text); setFocused(false); setSearchOpen(false) }
+  const closeSearch = () => { pushQuery(currentValue()); setFocused(false); setSearchOpen(false) }
   const onSearchKeyDown = (e) => {
-    if (e.key === 'Enter') { app.setQuery(text); setFocused(false); setSearchOpen(false); inputRef.current?.blur() }
+    if (e.key === 'Enter') { pushQuery(currentValue()); setFocused(false); setSearchOpen(false); inputRef.current?.blur() }
     else if (e.key === 'Escape') { setFocused(false); setSearchOpen(false) }
   }
 
@@ -84,13 +112,23 @@ export function TopBar() {
             <span style={{ width: 19, height: 19 }}>{Ico.back}</span>
           </button>
           <span className="a-search-ico" style={{ width: 19, height: 19, flex: '0 0 auto' }}>{Ico.search}</span>
-          <input ref={inputRef} className="a-search-input" value={text} onChange={(e) => setText(e.target.value)}
+          <input ref={inputRef} className="a-search-input" defaultValue={app.query} onChange={(e) => setText(e.target.value)}
             onFocus={() => setFocused(true)} onKeyDown={onSearchKeyDown} placeholder="Search events & venues…"
             aria-label="Search events and venues" />
           {text && <button className="a-search-x" onClick={clear} aria-label="Clear search">
             <span style={{ width: 16, height: 16 }}>{Ico.close}</span>
           </button>}
         </div>
+        {/* While the full events index is still streaming in behind the small
+            "soon" payload (issue 649), a search only covers the near-term
+            window. Surface that honestly so results that look empty/partial
+            aren't mistaken for "nothing found". Only shown when actually
+            searching, so the default load has no extra chrome or layout shift. */}
+        {!app.fullEventsLoaded && app.query.trim() && (
+          <div className="a-search-loading" role="status" aria-live="polite">
+            Loading all events…
+          </div>
+        )}
         {focused && !text && (
           <div className="a-suggest">
             <div className="a-eyebrow" style={{ padding: '2px 4px 8px' }}>TRY</div>
@@ -104,12 +142,58 @@ export function TopBar() {
       </div>
       <nav className="a-topnav">
         {items.map((it) => (
-          <button key={it.id} className={`${app.section === it.id ? 'on' : ''} ${it.mobileOnly ? 'a-mapTabHide' : ''}`}
+          <button key={it.id} className={`${app.navSection === it.id ? 'on' : ''} ${it.mobileOnly ? 'a-mapTabHide' : ''}`}
             onClick={() => app.go(it.id)}>{it.icon}<span>{it.label}</span></button>
         ))}
       </nav>
+      <SavingToSwitcher />
       <button className="a-iconbtn" onClick={app.openHelp} title="How it works" aria-label="How it works">{Ico.help}</button>
       <button className="a-iconbtn" onClick={app.toggleFilter} title="Filter by date">{Ico.filter}</button>
+    </div>
+  )
+}
+
+// Global "Saving to: <list>" control. Visible on every view when the user is
+// signed-in with more than one favorites list, so it's always clear which list
+// a Follow lands in — and switchable from anywhere. With a single list there's
+// no ambiguity, so it stays hidden. Built on the same .a-dd* dropdown styling as
+// FilterDropdown (not FilterDropdown itself, which has "All …"/null semantics —
+// a list is always selected).
+export function SavingToSwitcher() {
+  const app = useApp206()
+  const [open, setOpen] = useState(false)
+  const ref = useRef(null)
+  useEffect(() => {
+    if (!open) return
+    const onDown = (e) => { if (ref.current && !ref.current.contains(e.target)) setOpen(false) }
+    document.addEventListener('mousedown', onDown)
+    return () => document.removeEventListener('mousedown', onDown)
+  }, [open])
+
+  if (!app.authUser || !app.lists || app.lists.length <= 1) return null
+  const active = app.lists.find((l) => l.id === app.activeListId) || app.lists[0]
+  const pick = (id) => { app.setActiveList(id); setOpen(false) }
+
+  return (
+    <div className="a-dd a-savingto" ref={ref}>
+      <button className="a-dd-btn on" onClick={() => setOpen((v) => !v)}
+        title="New follows are saved to this list">
+        <span style={{ width: 16, height: 16, flex: '0 0 auto' }}>{Ico.list}</span>
+        <span className="a-savingto-prefix">Saving to:</span>
+        <span className="a-savingto-name">{active.name}</span>
+        <span className="a-dd-caret" style={{ width: 14, height: 14 }}>{Ico.arrow}</span>
+      </button>
+      {open && (
+        <div className="a-dd-menu" role="listbox" aria-label="List that follows are saved to">
+          {app.lists.map((l) => (
+            <button key={l.id} role="option" aria-selected={l.id === active.id}
+              className={`a-dd-item ${l.id === active.id ? 'on' : ''}`} onClick={() => pick(l.id)}>
+              <span className="a-dd-item-label">{l.name}</span>
+              {l.id === active.id && <span className="a-dd-item-check" style={{ width: 14, height: 14 }}>{Ico.check}</span>}
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   )
 }
@@ -165,13 +249,13 @@ export function FilterDropdown({ label, icon, value, options, onSelect, groups }
 }
 
 export function RailNav() {
-  const app = useApp832()
+  const app = useApp206()
   const items = NAV_ITEMS.filter((it) => !it.mobileOnly)
   return (
     <div className="a-railinner">
-      <div className="logo">832</div>
+      <div className="logo">206</div>
       {items.map((it) => (
-        <button key={it.id} className={`a-railitem ${app.section === it.id ? 'on' : ''}`} onClick={() => app.go(it.id)}>
+        <button key={it.id} className={`a-railitem ${app.navSection === it.id ? 'on' : ''}`} onClick={() => app.go(it.id)}>
           {it.icon}<span>{it.label}</span>
         </button>
       ))}
@@ -180,11 +264,11 @@ export function RailNav() {
 }
 
 export function BottomNav() {
-  const app = useApp832()
+  const app = useApp206()
   return (
     <nav className="a-bottom">
       {NAV_ITEMS.map((it) => (
-        <button key={it.id} className={`t ${app.section === it.id ? 'on' : ''} ${it.mobileOnly ? 'a-mapTabHide' : ''}`}
+        <button key={it.id} className={`t ${app.navSection === it.id ? 'on' : ''} ${it.mobileOnly ? 'a-mapTabHide' : ''}`}
           onClick={() => app.go(it.id)}>{it.icon}<span>{it.label}</span></button>
       ))}
     </nav>
@@ -195,8 +279,12 @@ export function BottomNav() {
 // position is the stop index; the value is the global `dateWindow` (a day count
 // or 'all'). Label shows both the relative phrase and the resolved end date.
 export function DateWindowSlider({ compact = false }) {
-  const app = useApp832()
-  const committedIdx = Math.max(0, DATE_WINDOW_STOPS.indexOf(app.dateWindow))
+  const app = useApp206()
+  // A custom date range supersedes the slider (the two are mutually exclusive
+  // date modes). When one is active the range owns the header label and the
+  // track is dimmed; dragging the thumb commits a numeric window, clearing it.
+  const rangeActive = isDateRange(app.dateWindow)
+  const committedIdx = rangeActive ? 0 : Math.max(0, DATE_WINDOW_STOPS.indexOf(app.dateWindow))
   // The thumb tracks LOCAL state, so dragging is never blocked by the heavy
   // re-filter / marker rebuild — it updates instantly on every input event.
   // We commit the picked stop to the global window (which triggers that work)
@@ -218,14 +306,17 @@ export function DateWindowSlider({ compact = false }) {
   }
 
   // Label follows the LOCAL thumb so it updates live while dragging. Re-resolved
-  // each render so the absolute end date stays anchored to "now".
-  const { relative, absoluteEnd } = describeWindow(DATE_WINDOW_STOPS[idx])
+  // each render so the absolute end date stays anchored to "now". When a custom
+  // range is active it owns the label (the thumb has no matching stop).
+  const { relative, absoluteEnd } = rangeActive
+    ? describeWindow(app.dateWindow)
+    : describeWindow(DATE_WINDOW_STOPS[idx])
   // "Updating" while the picked stop hasn't been applied yet (debounce in flight)
   // or while the deferred re-filter is still catching up.
-  const pending = idx !== committedIdx || app.dateWindowPending
+  const pending = !rangeActive && (idx !== committedIdx || app.dateWindowPending)
 
   return (
-    <div className={`a-datewindow${compact ? ' a-datewindow--compact' : ''}`}>
+    <div className={`a-datewindow${compact ? ' a-datewindow--compact' : ''}${rangeActive ? ' a-datewindow--overridden' : ''}`}>
       <div className="a-datewindow-label">
         <span className="a-datewindow-rel">
           {relative}
@@ -248,8 +339,60 @@ export function DateWindowSlider({ compact = false }) {
   )
 }
 
+// Format a Date as the 'YYYY-MM-DD' value an <input type="date"> expects, in
+// LOCAL time (toISOString would shift across the UTC boundary).
+function toDateInputValue(date) {
+  const pad = (n) => String(n).padStart(2, '0')
+  return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`
+}
+
+// Native From/To date inputs for picking an explicit calendar range (e.g. the
+// days a visitor is in town). Setting both fields switches the global
+// dateWindow to a { start, end } range (superseding the slider); the inputs
+// re-sync whenever the window changes elsewhere (slider, Reset, URL nav).
+export function DateRangeFields() {
+  const app = useApp206()
+  const todayStr = toDateInputValue(new Date())
+  const win = app.dateWindow
+  const [start, setStart] = useState(isDateRange(win) ? win.start : '')
+  const [end, setEnd] = useState(isDateRange(win) ? win.end : '')
+
+  useEffect(() => {
+    if (isDateRange(app.dateWindow)) {
+      setStart(app.dateWindow.start)
+      setEnd(app.dateWindow.end)
+    } else {
+      setStart('')
+      setEnd('')
+    }
+  }, [app.dateWindow])
+
+  // Apply only once BOTH ends are set; an incomplete range leaves the current
+  // window untouched (the slider stays in control until the user finishes).
+  const commit = (s, e) => {
+    if (s && e) app.setDateWindow(normalizeDateRange({ start: s, end: e }) || 'all')
+  }
+  const onStart = (ev) => { const v = ev.target.value; setStart(v); commit(v, end) }
+  const onEnd = (ev) => { const v = ev.target.value; setEnd(v); commit(start, v) }
+
+  return (
+    <div className="a-daterange">
+      <label className="a-daterange-field">
+        <span className="a-daterange-lbl">From</span>
+        <input type="date" className="a-daterange-input" value={start} min={todayStr}
+          onChange={onStart} aria-label="From date" />
+      </label>
+      <label className="a-daterange-field">
+        <span className="a-daterange-lbl">To</span>
+        <input type="date" className="a-daterange-input" value={end} min={start || todayStr}
+          onChange={onEnd} aria-label="To date" />
+      </label>
+    </div>
+  )
+}
+
 export function FilterPopover() {
-  const app = useApp832()
+  const app = useApp206()
   return (
     <>
       <div onClick={app.toggleFilter} style={{ position: 'absolute', inset: 0, zIndex: 70 }} />
@@ -257,6 +400,10 @@ export function FilterPopover() {
         <div className="a-eyebrow" style={{ marginBottom: 9 }}>WHEN</div>
         <div style={{ marginBottom: 14 }}>
           <DateWindowSlider />
+        </div>
+        <div className="a-eyebrow" style={{ marginBottom: 9 }}>OR PICK DATES</div>
+        <div style={{ marginBottom: 14 }}>
+          <DateRangeFields />
         </div>
         <div style={{ display: 'flex', gap: 8 }}>
           <button className="btn btn-ghost" style={{ flex: 1, height: 38, fontSize: 13 }} onClick={() => app.setDateWindow('all')}>Reset</button>
@@ -312,7 +459,7 @@ function MapResizeHandle({ panelRef, setMapWidth, mapWidth }) {
 }
 
 export function MapPanel({ mobile = false }) {
-  const app = useApp832()
+  const app = useApp206()
   const panelRef = useRef(null)
   // Only the persistent desktop panel drives the shared map ref / expand state;
   // the mobile view is a separate instance and must not clobber the ref.
@@ -341,26 +488,31 @@ export function MapPanel({ mobile = false }) {
     return app.eventsIndex.filter((e) => {
       if (!e.lat || !e.lng || !app.inScope(e)) return false
       if (qks && !qks.has(eventKey(e))) return false
-      if (openCh) return e.icsUrl === openCh
+      if (openCh) return e.icsUrl === openCh // channel scope: count its own events (matches isMappable)
       if (feedOnly && !(attrib && attrib.has(eventKey(e)))) return false
+      // Suppress cross-source duplicates only in the global/tag map, not the feed
+      // scope — mirrors EventsMap's isMappable so the badge tracks the rendered pins.
+      if (!feedOnly && e.duplicateOf) return false
       return true
     }).length
   }, [app.eventsIndex, app.openCh, app.inScope, app.eventAttributions, app.queryKeySet, feedOnly])
 
   const map = (
-    <EventsMap
-      eventsIndex={app.eventsIndex}
-      geoFilters={app.geoFilters}
-      calendarFilter={app.openCh || null}
-      calendarTagsByIcsUrl={app.calendarTagsByIcsUrl}
-      selectedTag={null}
-      calendarNameByIcsUrl={app.calendarNameByIcsUrl}
-      eventAttributions={app.eventAttributions}
-      dateInScope={app.inScope}
-      feedOnly={feedOnly}
-      queryKeySet={app.queryKeySet}
-      mapRef={mobile ? undefined : app.mapRef}
-    />
+    <Suspense fallback={<div className="a-maploading" aria-busy="true">Loading map…</div>}>
+      <EventsMap
+        eventsIndex={app.eventsIndex}
+        geoFilters={app.geoFilters}
+        calendarFilter={app.openCh || null}
+        calendarTagsByIcsUrl={app.calendarTagsByIcsUrl}
+        selectedTag={null}
+        calendarNameByIcsUrl={app.calendarNameByIcsUrl}
+        eventAttributions={app.eventAttributions}
+        dateInScope={app.inScope}
+        feedOnly={feedOnly}
+        queryKeySet={app.queryKeySet}
+        mapRef={mobile ? undefined : app.mapRef}
+      />
+    </Suspense>
   )
   // Mobile gets an explicit All/Following toggle since the Map tab has no section
   // context to mirror. It rides inside the floating filter bar (an overlay) next
@@ -423,7 +575,7 @@ export function MapPanel({ mobile = false }) {
 }
 
 export function Toast() {
-  const app = useApp832()
+  const app = useApp206()
   if (!app.toast) return null
   return (
     <div className="a-toast"><span style={{ width: 16, height: 16 }}>{Ico.check}</span>{app.toast}</div>

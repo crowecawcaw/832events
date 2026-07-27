@@ -1,4 +1,4 @@
-import { useMemo, useEffect, useState, useCallback, useRef, memo } from 'react'
+import { useMemo, useEffect, useState, useCallback, useRef, memo, startTransition } from 'react'
 import { MapContainer, TileLayer, Marker, Popup, Circle, useMap } from 'react-leaflet'
 import MarkerClusterGroup from 'react-leaflet-cluster'
 import L from 'leaflet'
@@ -26,7 +26,7 @@ L.Icon.Default.mergeOptions({
 const PANEL_WIDTH = 340
 
 // Populated metro extent used to reject distant outliers from the default map
-// fit. Configured per city in city.config.ts (Houston's box hugs Harris County
+// fit. Configured per city in city.config.ts (Seattle's box hugs King County
 // — see the comments there for how its edges were chosen).
 const CLAMP_BOUNDS = cityConfig.map.clampBounds
 
@@ -51,13 +51,12 @@ export function isWithinClampBounds(lat, lng) {
 
 // Fraction of events trimmed off each tail (per axis) before framing the default
 // view, and the minimum point count before trimming kicks in. The dense mass of
-// events sits in the inner loop and first-ring suburbs; a sparse handful of
-// legitimate but far-flung Harris County events (a lone Katy or League City
-// listing) would otherwise stretch the default zoom out far enough that —
-// given the map panel's aspect ratio — neighbouring Galveston/Conroe markers
-// fall into view. Trimming the sparsest tails frames the metro mass instead.
-// Filtered views (a single calendar/tag) stay below the threshold and are
-// framed in full, untrimmed.
+// events sits in the Seattle/Eastside core; a sparse handful of legitimate but
+// far-flung King County events (a lone Federal Way or Issaquah listing) would
+// otherwise stretch the default zoom out far enough that — given the map panel's
+// aspect ratio — neighbouring Tacoma/Everett markers fall into view. Trimming the
+// sparsest tails frames the metro mass instead. Filtered views (a single
+// calendar/tag) stay below the threshold and are framed in full, untrimmed.
 const FIT_TRIM_QUANTILE = 0.02
 const FIT_TRIM_MIN_POINTS = 50
 
@@ -72,7 +71,7 @@ function quantile(sortedAsc, q) {
 // — don't stretch the zoom; outliers still render as markers. Smaller sets
 // (filtered views) are framed in full. Geo-filter circles are user-chosen and
 // always folded in untrimmed. Falls back to ALL event markers when none are
-// in-Harris-County, so the map never ends up empty.
+// in-county, so the map never ends up empty.
 export function collectFitPoints(events, geoFilters) {
   const all = []
   const inCounty = []
@@ -155,8 +154,8 @@ function FitBounds({ events, geoFilters, fitKey }) {
   // filters are still folded into the bounds on the runs that do fire.
   useEffect(() => {
     if (!hasEvents) return
-    // In-county event markers (distant outliers like the Woodlands or Galveston
-    // are excluded so they don't stretch the default zoom) plus any geo-filter circles.
+    // In-county event markers (distant outliers like the Gorge are excluded so
+    // they don't stretch the default zoom) plus any geo-filter circles.
     const points = collectFitPoints(eventsRef.current, geoRef.current)
     if (points.length > 0) {
       map.fitBounds(points, { padding: [40, 40], maxZoom: 15 })
@@ -200,25 +199,6 @@ function MapBridge({ mapRef }) {
   return null
 }
 
-function formatEventDate(dateStr) {
-  if (!dateStr) return ''
-  try {
-    const cleaned = dateStr.replace(/\[.*\]$/, '')
-    const d = new Date(cleaned)
-    if (isNaN(d.getTime())) return dateStr
-    return d.toLocaleDateString('en-US', {
-      weekday: 'short',
-      month: 'short',
-      day: 'numeric',
-      ...(d.getFullYear() !== new Date().getFullYear() ? { year: 'numeric' } : {}),
-      hour: '2-digit',
-      minute: '2-digit',
-    })
-  } catch {
-    return dateStr
-  }
-}
-
 // Pure predicate deciding whether an event belongs on the map under the active
 // filters. Extracted so it can be unit-tested without rendering Leaflet, and so
 // the favorites-parity rule has one place to live.
@@ -247,9 +227,20 @@ export function isMappable(event, {
   if (queryKeySet && !queryKeySet.has(eventKey(event))) return false
 
   if (calendarFilter) {
+    // Single-channel view: show this channel's own events, including copies that
+    // are cross-source duplicates in the global aggregate. This mirrors the
+    // channel-detail list, which renders the raw .ics (untouched by dedup).
+    // Cross-source dedup never matches within one feed, so there's nothing to
+    // collapse here anyway.
     return event.icsUrl === calendarFilter
   }
   if (feedOnly && !(eventAttributions && eventAttributions.has(eventKey(event)))) return false
+  // Fold cross-source duplicates into their canonical pin so a HIGH-merged event
+  // shows one pin — matching the deduped Discover list. Scoped to the global /
+  // tag-aggregate map only: the feed (following) map deliberately does NOT drop
+  // `duplicateOf`, because that path mirrors the favorites-worker ICS feed, which
+  // is parity-locked to keep every copy (docs/cross-source-event-dedup.md).
+  if (!feedOnly && event.duplicateOf) return false
   if (selectedTag && selectedTag !== '__favorites__') {
     const tags = calendarTagsByIcsUrl[event.icsUrl] || []
     if (!tags.includes(selectedTag)) return false
@@ -301,12 +292,11 @@ function EventsMapInner({
   // Empty/absent search → '' (no remount); size disambiguates match-set changes.
   const scopeQueryToken = queryKeySet ? `q${queryKeySet.size}` : ''
 
-  // Parse dates for popup display
-  const eventsWithDates = useMemo(() => mappableEvents.map(event => ({
-    ...event,
-    formattedDate: formatEventDate(event.date),
-    calendarName: calendarNameByIcsUrl[event.icsUrl] || event.icsUrl?.replace('.ics', ''),
-  })), [mappableEvents, calendarNameByIcsUrl])
+  // NOTE: no per-event decoration pass here. This memo's predecessor cloned
+  // every mappable event to attach a formatted date + calendar name — ~11k
+  // Intl-formatting calls and object clones on every corpus/filter change, for
+  // display strings only ever read in the drill-down panel (≤ 50 rows). The
+  // panel now derives both at render time from the raw instance.
 
   // Temporal grouping: collapse the many instances of a conceptually-same
   // recurring event at one venue into a single group → a single marker. Runs on
@@ -315,20 +305,34 @@ function EventsMapInner({
   // coordinate, so grouping first and culling the groups (below) is equivalent
   // to and cheaper than culling instances. The spatial MarkerClusterGroup layer
   // then still clusters distinct venues on top — the two are complementary.
-  const eventGroups = useMemo(() => groupEvents(eventsWithDates), [eventsWithDates])
+  const eventGroups = useMemo(() => groupEvents(mappableEvents), [mappableEvents])
 
   // Viewport culling: only render markers within (a padded) current map bounds,
   // re-filtering when the map pans/zooms. This keeps a date-window change cheap
   // while the user is zoomed into a neighborhood — we rebuild dozens of markers,
-  // not thousands. `bounds` is null until the map reports its first viewport, in
-  // which case we render everything (the initial fit frames all events anyway).
+  // not thousands. `bounds` is null until the map reports its first viewport;
+  // that first render is culled to the clamp box the map always opens framed
+  // at (INITIAL_BOUNDS), so far-flung out-of-county groups never enter the
+  // initial marker build — they appear as soon as the real viewport includes
+  // them (ViewportTracker seeds actual bounds right after mount).
   const [bounds, setBounds] = useState(null)
   const onBounds = useCallback((b) => setBounds(b), [])
   const visibleGroups = useMemo(() => {
-    if (!bounds) return eventGroups
-    const padded = bounds.pad(0.5) // ~50% buffer so just-offscreen markers stay put while panning
+    const b = bounds || L.latLngBounds(INITIAL_BOUNDS)
+    const padded = b.pad(0.5) // ~50% buffer so just-offscreen markers stay put while panning
     return eventGroups.filter((g) => padded.contains([g.lat, g.lng]))
   }, [eventGroups, bounds])
+
+  // Defer the marker/cluster layer behind the map shell's first paint: the
+  // container + tiles commit and paint first, then the (thousands-strong)
+  // marker build renders in an interruptible transition. This is what the
+  // mapOpen/mapReopen "container painted" metrics perceive — tiles first,
+  // pins a beat later — and it keeps the open tap responsive.
+  // (Fix 3, docs/web-tab-switch-performance.md.)
+  const [markersReady, setMarkersReady] = useState(false)
+  useEffect(() => {
+    startTransition(() => setMarkersReady(true))
+  }, [])
 
   // The group whose drill-down panel is open (null = closed).
   const [selectedGroup, setSelectedGroup] = useState(null)
@@ -355,7 +359,7 @@ function EventsMapInner({
   // default icon in a real browser. Clicking opens the side detail panel rather
   // than a Leaflet popup. Keyed on the stable group key (date-independent) so
   // slider drags update markers in place.
-  const markers = useMemo(() => visibleGroups.map((group) => {
+  const markers = useMemo(() => !markersReady ? [] : visibleGroups.map((group) => {
     const iconProps = group.count > 1 ? { icon: createGroupBadgeIcon(group.count) } : {}
     return (
       <Marker
@@ -365,7 +369,7 @@ function EventsMapInner({
         eventHandlers={{ click: () => openGroup(group) }}
       />
     )
-  }), [visibleGroups, openGroup])
+  }), [markersReady, visibleGroups, openGroup])
 
   return (
     <div className="events-map-container" data-testid="events-map">
@@ -402,7 +406,7 @@ function EventsMapInner({
           </Circle>
         ))}
 
-        <FitBounds events={eventsWithDates} geoFilters={geoFilters} fitKey={`${calendarFilter || ''}|${selectedTag || ''}|${feedOnly ? 'feed' : 'all'}|${scopeQueryToken}`} />
+        <FitBounds events={mappableEvents} geoFilters={geoFilters} fitKey={`${calendarFilter || ''}|${selectedTag || ''}|${feedOnly ? 'feed' : 'all'}|${scopeQueryToken}`} />
 
         {/* Event markers — bare markers with lazy (on-click) popups.
             Keyed on the scope (calendar / tag / feed / search) so a scope change
@@ -412,7 +416,7 @@ function EventsMapInner({
             The search token is included so narrowing to (or clearing) a search
             refits the view and clears stale clusters; the key deliberately omits
             the date window so slider drags update markers in place. */}
-        <MarkerClusterGroup
+        {markersReady && <MarkerClusterGroup
           key={`cluster-${calendarFilter || ''}|${selectedTag || ''}|${feedOnly ? 'feed' : 'all'}|${scopeQueryToken}`}
           chunkedLoading
           iconCreateFunction={createClusterIcon}
@@ -421,7 +425,7 @@ function EventsMapInner({
           spiderfyOnMaxZoom={true}
         >
           {markers}
-        </MarkerClusterGroup>
+        </MarkerClusterGroup>}
       </MapContainer>
 
       {/* Drill-down: clicking a marker opens this side panel with the group's
@@ -429,10 +433,11 @@ function EventsMapInner({
       <EventGroupPanel
         group={selectedGroup}
         eventAttributions={eventAttributions}
+        calendarNameByIcsUrl={calendarNameByIcsUrl}
         onClose={() => setSelectedGroup(null)}
       />
 
-      {eventsWithDates.length === 0 && (
+      {mappableEvents.length === 0 && (
         <div className="events-map-empty">
           {queryKeySet
             ? 'No events match your search on the map'
