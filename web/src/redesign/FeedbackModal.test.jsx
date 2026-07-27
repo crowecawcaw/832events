@@ -1,12 +1,14 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
-import { render, screen, fireEvent } from '@testing-library/react'
-import { App832Context } from './context.js'
+import { render, screen, fireEvent, waitFor } from '@testing-library/react'
+import { App206Context } from './context.js'
 import { FeedbackModal } from './FeedbackModal.jsx'
 import cityConfig from '../../../city.config.ts'
 
 // Minimal app model the modal reads from context. Tests override fields per case.
 function makeApp(overrides = {}) {
   return {
+    API_URL: 'https://api.test',
+    authUser: null,
     feedbackPrefill: { type: 'general' },
     openFeedback: vi.fn(),
     closeFeedback: vi.fn(),
@@ -17,9 +19,9 @@ function makeApp(overrides = {}) {
 
 function renderModal(app) {
   return render(
-    <App832Context.Provider value={app}>
+    <App206Context.Provider value={app}>
       <FeedbackModal />
-    </App832Context.Provider>
+    </App206Context.Provider>
   )
 }
 
@@ -54,24 +56,179 @@ describe('FeedbackModal', () => {
     expect(screen.getByText('Stoup Brewing')).toBeInTheDocument()
   })
 
+  it('shows the event identity and seeds the editable template message from an event report', () => {
+    const app = makeApp({
+      feedbackPrefill: {
+        type: 'bug',
+        message: 'Problem with "Trivia Night" (Fri Jul 10): ',
+        context: { eventTitle: 'Trivia Night', eventDate: 'Fri Jul 10 · 7:00 PM', sourceName: 'Neumos' },
+      },
+    })
+    renderModal(app)
+    // Chip leads with the event title, then date + source.
+    expect(screen.getByText('Trivia Night')).toBeInTheDocument()
+    expect(screen.getByText(/Fri Jul 10 · 7:00 PM/)).toBeInTheDocument()
+    expect(screen.getByText(/Neumos/)).toBeInTheDocument()
+    // Editable template message is pre-filled so the user can submit in one tap.
+    expect(screen.getByRole('button', { name: 'Report a problem' })).toHaveAttribute('aria-pressed', 'true')
+    expect(screen.getByPlaceholderText(/What’s wrong/i)).toHaveValue('Problem with "Trivia Night" (Fri Jul 10): ')
+  })
+
+  it('POSTs the event context fields for an event report', async () => {
+    const fetchFn = vi.fn(async () => ({ ok: true }))
+    vi.stubGlobal('fetch', fetchFn)
+    const app = makeApp({
+      feedbackPrefill: {
+        type: 'bug',
+        message: 'seed: ',
+        context: { eventTitle: 'Trivia Night', eventDate: 'Fri Jul 10', sourceName: 'Neumos', icsUrl: 'neumos.ics' },
+      },
+    })
+    renderModal(app)
+    fireEvent.click(screen.getByRole('button', { name: 'Send' }))
+    await waitFor(() => expect(fetchFn).toHaveBeenCalledTimes(1))
+    const payload = JSON.parse(fetchFn.mock.calls[0][1].body)
+    expect(payload).toMatchObject({
+      type: 'bug',
+      message: 'seed:',
+      context: { eventTitle: 'Trivia Night', eventDate: 'Fri Jul 10', sourceName: 'Neumos', icsUrl: 'neumos.ics' },
+    })
+  })
+
+  it('pre-fills the email for signed-in users', () => {
+    const app = makeApp({ authUser: { email: 'me@example.com' } })
+    renderModal(app)
+    expect(screen.getByPlaceholderText(/Email/i)).toHaveValue('me@example.com')
+  })
+
   it('does not submit an empty message', () => {
-    const openFn = vi.fn()
-    vi.stubGlobal('open', openFn)
+    const fetchFn = vi.fn()
+    vi.stubGlobal('fetch', fetchFn)
     const app = makeApp()
     renderModal(app)
     fireEvent.click(screen.getByRole('button', { name: 'Send' }))
-    expect(openFn).not.toHaveBeenCalled()
+    expect(fetchFn).not.toHaveBeenCalled()
     expect(screen.getByText(/Please enter a message/i)).toBeInTheDocument()
   })
 
-  it('opens the GitHub new-issue page on submit (no backend)', () => {
-    const openFn = vi.fn()
-    vi.stubGlobal('open', openFn)
+  it('POSTs the expected payload with credentials and flashes on success', async () => {
+    const fetchFn = vi.fn(async () => ({ ok: true }))
+    vi.stubGlobal('fetch', fetchFn)
+    const app = makeApp({ feedbackPrefill: { type: 'bug', context: { sourceName: 'Stoup', icsUrl: 'stoup.ics' } } })
+    renderModal(app)
+
+    fireEvent.change(screen.getByPlaceholderText(/What’s wrong/i), { target: { value: 'Missing events' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Send' }))
+
+    await waitFor(() => expect(fetchFn).toHaveBeenCalledTimes(1))
+    const [url, init] = fetchFn.mock.calls[0]
+    expect(url).toBe('https://api.test/feedback')
+    expect(init.method).toBe('POST')
+    expect(init.credentials).toBe('include')
+    const payload = JSON.parse(init.body)
+    expect(payload).toMatchObject({
+      type: 'bug',
+      message: 'Missing events',
+      website: '',
+      context: { sourceName: 'Stoup', icsUrl: 'stoup.ics' },
+    })
+    await waitFor(() => expect(app.flash).toHaveBeenCalled())
+    expect(app.closeFeedback).toHaveBeenCalled()
+  })
+
+  it('shows an error and stays open when the request fails', async () => {
+    const fetchFn = vi.fn(async () => ({ ok: false, status: 500 }))
+    vi.stubGlobal('fetch', fetchFn)
     const app = makeApp()
     renderModal(app)
     fireEvent.change(screen.getByPlaceholderText(/love/i), { target: { value: 'hello' } })
     fireEvent.click(screen.getByRole('button', { name: 'Send' }))
-    expect(openFn).toHaveBeenCalledWith(expect.stringContaining(`github.com/${cityConfig.site.repo}/issues/new`), '_blank', 'noopener,noreferrer')
+    await waitFor(() => expect(screen.getByText(/something went wrong/i)).toBeInTheDocument())
+    expect(app.closeFeedback).not.toHaveBeenCalled()
+  })
+
+  it('falls back to a prefilled GitHub issue when no API_URL is configured', () => {
+    const openFn = vi.fn()
+    vi.stubGlobal('open', openFn)
+    const fetchFn = vi.fn()
+    vi.stubGlobal('fetch', fetchFn)
+    const app = makeApp({ API_URL: '', feedbackPrefill: { type: 'bug', context: { sourceName: 'Stoup', icsUrl: 'stoup.ics' } } })
+    renderModal(app)
+    fireEvent.change(screen.getByPlaceholderText(/What’s wrong/i), { target: { value: 'Missing events' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Send' }))
+
+    expect(fetchFn).not.toHaveBeenCalled()
+    expect(openFn).toHaveBeenCalledTimes(1)
+    const [url, target, features] = openFn.mock.calls[0]
+    expect(target).toBe('_blank')
+    expect(features).toBe('noopener,noreferrer')
+
+    const parsed = new URL(url)
+    expect(parsed.origin + parsed.pathname).toBe(`https://github.com/${cityConfig.site.repo}/issues/new`)
+    // Title mirrors the worker: [Bug] prefix + the source name as the hint.
+    expect(parsed.searchParams.get('title')).toBe('[Bug] Stoup')
+    expect(parsed.searchParams.get('labels')).toBe('feedback,bug')
+    const body = parsed.searchParams.get('body')
+    expect(body).toContain('**Type:** bug')
+    expect(body).toContain('**Source:** Stoup')
+    expect(body).toContain('**Calendar feed:** stoup.ics')
+    expect(body).toContain('Missing events')
     expect(app.closeFeedback).toHaveBeenCalled()
+  })
+
+  it('neutralizes markdown in the title and context fields of the GitHub fallback', () => {
+    const openFn = vi.fn()
+    vi.stubGlobal('open', openFn)
+    vi.stubGlobal('fetch', vi.fn())
+    const app = makeApp({ API_URL: '', feedbackPrefill: { type: 'bug', context: { sourceName: '@evil #1 [x]' } } })
+    renderModal(app)
+    fireEvent.change(screen.getByPlaceholderText(/What’s wrong/i), { target: { value: 'hi' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Send' }))
+
+    const parsed = new URL(openFn.mock.calls[0][0])
+    // A zero-width space is inserted after each markdown sigil, so no raw
+    // @mention / #ref / [link] survives in the title or body.
+    expect(parsed.searchParams.get('title')).not.toContain('@evil')
+    expect(parsed.searchParams.get('title')).toContain('@​evil')
+    expect(parsed.searchParams.get('body')).not.toContain('@evil #1 [x]')
+    expect(parsed.searchParams.get('body')).toContain('@​evil')
+  })
+
+  it('falls back to GitHub when the worker reports feedback is not configured (503)', async () => {
+    const openFn = vi.fn()
+    vi.stubGlobal('open', openFn)
+    const fetchFn = vi.fn(async () => ({ ok: false, status: 503 }))
+    vi.stubGlobal('fetch', fetchFn)
+    const app = makeApp()
+    renderModal(app)
+    fireEvent.change(screen.getByPlaceholderText(/love/i), { target: { value: 'hello there' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Send' }))
+
+    await waitFor(() => expect(fetchFn).toHaveBeenCalledTimes(1))
+    await waitFor(() => expect(openFn).toHaveBeenCalledTimes(1))
+    const parsed = new URL(openFn.mock.calls[0][0])
+    expect(parsed.searchParams.get('body')).toContain('hello there')
+    expect(screen.queryByText(/something went wrong/i)).not.toBeInTheDocument()
+    expect(app.closeFeedback).toHaveBeenCalled()
+  })
+
+  it('copies the body and opens a short GitHub URL when the message is too long', () => {
+    const openFn = vi.fn()
+    vi.stubGlobal('open', openFn)
+    const writeText = vi.fn(() => Promise.resolve())
+    vi.stubGlobal('navigator', { clipboard: { writeText } })
+    const app = makeApp({ API_URL: '' })
+    renderModal(app)
+    // '#' percent-encodes to %23 (3 chars each), so 4000 of them blow the
+    // encoded URL well past MAX_ISSUE_URL_LENGTH (6000).
+    const huge = '#'.repeat(4000)
+    fireEvent.change(screen.getByPlaceholderText(/love/i), { target: { value: huge } })
+    fireEvent.click(screen.getByRole('button', { name: 'Send' }))
+
+    expect(writeText).toHaveBeenCalledTimes(1)
+    expect(writeText.mock.calls[0][0]).toContain('#'.repeat(100))
+    const parsed = new URL(openFn.mock.calls[0][0])
+    expect(parsed.searchParams.get('body')).toBe('_Paste your copied feedback here._')
+    expect(app.flash).toHaveBeenCalledWith(expect.stringContaining('copied'))
   })
 })
