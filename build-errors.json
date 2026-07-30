@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-07-30T05:50:56.860Z",
-  "totalErrors": 25,
+  "buildTime": "2026-07-30T05:52:17.202Z",
+  "totalErrors": 4,
   "configErrors": [],
   "sources": [
     {
@@ -72,145 +72,24 @@
       "error": "Error: HTTP 403: "
     },
     {
+      "name": "houston-heritage-holiday-market",
+      "friendlyName": "Houston Heritage Holiday Market",
+      "url": "https://ghwcc.org/calendar/?ical=1",
+      "error": "null"
+    },
+    {
       "name": "islamic-society-greater-houston",
       "friendlyName": "Islamic Society of Greater Houston",
       "url": "https://isgh.org/?post_type=tribe_events&ical=1",
       "error": "Error: HTTP 403: "
     }
   ],
-  "geocodeErrors": [
-    {
-      "type": "GeocodeError",
-      "location": "Biggio's Sports bar",
-      "source": "downtown-houston-events",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Punch Line Houston",
-      "source": "downtown-houston-events",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Castle Island Brewing Co., 31 Astor Avenue, Norwood, MA, 02062",
-      "source": "latin-city",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Four Corners Brewing Company, 1311 South Ervay Street, Dallas, TX, 75215",
-      "source": "latin-city",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Skylab Social",
-      "source": "songkick-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Stafford Centre for the Performing Arts",
-      "source": "songkick-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Ford Amphitheatre",
-      "source": "songkick-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "The Grand Venue",
-      "source": "songkick-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Crockett, TX, TX - Crockett H-E-B",
-      "source": "texas-parks-wildlife-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Some Good Wine, 13 E 8th St, New York, NY, 10003, United States",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "PPG Paints Arena, 1001 Fifth Avenue, Pittsburgh, Pennsylvania, 15219, United States",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Comedy Cellar at Rio Las Vegas, 3700 W Flamingo Rd, Las Vegas, NV, 89103, USA",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Atrium Showroom at Luxor Hotel and Casino Las Vegas, 3900 S Las Vegas Blvd, Las Vegas, NV, 89119, USA",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Treasure Island Resort & Casino, 5734 Sturgeon Lake Road, Welch, MN, 55089, USA",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Palace Theatre Columbus, 34 W. Broad St., Columbus, OH, 43215, United States Of America",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Reno Events Center, 400 University Way, Reno, NV, 89501, USA",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Van Andel Arena, 130 Fulton West, Grand Rapids, Michigan, 49503, United States",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Taft Theatre, 317 East 5th Street, Cincinnati, Ohio, 45202, United States",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "GA",
-      "source": "external-houston-black-restaurant-week",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Marcus Bar & Grille, 525 Edgewood Ave SE, Atlanta, GA, 30312, United States",
-      "source": "external-houston-black-restaurant-week",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Oreatha’s At The Point, 2287 Cascade Rd, Atlanta, GA, 30311, United States",
-      "source": "external-houston-black-restaurant-week",
-      "reason": "Nominatim returned no results"
-    }
-  ],
+  "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1843,
-    "eventsWithGeo": 1542,
+    "totalEvents": 1854,
+    "eventsWithGeo": 1553,
     "eventsWithoutGeo": 301,
-    "geocodeErrors": 21
+    "geocodeErrors": 0
   },
   "uncertainEvents": [],
   "uncertaintyStats": {
@@ -729,8 +608,8 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1054,
-    "totalEvents": 1843,
+    "eventsWithImage": 1065,
+    "totalEvents": 1854,
     "venuesWithImage": 0,
     "totalVenues": 59,
     "unresolvable": 0
@@ -4222,7 +4101,7 @@
   "costStats": {
     "eventsWithCost": 352,
     "freeEvents": 232,
-    "totalEvents": 1843,
+    "totalEvents": 1854,
     "unresolvable": 0
   },
   "costGaps": [
@@ -11879,6 +11758,27 @@
       "source": "tag-medical-center"
     },
     {
+      "name": "tag-markets",
+      "type": "Aggregate",
+      "events": 11,
+      "expectEmpty": false,
+      "source": "tag-markets"
+    },
+    {
+      "name": "tag-shopping",
+      "type": "Aggregate",
+      "events": 11,
+      "expectEmpty": false,
+      "source": "tag-shopping"
+    },
+    {
+      "name": "tag-holiday",
+      "type": "Aggregate",
+      "events": 11,
+      "expectEmpty": false,
+      "source": "tag-holiday"
+    },
+    {
       "name": "tag-tech",
       "type": "Aggregate",
       "events": 6,
@@ -11895,7 +11795,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1853,
+      "events": 1864,
       "expectEmpty": false,
       "source": "tag-all"
     },
@@ -12045,6 +11945,13 @@
       "events": 30,
       "expectEmpty": false,
       "source": "new-magnolia-brewing"
+    },
+    {
+      "name": "external-nutcracker-market",
+      "type": "External",
+      "events": 12,
+      "expectEmpty": false,
+      "source": "nutcracker-market"
     },
     {
       "name": "external-tuts",
