@@ -8,6 +8,10 @@ import { EventsMap } from '../components/EventsMap.jsx'
 import { eventKey } from '../lib/eventKey.js'
 import { DATE_WINDOW_STOPS, describeWindow } from './viewModels.js'
 
+// Nav highlight ("on") reads `app.navSection`, NOT `app.section`: a tab press
+// renders the view swap inside startTransition, so `section` only lands once the
+// heavy swap commits, while `navSection` is the urgent mirror that paints the
+// pressed state on the next frame. See docs/web-tab-switch-performance.md.
 const NAV_ITEMS = [
   { id: 'discover', label: 'Discover', icon: Ico.spark },
   { id: 'map', label: 'Map', icon: Ico.map, mobileOnly: true },
@@ -104,7 +108,7 @@ export function TopBar() {
       </div>
       <nav className="a-topnav">
         {items.map((it) => (
-          <button key={it.id} className={`${app.section === it.id ? 'on' : ''} ${it.mobileOnly ? 'a-mapTabHide' : ''}`}
+          <button key={it.id} className={`${app.navSection === it.id ? 'on' : ''} ${it.mobileOnly ? 'a-mapTabHide' : ''}`}
             onClick={() => app.go(it.id)}>{it.icon}<span>{it.label}</span></button>
         ))}
       </nav>
@@ -171,7 +175,7 @@ export function RailNav() {
     <div className="a-railinner">
       <div className="logo">832</div>
       {items.map((it) => (
-        <button key={it.id} className={`a-railitem ${app.section === it.id ? 'on' : ''}`} onClick={() => app.go(it.id)}>
+        <button key={it.id} className={`a-railitem ${app.navSection === it.id ? 'on' : ''}`} onClick={() => app.go(it.id)}>
           {it.icon}<span>{it.label}</span>
         </button>
       ))}
@@ -184,7 +188,7 @@ export function BottomNav() {
   return (
     <nav className="a-bottom">
       {NAV_ITEMS.map((it) => (
-        <button key={it.id} className={`t ${app.section === it.id ? 'on' : ''} ${it.mobileOnly ? 'a-mapTabHide' : ''}`}
+        <button key={it.id} className={`t ${app.navSection === it.id ? 'on' : ''} ${it.mobileOnly ? 'a-mapTabHide' : ''}`}
           onClick={() => app.go(it.id)}>{it.icon}<span>{it.label}</span></button>
       ))}
     </nav>

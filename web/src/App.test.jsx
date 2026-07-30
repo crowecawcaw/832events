@@ -204,6 +204,34 @@ describe('App832 redesign', () => {
       await waitFor(() => expect(container.querySelector('[data-testid="events-map"]')).toBeTruthy())
       expect(container.textContent).not.toContain('No favorited events with a location to show')
     })
+
+    // docs/web-tab-switch-performance.md: the mobile Map tab is lazy until its
+    // first open, then kept mounted (hidden with CSS) so a return visit skips
+    // the Leaflet re-boot instead of paying it again.
+    it('keeps the mobile Map tab mounted (hidden) after navigating away', async () => {
+      const { container } = render(<App />)
+      await waitDiscover()
+      // Lazy: nothing mounted for the Map tab before its first visit.
+      expect(container.querySelector('.a-maptab')).toBeNull()
+
+      clickNav('Map')
+      await waitFor(() => expect(container.querySelector('.a-maptab')).toBeTruthy())
+      expect(container.querySelector('.a-maptab').className).not.toContain('a-maptab--hidden')
+      // The keyed content area hides while the map owns the content cell.
+      expect(container.querySelector('.a-content').className).toContain('a-content--maphidden')
+      const mapNode = container.querySelector('.a-maptab .events-map-container')
+      expect(mapNode).toBeTruthy()
+
+      clickNav('Discover')
+      // Still mounted — and the very same DOM node, i.e. not re-created.
+      await waitFor(() => expect(container.querySelector('.a-maptab').className).toContain('a-maptab--hidden'))
+      expect(container.querySelector('.a-maptab .events-map-container')).toBe(mapNode)
+      expect(container.querySelector('.a-content').className).not.toContain('a-content--maphidden')
+
+      clickNav('Map')
+      await waitFor(() => expect(container.querySelector('.a-maptab').className).not.toContain('a-maptab--hidden'))
+      expect(container.querySelector('.a-maptab .events-map-container')).toBe(mapNode)
+    })
 })
 
   describe('deep linking', () => {
