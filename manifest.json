@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-24T10:57:35.687Z",
+  "lastUpdated": "2026-07-30T05:50:04.111Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -15,6 +15,23 @@
             "Music",
             "Nightlife",
             "Downtown"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "aurora-picture-show",
+      "description": "Aurora Picture Show",
+      "friendlyLink": "https://www.aurorapictureshow.org/programs",
+      "calendars": [
+        {
+          "name": "aurora-picture-show",
+          "friendlyName": "Aurora Picture Show",
+          "icsUrl": "aurora-picture-show-aurora-picture-show.ics",
+          "rssUrl": "aurora-picture-show-aurora-picture-show.rss",
+          "tags": [
+            "Film",
+            "EaDo"
           ]
         }
       ]
@@ -126,24 +143,6 @@
             "Theater",
             "Music",
             "University of Houston"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "docs-houston",
-      "description": "Doc's Jazz Club",
-      "friendlyLink": "https://docsjazzclub.com/",
-      "calendars": [
-        {
-          "name": "docs-houston",
-          "friendlyName": "Doc's Jazz Club",
-          "icsUrl": "docs-houston-docs-houston.ics",
-          "rssUrl": "docs-houston-docs-houston.rss",
-          "tags": [
-            "Music",
-            "Jazz",
-            "Montrose"
           ]
         }
       ]
@@ -476,23 +475,6 @@
       ]
     },
     {
-      "name": "murder-by-the-book",
-      "description": "Murder By The Book",
-      "friendlyLink": "https://www.murderbooks.com/events",
-      "calendars": [
-        {
-          "name": "murder-by-the-book",
-          "friendlyName": "Murder By The Book",
-          "icsUrl": "murder-by-the-book-murder-by-the-book.ics",
-          "rssUrl": "murder-by-the-book-murder-by-the-book.rss",
-          "tags": [
-            "Books",
-            "West University"
-          ]
-        }
-      ]
-    },
-    {
       "name": "notsuoh",
       "description": "Notsuoh",
       "friendlyLink": "https://www.notsuoh.com/events",
@@ -588,6 +570,24 @@
       ]
     },
     {
+      "name": "rice-public-events",
+      "description": "Rice University",
+      "friendlyLink": "https://events.rice.edu/",
+      "calendars": [
+        {
+          "name": "rice-public-events",
+          "friendlyName": "Rice University - Open to the Public",
+          "icsUrl": "rice-public-events-rice-public-events.ics",
+          "rssUrl": "rice-public-events-rice-public-events.rss",
+          "tags": [
+            "Education",
+            "Art",
+            "Museum District"
+          ]
+        }
+      ]
+    },
+    {
       "name": "rooftop-cinema-club-houston",
       "description": "Rooftop Cinema Club Houston",
       "friendlyLink": "https://rooftopcinemaclub.com/us/houston/uptown",
@@ -601,6 +601,24 @@
             "Cinema",
             "Entertainment",
             "Uptown"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "saint-arnold-brewing-company",
+      "description": "Saint Arnold Brewing Company",
+      "friendlyLink": "https://www.saintarnold.com/happenings/",
+      "calendars": [
+        {
+          "name": "saint-arnold-brewing-company",
+          "friendlyName": "Saint Arnold Brewing Company",
+          "icsUrl": "saint-arnold-brewing-company-saint-arnold-brewing-company.ics",
+          "rssUrl": "saint-arnold-brewing-company-saint-arnold-brewing-company.rss",
+          "tags": [
+            "Beer",
+            "Nightlife",
+            "Montrose"
           ]
         }
       ]
@@ -1074,13 +1092,13 @@
     "Entertainment",
     "Family",
     "FarmersMarket",
+    "Film",
     "Food",
     "FoodFestival",
     "Hermann Park",
     "Hiking",
     "HistoricPreservation",
     "JapaneseCulture",
-    "Jazz",
     "Kids",
     "MakersMarket",
     "Medical Center",
@@ -1114,7 +1132,6 @@
     "Upper Kirby",
     "Uptown",
     "Wedgewood",
-    "West University",
     "Women",
     "Workshops"
   ]

@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Houston Food Bank - ECPv6.16.5.1//NONSGML v1.0//EN
+PRODID:-//Houston Food Bank - ECPv6.17.1//NONSGML v1.0//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Houston Food Bank
@@ -75,6 +75,19 @@ CATEGORIES:FEATURED,food drive,Fund Drive,Operation: Hunger Relief,Special Event
 ATTACH;FMTTYPE=image/jpeg:https://www.houstonfoodbank.org/wp-content/uploads/2025/08/OperationHungerRelief-1200x900-1.jpg
 END:VEVENT
 BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260730T113000
+DTEND;TZID=America/Chicago:20260730T133000
+DTSTAMP:20260727T183345Z
+CREATED:20260727T183345Z
+LAST-MODIFIED:20260727T183345Z
+UID:24871-1785411000-1785418200@www.houstonfoodbank.org
+SUMMARY:Houston Texans Huddle Against Hunger\, presented by Kroger 2025 – 2026 end-of-year Scavenger Hunt
+DESCRIPTION:July 30th (11:30am – 1:30pm) the children from HYPE Freedom School will be at Kroger on Buffalo Speedway to participate in Houston Texans Huddle Against Hunger\, presented by Kroger 2025 – 2026 end-of-year Scavenger Hunt.  The children split into 4 or 5 teams will compete in a Kroger shopping scavenger hunt searching for healthy food options. Assisted by a Texans Legend\, Texans Players\, Texans Cheerleaders and TORO the students will add to their shopping baskets nutritional options from a list and race to be the first to locate all items. \nHouston Texans Huddle Against Hunger\, presented by Kroger program was developed in partnership with the Houston Food Bank and the Texans and it is designed to help students better understand issues around food insecurity\, hunger\, and the importance of nutrition.
+URL:https://www.houstonfoodbank.org/upcomingevent/houston-texans-huddle-against-hunger-presented-by-kroger-2025-2026-end-of-year-scavenger-hunt/
+CATEGORIES:Community Event,FEATURED,Huddle Against Hunger
+ATTACH;FMTTYPE=image/jpeg:https://www.houstonfoodbank.org/wp-content/uploads/2026/07/HuddleAgainstHungerKroger-Logo-1200x900-1.jpg
+END:VEVENT
+BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260731T060000
 DTEND;TZID=America/Chicago:20260731T180000
 DTSTAMP:20260715T175359Z
@@ -127,6 +140,20 @@ URL:https://www.houstonfoodbank.org/upcomingevent/community-conversation-volunte
 LOCATION:Houston Food Bank East Branch\, 535 Portwall Street\, Houston\, TX\, 77029\, United States
 CATEGORIES:Community Event,FEATURED,Texans At Every Table,Volunteer Event
 ATTACH;FMTTYPE=image/jpeg:https://www.houstonfoodbank.org/wp-content/uploads/2026/01/CommunityConversations-1200x900-1.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260823T110000
+DTEND;TZID=America/Chicago:20260823T150000
+DTSTAMP:20260727T141848Z
+CREATED:20260724T154529Z
+LAST-MODIFIED:20260727T141848Z
+UID:24850-1787482800-1787497200@www.houstonfoodbank.org
+SUMMARY:Empty Bowls Houston at The Market at River Oaks District
+DESCRIPTION:Empty Bowls Houston will be at the The Market at River Oaks District\nSunday\, August 23 from 11 am to 3 pm at River Oaks District\, 4444 Westheimer\, 77027\nHappy summer\, friends! Empty Bowls Houston is happy to announce that we will be “popping up” at one of Houston’s newest farmers markets\, The Market at River Oaks District! We will have a selection of bowls for sale and a live pottery demo on the potters’ wheel. Come shop for farm-fresh goodies and other local food products and\, of course\, our amazing bowls made by local artists to benefit Houston Food Bank!
+URL:https://www.houstonfoodbank.org/upcomingevent/empty-bowls-houston-at-the-market-in-river-oaks/
+LOCATION:The Market at River Oaks\, 4444 Westheimer\, Houston\, TX\, 77027\, United States
+CATEGORIES:Empty Bowls,FEATURED,Special Event
+ATTACH;FMTTYPE=image/jpeg:https://www.houstonfoodbank.org/wp-content/uploads/2026/07/EB-TheMarket-1200x900-1.jpg
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260826T080000

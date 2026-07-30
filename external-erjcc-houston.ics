@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Evelyn Rubenstein Jewish Community Center - ECPv6.17.0//NONSGML v1.0//EN
+PRODID:-//Evelyn Rubenstein Jewish Community Center - ECPv6.17.1//NONSGML v1.0//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Evelyn Rubenstein Jewish Community Center
@@ -48,40 +48,6 @@ TZNAME:CST
 DTSTART:20271107T070000
 END:STANDARD
 END:VTIMEZONE
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260726T133000
-DTEND;TZID=America/Chicago:20260726T133000
-DTSTAMP:20260616T181519Z
-CREATED:20260615T195758Z
-LAST-MODIFIED:20260616T181519Z
-UID:10000560-1785072600-1785072600@www.erjcchouston.org
-SUMMARY:Yoga Deconstructed
-DESCRIPTION:Explore the fundamentals of yoga through a detailed breakdown of common poses and alignment principles. Learn techniques to support joint safety\, improve body awareness and enhance your practice with greater confidence and skill. Whether you’re new to yoga or looking to refine your practice\, this workshop offers valuable insights for all levels. \nRegistration link coming soon.
-URL:https://www.erjcchouston.org/event/yoga-deconstructed/
-LOCATION:Evelyn Rubenstein JCC\, 5601 S. Braeswood\, Houston\, TX\, 77096\, United States
-CATEGORIES:Health & Wellness
-ATTACH;FMTTYPE=image/png:https://www.erjcchouston.org/wp-content/uploads/2026/06/Calendar-Event-Banners-for-Website-36.png
-ORGANIZER;CN="Renee Cohen":MAILTO:rmasor@erjcchouston.org
-GEO:29.6738082;-95.4839865
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Evelyn Rubenstein JCC 5601 S. Braeswood Houston TX 77096 United States;X-APPLE-RADIUS=500;X-TITLE=5601 S. Braeswood:geo:-95.4839865,29.6738082
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260728T190000
-DTEND;TZID=America/Chicago:20260728T190000
-DTSTAMP:20260615T145022Z
-CREATED:20260611T194404Z
-LAST-MODIFIED:20260615T145022Z
-UID:10000559-1785265200-1785265200@www.erjcchouston.org
-SUMMARY:Sweathearts: A Fitness Class Date Night\, Tu B'Av Edition
-DESCRIPTION:Celebrate the holiday of love with a workout designed for two! Join Meryl and Adam for a fun-filled evening of partner exercises\, team challenges\, laughs and plenty of movement. No fitness experience required—just bring your sweetheart\, best friend or favorite workout partner and get ready to sweat\, connect and have a great time together!
-URL:https://www.erjcchouston.org/event/sweathearts-a-fitness-class-date-night-tu-bav-edition/
-LOCATION:Evelyn Rubenstein JCC\, 5601 S. Braeswood\, Houston\, TX\, 77096\, United States
-CATEGORIES:Health & Wellness
-ATTACH;FMTTYPE=image/png:https://www.erjcchouston.org/wp-content/uploads/2026/06/Calendar-Event-Banners-for-Website-35.png
-ORGANIZER;CN="Renee Cohen":MAILTO:rmasor@erjcchouston.org
-GEO:29.6738082;-95.4839865
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Evelyn Rubenstein JCC 5601 S. Braeswood Houston TX 77096 United States;X-APPLE-RADIUS=500;X-TITLE=5601 S. Braeswood:geo:-95.4839865,29.6738082
-END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260731T100000
 DTEND;TZID=America/Chicago:20260731T100000
