@@ -78,10 +78,14 @@ function parseTime12h(timeStr: string): LocalTime | null {
 
 /**
  * Parse a date string like "Fri Jul 24" into LocalDate.
- * Assumes current year (2026).
+ * The listing omits the year, so it is inferred relative to `referenceDate`:
+ * a month/day already past rolls forward to the next year.
  * Returns null if unparseable.
  */
-function parseDate(dateStr: string): LocalDate | null {
+function parseDate(
+    dateStr: string,
+    referenceDate: LocalDate = LocalDate.now(),
+): LocalDate | null {
     if (!dateStr) return null;
     // Format: "Fri Jul 24" (weekday Month Day)
     // We need to figure out the year. For now, assume it's the next occurrence of this date.
@@ -127,11 +131,10 @@ function parseDate(dateStr: string): LocalDate | null {
     }
 
     // Determine the year - if month/day is in the past for current year, use next year
-    const today = LocalDate.now();
-    let year = today.year();
+    const year = referenceDate.year();
     try {
         let date = LocalDate.of(year, month, day);
-        if (date.isBefore(today)) {
+        if (date.isBefore(referenceDate)) {
             date = LocalDate.of(year + 1, month, day);
         }
         return date;
@@ -155,6 +158,7 @@ export function parseEventContainer(
     container: HTMLElement,
     tz: ZoneId,
     sourceName: string,
+    referenceDate: LocalDate = LocalDate.now(),
 ): RipperCalendarEvent | RipperError {
     // Extract title
     const titleEl = container.querySelector("p.event-title a");
@@ -172,7 +176,7 @@ export function parseEventContainer(
     const dateEl = container.querySelector("p.event-date");
     const dateStr = getTextContent(dateEl);
 
-    const startDate = parseDate(dateStr);
+    const startDate = parseDate(dateStr, referenceDate);
     if (!startDate) {
         return {
             type: "ParseError" as const,
@@ -242,19 +246,21 @@ export function parseEventContainer(
 
 /**
  * Parse all events from the full HTML page string.
- * Exported so tests can call it directly.
+ * Exported so tests can call it directly; they pin `referenceDate` so the
+ * year inferred for the saved sample data does not drift over time.
  */
 export function parseEvents(
     html: string,
     tz: ZoneId,
     sourceName: string,
+    referenceDate: LocalDate = LocalDate.now(),
 ): Array<RipperCalendarEvent | RipperError> {
     const root = parse(html);
     const containers = root.querySelectorAll(
         "div.seetickets-list-event-container",
     );
     return containers.map((container) =>
-        parseEventContainer(container, tz, sourceName),
+        parseEventContainer(container, tz, sourceName, referenceDate),
     );
 }
 
