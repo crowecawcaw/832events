@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-31T05:54:15.878Z",
+  "lastUpdated": "2026-07-31T11:19:01.809Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -816,6 +816,19 @@
   ],
   "externalCalendars": [
     {
+      "name": "365-things-houston",
+      "friendlyName": "365 Things to Do in Houston",
+      "description": "365 Things to Do in Houston",
+      "icsUrl": "external-365-things-houston.ics",
+      "originalIcsUrl": "https://365thingsinhouston.com/?post_type=tribe_events&ical=1&eventDisplay=list",
+      "tags": [
+        "Citywide",
+        "Community",
+        "Arts",
+        "Culture"
+      ]
+    },
+    {
       "name": "axelrad-beer-garden",
       "friendlyName": "Axelrad Beer Garden",
       "description": "Jazz and cocktail bar in EaDo with live music programming, featuring weekly jazz nights, cumbia, comedy shows, and food truck events.",
@@ -849,6 +862,18 @@
       "tags": [
         "Comedy",
         "Nightlife"
+      ]
+    },
+    {
+      "name": "diverseworks",
+      "friendlyName": "DiverseWorks",
+      "description": "Interdisciplinary arts organization presenting experimental visual art, performance, music, and community programs in Houston. Programs include multi-week exhibitions, artist talks, and immersive events.",
+      "icsUrl": "external-diverseworks.ics",
+      "originalIcsUrl": "https://diverseworks.org/?post_type=tribe_events&ical=1&eventDisplay=list",
+      "infoUrl": "https://diverseworks.org/event-calendar/",
+      "tags": [
+        "Art",
+        "Midtown"
       ]
     },
     {
@@ -1049,6 +1074,18 @@
       ]
     },
     {
+      "name": "port-houston-events",
+      "friendlyName": "Port of Houston Events",
+      "description": "Port of Houston Authority",
+      "icsUrl": "external-port-houston-events.ics",
+      "originalIcsUrl": "https://porthouston.com/?post_type=tribe_events&ical=1",
+      "tags": [
+        "Downtown",
+        "Ports",
+        "Educational"
+      ]
+    },
+    {
       "name": "tuts",
       "friendlyName": "Theatre Under The Stars",
       "description": "Broadway-style musical theater productions at the Hobby Center (Sarofim Hall) in Downtown Houston",
@@ -1070,6 +1107,7 @@
     "Books",
     "Brewery",
     "Cinema",
+    "Citywide",
     "Comedy",
     "Community",
     "Concert",
@@ -1079,6 +1117,7 @@
     "Downtown",
     "EaDo",
     "Education",
+    "Educational",
     "Energy Corridor",
     "Entertainment",
     "Family",
@@ -1111,6 +1150,7 @@
     "Performance",
     "PerformingArts",
     "Photography",
+    "Ports",
     "Restaurant",
     "Shopping",
     "Soccer",

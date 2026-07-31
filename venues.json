@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-31T05:54:29.899Z",
+  "generated": "2026-07-31T11:19:20.461Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -319,6 +319,41 @@
             },
             "rss": {
               "href": "cullen-performance-hall-cullen-performance-hall.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "diverseworks",
+      "friendlyName": "DiverseWorks",
+      "description": "Interdisciplinary arts organization presenting experimental visual art, performance, music, and community programs in Houston. Programs include multi-week exhibitions, artist talks, and immersive events.",
+      "url": "https://diverseworks.org/event-calendar/",
+      "tags": [
+        "Art",
+        "Midtown"
+      ],
+      "geo": {
+        "lat": 29.7355,
+        "lng": -95.3677,
+        "label": "DiverseWorks, 4102 Fannin St, Houston, TX 77004"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=DiverseWorks%2C%204102%20Fannin%20St%2C%20Houston%2C%20TX%2077004"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "diverseworks",
+          "friendlyName": "DiverseWorks",
+          "links": {
+            "ics": {
+              "href": "external-diverseworks.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-diverseworks.rss",
               "type": "application/rss+xml"
             }
           }
@@ -1393,6 +1428,41 @@
             },
             "rss": {
               "href": "notsuoh-notsuoh.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "port-houston-events",
+      "friendlyName": "Port of Houston Events",
+      "description": "Port of Houston Authority",
+      "tags": [
+        "Downtown",
+        "Ports",
+        "Educational"
+      ],
+      "geo": {
+        "lat": 29.7589,
+        "lng": -95.3636,
+        "label": "Hilton Americas-Houston, 1600 Lamar St, Houston, TX 77010"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Hilton%20Americas-Houston%2C%201600%20Lamar%20St%2C%20Houston%2C%20TX%2077010"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "port-houston-events",
+          "friendlyName": "Port of Houston Events",
+          "links": {
+            "ics": {
+              "href": "external-port-houston-events.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-port-houston-events.rss",
               "type": "application/rss+xml"
             }
           }

@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-07-31T05:54:29.908Z",
-  "totalErrors": 7,
+  "buildTime": "2026-07-31T11:19:20.467Z",
+  "totalErrors": 5,
   "configErrors": [],
   "sources": [
     {
@@ -72,12 +72,6 @@
       "error": "Error: HTTP 403: "
     },
     {
-      "name": "diverseworks",
-      "friendlyName": "DiverseWorks",
-      "url": "https://diverseworks.org/?post_type=tribe_events&ical=1&eventDisplay=list",
-      "error": "Error: HTTP 403: "
-    },
-    {
       "name": "houston-heritage-holiday-market",
       "friendlyName": "Houston Heritage Holiday Market",
       "url": "https://ghwcc.org/calendar/?ical=1",
@@ -93,28 +87,16 @@
   "geocodeErrors": [
     {
       "type": "GeocodeError",
-      "location": "The Kiam Building",
-      "source": "downtown-houston-events",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "House of Tape in the Underground Theater, 3799 S Las Vegas Blvd, Las Vegas, NV, 89109, USA",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Gila River Resorts & Casinos – Wild Horse Pass, 5040 Wild Horse Pass Blvd, Chandler, AZ, 85226, United States",
-      "source": "external-comedy-calendar",
+      "location": "MATCH: Midtown Arts & Theater Center Houston, 3400 Main St, Houston, TX, 77002, United States",
+      "source": "external-365-things-houston",
       "reason": "Nominatim returned no results"
     }
   ],
   "geoStats": {
-    "totalEvents": 1831,
-    "eventsWithGeo": 1528,
-    "eventsWithoutGeo": 303,
-    "geocodeErrors": 3
+    "totalEvents": 1862,
+    "eventsWithGeo": 1557,
+    "eventsWithoutGeo": 305,
+    "geocodeErrors": 1
   },
   "uncertainEvents": [],
   "uncertaintyStats": {
@@ -138,6 +120,8 @@
     "tag-concerts",
     "tag-fifa",
     "tag-literary",
+    "tag-ports",
+    "tag-educational",
     "external-eureka-heights-brew-co",
     "external-houston-cinema-arts-society"
   ],
@@ -499,6 +483,13 @@
       "lng": -95.4097
     },
     {
+      "source": "external",
+      "name": "port-houston-events",
+      "label": "Hilton Americas-Houston, 1600 Lamar St, Houston, TX 77010",
+      "lat": 29.7589,
+      "lng": -95.3636
+    },
+    {
       "source": "ripper",
       "name": "post-houston",
       "label": "POST Houston, 510 Main St, Houston, TX 77002",
@@ -633,10 +624,10 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1054,
-    "totalEvents": 1831,
+    "eventsWithImage": 1085,
+    "totalEvents": 1862,
     "venuesWithImage": 0,
-    "totalVenues": 57,
+    "totalVenues": 59,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -702,6 +693,13 @@
         "label": "Cullen Performance Hall, 4400 University Drive, Houston, TX 77004",
         "url": "https://www.uh.edu/cullen-performance-hall/about-us/event-calendar/",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Cullen%20Performance%20Hall%2C%204400%20University%20Drive%2C%20Houston%2C%20TX%2077004"
+      },
+      {
+        "source": "external",
+        "name": "diverseworks",
+        "label": "DiverseWorks, 4102 Fannin St, Houston, TX 77004",
+        "url": "https://diverseworks.org/event-calendar/",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=DiverseWorks%2C%204102%20Fannin%20St%2C%20Houston%2C%20TX%2077004"
       },
       {
         "source": "ripper",
@@ -908,6 +906,12 @@
         "label": "Notsuoh, 314 Main St, Houston, TX 77002",
         "url": "https://www.notsuoh.com/events",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Notsuoh%2C%20314%20Main%20St%2C%20Houston%2C%20TX%2077002"
+      },
+      {
+        "source": "external",
+        "name": "port-houston-events",
+        "label": "Hilton Americas-Houston, 1600 Lamar St, Houston, TX 77010",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hilton%20Americas-Houston%2C%201600%20Lamar%20St%2C%20Houston%2C%20TX%2077010"
       },
       {
         "source": "ripper",
@@ -4033,7 +4037,7 @@
   "costStats": {
     "eventsWithCost": 349,
     "freeEvents": 233,
-    "totalEvents": 1831,
+    "totalEvents": 1862,
     "unresolvable": 0
   },
   "costGaps": [
@@ -11101,14 +11105,14 @@
     {
       "name": "tag-farmersmarket",
       "type": "Aggregate",
-      "events": 39,
+      "events": 40,
       "expectEmpty": false,
       "source": "tag-farmersmarket"
     },
     {
       "name": "tag-the-heights",
       "type": "Aggregate",
-      "events": 51,
+      "events": 52,
       "expectEmpty": false,
       "source": "tag-the-heights"
     },
@@ -11157,7 +11161,7 @@
     {
       "name": "tag-arts",
       "type": "Aggregate",
-      "events": 91,
+      "events": 119,
       "expectEmpty": false,
       "source": "tag-arts"
     },
@@ -11178,14 +11182,14 @@
     {
       "name": "tag-midtown",
       "type": "Aggregate",
-      "events": 53,
+      "events": 55,
       "expectEmpty": false,
       "source": "tag-midtown"
     },
     {
       "name": "tag-art",
       "type": "Aggregate",
-      "events": 313,
+      "events": 315,
       "expectEmpty": false,
       "source": "tag-art"
     },
@@ -11290,14 +11294,14 @@
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 301,
+      "events": 329,
       "expectEmpty": false,
       "source": "tag-community"
     },
     {
       "name": "tag-culture",
       "type": "Aggregate",
-      "events": 46,
+      "events": 74,
       "expectEmpty": false,
       "source": "tag-culture"
     },
@@ -11547,6 +11551,13 @@
       "source": "tag-performance"
     },
     {
+      "name": "tag-citywide",
+      "type": "Aggregate",
+      "events": 28,
+      "expectEmpty": false,
+      "source": "tag-citywide"
+    },
+    {
       "name": "tag-brewery",
       "type": "Aggregate",
       "events": 13,
@@ -11584,7 +11595,7 @@
     {
       "name": "tag-makersmarket",
       "type": "Aggregate",
-      "events": 29,
+      "events": 30,
       "expectEmpty": false,
       "source": "tag-makersmarket"
     },
@@ -11624,6 +11635,20 @@
       "source": "tag-tech"
     },
     {
+      "name": "tag-ports",
+      "type": "Aggregate",
+      "events": 0,
+      "expectEmpty": false,
+      "source": "tag-ports"
+    },
+    {
+      "name": "tag-educational",
+      "type": "Aggregate",
+      "events": 0,
+      "expectEmpty": false,
+      "source": "tag-educational"
+    },
+    {
       "name": "tag-theatre",
       "type": "Aggregate",
       "events": 2,
@@ -11633,9 +11658,16 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1844,
+      "events": 1875,
       "expectEmpty": false,
       "source": "tag-all"
+    },
+    {
+      "name": "external-365-things-houston",
+      "type": "External",
+      "events": 30,
+      "expectEmpty": false,
+      "source": "365-things-houston"
     },
     {
       "name": "external-axelrad-beer-garden",
@@ -11657,6 +11689,13 @@
       "events": 30,
       "expectEmpty": false,
       "source": "comedy-calendar"
+    },
+    {
+      "name": "external-diverseworks",
+      "type": "External",
+      "events": 3,
+      "expectEmpty": false,
+      "source": "diverseworks"
     },
     {
       "name": "external-energy-corridor-farmers-market",
@@ -11783,6 +11822,13 @@
       "events": 12,
       "expectEmpty": false,
       "source": "nutcracker-market"
+    },
+    {
+      "name": "external-port-houston-events",
+      "type": "External",
+      "events": 2,
+      "expectEmpty": false,
+      "source": "port-houston-events"
     },
     {
       "name": "external-tuts",

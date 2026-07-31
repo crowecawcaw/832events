@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-31T05:54:29.911Z",
+  "generated": "2026-07-31T11:19:20.469Z",
   "tags": [
     {
       "name": "Animals",
@@ -39,8 +39,8 @@
       "name": "Art",
       "slug": "art",
       "category": "Activities",
-      "eventCount": 313,
-      "calendarCount": 9,
+      "eventCount": 315,
+      "calendarCount": 10,
       "links": {
         "ics": {
           "href": "tag-art.ics",
@@ -56,8 +56,8 @@
       "name": "Arts",
       "slug": "arts",
       "category": "Activities",
-      "eventCount": 91,
-      "calendarCount": 5,
+      "eventCount": 119,
+      "calendarCount": 6,
       "links": {
         "ics": {
           "href": "tag-arts.ics",
@@ -138,6 +138,23 @@
       }
     },
     {
+      "name": "Citywide",
+      "slug": "citywide",
+      "category": "Other",
+      "eventCount": 28,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-citywide.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-citywide.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
       "name": "Comedy",
       "slug": "comedy",
       "category": "Activities",
@@ -158,8 +175,8 @@
       "name": "Community",
       "slug": "community",
       "category": "Community",
-      "eventCount": 301,
-      "calendarCount": 17,
+      "eventCount": 329,
+      "calendarCount": 18,
       "links": {
         "ics": {
           "href": "tag-community.ics",
@@ -226,8 +243,8 @@
       "name": "Culture",
       "slug": "culture",
       "category": "Other",
-      "eventCount": 46,
-      "calendarCount": 1,
+      "eventCount": 74,
+      "calendarCount": 2,
       "links": {
         "ics": {
           "href": "tag-culture.ics",
@@ -244,7 +261,7 @@
       "slug": "downtown",
       "category": "Neighborhoods",
       "eventCount": 305,
-      "calendarCount": 13,
+      "calendarCount": 14,
       "links": {
         "ics": {
           "href": "tag-downtown.ics",
@@ -286,6 +303,23 @@
         },
         "rss": {
           "href": "tag-education.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Educational",
+      "slug": "educational",
+      "category": "Other",
+      "eventCount": 0,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-educational.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-educational.rss",
           "type": "application/rss+xml"
         }
       }
@@ -345,7 +379,7 @@
       "name": "FarmersMarket",
       "slug": "farmersmarket",
       "category": "Markets",
-      "eventCount": 39,
+      "eventCount": 40,
       "calendarCount": 6,
       "links": {
         "ics": {
@@ -515,7 +549,7 @@
       "name": "MakersMarket",
       "slug": "makersmarket",
       "category": "Markets",
-      "eventCount": 29,
+      "eventCount": 30,
       "calendarCount": 1,
       "links": {
         "ics": {
@@ -583,8 +617,8 @@
       "name": "Midtown",
       "slug": "midtown",
       "category": "Neighborhoods",
-      "eventCount": 53,
-      "calendarCount": 4,
+      "eventCount": 55,
+      "calendarCount": 5,
       "links": {
         "ics": {
           "href": "tag-midtown.ics",
@@ -835,6 +869,23 @@
       }
     },
     {
+      "name": "Ports",
+      "slug": "ports",
+      "category": "Other",
+      "eventCount": 0,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-ports.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-ports.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
       "name": "Restaurant",
       "slug": "restaurant",
       "category": "Other",
@@ -923,7 +974,7 @@
       "name": "The Heights",
       "slug": "the-heights",
       "category": "Neighborhoods",
-      "eventCount": 51,
+      "eventCount": 52,
       "calendarCount": 4,
       "links": {
         "ics": {
