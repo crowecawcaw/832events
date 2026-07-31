@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-30T05:53:08.007Z",
+  "lastUpdated": "2026-07-31T05:54:15.878Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -197,24 +197,6 @@
           "tags": [
             "Theater",
             "Midtown"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "good-on-paper-bookshop",
-      "description": "Good on Paper Books and Stationery",
-      "friendlyLink": "https://www.goodonpaperbooks.com/events",
-      "calendars": [
-        {
-          "name": "good-on-paper-bookshop",
-          "friendlyName": "Good on Paper Books",
-          "icsUrl": "good-on-paper-bookshop-good-on-paper-bookshop.ics",
-          "rssUrl": "good-on-paper-bookshop-good-on-paper-bookshop.rss",
-          "tags": [
-            "Books",
-            "Community",
-            "The Heights"
           ]
         }
       ]
@@ -470,6 +452,24 @@
           "tags": [
             "Music",
             "Upper Kirby"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "mossrose-bookshop",
+      "description": "Mossrose Bookshop",
+      "friendlyLink": "https://www.mossrosebooks.com/pages/upcoming-events",
+      "calendars": [
+        {
+          "name": "mossrose-bookshop",
+          "friendlyName": "Mossrose Bookshop",
+          "icsUrl": "mossrose-bookshop-mossrose-bookshop.ics",
+          "rssUrl": "mossrose-bookshop-mossrose-bookshop.rss",
+          "tags": [
+            "Books",
+            "Community",
+            "EaDo"
           ]
         }
       ]
@@ -852,18 +852,6 @@
       ]
     },
     {
-      "name": "diverseworks",
-      "friendlyName": "DiverseWorks",
-      "description": "Interdisciplinary arts organization presenting experimental visual art, performance, music, and community programs in Houston. Programs include multi-week exhibitions, artist talks, and immersive events.",
-      "icsUrl": "external-diverseworks.ics",
-      "originalIcsUrl": "https://diverseworks.org/?post_type=tribe_events&ical=1&eventDisplay=list",
-      "infoUrl": "https://diverseworks.org/event-calendar/",
-      "tags": [
-        "Art",
-        "Midtown"
-      ]
-    },
-    {
       "name": "energy-corridor-farmers-market",
       "friendlyName": "Energy Corridor Farmers Market",
       "description": "Farmers market and community events in the Energy Corridor",
@@ -887,16 +875,6 @@
         "Art",
         "Community",
         "Museum District"
-      ]
-    },
-    {
-      "name": "eureka-heights-brew-co",
-      "friendlyName": "Eureka Heights Brewery",
-      "icsUrl": "external-eureka-heights-brew-co.ics",
-      "originalIcsUrl": "https://www.eurekaheights.com/?post_type=tribe_events&ical=1&eventDisplay=list",
-      "tags": [
-        "Beer",
-        "The Heights"
       ]
     },
     {
