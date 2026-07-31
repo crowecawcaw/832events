@@ -1,0 +1,59 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:832.events
+METHOD:PUBLISH
+X-WR-CALNAME:Houston Grand Opera
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://www.datocms-assets.
+ com/95816/1773848975-susannah-season-web-banners-16x9.png
+ATTACH;FMTTYPE=image/png:https://www.datocms-assets.com/95816/1773848975-su
+ sannah-season-web-banners-16x9.png
+UID:rtw9Jnosl5GqONqoA5xCT
+SUMMARY:Susannah
+DTSTAMP:20260731T111632Z
+DTSTART:20261024T000000Z
+DESCRIPTION:Composer: Floyd\n\nhttps://www.houstongrandopera.org/on-stage/s
+	usannah
+URL:https://www.houstongrandopera.org/on-stage/susannah
+GEO:29.7237;-95.3937
+LOCATION:Wortham Theater Center\, 500 Main St\, Houston\, TX 77002
+TRANSP:TRANSPARENT
+DURATION:PT3H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://www.datocms-assets.
+ com/95816/1773848975-faust-season-web-banners-16x9.png
+ATTACH;FMTTYPE=image/png:https://www.datocms-assets.com/95816/1773848975-fa
+ ust-season-web-banners-16x9.png
+UID:Tet1ODVM3mA1BrOS1bj12
+SUMMARY:Faust
+DTSTAMP:20260731T111632Z
+DTSTART:20261031T000000Z
+DESCRIPTION:Composer: Gounod \n\nhttps://www.houstongrandopera.org/on-stage
+	/faust
+URL:https://www.houstongrandopera.org/on-stage/faust
+GEO:29.7237;-95.3937
+LOCATION:Wortham Theater Center\, 500 Main St\, Houston\, TX 77002
+TRANSP:TRANSPARENT
+DURATION:PT3H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://www.datocms-assets
+ .com/95816/1772563002-hgo-2025-2026-studio-showcase-photographer-lynn-lane
+ -323-1.jpg
+ATTACH;FMTTYPE=image/jpeg:https://www.datocms-assets.com/95816/1772563002-h
+ go-2025-2026-studio-showcase-photographer-lynn-lane-323-1.jpg
+UID:YiFTnIwWpN2USL7bA_2rv
+SUMMARY:The Butler Studio Showcase
+DTSTAMP:20260731T111632Z
+DTSTART:20260914T000000Z
+DESCRIPTION:https://www.houstongrandopera.org/on-stage/studio-showcase
+URL:https://www.houstongrandopera.org/on-stage/studio-showcase
+GEO:29.7237;-95.3937
+LOCATION:Wortham Theater Center\, 500 Main St\, Houston\, TX 77002
+TRANSP:TRANSPARENT
+DURATION:PT3H
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,119 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ion District - ECPv6.17.0//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Ion District
+X-ORIGINAL-URL:https://iondistrict.com
+X-WR-CALDESC:Events for Ion District
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-Robots-Tag:noindex
+X-PUBLISHED-TTL:PT1H
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20250309T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20251102T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20260308T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20261101T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20270314T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20271107T070000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260731T083000
+DTEND;TZID=America/Chicago:20260731T103000
+DTSTAMP:20250825T225437Z
+CREATED:20250729T190850Z
+LAST-MODIFIED:20250825T225437Z
+UID:10004074-1785486600-1785493800@iondistrict.com
+SUMMARY:Ion Networking with Cup of Joey
+DESCRIPTION:What is the purpose of Cup of Joey? It is to create a connected culture of coffee shop-open networking across our region. Every Friday morning\, you’ll have the opportunity to meet new and expand your current networks\, talk about tech\, inspire innovation\, and create community. \nSo\, what is the difference between a cup of joe and a Cup of Joe-Y? It is the WHY. It’s not what you do. It is why you do it! \nAt the Ion\, these are questions that we want to explore with the tech and innovation community. So\, show up\, be friendly\, and make new connections. Know your why\, and we will get to the future together. \nThe future is only a cup away. \nRegister Here: https://www.cupofjoey.org/
+URL:https://iondistrict.com/event/ion-networking-with-cup-of-joey-34/2026-07-31/
+LOCATION:Ion – Lobby\, 4201 Main St.\, Houston\, 77002\, United States
+CATEGORIES:3rd Party Registration,Academic Network,Community Event,Corporate Innovators,Founders & Startups,General Community,Investors & Capital,Networking,Office Hours,Start Here
+ATTACH;FMTTYPE=image/jpeg:https://iondistrict.com/wp-content/uploads/2024/07/CoJ1.jpg?ver=1721850637
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260731T090000
+DTEND;TZID=America/Chicago:20260731T103000
+DTSTAMP:20260716T181342Z
+CREATED:20260716T181342Z
+LAST-MODIFIED:20260716T181342Z
+UID:10005193-1785488400-1785493800@iondistrict.com
+SUMMARY:⭕️Cybersecurity Circle⭕️
+DESCRIPTION:Our mission is to DEFEAT CYBER CRIMINALS by making cybersecurity knowledge accessible and relatable to everyone. This event creates a supportive environment for individuals starting their cybersecurity journey\, those transitioning into the field\, and professionals navigating job transitions—including those rebuilding confidence after layoffs. Together\, we strengthen our collective defense against cyber threats while fostering career growth and community connections.\nThe ⭕️Cybersecurity Circle⭕️ unites practitioners of all levels in an inclusive community committed to defeating cybercrime through shared knowledge\, collaboration\, and continuous learning. Together\, we’re securing our digital world—one hack at a time
+URL:https://iondistrict.com/event/%e2%ad%95%ef%b8%8fcybersecurity-circle%e2%ad%95%ef%b8%8f-26/
+LOCATION:Ion\, 4201 Main Street\, Houston\, TX\, 77002\, United States
+ATTACH;FMTTYPE=image/png:https://iondistrict.com/wp-content/uploads/2026/01/⭕️CYBERSECURITY-CIRCLE⭕️.png?ver=1767643977
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260731T100000
+DTEND;TZID=America/Chicago:20260731T113000
+DTSTAMP:20260616T201224Z
+CREATED:20260616T201224Z
+LAST-MODIFIED:20260616T201224Z
+UID:10005131-1785492000-1785497400@iondistrict.com
+SUMMARY:SCORE Office Hours
+DESCRIPTION:About SCORE Office Hours \nSCORE is the nation’s largest network of volunteer\, expert business mentors. Since 1964\, SCORE has helped more than 11 million entrepreneurs start\, grow\, or successfully exit a business. SCORE’s 10\,000 volunteers provide free\, expert mentoring\, resources\, and education in all 50 U.S. states and territories. \nOffice Hours with SCORE take place each Friday morning. Additional partners will be on-site the second Friday of each month (excluding holidays)
+URL:https://iondistrict.com/event/score-office-hours-46/
+LOCATION:Ion\, 4201 Main Street\, Houston\, TX\, 77002\, United States
+CATEGORIES:Founders & Startups,General Community,Networking,Office Hours,Start Here
+ATTACH;FMTTYPE=image/jpeg:https://iondistrict.com/wp-content/uploads/2023/05/6H1A1559-HDR-Edit-scaled.jpg?ver=1715034396
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260731T100000
+DTEND;TZID=America/Chicago:20260731T120000
+DTSTAMP:20260721T181006Z
+CREATED:20260721T181006Z
+LAST-MODIFIED:20260721T181006Z
+UID:10005206-1785492000-1785499200@iondistrict.com
+SUMMARY:NASA Office Hours
+DESCRIPTION:NASA is bringing its expertise to Houston’s innovation hub! Every other Friday\, join us for NASA’s office hours\, designed to bridge the gap between Houston’s innovators\, entrepreneurs\, and startups with NASA’s elite experts\, capabilities\, and technology.  \n\nLicense the Future: Discover how to utilize NASA-developed technologies and intellectual property for your own projects.\nPartner for Growth: Explore how to grow your own goals and NASA’s mission together by leveraging unique human spaceflight capabilities and expertise from NASA Johnson Space Center.\nBuild the Sector: Help us grow Houston’s commercial space ecosystem.\n\nCome with a vision\, leave with a partnership. \nJust come walk up and say hello\, or sign up in advance here.
+URL:https://iondistrict.com/event/nasa-office-hours-18/
+LOCATION:Ion\, 4201 Main Street\, Houston\, TX\, 77002\, United States
+ATTACH;FMTTYPE=image/png:https://iondistrict.com/wp-content/uploads/2026/04/32-Image-Placeholder.png?ver=1777486289
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260731T103000
+DTEND;TZID=America/Chicago:20260731T113000
+DTSTAMP:20260723T061054Z
+CREATED:20260721T155243Z
+LAST-MODIFIED:20260723T061054Z
+UID:10005200-1785493800-1785497400@iondistrict.com
+SUMMARY:Startup Circle Houston 💫
+DESCRIPTION:Startup Circle Houston 💫 brings together founders\, teammates\, experts and newbies of startups in Greater Houston! Past topics include: \nTraction + Funding Stage Identification – What stage are you really at?\nICP – Seeking your beachhead market\nProblem Identification – Love the problem\, not the solution\nBootstrapping – Knowing your runway and not putting money on fire. 🔥\nFounder capacity\, 10xing and recruiting for your weaknesses. 🚀\n\nLinkedIn Group: https://www.linkedin.com/groups/16537030/
+URL:https://iondistrict.com/event/startup-circle-houston-%f0%9f%92%ab-11/
+LOCATION:Ion – Lobby\, 4201 Main St.\, Houston\, 77002\, United States
+CATEGORIES:3rd Party Registration,Academic Network,Community Event,Corporate Innovators,Founders & Startups,General Community,Investors & Capital,Networking,Office Hours,Start Here
+ATTACH;FMTTYPE=image/jpeg:https://iondistrict.com/wp-content/uploads/2026/01/Startup-Circle-Houston.jpeg?ver=1769451396
+END:VEVENT
+END:VCALENDAR
