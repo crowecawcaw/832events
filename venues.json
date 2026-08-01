@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-01T05:44:01.038Z",
+  "generated": "2026-08-01T10:25:05.347Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -468,6 +468,78 @@
       ]
     },
     {
+      "name": "erjcc-houston",
+      "friendlyName": "ERJCC Houston",
+      "description": "Educational, cultural and community events at the Jewish community center in Houston",
+      "url": "https://www.erjcchouston.org/events/",
+      "tags": [
+        "Art",
+        "Community",
+        "Museum District"
+      ],
+      "geo": {
+        "lat": 29.7261,
+        "lng": -95.4012,
+        "label": "ERJCC Houston, 5600 North Braeswood Blvd, Houston, TX 77096"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=ERJCC%20Houston%2C%205600%20North%20Braeswood%20Blvd%2C%20Houston%2C%20TX%2077096"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "erjcc-houston",
+          "friendlyName": "ERJCC Houston",
+          "links": {
+            "ics": {
+              "href": "external-erjcc-houston.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-erjcc-houston.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "good-on-paper-bookshop",
+      "friendlyName": "Good on Paper Books and Stationery",
+      "description": "Good on Paper Books and Stationery",
+      "url": "https://www.goodonpaperbooks.com/events",
+      "tags": [
+        "Books",
+        "Community",
+        "The Heights"
+      ],
+      "geo": {
+        "lat": 29.8096,
+        "lng": -95.3914,
+        "label": "Good on Paper Books, 250 W 19th St Suite D, Houston, TX 77008"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Good%20on%20Paper%20Books%2C%20250%20W%2019th%20St%20Suite%20D%2C%20Houston%2C%20TX%2077008"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "good-on-paper-bookshop",
+          "friendlyName": "Good on Paper Books",
+          "links": {
+            "ics": {
+              "href": "good-on-paper-bookshop-good-on-paper-bookshop.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "good-on-paper-bookshop-good-on-paper-bookshop.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "heights-mercantile",
       "friendlyName": "Heights Mercantile Farmers Market",
       "description": "Heights Mercantile Farmers Market",
@@ -570,41 +642,6 @@
             },
             "rss": {
               "href": "external-hobby-center.rss",
-              "type": "application/rss+xml"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "name": "holocaust-museum-houston",
-      "friendlyName": "Holocaust Museum Houston",
-      "description": "Education and remembrance museum with programming including educator workshops, author talks, film screenings, and community lectures",
-      "tags": [
-        "Museum District",
-        "Museums",
-        "Community"
-      ],
-      "geo": {
-        "lat": 29.7355,
-        "lng": -95.3708,
-        "label": "Holocaust Museum Houston, 5401 Caroline St, Houston, TX 77004"
-      },
-      "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=Holocaust%20Museum%20Houston%2C%205401%20Caroline%20St%2C%20Houston%2C%20TX%2077004"
-      },
-      "kind": "external",
-      "calendars": [
-        {
-          "name": "holocaust-museum-houston",
-          "friendlyName": "Holocaust Museum Houston",
-          "links": {
-            "ics": {
-              "href": "external-holocaust-museum-houston.ics",
-              "type": "text/calendar"
-            },
-            "rss": {
-              "href": "external-holocaust-museum-houston.rss",
               "type": "application/rss+xml"
             }
           }
@@ -1038,6 +1075,42 @@
       ]
     },
     {
+      "name": "ion-district",
+      "friendlyName": "Ion District",
+      "description": "Ion District community calendar",
+      "url": "https://iondistrict.com/events/",
+      "tags": [
+        "Community",
+        "Tech",
+        "Midtown"
+      ],
+      "geo": {
+        "lat": 29.724,
+        "lng": -95.3905,
+        "label": "Ion District, 4201 Main St, Houston, TX 77002"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Ion%20District%2C%204201%20Main%20St%2C%20Houston%2C%20TX%2077002"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "ion-district",
+          "friendlyName": "Ion District",
+          "links": {
+            "ics": {
+              "href": "external-ion-district.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-ion-district.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "japan-america-society-houston",
       "friendlyName": "Japan-America Society of Houston",
       "description": "Japan-America Society of Houston",
@@ -1175,6 +1248,43 @@
             },
             "rss": {
               "href": "lawndale-art-center-lawndale-art-center.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "levy-park-houston",
+      "friendlyName": "Levy Park Houston",
+      "description": "Levy Park Houston",
+      "url": "https://www.levyparkhouston.org/calendar/",
+      "tags": [
+        "Parks",
+        "Community",
+        "Upper Kirby",
+        "Outdoor Recreation"
+      ],
+      "geo": {
+        "lat": 29.7419,
+        "lng": -95.4169,
+        "label": "Levy Park, 3801 Main St, Houston, TX 77002"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Levy%20Park%2C%203801%20Main%20St%2C%20Houston%2C%20TX%2077002"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "levy-park-houston",
+          "friendlyName": "Levy Park Houston",
+          "links": {
+            "ics": {
+              "href": "external-levy-park-houston.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-levy-park-houston.rss",
               "type": "application/rss+xml"
             }
           }
