@@ -1,23 +1,8 @@
 {
-  "buildTime": "2026-07-31T11:19:20.467Z",
-  "totalErrors": 5,
+  "buildTime": "2026-08-01T05:44:01.044Z",
+  "totalErrors": 3,
   "configErrors": [],
   "sources": [
-    {
-      "source": "murder-by-the-book",
-      "calendar": "murder-by-the-book",
-      "type": "Ripper",
-      "errorCount": 1,
-      "parseErrorCount": 1,
-      "uncertaintyCount": 0,
-      "errors": [
-        {
-          "type": "ParseError",
-          "reason": "Ripper crashed: Error: Murder By The Book fetch failed: HTTP 403 ",
-          "context": ""
-        }
-      ]
-    },
     {
       "source": "pride-houston",
       "calendar": "pride-houston",
@@ -84,19 +69,12 @@
       "error": "Error: HTTP 403: "
     }
   ],
-  "geocodeErrors": [
-    {
-      "type": "GeocodeError",
-      "location": "MATCH: Midtown Arts & Theater Center Houston, 3400 Main St, Houston, TX, 77002, United States",
-      "source": "external-365-things-houston",
-      "reason": "Nominatim returned no results"
-    }
-  ],
+  "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1862,
-    "eventsWithGeo": 1557,
-    "eventsWithoutGeo": 305,
-    "geocodeErrors": 1
+    "totalEvents": 1855,
+    "eventsWithGeo": 1551,
+    "eventsWithoutGeo": 304,
+    "geocodeErrors": 0
   },
   "uncertainEvents": [],
   "uncertaintyStats": {
@@ -624,10 +602,10 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1085,
-    "totalEvents": 1862,
+    "eventsWithImage": 1082,
+    "totalEvents": 1855,
     "venuesWithImage": 0,
-    "totalVenues": 59,
+    "totalVenues": 56,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -721,13 +699,6 @@
         "label": "Ensemble Theatre Houston, 3535 Main St, Houston, TX 77002",
         "url": "https://www.ensemblehouston.com/",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ensemble%20Theatre%20Houston%2C%203535%20Main%20St%2C%20Houston%2C%20TX%2077002"
-      },
-      {
-        "source": "external",
-        "name": "erjcc-houston",
-        "label": "ERJCC Houston, 5600 North Braeswood Blvd, Houston, TX 77096",
-        "url": "https://www.erjcchouston.org/events/",
-        "mapUrl": "https://www.google.com/maps/search/?api=1&query=ERJCC%20Houston%2C%205600%20North%20Braeswood%20Blvd%2C%20Houston%2C%20TX%2077096"
       },
       {
         "source": "ripper",
@@ -838,13 +809,6 @@
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Inprint%20Houston%2C%201520%20W%20Main%20St%2C%20Houston%2C%20TX%2077006"
       },
       {
-        "source": "external",
-        "name": "ion-district",
-        "label": "Ion District, 4201 Main St, Houston, TX 77002",
-        "url": "https://iondistrict.com/events/",
-        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ion%20District%2C%204201%20Main%20St%2C%20Houston%2C%20TX%2077002"
-      },
-      {
         "source": "ripper",
         "name": "japan-america-society-houston",
         "label": "Japan-America Society of Houston",
@@ -871,13 +835,6 @@
         "label": "Lawndale Art Center, 4912 Main St, Houston, TX 77002",
         "url": "https://lawndaleartcenter.org/events/",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Lawndale%20Art%20Center%2C%204912%20Main%20St%2C%20Houston%2C%20TX%2077002"
-      },
-      {
-        "source": "external",
-        "name": "levy-park-houston",
-        "label": "Levy Park, 3801 Main St, Houston, TX 77002",
-        "url": "https://www.levyparkhouston.org/calendar/",
-        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Levy%20Park%2C%203801%20Main%20St%2C%20Houston%2C%20TX%2077002"
       },
       {
         "source": "ripper",
@@ -3110,12 +3067,6 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
-        "eventId": "education-center-open-2026-07-31",
-        "summary": "Education Center Open",
-        "date": "2026-07-31T09:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
         "eventId": "education-center-open-2026-08-05",
         "summary": "Education Center Open",
         "date": "2026-08-05T13:30-05:00[America/Chicago]"
@@ -3476,6 +3427,12 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
+        "eventId": "guided-summit-hike-2026-10-31",
+        "summary": "Guided Summit Hike",
+        "date": "2026-10-31T09:30-05:00[America/Chicago]"
+      },
+      {
+        "source": "texas-parks-wildlife-houston",
         "eventId": "how-shelter-unifies-us-with-the-land-2026-08-01",
         "summary": "How Shelter Unifies Us with the Land",
         "date": "2026-08-01T20:30-05:00[America/Chicago]"
@@ -3632,6 +3589,12 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
+        "eventId": "last-saturday-volunteer-workday-2026-10-31",
+        "summary": "Last Saturday Volunteer Workday",
+        "date": "2026-10-31T09:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "texas-parks-wildlife-houston",
         "eventId": "learn-to-bird-2026-08-08",
         "summary": "Learn to Bird",
         "date": "2026-08-08T09:00-05:00[America/Chicago]"
@@ -3641,12 +3604,6 @@
         "eventId": "little-hike-birding-for-beginners-2026-08-14",
         "summary": "Little Hike - Birding For Beginners",
         "date": "2026-08-14T08:30-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
-        "eventId": "living-history-rice-family-log-home-2026-07-31",
-        "summary": "Living History - Rice Family Log Home",
-        "date": "2026-07-31T10:00-05:00[America/Chicago]"
       },
       {
         "source": "texas-parks-wildlife-houston",
@@ -3902,12 +3859,6 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
-        "eventId": "sunset-swifts-2026-07-31",
-        "summary": "Sunset Swifts",
-        "date": "2026-07-31T19:45-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
         "eventId": "sunset-watercolors-2026-08-06",
         "summary": "Sunset Watercolors🎨",
         "date": "2026-08-06T19:45-05:00[America/Chicago]"
@@ -4035,9 +3986,9 @@
     ]
   },
   "costStats": {
-    "eventsWithCost": 349,
-    "freeEvents": 233,
-    "totalEvents": 1862,
+    "eventsWithCost": 351,
+    "freeEvents": 235,
+    "totalEvents": 1855,
     "unresolvable": 0
   },
   "costGaps": [
@@ -4169,6 +4120,13 @@
     },
     {
       "source": "713-music-hall",
+      "eventId": "tm-G5dIZ_G2o4cXS",
+      "summary": "ALVARO DIAZ - OMAKASE TOUR",
+      "date": "2026-10-30T20:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/alvaro-diaz-omakase-tour-houston-texas-10-30-2026/event/3A0064C3D156DFB3"
+    },
+    {
+      "source": "713-music-hall",
       "eventId": "tm-G5dIZ_G8eCdNo",
       "summary": "Jorge Medina - Legendario Tour",
       "date": "2026-08-07T20:00-05:00[America/Chicago]",
@@ -4257,6 +4215,13 @@
       "summary": "Daniel Sloss: BITTER  (Brand New Tour!)",
       "date": "2026-10-27T19:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/daniel-sloss-bitter-brand-new-tour-houston-texas-10-27-2026/event/3A00644497F17AB4"
+    },
+    {
+      "source": "bayou-music-center",
+      "eventId": "tm-G5dIZ_ae0Ptji",
+      "summary": "PJ Morton - Saturday Night Sunday Morning Tour",
+      "date": "2026-10-30T20:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/pj-morton-saturday-night-sunday-morning-houston-texas-10-30-2026/event/3A006490A496972C"
     },
     {
       "source": "bayou-music-center",
@@ -4927,6 +4892,13 @@
       "summary": "Saosin: 20 Years of Self-Titled",
       "date": "2026-10-29T18:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/saosin-20-years-of-selftitled-houston-texas-10-29-2026/event/3A0064A5B833DF92"
+    },
+    {
+      "source": "house-of-blues-houston",
+      "eventId": "tm-G5dIZ_1rKhtOO",
+      "summary": "Cameron Whitcomb - Kingdom of Fear Tour",
+      "date": "2026-10-31T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/cameron-whitcomb-kingdom-of-fear-tour-houston-texas-10-31-2026/event/3A0064A7936E9820"
     },
     {
       "source": "house-of-blues-houston",
@@ -6197,6 +6169,13 @@
     },
     {
       "source": "mcgonigels-mucky-duck",
+      "eventId": "mcgonigels-32586",
+      "summary": "Midnight River Choir",
+      "date": "2026-10-30T20:30-05:00[America/Chicago]",
+      "url": "https://www.mcgonigels.com/shows/midnight-river-choir-late-show/"
+    },
+    {
+      "source": "mcgonigels-mucky-duck",
       "eventId": "mcgonigels-32593",
       "summary": "Bart Crow",
       "date": "2026-09-19T20:30-05:00[America/Chicago]",
@@ -6798,6 +6777,13 @@
     },
     {
       "source": "punch-line-comedy-club",
+      "eventId": "tm-G5dIZ_5HNARbr",
+      "summary": "D'Lai",
+      "date": "2026-10-30T21:15-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/dlai-houston-texas-10-30-2026/event/3A0064BF2316F61E"
+    },
+    {
+      "source": "punch-line-comedy-club",
       "eventId": "tm-G5dIZ_5HNdRbK",
       "summary": "D'Lai",
       "date": "2026-10-30T19:00-05:00[America/Chicago]",
@@ -7201,13 +7187,6 @@
       "summary": "Chris O'Connor",
       "date": "2026-08-01T21:15-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/chris-oconnor-houston-texas-08-01-2026/event/3A006486AABE963A"
-    },
-    {
-      "source": "punch-line-comedy-club",
-      "eventId": "tm-G5dIZ_FQnttba",
-      "summary": "Chris O'Connor",
-      "date": "2026-07-31T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/chris-oconnor-houston-texas-07-31-2026/event/3A006486AAA69609"
     },
     {
       "source": "punch-line-comedy-club",
@@ -8939,12 +8918,6 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
-      "eventId": "education-center-open-2026-07-31",
-      "summary": "Education Center Open",
-      "date": "2026-07-31T09:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
       "eventId": "education-center-open-2026-08-05",
       "summary": "Education Center Open",
       "date": "2026-08-05T13:30-05:00[America/Chicago]"
@@ -9305,6 +9278,12 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
+      "eventId": "guided-summit-hike-2026-10-31",
+      "summary": "Guided Summit Hike",
+      "date": "2026-10-31T09:30-05:00[America/Chicago]"
+    },
+    {
+      "source": "texas-parks-wildlife-houston",
       "eventId": "how-shelter-unifies-us-with-the-land-2026-08-01",
       "summary": "How Shelter Unifies Us with the Land",
       "date": "2026-08-01T20:30-05:00[America/Chicago]"
@@ -9461,6 +9440,12 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
+      "eventId": "last-saturday-volunteer-workday-2026-10-31",
+      "summary": "Last Saturday Volunteer Workday",
+      "date": "2026-10-31T09:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "texas-parks-wildlife-houston",
       "eventId": "learn-to-bird-2026-08-08",
       "summary": "Learn to Bird",
       "date": "2026-08-08T09:00-05:00[America/Chicago]"
@@ -9470,12 +9455,6 @@
       "eventId": "little-hike-birding-for-beginners-2026-08-14",
       "summary": "Little Hike - Birding For Beginners",
       "date": "2026-08-14T08:30-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
-      "eventId": "living-history-rice-family-log-home-2026-07-31",
-      "summary": "Living History - Rice Family Log Home",
-      "date": "2026-07-31T10:00-05:00[America/Chicago]"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -9728,12 +9707,6 @@
       "eventId": "sunset-fishing-with-a-ranger-2026-08-14",
       "summary": "Sunset Fishing with a Ranger",
       "date": "2026-08-14T17:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
-      "eventId": "sunset-swifts-2026-07-31",
-      "summary": "Sunset Swifts",
-      "date": "2026-07-31T19:45-05:00[America/Chicago]"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -10178,6 +10151,13 @@
     },
     {
       "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_2DUPwft",
+      "summary": "What's it Fest",
+      "date": "2026-09-04T18:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/whats-it-fest-houston-texas-09-04-2026/event/3A0064FEF6972529"
+    },
+    {
+      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_2QH7Cmo",
       "summary": "Los Mirlos",
       "date": "2026-09-06T19:00-05:00[America/Chicago]",
@@ -10339,13 +10319,6 @@
     },
     {
       "source": "white-oak-music-hall",
-      "eventId": "tm-G5dIZ_aQY7vDf",
-      "summary": "Sleepytime Gorilla Museum",
-      "date": "2026-07-31T18:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/sleepytime-gorilla-museum-houston-texas-07-31-2026/event/3A006496B0101ED4"
-    },
-    {
-      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_aRxvGBe",
       "summary": "Kill Bill: The Rapper - I FOUND THE END TOUR",
       "date": "2026-08-25T19:00-05:00[America/Chicago]",
@@ -10357,13 +10330,6 @@
       "summary": "2slimey USA Tour: NO BASS NO FUN",
       "date": "2026-07-31T19:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/2slimey-usa-tour-no-bass-no-houston-texas-07-31-2026/event/3A00649899D1C7D7"
-    },
-    {
-      "source": "white-oak-music-hall",
-      "eventId": "tm-G5dIZ_ax0fCsg",
-      "summary": "WILLIS w/ Pretty Jane",
-      "date": "2026-07-30T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/willis-w-pretty-jane-houston-texas-07-30-2026/event/3A006498A450EC75"
     },
     {
       "source": "white-oak-music-hall",
@@ -10385,6 +10351,13 @@
       "summary": "BLITZKID: Modern Hel Tour 2026 with Special Guests",
       "date": "2026-10-11T19:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/blitzkid-modern-hel-tour-2026-with-houston-texas-10-11-2026/event/3A0064E716E4E6B4"
+    },
+    {
+      "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_CO82Nz-",
+      "summary": "City of the Sun",
+      "date": "2026-10-31T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/city-of-the-sun-houston-texas-10-31-2026/event/3A0064E8103E3E21"
     },
     {
       "source": "white-oak-music-hall",
@@ -10734,7 +10707,7 @@
     {
       "name": "713-music-hall-713-music-hall",
       "type": "Ripper",
-      "events": 26,
+      "events": 27,
       "expectEmpty": false,
       "source": "713-music-hall"
     },
@@ -10755,7 +10728,7 @@
     {
       "name": "bayou-music-center-bayou-music-center",
       "type": "Ripper",
-      "events": 21,
+      "events": 22,
       "expectEmpty": false,
       "source": "bayou-music-center"
     },
@@ -10811,7 +10784,7 @@
     {
       "name": "encore-houston-encore-houston",
       "type": "Ripper",
-      "events": 26,
+      "events": 27,
       "expectEmpty": false,
       "source": "encore-houston"
     },
@@ -10825,7 +10798,7 @@
     {
       "name": "good-on-paper-bookshop-good-on-paper-bookshop",
       "type": "Ripper",
-      "events": 3,
+      "events": 2,
       "expectEmpty": false,
       "source": "good-on-paper-bookshop"
     },
@@ -10846,7 +10819,7 @@
     {
       "name": "house-of-blues-houston-house-of-blues-houston",
       "type": "Ripper",
-      "events": 55,
+      "events": 56,
       "expectEmpty": false,
       "source": "house-of-blues-houston"
     },
@@ -10930,7 +10903,7 @@
     {
       "name": "mcgonigels-mucky-duck-mcgonigels-mucky-duck",
       "type": "Ripper",
-      "events": 86,
+      "events": 87,
       "expectEmpty": false,
       "source": "mcgonigels-mucky-duck"
     },
@@ -10993,7 +10966,7 @@
     {
       "name": "project-row-houses-project-row-houses",
       "type": "Ripper",
-      "events": 146,
+      "events": 147,
       "expectEmpty": false,
       "source": "project-row-houses"
     },
@@ -11063,7 +11036,7 @@
     {
       "name": "texas-parks-wildlife-houston-texas-parks-wildlife-houston",
       "type": "Ripper",
-      "events": 210,
+      "events": 209,
       "expectEmpty": false,
       "source": "texas-parks-wildlife-houston"
     },
@@ -11112,14 +11085,14 @@
     {
       "name": "tag-the-heights",
       "type": "Aggregate",
-      "events": 52,
+      "events": 51,
       "expectEmpty": false,
       "source": "tag-the-heights"
     },
     {
       "name": "tag-upper-kirby",
       "type": "Aggregate",
-      "events": 90,
+      "events": 91,
       "expectEmpty": false,
       "source": "tag-upper-kirby"
     },
@@ -11133,21 +11106,21 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 702,
+      "events": 704,
       "expectEmpty": false,
       "source": "tag-music"
     },
     {
       "name": "tag-nightlife",
       "type": "Aggregate",
-      "events": 120,
+      "events": 123,
       "expectEmpty": false,
       "source": "tag-nightlife"
     },
     {
       "name": "tag-downtown",
       "type": "Aggregate",
-      "events": 305,
+      "events": 307,
       "expectEmpty": false,
       "source": "tag-downtown"
     },
@@ -11182,14 +11155,14 @@
     {
       "name": "tag-midtown",
       "type": "Aggregate",
-      "events": 55,
+      "events": 57,
       "expectEmpty": false,
       "source": "tag-midtown"
     },
     {
       "name": "tag-art",
       "type": "Aggregate",
-      "events": 315,
+      "events": 316,
       "expectEmpty": false,
       "source": "tag-art"
     },
@@ -11217,7 +11190,7 @@
     {
       "name": "tag-education",
       "type": "Aggregate",
-      "events": 386,
+      "events": 385,
       "expectEmpty": false,
       "source": "tag-education"
     },
@@ -11287,7 +11260,7 @@
     {
       "name": "tag-montrose",
       "type": "Aggregate",
-      "events": 272,
+      "events": 269,
       "expectEmpty": false,
       "source": "tag-montrose"
     },
@@ -11308,7 +11281,7 @@
     {
       "name": "tag-books",
       "type": "Aggregate",
-      "events": 20,
+      "events": 19,
       "expectEmpty": false,
       "source": "tag-books"
     },
@@ -11364,14 +11337,14 @@
     {
       "name": "tag-parks",
       "type": "Aggregate",
-      "events": 257,
+      "events": 256,
       "expectEmpty": false,
       "source": "tag-parks"
     },
     {
       "name": "tag-outdoor-recreation",
       "type": "Aggregate",
-      "events": 239,
+      "events": 238,
       "expectEmpty": false,
       "source": "tag-outdoor-recreation"
     },
@@ -11392,7 +11365,7 @@
     {
       "name": "tag-third-ward",
       "type": "Aggregate",
-      "events": 151,
+      "events": 152,
       "expectEmpty": false,
       "source": "tag-third-ward"
     },
@@ -11539,7 +11512,7 @@
     {
       "name": "tag-nature",
       "type": "Aggregate",
-      "events": 210,
+      "events": 209,
       "expectEmpty": false,
       "source": "tag-nature"
     },
@@ -11658,7 +11631,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1875,
+      "events": 1876,
       "expectEmpty": false,
       "source": "tag-all"
     },
