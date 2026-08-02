@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-02T05:44:47.140Z",
+  "generated": "2026-08-02T10:21:43.613Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -354,6 +354,42 @@
             },
             "rss": {
               "href": "external-diverseworks.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "east-end-farmers-market",
+      "friendlyName": "East End Farmers Market",
+      "description": "East End Farmers Market",
+      "tags": [
+        "FarmersMarket",
+        "Community",
+        "Food",
+        "EaDo"
+      ],
+      "geo": {
+        "lat": 29.7156,
+        "lng": -95.2847,
+        "label": "East End Houston, Houston, TX"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=East%20End%20Houston%2C%20Houston%2C%20TX"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "east-end-farmers-market",
+          "friendlyName": "East End Farmers Market",
+          "links": {
+            "ics": {
+              "href": "external-east-end-farmers-market.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-east-end-farmers-market.rss",
               "type": "application/rss+xml"
             }
           }
@@ -1355,6 +1391,41 @@
             },
             "rss": {
               "href": "mcgonigels-mucky-duck-mcgonigels-mucky-duck.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "memorial-park-conservancy",
+      "friendlyName": "Memorial Park Conservancy",
+      "description": "Memorial Park Conservancy",
+      "tags": [
+        "Parks",
+        "Outdoors",
+        "Memorial"
+      ],
+      "geo": {
+        "lat": 29.7488,
+        "lng": -95.425,
+        "label": "Memorial Park, Houston, TX"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Memorial%20Park%2C%20Houston%2C%20TX"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "memorial-park-conservancy",
+          "friendlyName": "Memorial Park Conservancy",
+          "links": {
+            "ics": {
+              "href": "external-memorial-park-conservancy.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-memorial-park-conservancy.rss",
               "type": "application/rss+xml"
             }
           }

@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "source": "east-end-farmers-market",
+    "calendar": "external-east-end-farmers-market",
+    "type": "External",
+    "eventCount": 1,
+    "sampleEvents": [
+      {
+        "summary": "Letterpress Fundamentals",
+        "date": "2026-08-08T13:30Z[UTC]",
+        "location": "Red Bird Press, 708 Telephone, Houston, TX, 77023, United States"
+      }
+    ]
+  },
+  {
+    "source": "memorial-park-conservancy",
+    "calendar": "external-memorial-park-conservancy",
+    "type": "External",
+    "eventCount": 2,
+    "sampleEvents": [
+      {
+        "summary": "Park Conversations: Remembering and Honoring the Soldiers of the 3rd Battalion, 24th Infantry Regiment",
+        "date": "2026-08-20T08:00Z[UTC]",
+        "location": "Clay Family Eastern Glades, 6500 Memorial Dr, Houston, TX, 77007, United States"
+      }
+    ]
+  }
+]

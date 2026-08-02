@@ -1,5 +1,5 @@
 {
-  "buildTime": "2026-08-02T05:44:47.145Z",
+  "buildTime": "2026-08-02T10:21:43.619Z",
   "totalErrors": 4,
   "configErrors": [],
   "sources": [
@@ -86,8 +86,8 @@
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1914,
-    "eventsWithGeo": 1627,
+    "totalEvents": 1916,
+    "eventsWithGeo": 1629,
     "eventsWithoutGeo": 287,
     "geocodeErrors": 0
   },
@@ -213,6 +213,13 @@
       "label": "Doc's Jazz Club, 1201 Westheimer Rd, Houston, TX 77006",
       "lat": 29.7456,
       "lng": -95.3829
+    },
+    {
+      "source": "external",
+      "name": "east-end-farmers-market",
+      "label": "East End Houston, Houston, TX",
+      "lat": 29.7156,
+      "lng": -95.2847
     },
     {
       "source": "ripper",
@@ -432,6 +439,13 @@
       "lng": -95.415
     },
     {
+      "source": "external",
+      "name": "memorial-park-conservancy",
+      "label": "Memorial Park, Houston, TX",
+      "lat": 29.7488,
+      "lng": -95.425
+    },
+    {
       "source": "ripper",
       "name": "mossrose-bookshop",
       "label": "Mossrose Bookshop, 5441 Almeda Rd, Houston, TX 77004",
@@ -615,10 +629,10 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1128,
-    "totalEvents": 1914,
+    "eventsWithImage": 1130,
+    "totalEvents": 1916,
     "venuesWithImage": 0,
-    "totalVenues": 59,
+    "totalVenues": 61,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -691,6 +705,12 @@
         "label": "DiverseWorks, 4102 Fannin St, Houston, TX 77004",
         "url": "https://diverseworks.org/event-calendar/",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=DiverseWorks%2C%204102%20Fannin%20St%2C%20Houston%2C%20TX%2077004"
+      },
+      {
+        "source": "external",
+        "name": "east-end-farmers-market",
+        "label": "East End Houston, Houston, TX",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=East%20End%20Houston%2C%20Houston%2C%20TX"
       },
       {
         "source": "ripper",
@@ -883,6 +903,12 @@
         "label": "McGonigel's Mucky Duck, 2425 Norfolk St, Houston, TX 77098",
         "url": "https://mcgonigels.com/",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=McGonigel's%20Mucky%20Duck%2C%202425%20Norfolk%20St%2C%20Houston%2C%20TX%2077098"
+      },
+      {
+        "source": "external",
+        "name": "memorial-park-conservancy",
+        "label": "Memorial Park, Houston, TX",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Memorial%20Park%2C%20Houston%2C%20TX"
       },
       {
         "source": "ripper",
@@ -4135,7 +4161,7 @@
   "costStats": {
     "eventsWithCost": 342,
     "freeEvents": 231,
-    "totalEvents": 1914,
+    "totalEvents": 1916,
     "unresolvable": 0
   },
   "costGaps": [
@@ -11268,7 +11294,7 @@
     {
       "name": "tag-farmersmarket",
       "type": "Aggregate",
-      "events": 40,
+      "events": 41,
       "expectEmpty": false,
       "source": "tag-farmersmarket"
     },
@@ -11338,7 +11364,7 @@
     {
       "name": "tag-eado",
       "type": "Aggregate",
-      "events": 95,
+      "events": 96,
       "expectEmpty": false,
       "source": "tag-eado"
     },
@@ -11457,7 +11483,7 @@
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 398,
+      "events": 399,
       "expectEmpty": false,
       "source": "tag-community"
     },
@@ -11527,7 +11553,7 @@
     {
       "name": "tag-parks",
       "type": "Aggregate",
-      "events": 265,
+      "events": 266,
       "expectEmpty": false,
       "source": "tag-parks"
     },
@@ -11576,7 +11602,7 @@
     {
       "name": "tag-food",
       "type": "Aggregate",
-      "events": 31,
+      "events": 32,
       "expectEmpty": false,
       "source": "tag-food"
     },
@@ -11744,7 +11770,7 @@
     {
       "name": "tag-memorial",
       "type": "Aggregate",
-      "events": 30,
+      "events": 31,
       "expectEmpty": false,
       "source": "tag-memorial"
     },
@@ -11798,6 +11824,13 @@
       "source": "tag-tech"
     },
     {
+      "name": "tag-outdoors",
+      "type": "Aggregate",
+      "events": 1,
+      "expectEmpty": false,
+      "source": "tag-outdoors"
+    },
+    {
       "name": "tag-ports",
       "type": "Aggregate",
       "events": 1,
@@ -11821,7 +11854,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1926,
+      "events": 1928,
       "expectEmpty": false,
       "source": "tag-all"
     },
@@ -11859,6 +11892,13 @@
       "events": 3,
       "expectEmpty": false,
       "source": "diverseworks"
+    },
+    {
+      "name": "external-east-end-farmers-market",
+      "type": "External",
+      "events": 1,
+      "expectEmpty": false,
+      "source": "east-end-farmers-market"
     },
     {
       "name": "external-energy-corridor-farmers-market",
@@ -11971,6 +12011,13 @@
       "events": 30,
       "expectEmpty": false,
       "source": "levy-park-houston"
+    },
+    {
+      "name": "external-memorial-park-conservancy",
+      "type": "External",
+      "events": 2,
+      "expectEmpty": false,
+      "source": "memorial-park-conservancy"
     },
     {
       "name": "external-new-magnolia-brewing",
