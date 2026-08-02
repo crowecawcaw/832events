@@ -1,0 +1,20 @@
+name: East End Farmers Market
+status: added
+url: https://eastendhouston.com/market
+platform: tribe-events-ics
+icsUrl: https://eastendhouston.com/events/?ical=1
+tags:
+  - FarmersMarket
+  - Community
+  - Food
+geo:
+  lat: 29.7156
+  lng: -95.2847
+  label: East End Houston
+notes: Verified ICS feed from shortlist. Platform Tribe Events. 1 event visible, 4 upcoming in feed. East End Houston is community organization serving Houston's East End neighborhood.
+firstSeen: '2026-08-02'
+lastChecked: '2026-08-02'
+impl:
+  icsUrl: https://eastendhouston.com/events/?ical=1
+  observedEventCount: 4
+pr: 125

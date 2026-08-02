@@ -1,0 +1,20 @@
+name: Memorial Park Conservancy
+status: added
+url: https://memorialparkconservancy.org/visit/memorial-park-events
+platform: tribe-events-ics
+icsUrl: https://www.memorialparkconservancy.org/events/?ical=1
+tags:
+  - Parks
+  - Outdoors
+  - Community
+geo:
+  lat: 29.7488
+  lng: -95.4250
+  label: Memorial Park
+notes: Verified ICS feed from shortlist. Platform Tribe Events. 2 events visible, 7 upcoming in feed.
+firstSeen: '2026-08-02'
+lastChecked: '2026-08-02'
+impl:
+  icsUrl: https://www.memorialparkconservancy.org/events/?ical=1
+  observedEventCount: 7
+pr: 125
