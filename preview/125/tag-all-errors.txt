@@ -1,0 +1,22 @@
+[
+  {
+    "type": "ParseError",
+    "reason": "Ripper crashed: Error: Murder By The Book fetch failed: HTTP 403 ",
+    "context": ""
+  },
+  {
+    "type": "ParseError",
+    "reason": "Failed to fetch Eventbrite events for organizer 19231282193: Error: Eventbrite API error: 401 ",
+    "context": "pride-houston"
+  },
+  {
+    "type": "ParseError",
+    "reason": "Failed to fetch events from Squarespace: SyntaxError: Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "context": "https://www.readhouston.com/events"
+  },
+  {
+    "type": "ParseError",
+    "reason": "Cannot parse time: \"6pm Art Reception\"",
+    "context": "Beyond Skin Deep: Tattoo Artist Showcase: 6pm Art Reception"
+  }
+]
