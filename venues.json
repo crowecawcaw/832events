@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-01T10:25:05.347Z",
+  "generated": "2026-08-02T05:44:47.140Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -642,6 +642,41 @@
             },
             "rss": {
               "href": "external-hobby-center.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "holocaust-museum-houston",
+      "friendlyName": "Holocaust Museum Houston",
+      "description": "Education and remembrance museum with programming including educator workshops, author talks, film screenings, and community lectures",
+      "tags": [
+        "Museum District",
+        "Museums",
+        "Community"
+      ],
+      "geo": {
+        "lat": 29.7355,
+        "lng": -95.3708,
+        "label": "Holocaust Museum Houston, 5401 Caroline St, Houston, TX 77004"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Holocaust%20Museum%20Houston%2C%205401%20Caroline%20St%2C%20Houston%2C%20TX%2077004"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "holocaust-museum-houston",
+          "friendlyName": "Holocaust Museum Houston",
+          "links": {
+            "ics": {
+              "href": "external-holocaust-museum-houston.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-holocaust-museum-houston.rss",
               "type": "application/rss+xml"
             }
           }
@@ -1790,43 +1825,6 @@
             },
             "rss": {
               "href": "sawyer-yards-sawyer-yards.rss",
-              "type": "application/rss+xml"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "name": "shrine-of-the-black-madonna",
-      "friendlyName": "Shrine of the Black Madonna Cultural Center & Bookstore",
-      "description": "Shrine of the Black Madonna Cultural Center & Bookstore",
-      "url": "https://shrinebookstore.com/",
-      "tags": [
-        "Books",
-        "Community",
-        "Cultural",
-        "Third Ward"
-      ],
-      "geo": {
-        "lat": 29.7368,
-        "lng": -95.344,
-        "label": "Shrine of the Black Madonna Cultural Center & Bookstore, 5309 Martin Luther King Blvd, Houston, TX 77021"
-      },
-      "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=Shrine%20of%20the%20Black%20Madonna%20Cultural%20Center%20%26%20Bookstore%2C%205309%20Martin%20Luther%20King%20Blvd%2C%20Houston%2C%20TX%2077021"
-      },
-      "kind": "ripper",
-      "calendars": [
-        {
-          "name": "shrine-of-the-black-madonna",
-          "friendlyName": "Shrine of the Black Madonna",
-          "links": {
-            "ics": {
-              "href": "shrine-of-the-black-madonna-shrine-of-the-black-madonna.ics",
-              "type": "text/calendar"
-            },
-            "rss": {
-              "href": "shrine-of-the-black-madonna-shrine-of-the-black-madonna.rss",
               "type": "application/rss+xml"
             }
           }

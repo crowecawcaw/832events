@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-01T10:24:44.372Z",
+  "lastUpdated": "2026-08-02T05:44:36.773Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -659,25 +659,6 @@
       ]
     },
     {
-      "name": "shrine-of-the-black-madonna",
-      "description": "Shrine of the Black Madonna Cultural Center & Bookstore",
-      "friendlyLink": "https://shrinebookstore.com/",
-      "calendars": [
-        {
-          "name": "shrine-of-the-black-madonna",
-          "friendlyName": "Shrine of the Black Madonna",
-          "icsUrl": "shrine-of-the-black-madonna-shrine-of-the-black-madonna.ics",
-          "rssUrl": "shrine-of-the-black-madonna-shrine-of-the-black-madonna.rss",
-          "tags": [
-            "Books",
-            "Community",
-            "Cultural",
-            "Third Ward"
-          ]
-        }
-      ]
-    },
-    {
       "name": "songkick-houston",
       "description": "Songkick Houston Metro",
       "friendlyLink": "https://www.songkick.com/metro-areas/15073-us-houston",
@@ -948,6 +929,18 @@
       ]
     },
     {
+      "name": "holocaust-museum-houston",
+      "friendlyName": "Holocaust Museum Houston",
+      "description": "Education and remembrance museum with programming including educator workshops, author talks, film screenings, and community lectures",
+      "icsUrl": "external-holocaust-museum-houston.ics",
+      "originalIcsUrl": "https://hmh.org/?post_type=tribe_events&ical=1&eventDisplay=list",
+      "tags": [
+        "Museum District",
+        "Museums",
+        "Community"
+      ]
+    },
+    {
       "name": "houston-arboretum",
       "friendlyName": "Houston Arboretum & Nature Center",
       "description": "Nature hikes, bird walks, children's programs, yoga in the park, wildlife workshops, and volunteer events at this urban nature sanctuary in Memorial Park.",
@@ -1118,7 +1111,6 @@
     "Community",
     "Concert",
     "Culinary",
-    "Cultural",
     "Culture",
     "Downtown",
     "EaDo",
