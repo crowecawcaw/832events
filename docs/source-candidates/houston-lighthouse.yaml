@@ -1,0 +1,16 @@
+name: houston-lighthouse
+description: The Lighthouse of Houston community events
+url: https://houstonlighthouse.org/community-events-resources
+status: added
+source_type: external_ics
+verified: true
+icsUrl: https://houstonlighthouse.org/events/?ical=1
+event_count: 30
+tags:
+  - Community
+firstSeen: "2026-08-03"
+lastChecked: "2026-08-03"
+notes: "Tier-1 verified ICS feed from discovery shortlist. 30 events confirmed. Tribe Events platform."
+impl:
+  icsUrl: "https://houstonlighthouse.org/events/?ical=1"
+  observedEventCount: 30

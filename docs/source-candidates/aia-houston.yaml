@@ -1,0 +1,16 @@
+name: aia-houston
+description: AIA Houston architecture events
+url: https://architecturehouston.org/events
+status: added
+source_type: external_ics
+verified: true
+icsUrl: https://architecturehouston.org/events/?ical=1
+event_count: 20
+tags:
+  - Arts
+firstSeen: "2026-08-03"
+lastChecked: "2026-08-03"
+notes: "Tier-1 verified ICS feed from discovery shortlist. 20 events confirmed. Tribe Events platform."
+impl:
+  icsUrl: "https://architecturehouston.org/events/?ical=1"
+  observedEventCount: 20
