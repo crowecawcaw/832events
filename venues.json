@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-03T06:01:01.023Z",
+  "generated": "2026-08-03T12:03:37.303Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -31,6 +31,41 @@
             },
             "rss": {
               "href": "713-music-hall-713-music-hall.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "aia-houston",
+      "friendlyName": "AIA Houston",
+      "description": "AIA Houston",
+      "tags": [
+        "Downtown",
+        "Architecture",
+        "Arts"
+      ],
+      "geo": {
+        "lat": 29.7589,
+        "lng": -95.3625,
+        "label": "AIA Houston (Architecture Center Houston)"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=AIA%20Houston%20(Architecture%20Center%20Houston)"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "aia-houston",
+          "friendlyName": "AIA Houston",
+          "links": {
+            "ics": {
+              "href": "external-aia-houston.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-aia-houston.rss",
               "type": "application/rss+xml"
             }
           }
@@ -1033,6 +1068,40 @@
             },
             "rss": {
               "href": "external-houston-heights-association.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "houston-lighthouse",
+      "friendlyName": "Houston Lighthouse",
+      "description": "Houston Lighthouse",
+      "tags": [
+        "Montrose",
+        "Community"
+      ],
+      "geo": {
+        "lat": 29.7437,
+        "lng": -95.4076,
+        "label": "Houston Lighthouse"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Houston%20Lighthouse"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "houston-lighthouse",
+          "friendlyName": "Houston Lighthouse",
+          "links": {
+            "ics": {
+              "href": "external-houston-lighthouse.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-houston-lighthouse.rss",
               "type": "application/rss+xml"
             }
           }

@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-08-03T06:01:01.029Z",
-  "totalErrors": 10,
+  "buildTime": "2026-08-03T12:03:37.309Z",
+  "totalErrors": 4,
   "configErrors": [],
   "sources": [
     {
@@ -84,49 +84,12 @@
       "error": "Error: HTTP 403: "
     }
   ],
-  "geocodeErrors": [
-    {
-      "type": "GeocodeError",
-      "location": "MamaRitas Restaurant Sunday Funday Series",
-      "source": "songkick-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Empyre Room",
-      "source": "songkick-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "The Louisville Palace, 625 S. 4th Street, Louisville, Kentucky, 40202, United States Of America",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Ruoff Music Center, 12880 E. 146th St., Noblesville, IN, 46060, United States Of America",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Hawaii Theatre Center, 1130 Bethel Street, Honolulu, HI, 96813, United States",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Arlene Schnitzer Concert Hall, 1037 SW Broadway Ave, Portland, Oregon, 97205, United States Of America",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    }
-  ],
+  "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1874,
-    "eventsWithGeo": 1605,
+    "totalEvents": 1923,
+    "eventsWithGeo": 1654,
     "eventsWithoutGeo": 269,
-    "geocodeErrors": 6
+    "geocodeErrors": 0
   },
   "uncertainEvents": [],
   "uncertaintyStats": {
@@ -168,6 +131,13 @@
       "label": "713 Music Hall, 401 Franklin St, Houston, TX 77201",
       "lat": 29.76,
       "lng": -95.365
+    },
+    {
+      "source": "external",
+      "name": "aia-houston",
+      "label": "AIA Houston (Architecture Center Houston)",
+      "lat": 29.7589,
+      "lng": -95.3625
     },
     {
       "source": "ripper",
@@ -406,6 +376,13 @@
       "label": "Houston Heights Association, Houston, TX 77008",
       "lat": 29.7948,
       "lng": -95.398
+    },
+    {
+      "source": "external",
+      "name": "houston-lighthouse",
+      "label": "Houston Lighthouse",
+      "lat": 29.7437,
+      "lng": -95.4076
     },
     {
       "source": "external",
@@ -668,10 +645,10 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1098,
-    "totalEvents": 1874,
+    "eventsWithImage": 1146,
+    "totalEvents": 1923,
     "venuesWithImage": 0,
-    "totalVenues": 61,
+    "totalVenues": 63,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -682,6 +659,12 @@
         "label": "713 Music Hall, 401 Franklin St, Houston, TX 77201",
         "url": "https://www.713musichall.com/",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=713%20Music%20Hall%2C%20401%20Franklin%20St%2C%20Houston%2C%20TX%2077201"
+      },
+      {
+        "source": "external",
+        "name": "aia-houston",
+        "label": "AIA Houston (Architecture Center Houston)",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=AIA%20Houston%20(Architecture%20Center%20Houston)"
       },
       {
         "source": "ripper",
@@ -873,6 +856,12 @@
         "name": "houston-heights-association",
         "label": "Houston Heights Association, Houston, TX 77008",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Houston%20Heights%20Association%2C%20Houston%2C%20TX%2077008"
+      },
+      {
+        "source": "external",
+        "name": "houston-lighthouse",
+        "label": "Houston Lighthouse",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Houston%20Lighthouse"
       },
       {
         "source": "external",
@@ -4133,7 +4122,7 @@
   "costStats": {
     "eventsWithCost": 328,
     "freeEvents": 225,
-    "totalEvents": 1874,
+    "totalEvents": 1923,
     "unresolvable": 0
   },
   "costGaps": [
@@ -11164,7 +11153,7 @@
     {
       "name": "tag-downtown",
       "type": "Aggregate",
-      "events": 298,
+      "events": 317,
       "expectEmpty": false,
       "source": "tag-downtown"
     },
@@ -11178,7 +11167,7 @@
     {
       "name": "tag-arts",
       "type": "Aggregate",
-      "events": 116,
+      "events": 135,
       "expectEmpty": false,
       "source": "tag-arts"
     },
@@ -11304,14 +11293,14 @@
     {
       "name": "tag-montrose",
       "type": "Aggregate",
-      "events": 267,
+      "events": 297,
       "expectEmpty": false,
       "source": "tag-montrose"
     },
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 384,
+      "events": 414,
       "expectEmpty": false,
       "source": "tag-community"
     },
@@ -11486,7 +11475,7 @@
     {
       "name": "tag-architecture",
       "type": "Aggregate",
-      "events": 3,
+      "events": 22,
       "expectEmpty": false,
       "source": "tag-architecture"
     },
@@ -11682,7 +11671,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1884,
+      "events": 1933,
       "expectEmpty": false,
       "source": "tag-all"
     },
@@ -11692,6 +11681,13 @@
       "events": 30,
       "expectEmpty": false,
       "source": "365-things-houston"
+    },
+    {
+      "name": "external-aia-houston",
+      "type": "External",
+      "events": 20,
+      "expectEmpty": false,
+      "source": "aia-houston"
     },
     {
       "name": "external-axelrad-beer-garden",
@@ -11811,6 +11807,13 @@
       "events": 25,
       "expectEmpty": false,
       "source": "houston-heights-association"
+    },
+    {
+      "name": "external-houston-lighthouse",
+      "type": "External",
+      "events": 30,
+      "expectEmpty": false,
+      "source": "houston-lighthouse"
     },
     {
       "name": "external-houston-maritime-museum",
