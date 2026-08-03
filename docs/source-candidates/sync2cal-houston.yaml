@@ -1,0 +1,9 @@
+name: sync2cal-houston
+description: sync2cal Houston Events (calendar aggregator)
+url: https://sync2cal.com/local-events/houston
+status: notviable
+source_type: platform_ripper
+platform: ticketmaster
+notes: "Secondary aggregator service that redistributes venue calendars and Ticketmaster events. Not a primary source. Licensed paid service — pulling data would violate terms. Should use direct Ticketmaster APIs for venues instead."
+firstSeen: "2026-08-03"
+lastChecked: "2026-08-03"
