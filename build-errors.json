@@ -1,5 +1,5 @@
 {
-  "buildTime": "2026-08-03T12:03:37.309Z",
+  "buildTime": "2026-08-04T05:35:41.023Z",
   "totalErrors": 4,
   "configErrors": [],
   "sources": [
@@ -86,9 +86,9 @@
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 1923,
-    "eventsWithGeo": 1654,
-    "eventsWithoutGeo": 269,
+    "totalEvents": 1922,
+    "eventsWithGeo": 1652,
+    "eventsWithoutGeo": 270,
     "geocodeErrors": 0
   },
   "uncertainEvents": [],
@@ -646,7 +646,7 @@
   ],
   "photoStats": {
     "eventsWithImage": 1146,
-    "totalEvents": 1923,
+    "totalEvents": 1922,
     "venuesWithImage": 0,
     "totalVenues": 63,
     "unresolvable": 0
@@ -1203,13 +1203,6 @@
         "summary": "MindFest Challenge 7: Overtime",
         "date": "2026-08-15T10:00-05:00[America/Chicago]",
         "url": "https://www.cmhouston.org/events/mindfest-7-overtime"
-      },
-      {
-        "source": "childrens-museum-houston",
-        "eventId": "ms-camila-s-puppet-show-2026-08-03-cb490e68",
-        "summary": "Ms. Camila's Puppet Show",
-        "date": "2026-08-03T10:00-05:00[America/Chicago]",
-        "url": "https://www.cmhouston.org/events/ms-camilas-puppet-show"
       },
       {
         "source": "childrens-museum-houston",
@@ -1802,6 +1795,20 @@
         "summary": "Evening Forest Hike",
         "date": "2026-08-28T19:00-05:00[America/Chicago]",
         "url": "https://htxoutdoors.com/events/evening-forest-hike-10/"
+      },
+      {
+        "source": "htxoutdoors",
+        "eventId": "evening-forest-hike-2026-09-11",
+        "summary": "Evening Forest Hike",
+        "date": "2026-09-11T19:00-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/evening-forest-hike-11/"
+      },
+      {
+        "source": "htxoutdoors",
+        "eventId": "evening-forest-hike-2026-09-25",
+        "summary": "Evening Forest Hike",
+        "date": "2026-09-25T19:00-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/evening-forest-hike-12/"
       },
       {
         "source": "htxoutdoors",
@@ -3675,12 +3682,6 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
-        "eventId": "interpretive-center-open-8-30am-to-2-30pm-bastrop-state-park-2026-08-03",
-        "summary": "Interpretive Center Open 8:30am to 2:30pm - Bastrop State Park",
-        "date": "2026-08-03T08:30-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
         "eventId": "interpretive-center-open-8-30am-to-2-30pm-bastrop-state-park-2026-08-17",
         "summary": "Interpretive Center Open 8:30am to 2:30pm - Bastrop State Park",
         "date": "2026-08-17T08:30-05:00[America/Chicago]"
@@ -4122,7 +4123,7 @@
   "costStats": {
     "eventsWithCost": 328,
     "freeEvents": 225,
-    "totalEvents": 1923,
+    "totalEvents": 1922,
     "unresolvable": 0
   },
   "costGaps": [
@@ -4153,6 +4154,13 @@
       "summary": "ISOxo presents: Hardcore Diva",
       "date": "2026-09-19T20:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/isoxo-presents-hardcore-diva-houston-texas-09-19-2026/event/3A0064A8B366F2F9"
+    },
+    {
+      "source": "713-music-hall",
+      "eventId": "tm-G5dIZ_2B36plV",
+      "summary": "Wynonna Judd - The Hard Truth Tour",
+      "date": "2026-10-16T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/wynonna-judd-the-hard-truth-tour-houston-texas-10-16-2026/event/3A0064FE921D6AF4"
     },
     {
       "source": "713-music-hall",
@@ -4587,13 +4595,6 @@
       "summary": "MindFest Challenge 7: Overtime",
       "date": "2026-08-15T10:00-05:00[America/Chicago]",
       "url": "https://www.cmhouston.org/events/mindfest-7-overtime"
-    },
-    {
-      "source": "childrens-museum-houston",
-      "eventId": "ms-camila-s-puppet-show-2026-08-03-cb490e68",
-      "summary": "Ms. Camila's Puppet Show",
-      "date": "2026-08-03T10:00-05:00[America/Chicago]",
-      "url": "https://www.cmhouston.org/events/ms-camilas-puppet-show"
     },
     {
       "source": "childrens-museum-houston",
@@ -5252,6 +5253,20 @@
     },
     {
       "source": "house-of-blues-houston",
+      "eventId": "tm-G5dIZ_2MfpcYO",
+      "summary": "CupcakKe",
+      "date": "2026-10-20T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/cupcakke-houston-texas-10-20-2026/event/3A0064FDD45ADC20"
+    },
+    {
+      "source": "house-of-blues-houston",
+      "eventId": "tm-G5dIZ_2MWSfwA",
+      "summary": "ONE PACT",
+      "date": "2026-08-24T18:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/one-pact-houston-texas-08-24-2026/event/3A0064FDFDCD4C85"
+    },
+    {
+      "source": "house-of-blues-houston",
       "eventId": "tm-G5dIZ_51glajE",
       "summary": "Arch Enemy & The Black Dahlia Murder - Wrath Across North America 2026",
       "date": "2026-10-12T17:00-05:00[America/Chicago]",
@@ -5529,13 +5544,6 @@
       "summary": "Billy Currington",
       "date": "2026-09-19T19:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/billy-currington-houston-texas-09-19-2026/event/3A0064D7F0313ECC"
-    },
-    {
-      "source": "house-of-blues-houston",
-      "eventId": "tm-G5dIZbMwHPzjy",
-      "summary": "Chance Peña",
-      "date": "2026-08-02T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/chance-pena-houston-texas-08-02-2026/event/3A00637CBC978739"
     },
     {
       "source": "houston-center-for-photography",
@@ -5826,9 +5834,9 @@
     },
     {
       "source": "htxoutdoors",
-      "eventId": "board-game-night-2026-08-17",
-      "summary": "Board Game Night",
-      "date": "2026-08-17T19:00-05:00[America/Chicago]",
+      "eventId": "board-game-afternoon-2026-08-16",
+      "summary": "Board Game Afternoon",
+      "date": "2026-08-16T13:00-05:00[America/Chicago]",
       "url": "https://htxoutdoors.com/events/board-game-night-1/"
     },
     {
@@ -5851,6 +5859,20 @@
       "summary": "Evening Forest Hike",
       "date": "2026-08-28T19:00-05:00[America/Chicago]",
       "url": "https://htxoutdoors.com/events/evening-forest-hike-10/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "evening-forest-hike-2026-09-11",
+      "summary": "Evening Forest Hike",
+      "date": "2026-09-11T19:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/evening-forest-hike-11/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "evening-forest-hike-2026-09-25",
+      "summary": "Evening Forest Hike",
+      "date": "2026-09-25T19:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/evening-forest-hike-12/"
     },
     {
       "source": "htxoutdoors",
@@ -6795,13 +6817,6 @@
       "summary": "Legiterally Vol. 6: Femme-Centric Musical Perfomances Downstairs at Notsuoh",
       "date": "2026-08-26T12:00-05:00[America/Chicago]",
       "url": "https://www.notsuoh.com/events/legiterally-vol-4-7nzwt-y224n"
-    },
-    {
-      "source": "notsuoh",
-      "eventId": "miccheck-events-djs-visuals-in-the-dome-2026-08-03",
-      "summary": "MicCheck Events: DJs & Visuals in the Dome",
-      "date": "2026-08-03T12:00-05:00[America/Chicago]",
-      "url": "https://www.notsuoh.com/events/miccheck-events-djs-visuals-in-the-dome-20260615-n744m-jnss5-e2n4l"
     },
     {
       "source": "notsuoh",
@@ -9467,12 +9482,6 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
-      "eventId": "interpretive-center-open-8-30am-to-2-30pm-bastrop-state-park-2026-08-03",
-      "summary": "Interpretive Center Open 8:30am to 2:30pm - Bastrop State Park",
-      "date": "2026-08-03T08:30-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
       "eventId": "interpretive-center-open-8-30am-to-2-30pm-bastrop-state-park-2026-08-17",
       "summary": "Interpretive Center Open 8:30am to 2:30pm - Bastrop State Park",
       "date": "2026-08-17T08:30-05:00[America/Chicago]"
@@ -10233,6 +10242,13 @@
     },
     {
       "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_2sxJ3YL",
+      "summary": "Kylie Cantrall Presents: The Valley Girl Problems Tour",
+      "date": "2026-10-14T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/kylie-cantrall-presents-the-valley-girl-houston-texas-10-14-2026/event/3A0064FC62992C1F"
+    },
+    {
+      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_51b1gyr",
       "summary": "Graham St. Clair Band",
       "date": "2026-10-23T19:00-05:00[America/Chicago]",
@@ -10541,13 +10557,6 @@
     },
     {
       "source": "white-oak-music-hall",
-      "eventId": "tm-G5dIZ_Gt6X-Yb",
-      "summary": "Luke Borchelt - The Water Town Tour",
-      "date": "2026-08-02T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/luke-borchelt-the-water-town-tour-houston-texas-08-02-2026/event/3A0064CA47FA1C18"
-    },
-    {
-      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_GwFy4zR",
       "summary": "Nik Parr & The Selfless Lovers",
       "date": "2026-09-24T19:00-05:00[America/Chicago]",
@@ -10740,7 +10749,7 @@
     {
       "name": "713-music-hall-713-music-hall",
       "type": "Ripper",
-      "events": 27,
+      "events": 28,
       "expectEmpty": false,
       "source": "713-music-hall"
     },
@@ -10782,7 +10791,7 @@
     {
       "name": "childrens-museum-houston-main",
       "type": "Ripper",
-      "events": 33,
+      "events": 32,
       "expectEmpty": false,
       "source": "childrens-museum-houston"
     },
@@ -10852,7 +10861,7 @@
     {
       "name": "house-of-blues-houston-house-of-blues-houston",
       "type": "Ripper",
-      "events": 54,
+      "events": 55,
       "expectEmpty": false,
       "source": "house-of-blues-houston"
     },
@@ -10894,7 +10903,7 @@
     {
       "name": "htxoutdoors-htxoutdoors",
       "type": "Ripper",
-      "events": 24,
+      "events": 26,
       "expectEmpty": false,
       "source": "htxoutdoors"
     },
@@ -10957,7 +10966,7 @@
     {
       "name": "notsuoh-notsuoh",
       "type": "Ripper",
-      "events": 7,
+      "events": 6,
       "expectEmpty": false,
       "source": "notsuoh"
     },
@@ -11069,7 +11078,7 @@
     {
       "name": "texas-parks-wildlife-houston-texas-parks-wildlife-houston",
       "type": "Ripper",
-      "events": 190,
+      "events": 189,
       "expectEmpty": false,
       "source": "texas-parks-wildlife-houston"
     },
@@ -11153,7 +11162,7 @@
     {
       "name": "tag-downtown",
       "type": "Aggregate",
-      "events": 317,
+      "events": 318,
       "expectEmpty": false,
       "source": "tag-downtown"
     },
@@ -11167,7 +11176,7 @@
     {
       "name": "tag-arts",
       "type": "Aggregate",
-      "events": 135,
+      "events": 134,
       "expectEmpty": false,
       "source": "tag-arts"
     },
@@ -11202,7 +11211,7 @@
     {
       "name": "tag-museum-district",
       "type": "Aggregate",
-      "events": 178,
+      "events": 177,
       "expectEmpty": false,
       "source": "tag-museum-district"
     },
@@ -11223,7 +11232,7 @@
     {
       "name": "tag-education",
       "type": "Aggregate",
-      "events": 360,
+      "events": 359,
       "expectEmpty": false,
       "source": "tag-education"
     },
@@ -11237,21 +11246,21 @@
     {
       "name": "tag-family",
       "type": "Aggregate",
-      "events": 50,
+      "events": 49,
       "expectEmpty": false,
       "source": "tag-family"
     },
     {
       "name": "tag-kids",
       "type": "Aggregate",
-      "events": 33,
+      "events": 32,
       "expectEmpty": false,
       "source": "tag-kids"
     },
     {
       "name": "tag-museum",
       "type": "Aggregate",
-      "events": 34,
+      "events": 33,
       "expectEmpty": false,
       "source": "tag-museum"
     },
@@ -11293,14 +11302,14 @@
     {
       "name": "tag-montrose",
       "type": "Aggregate",
-      "events": 297,
+      "events": 296,
       "expectEmpty": false,
       "source": "tag-montrose"
     },
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 414,
+      "events": 415,
       "expectEmpty": false,
       "source": "tag-community"
     },
@@ -11335,7 +11344,7 @@
     {
       "name": "tag-sports",
       "type": "Aggregate",
-      "events": 50,
+      "events": 52,
       "expectEmpty": false,
       "source": "tag-sports"
     },
@@ -11370,21 +11379,21 @@
     {
       "name": "tag-parks",
       "type": "Aggregate",
-      "events": 259,
+      "events": 258,
       "expectEmpty": false,
       "source": "tag-parks"
     },
     {
       "name": "tag-outdoor-recreation",
       "type": "Aggregate",
-      "events": 244,
+      "events": 245,
       "expectEmpty": false,
       "source": "tag-outdoor-recreation"
     },
     {
       "name": "tag-hiking",
       "type": "Aggregate",
-      "events": 24,
+      "events": 26,
       "expectEmpty": false,
       "source": "tag-hiking"
     },
@@ -11545,7 +11554,7 @@
     {
       "name": "tag-nature",
       "type": "Aggregate",
-      "events": 190,
+      "events": 189,
       "expectEmpty": false,
       "source": "tag-nature"
     },
@@ -11608,7 +11617,7 @@
     {
       "name": "tag-medical-center",
       "type": "Aggregate",
-      "events": 9,
+      "events": 8,
       "expectEmpty": false,
       "source": "tag-medical-center"
     },
@@ -11671,7 +11680,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 1933,
+      "events": 1932,
       "expectEmpty": false,
       "source": "tag-all"
     },
