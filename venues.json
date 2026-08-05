@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-05T05:38:08.500Z",
+  "generated": "2026-08-05T11:17:12.265Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -136,6 +136,43 @@
             },
             "rss": {
               "href": "external-axelrad-beer-garden.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "barbarella-entertainment",
+      "friendlyName": "Barbarella Entertainment",
+      "description": "Barbarella Entertainment",
+      "url": "https://www.eventbrite.com/o/barbarella-entertainment-49071058643",
+      "tags": [
+        "Nightlife",
+        "Music",
+        "Dance",
+        "Midtown"
+      ],
+      "geo": {
+        "lat": 29.7465,
+        "lng": -95.3839,
+        "label": "Barbarella Entertainment, 2404 San Jacinto Street, Houston, TX"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Barbarella%20Entertainment%2C%202404%20San%20Jacinto%20Street%2C%20Houston%2C%20TX"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "barbarella-entertainment",
+          "friendlyName": "Barbarella Entertainment",
+          "links": {
+            "ics": {
+              "href": "barbarella-entertainment-barbarella-entertainment.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "barbarella-entertainment-barbarella-entertainment.rss",
               "type": "application/rss+xml"
             }
           }
@@ -754,6 +791,41 @@
       ]
     },
     {
+      "name": "holocaust-museum-houston",
+      "friendlyName": "Holocaust Museum Houston",
+      "description": "Education and remembrance museum with programming including educator workshops, author talks, film screenings, and community lectures",
+      "tags": [
+        "Museum District",
+        "Museums",
+        "Community"
+      ],
+      "geo": {
+        "lat": 29.7355,
+        "lng": -95.3708,
+        "label": "Holocaust Museum Houston, 5401 Caroline St, Houston, TX 77004"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Holocaust%20Museum%20Houston%2C%205401%20Caroline%20St%2C%20Houston%2C%20TX%2077004"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "holocaust-museum-houston",
+          "friendlyName": "Holocaust Museum Houston",
+          "links": {
+            "ics": {
+              "href": "external-holocaust-museum-houston.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-holocaust-museum-houston.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "house-of-blues-houston",
       "friendlyName": "House of Blues Houston",
       "description": "House of Blues Houston",
@@ -1352,6 +1424,42 @@
             },
             "rss": {
               "href": "lake-houston-brewery-lake-houston-brewery.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "laura-rathe-fine-art-houston",
+      "friendlyName": "Laura Rathe Fine Art Houston",
+      "description": "Laura Rathe Fine Art Houston",
+      "url": "https://www.eventbrite.com/o/laura-rathe-fine-art-houston-48597879413",
+      "tags": [
+        "Art",
+        "Gallery",
+        "River Oaks"
+      ],
+      "geo": {
+        "lat": 29.7365,
+        "lng": -95.4145,
+        "label": "Laura Rathe Fine Art Houston, 4444 Westheimer Road, Houston, TX"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Laura%20Rathe%20Fine%20Art%20Houston%2C%204444%20Westheimer%20Road%2C%20Houston%2C%20TX"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "laura-rathe-fine-art-houston",
+          "friendlyName": "Laura Rathe Fine Art Houston",
+          "links": {
+            "ics": {
+              "href": "laura-rathe-fine-art-houston-laura-rathe-fine-art-houston.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "laura-rathe-fine-art-houston-laura-rathe-fine-art-houston.rss",
               "type": "application/rss+xml"
             }
           }

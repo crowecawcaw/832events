@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-08-05T05:38:08.507Z",
-  "totalErrors": 8,
+  "buildTime": "2026-08-05T11:17:12.270Z",
+  "totalErrors": 5,
   "configErrors": [],
   "sources": [
     {
@@ -72,12 +72,6 @@
       "error": "Error: HTTP 403: "
     },
     {
-      "name": "holocaust-museum-houston",
-      "friendlyName": "Holocaust Museum Houston",
-      "url": "https://hmh.org/?post_type=tribe_events&ical=1&eventDisplay=list",
-      "error": "Error: HTTP 504: "
-    },
-    {
       "name": "houston-heritage-holiday-market",
       "friendlyName": "Houston Heritage Holiday Market",
       "url": "https://ghwcc.org/calendar/?ical=1",
@@ -90,31 +84,12 @@
       "error": "Error: HTTP 403: "
     }
   ],
-  "geocodeErrors": [
-    {
-      "type": "GeocodeError",
-      "location": "Madison Square Garden, 4 Pennsylvania Plaza, New York, NY, 10001, United States",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Ovation Hall at Ocean Casino Resort, 500 Boardwalk, Atlantic City, NJ, 8401, United States Of America",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Pit Boss BBQ, 800 Doug Davis Drive, Hapeville, GA, 30354, United States",
-      "source": "external-houston-black-restaurant-week",
-      "reason": "Nominatim returned no results"
-    }
-  ],
+  "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 2004,
-    "eventsWithGeo": 1732,
+    "totalEvents": 2115,
+    "eventsWithGeo": 1843,
     "eventsWithoutGeo": 272,
-    "geocodeErrors": 3
+    "geocodeErrors": 0
   },
   "uncertainEvents": [],
   "uncertaintyStats": {
@@ -148,7 +123,7 @@
       "source": "texas-parks-wildlife-houston",
       "url": "https://tpwd.texas.gov/calendar/near-city/houston-events",
       "cachedAt": "2026-08-03T06:00:10.459Z",
-      "ageHours": 48,
+      "ageHours": 53,
       "error": "fetch failed"
     }
   ],
@@ -198,6 +173,13 @@
       "label": "Bad Astronaut Brewery, Houston, TX",
       "lat": 29.7683,
       "lng": -95.3628
+    },
+    {
+      "source": "ripper",
+      "name": "barbarella-entertainment",
+      "label": "Barbarella Entertainment, 2404 San Jacinto Street, Houston, TX",
+      "lat": 29.7465,
+      "lng": -95.3839
     },
     {
       "source": "ripper",
@@ -467,6 +449,13 @@
     },
     {
       "source": "ripper",
+      "name": "laura-rathe-fine-art-houston",
+      "label": "Laura Rathe Fine Art Houston, 4444 Westheimer Road, Houston, TX",
+      "lat": 29.7365,
+      "lng": -95.4145
+    },
+    {
+      "source": "ripper",
       "name": "lawndale-art-center",
       "label": "Lawndale Art Center, 4912 Main St, Houston, TX 77002",
       "lat": 29.7185,
@@ -677,10 +666,10 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1215,
-    "totalEvents": 2004,
+    "eventsWithImage": 1326,
+    "totalEvents": 2115,
     "venuesWithImage": 0,
-    "totalVenues": 63,
+    "totalVenues": 66,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -711,6 +700,13 @@
         "label": "Axelrad Beer Garden, 1517 Alabama St, Houston, TX 77010",
         "url": "https://www.axelradhouston.com/calendar",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Axelrad%20Beer%20Garden%2C%201517%20Alabama%20St%2C%20Houston%2C%20TX%2077010"
+      },
+      {
+        "source": "ripper",
+        "name": "barbarella-entertainment",
+        "label": "Barbarella Entertainment, 2404 San Jacinto Street, Houston, TX",
+        "url": "https://www.eventbrite.com/o/barbarella-entertainment-49071058643",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Barbarella%20Entertainment%2C%202404%20San%20Jacinto%20Street%2C%20Houston%2C%20TX"
       },
       {
         "source": "ripper",
@@ -829,6 +825,12 @@
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hobby%20Center%20for%20the%20Performing%20Arts%2C%20800%20Bagby%20St%2C%20Houston%2C%20TX%2077002"
       },
       {
+        "source": "external",
+        "name": "holocaust-museum-houston",
+        "label": "Holocaust Museum Houston, 5401 Caroline St, Houston, TX 77004",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Holocaust%20Museum%20Houston%2C%205401%20Caroline%20St%2C%20Houston%2C%20TX%2077004"
+      },
+      {
         "source": "ripper",
         "name": "house-of-blues-houston",
         "label": "House of Blues Houston, 1204 Caroline St, Houston, TX 77002",
@@ -942,6 +944,13 @@
         "label": "Lake Houston Brewery, 10614 FM 1960 W, Humble, TX 77338",
         "url": "https://www.lakehoustonbrew.com/events",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Lake%20Houston%20Brewery%2C%2010614%20FM%201960%20W%2C%20Humble%2C%20TX%2077338"
+      },
+      {
+        "source": "ripper",
+        "name": "laura-rathe-fine-art-houston",
+        "label": "Laura Rathe Fine Art Houston, 4444 Westheimer Road, Houston, TX",
+        "url": "https://www.eventbrite.com/o/laura-rathe-fine-art-houston-48597879413",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Laura%20Rathe%20Fine%20Art%20Houston%2C%204444%20Westheimer%20Road%2C%20Houston%2C%20TX"
       },
       {
         "source": "ripper",
@@ -4230,9 +4239,9 @@
     ]
   },
   "costStats": {
-    "eventsWithCost": 355,
-    "freeEvents": 239,
-    "totalEvents": 2004,
+    "eventsWithCost": 465,
+    "freeEvents": 349,
+    "totalEvents": 2115,
     "unresolvable": 0
   },
   "costGaps": [
@@ -10996,6 +11005,13 @@
       "source": "aurora-picture-show"
     },
     {
+      "name": "barbarella-entertainment-barbarella-entertainment",
+      "type": "Ripper",
+      "events": 1,
+      "expectEmpty": false,
+      "source": "barbarella-entertainment"
+    },
+    {
       "name": "bayou-music-center-bayou-music-center",
       "type": "Ripper",
       "events": 22,
@@ -11050,6 +11066,13 @@
       "events": 41,
       "expectEmpty": false,
       "source": "downtown-houston-events"
+    },
+    {
+      "name": "downtown-houston-plus-downtown-houston-plus",
+      "type": "Ripper",
+      "events": 107,
+      "expectEmpty": false,
+      "source": "downtown-houston-plus"
     },
     {
       "name": "encore-houston-encore-houston",
@@ -11162,6 +11185,13 @@
       "events": 16,
       "expectEmpty": false,
       "source": "latin-city"
+    },
+    {
+      "name": "laura-rathe-fine-art-houston-laura-rathe-fine-art-houston",
+      "type": "Ripper",
+      "events": 1,
+      "expectEmpty": false,
+      "source": "laura-rathe-fine-art-houston"
     },
     {
       "name": "lawndale-art-center-lawndale-art-center",
@@ -11318,6 +11348,13 @@
       "source": "the-deluxe-theater"
     },
     {
+      "name": "the-gite-gallery-the-gite-gallery",
+      "type": "Ripper",
+      "events": 1,
+      "expectEmpty": false,
+      "source": "the-gite-gallery"
+    },
+    {
       "name": "the-mood-room-the-mood-room",
       "type": "Ripper",
       "events": 14,
@@ -11376,21 +11413,21 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 699,
+      "events": 807,
       "expectEmpty": false,
       "source": "tag-music"
     },
     {
       "name": "tag-nightlife",
       "type": "Aggregate",
-      "events": 123,
+      "events": 124,
       "expectEmpty": false,
       "source": "tag-nightlife"
     },
     {
       "name": "tag-downtown",
       "type": "Aggregate",
-      "events": 317,
+      "events": 424,
       "expectEmpty": false,
       "source": "tag-downtown"
     },
@@ -11423,16 +11460,23 @@
       "source": "tag-eado"
     },
     {
+      "name": "tag-dance",
+      "type": "Aggregate",
+      "events": 1,
+      "expectEmpty": false,
+      "source": "tag-dance"
+    },
+    {
       "name": "tag-midtown",
       "type": "Aggregate",
-      "events": 81,
+      "events": 82,
       "expectEmpty": false,
       "source": "tag-midtown"
     },
     {
       "name": "tag-art",
       "type": "Aggregate",
-      "events": 321,
+      "events": 323,
       "expectEmpty": false,
       "source": "tag-art"
     },
@@ -11537,7 +11581,7 @@
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 431,
+      "events": 539,
       "expectEmpty": false,
       "source": "tag-community"
     },
@@ -11666,6 +11710,20 @@
       "events": 16,
       "expectEmpty": false,
       "source": "tag-foodfestival"
+    },
+    {
+      "name": "tag-gallery",
+      "type": "Aggregate",
+      "events": 2,
+      "expectEmpty": false,
+      "source": "tag-gallery"
+    },
+    {
+      "name": "tag-river-oaks",
+      "type": "Aggregate",
+      "events": 1,
+      "expectEmpty": false,
+      "source": "tag-river-oaks"
     },
     {
       "name": "tag-west-university",
@@ -11908,7 +11966,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 2015,
+      "events": 2125,
       "expectEmpty": false,
       "source": "tag-all"
     },
@@ -11995,6 +12053,13 @@
       "events": 30,
       "expectEmpty": false,
       "source": "hobby-center"
+    },
+    {
+      "name": "external-holocaust-museum-houston",
+      "type": "External",
+      "events": 1,
+      "expectEmpty": false,
+      "source": "holocaust-museum-houston"
     },
     {
       "name": "external-houston-arboretum",

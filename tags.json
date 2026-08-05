@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-05T05:38:08.512Z",
+  "generated": "2026-08-05T11:17:12.275Z",
   "tags": [
     {
       "name": "Animals",
@@ -39,8 +39,8 @@
       "name": "Art",
       "slug": "art",
       "category": "Activities",
-      "eventCount": 321,
-      "calendarCount": 10,
+      "eventCount": 323,
+      "calendarCount": 12,
       "links": {
         "ics": {
           "href": "tag-art.ics",
@@ -175,8 +175,8 @@
       "name": "Community",
       "slug": "community",
       "category": "Community",
-      "eventCount": 431,
-      "calendarCount": 19,
+      "eventCount": 539,
+      "calendarCount": 22,
       "links": {
         "ics": {
           "href": "tag-community.ics",
@@ -240,11 +240,28 @@
       }
     },
     {
+      "name": "Dance",
+      "slug": "dance",
+      "category": "Activities",
+      "eventCount": 1,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-dance.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-dance.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
       "name": "Downtown",
       "slug": "downtown",
       "category": "Neighborhoods",
-      "eventCount": 317,
-      "calendarCount": 15,
+      "eventCount": 424,
+      "calendarCount": 16,
       "links": {
         "ics": {
           "href": "tag-downtown.ics",
@@ -427,6 +444,23 @@
       }
     },
     {
+      "name": "Gallery",
+      "slug": "gallery",
+      "category": "Other",
+      "eventCount": 2,
+      "calendarCount": 2,
+      "links": {
+        "ics": {
+          "href": "tag-gallery.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-gallery.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
       "name": "Hermann Park",
       "slug": "hermann-park",
       "category": "Other",
@@ -600,8 +634,8 @@
       "name": "Midtown",
       "slug": "midtown",
       "category": "Neighborhoods",
-      "eventCount": 81,
-      "calendarCount": 5,
+      "eventCount": 82,
+      "calendarCount": 6,
       "links": {
         "ics": {
           "href": "tag-midtown.ics",
@@ -652,7 +686,7 @@
       "slug": "museum-district",
       "category": "Neighborhoods",
       "eventCount": 197,
-      "calendarCount": 10,
+      "calendarCount": 11,
       "links": {
         "ics": {
           "href": "tag-museum-district.ics",
@@ -669,7 +703,7 @@
       "slug": "museums",
       "category": "Activities",
       "eventCount": 7,
-      "calendarCount": 1,
+      "calendarCount": 2,
       "links": {
         "ics": {
           "href": "tag-museums.ics",
@@ -685,8 +719,8 @@
       "name": "Music",
       "slug": "music",
       "category": "Activities",
-      "eventCount": 699,
-      "calendarCount": 16,
+      "eventCount": 807,
+      "calendarCount": 18,
       "links": {
         "ics": {
           "href": "tag-music.ics",
@@ -736,8 +770,8 @@
       "name": "Nightlife",
       "slug": "nightlife",
       "category": "Activities",
-      "eventCount": 123,
-      "calendarCount": 7,
+      "eventCount": 124,
+      "calendarCount": 8,
       "links": {
         "ics": {
           "href": "tag-nightlife.ics",
@@ -898,6 +932,23 @@
         },
         "rss": {
           "href": "tag-restaurant.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "River Oaks",
+      "slug": "river-oaks",
+      "category": "Neighborhoods",
+      "eventCount": 1,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-river-oaks.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-river-oaks.rss",
           "type": "application/rss+xml"
         }
       }

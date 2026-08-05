@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-05T05:37:47.779Z",
+  "lastUpdated": "2026-08-05T11:17:06.018Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -32,6 +32,25 @@
           "tags": [
             "Film",
             "EaDo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "barbarella-entertainment",
+      "description": "Barbarella Entertainment",
+      "friendlyLink": "https://www.eventbrite.com/o/barbarella-entertainment-49071058643",
+      "calendars": [
+        {
+          "name": "barbarella-entertainment",
+          "friendlyName": "Barbarella Entertainment",
+          "icsUrl": "barbarella-entertainment-barbarella-entertainment.ics",
+          "rssUrl": "barbarella-entertainment-barbarella-entertainment.rss",
+          "tags": [
+            "Nightlife",
+            "Music",
+            "Dance",
+            "Midtown"
           ]
         }
       ]
@@ -162,6 +181,24 @@
             "Community",
             "Arts",
             "Culture"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "downtown-houston-plus",
+      "description": "Downtown Houston+",
+      "friendlyLink": "https://www.eventbrite.com/o/downtown-houston-51263529253",
+      "calendars": [
+        {
+          "name": "downtown-houston-plus",
+          "friendlyName": "Downtown Houston+",
+          "icsUrl": "downtown-houston-plus-downtown-houston-plus.ics",
+          "rssUrl": "downtown-houston-plus-downtown-houston-plus.rss",
+          "tags": [
+            "Downtown",
+            "Community",
+            "Music"
           ]
         }
       ]
@@ -441,6 +478,24 @@
       ]
     },
     {
+      "name": "laura-rathe-fine-art-houston",
+      "description": "Laura Rathe Fine Art Houston",
+      "friendlyLink": "https://www.eventbrite.com/o/laura-rathe-fine-art-houston-48597879413",
+      "calendars": [
+        {
+          "name": "laura-rathe-fine-art-houston",
+          "friendlyName": "Laura Rathe Fine Art Houston",
+          "icsUrl": "laura-rathe-fine-art-houston-laura-rathe-fine-art-houston.ics",
+          "rssUrl": "laura-rathe-fine-art-houston-laura-rathe-fine-art-houston.rss",
+          "tags": [
+            "Art",
+            "Gallery",
+            "River Oaks"
+          ]
+        }
+      ]
+    },
+    {
       "name": "lawndale-art-center",
       "description": "Lawndale Art Center",
       "friendlyLink": "https://lawndaleartcenter.org/events/",
@@ -713,6 +768,24 @@
       ]
     },
     {
+      "name": "the-gite-gallery",
+      "description": "The Gite Gallery",
+      "friendlyLink": "https://www.eventbrite.com/o/the-gite-gallery-11763961302",
+      "calendars": [
+        {
+          "name": "the-gite-gallery",
+          "friendlyName": "The Gite Gallery",
+          "icsUrl": "the-gite-gallery-the-gite-gallery.ics",
+          "rssUrl": "the-gite-gallery-the-gite-gallery.rss",
+          "tags": [
+            "Art",
+            "Community",
+            "Gallery"
+          ]
+        }
+      ]
+    },
+    {
       "name": "the-mood-room",
       "description": "The Mood Room",
       "friendlyLink": "https://www.themoodroomhouston.com/events",
@@ -963,6 +1036,18 @@
       ]
     },
     {
+      "name": "holocaust-museum-houston",
+      "friendlyName": "Holocaust Museum Houston",
+      "description": "Education and remembrance museum with programming including educator workshops, author talks, film screenings, and community lectures",
+      "icsUrl": "external-holocaust-museum-houston.ics",
+      "originalIcsUrl": "https://hmh.org/?post_type=tribe_events&ical=1&eventDisplay=list",
+      "tags": [
+        "Museum District",
+        "Museums",
+        "Community"
+      ]
+    },
+    {
       "name": "houston-arboretum",
       "friendlyName": "Houston Arboretum & Nature Center",
       "description": "Nature hikes, bird walks, children's programs, yoga in the park, wildlife workshops, and volunteer events at this urban nature sanctuary in Memorial Park.",
@@ -1156,6 +1241,7 @@
     "Concert",
     "Culinary",
     "Culture",
+    "Dance",
     "Downtown",
     "EaDo",
     "Education",
@@ -1167,6 +1253,7 @@
     "Film",
     "Food",
     "FoodFestival",
+    "Gallery",
     "Hermann Park",
     "Hiking",
     "HistoricPreservation",
@@ -1195,6 +1282,7 @@
     "Photography",
     "Ports",
     "Restaurant",
+    "River Oaks",
     "Shopping",
     "Soccer",
     "Sports",
