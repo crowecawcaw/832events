@@ -1,0 +1,17 @@
+name: barbarella-entertainment
+type: eventbrite
+description: "Barbarella Entertainment"
+url: https://www.eventbrite.com/o/barbarella-entertainment-49071058643
+friendlyLink: https://www.eventbrite.com/o/barbarella-entertainment-49071058643
+tags: [Nightlife, Music, Dance, Midtown]
+geo:
+  lat: 29.7465
+  lng: -95.3839
+  label: "Barbarella Entertainment, 2404 San Jacinto Street, Houston, TX"
+calendars:
+  - name: barbarella-entertainment
+    friendlyname: "Barbarella Entertainment"
+    timezone: America/Chicago
+    config:
+      organizerId: "49071058643"
+      defaultLocation: "2404 San Jacinto Street, Houston, TX"
