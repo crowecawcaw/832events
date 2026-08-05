@@ -1,11 +1,14 @@
 name: Houston Morning Market Company
-status: blocked
-platform: Eventbrite
+status: investigating
+platform: eventbrite
 url: https://www.eventbrite.com/o/houston-morning-market-company-31958700815
 tags:
   - Markets
   - Community
-  - Artisan
-firstSeen: 2026-06-28
-lastChecked: 2026-06-28
-notes: "Eventbrite organizer (ID: 31958700815) tested on 2026-06-28: returned 0 upcoming events via API. Site claims to manage farmers markets and artisan markets, but no current events listed. Likely seasonal or dormant. Revisit when events resume."
+  - Shopping
+firstSeen: 2026-08-05
+lastChecked: 2026-08-05
+notes: "Community artisan/craft markets supporting local vendors. Build produced 0 events - organizer may have archived events. Revisit later to verify current event status."
+impl:
+  organizerId: "31958700815"
+  observedEventCount: 2
