@@ -61,6 +61,20 @@ DTSTART:20281105T070000
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260808T070000
+DTEND;TZID=America/Chicago:20260808T100000
+DTSTAMP:20260804T201415Z
+CREATED:20260804T200525Z
+LAST-MODIFIED:20260804T201415Z
+UID:10000790-1786172400-1786183200@www.memorialparkconservancy.org
+SUMMARY:HARRA's Party in the Park
+DESCRIPTION:Houston Party in the Park is back!\n\n\nJoin us on Saturday\, August 8\, for the 2026 edition of HARRA’s Party in the Park—a free community event for runners of all paces!\n\n\n Run\, walk\, connect\, and celebrate Houston’s running community\n Free watermelon and refreshments\n Beer\n Live music\n Run club and organization tents\n\n\n Saturday\, August 8 | 7:00–10:00 AM\n Memorial Park—west of the Tennis Center\n\n\n Individual RSVP\nPlease RSVP so we can plan enough refreshments for everyone.\n\n\n Tent Space Reservations\nRun clubs and organizations are invited to reserve a space and showcase their group.\n\n\nHARRA running club membership is only $35 per year.\n\n\nRSVP and Learn More: linktr.ee/harraruns.\n\n\nTag your running crew and join us for one of Houston’s biggest running community celebrations!
+URL:https://www.memorialparkconservancy.org/event/harras-party-in-the-park/
+LOCATION:Clay Family Eastern Glades\, 6500 Memorial Dr\, Houston\, TX\, 77007\, United States
+CATEGORIES:Free Events
+ATTACH;FMTTYPE=image/jpeg:https://www.memorialparkconservancy.org/wp-content/uploads/2026/08/HARRA-Party-in-the-Park.jpg
+END:VEVENT
+BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260820T080000
 DTEND;TZID=America/Chicago:20260927T170000
 DTSTAMP:20260730T191028Z
