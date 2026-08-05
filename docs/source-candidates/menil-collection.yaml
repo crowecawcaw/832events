@@ -1,11 +1,14 @@
 name: Menil Collection
-status: notviable
-platform: Custom (no public feed)
-url: https://www.menil.org/calendar
+status: candidate
+platform: eventbrite
+url: https://www.eventbrite.com/o/the-menil-collection-103448972041
 tags:
-  - Museum District
   - Museums
   - Art
+  - Museum District
 firstSeen: 2026-06-14
-lastChecked: 2026-06-14
-notes: World-class free art museum at 1533 Sul Ross St, Houston, TX 77006 (Montrose /
+lastChecked: 2026-08-05
+notes: "Free world-class art museum; has active Eventbrite organizer page with 2+ upcoming events. Eventbrite integration preferred over custom ripper."
+impl:
+  organizerId: "103448972041"
+  observedEventCount: 2
