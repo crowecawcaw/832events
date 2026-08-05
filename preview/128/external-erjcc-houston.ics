@@ -1,0 +1,170 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Evelyn Rubenstein Jewish Community Center - ECPv6.17.1//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Evelyn Rubenstein Jewish Community Center
+X-ORIGINAL-URL:https://www.erjcchouston.org
+X-WR-CALDESC:Events for Evelyn Rubenstein Jewish Community Center
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-Robots-Tag:noindex
+X-PUBLISHED-TTL:PT1H
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20250309T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20251102T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20260308T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20261101T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20270314T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20271107T070000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260807T100000
+DTEND;TZID=America/Chicago:20260807T100000
+DTSTAMP:20260529T194644Z
+CREATED:20260529T194644Z
+LAST-MODIFIED:20260529T194644Z
+UID:10000555-1786096800-1786096800@www.erjcchouston.org
+SUMMARY:Open Gym & Tot Shabbat
+DESCRIPTION:For kids ages 0-5 and their families \nCelebrate Shabbat with your friends and family with open gym in the gymnastics center followed by musical services. \nOpen gym will begin at 10:00 AM in the gymnastics center\, followed by music and services at 11:00 AM in the atrium of the Samuels Family Community Pavilion. \nRSVPs are required and spaces are limited. \n 
+URL:https://www.erjcchouston.org/event/open-gym-tot-shabbat-9/
+LOCATION:Evelyn Rubenstein JCC\, 5601 S. Braeswood\, Houston\, TX\, 77096\, United States
+CATEGORIES:Children & Families
+ATTACH;FMTTYPE=image/png:https://www.erjcchouston.org/wp-content/uploads/2025/11/Email-Banners-2025-12.png
+ORGANIZER;CN="Mayrav Fisher":MAILTO:mfisher@erjcchouston.org
+GEO:29.6738082;-95.4839865
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Evelyn Rubenstein JCC 5601 S. Braeswood Houston TX 77096 United States;X-APPLE-RADIUS=500;X-TITLE=5601 S. Braeswood:geo:-95.4839865,29.6738082
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260809T100000
+DTEND;TZID=America/Chicago:20260809T130000
+DTSTAMP:20260720T214602Z
+CREATED:20260720T170538Z
+LAST-MODIFIED:20260720T214602Z
+UID:10000575-1786269600-1786280400@www.erjcchouston.org
+SUMMARY:Member Appreciation Pool Party
+DESCRIPTION:Join us for one last splash before school is back in session! Get ready for a morning of pool fun\, complete with music\, foam\, snow cones\, pool games and more.\nWe can’t wait to celebrate the end of summer with you. This event is open to all J Members!
+URL:https://www.erjcchouston.org/event/member-appreciation-pool-party/
+LOCATION:Evelyn Rubenstein JCC\, 5601 S. Braeswood\, Houston\, TX\, 77096\, United States
+CATEGORIES:Health & Wellness
+ATTACH;FMTTYPE=image/png:https://www.erjcchouston.org/wp-content/uploads/2026/07/Calendar-Event-Banners-for-Website-42.png
+ORGANIZER;CN="Paige Fitzgerald":MAILTO:pfitzgerald@erjcchouston.org
+GEO:29.6738082;-95.4839865
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Evelyn Rubenstein JCC 5601 S. Braeswood Houston TX 77096 United States;X-APPLE-RADIUS=500;X-TITLE=5601 S. Braeswood:geo:-95.4839865,29.6738082
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260822T180000
+DTEND;TZID=America/Chicago:20260822T210000
+DTSTAMP:20260706T213314Z
+CREATED:20260706T210640Z
+LAST-MODIFIED:20260706T213314Z
+UID:10000573-1787421600-1787432400@www.erjcchouston.org
+SUMMARY:Kids Nite Out
+DESCRIPTION:Parents\, enjoy a night off—send your kids to the J for an evening packed with swimming\, DJ kid-friendly tunes\, dancing and plenty of pizza! It’s the perfect chance for kids to hang out with friends\, burn some energy and have a blast in a safe\, supervised environment. \nFor Grades 1-5 / Ages 6-11 Years \nRegistration link coming soon!
+URL:https://www.erjcchouston.org/event/kids-nite-out-2/
+LOCATION:Evelyn Rubenstein JCC\, 5601 S. Braeswood\, Houston\, TX\, 77096\, United States
+CATEGORIES:Children & Families
+ATTACH;FMTTYPE=image/png:https://www.erjcchouston.org/wp-content/uploads/2026/07/Calendar-Event-Banners-for-Website-40.png
+ORGANIZER;CN="Leslie Holmes":MAILTO:lholmes@erjcchouston.org
+GEO:29.6738082;-95.4839865
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Evelyn Rubenstein JCC 5601 S. Braeswood Houston TX 77096 United States;X-APPLE-RADIUS=500;X-TITLE=5601 S. Braeswood:geo:-95.4839865,29.6738082
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260829T190000
+DTEND;TZID=America/Chicago:20260829T220000
+DTSTAMP:20260730T145330Z
+CREATED:20260723T141949Z
+LAST-MODIFIED:20260730T145330Z
+UID:10000577-1788030000-1788040800@www.erjcchouston.org
+SUMMARY:HC68 Fall Kickoff
+DESCRIPTION:Calling Grades 6-8 to start off the school year with Houston Connect 68! Hang out with friends\, cool off in the pool\, enjoy dinner\, dance to a live DJ\, play lawn games and celebrate the start of an awesome new school year.
+URL:https://www.erjcchouston.org/event/hc68-fall-kickoff/
+LOCATION:Evelyn Rubenstein JCC\, 5601 S. Braeswood\, Houston\, TX\, 77096\, United States
+CATEGORIES:Children & Families
+ATTACH;FMTTYPE=image/png:https://www.erjcchouston.org/wp-content/uploads/2026/07/HC68-3.png
+ORGANIZER;CN="Barrie Skalsky":MAILTO:bskalsky@erjcchouston.org
+GEO:29.6738082;-95.4839865
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Evelyn Rubenstein JCC 5601 S. Braeswood Houston TX 77096 United States;X-APPLE-RADIUS=500;X-TITLE=5601 S. Braeswood:geo:-95.4839865,29.6738082
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260830T060000
+DTEND;TZID=America/Chicago:20260830T100000
+DTSTAMP:20260529T182956Z
+CREATED:20260529T175332Z
+LAST-MODIFIED:20260529T182956Z
+UID:10000548-1788069600-1788084000@www.erjcchouston.org
+SUMMARY:Tropical Triathlon
+DESCRIPTION:
+URL:https://www.erjcchouston.org/event/tropical-triathlon/
+LOCATION:Evelyn Rubenstein JCC\, 5601 S. Braeswood\, Houston\, TX\, 77096\, United States
+CATEGORIES:Health & Wellness
+ATTACH;FMTTYPE=image/png:https://www.erjcchouston.org/wp-content/uploads/2026/05/Calendar-Event-Banners-for-Website-32.png
+ORGANIZER;CN="Blair Bradshaw":MAILTO:bbradshaw@erjcchouston.org
+GEO:29.6738082;-95.4839865
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Evelyn Rubenstein JCC 5601 S. Braeswood Houston TX 77096 United States;X-APPLE-RADIUS=500;X-TITLE=5601 S. Braeswood:geo:-95.4839865,29.6738082
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260830T101500
+DTEND;TZID=America/Chicago:20260830T120000
+DTSTAMP:20260730T144421Z
+CREATED:20260730T144323Z
+LAST-MODIFIED:20260730T144421Z
+UID:10000580-1788084900-1788091200@www.erjcchouston.org
+SUMMARY:Volunteer with Meals on Wheels
+DESCRIPTION:Volunteer with Meals on Wheels to deliver groceries to seniors in our community! \n🕙 Grocery Pickup: 10:15 AM \n📍 Pickup Location: 5601 S Braeswood Blvd Houston TX 77096 \n⏱️ Duration of deliveries: 1–2 hours \nIt’s quick\, it’s meaningful\, and it makes a huge difference!
+URL:https://www.erjcchouston.org/event/volunteer-with-meals-on-wheels/
+LOCATION:Evelyn Rubenstein JCC\, 5601 S. Braeswood\, Houston\, TX\, 77096\, United States
+CATEGORIES:Children & Families
+ATTACH;FMTTYPE=image/png:https://www.erjcchouston.org/wp-content/uploads/2026/07/MOW.png
+ORGANIZER;CN="Angelica Vasquez":MAILTO:avasquez@erjcchouston.org
+GEO:29.6738082;-95.4839865
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Evelyn Rubenstein JCC 5601 S. Braeswood Houston TX 77096 United States;X-APPLE-RADIUS=500;X-TITLE=5601 S. Braeswood:geo:-95.4839865,29.6738082
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260830T150000
+DTEND;TZID=America/Chicago:20260830T170000
+DTSTAMP:20260804T170117Z
+CREATED:20260728T153921Z
+LAST-MODIFIED:20260804T170117Z
+UID:10000578-1788102000-1788109200@www.erjcchouston.org
+SUMMARY:Happy Birthday to the World! A Rosh Hashanah Family Celebration  
+DESCRIPTION:Celebrate Rosh Hashanah with a joyful “Happy Birthday to the World” celebration! This special family event is presented in partnership with the Evelyn Rubenstein JCC\, PJ Library and the Jewish Federation of Greater Houston.\n\nJoin us on the last Sunday in August as we welcome the Jewish New Year. In Jewish tradition\, Rosh Hashanah is known as Yom Harat Olam\, the birthday of the world.\nBring the whole family for an afternoon filled with festive fun\, meaningful traditions and hands-on activities that celebrate the sweetness of the New Year. Children and families will enjoy music\, inflatables\, games\, crafts\, story time\, a photo booth and much more!\n\n\nFace Painting\n\n\nApple Dipping Station\n\n\nInflatables\n\n\nBalloon Art\n\n\nFamily Photo Ops\n\n\nGiant Lawn Games\n\n\nArts & Crafts\n\n\nCost: FREE\, though advance registration is required!  Please RSVP one time per family.
+URL:https://www.erjcchouston.org/event/happy-birthday-world/
+LOCATION:Merfish Teen Center\, 9000 S. Rice\, Houston\, TX\, 77096
+CATEGORIES:Children & Families
+ATTACH;FMTTYPE=image/png:https://www.erjcchouston.org/wp-content/uploads/2026/07/Calendar-Event-Banners-for-Website-47.png
+ORGANIZER;CN="Mayrav Fisher":MAILTO:mfisher@erjcchouston.org
+GEO:29.6801898;-95.4685258
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Merfish Teen Center 9000 S. Rice Houston TX 77096;X-APPLE-RADIUS=500;X-TITLE=9000 S. Rice:geo:-95.4685258,29.6801898
+END:VEVENT
+END:VCALENDAR

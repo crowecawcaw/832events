@@ -1,0 +1,12 @@
+[
+  {
+    "type": "ParseError",
+    "reason": "Ripper crashed: Error: Murder By The Book fetch failed: HTTP 403 ",
+    "context": ""
+  },
+  {
+    "type": "ParseError",
+    "reason": "Failed to fetch events from Squarespace: SyntaxError: Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+    "context": "https://www.readhouston.com/events"
+  }
+]

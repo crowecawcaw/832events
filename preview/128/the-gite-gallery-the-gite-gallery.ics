@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:832.events
+METHOD:PUBLISH
+X-WR-CALNAME:The Gite Gallery
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://img.evbuc.com/http
+ s%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1019260323%2F188554056471%2F1%2Forigina
+ l.20250429-160541?auto=format%2Ccompress&q=75&sharp=10&s=57f4859e09083cb77
+ 91557b3897c5c56
+ATTACH;FMTTYPE=image/jpeg:https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com
+ %2Fimages%2F1019260323%2F188554056471%2F1%2Foriginal.20250429-160541?auto=
+ format%2Ccompress&q=75&sharp=10&s=57f4859e09083cb7791557b3897c5c56
+UID:XP8_QKXhWy0Nd7c8sF8SN
+SUMMARY:First Friday Happy Hour
+DTSTAMP:20260805T111455Z
+DTSTART:20260807T230000Z
+DESCRIPTION:Fun networking! Free champagne! Beautiful art!\n\nhttps://www.e
+	ventbrite.com/e/first-friday-happy-hour-tickets-1995504263971
+URL:https://www.eventbrite.com/e/first-friday-happy-hour-tickets-1995504263
+	971
+GEO:29.7323686;-95.3709153
+LOCATION:The Gite Gallery\,  2024 Alabama St\, Houston\, TX\, 77004
+TRANSP:TRANSPARENT
+DURATION:PT3H
+END:VEVENT
+END:VCALENDAR
