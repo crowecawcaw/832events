@@ -1,5 +1,5 @@
 name: NOTO Houston
-status: candidate
+status: added
 platform: eventbrite
 url: https://www.eventbrite.com/o/noto-events-69829155243
 tags:
@@ -7,8 +7,10 @@ tags:
   - Music
   - Midtown
 firstSeen: 2026-06-15
-lastChecked: 2026-08-05
-notes: "Nightclub at 3215 McKinney Street; active Eventbrite organizer with 13+ upcoming events. Ready for Eventbrite ripper integration."
+lastChecked: 2026-08-06
+pr: TBD
+notes: "Nightclub at 3215 McKinney Street; Eventbrite ripper integration successful. Built 16 events."
 impl:
   organizerId: "69829155243"
   observedEventCount: 13
+  builtEventCount: 16

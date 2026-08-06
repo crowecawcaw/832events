@@ -1,5 +1,5 @@
 name: Menil Collection
-status: candidate
+status: investigating
 platform: eventbrite
 url: https://www.eventbrite.com/o/the-menil-collection-103448972041
 tags:
@@ -7,8 +7,8 @@ tags:
   - Art
   - Museum District
 firstSeen: 2026-06-14
-lastChecked: 2026-08-05
-notes: "Free world-class art museum; has active Eventbrite organizer page with 2+ upcoming events. Eventbrite integration preferred over custom ripper."
+lastChecked: 2026-08-06
+notes: "Free world-class art museum; showed 2+ events on 2026-08-05 but returned 0 events on 2026-08-06. May be temporary or events have ended. Re-verify next cycle."
 impl:
   organizerId: "103448972041"
   observedEventCount: 2
