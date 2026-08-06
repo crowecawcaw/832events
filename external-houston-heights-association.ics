@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Houston Heights Association - ECPv6.17.1//NONSGML v1.0//EN
+PRODID:-//Houston Heights Association - ECPv6.17.2//NONSGML v1.0//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Houston Heights Association
@@ -285,6 +285,20 @@ URL:https://houstonheights.org/event/gabage-pick-up-10/
 LOCATION:TX
 CATEGORIES:Garbage Pick-Up
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/GarbageIcon.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261031T090000
+DTEND;TZID=America/Chicago:20261031T120000
+DTSTAMP:20260805T122024Z
+CREATED:20260805T122024Z
+LAST-MODIFIED:20260805T122024Z
+UID:26276-1793437200-1793448000@houstonheights.org
+SUMMARY:Donovan Park Halloween Party
+DESCRIPTION:
+URL:https://houstonheights.org/event/donovan-park-halloween-party/
+LOCATION:Donovan Park\, 700 Heights Blvd.\, Houston\, TX\, 77007\, United States
+CATEGORIES:Donovan Park
+ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/08/image0.webp
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20261105

@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Find Upcoming Comedy Shows Near You | Comedy Calendar - ECPv6.17.1//NONSGML v1.0//EN
+PRODID:-//Find Upcoming Comedy Shows Near You | Comedy Calendar - ECPv6.17.2//NONSGML v1.0//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Find Upcoming Comedy Shows Near You | Comedy Calendar
@@ -47,44 +47,17 @@ TZOFFSETTO:-0500
 TZNAME:EST
 DTSTART:20271107T060000
 END:STANDARD
-END:VTIMEZONE
-BEGIN:VTIMEZONE
-TZID:America/Los_Angeles
 BEGIN:DAYLIGHT
-TZOFFSETFROM:-0800
-TZOFFSETTO:-0700
-TZNAME:PDT
-DTSTART:20250309T100000
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:20280312T070000
 END:DAYLIGHT
 BEGIN:STANDARD
-TZOFFSETFROM:-0700
-TZOFFSETTO:-0800
-TZNAME:PST
-DTSTART:20251102T090000
-END:STANDARD
-BEGIN:DAYLIGHT
-TZOFFSETFROM:-0800
-TZOFFSETTO:-0700
-TZNAME:PDT
-DTSTART:20260308T100000
-END:DAYLIGHT
-BEGIN:STANDARD
-TZOFFSETFROM:-0700
-TZOFFSETTO:-0800
-TZNAME:PST
-DTSTART:20261101T090000
-END:STANDARD
-BEGIN:DAYLIGHT
-TZOFFSETFROM:-0800
-TZOFFSETTO:-0700
-TZNAME:PDT
-DTSTART:20270314T100000
-END:DAYLIGHT
-BEGIN:STANDARD
-TZOFFSETFROM:-0700
-TZOFFSETTO:-0800
-TZNAME:PST
-DTSTART:20271107T090000
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:20281105T060000
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VTIMEZONE
@@ -126,67 +99,45 @@ TZNAME:CST
 DTSTART:20271107T070000
 END:STANDARD
 END:VTIMEZONE
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20260805T190000
-DTEND;TZID=America/New_York:20260805T210000
-DTSTAMP:20260602T200052Z
-CREATED:20260602T194345Z
-LAST-MODIFIED:20260602T200052Z
-UID:10005287-1785956400-1785963600@comedycalendar.com
-SUMMARY:Comedy Cellar Las Vegas Showcase (Early)
-DESCRIPTION:This post contains affiliate links. We may earn a commission at no extra cost to you. \n\n  \n     Official Tickets\n   \n  \n     Resale Tickets\n  \n\nComedy Cellar Las Vegas brings one of the most legendary names in stand-up comedy to the heart of Las Vegas. Located inside the Rio Hotel & Casino\, this intimate comedy club is the West Coast home of New York City’s world-famous Comedy Cellar\, the venue that helped launch the careers of comedy icons including Dave Chappelle\, Chris Rock\, Jon Stewart\, Ray Romano\, Amy Schumer\, Aziz Ansari\, and countless others. \nUnlike traditional comedy shows featuring a single headliner\, Comedy Cellar presents a carefully curated lineup of professional comedians every night. Audiences can expect multiple performers during each show\, featuring a mix of nationally touring headliners\, television favorites\, Comedy Central veterans\, Netflix performers\, and rising stars from around the world. \nNo two shows are exactly alike\, making every visit a unique experience. Surprise drop-in appearances from major comedians performing elsewhere in Las Vegas have become part of the club’s reputation\, giving audiences the chance to see comedy superstars in an intimate setting. \nEvent Details\nVenue: Comedy Cellar Las Vegas at Rio Hotel & Casino\nLocation: 3700 W Flamingo Rd\, Las Vegas\, NV 89103\nShow Schedule: Nightly performances throughout the year\nAge Requirement: Recommended for audiences 18+ due to mature comedy content \nAbout the Venue\nOpened in 2018\, Comedy Cellar Las Vegas was designed to recreate the atmosphere and energy of the original Greenwich Village club that has become one of the most respected comedy venues in the world. The 300-seat showroom offers excellent sightlines and an intimate setting that allows audiences to experience stand-up comedy exactly as it was meant to be seen: up close and personal. \nThe venue combines the excitement of a Las Vegas night out with the authentic feel of a classic New York comedy club. Guests can enjoy a comfortable showroom environment while watching some of the best comedians working today perform in a setting that encourages spontaneity\, crowd interaction\, and unforgettable moments. \nConveniently located inside the Rio Hotel & Casino just minutes from the Las Vegas Strip\, the venue offers easy access for both tourists and local comedy fans. \nWhat to Expect\nExpect a fast-paced evening featuring multiple comedians performing throughout the show. The Comedy Cellar is known for showcasing a wide variety of comedic styles\, from observational humor and storytelling to sharp social commentary\, crowd work\, and cutting-edge stand-up. \nWhether you’re discovering a future comedy star or watching a seasoned veteran perfect their craft\, every show delivers the authentic comedy club experience that has made the Comedy Cellar one of the most respected brands in stand-up comedy. \nFor comedy fans visiting Las Vegas\, Comedy Cellar is widely considered one of the best places in the city to experience live stand-up comedy any night of the week.
-URL:https://comedycalendar.com/event/comedy-cellar-las-vegas-showcase-early/2026-08-05/
-LOCATION:Comedy Cellar Las Vegas at Rio Hotel & Casino\, 3700 W Flamingo Rd\, Las Vegas\, NV\, 89103\, United States
-ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fc4/a6703ea9-a17b-4211-b9dc-7308aa0b2fc4_RETINA_PORTRAIT_16_9.jpg
-GEO:36.1172452;-115.1861279
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Comedy Cellar Las Vegas at Rio Hotel & Casino 3700 W Flamingo Rd Las Vegas NV 89103 United States;X-APPLE-RADIUS=500;X-TITLE=3700 W Flamingo Rd:geo:-115.1861279,36.1172452
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Los_Angeles:20260805T193000
-DTEND;TZID=America/Los_Angeles:20260805T213000
-DTSTAMP:20260503T040000Z
-CREATED:20260503T040000Z
-LAST-MODIFIED:20260503T040000Z
-UID:10004885-1785958200-1785965400@comedycalendar.com
-SUMMARY:Joe Wong LIVE at Punch Line Comedy Club - Sacramento
-DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \n\nOfficial Tickets\nResale Tickets\n\nJoe Wong LIVE at Punch Line Comedy Club – Sacramento\nComedian Joe Wong brings his acclaimed stand-up to Punch Line Comedy Club in Sacramento on August 5\, 2026! Known for his deadpan delivery and brilliantly crafted jokes\, Joe Wong is one of the most distinctive voices in comedy today. \nEvent Details\nDate: Wednesday\, August 5\, 2026\nTime: 7:30 PM (Doors open at 6:30 PM)\nVenue: Punch Line Comedy Club – Sacramento\nAddress: 2100 Arden Way\, Sacramento\, CA 95825\nAge Requirement: 18+ with valid government-issued photo ID\nBeverage Minimum: 2 beverages per person \nAbout Joe Wong\nJoe Wong is a Chinese-American stand-up comedian who rose to national fame with his appearances on The Late Show with David Letterman and The Tonight Show. His unique blend of self-deprecating humor\, sharp wit\, and immigrant perspective has earned him a devoted following and critical acclaim across the comedy world. \nWhat to Expect\n\nDeadpan stand-up comedy with brilliant joke construction\nUnique immigrant perspective and self-deprecating humor\nIntimate club setting at Sacramento’s premier comedy venue\nFull bar service with 2-beverage minimum\nA memorable night of intelligent\, hilarious comedy\n\nVenue Information\nPunch Line Comedy Club – Sacramento is located at 2100 Arden Way in Sacramento\, CA. One of the top comedy clubs in Northern California\, it features a full bar\, great sightlines\, and ample free parking in the shopping center lot. \nTicket Information\nTickets start from $32. This is an 18+ event with a 2-beverage minimum per person. Tickets are available through Ticketmaster (official) or VividSeats (resale). \n\nOfficial Tickets\nResale Tickets\n\nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
-URL:https://comedycalendar.com/event/joe-wong-live-at-punch-line-comedy-club-sacramento/
-LOCATION:Punch Line Comedy Club – Sacramento\, 2100 Arden Way\, Sacramento\, CA\, 95825
-ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/eb7/edaff86b-e7ff-4f15-acce-73e835570eb7_RETINA_PORTRAIT_16_9.jpg
-GEO:38.5943776;-121.4160953
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Punch Line Comedy Club – Sacramento 2100 Arden Way Sacramento CA 95825;X-APPLE-RADIUS=500;X-TITLE=2100 Arden Way:geo:-121.4160953,38.5943776
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20260805T210000
-DTEND;TZID=America/New_York:20260805T223000
-DTSTAMP:20260804T171145Z
-CREATED:20260529T060343Z
-LAST-MODIFIED:20260804T171145Z
-UID:10005033-1785963600-1785969000@comedycalendar.com
-SUMMARY:Wingman Wednesdays Miami’s Social Comedy Show
-DESCRIPTION:Blackbird Ordinary. Meet new people. Laugh at hilarious dating stories. Join the conversation. Ladies drink free during showtime 9-10:30 PM.\n\n\nA fun night out where people happen to meet. \nWingman Wednesdays is Miami’s social comedy show where dating\, relationships\, and modern romance become the night’s entertainment. Hosted by Miami’s Best Comedian Manny Garavito and Miami’s Best Master of Ceremonies Luke Prince\, the show stirs up live comedy\, tasteful crowd interaction\, audience stories\, terrible dating advice\, red flags\, green flags\, first dates on the spot\, and the hilarious realities of navigating Miami’s social scene. \nWhether you’re single\, taken\, in the alphabet\, somewhere in between\, or just here to watch the tea spill\, you’ll be part of a night filled with laughs\, unexpected moments\, and real conversations. Audience participation is encouraged but never required\, making it just as fun to watch as it is to jump in. \nBring your friends\, your situationships\, your worst dating stories\, but most importantly your sense of humor. \nLadies drink free during showtime from 9:00 PM to 10:30 PM. \nComedy. Cocktails. Questionable decisions. \nTopics include but are not limited to: \nBrickell finance bros \nYacht season \nSugar daddy retirement plans \nInstagram followers \n“What do you do?” stress tests \nPenthouse with air matresses \nDating apps \nGym culture \nPlastic surgery \nSpiritual girls \nHow to Ghost 101 \nToxic Green Flags \n…And enough unsolicited dating advice to keep everyone single a little longer. \nCome watch. Come participate. Or just sit back and enjoy the turbulence. \nTicket Options \nGeneral Admission (FREE: frist come\, first serve)First come\, first served. Whatever seats are not purchased will be available to anyone who arrives early. Once they’re gone\, they’re gone. \n$25 Guaranteed Seating + Wingmen for HireSkip the rush and secure your seats in advance. Plus\, you’ll be guaranteed an opportunity to join Manny and Luke on stage for live crowd interaction\, dating advice\, matchmaking attempts\, relationship advice\, or whatever romantic turbulence the evening encounters. Limited spots available. \n$50 VIP Flight Crew Experience (Guaranteed Seating\, Wingmen for Hire\, VIP Bottle Afterparty Access AND Merch)Everything included: guaranteed seating\, Wingman for hire\, access to our bottle section for the afterparty with Manny and Luke\, plus exclusive Miami Comedy merch to take home. VERY Limited spots.
-URL:https://comedycalendar.com/event/wingman-wednesdays-miamis-social-comedy-show-8/
-LOCATION:Blackbird Ordinary\, Southwest 1st Avenue 729\, Miami\, FL\, 33130\, United States
-CATEGORIES:Events,Showcase,Stand-Up Comedy
-ATTACH;FMTTYPE=image/png:https://comedycalendar.com/wp-content/uploads/2026/05/Wingman-Wednesday-Banner-EB-l6o0Gy.png
-GEO:25.7666715;-80.1951345
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Blackbird Ordinary Southwest 1st Avenue 729 Miami FL 33130 United States;X-APPLE-RADIUS=500;X-TITLE=Southwest 1st Avenue 729:geo:-80.1951345,25.7666715
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20260805T213000
-DTEND;TZID=America/New_York:20260805T233000
-DTSTAMP:20260602T200151Z
-CREATED:20260602T200119Z
-LAST-MODIFIED:20260602T200151Z
-UID:10005865-1785965400-1785972600@comedycalendar.com
-SUMMARY:Comedy Cellar Las Vegas (Late)
-DESCRIPTION:This post contains affiliate links. We may earn a commission at no extra cost to you. \n\nOfficial Tickets\n\nResale Tickets\n\nComedy Cellar Las Vegas brings one of the most legendary names in stand-up comedy to the heart of Las Vegas. Located inside the Rio Hotel & Casino\, this intimate comedy club is the West Coast home of New York City’s world-famous Comedy Cellar\, the venue that helped launch the careers of comedy icons including Dave Chappelle\, Chris Rock\, Jon Stewart\, Ray Romano\, Amy Schumer\, Aziz Ansari\, and countless others. \nUnlike traditional comedy shows featuring a single headliner\, Comedy Cellar presents a carefully curated lineup of professional comedians every night. Audiences can expect multiple performers during each show\, featuring a mix of nationally touring headliners\, television favorites\, Comedy Central veterans\, Netflix performers\, and rising stars from around the world. \nNo two shows are exactly alike\, making every visit a unique experience. Surprise drop-in appearances from major comedians performing elsewhere in Las Vegas have become part of the club’s reputation\, giving audiences the chance to see comedy superstars in an intimate setting. \nEvent Details\nVenue: Comedy Cellar Las Vegas at Rio Hotel & Casino\nLocation: 3700 W Flamingo Rd\, Las Vegas\, NV 89103\nShow Schedule: Nightly performances throughout the year\nAge Requirement: Recommended for audiences 18+ due to mature comedy content \nAbout the Venue\nOpened in 2018\, Comedy Cellar Las Vegas was designed to recreate the atmosphere and energy of the original Greenwich Village club that has become one of the most respected comedy venues in the world. The 300-seat showroom offers excellent sightlines and an intimate setting that allows audiences to experience stand-up comedy exactly as it was meant to be seen: up close and personal. \nThe venue combines the excitement of a Las Vegas night out with the authentic feel of a classic New York comedy club. Guests can enjoy a comfortable showroom environment while watching some of the best comedians working today perform in a setting that encourages spontaneity\, crowd interaction\, and unforgettable moments. \nConveniently located inside the Rio Hotel & Casino just minutes from the Las Vegas Strip\, the venue offers easy access for both tourists and local comedy fans. \nWhat to Expect\nExpect a fast-paced evening featuring multiple comedians performing throughout the show. The Comedy Cellar is known for showcasing a wide variety of comedic styles\, from observational humor and storytelling to sharp social commentary\, crowd work\, and cutting-edge stand-up. \nWhether you’re discovering a future comedy star or watching a seasoned veteran perfect their craft\, every show delivers the authentic comedy club experience that has made the Comedy Cellar one of the most respected brands in stand-up comedy. \nFor comedy fans visiting Las Vegas\, Comedy Cellar is widely considered one of the best places in the city to experience live stand-up comedy any night of the week.
-URL:https://comedycalendar.com/event/comedy-cellar-las-vegas-late/2026-08-05/
-LOCATION:Comedy Cellar Las Vegas at Rio Hotel & Casino\, 3700 W Flamingo Rd\, Las Vegas\, NV\, 89103\, United States
-ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fc4/a6703ea9-a17b-4211-b9dc-7308aa0b2fc4_RETINA_PORTRAIT_16_9.jpg
-GEO:36.1172452;-115.1861279
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Comedy Cellar Las Vegas at Rio Hotel & Casino 3700 W Flamingo Rd Las Vegas NV 89103 United States;X-APPLE-RADIUS=500;X-TITLE=3700 W Flamingo Rd:geo:-115.1861279,36.1172452
-END:VEVENT
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:20250309T100000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:20251102T090000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:20260308T100000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:20261101T090000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:20270314T100000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:20271107T090000
+END:STANDARD
+END:VTIMEZONE
 BEGIN:VEVENT
 DTSTART;TZID=America/New_York:20260806T183000
 DTEND;TZID=America/New_York:20260806T213000
@@ -336,6 +287,21 @@ LOCATION:Ruoff Music Center\, 12880 E. 146th St.\, Noblesville\, IN\, 46060\, Un
 ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/e23/ce609b68-dd49-4ebc-a034-6b52a6a67e23_RETINA_LANDSCAPE_16_9.jpg
 GEO:40.0049354;-85.9329963
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Ruoff Music Center 12880 E. 146th St. Noblesville IN 46060 United States Of America;X-APPLE-RADIUS=500;X-TITLE=12880 E. 146th St.:geo:-85.9329963,40.0049354
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260806T200000
+DTEND;TZID=America/New_York:20270331T213000
+DTSTAMP:20260806T040025Z
+CREATED:20260806T040025Z
+LAST-MODIFIED:20260806T040025Z
+UID:10006604-1786046400-1806528600@comedycalendar.com
+SUMMARY:Comedy Show in Brooklyn LIVE at Eastville Comedy Club
+DESCRIPTION:This post contains affiliate links. We may earn a commission at no extra cost to you. \nGet Tickets \nAbout the Show\nBe ready to laugh the night away at NYC’s historic Eastville Comedy Club! Featuring New York locals and visiting headliners in a current rotation of lineups\, every night is guaranteed to be unique and different\, but always filled with laughter. \nA great way to start a night out in Brooklyn\, the Eastville offers signature crafted cocktails with no minimum purchase necessary\, so you can sip while you roar with laughter alongside amazing performers. \nEvent Details\nDate: Various dates and times available (select during purchase)\nTime: 8:00 PM (entry from 8:00 PM until 9:30 PM)\nDuration: Approximately 1 hour and 30 minutes\nLocation: Eastville Comedy Club\, 487 Atlantic Avenue\, Brooklyn\, NY 11217\nAge Requirement: All ages welcome; must be 21+ with valid ID to purchase or consume alcohol \nAbout the Venue\nEastville Comedy Club is located at 487 Atlantic Avenue in Brooklyn\, NY. This historic venue is easily accessible via the Atlantic Ave B/Q subway stop\, Nevins St 2/3/4/5\, and Hoyt-Schermerhorn A/C/G stations. \nWhat to Expect\nLaugh all night alongside featured headliners at the historic Eastville Comedy Club. Enjoy specialty crafted cocktails with no drink minimum\, and pair your drink with delicious snacks. It’s a great way to experience Brooklyn nightlife. \nTicket Information\nTickets start from $11.99. General Admission for 1 — Laughs for 2 at Eastville Comedy Club. No booking fees. All ages welcome. \nGet Tickets
+URL:https://comedycalendar.com/event/comedy-show-in-brooklyn-live-at-eastville-comedy-club-2/
+LOCATION:Eastville Comedy Club\, 487 Atlantic Avenue\, Brooklyn\, NY\, 11217\, United States
+ATTACH;FMTTYPE=image/jpeg:https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/78eb1e88-ae43-11ed-bc62-42ef34ab7d27.jpg
+GEO:40.6859198;-73.9816191
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Eastville Comedy Club 487 Atlantic Avenue Brooklyn NY 11217 United States;X-APPLE-RADIUS=500;X-TITLE=487 Atlantic Avenue:geo:-73.9816191,40.6859198
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/New_York:20260806T213000
@@ -541,7 +507,7 @@ UID:10006335-1786136400-1786143600@comedycalendar.com
 SUMMARY:Thank You Miami Stand Up Comedy Show (Friday)
 DESCRIPTION:
 URL:https://comedycalendar.com/event/thank-you-miami-stand-up-comedy-show-friday-47/
-LOCATION:AZ
+LOCATION:NY
 CATEGORIES:Showcase
 ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/05/6a7ebf7a30a5bbeb3a8c1f6f9956d3a1-33Iu1E.tmp_-otl08m.jpg
 END:VEVENT
@@ -574,5 +540,50 @@ LOCATION:The Comic Strip\, 1568 2nd Avenue\, New York\, NY 10028\, New York\, NY
 ATTACH;FMTTYPE=image/jpeg:https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/5d2619f6-48b3-11f1-af1d-da134b150e66.jpeg
 GEO:40.7748283;-73.9536392
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=The Comic Strip 1568 2nd Avenue New York NY 10028 New York NY 10028 United States;X-APPLE-RADIUS=500;X-TITLE=1568 2nd Avenue\, New York\, NY 10028:geo:-73.9536392,40.7748283
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260808T190000
+DTEND;TZID=America/Los_Angeles:20260808T210000
+DTSTAMP:20260401T040000Z
+CREATED:20260401T040000Z
+LAST-MODIFIED:20260401T040000Z
+UID:10004571-1786215600-1786222800@comedycalendar.com
+SUMMARY:Ali Wong Live LIVE at Arlene Schnitzer Concert Hall (Saturday Show)
+DESCRIPTION:Official TicketsResale Tickets \nAbout the Performer\nAli Wong is an Emmy Award-winning actress\, comedian\, writer\, and producer who has become one of the most celebrated voices in stand-up comedy. Born and raised in San Francisco\, Ali broke through with her wildly popular Netflix specials Baby Cobra (2016) and Hard Knock Wife (2018)\, both filmed while she was visibly pregnant — a bold and hilarious choice that became her signature. \nHer fourth Netflix special\, Ali Wong: Single Lady (2024)\, earned her a Golden Globe Award and a Critics Choice TV Award nomination. She also starred in and executive produced the acclaimed Netflix/A24 dark comedy series Beef (2023)\, for which she won the Emmy\, Golden Globe\, Critics Choice\, and Screen Actors Guild Awards for Best Actress in a Limited Series. \nAli’s comedy is raw\, confessional\, and unapologetically honest — covering topics from relationships and family life to identity and ambition with a fearless comedic voice that resonates deeply with audiences worldwide. \nEvent Details\nDate: Saturday\, August 8\, 2026 \nTime: 7:00 PM (Doors open 1 hour before showtime) \nVenue: Arlene Schnitzer Concert Hall — 1037 SW Broadway Ave\, Portland\, OR 97205 \nTicket Limit: 6 tickets per household \nNote: This is Show 2 of 2 Portland performances. A first show takes place on August 7\, 2026. This second show was added due to popular demand! \nAbout the Venue\nThe Arlene Schnitzer Concert Hall — lovingly called “The Schnitz” by Portlanders — is one of the Pacific Northwest’s most treasured performance spaces. Situated in the heart of downtown Portland at 1037 SW Broadway Ave\, this magnificent 2\,776-seat venue is part of the Portland’5 Centers for the Arts complex. \nOriginally constructed in 1928 as the Portland Public Theatre\, the hall was meticulously restored and reopened in 1984. Its stunning Italian Baroque architecture\, ornate interior details\, and world-class acoustics create an unforgettable atmosphere for live performances. Every seat in the house offers excellent sightlines to the stage. \nThe venue features orchestra\, mezzanine\, and balcony seating levels\, along with a full bar\, concessions\, and accessible seating options. Parking is available in nearby downtown Portland garages\, and the venue is conveniently accessible via TriMet public transit. Phone: 503-248-4335. \nWhat to Expect\nAli Wong Live is a full evening of stand-up comedy featuring Ali’s signature confessional and boundary-pushing humor. Based on recent tour reviews\, the show runs approximately 60–75 minutes including an opening act. \nExpect Ali at her most personal and hilarious — sharing stories from her life post-divorce\, her experiences as a working mother\, and her unique perspective on modern relationships and identity. Her comedy is sharp\, relatable\, and delivered with incredible energy and timing. \nThe Saturday show was added due to overwhelming demand for the Friday performance — a testament to Ali Wong’s massive popularity with Portland audiences. The Arlene Schnitzer Concert Hall provides an intimate and elegant setting\, with exceptional acoustics and a warm atmosphere that makes every seat feel close to the action. \nTicket Information\nPrice Range: From $120 (resale prices may vary) \nThis second Portland show was added due to popular demand — don’t miss your chance to see Ali Wong live! \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
+URL:https://comedycalendar.com/event/ali-wong-live-at-arlene-schnitzer-concert-hall-saturday/
+LOCATION:Arlene Schnitzer Concert Hall\, 1037 SW Broadway Ave\, Portland\, Oregon\, 97205\, United States Of America
+ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/03/e03b01e0-2f00-4b0e-be33-7c89a92f3253_RETINA_PORTRAIT_3_2-LYSGrH.jpg
+GEO:45.516856;-122.6811861
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Arlene Schnitzer Concert Hall 1037 SW Broadway Ave Portland Oregon 97205 United States Of America;X-APPLE-RADIUS=500;X-TITLE=1037 SW Broadway Ave:geo:-122.6811861,45.516856
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260808T190000
+DTEND;TZID=America/New_York:20260808T210000
+DTSTAMP:20260602T200052Z
+CREATED:20260602T194345Z
+LAST-MODIFIED:20260602T200052Z
+UID:10005290-1786215600-1786222800@comedycalendar.com
+SUMMARY:Comedy Cellar Las Vegas Showcase (Early)
+DESCRIPTION:This post contains affiliate links. We may earn a commission at no extra cost to you. \n\n  \n     Official Tickets\n   \n  \n     Resale Tickets\n  \n\nComedy Cellar Las Vegas brings one of the most legendary names in stand-up comedy to the heart of Las Vegas. Located inside the Rio Hotel & Casino\, this intimate comedy club is the West Coast home of New York City’s world-famous Comedy Cellar\, the venue that helped launch the careers of comedy icons including Dave Chappelle\, Chris Rock\, Jon Stewart\, Ray Romano\, Amy Schumer\, Aziz Ansari\, and countless others. \nUnlike traditional comedy shows featuring a single headliner\, Comedy Cellar presents a carefully curated lineup of professional comedians every night. Audiences can expect multiple performers during each show\, featuring a mix of nationally touring headliners\, television favorites\, Comedy Central veterans\, Netflix performers\, and rising stars from around the world. \nNo two shows are exactly alike\, making every visit a unique experience. Surprise drop-in appearances from major comedians performing elsewhere in Las Vegas have become part of the club’s reputation\, giving audiences the chance to see comedy superstars in an intimate setting. \nEvent Details\nVenue: Comedy Cellar Las Vegas at Rio Hotel & Casino\nLocation: 3700 W Flamingo Rd\, Las Vegas\, NV 89103\nShow Schedule: Nightly performances throughout the year\nAge Requirement: Recommended for audiences 18+ due to mature comedy content \nAbout the Venue\nOpened in 2018\, Comedy Cellar Las Vegas was designed to recreate the atmosphere and energy of the original Greenwich Village club that has become one of the most respected comedy venues in the world. The 300-seat showroom offers excellent sightlines and an intimate setting that allows audiences to experience stand-up comedy exactly as it was meant to be seen: up close and personal. \nThe venue combines the excitement of a Las Vegas night out with the authentic feel of a classic New York comedy club. Guests can enjoy a comfortable showroom environment while watching some of the best comedians working today perform in a setting that encourages spontaneity\, crowd interaction\, and unforgettable moments. \nConveniently located inside the Rio Hotel & Casino just minutes from the Las Vegas Strip\, the venue offers easy access for both tourists and local comedy fans. \nWhat to Expect\nExpect a fast-paced evening featuring multiple comedians performing throughout the show. The Comedy Cellar is known for showcasing a wide variety of comedic styles\, from observational humor and storytelling to sharp social commentary\, crowd work\, and cutting-edge stand-up. \nWhether you’re discovering a future comedy star or watching a seasoned veteran perfect their craft\, every show delivers the authentic comedy club experience that has made the Comedy Cellar one of the most respected brands in stand-up comedy. \nFor comedy fans visiting Las Vegas\, Comedy Cellar is widely considered one of the best places in the city to experience live stand-up comedy any night of the week.
+URL:https://comedycalendar.com/event/comedy-cellar-las-vegas-showcase-early/2026-08-08/
+LOCATION:Comedy Cellar Las Vegas at Rio Hotel & Casino\, 3700 W Flamingo Rd\, Las Vegas\, NV\, 89103\, United States
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fc4/a6703ea9-a17b-4211-b9dc-7308aa0b2fc4_RETINA_PORTRAIT_16_9.jpg
+GEO:36.1172452;-115.1861279
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Comedy Cellar Las Vegas at Rio Hotel & Casino 3700 W Flamingo Rd Las Vegas NV 89103 United States;X-APPLE-RADIUS=500;X-TITLE=3700 W Flamingo Rd:geo:-115.1861279,36.1172452
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260808T190000
+DTEND;TZID=America/New_York:20260808T220000
+DTSTAMP:20260515T014253Z
+CREATED:20260321T220000Z
+LAST-MODIFIED:20260515T014253Z
+UID:10003738-1786215600-1786226400@comedycalendar.com
+SUMMARY:John Mulaney: Mister Whatever LIVE at Ovens Auditorium
+DESCRIPTION:Official TicketsResale Tickets \nAbout the Performer\nJohn Mulaney is one of the most acclaimed comedians of his generation — a four-time Emmy Award winner\, Critics’ Choice Award winner\, and WGA Award-winning writer whose stand-up specials have become cultural touchstones. Known for his impeccable timing\, literary wit\, and deeply personal storytelling\, Mulaney has earned a devoted following that spans every demographic. \nHis 2026 Mister Whatever tour marks a triumphant return to the stage with all-new material. Fans and critics alike have praised the show as some of Mulaney’s sharpest and most personal work yet — a reflection on life\, change\, and the absurdity of being human. The tour has already sold out major venues across North America\, including a historic stand-up performance at Wrigley Field. \nWhether you’re a longtime fan or discovering Mulaney for the first time\, this is a rare opportunity to see one of comedy’s true greats perform in an intimate theater setting. Don’t miss it. \nEvent Details\n\nDate: Saturday\, August 8\, 2026\nDoors Open: 6:00 PM EDT\nShow Time: 7:00 PM EDT\nVenue: Ovens Auditorium\, 2900 E Independence Boulevard\, Charlotte\, NC 28205\nTicket Price Range: $117 – $808+\nContent Warning: Adult language and mature themes\n\nAbout the Venue\nOvens Auditorium is one of Charlotte’s most storied and beloved performance venues\, located at 2900 E Independence Boulevard. With a seating capacity of approximately 2\,600 guests\, it offers an intimate yet grand theater experience that is perfectly suited for a comedian of Mulaney’s caliber. \nThe venue features Orchestra\, Mezzanine\, and Balcony seating sections\, all with excellent sightlines to the stage. Ovens Auditorium is known for its warm acoustics\, classic architecture\, and the kind of close-to-the-performer atmosphere that makes every show feel special. It is managed by Blumenthal Performing Arts and has hosted some of the biggest names in entertainment. \nParking is available on-site and in nearby lots along E Independence Boulevard. The venue is easily accessible by car from both Uptown Charlotte and the surrounding suburbs. Arrive early to enjoy the pre-show atmosphere and find your seats comfortably before showtime. \nWhat to Expect\nJohn Mulaney’s Mister Whatever is a solo stand-up performance featuring entirely new material. Mulaney is celebrated for his ability to craft long-form comedic narratives that feel like short stories — each one building to a perfectly timed punchline that lands with the force of a freight train. \nExpect an evening of sophisticated\, laugh-out-loud comedy that touches on life’s big moments and small absurdities alike. Mulaney’s stage presence is magnetic\, his delivery is flawless\, and his material is the kind that sticks with you long after the show ends. \nThis is a solo headlining show with no opening act listed. The show is expected to run approximately 90 minutes. Seating is reserved — arrive on time to settle in before the lights go down. \nTicket Information\nTickets range from $117 to $808+ depending on section and availability. Purchase official tickets directly through Ticketmaster\, or find resale tickets through VividSeats. \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
+URL:https://comedycalendar.com/event/john-mulaney-mister-whatever-live-at-ovens-auditorium/
+LOCATION:Ovens Auditorium\, 2900 E Independence Boulevard\, Charlotte\, NC\, 28205\, United States
+ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/03/ccd9ebe2-c301-4487-bbe4-5bd6be744b30_CUSTOM-b0XiPO.jpg
+GEO:35.203815;-80.794307
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Ovens Auditorium 2900 E Independence Boulevard Charlotte NC 28205 United States;X-APPLE-RADIUS=500;X-TITLE=2900 E Independence Boulevard:geo:-80.794307,35.203815
 END:VEVENT
 END:VCALENDAR

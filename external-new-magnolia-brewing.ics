@@ -19,18 +19,6 @@ DTSTART:20250101T000000
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-DTSTART;TZID=UTC:20260805T190000
-DTEND;TZID=UTC:20260805T210000
-DTSTAMP:20251210T011911Z
-CREATED:20251210T011911Z
-LAST-MODIFIED:20251210T011911Z
-UID:10003636-1785956400-1785963600@newmagnoliabrewing.com
-SUMMARY:Psych Mic - Comedy Open Mic
-DESCRIPTION:Psych Mic – Open Mic Comedy Night. All are welcome. Starts at 7 pm and runs till the laughs stop.
-URL:https://newmagnoliabrewing.com/event/psych-mic-comedy-open-mic-2/2026-08-05/
-LOCATION:Taproom
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;TZID=UTC:20260812T190000
 DTEND;TZID=UTC:20260812T210000
 DTSTAMP:20251210T011911Z
@@ -376,6 +364,18 @@ UID:10003665-1803495600-1803502800@newmagnoliabrewing.com
 SUMMARY:Psych Mic - Comedy Open Mic
 DESCRIPTION:Psych Mic – Open Mic Comedy Night. All are welcome. Starts at 7 pm and runs till the laughs stop.
 URL:https://newmagnoliabrewing.com/event/psych-mic-comedy-open-mic-2/2027-02-24/
+LOCATION:Taproom
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=UTC:20270303T190000
+DTEND;TZID=UTC:20270303T210000
+DTSTAMP:20251210T011911Z
+CREATED:20251210T011911Z
+LAST-MODIFIED:20251210T011911Z
+UID:10003666-1804100400-1804107600@newmagnoliabrewing.com
+SUMMARY:Psych Mic - Comedy Open Mic
+DESCRIPTION:Psych Mic – Open Mic Comedy Night. All are welcome. Starts at 7 pm and runs till the laughs stop.
+URL:https://newmagnoliabrewing.com/event/psych-mic-comedy-open-mic-2/2027-03-03/
 LOCATION:Taproom
 END:VEVENT
 END:VCALENDAR
