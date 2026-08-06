@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-06T05:39:49.048Z",
+  "generated": "2026-08-06T11:11:53.916Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -1674,6 +1674,42 @@
             },
             "rss": {
               "href": "external-new-magnolia-brewing.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "noto-houston",
+      "friendlyName": "NOTO Houston",
+      "description": "NOTO Houston",
+      "url": "https://www.eventbrite.com/o/noto-events-69829155243",
+      "tags": [
+        "Nightlife",
+        "Music",
+        "Midtown"
+      ],
+      "geo": {
+        "lat": 29.755,
+        "lng": -95.3848,
+        "label": "NOTO Houston, 3215 McKinney Street, Houston, TX"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=NOTO%20Houston%2C%203215%20McKinney%20Street%2C%20Houston%2C%20TX"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "noto-houston",
+          "friendlyName": "NOTO Houston",
+          "links": {
+            "ics": {
+              "href": "noto-houston-noto-houston.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "noto-houston-noto-houston.rss",
               "type": "application/rss+xml"
             }
           }

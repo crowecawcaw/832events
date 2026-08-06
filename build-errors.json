@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-08-06T05:39:49.054Z",
-  "totalErrors": 11,
+  "buildTime": "2026-08-06T11:11:53.922Z",
+  "totalErrors": 5,
   "configErrors": [],
   "sources": [
     {
@@ -99,43 +99,12 @@
       "error": "Error: HTTP 403: "
     }
   ],
-  "geocodeErrors": [
-    {
-      "type": "GeocodeError",
-      "location": "The Finn Cocktail Bar",
-      "source": "downtown-houston-events",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Eastville Comedy Club, 487 Atlantic Avenue, Brooklyn, NY, 11217, United States",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Ovens Auditorium, 2900 E Independence Boulevard, Charlotte, NC, 28205, United States",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Ruki’s Kitchen, 1161 Ridge Ave SW Suite 15, Atlanta, 30315, United States",
-      "source": "external-houston-black-restaurant-week",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Southern National, 2 Georgia Ave SE Ste 100, Atlanta, 30312, United States",
-      "source": "external-houston-black-restaurant-week",
-      "reason": "Nominatim returned no results"
-    }
-  ],
+  "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 2030,
-    "eventsWithGeo": 1755,
-    "eventsWithoutGeo": 275,
-    "geocodeErrors": 5
+    "totalEvents": 2049,
+    "eventsWithGeo": 1772,
+    "eventsWithoutGeo": 277,
+    "geocodeErrors": 0
   },
   "uncertainEvents": [],
   "uncertaintyStats": {
@@ -165,15 +134,7 @@
     "external-houston-cinema-arts-society"
   ],
   "expectedEmptyCalendars": [],
-  "proxyStaleServes": [
-    {
-      "source": "texas-parks-wildlife-houston",
-      "url": "https://tpwd.texas.gov/calendar/near-city/houston-events",
-      "cachedAt": "2026-08-03T06:00:10.459Z",
-      "ageHours": 72,
-      "error": "fetch failed"
-    }
-  ],
+  "proxyStaleServes": [],
   "newZeroEventSources": [],
   "newSourceParseErrors": [],
   "urlEntityErrors": [],
@@ -552,6 +513,13 @@
     },
     {
       "source": "ripper",
+      "name": "noto-houston",
+      "label": "NOTO Houston, 3215 McKinney Street, Houston, TX",
+      "lat": 29.755,
+      "lng": -95.3848
+    },
+    {
+      "source": "ripper",
       "name": "notsuoh",
       "label": "Notsuoh, 314 Main St, Houston, TX 77002",
       "lat": 29.7603,
@@ -713,10 +681,10 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1300,
-    "totalEvents": 2030,
+    "eventsWithImage": 1317,
+    "totalEvents": 2049,
     "venuesWithImage": 0,
-    "totalVenues": 65,
+    "totalVenues": 66,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -1039,6 +1007,13 @@
         "label": "New Magnolia Brewing, Houston, TX",
         "url": "https://newmagnoliabrewing.com/",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=New%20Magnolia%20Brewing%2C%20Houston%2C%20TX"
+      },
+      {
+        "source": "ripper",
+        "name": "noto-houston",
+        "label": "NOTO Houston, 3215 McKinney Street, Houston, TX",
+        "url": "https://www.eventbrite.com/o/noto-events-69829155243",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=NOTO%20Houston%2C%203215%20McKinney%20Street%2C%20Houston%2C%20TX"
       },
       {
         "source": "ripper",
@@ -3586,6 +3561,12 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
+        "eventId": "nature-talks-invasives-and-exotics-2026-09-26",
+        "summary": "Nature Talks: Invasives and Exotics",
+        "date": "2026-09-26T10:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "texas-parks-wildlife-houston",
         "eventId": "night-hike-2026-08-21",
         "summary": "Night Hike🌙",
         "date": "2026-08-21T21:00-05:00[America/Chicago]"
@@ -3643,6 +3624,12 @@
         "eventId": "pollinator-camouflage-craft-2026-08-29",
         "summary": "Pollinator Camouflage Craft",
         "date": "2026-08-29T14:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "texas-parks-wildlife-houston",
+        "eventId": "pond-life-2026-08-09",
+        "summary": "Pond Life",
+        "date": "2026-08-09T13:00-05:00[America/Chicago]"
       },
       {
         "source": "texas-parks-wildlife-houston",
@@ -3887,9 +3874,9 @@
     ]
   },
   "costStats": {
-    "eventsWithCost": 458,
+    "eventsWithCost": 474,
     "freeEvents": 345,
-    "totalEvents": 2030,
+    "totalEvents": 2049,
     "unresolvable": 0
   },
   "costGaps": [
@@ -8798,6 +8785,12 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
+      "eventId": "nature-talks-invasives-and-exotics-2026-09-26",
+      "summary": "Nature Talks: Invasives and Exotics",
+      "date": "2026-09-26T10:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "texas-parks-wildlife-houston",
       "eventId": "night-hike-2026-08-21",
       "summary": "Night Hike🌙",
       "date": "2026-08-21T21:00-05:00[America/Chicago]"
@@ -8855,6 +8848,12 @@
       "eventId": "pollinator-camouflage-craft-2026-08-29",
       "summary": "Pollinator Camouflage Craft",
       "date": "2026-08-29T14:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "texas-parks-wildlife-houston",
+      "eventId": "pond-life-2026-08-09",
+      "summary": "Pond Life",
+      "date": "2026-08-09T13:00-05:00[America/Chicago]"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -10198,6 +10197,13 @@
       "source": "murder-by-the-book"
     },
     {
+      "name": "noto-houston-noto-houston",
+      "type": "Ripper",
+      "events": 16,
+      "expectEmpty": false,
+      "source": "noto-houston"
+    },
+    {
       "name": "notsuoh-notsuoh",
       "type": "Ripper",
       "events": 6,
@@ -10312,7 +10318,7 @@
     {
       "name": "texas-parks-wildlife-houston-texas-parks-wildlife-houston",
       "type": "Ripper",
-      "events": 188,
+      "events": 190,
       "expectEmpty": false,
       "source": "texas-parks-wildlife-houston"
     },
@@ -10389,14 +10395,14 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 810,
+      "events": 826,
       "expectEmpty": false,
       "source": "tag-music"
     },
     {
       "name": "tag-nightlife",
       "type": "Aggregate",
-      "events": 123,
+      "events": 139,
       "expectEmpty": false,
       "source": "tag-nightlife"
     },
@@ -10445,14 +10451,14 @@
     {
       "name": "tag-midtown",
       "type": "Aggregate",
-      "events": 82,
+      "events": 98,
       "expectEmpty": false,
       "source": "tag-midtown"
     },
     {
       "name": "tag-art",
       "type": "Aggregate",
-      "events": 225,
+      "events": 226,
       "expectEmpty": false,
       "source": "tag-art"
     },
@@ -10480,7 +10486,7 @@
     {
       "name": "tag-education",
       "type": "Aggregate",
-      "events": 259,
+      "events": 261,
       "expectEmpty": false,
       "source": "tag-education"
     },
@@ -10557,7 +10563,7 @@
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 560,
+      "events": 561,
       "expectEmpty": false,
       "source": "tag-community"
     },
@@ -10627,14 +10633,14 @@
     {
       "name": "tag-parks",
       "type": "Aggregate",
-      "events": 284,
+      "events": 286,
       "expectEmpty": false,
       "source": "tag-parks"
     },
     {
       "name": "tag-outdoor-recreation",
       "type": "Aggregate",
-      "events": 244,
+      "events": 246,
       "expectEmpty": false,
       "source": "tag-outdoor-recreation"
     },
@@ -10816,7 +10822,7 @@
     {
       "name": "tag-nature",
       "type": "Aggregate",
-      "events": 188,
+      "events": 190,
       "expectEmpty": false,
       "source": "tag-nature"
     },
@@ -10942,7 +10948,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 2040,
+      "events": 2059,
       "expectEmpty": false,
       "source": "tag-all"
     },
