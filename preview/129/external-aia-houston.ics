@@ -1,0 +1,284 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AIA Houston - ECPv6.17.0//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:AIA Houston
+X-ORIGINAL-URL:https://architecturehouston.org
+X-WR-CALDESC:Events for AIA Houston
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-Robots-Tag:noindex
+X-PUBLISHED-TTL:PT1H
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20250309T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20251102T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20260308T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20261101T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20270314T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20271107T070000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260806T083000
+DTEND;TZID=America/Chicago:20260806T120000
+DTSTAMP:20260730T210922Z
+CREATED:20260707T201628Z
+LAST-MODIFIED:20260730T210922Z
+UID:10000286-1786005000-1786017600@architecturehouston.org
+SUMMARY:HXD Week: Tour of IAH Terminal B
+DESCRIPTION:Come experience the Terminal B Transformation at IAH\, a landmark project that is setting a new standard for air travel. Discover how United Airlines and the Houston Airport System are creating an innovative\, sustainable terminal that celebrates the spirit of Houston while delivering a seamless and elevated passenger experience. The project encompasses one million square feet and features a new terminal lobby\, expanded concourses with 22 gates\, and the largest airline lounge in North America\, which will serve United Airlines. \nFirms:\nGrimshaw\nHarrisonKornberg\nPGAL\nRockwell Group\nStantec\nUnited Airlines\nSCB \n*This event is open only to AIA Houston and IIDA Members* \nAll attendees are required to wear PPE and boots (steel toe not required). United will be obliged to turn away anyone not in compliance with the required dress code. \nParking: surface lot available; includes validated parking.
+URL:https://architecturehouston.org/event/terminalb/
+LOCATION:Private: George Bush Intercontinental Airport (IAH)\, 15710 JFK Boulevard\, Houston\, TX\, 77002\, United States
+CATEGORIES:Interior Architecture Committee
+ATTACH;FMTTYPE=image/jpeg:https://architecturehouston.org/wp-content/uploads/2026/07/IAH-Terminal-B-Lobby-Large.jpeg
+ORGANIZER;CN="Alex Moreno":MAILTO:alexm@aiahouston.org
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260806T160000
+DTEND;TZID=America/Chicago:20260806T170000
+DTSTAMP:20260727T141504Z
+CREATED:20260713T182348Z
+LAST-MODIFIED:20260727T141504Z
+UID:10000295-1786032000-1786035600@architecturehouston.org
+SUMMARY:HXD Week: Norton Rose Fulbright Lvl. 20 Reception Floor Tour
+DESCRIPTION:Norton Rose Fulbright is a multi floor law firm located at 1550 Lamar St.\, Suite 2000. NRF workspace consists of eight (8) practice floors (lvl’s 18\, 20 thru 26) including two (2) reception/meeting room floors and a two-floor interconnecting staircase as designed by Rottet Studio and completed June 7th\, 2024.
+URL:https://architecturehouston.org/event/hxd-week-norton-rose-fulbright-office-tour/
+LOCATION:Norton Rose Fullbright Tower\, 1550 Lamar Street\, Suite 2000\, Houston\, TX\, 77010\, United States
+CATEGORIES:Interior Architecture Committee
+ATTACH;FMTTYPE=image/jpeg:https://architecturehouston.org/wp-content/uploads/2026/07/NRF-Large.jpeg
+ORGANIZER;CN="Alex Moreno":MAILTO:alexm@aiahouston.org
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260806T170000
+DTEND;TZID=America/Chicago:20260806T180000
+DTSTAMP:20260716T143338Z
+CREATED:20260707T204659Z
+LAST-MODIFIED:20260716T143338Z
+UID:10000288-1786035600-1786039200@architecturehouston.org
+SUMMARY:HXD Week: BCG Houston LEED Platinum Tour
+DESCRIPTION:The tour of the newly certified LEED Platinum BCG Houston office will showcase design and sustainability strategies used to create the new workspace adjacent to Discovery Green. Light bites will be provided as BCG and HOK’s design and sustainability team host the tour and discuss strategies that were used to achieve LEED integration\, including optimization for daylight and views\, energy and water efficiency\, and enhanced waste management. The design team will also walk through the space showcasing how the cohesive material palette tells a story of biophilia\, branding\, and local BCG culture while playing off the views and nature that the building overlooks. \nAIA Credit: 1.0 HSW \nLight bites will be provided. \nParking:\nPaid street parking and parking garage available; $15 flat fee parking in garage available.
+URL:https://architecturehouston.org/event/bcgtour/
+LOCATION:Private: BCG Houston\, 1550 Lamar St.\, Suite 1200\, Houston\, TX\, 77010\, United States
+CATEGORIES:Continuing Education,Interior Architecture Committee
+ATTACH;FMTTYPE=image/jpeg:https://architecturehouston.org/wp-content/uploads/2026/07/23_10072_00_N3_print-Large.jpeg
+ORGANIZER;CN="Alex Moreno":MAILTO:alexm@aiahouston.org
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260807T120000
+DTEND;TZID=America/Chicago:20260807T130000
+DTSTAMP:20260722T191603Z
+CREATED:20260713T150010Z
+LAST-MODIFIED:20260722T191603Z
+UID:10000294-1786104000-1786107600@architecturehouston.org
+SUMMARY:HXD Week: Beyond the Buzz
+DESCRIPTION:Beyond the Buzz: What Design Week Reveals About the Future of Interior Architecture \nEvery year\, Chicago Design Days and NeoCon introduce hundreds of new furniture products\, materials\, finishes\, and workplace design concepts. But which innovations represent meaningful shifts in interior architecture—and which are simply this year’s aesthetic trends? This session examines key observations from Chicago Design Week through three lenses: ephemeral trends\, enduring shifts\, and emerging innovations. Participants will explore how circular design principles are reshaping furniture planning and specification\, how neuroinclusive design is influencing occupant well-being\, and how manufacturers are responding to evolving expectations around sustainability\, flexibility\, material transparency\, and human-centered design. Rather than showcasing the latest products\, this course provides architects and designers with a practical framework for evaluating furniture and interior design innovations\, helping them distinguish what’s new from what’s next—and determine which ideas will have lasting impact on the health\, safety\, welfare\, and performance of the built environment. \nAIA Credit: 1.0 LU|HSW \nAbout the presenters: \n\n \n\n\n\n\nCaryn Ogier\, AIA\, RID\, LEED AP\, PMP  \nKimiko Designs\nDirector of Furniture Planning \nis the Director of Furniture Planning at Kimiko Designs\, where she helps clients align furniture strategy with business goals\, user needs\, and long-term sustainability. With more than 25 years of experience in architecture\, interiors\, and project management\, Caryn specializes in furniture planning\, circular design\,and lifecycle stewardship for workplace and healthcare environments. \nA lifelong learner and self-proclaimed furniture woobie\, Caryn is passionate about translating emerging ideas into practical project outcomes. She has helped shape Kimiko’s circularity movement and brings a unique perspective that connects design\, project management\, and implementation\, helping owners\, architects\, and designers turn good ideas into spaces that perform better over time. \n\n\n\n\n\n\n\nNecia E. Bonner\, RID\, NCIDQ\, IIDA\, CHID\, CDF\, LEED AP\nPerkins&Will\nPrincipal and Director of Health & Science Interiors \nNecia Bonner is a Principal and the Director of Health & Science Interiors for Perkins&Will’s Houston studio\, where she leads interior design strategy for some of the most complex healthcare\, research\, and science environments in the country. With more than 25 years of experience dedicated exclusively to high-performance interiors\, she has worked across a broad spectrum of specialized facilities\, including academic medical centers\, community hospitals\, behavioral health facilities\, public health agencies\, private clinics\, research laboratories\, vivaria\, and corporate science campuses. \nA Certified Healthcare Interior Designer and Certified Design Futurist\, Necia is recognized for her expertise in translating complex clinical\, operational\, and regulatory requirements into innovative environments that support the future of healthcare delivery and scientific discovery. She is a respected leader within the design profession and a frequent advocate for advancing healthcare and science environments through design leadership\, education\, and professional service. Necia has served in numerous leadership roles with IIDA\, the AIA Committee on Architecture for Health\, the Texas Association for Interior Designers\, and currently serves on the board of Texas Women in Healthcare. \n\n\n\n\n\nCatered lunch will be provided.\nStreet parking and surface lot parking available around the Architecture Center.
+URL:https://architecturehouston.org/event/beyondthebuzz/
+LOCATION:Architecture Center Houston\, 902 Commerce St.\, Houston\, TX\, 77002\, United States
+CATEGORIES:Continuing Education,Interior Architecture Committee
+ATTACH;FMTTYPE=image/webp:https://architecturehouston.org/wp-content/uploads/2026/07/260715_AIAHXD_Presentation.webp
+ORGANIZER;CN="Alex Moreno":MAILTO:alexm@aiahouston.org
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260807T140000
+DTEND;TZID=America/Chicago:20260807T153000
+DTSTAMP:20260729T142420Z
+CREATED:20260713T184358Z
+LAST-MODIFIED:20260729T142420Z
+UID:10000296-1786111200-1786116600@architecturehouston.org
+SUMMARY:HXD Week: Electrolit U.S. Headquarters Tour
+DESCRIPTION:A collaborative team of architects based in Guadalajara and Houston has designed the U.S. headquarters of Mexican beverage brand Electrolit. \nThe structure they chose to begin their journey in Houston—a low-slung\, formerly industrial Spanish Revival slab located on the banks of Buffalo Bayou—resonated with the ethos and cultural identity of the company. The objective from the outset was to create a contemporary workspace imbued with the sophistication and relaxed character of residential architecture\, balancing the industrial nature of the existing building with a warm palette of natural materials reminiscent of Mexican living. With this ambition in mind\, the architects stripped the existing concrete structure down to its bones\, correcting and repairing some of the abuses that it had undergone during its many lives. The proposal consists of a series of volumetric\, light wooden boxes that house smaller programs and inhabit the industrial space as sculptures\, creating and lending proportion to the spaces around them. The main entry leads into a foyer bounded on one side by a monumental wood-clad staircase. Past this stair\, the space opens into a double-height lounge and flexible workspace. The stair leads to a mezzanine where the CEO’s office and a meeting room overlook the office. Throughout\, diffused natural light emitted by glass-block windows is supplemented by existing skylights. The team worked to deploy warm tones and raw materials in order to strike a balance between the rough and the delicate. The result\, aided by the thoughtful use of natural light\, is a relaxed and subdued atmosphere that stands in opposition to the stridence of contemporary corporate vernacular. \nThrough its careful consideration of existing conditions and its balance between the industrial and the intimate\, the project also manages to strike a different balance\, between the company’s origins in Mexico and its new location in Houston. \nWinner of the 2026 AIA Houston Design Award for Interior Architecture. Learn more here!
+URL:https://architecturehouston.org/event/electrolit/
+LOCATION:Private: Electrolit U.S. Headquarters\, 3201 Allen Parkway\, Houston\, TX\, 77010\, United States
+CATEGORIES:Interior Architecture Committee
+ATTACH;FMTTYPE=image/jpeg:https://architecturehouston.org/wp-content/uploads/2026/07/2026_ElecrolitUSHeadQuarters_ImageForPub-Large.jpeg
+ORGANIZER;CN="Alex Moreno":MAILTO:alexm@aiahouston.org
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260812T120000
+DTEND;TZID=America/Chicago:20260812T130000
+DTSTAMP:20260708T113529Z
+CREATED:20260626T191445Z
+LAST-MODIFIED:20260708T113529Z
+UID:10000282-1786536000-1786539600@architecturehouston.org
+SUMMARY:Lunchtime Learning (Virtual)
+DESCRIPTION:Virtual Lunchtime Learning sponsored by the Committee on the Environment (COTE)\n  \nFirst Safe\, then Circular: optimizing material health with Cradle to Cradle Certified®\nIf you are being asked to evaluate the material health of products and aren’t sure where to start\, this session is for you! We’ll dive into the basics of material health for designers\, including major classes of chemicals of concern\, chemical assessments\, and how designers can use certifications as they evaluate products. This presentation details the methodology and requirements for the Cradle to Cradle Certified® products program and how designers can use it to specify materials that are healthy in a project and across a supply chain. We’ll explore how Cradle to Cradle Certified®\, as a fully digitized program\, makes it easy for designers to find reliable material health information to deliver meaningful sustainability benefits on every project. \n  \nSpeaker: Ren DeCherney\, Director of Built Environment \n \nRen is a licensed interior designer who uses her first-hand experience of the complexities of the building industry to help designers and manufacturers translate their sustainability pledges into reality. \nPrior to joining the Institute as Director of Built Environment\, she worked in Portland as a designer\, where she took her firm PVC-free\, making them the first firm in Portland to make such a commitment. She was then the Director of Industry Transparency at Source\, a digital materials platform\, where she synthesized design team needs and industry trends to integrate sustainability seamlessly into the design process. This included building various user tools\, growing strategic partnerships\, and developing all of the sustainability filters on the platform. \nShe then worked at the International Living Future Institute\, overseeing the Declare and Living Product Challenge programs. There she worked with both designers and manufacturers to understand the current market incentives for sustainable practices and how to implement sustainability strategy into everyday practices. \n  \nAIA Credit: 1.0 HSW \nGBCI Credit: self-report \n 
+URL:https://architecturehouston.org/event/lunchtime-learning-virtual/
+LOCATION:Zoom
+CATEGORIES:Continuing Education
+ATTACH;FMTTYPE=image/jpeg:https://architecturehouston.org/wp-content/uploads/2026/06/AIA_CE_horiz_2c-1200x494-4e6c487.jpg
+ORGANIZER;CN="Rhonda Lowe":MAILTO:rhonda@aiahouston.org
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260813T170000
+DTEND;TZID=America/Chicago:20260813T200000
+DTSTAMP:20260805T161629Z
+CREATED:20260528T113725Z
+LAST-MODIFIED:20260805T161629Z
+UID:10000279-1786640400-1786651200@architecturehouston.org
+SUMMARY:Everyday Self-Defense: Building Confidence Through Boundaries & De-escalation
+DESCRIPTION:In this self-defense session\, the instructor\, Sarah Degar\, Jiu Jitsu black belt\, and architect at GSMA\, will share her unique approach to personal safety\, focusing on two key objectives: setting boundaries and de-escalating potential uncomfortable situations. After demonstrating key techniques\, attendees will partner up to practice\, with the instructor offering guidance to each group. \nThe first part of the session will teach participants how to navigate unwanted physical contact in everyday situations\, particularly with people they know. In professional and social contexts\, it can be challenging to assert boundaries—especially for many women who already worry about being perceived as “unreasonable.” The instructor will address simple strategies to divert this contact to maintain comfort and autonomy. For example\, a colleague approaches for a hug or puts an arm around the waist to pose for a photo. Attendees will be empowered to practice subtle yet effective ways to establish personal space without confrontation. \nThe second part of the session will address more serious scenarios\, where the potential for physical harm exists. Whether the concern comes from someone familiar or not\, de-escalation is crucial. Participants will learn techniques to create and maintain a safe distance\, keep a steady stance to avoid being easily pushed or pulled\, and how to break free from various types of holds. The session will wrap up with interactive games designed to reinforce the skills learned\, making it fun and memorable while encouraging participants to continue practicing on their own. \n\nDoors Open 5p\nClass 5:30p – 6:30p\nSocial to follow\n\nAdvanced Registration Required. \n 
+URL:https://architecturehouston.org/event/everyday-self-defense-building-confidence-through-boundaries-de-escalation/
+LOCATION:Third Ward Jiu-Jitsu\, 2016 Emancipation Ave\, Houston\, TX\, 77003\, United States
+CATEGORIES:Women in Architecture Committee
+ATTACH;FMTTYPE=image/jpeg:https://architecturehouston.org/wp-content/uploads/2026/05/Calendar-2-scaled.jpg
+ORGANIZER;CN="Rhonda Lowe":MAILTO:rhonda@aiahouston.org
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260813T183000
+DTEND;TZID=America/Chicago:20260813T203000
+DTSTAMP:20260804T192850Z
+CREATED:20260804T192850Z
+LAST-MODIFIED:20260804T192850Z
+UID:10000301-1786645800-1786653000@architecturehouston.org
+SUMMARY:The SWAP: Trade Notes. Make Connections
+DESCRIPTION:Do you have study materials collecting dust? A study strategy that’s helped you succeed? Are you looking for an accountability partner or extra motivation on your licensure journey? \n\nJoin HNOMA for The Swap\, an interactive event designed to connect aspiring architects\, exam candidates\, and recently licensed professionals. Exchange study materials\, share test-taking strategies\, and build a supportive community of peers navigating the A.R.E. process.\n\nThe Houston Chapter of NOMA and LeaderFlow are partnering to host this two-part experience. The evening will begin with a fireside-style panel discussion moderated by LeaderFlow\, featuring professionals who will share insights\, lessons learned\, and practical advice from their licensure journeys. Attendees will then break into smaller groups for facilitated discussions\, providing an opportunity to ask questions\, exchange resources\, and connect with others at various stages of the A.R.E. process.\n\nWhether you’re exploring licensure for the first time\, actively studying for exams\, or recently licensed and looking to give back\, we encourage you to join us.\n\nThere’s something valuable for everyone at The Swap.\n\nPanelists\nShreya Patel\, Harrison Kornberg\nTim Uzoigwe\, Perkins & Will\nJaniece Williams\, Leaderflow\nJavier E. Guerrero\, Martinez Architects\nFallon Barrett\, City of Houston\n\nRegister here 
+URL:https://architecturehouston.org/event/the-swap-trade-notes-make-connections/
+LOCATION:Perkins & Will\, 1001 McKinney St.\, Houston\, TX\, 77002\, United States
+ATTACH;FMTTYPE=image/webp:https://architecturehouston.org/wp-content/uploads/2026/08/The-Swap.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260819T113000
+DTEND;TZID=America/Chicago:20260819T133000
+DTSTAMP:20260729T205434Z
+CREATED:20260729T205434Z
+LAST-MODIFIED:20260729T205434Z
+UID:10000299-1787139000-1787146200@architecturehouston.org
+SUMMARY:EP University: Project Delivery
+DESCRIPTION:Join us for the third session of the EP University Lecture Series: Project Delivery. \nAll architecture projects have fundamentally followed the same processes from programming\, to design\, to documentation and construction. This course reveals the step-by-step process in delivering a project from conception to reality. \n\nReview the phases of design – Programming\, Site Planning\, Schematic Design\, and Design Development – to understand the processes and deliverables for each phase\nUnderstand the project team member roles – internal and external – and how projects move from person to person and phase to phase\nUnderstand the process of developing construction documents to execute the design vision – from cartoon set\, to establishing what to draw\, why to draw it\, and what team members are responsible for confirming constructability and details\nReview the process of formally issuing drawings including sealing documents\, labelling drawings\, permitting documents\, transmitting drawings and handling drawing revisions\n\nPresented by Jeanette Shaw of Powers Brown Architecture\, this session offers 1LU CE credit.  \nLunch is provided. \nLocation: Powers Brown Architecture\, MKT 600 N Shepherd\, Building 3\, Suite 300\, Houston\, TX 77007 \nAdvanced registration is required. Deadline: Monday\, August 17 at 5PM.
+URL:https://architecturehouston.org/event/ep-university-project-delivery/
+LOCATION:Powers Brown Architecture\, MKT 600 N Shepherd\, Building 3\, Suite 300\, Houston\, TX 77007\, 600 N Shepherd\, Building 3\, Ste 300\, Houston\, TX\, 77007
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260819T120000
+DTEND;TZID=America/Chicago:20260819T130000
+DTSTAMP:20260623T191931Z
+CREATED:20260522T181714Z
+LAST-MODIFIED:20260623T191931Z
+UID:10000276-1787140800-1787144400@architecturehouston.org
+SUMMARY:Concrete Cosmos: Composing Skate Architecture
+DESCRIPTION:In Concrete Cosmos: Composing Skate Architecture\, Shane Yee presents skate architecture qua architecture\, framing the skatepark as a paradigmatic yet unacknowledged achievement of the contemporary moment\, characterized by adaptive reuse\, the blurring of public and private space\, an emphasis on lifestyle recreation\, and the ascent of subcultural practices into mainstream culture. Skate spaces manifest in fluid\, naturalistic configurations\, converging with land art and anticipating parametric/ digital aesthetics; yet despite this sophistication\, the language and principles of the discipline remain largely unarticulated. \nDrawing on a half-century history of skatepark design (1976-2026) and his own work at Skate Ecosystems\, Yee offers a chronological series of architectural close readings\, examining design intentions\, ordering logics\, and formal arrangements. The lecture establishes skate architecture as an emergent field with significant cultural\, spatial\, and spiritual implications\, capable of producing elevated human experiences. \n\nAbout Shane Yee \nShane Yee earned his Bachelor of Architecture degree from NewSchool of Architecture & Design in San Diego\, California. Mr. Yee has a broad range of experiences and capabilities in all phases of project planning\, design and construction- from acquisition through operations and maintenance. He has designed award-winning projects including residential\, multifamily\, civic\, religious\, master planning\, and of course\, skate spaces. As an officer in the United States Navy Civil Engineer Corps\, Mr. Yee expertly designed & managed DOD projects with a total value of 100+ million to include Design-Build\, DBB\, and MILCON construction. Mr. Yee is a member of the American Institute of Architects\, Society of American Military Engineers\, and US Green Building Council. \n  \nThis program is in conjunction with Kinetics of Urban Movement\, on view at the Architecture Center Houston from June 18-September 26. \nExhibition Sponsors and Community Partners \nKinetics of Urban Movement is funded in part by the City of Houston through Houston Arts Alliance \n \nCherries Wheels\nHoney Skate Club\nHouston Parks and Recreation Department\nHouston Skate Academy\nSelect\nSkate ECOSYSTEMS\nSouthside Skatepark
+URL:https://architecturehouston.org/event/concrete-cosmos-composing-skate-architecture/
+LOCATION:TX
+CATEGORIES:Exhibitions & Programming Committee
+ATTACH;FMTTYPE=image/jpeg:https://architecturehouston.org/wp-content/uploads/2026/05/Concrete-Cosmos.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260820T173000
+DTEND;TZID=America/Chicago:20260820T190000
+DTSTAMP:20260721T204511Z
+CREATED:20260713T113449Z
+LAST-MODIFIED:20260721T204511Z
+UID:10000293-1787247000-1787252400@architecturehouston.org
+SUMMARY:HTC 101: The Beginner’s Guide to Historic Tax Credits
+DESCRIPTION:Each historic tax credit (HTC) rehabilitation project is unique and has inherent challenges. Learn how to anticipate if a rehabilitation is feasible. Our presentation will consider how to analyze\, evaluate\, and apply HTC principles in real-world projects through examples\, while understanding the collaboration required between preservation professionals\, architects\, and developers to achieve both regulatory compliance and financial success. Examples will be pulled from several projects in Texas. \nPresented by: William R. Franks Consulting and Ryan Historic Advisors \nHosted by: AIAH Historic Resources Committee \nAIA Credit: 1.0 LU \nSchedule:  \n\n5:30pm Social\n6:00pm – 7:00pm Presentation\n\n  \n  \n 
+URL:https://architecturehouston.org/event/htc-101-the-beginners-guide-to-historic-tax-credits/
+LOCATION:Architecture Center Houston\, 902 Commerce St.\, Houston\, TX\, 77002\, United States
+CATEGORIES:Continuing Education,Historic Resources Committee
+ATTACH;FMTTYPE=image/jpeg:https://architecturehouston.org/wp-content/uploads/2026/06/AIA_CE_horiz_2c-1200x494-4e6c487.jpg
+ORGANIZER;CN="Rhonda Lowe":MAILTO:rhonda@aiahouston.org
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260825T090000
+DTEND;TZID=America/Chicago:20260825T151500
+DTSTAMP:20260804T164517Z
+CREATED:20260722T204944Z
+LAST-MODIFIED:20260804T164517Z
+UID:10000297-1787648400-1787670900@architecturehouston.org
+SUMMARY:Full Day Continuing Education
+DESCRIPTION:Urbanism Continuum CE day\n  \n9:00-9:30am Breakfast and Registration \n9:30-10:45am / Presentation\nBuilding Bridges: Collaborative Placemaking in the Bayou City – 1.25 AIA HSW\nPresented by Michael Robinson\, PLA\, ASLA\, Principal\, SWA Group \nMichael is a landscape architect focused on the intersection of infrastructure and public space. He leads the design and implementation of complex park\, trail\, and civic landscape projects\, connecting regional systems into cohesive\, accessible environments. His work spans planning through realization\, coordinating multidisciplinary teams and public agencies to deliver resilient\, buildable solutions. With a background in both architecture and landscape architecture\, he brings a systems-based approach that integrates environmental performance\, mobility\, and user experience into high-performing public landscapes. \n11:00-12:00pm / Presentation \nUniversal Design: Building Accessible and Healthy Spaces – 1.00 AIA HSW (Barrier Free)\nPresented by Kyle J. Mutz\, Director\, University of Houston / Justin Dart Jr. Student Accessibility Center \nKyle is the Director of the Justin Dart Jr. Student Accessibility Center at the University of Houston\, where he champions accessibility\, inclusion\, and student success. Drawing from both his professional expertise and lived experience growing up with a disability\, Kyle is committed to creating equitable opportunities for all. A former U.S. wheelchair racing athlete\, he brings a unique perspective on disability advocacy and is dedicated to advancing the legacy of Justin Dart Jr. through education and empowerment. \n  \n12:00-12:30pm – Break for Lunch  \n  \n12:30-1:45pm / Presentation \nFrom Paint to Policy: How Tactical Urbanism Became a Capital Project – 1.25 AIA HSW & 1.25 LA/CES HSW\nPresented by Ed Pettitt\, MPH – President of Columbia Tap and Urban Planner with Asakura Robinson \nEd is an urban planner and One Health specialist whose academic path spans human biology at Cornell University\, global health and healthcare management at the University of Texas School of Public Health\, and doctoral studies in Urban Planning and Environmental Policy at Texas Southern University. In addition\, Ed is also the President of the Columbia Tap Trail.  He provides organizational leadership by guiding the board\, strengthening partnerships\, advancing strategic initiatives\, and overseeing programs that support equitable community development along the Columbia Tap Trail. \n2:00-3:15pm / Presentation + Tour\nReclaiming Main Street: Designing a Lasting Legacy in the Public Realm  – 1.25 AIA HSW & 1.25 LA/CES HSW\nPresented by Alex Ramirez\, PLA & Sarah Smith\, PLA\, CDT\, Design Workshop \nAlex is a Principal in the Houston studio at Design Workshop\, with expertise as both a landscape architect and urban designer. His diverse experience spans across the private and public sectors\, involving every phase of the design process—from conceptual planning and site analysis to construction documentation and detailed observation. Alex is dedicated to delivering top-tier work by crafting innovative design solutions for plazas\, streetscapes\, parks\, and open spaces. His approach integrates social\, cultural\, economic\, and environmental considerations\, ensuring that each project enhances the surrounding neighborhoods and communities in meaningful ways. \nSarah is a landscape architect in our Houston studio with a passion for the outdoors\, thoughtful design\, and creating meaningful places. From concept through construction\, she brings creativity\, attention to detail\, and a collaborative approach to projects ranging from parks and corporate campuses to urban streetscapes. Sarah earned her Bachelor of Landscape Architecture from Louisiana State University and is an active member of ULI\, Central Houston\, and ASLA. \n  \nContinuing Education Credits: \n\nAIA = 4.75 HSW\nLA/CES = 3.75 HSW\n\n  \n\nIndividual classes are not available for the event.\nPre-registered pricing includes breakfast and lunch.\nParking is not included.\nA minimum of 3 business days’ notice is required to receive a full refund if you need to cancel your reservation.\nOnline registration will close Thursday\, August 20\nOnsite registration is available for day of (breakfast and lunch is NOT included)
+URL:https://architecturehouston.org/event/full-day-continuing-education-8/
+LOCATION:Architecture Center Houston\, 902 Commerce St.\, Houston\, TX\, 77002\, United States
+CATEGORIES:Continuing Education,Urban Design Committee
+ATTACH;FMTTYPE=image/jpeg:https://architecturehouston.org/wp-content/uploads/2025/02/AIA_Approved_CE_horiz_2c-1200x494-4e6c487.jpg
+ORGANIZER;CN="Rhonda Lowe":MAILTO:rhonda@aiahouston.org
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260909T123000
+DTEND;TZID=America/Chicago:20260909T130000
+DTSTAMP:20260804T185608Z
+CREATED:20250902T202341Z
+LAST-MODIFIED:20260804T185608Z
+UID:10000163-1788957000-1788958800@architecturehouston.org
+SUMMARY:Women in Architecture’s Professional Development Fund Q&A
+DESCRIPTION:Join us for a virtual Q&A session about Women in Architecture’s Professional Development Fund application process. We’ll cover the ins and outs of applications for the Licensure Scholarship and Professional Development Grant\, then open the floor to questions. \nThe application will open September 1st. \n  \nZoom login link: \nAIA Houston is inviting you to a scheduled Zoom meeting. \nTopic: WiA PD Fund Q&A\nTime: Sep 9\, 2026 12:30 PM Central Time (US and Canada)\nJoin Zoom Meeting\nhttps://us02web.zoom.us/j/82247850007?pwd=Y7EkbC9wZJFErsY1qCsMYpSKPFQZSa.1 \nMeeting ID: 822 4785 0007\nPasscode: 641463 \n  \n  \n 
+URL:https://architecturehouston.org/event/women-in-architectures-professional-development-fund-qa/
+LOCATION:https://us02web.zoom.us/j/82247850007?pwd=Y7EkbC9wZJFErsY1qCsMYpSKPFQZSa.1
+CATEGORIES:Women in Architecture Committee
+ATTACH;FMTTYPE=image/webp:https://architecturehouston.org/wp-content/uploads/2025/09/PD-Fund-01-1-scaled.webp
+ORGANIZER;CN="Rhonda Lowe":MAILTO:rhonda@aiahouston.org
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260919T100000
+DTEND;TZID=America/Chicago:20260920T210000
+DTSTAMP:20260723T201026Z
+CREATED:20260723T201026Z
+LAST-MODIFIED:20260723T201026Z
+UID:10000298-1789812000-1789938000@architecturehouston.org
+SUMMARY:Galveston Sandcastle Festival
+DESCRIPTION:Click here to be redirected to the Galveston Sandcastle Festival site.
+URL:https://architecturehouston.org/event/gsf/
+LOCATION:East Beach\, 1923 Boddeker Rd\, Galveston\, TX\, 77550\, United States
+CATEGORIES:Sandcastle Competition Committee
+ATTACH;FMTTYPE=image/webp:https://architecturehouston.org/wp-content/uploads/2026/07/FB-Cover.webp
+ORGANIZER;CN="Alex Moreno":MAILTO:alexm@aiahouston.org
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260926T090000
+DTEND;TZID=America/Chicago:20260926T110000
+DTSTAMP:20260623T191517Z
+CREATED:20260522T184633Z
+LAST-MODIFIED:20260623T191517Z
+UID:10000277-1790413200-1790420400@architecturehouston.org
+SUMMARY:The Architectural History of Houston Street Skating
+DESCRIPTION:Join lifelong skateboarder and architectural historian Ted Barrow on a walking tour of the highlights of Houston’s Modernist and Late-Modernist architecture through a skateboarder’s perspective. The tour will cover key plazas and buildings which became local\, state-wide\, and eventually global skateboarding destinations from the late 1980’s to today. \n\nAbout Ted Barrow \nTheodore (Ted) Barrow is an art historian\, writer\, curator\, and lecturer whose work bridges academic scholarship and contemporary currents. Born in Bolinas\, California\, he holds a Ph.D. in art history from the Graduate Center\, CUNY\, where he explored the Florida paintings of Winslow Homer and John Singer Sargent through an ecocritical lens. Barrow has taught at Barnard College\, Baruch College\, City College of New York\, and the University of San Francisco. Outside of art and academia\, he is a distinctive voice in skateboarding culture\, known for This Old Ledge\, a video series that investigates the cultural and architectural significance of global skate spots.” \n  \nThis program is in conjunction with The Kinetics of Urban Movement\, on view at the Architecture Center Houston from June 18-September 26. \n  \nExhibition Sponsors and Community Partners \nKinetics of Urban Movement is funded in part by the City of Houston through Houston Arts Alliance \n \nCherries Wheels\nHoney Skate Club\nHouston Parks and Recreation Department\nHouston Skate Academy\nSelect\nSkate ECOSYSTEMS\nSouthside Skatepark
+URL:https://architecturehouston.org/event/the-architectural-history-of-houston-street-skating/
+LOCATION:Tranquility Park\, 400 Rusk\, Houston\, Texas\, 77002
+CATEGORIES:Exhibitions & Programming Committee
+ATTACH;FMTTYPE=image/jpeg:https://architecturehouston.org/wp-content/uploads/2026/05/History-of-Street-Skating-1.jpg
+ORGANIZER;CN="Jennifer Ward":MAILTO:jennifer@aiahouston.org
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261107T180000
+DTEND;TZID=America/Chicago:20261108T180000
+DTSTAMP:20260708T162718Z
+CREATED:20260708T162718Z
+LAST-MODIFIED:20260708T162718Z
+UID:10000292-1794074400-1794160800@architecturehouston.org
+SUMMARY:Home Tour
+DESCRIPTION:The AIA Houston Home Tour is a 2-day\, self-guided tour featuring custom homes in the Houston area designed by licensed architects. \nJoin us to experience some of the best new residential architecture by AIA members in a variety of architectural styles\, featuring new construction\, renovations\, and additions. \nLearn more about the tour and preview each home HERE. \nTickets purchased online may be picked up at any one of the featured homes on the days of the tour. Additionally\, Full-Tour and Single Home Tickets may be purchased at any of the featured homes on the days of the tour. \nThis is a rain or shine event. All sales are final.
+URL:https://architecturehouston.org/event/hometour/
+LOCATION:TX
+CATEGORIES:Residential Committee
+ATTACH;FMTTYPE=image/jpeg:https://architecturehouston.org/wp-content/uploads/2026/07/Calendar-3.jpg
+END:VEVENT
+END:VCALENDAR

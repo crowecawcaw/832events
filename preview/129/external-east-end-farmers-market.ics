@@ -1,0 +1,66 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//East End Houston - ECPv6.17.2//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:East End Houston
+X-ORIGINAL-URL:https://eastendhouston.com
+X-WR-CALDESC:Events for East End Houston
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-Robots-Tag:noindex
+X-PUBLISHED-TTL:PT1H
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20250309T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20251102T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20260308T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20261101T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20270314T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20271107T070000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260808T133000
+DTEND;TZID=America/Chicago:20260808T173000
+DTSTAMP:20260806T045116Z
+CREATED:20260615T185127Z
+LAST-MODIFIED:20260806T045116Z
+UID:240373-1786195800-1786210200@eastendhouston.com
+SUMMARY:Letterpress Fundamentals
+DESCRIPTION:*This course meets 4 times*\nInterested in working with historic wood-type and antique printing equipment? Learn the fundamentals of Letterpress in this in-depth\, 4-week course taught by Rekha Basra! Students will be introduced to typesetting\, measuring\, and printing their own letterpress poster using our Line-O-Scribes and Vandercook cylinder presses. Students will leave with their own posters and the skills to print with letterpress on their own. Additionally\, students will receive one free pass for an Open Studio reservation to continue printing at Red Bird.\nNo experience required; All levels are welcome\nMeets Saturdays from 1:30 – 5:30pm\nJuly 18 – August 8 (4 weeks)
+URL:https://eastendhouston.com/event/letterpress-fundamentals-4/
+LOCATION:Red Bird Press\, 708 Telephone\, Houston\, TX\, 77023\, United States
+CATEGORIES:Classes + Workshops
+ATTACH;FMTTYPE=image/jpeg:https://eastendhouston.com/wp-content/uploads/2026/06/summer-courses-4-yRkIuo.jpg
+ORGANIZER;CN="Red Bird Press":MAILTO:chirp@redbirdpresshtx.org
+END:VEVENT
+END:VCALENDAR
