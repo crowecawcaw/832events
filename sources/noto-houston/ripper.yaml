@@ -1,0 +1,17 @@
+name: noto-houston
+type: eventbrite
+description: "NOTO Houston"
+url: https://www.eventbrite.com/o/noto-events-69829155243
+friendlyLink: https://www.eventbrite.com/o/noto-events-69829155243
+tags: [Nightlife, Music, Midtown]
+geo:
+  lat: 29.7550
+  lng: -95.3848
+  label: "NOTO Houston, 3215 McKinney Street, Houston, TX"
+calendars:
+  - name: noto-houston
+    friendlyname: "NOTO Houston"
+    timezone: America/Chicago
+    config:
+      organizerId: "69829155243"
+      defaultLocation: "3215 McKinney Street, Houston, TX"
