@@ -1,5 +1,5 @@
 {
-  "buildTime": "2026-08-06T11:11:53.922Z",
+  "buildTime": "2026-08-07T04:45:30.548Z",
   "totalErrors": 5,
   "configErrors": [],
   "sources": [
@@ -87,6 +87,12 @@
       "error": "Error: HTTP 403: "
     },
     {
+      "name": "holocaust-museum-houston",
+      "friendlyName": "Holocaust Museum Houston",
+      "url": "https://hmh.org/?post_type=tribe_events&ical=1&eventDisplay=list",
+      "error": "Error: HTTP 403: "
+    },
+    {
       "name": "houston-heritage-holiday-market",
       "friendlyName": "Houston Heritage Holiday Market",
       "url": "https://ghwcc.org/calendar/?ical=1",
@@ -101,9 +107,9 @@
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 2049,
-    "eventsWithGeo": 1772,
-    "eventsWithoutGeo": 277,
+    "totalEvents": 2041,
+    "eventsWithGeo": 1765,
+    "eventsWithoutGeo": 276,
     "geocodeErrors": 0
   },
   "uncertainEvents": [],
@@ -122,6 +128,7 @@
     "pride-houston-pride-houston",
     "read-houston-read-houston",
     "rice-public-events-rice-public-events",
+    "saint-arnold-brewing-company-saint-arnold-brewing-company",
     "shrine-of-the-black-madonna-shrine-of-the-black-madonna",
     "tag-jazz",
     "tag-history",
@@ -681,10 +688,10 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1317,
-    "totalEvents": 2049,
+    "eventsWithImage": 1323,
+    "totalEvents": 2041,
     "venuesWithImage": 0,
-    "totalVenues": 66,
+    "totalVenues": 64,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -838,12 +845,6 @@
         "label": "Hobby Center for the Performing Arts, 800 Bagby St, Houston, TX 77002",
         "url": "https://www.thehobbycenter.org/events/",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hobby%20Center%20for%20the%20Performing%20Arts%2C%20800%20Bagby%20St%2C%20Houston%2C%20TX%2077002"
-      },
-      {
-        "source": "external",
-        "name": "holocaust-museum-houston",
-        "label": "Holocaust Museum Houston, 5401 Caroline St, Houston, TX 77004",
-        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Holocaust%20Museum%20Houston%2C%205401%20Caroline%20St%2C%20Houston%2C%20TX%2077004"
       },
       {
         "source": "ripper",
@@ -1072,13 +1073,6 @@
       },
       {
         "source": "ripper",
-        "name": "saint-arnold-brewing-company",
-        "label": "Saint Arnold Brewing Company, 2000 Lyons Ave, Houston, TX 77020",
-        "url": "https://www.saintarnold.com/happenings/",
-        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Saint%20Arnold%20Brewing%20Company%2C%202000%20Lyons%20Ave%2C%20Houston%2C%20TX%2077020"
-      },
-      {
-        "source": "ripper",
         "name": "sawyer-yards",
         "label": "Sawyer Yards, 2101 Winter Street, Houston, TX 77007",
         "url": "https://www.sawyeryards.com/",
@@ -1199,13 +1193,6 @@
       },
       {
         "source": "childrens-museum-houston",
-        "eventId": "free-family-night-thursday-2026-08-06-bd9f6516",
-        "summary": "Free Family Night Thursday",
-        "date": "2026-08-06T10:00-05:00[America/Chicago]",
-        "url": "https://www.cmhouston.org/events/free-family-night"
-      },
-      {
-        "source": "childrens-museum-houston",
         "eventId": "gabby-s-dollhouse-meowseum-discovery-days-2026-10-23-62f68b23",
         "summary": "Gabby's Dollhouse MEOWseum Discovery Days",
         "date": "2026-10-23T10:00-05:00[America/Chicago]",
@@ -1311,52 +1298,10 @@
       },
       {
         "source": "childrens-museum-houston",
-        "eventId": "music-for-little-ones-babies-only-2026-08-06-cae3b0e4",
-        "summary": "Music for Little Ones: Babies Only",
-        "date": "2026-08-06T10:00-05:00[America/Chicago]",
-        "url": "https://www.cmhouston.org/events/music-for-little-ones-babies-only"
-      },
-      {
-        "source": "childrens-museum-houston",
-        "eventId": "music-for-little-ones-mixed-age-families-2026-08-06-5e0dd5ee",
-        "summary": "Music for Little Ones: Mixed-Age Families",
-        "date": "2026-08-06T10:00-05:00[America/Chicago]",
-        "url": "https://www.cmhouston.org/events/music-for-little-ones-mixed-age-families"
-      },
-      {
-        "source": "childrens-museum-houston",
         "eventId": "once-upon-a-time-a-fairytale-fashion-gala-2026-10-17-76918327",
         "summary": "Once Upon a Time, A Fairytale Fashion Gala",
         "date": "2026-10-17T10:00-05:00[America/Chicago]",
         "url": "https://www.cmhouston.org/events/2026-gala"
-      },
-      {
-        "source": "childrens-museum-houston",
-        "eventId": "party-ai-2026-08-06-dd0927a4",
-        "summary": "Party.AI",
-        "date": "2026-08-06T10:00-05:00[America/Chicago]",
-        "url": "https://www.cmhouston.org/events/party-ai"
-      },
-      {
-        "source": "childrens-museum-houston",
-        "eventId": "party-ai-2026-08-06-dd0927a4",
-        "summary": "Party.AI",
-        "date": "2026-08-06T10:00-05:00[America/Chicago]",
-        "url": "https://www.cmhouston.org/events/party-ai"
-      },
-      {
-        "source": "childrens-museum-houston",
-        "eventId": "paw-patrol-promo-pop-up-2026-08-06-6ed6527f",
-        "summary": "Paw Patrol Promo Pop-Up!",
-        "date": "2026-08-06T10:00-05:00[America/Chicago]",
-        "url": "https://www.cmhouston.org/events/paw-patrol-promo-pop-up"
-      },
-      {
-        "source": "childrens-museum-houston",
-        "eventId": "paw-patrol-promo-pop-up-2026-08-06-6ed6527f",
-        "summary": "Paw Patrol Promo Pop-Up!",
-        "date": "2026-08-06T10:00-05:00[America/Chicago]",
-        "url": "https://www.cmhouston.org/events/paw-patrol-promo-pop-up"
       },
       {
         "source": "childrens-museum-houston",
@@ -1415,13 +1360,6 @@
         "url": "https://www.cmhouston.org/events/zumbini"
       },
       {
-        "source": "childrens-museum-houston",
-        "eventId": "zumbini-thursdays-2026-08-06-9a8c5d81",
-        "summary": "Zumbini Thursdays",
-        "date": "2026-08-06T10:00-05:00[America/Chicago]",
-        "url": "https://www.cmhouston.org/events/zumbini-2"
-      },
-      {
         "source": "cullen-performance-hall",
         "eventId": "charlie-berens-the-lost-and-found-tour-2026-10-24",
         "summary": "Charlie Berens The Lost and Found Tour",
@@ -1444,12 +1382,6 @@
         "eventId": "i-said-what-i-said-2026-08-15",
         "summary": "I Said What I Said",
         "date": "2026-08-15T20:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "cullen-performance-hall",
-        "eventId": "new-student-orientation-2026-08-03",
-        "summary": "New Student Orientation",
-        "date": "2026-08-03T07:45-05:00[America/Chicago]"
       },
       {
         "source": "cullen-performance-hall",
@@ -2292,13 +2224,6 @@
         "url": "https://rooftopcinemaclub.com/us/houston/uptown/screenings/the-princess-diaries-22894"
       },
       {
-        "source": "saint-arnold-brewing-company",
-        "eventId": "corporate-events-open-house-2026-08-06-caaa0cd7",
-        "summary": "Corporate Events Open House",
-        "date": "2026-08-06T11:00-05:00[America/Chicago]",
-        "url": "https://www.saintarnold.com/corporate-events-open-house/"
-      },
-      {
         "source": "sawyer-yards",
         "eventId": "anomalous-2026-09-12",
         "summary": "Anomalous",
@@ -2829,12 +2754,6 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
-        "eventId": "armadillo-antics-2026-08-06",
-        "summary": "Armadillo Antics",
-        "date": "2026-08-06T14:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
         "eventId": "armadillo-antics-2026-08-27",
         "summary": "Armadillo Antics",
         "date": "2026-08-27T14:00-05:00[America/Chicago]"
@@ -2946,6 +2865,12 @@
         "eventId": "birding-hike-2026-11-01",
         "summary": "Birding Hike",
         "date": "2026-11-01T08:00-06:00[America/Chicago]"
+      },
+      {
+        "source": "texas-parks-wildlife-houston",
+        "eventId": "birding-hike-2026-11-06",
+        "summary": "Birding Hike",
+        "date": "2026-11-06T08:00-06:00[America/Chicago]"
       },
       {
         "source": "texas-parks-wildlife-houston",
@@ -3657,12 +3582,6 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
-        "eventId": "reading-with-a-ranger-2026-08-06",
-        "summary": "Reading With a Ranger",
-        "date": "2026-08-06T10:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
         "eventId": "reading-with-a-ranger-2026-09-03",
         "summary": "Reading With a Ranger",
         "date": "2026-09-03T10:00-05:00[America/Chicago]"
@@ -3738,12 +3657,6 @@
         "eventId": "sunset-fishing-with-a-ranger-2026-08-14",
         "summary": "Sunset Fishing with a Ranger",
         "date": "2026-08-14T17:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
-        "eventId": "sunset-watercolors-2026-08-06",
-        "summary": "Sunset Watercolors🎨",
-        "date": "2026-08-06T19:45-05:00[America/Chicago]"
       },
       {
         "source": "texas-parks-wildlife-houston",
@@ -3874,9 +3787,9 @@
     ]
   },
   "costStats": {
-    "eventsWithCost": 474,
-    "freeEvents": 345,
-    "totalEvents": 2049,
+    "eventsWithCost": 473,
+    "freeEvents": 343,
+    "totalEvents": 2041,
     "unresolvable": 0
   },
   "costGaps": [
@@ -3921,6 +3834,13 @@
       "summary": "LUCKI",
       "date": "2026-09-17T20:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/lucki-houston-texas-09-17-2026/event/3A0064B293DA55F3"
+    },
+    {
+      "source": "713-music-hall",
+      "eventId": "tm-G5dIZ_53je_pf",
+      "summary": "Arcángel - La 8va Maravilla World Tour",
+      "date": "2026-11-05T20:00-06:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/arcangel-la-8va-maravilla-world-tour-houston-texas-11-05-2026/event/3A0064B49C099594"
     },
     {
       "source": "713-music-hall",
@@ -4162,6 +4082,13 @@
     },
     {
       "source": "bayou-music-center",
+      "eventId": "tm-G5dIZ_eL7ay5U",
+      "summary": "Jim Hensons Labyrinth - In Concert 40th Anniversary",
+      "date": "2026-11-05T20:00-06:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/jim-hensons-labyrinth-in-concert-40th-houston-texas-11-05-2026/event/3A006427C42792F6"
+    },
+    {
+      "source": "bayou-music-center",
       "eventId": "tm-G5dIZ_FPFtpvh",
       "summary": "Theresa Caputo Live! The Experience",
       "date": "2026-10-22T19:30-05:00[America/Chicago]",
@@ -4281,13 +4208,6 @@
     },
     {
       "source": "childrens-museum-houston",
-      "eventId": "free-family-night-thursday-2026-08-06-bd9f6516",
-      "summary": "Free Family Night Thursday",
-      "date": "2026-08-06T10:00-05:00[America/Chicago]",
-      "url": "https://www.cmhouston.org/events/free-family-night"
-    },
-    {
-      "source": "childrens-museum-houston",
       "eventId": "gabby-s-dollhouse-meowseum-discovery-days-2026-10-23-62f68b23",
       "summary": "Gabby's Dollhouse MEOWseum Discovery Days",
       "date": "2026-10-23T10:00-05:00[America/Chicago]",
@@ -4393,52 +4313,10 @@
     },
     {
       "source": "childrens-museum-houston",
-      "eventId": "music-for-little-ones-babies-only-2026-08-06-cae3b0e4",
-      "summary": "Music for Little Ones: Babies Only",
-      "date": "2026-08-06T10:00-05:00[America/Chicago]",
-      "url": "https://www.cmhouston.org/events/music-for-little-ones-babies-only"
-    },
-    {
-      "source": "childrens-museum-houston",
-      "eventId": "music-for-little-ones-mixed-age-families-2026-08-06-5e0dd5ee",
-      "summary": "Music for Little Ones: Mixed-Age Families",
-      "date": "2026-08-06T10:00-05:00[America/Chicago]",
-      "url": "https://www.cmhouston.org/events/music-for-little-ones-mixed-age-families"
-    },
-    {
-      "source": "childrens-museum-houston",
       "eventId": "once-upon-a-time-a-fairytale-fashion-gala-2026-10-17-76918327",
       "summary": "Once Upon a Time, A Fairytale Fashion Gala",
       "date": "2026-10-17T10:00-05:00[America/Chicago]",
       "url": "https://www.cmhouston.org/events/2026-gala"
-    },
-    {
-      "source": "childrens-museum-houston",
-      "eventId": "party-ai-2026-08-06-dd0927a4",
-      "summary": "Party.AI",
-      "date": "2026-08-06T10:00-05:00[America/Chicago]",
-      "url": "https://www.cmhouston.org/events/party-ai"
-    },
-    {
-      "source": "childrens-museum-houston",
-      "eventId": "party-ai-2026-08-06-dd0927a4",
-      "summary": "Party.AI",
-      "date": "2026-08-06T10:00-05:00[America/Chicago]",
-      "url": "https://www.cmhouston.org/events/party-ai"
-    },
-    {
-      "source": "childrens-museum-houston",
-      "eventId": "paw-patrol-promo-pop-up-2026-08-06-6ed6527f",
-      "summary": "Paw Patrol Promo Pop-Up!",
-      "date": "2026-08-06T10:00-05:00[America/Chicago]",
-      "url": "https://www.cmhouston.org/events/paw-patrol-promo-pop-up"
-    },
-    {
-      "source": "childrens-museum-houston",
-      "eventId": "paw-patrol-promo-pop-up-2026-08-06-6ed6527f",
-      "summary": "Paw Patrol Promo Pop-Up!",
-      "date": "2026-08-06T10:00-05:00[America/Chicago]",
-      "url": "https://www.cmhouston.org/events/paw-patrol-promo-pop-up"
     },
     {
       "source": "childrens-museum-houston",
@@ -4497,13 +4375,6 @@
       "url": "https://www.cmhouston.org/events/zumbini"
     },
     {
-      "source": "childrens-museum-houston",
-      "eventId": "zumbini-thursdays-2026-08-06-9a8c5d81",
-      "summary": "Zumbini Thursdays",
-      "date": "2026-08-06T10:00-05:00[America/Chicago]",
-      "url": "https://www.cmhouston.org/events/zumbini-2"
-    },
-    {
       "source": "cullen-performance-hall",
       "eventId": "charlie-berens-the-lost-and-found-tour-2026-10-24",
       "summary": "Charlie Berens The Lost and Found Tour",
@@ -4526,12 +4397,6 @@
       "eventId": "i-said-what-i-said-2026-08-15",
       "summary": "I Said What I Said",
       "date": "2026-08-15T20:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "cullen-performance-hall",
-      "eventId": "new-student-orientation-2026-08-03",
-      "summary": "New Student Orientation",
-      "date": "2026-08-03T07:45-05:00[America/Chicago]"
     },
     {
       "source": "cullen-performance-hall",
@@ -5313,6 +5178,13 @@
     },
     {
       "source": "house-of-blues-houston",
+      "eventId": "tm-G5dIZ_u74H1Ok",
+      "summary": "Bowling for Soup",
+      "date": "2026-11-05T18:30-06:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/bowling-for-soup-houston-texas-11-05-2026/event/3A0064D115F0A806"
+    },
+    {
+      "source": "house-of-blues-houston",
       "eventId": "tm-G5dIZ_ue-hEXZ",
       "summary": "Kandi Burruss - I Do. I Did. I'm Done (Ages 21+ Event)",
       "date": "2026-08-23T18:00-05:00[America/Chicago]",
@@ -5768,6 +5640,20 @@
     },
     {
       "source": "htxoutdoors",
+      "eventId": "sup-kayaking-101-2026-08-12",
+      "summary": "SUP & Kayaking 101",
+      "date": "2026-08-12T18:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/sup-kayaking-101-4/"
+    },
+    {
+      "source": "htxoutdoors",
+      "eventId": "sup-kayaking-101-2026-09-08",
+      "summary": "SUP & Kayaking 101",
+      "date": "2026-09-08T18:00-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/sup-kayaking-101-5/"
+    },
+    {
+      "source": "htxoutdoors",
       "eventId": "toughest-10k-galveston-2026-10-18",
       "summary": "Toughest 10K Galveston",
       "date": "2026-10-18T07:00-05:00[America/Chicago]",
@@ -6045,6 +5931,13 @@
       "summary": "Paul House",
       "date": "2026-09-01T19:00-05:00[America/Chicago]",
       "url": "https://www.mcgonigels.com/shows/paul-house/"
+    },
+    {
+      "source": "mcgonigels-mucky-duck",
+      "eventId": "mcgonigels-31236",
+      "summary": "Clandestine",
+      "date": "2026-11-06T18:00-06:00[America/Chicago]",
+      "url": "https://www.mcgonigels.com/shows/clandestine-early-show-4/"
     },
     {
       "source": "mcgonigels-mucky-duck",
@@ -6346,6 +6239,13 @@
       "summary": "Lisa Morales",
       "date": "2026-09-12T18:00-05:00[America/Chicago]",
       "url": "https://www.mcgonigels.com/shows/lisa-morales-early-show-2/"
+    },
+    {
+      "source": "mcgonigels-mucky-duck",
+      "eventId": "mcgonigels-32991",
+      "summary": "Courtney Patton",
+      "date": "2026-11-05T20:30-06:00[America/Chicago]",
+      "url": "https://www.mcgonigels.com/shows/courtney-patton-2/"
     },
     {
       "source": "mcgonigels-mucky-duck",
@@ -7188,6 +7088,13 @@
     },
     {
       "source": "punch-line-comedy-club",
+      "eventId": "tm-G5dIZ_CUxoUnr",
+      "summary": "Alonzo Bodden",
+      "date": "2026-11-05T19:30-06:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/alonzo-bodden-houston-texas-11-05-2026/event/3A0064EDA2476A9E"
+    },
+    {
+      "source": "punch-line-comedy-club",
       "eventId": "tm-G5dIZ_d9X2NVg",
       "summary": "Cynthia Lee Fontaine Presents: Drag Brunch at the Punch",
       "date": "2026-09-19T12:00-05:00[America/Chicago]",
@@ -7514,13 +7421,6 @@
       "summary": "The Princess Diaries",
       "date": "2026-08-16T14:15-05:00[America/Chicago]",
       "url": "https://rooftopcinemaclub.com/us/houston/uptown/screenings/the-princess-diaries-22894"
-    },
-    {
-      "source": "saint-arnold-brewing-company",
-      "eventId": "corporate-events-open-house-2026-08-06-caaa0cd7",
-      "summary": "Corporate Events Open House",
-      "date": "2026-08-06T11:00-05:00[America/Chicago]",
-      "url": "https://www.saintarnold.com/corporate-events-open-house/"
     },
     {
       "source": "sawyer-yards",
@@ -8053,12 +7953,6 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
-      "eventId": "armadillo-antics-2026-08-06",
-      "summary": "Armadillo Antics",
-      "date": "2026-08-06T14:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
       "eventId": "armadillo-antics-2026-08-27",
       "summary": "Armadillo Antics",
       "date": "2026-08-27T14:00-05:00[America/Chicago]"
@@ -8170,6 +8064,12 @@
       "eventId": "birding-hike-2026-11-01",
       "summary": "Birding Hike",
       "date": "2026-11-01T08:00-06:00[America/Chicago]"
+    },
+    {
+      "source": "texas-parks-wildlife-houston",
+      "eventId": "birding-hike-2026-11-06",
+      "summary": "Birding Hike",
+      "date": "2026-11-06T08:00-06:00[America/Chicago]"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -8881,12 +8781,6 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
-      "eventId": "reading-with-a-ranger-2026-08-06",
-      "summary": "Reading With a Ranger",
-      "date": "2026-08-06T10:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
       "eventId": "reading-with-a-ranger-2026-09-03",
       "summary": "Reading With a Ranger",
       "date": "2026-09-03T10:00-05:00[America/Chicago]"
@@ -8962,12 +8856,6 @@
       "eventId": "sunset-fishing-with-a-ranger-2026-08-14",
       "summary": "Sunset Fishing with a Ranger",
       "date": "2026-08-14T17:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
-      "eventId": "sunset-watercolors-2026-08-06",
-      "summary": "Sunset Watercolors🎨",
-      "date": "2026-08-06T19:45-05:00[America/Chicago]"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -9265,6 +9153,13 @@
     },
     {
       "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_19QF4KD",
+      "summary": "Slow Pulp",
+      "date": "2026-11-05T19:00-06:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/slow-pulp-houston-texas-11-05-2026/event/3A0064A5DA2154FB"
+    },
+    {
+      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_1cW2VUg",
       "summary": "Squirrel Flower",
       "date": "2026-10-29T19:00-05:00[America/Chicago]",
@@ -9559,6 +9454,13 @@
     },
     {
       "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_8fMp9fb",
+      "summary": "Jack Blocker",
+      "date": "2026-10-04T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/jack-blocker-houston-texas-10-04-2026/event/3A00650537597518"
+    },
+    {
+      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_8Kc6-qi",
       "summary": "Aria Vega: Cariavales Tour",
       "date": "2026-10-17T19:00-05:00[America/Chicago]",
@@ -9657,13 +9559,6 @@
     },
     {
       "source": "white-oak-music-hall",
-      "eventId": "tm-G5dIZ_FhZIjZ1",
-      "summary": "Meet Me @ The Altar - The Worried Sick Summer Tour",
-      "date": "2026-08-05T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/meet-me-the-altar-the-worried-houston-texas-08-05-2026/event/3A006486C0A1C00A"
-    },
-    {
-      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_FLEv42j",
       "summary": "Clarent USA TOUR",
       "date": "2026-08-14T19:00-05:00[America/Chicago]",
@@ -9692,10 +9587,10 @@
     },
     {
       "source": "white-oak-music-hall",
-      "eventId": "tm-G5dIZ_G11UAoY",
-      "summary": "Painting Shadows",
-      "date": "2026-08-06T18:30-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/painting-shadows-houston-texas-08-06-2026/event/3A0064C28AD85470"
+      "eventId": "tm-G5dIZ_FXcG_Af",
+      "summary": "Oct (On Company Time)",
+      "date": "2026-11-05T19:00-06:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/oct-on-company-time-houston-texas-11-05-2026/event/3A00648FAD319154"
     },
     {
       "source": "white-oak-music-hall",
@@ -9927,13 +9822,6 @@
       "summary": "Jesse Baez",
       "date": "2026-10-16T19:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/jesse-baez-houston-texas-10-16-2026/event/3A006348BA247C9A"
-    },
-    {
-      "source": "white-oak-music-hall",
-      "eventId": "tm-G5dIZbyey26Lx",
-      "summary": "Faetooth",
-      "date": "2026-08-16T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/faetooth-houston-texas-08-16-2026/event/3A006390B93C77E2"
     }
   ],
   "eventCounts": [
@@ -9961,7 +9849,7 @@
     {
       "name": "713-music-hall-713-music-hall",
       "type": "Ripper",
-      "events": 27,
+      "events": 28,
       "expectEmpty": false,
       "source": "713-music-hall"
     },
@@ -9989,7 +9877,7 @@
     {
       "name": "bayou-music-center-bayou-music-center",
       "type": "Ripper",
-      "events": 22,
+      "events": 23,
       "expectEmpty": false,
       "source": "bayou-music-center"
     },
@@ -10010,7 +9898,7 @@
     {
       "name": "childrens-museum-houston-main",
       "type": "Ripper",
-      "events": 39,
+      "events": 31,
       "expectEmpty": false,
       "source": "childrens-museum-houston"
     },
@@ -10024,7 +9912,7 @@
     {
       "name": "cullen-performance-hall-cullen-performance-hall",
       "type": "Ripper",
-      "events": 10,
+      "events": 9,
       "expectEmpty": false,
       "source": "cullen-performance-hall"
     },
@@ -10045,7 +9933,7 @@
     {
       "name": "downtown-houston-plus-downtown-houston-plus",
       "type": "Ripper",
-      "events": 109,
+      "events": 106,
       "expectEmpty": false,
       "source": "downtown-houston-plus"
     },
@@ -10087,7 +9975,7 @@
     {
       "name": "house-of-blues-houston-house-of-blues-houston",
       "type": "Ripper",
-      "events": 56,
+      "events": 57,
       "expectEmpty": false,
       "source": "house-of-blues-houston"
     },
@@ -10129,7 +10017,7 @@
     {
       "name": "htxoutdoors-htxoutdoors",
       "type": "Ripper",
-      "events": 26,
+      "events": 28,
       "expectEmpty": false,
       "source": "htxoutdoors"
     },
@@ -10178,7 +10066,7 @@
     {
       "name": "mcgonigels-mucky-duck-mcgonigels-mucky-duck",
       "type": "Ripper",
-      "events": 86,
+      "events": 88,
       "expectEmpty": false,
       "source": "mcgonigels-mucky-duck"
     },
@@ -10248,14 +10136,14 @@
     {
       "name": "project-row-houses-project-row-houses",
       "type": "Ripper",
-      "events": 147,
+      "events": 148,
       "expectEmpty": false,
       "source": "project-row-houses"
     },
     {
       "name": "punch-line-comedy-club-punch-line-comedy-club",
       "type": "Ripper",
-      "events": 93,
+      "events": 94,
       "expectEmpty": false,
       "source": "punch-line-comedy-club"
     },
@@ -10283,7 +10171,7 @@
     {
       "name": "saint-arnold-brewing-company-saint-arnold-brewing-company",
       "type": "Ripper",
-      "events": 1,
+      "events": 0,
       "expectEmpty": false,
       "source": "saint-arnold-brewing-company"
     },
@@ -10318,7 +10206,7 @@
     {
       "name": "texas-parks-wildlife-houston-texas-parks-wildlife-houston",
       "type": "Ripper",
-      "events": 190,
+      "events": 188,
       "expectEmpty": false,
       "source": "texas-parks-wildlife-houston"
     },
@@ -10346,7 +10234,7 @@
     {
       "name": "the-secret-group-the-secret-group",
       "type": "Ripper",
-      "events": 82,
+      "events": 83,
       "expectEmpty": false,
       "source": "the-secret-group"
     },
@@ -10381,7 +10269,7 @@
     {
       "name": "tag-upper-kirby",
       "type": "Aggregate",
-      "events": 117,
+      "events": 119,
       "expectEmpty": false,
       "source": "tag-upper-kirby"
     },
@@ -10395,14 +10283,14 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 826,
+      "events": 825,
       "expectEmpty": false,
       "source": "tag-music"
     },
     {
       "name": "tag-nightlife",
       "type": "Aggregate",
-      "events": 139,
+      "events": 140,
       "expectEmpty": false,
       "source": "tag-nightlife"
     },
@@ -10416,7 +10304,7 @@
     {
       "name": "tag-theater",
       "type": "Aggregate",
-      "events": 14,
+      "events": 13,
       "expectEmpty": false,
       "source": "tag-theater"
     },
@@ -10437,7 +10325,7 @@
     {
       "name": "tag-eado",
       "type": "Aggregate",
-      "events": 105,
+      "events": 106,
       "expectEmpty": false,
       "source": "tag-eado"
     },
@@ -10451,21 +10339,21 @@
     {
       "name": "tag-midtown",
       "type": "Aggregate",
-      "events": 98,
+      "events": 99,
       "expectEmpty": false,
       "source": "tag-midtown"
     },
     {
       "name": "tag-art",
       "type": "Aggregate",
-      "events": 226,
+      "events": 227,
       "expectEmpty": false,
       "source": "tag-art"
     },
     {
       "name": "tag-museum-district",
       "type": "Aggregate",
-      "events": 119,
+      "events": 110,
       "expectEmpty": false,
       "source": "tag-museum-district"
     },
@@ -10486,7 +10374,7 @@
     {
       "name": "tag-education",
       "type": "Aggregate",
-      "events": 261,
+      "events": 259,
       "expectEmpty": false,
       "source": "tag-education"
     },
@@ -10500,49 +10388,49 @@
     {
       "name": "tag-family",
       "type": "Aggregate",
-      "events": 57,
+      "events": 49,
       "expectEmpty": false,
       "source": "tag-family"
     },
     {
       "name": "tag-kids",
       "type": "Aggregate",
-      "events": 39,
+      "events": 31,
       "expectEmpty": false,
       "source": "tag-kids"
     },
     {
       "name": "tag-museum",
       "type": "Aggregate",
-      "events": 43,
+      "events": 35,
       "expectEmpty": false,
       "source": "tag-museum"
     },
     {
       "name": "tag-museums",
       "type": "Aggregate",
-      "events": 7,
+      "events": 6,
       "expectEmpty": false,
       "source": "tag-museums"
     },
     {
       "name": "tag-performingarts",
       "type": "Aggregate",
-      "events": 19,
+      "events": 18,
       "expectEmpty": false,
       "source": "tag-performingarts"
     },
     {
       "name": "tag-university",
       "type": "Aggregate",
-      "events": 10,
+      "events": 9,
       "expectEmpty": false,
       "source": "tag-university"
     },
     {
       "name": "tag-university-of-houston",
       "type": "Aggregate",
-      "events": 10,
+      "events": 9,
       "expectEmpty": false,
       "source": "tag-university-of-houston"
     },
@@ -10556,14 +10444,14 @@
     {
       "name": "tag-montrose",
       "type": "Aggregate",
-      "events": 295,
+      "events": 292,
       "expectEmpty": false,
       "source": "tag-montrose"
     },
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 561,
+      "events": 560,
       "expectEmpty": false,
       "source": "tag-community"
     },
@@ -10598,7 +10486,7 @@
     {
       "name": "tag-sports",
       "type": "Aggregate",
-      "events": 52,
+      "events": 54,
       "expectEmpty": false,
       "source": "tag-sports"
     },
@@ -10633,7 +10521,7 @@
     {
       "name": "tag-parks",
       "type": "Aggregate",
-      "events": 286,
+      "events": 284,
       "expectEmpty": false,
       "source": "tag-parks"
     },
@@ -10647,7 +10535,7 @@
     {
       "name": "tag-hiking",
       "type": "Aggregate",
-      "events": 26,
+      "events": 28,
       "expectEmpty": false,
       "source": "tag-hiking"
     },
@@ -10661,14 +10549,14 @@
     {
       "name": "tag-third-ward",
       "type": "Aggregate",
-      "events": 149,
+      "events": 150,
       "expectEmpty": false,
       "source": "tag-third-ward"
     },
     {
       "name": "tag-beer",
       "type": "Aggregate",
-      "events": 56,
+      "events": 55,
       "expectEmpty": false,
       "source": "tag-beer"
     },
@@ -10766,14 +10654,14 @@
     {
       "name": "tag-comedy",
       "type": "Aggregate",
-      "events": 217,
+      "events": 219,
       "expectEmpty": false,
       "source": "tag-comedy"
     },
     {
       "name": "tag-entertainment",
       "type": "Aggregate",
-      "events": 106,
+      "events": 107,
       "expectEmpty": false,
       "source": "tag-entertainment"
     },
@@ -10822,7 +10710,7 @@
     {
       "name": "tag-nature",
       "type": "Aggregate",
-      "events": 190,
+      "events": 188,
       "expectEmpty": false,
       "source": "tag-nature"
     },
@@ -10948,7 +10836,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 2059,
+      "events": 2051,
       "expectEmpty": false,
       "source": "tag-all"
     },
@@ -11035,13 +10923,6 @@
       "events": 30,
       "expectEmpty": false,
       "source": "hobby-center"
-    },
-    {
-      "name": "external-holocaust-museum-houston",
-      "type": "External",
-      "events": 1,
-      "expectEmpty": false,
-      "source": "holocaust-museum-houston"
     },
     {
       "name": "external-houston-arboretum",
