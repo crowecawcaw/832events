@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-08-08T09:18:51.113Z",
-  "totalErrors": 9,
+  "buildTime": "2026-08-08T09:31:52.665Z",
+  "totalErrors": 4,
   "configErrors": [],
   "sources": [
     {
@@ -84,43 +84,12 @@
       "error": "Error: HTTP 403: "
     }
   ],
-  "geocodeErrors": [
-    {
-      "type": "GeocodeError",
-      "location": "House of Blues Restaurant & Bar - Houston, TX",
-      "source": "concerts50-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Punch Line Comedy Club - Houston - Houston, TX",
-      "source": "concerts50-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Bad Astronaut Brewing Co. - Houston, TX",
-      "source": "concerts50-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Constellation Field - Houston, TX",
-      "source": "concerts50-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Reliant Stadium (formerly NRG Stadium) - Houston, TX",
-      "source": "concerts50-houston",
-      "reason": "Nominatim returned no results"
-    }
-  ],
+  "geocodeErrors": [],
   "geoStats": {
     "totalEvents": 2102,
     "eventsWithGeo": 1805,
     "eventsWithoutGeo": 297,
-    "geocodeErrors": 5
+    "geocodeErrors": 0
   },
   "uncertainEvents": [],
   "uncertaintyStats": {
