@@ -1,7 +1,17 @@
 [
   {
     "type": "ParseError",
-    "reason": "Cannot parse time: \"6pm Art Reception\"",
-    "context": "Beyond Skin Deep: Tattoo Artist Showcase: 6pm Art Reception"
+    "reason": "Failed to fetch event 17491: HTTP 429",
+    "context": "https://thedeluxetheater.com/events/dj-battle-event/"
+  },
+  {
+    "type": "ParseError",
+    "reason": "Failed to fetch event 17484: HTTP 429",
+    "context": "https://thedeluxetheater.com/events/kokomo-city/"
+  },
+  {
+    "type": "ParseError",
+    "reason": "Failed to fetch events page 4: HTTP 429",
+    "context": "https://thedeluxetheater.com/wp-json/wp/v2/mec-events?page=4&per_page=100"
   }
 ]

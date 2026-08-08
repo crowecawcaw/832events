@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-07T04:45:23.094Z",
+  "lastUpdated": "2026-08-08T04:01:18.116Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -750,24 +750,6 @@
       ]
     },
     {
-      "name": "the-gite-gallery",
-      "description": "The Gite Gallery",
-      "friendlyLink": "https://www.eventbrite.com/o/the-gite-gallery-11763961302",
-      "calendars": [
-        {
-          "name": "the-gite-gallery",
-          "friendlyName": "The Gite Gallery",
-          "icsUrl": "the-gite-gallery-the-gite-gallery.ics",
-          "rssUrl": "the-gite-gallery-the-gite-gallery.rss",
-          "tags": [
-            "Art",
-            "Community",
-            "Gallery"
-          ]
-        }
-      ]
-    },
-    {
       "name": "the-mood-room",
       "description": "The Mood Room",
       "friendlyLink": "https://www.themoodroomhouston.com/events",
@@ -1015,6 +997,18 @@
         "Arts",
         "Downtown",
         "Music"
+      ]
+    },
+    {
+      "name": "holocaust-museum-houston",
+      "friendlyName": "Holocaust Museum Houston",
+      "description": "Education and remembrance museum with programming including educator workshops, author talks, film screenings, and community lectures",
+      "icsUrl": "external-holocaust-museum-houston.ics",
+      "originalIcsUrl": "https://hmh.org/?post_type=tribe_events&ical=1&eventDisplay=list",
+      "tags": [
+        "Museum District",
+        "Museums",
+        "Community"
       ]
     },
     {

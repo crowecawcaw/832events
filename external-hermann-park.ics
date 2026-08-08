@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Hermann Park Conservancy - ECPv6.17.1//NONSGML v1.0//EN
+PRODID:-//Hermann Park Conservancy - ECPv6.17.2//NONSGML v1.0//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Hermann Park Conservancy
@@ -48,19 +48,6 @@ TZNAME:CST
 DTSTART:20271107T070000
 END:STANDARD
 END:VTIMEZONE
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260806T090000
-DTEND;TZID=America/Chicago:20260806T120000
-DTSTAMP:20260803T193047Z
-CREATED:20260803T193047Z
-LAST-MODIFIED:20260803T193047Z
-UID:28328-1786006800-1786017600@hermannpark.org
-SUMMARY:Japanese Garden Volunteer Day
-DESCRIPTION:Join us every Thursday for hands-on gardening projects at the Japanese Garden. From 9 a.m. to 12 p.m.\, come help with seasonal tasks like planting\, weeding\, mulching\, and pruning. A great way to connect with others and make a visible impact in the Park! \nNo experience needed. All ages are welcome. \nClick here to sign up!
-URL:https://hermannpark.org/event/japanese-garden-volunteer-day-11/
-LOCATION:Japanese Garden\, Hermann Park Japanese Garden\, Houston\, TX\, 77035\, United States
-ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2024/04/japanese_garden_2__-_photo_by_patrick_talley-scaled.jpg
-END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260808T080000
 DTEND;TZID=America/Chicago:20260808T090000

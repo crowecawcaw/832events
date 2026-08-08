@@ -49,31 +49,6 @@ DTSTART:20271107T070000
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260806T163000
-DTEND;TZID=America/Chicago:20260806T170000
-DTSTAMP:20260224T212043Z
-CREATED:20260224T212043Z
-LAST-MODIFIED:20260224T212043Z
-UID:10016405-1786033800-1786035600@www.levyparkhouston.org
-SUMMARY:Children’s Bingo
-DESCRIPTION:Bring the kiddos and join our Levy Park team for Children’s Bingo! This 30-minute program\, ideal for kids aged 4 to 12\, is a fun way for children to practice their letters and numbers while earning prizes. Levy Park provides Bingo cards\, markers\, and prizes. B-I-N-G-O!
-URL:https://www.levyparkhouston.org/events/childrens-bingo/2026-08-06/
-ATTACH;FMTTYPE=image/jpeg:https://www.levyparkhouston.org/wp-content/uploads/2025/02/DSC09097.jpg
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260806T180000
-DTEND;TZID=America/Chicago:20260806T190000
-DTSTAMP:20240222T232053Z
-CREATED:20240222T231638Z
-LAST-MODIFIED:20240222T232053Z
-UID:10006548-1786039200-1786042800@www.levyparkhouston.org
-SUMMARY:Blue Dragon Tai Chi
-DESCRIPTION:Join us at Levy Park with Taoist Healing for Tai Chi and Meditation every Friday at 9 AM and every Thursday 6 PM. Practice Tai Chi to connect and focus the body and mind with slow\, low-impact gentle movements and stretches. Open to all ages and levels\, this class is great for those who want to de-stress\, find their inner peace\, and increase overall health.
-URL:https://www.levyparkhouston.org/events/blue-dragon-tai-chi-2-3/2026-08-06/
-LOCATION:Levy Park (Event Pavilion)\, TX
-ATTACH;FMTTYPE=image/jpeg:https://www.levyparkhouston.org/wp-content/uploads/2023/11/2021-09-24_tai_chi_and_swords_-_1964.jpeg
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260807T090000
 DTEND;TZID=America/Chicago:20260807T100000
 DTSTAMP:20240402T222719Z
@@ -428,5 +403,31 @@ URL:https://www.levyparkhouston.org/events/zumba-by-tiny-fitness/2026-08-24/
 LOCATION:Levy Park (Event Pavilion)\, TX
 ATTACH;FMTTYPE=image/jpeg:https://www.levyparkhouston.org/wp-content/uploads/2024/02/I63A9696.jpg
 ORGANIZER;CN="Tiny Fitness":MAILTO:info@tinyfitnesshouston.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260825T100000
+DTEND;TZID=America/Chicago:20260825T223000
+DTSTAMP:20241211T211741Z
+CREATED:20240314T154749Z
+LAST-MODIFIED:20241211T211741Z
+UID:10007946-1787652000-1787697000@www.levyparkhouston.org
+SUMMARY:Family Storytime & Craft
+DESCRIPTION:Join us for a cross-generational literacy experience! Family Storytime features a story followed by a craft that accompanies the reading. All craft supplies are included as a part of this free program.
+URL:https://www.levyparkhouston.org/events/family-storytime-craft-3/2026-08-25/
+LOCATION:Levy Park (Event Pavilion)\, TX
+ATTACH;FMTTYPE=image/jpeg:https://www.levyparkhouston.org/wp-content/uploads/2024/03/R7407885.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260826T180000
+DTEND;TZID=America/Chicago:20260826T190000
+DTSTAMP:20260625T004927Z
+CREATED:20251223T194112Z
+LAST-MODIFIED:20260625T004927Z
+UID:10013314-1787767200-1787770800@www.levyparkhouston.org
+SUMMARY:Bollywood & Bhangra Dance
+DESCRIPTION:Get ready to move\, sweat\, and dance in this fitness-based dance class inspired by the vibrant rhythms of Bollywood and the powerful beats of Bhangra. Designed for all ages\, abilities\, and experience levels\, this class welcomes everyone — whether you’re stepping onto the dance floor for the first time or already love to dance. \n  \n  \n 
+URL:https://www.levyparkhouston.org/events/bollywood-bhangra-dance-2-2-4-2/2026-08-26/
+LOCATION:Levy Park (Event Pavilion)\, TX
+ATTACH;FMTTYPE=image/jpeg:https://www.levyparkhouston.org/wp-content/uploads/2024/08/DSC0443_DxO.jpg
 END:VEVENT
 END:VCALENDAR
