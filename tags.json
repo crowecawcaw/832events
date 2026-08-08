@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-08T04:01:51.877Z",
+  "generated": "2026-08-08T09:35:47.831Z",
   "tags": [
     {
       "name": "Animals",
@@ -39,7 +39,7 @@
       "name": "Art",
       "slug": "art",
       "category": "Activities",
-      "eventCount": 227,
+      "eventCount": 226,
       "calendarCount": 10,
       "links": {
         "ics": {
@@ -175,7 +175,7 @@
       "name": "Community",
       "slug": "community",
       "category": "Community",
-      "eventCount": 565,
+      "eventCount": 564,
       "calendarCount": 21,
       "links": {
         "ics": {
@@ -201,6 +201,23 @@
         },
         "rss": {
           "href": "tag-concert.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "Concerts",
+      "slug": "concerts",
+      "category": "Other",
+      "eventCount": 18,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-concerts.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-concerts.rss",
           "type": "application/rss+xml"
         }
       }
@@ -447,7 +464,7 @@
       "name": "Gallery",
       "slug": "gallery",
       "category": "Other",
-      "eventCount": 2,
+      "eventCount": 1,
       "calendarCount": 1,
       "links": {
         "ics": {
@@ -719,8 +736,8 @@
       "name": "Music",
       "slug": "music",
       "category": "Activities",
-      "eventCount": 828,
-      "calendarCount": 19,
+      "eventCount": 846,
+      "calendarCount": 20,
       "links": {
         "ics": {
           "href": "tag-music.ics",

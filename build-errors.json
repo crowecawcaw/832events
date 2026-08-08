@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-08-08T04:01:51.870Z",
-  "totalErrors": 17,
+  "buildTime": "2026-08-08T09:35:47.824Z",
+  "totalErrors": 9,
   "configErrors": [],
   "sources": [
     {
@@ -62,31 +62,6 @@
           "context": ""
         }
       ]
-    },
-    {
-      "source": "the-deluxe-theater",
-      "calendar": "the-deluxe-theater",
-      "type": "Ripper",
-      "errorCount": 3,
-      "parseErrorCount": 3,
-      "uncertaintyCount": 0,
-      "errors": [
-        {
-          "type": "ParseError",
-          "reason": "Failed to fetch event 17491: HTTP 429",
-          "context": "https://thedeluxetheater.com/events/dj-battle-event/"
-        },
-        {
-          "type": "ParseError",
-          "reason": "Failed to fetch event 17484: HTTP 429",
-          "context": "https://thedeluxetheater.com/events/kokomo-city/"
-        },
-        {
-          "type": "ParseError",
-          "reason": "Failed to fetch events page 4: HTTP 429",
-          "context": "https://thedeluxetheater.com/wp-json/wp/v2/mec-events?page=4&per_page=100"
-        }
-      ]
     }
   ],
   "externalCalendarFailures": [
@@ -112,70 +87,40 @@
   "geocodeErrors": [
     {
       "type": "GeocodeError",
-      "location": "Radio Rosewood, 1115 East 11th Street, Austin, TX, 78702",
-      "source": "latin-city",
+      "location": "House of Blues Restaurant & Bar - Houston, TX",
+      "source": "concerts50-houston",
       "reason": "Nominatim returned no results"
     },
     {
       "type": "GeocodeError",
-      "location": "Club Aragon",
-      "source": "songkick-houston",
+      "location": "Punch Line Comedy Club - Houston - Houston, TX",
+      "source": "concerts50-houston",
       "reason": "Nominatim returned no results"
     },
     {
       "type": "GeocodeError",
-      "location": "The Three Monkeys, 832 8th Ave, New York, NY, 10019, United States",
-      "source": "external-comedy-calendar",
+      "location": "Bad Astronaut Brewing Co. - Houston, TX",
+      "source": "concerts50-houston",
       "reason": "Nominatim returned no results"
     },
     {
       "type": "GeocodeError",
-      "location": "The Pageant, 6161 Delmar, Saint Louis, MO, 63112, United States Of America",
-      "source": "external-comedy-calendar",
+      "location": "Constellation Field - Houston, TX",
+      "source": "concerts50-houston",
       "reason": "Nominatim returned no results"
     },
     {
       "type": "GeocodeError",
-      "location": "WI",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Bricktown Comedy Club, 5982 S Yale Ave, Tulsa, OK, 74135, United States",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Loony Bin Comedy Club Tulsa, 6808 South Memorial Dr Ste. 234, Tulsa, 74133, United States",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Nana’s Chicken & Waffles, 1500 Highway 20 W #130, McDonough, GA, 30253, United States",
-      "source": "external-houston-black-restaurant-week",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "The Upper Room, 1197 Peachtree St NE Apt 170, Atlanta, 30361, United States",
-      "source": "external-houston-black-restaurant-week",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Gift & Garden Center and Café",
-      "source": "external-nutcracker-market",
+      "location": "Reliant Stadium (formerly NRG Stadium) - Houston, TX",
+      "source": "concerts50-houston",
       "reason": "Nominatim returned no results"
     }
   ],
   "geoStats": {
-    "totalEvents": 2084,
-    "eventsWithGeo": 1792,
-    "eventsWithoutGeo": 292,
-    "geocodeErrors": 10
+    "totalEvents": 2102,
+    "eventsWithGeo": 1805,
+    "eventsWithoutGeo": 297,
+    "geocodeErrors": 5
   },
   "uncertainEvents": [],
   "uncertaintyStats": {
@@ -195,11 +140,11 @@
     "rice-public-events-rice-public-events",
     "saint-arnold-brewing-company-saint-arnold-brewing-company",
     "shrine-of-the-black-madonna-shrine-of-the-black-madonna",
+    "the-gite-gallery-the-gite-gallery",
     "tag-jazz",
     "tag-history",
     "tag-west-university",
     "tag-events",
-    "tag-concerts",
     "tag-fifa",
     "tag-literary",
     "tag-cultural",
@@ -753,8 +698,8 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1328,
-    "totalEvents": 2084,
+    "eventsWithImage": 1346,
+    "totalEvents": 2102,
     "venuesWithImage": 0,
     "totalVenues": 65,
     "unresolvable": 0
@@ -4101,7 +4046,7 @@
   "costStats": {
     "eventsWithCost": 467,
     "freeEvents": 339,
-    "totalEvents": 2084,
+    "totalEvents": 2102,
     "unresolvable": 0
   },
   "costGaps": [
@@ -4699,6 +4644,132 @@
       "summary": "Zumbini Fridays",
       "date": "2026-08-14T10:00-05:00[America/Chicago]",
       "url": "https://www.cmhouston.org/events/zumbini"
+    },
+    {
+      "source": "concerts50-houston",
+      "eventId": "affion-crockett-the-houston-improv-houston-tx-2026-08-08-a8a8015c",
+      "summary": "Affion Crockett",
+      "date": "2026-08-08T21:30-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/affion-crockett-in-houston-tickets-aug-08-2026"
+    },
+    {
+      "source": "concerts50-houston",
+      "eventId": "afroman-house-of-blues-restaurant-bar-houston-tx-2026-08-09-52c04ca5",
+      "summary": "Afroman",
+      "date": "2026-08-09T19:00-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/afroman-in-houston-tickets-aug-09-2026"
+    },
+    {
+      "source": "concerts50-houston",
+      "eventId": "arc-ngel-713-music-hall-houston-tx-2026-11-05-c5f2a61a",
+      "summary": "Arcángel",
+      "date": "2026-11-05T20:00-06:00[America/Chicago]",
+      "url": "https://concerts50.com/show/arc-ngel-in-houston-tickets-nov-05-2026"
+    },
+    {
+      "source": "concerts50-houston",
+      "eventId": "decibel-metal-beer-fest-bad-astronaut-brewing-co-houston-tx-2026-08-08-3261f9c7",
+      "summary": "Decibel Metal & Beer Fest",
+      "date": "2026-08-08T16:30-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/metal-beer-fest-in-houston-tickets-aug-08-2026"
+    },
+    {
+      "source": "concerts50-houston",
+      "eventId": "don-omar-toyota-center-houston-tx-2026-10-23-0ab0f63d",
+      "summary": "Don Omar",
+      "date": "2026-10-23T20:00-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/don-omar-in-houston-tickets-oct-23-2026"
+    },
+    {
+      "source": "concerts50-houston",
+      "eventId": "don-toliver-toyota-center-houston-tx-2026-08-11-787b35ce",
+      "summary": "Don Toliver",
+      "date": "2026-08-11T19:30-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/don-toliver-in-houston-tickets-aug-11-2026"
+    },
+    {
+      "source": "concerts50-houston",
+      "eventId": "droneart-show-harry-potter-at-constellation-field-constellation-field-houston-tx-2026-08-08-69dd63dd",
+      "summary": "DroneArt Show Harry Potter™ at Constellation Field",
+      "date": "2026-08-08T21:00-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/droneart-show-harry-potter-at-constellation-field-in-houston-tickets-aug-08-2026"
+    },
+    {
+      "source": "concerts50-houston",
+      "eventId": "emo-riot-night-warehouse-live-houston-tx-2026-08-08-55a690ce",
+      "summary": "Emo Riot Night",
+      "date": "2026-08-08T19:00-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/emo-riot-night-in-houston-tickets-aug-08-2026"
+    },
+    {
+      "source": "concerts50-houston",
+      "eventId": "karol-g-reliant-stadium-formerly-nrg-stadium-houston-tx-2026-09-27-1cc86ed6",
+      "summary": "KAROL G",
+      "date": "2026-09-27T19:00-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/karol-g-in-houston-tickets-sep-27-2026"
+    },
+    {
+      "source": "concerts50-houston",
+      "eventId": "malcolm-todd-713-music-hall-houston-tx-2026-09-03-18bf0403",
+      "summary": "Malcolm Todd",
+      "date": "2026-09-03T20:00-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/malcolm-todd-in-houston-tickets-sep-03-2026"
+    },
+    {
+      "source": "concerts50-houston",
+      "eventId": "novulent-white-oak-music-hall-houston-tx-2026-08-08-91819583",
+      "summary": "Novulent",
+      "date": "2026-08-08T18:00-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/novulent-in-houston-tickets-aug-08-2026"
+    },
+    {
+      "source": "concerts50-houston",
+      "eventId": "olivia-dean-toyota-center-houston-tx-2026-08-25-9ea68e53",
+      "summary": "Olivia Dean",
+      "date": "2026-08-25T20:00-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/olivia-dean-in-houston-tickets-aug-25-2026"
+    },
+    {
+      "source": "concerts50-houston",
+      "eventId": "omar-courtz-toyota-center-houston-tx-2026-08-27-74c46b84",
+      "summary": "Omar Courtz",
+      "date": "2026-08-27T20:00-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/omar-courtz-in-houston-tickets-aug-27-2026"
+    },
+    {
+      "source": "concerts50-houston",
+      "eventId": "quicksand-white-oak-music-hall-houston-tx-2026-08-08-d747d826",
+      "summary": "Quicksand",
+      "date": "2026-08-08T18:30-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/quicksand-in-houston-tickets-aug-08-2026"
+    },
+    {
+      "source": "concerts50-houston",
+      "eventId": "ron-funches-punch-line-comedy-club-houston-houston-tx-2026-08-08-e874597f",
+      "summary": "Ron Funches",
+      "date": "2026-08-08T19:00-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/ron-funches-in-houston-tickets-aug-08-2026"
+    },
+    {
+      "source": "concerts50-houston",
+      "eventId": "sean-mcconnell-houston-heights-houston-tx-2026-08-08-0dc10a71",
+      "summary": "Sean McConnell",
+      "date": "2026-08-08T19:00-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/sean-mcconnell-in-houston-tickets-aug-08-2026"
+    },
+    {
+      "source": "concerts50-houston",
+      "eventId": "sombr-toyota-center-houston-tx-2026-10-17-b55a5128",
+      "summary": "sombr",
+      "date": "2026-10-17T19:00-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/sombr-in-houston-tickets-oct-17-2026"
+    },
+    {
+      "source": "concerts50-houston",
+      "eventId": "tame-impala-toyota-center-houston-tx-2026-09-19-9e443a8c",
+      "summary": "Tame Impala",
+      "date": "2026-09-19T19:00-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/tame-impala-in-houston-tickets-sep-19-2026"
     },
     {
       "source": "cullen-performance-hall",
@@ -10533,6 +10604,13 @@
       "source": "childrens-museum-houston"
     },
     {
+      "name": "concerts50-houston-concerts50-houston",
+      "type": "Ripper",
+      "events": 18,
+      "expectEmpty": false,
+      "source": "concerts50-houston"
+    },
+    {
       "name": "contemporary-arts-museum-contemporary-arts-museum",
       "type": "Ripper",
       "events": 6,
@@ -10850,7 +10928,7 @@
     {
       "name": "the-gite-gallery-the-gite-gallery",
       "type": "Ripper",
-      "events": 1,
+      "events": 0,
       "expectEmpty": false,
       "source": "the-gite-gallery"
     },
@@ -10913,7 +10991,7 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 828,
+      "events": 846,
       "expectEmpty": false,
       "source": "tag-music"
     },
@@ -10976,7 +11054,7 @@
     {
       "name": "tag-art",
       "type": "Aggregate",
-      "events": 227,
+      "events": 226,
       "expectEmpty": false,
       "source": "tag-art"
     },
@@ -11037,6 +11115,13 @@
       "source": "tag-museum"
     },
     {
+      "name": "tag-concerts",
+      "type": "Aggregate",
+      "events": 18,
+      "expectEmpty": false,
+      "source": "tag-concerts"
+    },
+    {
       "name": "tag-museums",
       "type": "Aggregate",
       "events": 7,
@@ -11081,7 +11166,7 @@
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 565,
+      "events": 564,
       "expectEmpty": false,
       "source": "tag-community"
     },
@@ -11214,7 +11299,7 @@
     {
       "name": "tag-gallery",
       "type": "Aggregate",
-      "events": 2,
+      "events": 1,
       "expectEmpty": false,
       "source": "tag-gallery"
     },
@@ -11245,13 +11330,6 @@
       "events": 10,
       "expectEmpty": false,
       "source": "tag-clear-lake"
-    },
-    {
-      "name": "tag-concerts",
-      "type": "Aggregate",
-      "events": 0,
-      "expectEmpty": false,
-      "source": "tag-concerts"
     },
     {
       "name": "tag-fifa",
@@ -11466,7 +11544,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 2095,
+      "events": 2112,
       "expectEmpty": false,
       "source": "tag-all"
     },

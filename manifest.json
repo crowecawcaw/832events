@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-08T04:01:18.116Z",
+  "lastUpdated": "2026-08-08T09:35:41.730Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -124,6 +124,23 @@
             "Kids",
             "Museum",
             "Museum District"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "concerts50-houston",
+      "description": "Concerts50 Houston",
+      "friendlyLink": "https://concerts50.com/upcoming-concerts-in-texas/houston",
+      "calendars": [
+        {
+          "name": "concerts50-houston",
+          "friendlyName": "Concerts50 Houston",
+          "icsUrl": "concerts50-houston-concerts50-houston.ics",
+          "rssUrl": "concerts50-houston-concerts50-houston.rss",
+          "tags": [
+            "Music",
+            "Concerts"
           ]
         }
       ]
@@ -1203,6 +1220,7 @@
     "Comedy",
     "Community",
     "Concert",
+    "Concerts",
     "Culinary",
     "Culture",
     "Dance",
