@@ -1,0 +1,12 @@
+name: Houston Music Events Calendar
+status: investigating
+url: https://web-production-5f6c5.up.railway.app
+platform: custom
+tags:
+  - Music
+firstSeen: "2026-08-08"
+lastChecked: "2026-08-08"
+notes: |
+  Custom-built event calendar for 30+ Houston venues (713 Music Hall, House of Blues, Toyota Center, etc.).
+  Has proper filtering UI (venue, genre, date range) but currently shows zero events.
+  Possible staging environment or event pipeline not running. Needs clarification before implementation.

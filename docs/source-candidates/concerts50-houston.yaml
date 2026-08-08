@@ -1,0 +1,14 @@
+name: Concerts50 Houston
+status: added
+platform: custom
+url: https://concerts50.com/upcoming-concerts-in-texas/houston
+tags:
+  - Music
+  - Concerts
+firstSeen: "2026-08-08"
+lastChecked: "2026-08-08"
+pr: pending
+notes: |
+  Houston-focused concert listing with 40+ events on live page (House of Blues: 124, White Oak: 121, Toyota Center: 40+).
+  Custom HTML ripper parses server-rendered event slides. Built locally: 18 events from sample data.
+  All validation and tests pass. Ready for CI verification and deployment.
