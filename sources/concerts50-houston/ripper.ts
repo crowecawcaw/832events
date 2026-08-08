@@ -36,6 +36,7 @@ import {
     ParseError,
 } from "../../lib/config/schema.js";
 import { getFetchForConfig } from "../../lib/config/proxy-fetch.js";
+import { decodeEntities } from "../../lib/text-normalize.js";
 import { createHash } from "crypto";
 
 /**
@@ -61,6 +62,16 @@ function hashEventId(artist: string, venue: string, dateStr: string): string {
 }
 
 /**
+ * Pre-compiled regex for parsing time strings like "7:00 PM" or "8:30 AM".
+ */
+const TIME_REGEX = /(\d{1,2}):(\d{2})\s*(AM|PM|am|pm)/i;
+
+/**
+ * Pre-compiled regex for parsing date/time strings like "Aug 9 · Sun, 7:00 PM".
+ */
+const DATE_REGEX = /([A-Z][a-z]{2,})\s+(\d{1,2})\s*(?:·\s*(?:[A-Z][a-z]+,)?\s*)?(\d{1,2}:\d{2})\s*(AM|PM|am|pm)/i;
+
+/**
  * Month abbreviation/name to number mapping.
  */
 const monthMap: Record<string, number> = {
@@ -82,7 +93,7 @@ function monthToNumber(monthStr: string): number | null {
  * Returns [hour, minute] in 24-hour format or null if unparseable.
  */
 function parseTime(timeStr: string): [number, number] | null {
-    const match = timeStr.match(/(\d{1,2}):(\d{2})\s*(AM|PM|am|pm)/i);
+    const match = timeStr.match(TIME_REGEX);
     if (!match) {
         return null;
     }
@@ -113,12 +124,9 @@ function parseDateTimeString(dateTimeStr: string): { date: LocalDate; time: Loca
     // Match pattern: "Month Day · Day, Time"
     // Group 1: Month (3+ letters)
     // Group 2: Day (1-2 digits)
-    // Group 3: Weekday (optional, 3+ letters)
-    // Group 4: Time (H:MM or HH:MM)
-    // Group 5: AM/PM
-    const match = dateTimeStr.match(
-        /([A-Z][a-z]{2,})\s+(\d{1,2})\s*(?:·\s*(?:[A-Z][a-z]+,)?\s*)?(\d{1,2}:\d{2})\s*(AM|PM|am|pm)/i
-    );
+    // Group 3: Time (H:MM or HH:MM)
+    // Group 4: AM/PM
+    const match = dateTimeStr.match(DATE_REGEX);
 
     if (!match) {
         return null;
@@ -141,17 +149,41 @@ function parseDateTimeString(dateTimeStr: string): { date: LocalDate; time: Loca
     const [hour, minute] = timeComponents;
 
     // Determine year: use current year if date is in the future, otherwise next year
+    // Handle leap year edge case: Feb 29 in leap years must be adjusted when rolling to non-leap years
     const today = LocalDate.now();
     let year = today.year();
-    let testDate = LocalDate.of(year, month, day);
+    let date: LocalDate;
 
-    if (testDate.isBefore(today)) {
+    try {
+        // Try current year first
+        date = LocalDate.of(year, month, day);
+    } catch (err) {
+        // If date is invalid in current year (e.g., Feb 29 in non-leap year), adjust day
+        const adjustedDay = day > 28 ? 28 : day;
+        try {
+            date = LocalDate.of(year, month, adjustedDay);
+        } catch (err2) {
+            return null;
+        }
+    }
+
+    // Check if we need to roll to next year
+    if (date.isBefore(today)) {
         year = year + 1;
-        testDate = LocalDate.of(year, month, day);
+        try {
+            date = LocalDate.of(year, month, day);
+        } catch (err) {
+            // If date is invalid in next year too (e.g., Feb 29 in non-leap year), adjust day
+            const adjustedDay = day > 28 ? 28 : day;
+            try {
+                date = LocalDate.of(year, month, adjustedDay);
+            } catch (err2) {
+                return null;
+            }
+        }
     }
 
     try {
-        const date = testDate;
         const time = LocalTime.of(hour, minute);
         return { date, time };
     } catch (err) {
@@ -163,13 +195,7 @@ function parseDateTimeString(dateTimeStr: string): { date: LocalDate; time: Loca
  * Sanitize venue name by removing HTML entities and extra whitespace.
  */
 function sanitizeVenue(venueText: string): string {
-    return venueText
-        .replace(/&amp;/g, "&")
-        .replace(/&lt;/g, "<")
-        .replace(/&gt;/g, ">")
-        .replace(/&quot;/g, '"')
-        .replace(/&#39;/g, "'")
-        .trim();
+    return decodeEntities(venueText).trim();
 }
 
 export default class Concerts50HoustonRipper implements IRipper {
