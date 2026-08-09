@@ -1,0 +1,21 @@
+name: menil-collection
+type: eventbrite
+expectEmpty: true
+description: "Menil Collection"
+url: https://www.menil.org/
+friendlyLink: https://www.menil.org/visit/calendar
+tags:
+  - Art
+  - Museums
+  - Midtown
+geo:
+  lat: 29.7427
+  lng: -95.4142
+  label: "Menil Collection, 1533 Sul Ross St, Houston, TX 77006"
+calendars:
+  - name: menil-collection
+    friendlyname: "Menil Collection"
+    timezone: America/Chicago
+    config:
+      organizerId: "103448972041"
+      defaultLocation: "Houston, TX"

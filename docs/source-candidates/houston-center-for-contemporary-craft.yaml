@@ -1,12 +1,12 @@
 name: Houston Center for Contemporary Craft
-status: investigating
+status: added
 platform: Eventbrite
 url: https://www.eventbrite.com/o/houston-center-for-contemporary-craft-13485803283
 tags:
   - Art
   - Craft
-  - Gallery
+  - Workshops
   - Midtown
 firstSeen: 2026-06-20
-lastChecked: 2026-06-20
-notes: Contemporary craft center with Eventbrite events. ICS feed URL returned 404 — need correct API endpoint.
+lastChecked: 2026-08-09
+notes: Contemporary craft center with Eventbrite integration. Implemented as built-in Eventbrite ripper.

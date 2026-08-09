@@ -1,0 +1,22 @@
+name: houston-center-for-contemporary-craft
+type: eventbrite
+expectEmpty: true
+description: "Houston Center for Contemporary Craft"
+url: https://www.crafthoustonarts.org/
+friendlyLink: https://www.crafthoustonarts.org/events/
+tags:
+  - Art
+  - Craft
+  - Workshops
+  - Midtown
+geo:
+  lat: 29.7465
+  lng: -95.3901
+  label: "Houston Center for Contemporary Craft, 4500 Main St, Houston, TX 77002"
+calendars:
+  - name: houston-center-for-contemporary-craft
+    friendlyname: "Houston Center for Contemporary Craft"
+    timezone: America/Chicago
+    config:
+      organizerId: "13485803283"
+      defaultLocation: "Houston, TX"

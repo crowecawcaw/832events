@@ -1,0 +1,19 @@
+name: houston-international-festival
+type: eventbrite
+expectEmpty: true
+description: "Houston International Festival"
+url: https://www.houstonintlfest.org/
+friendlyLink: https://www.houstonintlfest.org/
+tags:
+  - Festival
+  - Culture
+  - Downtown
+  - Music
+geo: null
+calendars:
+  - name: houston-international-festival
+    friendlyname: "Houston International Festival"
+    timezone: America/Chicago
+    config:
+      organizerId: "107765316421"
+      defaultLocation: "Houston, TX"
