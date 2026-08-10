@@ -23,8 +23,13 @@
  * transport is just a carrier. Same `{version, entries}` shape as geo-cache.json.
  */
 
-import { readFile, writeFile } from "fs/promises";
+import { rename, unlink } from "fs/promises";
+import { createReadStream, createWriteStream } from "fs";
+import { pipeline } from "stream/promises";
 import { createHash } from "crypto";
+import parser from "stream-json/parser.js";
+import pick from "stream-json/filters/pick.js";
+import streamObject from "stream-json/streamers/stream-object.js";
 
 export interface FetchCacheEntry {
   /** ISO timestamp of the last successful live fetch. */
@@ -51,7 +56,15 @@ export interface StaleServe {
   error: string;
 }
 
-export const DEFAULT_TTL_HOURS = 24;
+/**
+ * Hard freshness cap: an entry younger than this is eligible to be served from
+ * cache without a network call. Raised from 24h to 7 days so the build no longer
+ * refetches every source the moment it crosses a day old (the "everything
+ * expires at once" cliff). Freshness within the window is maintained instead by
+ * proactive refresh of the oldest slice on main builds (see
+ * `selectOldestEntriesForRefresh` + docs/cache-freshness-strategy.md).
+ */
+export const DEFAULT_TTL_HOURS = 24 * 7;
 
 /** Entries older than this are dropped on save so removed sources / changed
  *  URLs don't accumulate forever in the persisted cache blob. */
@@ -98,35 +111,154 @@ export function emptyFetchCache(): FetchCache {
   return { version: 1, entries: {} };
 }
 
+/** How many leading bytes to read to find the `"version"` field. The writer
+ *  always emits it as the first ~30 bytes (`{\n  "version": N,\n  "entries":
+ *  {`), so this is a generous margin, not a tight fit to the current format. */
+const VERSION_HEAD_BYTES = 4096;
+
+/** Reads just the leading bytes of the cache file and pulls out `version` —
+ *  never touches the (potentially huge) `entries` blob. Returns `null` if no
+ *  `"version": <number>` is found in the head (unexpected/foreign content). */
+async function readCacheVersion(filePath: string): Promise<number | null> {
+  const head = await new Promise<string>((resolve, reject) => {
+    const stream = createReadStream(filePath, { start: 0, end: VERSION_HEAD_BYTES - 1, encoding: "utf-8" });
+    let data = "";
+    stream.on("data", (chunk) => { data += chunk; });
+    stream.on("end", () => resolve(data));
+    stream.on("error", reject);
+  });
+  const match = head.match(/"version"\s*:\s*(\d+)/);
+  return match ? Number(match[1]) : null;
+}
+
+/**
+ * Loads the cache via a streaming JSON parser rather than reading the whole
+ * file into one string. A cold-start build fetches every source fresh, and
+ * the accumulated content across ~300 sources can grow large enough to
+ * exceed the JS engine's max string length (V8's ceiling is roughly
+ * 512MB-1GB depending on build) — `readFile(path, "utf-8")` +
+ * `JSON.parse()` throws `RangeError: Invalid string length` on a cache that
+ * size and crashes the whole build. `saveFetchCache` already writes
+ * entry-by-entry for the same reason (see its docstring); this mirrors that
+ * on the read side with `stream-json`, pulling `entries` out one property at
+ * a time so no single string ever holds more than one entry's content.
+ */
 export async function loadFetchCache(filePath: string): Promise<FetchCache> {
+  let version: number | null;
   try {
-    const raw = await readFile(filePath, "utf-8");
-    const parsed = JSON.parse(raw);
-    if (
-      typeof parsed === "object" &&
-      parsed !== null &&
-      typeof parsed.version === "number" &&
-      typeof parsed.entries === "object" &&
-      parsed.entries !== null
-    ) {
-      return parsed as FetchCache;
-    }
-    console.warn("fetch-cache.json has unexpected shape, starting with empty cache");
-    return emptyFetchCache();
+    version = await readCacheVersion(filePath);
   } catch (err: any) {
     if (err?.code === "ENOENT") {
       return emptyFetchCache();
     }
-    if (err instanceof SyntaxError) {
-      console.warn(`fetch-cache.json is not valid JSON, starting with empty cache: ${err.message}`);
-      return emptyFetchCache();
-    }
     throw err;
   }
+  if (version === null) {
+    console.warn("fetch-cache.json has unexpected shape, starting with empty cache");
+    return emptyFetchCache();
+  }
+
+  const entries: Record<string, FetchCacheEntry> = {};
+  // Tracks whether the picked "entries" subtree ever produced a token, so we
+  // can tell "entries key present but empty" (a legitimate cache state — no
+  // warning) apart from "entries key absent entirely" (unexpected shape,
+  // same as the old typeof-based check). Both otherwise leave `entries` as
+  // `{}`, so entry count alone can't distinguish them.
+  let sawEntriesKey = false;
+  const entriesPick = pick.asStream({ filter: "entries" });
+  entriesPick.on("data", () => { sawEntriesKey = true; });
+  try {
+    await pipeline(
+      createReadStream(filePath),
+      parser.asStream(),
+      entriesPick,
+      streamObject.asStream(),
+      async function (source: AsyncIterable<{ key: string; value: FetchCacheEntry }>) {
+        for await (const { key, value } of source) {
+          entries[key] = value;
+        }
+      },
+    );
+  } catch (err: any) {
+    // Errors with a `.code` (ENOENT, EACCES, EIO, …) are fs/system failures,
+    // not malformed content — rethrow them like the old readFile-based
+    // implementation did for anything past ENOENT/SyntaxError. stream-json's
+    // own parse-failure errors never carry a `.code`, so this reliably
+    // isolates "the JSON itself is broken" (empty cache) from "something
+    // went wrong reading the file" (propagate).
+    if (err?.code) {
+      throw err;
+    }
+    console.warn(`fetch-cache.json is not valid JSON, starting with empty cache: ${err instanceof Error ? err.message : String(err)}`);
+    return emptyFetchCache();
+  }
+
+  if (!sawEntriesKey) {
+    console.warn("fetch-cache.json has unexpected shape, starting with empty cache");
+    return emptyFetchCache();
+  }
+
+  return { version, entries };
 }
 
+/**
+ * Persists the cache as JSON, streamed entry-by-entry rather than built as one
+ * `JSON.stringify(cache)` string. Cold-start builds fetch every source fresh,
+ * and the accumulated content across ~300 sources can grow large enough to
+ * exceed the JS engine's max string length — building the whole cache as a
+ * single string throws `RangeError: Invalid string length` and crashes the
+ * build. There's no size cap here: entries age out via `pruneCache`
+ * (MAX_ENTRY_AGE_DAYS), and the cache is otherwise left to grow with the
+ * dataset rather than silently dropping content once a size threshold is
+ * crossed. Serializing (and writing) one entry at a time means the largest
+ * string ever held in memory is a single entry's, never the whole cache's, so
+ * the string-length ceiling is never in play regardless of total cache size.
+ *
+ * Written to a temp file and renamed into place only once fully written, so a
+ * write that fails or is interrupted mid-stream (OOM, timeout, cancellation —
+ * the CI workflow saves with `if: always()`) never leaves a truncated/corrupt
+ * `filePath` that `loadFetchCache` would silently treat as an empty cache on
+ * the next build. (`geo-cache.json`/`event-uncertainty-cache.json` stay on a
+ * plain `writeFile` — they're small, bounded caches with no large per-entry
+ * payloads, so they don't need the streaming or the same interrupted-write
+ * risk isn't there in practice.)
+ */
 export async function saveFetchCache(cache: FetchCache, filePath: string): Promise<void> {
-  await writeFile(filePath, JSON.stringify(cache, null, 2), "utf-8");
+  const tmpPath = `${filePath}.tmp-${process.pid}`;
+  const stream = createWriteStream(tmpPath, { encoding: "utf-8" });
+  // 'close' fires once the underlying fd is fully released — after 'finish' on
+  // a clean end(), or after destroy() on an error. Waiting for it (rather than
+  // unlinking right after the promise below settles) avoids racing a temp file
+  // whose fs.open() was still in flight when destroy() was called.
+  const closed = new Promise<void>((res) => stream.once("close", res));
+
+  try {
+    await new Promise<void>((resolve, reject) => {
+      stream.on("error", reject);
+      stream.on("finish", resolve);
+
+      try {
+        stream.write(`{\n  "version": ${cache.version},\n  "entries": {`);
+        const keys = Object.keys(cache.entries);
+        keys.forEach((key, i) => {
+          const entryJson = JSON.stringify(cache.entries[key], null, 2).replace(/\n/g, "\n    ");
+          stream.write(`${i === 0 ? "" : ","}\n    ${JSON.stringify(key)}: ${entryJson}`);
+        });
+        stream.write(`${keys.length > 0 ? "\n  " : ""}}\n}\n`);
+        stream.end();
+      } catch (err) {
+        // Passing the error to destroy() emits it on the stream, which the
+        // "error" listener above turns into the rejection below.
+        stream.destroy(err instanceof Error ? err : new Error(String(err)));
+      }
+    });
+    await closed;
+    await rename(tmpPath, filePath);
+  } catch (err) {
+    await closed;
+    await unlink(tmpPath).catch(() => {});
+    throw err;
+  }
 }
 
 /** Drops entries older than `maxAgeMs` (default MAX_ENTRY_AGE_DAYS). Returns the
@@ -163,20 +295,107 @@ export function isFresh(entry: FetchCacheEntry, nowMs: number, ttlMs: number = g
 
 let activeCache: FetchCache | null = null;
 let staleServeLog: StaleServe[] = [];
+// Keys to proactively refresh this build: treated as a forced cache miss in
+// `lookupFreshEntry` even when still within the TTL, so they re-fetch live. The
+// build computes this set (the oldest ~20%) on main builds only; empty
+// otherwise. See selectOldestEntriesForRefresh + docs/cache-freshness-strategy.md.
+let proactiveRefreshKeys: Set<string> = new Set();
+
+/** Hit/miss telemetry for the fetch cache, surfaced in the build report so the
+ *  cache's effectiveness is observable per build instead of inferred from
+ *  wall-clock. `freshHits` were served from cache (no network); `liveFetches`
+ *  hit the network because the entry was stale/missing; `liveFailures` are the
+ *  subset of live fetches that threw (and then either stale-served or rethrew);
+ *  `staleServes` were satisfied from an over-TTL copy after a live failure.
+ *
+ *  Proactive-refresh observability (main builds only; see
+ *  docs/cache-freshness-strategy.md): `cacheSize` is the entry count of the
+ *  loaded cache (M); `forcedRefresh` is how many keys were selected for
+ *  proactive refresh (N, the oldest ~20% of M); `forcedRefreshApplied` is how
+ *  many of those selected keys were *actually requested* this build (and thus
+ *  force-missed → re-fetched). A large gap between `forcedRefresh` and
+ *  `forcedRefreshApplied` means the refresh budget is landing on orphaned cache
+ *  entries (detail pages, removed sources) that aren't re-requested. */
+export interface FetchCacheStats {
+  freshHits: number;
+  liveFetches: number;
+  liveFailures: number;
+  staleServes: number;
+  cacheSize: number;
+  forcedRefresh: number;
+  forcedRefreshApplied: number;
+}
+
+function emptyStats(): FetchCacheStats {
+  return {
+    freshHits: 0,
+    liveFetches: 0,
+    liveFailures: 0,
+    staleServes: 0,
+    cacheSize: 0,
+    forcedRefresh: 0,
+    forcedRefreshApplied: 0,
+  };
+}
+
+let stats: FetchCacheStats = emptyStats();
 
 export function initFetchCache(cache: FetchCache): void {
   activeCache = cache;
   staleServeLog = [];
+  stats = emptyStats();
+  stats.cacheSize = Object.keys(cache.entries).length;
+  proactiveRefreshKeys = new Set();
+}
+
+/**
+ * Select the oldest `fraction` of cache entries (by `fetchedAt`) to proactively
+ * refresh. Pure function — returns the key set; the caller passes it to
+ * `setProactiveRefreshKeys`. Entries with an unparseable `fetchedAt` sort oldest
+ * (refreshed first). `fraction` is clamped to [0, 1]; the count rounds up so a
+ * non-empty cache with a positive fraction always refreshes at least one entry.
+ */
+export function selectOldestEntriesForRefresh(cache: FetchCache, fraction: number): Set<string> {
+  const clamped = Math.min(1, Math.max(0, fraction));
+  if (clamped === 0) return new Set();
+  const keys = Object.keys(cache.entries);
+  if (keys.length === 0) return new Set();
+  const count = Math.min(keys.length, Math.ceil(keys.length * clamped));
+  const age = (k: string): number => {
+    const t = Date.parse(cache.entries[k].fetchedAt);
+    return Number.isNaN(t) ? -Infinity : t; // unparseable → oldest
+  };
+  const sorted = [...keys].sort((a, b) => age(a) - age(b)); // ascending: oldest first
+  return new Set(sorted.slice(0, count));
+}
+
+/** Inject the set of keys to force-refresh this build (forced cache miss). */
+export function setProactiveRefreshKeys(keys: Set<string>): void {
+  proactiveRefreshKeys = keys;
+  stats.forcedRefresh = keys.size;
 }
 
 export function getFetchCache(): FetchCache | null {
   return activeCache;
 }
 
-/** Test/teardown helper — clears the injected cache and stale-serve log. */
+/** Test/teardown helper — clears the injected cache, stale-serve log, and stats. */
 export function resetFetchCache(): void {
   activeCache = null;
   staleServeLog = [];
+  stats = emptyStats();
+  proactiveRefreshKeys = new Set();
+}
+
+export function recordFreshHit(): void { stats.freshHits++; }
+export function recordLiveFetch(): void { stats.liveFetches++; }
+export function recordLiveFailure(): void { stats.liveFailures++; }
+
+/** Snapshot of the current counters. Read after the rip/fetch phase to report
+ *  the cache hit rate. Independent of `drainStaleServes` (which clears the log),
+ *  so the order of the two calls doesn't matter. */
+export function getFetchCacheStats(): FetchCacheStats {
+  return { ...stats };
 }
 
 /** Returns and clears the accumulated stale-serve log. */
@@ -188,11 +407,23 @@ export function drainStaleServes(): StaleServe[] {
 
 export function recordStaleServe(serve: StaleServe): void {
   staleServeLog.push(serve);
+  stats.staleServes++;
 }
 
-/** A cache entry for `key` that is still fresh, or undefined. */
+/** A cache entry for `key` that is still fresh, or undefined. A key selected for
+ *  proactive refresh is treated as a miss so it re-fetches live this build. */
 export function lookupFreshEntry(key: string, nowMs: number): FetchCacheEntry | undefined {
   if (!activeCache) return undefined;
+  if (proactiveRefreshKeys.has(key)) {
+    // A selected key that's actually requested this build — count it so we can
+    // tell real (applied) refreshes from budget spent on orphaned entries. Drop
+    // it from the set on first application so a re-request in the same build
+    // serves the freshly-fetched copy (no redundant re-fetch) and
+    // forcedRefreshApplied stays a distinct-key count bounded by forcedRefresh.
+    proactiveRefreshKeys.delete(key);
+    stats.forcedRefreshApplied++;
+    return undefined;
+  }
   const entry = activeCache.entries[key];
   if (entry && isFresh(entry, nowMs)) return entry;
   return undefined;

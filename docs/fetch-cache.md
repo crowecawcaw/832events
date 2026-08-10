@@ -51,9 +51,9 @@ function returned by `getFetchForConfig` is wrapped in `withCache`
 3. **Live failure with a stale copy present** → serve the stale copy so events
    aren't lost, and record a *stale serve* (see Reporting below).
 
-When no cache is injected (unit tests, single-ripper runs) `withCache` is a
-**transparent pass-through** — it returns the underlying response untouched,
-so nothing changes for those callers.
+When no cache is injected (unit tests, single-ripper runs, the out-of-band
+runner) `withCache` is a **transparent pass-through** — it returns the
+underlying response untouched, so nothing changes for those callers.
 
 Because the cached payload is **re-parsed on every build** (external ICS is
 parsed normally; rippers re-run against cached page HTML/JSON), the events index
@@ -67,6 +67,48 @@ The TTL defaults to **24h** (matching the daily cron) and is overridable via the
 large value for a long local iteration session, or `0` to force every entry
 stale). Entries older than `MAX_ENTRY_AGE_DAYS` (30) are pruned on save so
 removed sources and changed URLs don't accumulate in the persisted blob.
+
+## Loading at scale: streaming JSON, no size cap
+
+The cache **has no total-size or per-entry size cap** — it's allowed to grow
+with the dataset (source count × their per-URL payload sizes), bounded only by
+`MAX_ENTRY_AGE_DAYS`. In production this has reached **~508MB across 2,134
+entries**, and both save and load have to handle content at that scale without
+ever building the whole cache as a single in-memory string:
+
+- `saveFetchCache` streams the file out **entry-by-entry** (a hand-written
+  writer, not `JSON.stringify(cache)`).
+- `loadFetchCache` streams it back in the same way, via `stream-json`
+  (`parser` → `pick({filter: "entries"})` → `streamObject()`, piped with
+  Node's `stream/promises` `pipeline` so an error on *any* stage of the
+  pipeline is caught — a plain `.pipe()` chain only surfaces errors from the
+  final stream). The `version` field is read separately from just the first
+  4KB of the file (`readCacheVersion`), since it's a scalar that always
+  appears in the fixed-shape header the writer emits — no need to stream the
+  whole file just to find one number.
+
+**Why this matters:** V8 enforces a hard ceiling on a single JS string
+(roughly 512MB-1GB depending on the Node build) — a plain
+`readFile(path, "utf-8")` + `JSON.parse()` throws
+`RangeError: Invalid string length` once the file crosses that line, and
+crashes the whole build (this happened in production — see the "2026-07-26
+incident" below). The streaming reader never materializes more than one
+entry's content as a string at a time, so there's no ceiling to hit regardless
+of how large the total cache grows. `lib/fetch-cache.test.ts` has a regression
+test for both directions (`"round-trips a cache with many sizable entries via
+streaming save AND load…"`); the fix was additionally verified manually
+against a synthetic 629MB/2,516-entry file — the old `readFile`-based load
+throws on it, the streaming load doesn't.
+
+**2026-07-26 incident:** a main-branch build grew the cache to 508.3MB/2,134
+entries, crossing V8's string-length ceiling. Every subsequent build —
+including unrelated PRs — restored that same cache via
+`restore-keys: fetch-cache-v1-` and crashed on load before `pruneCache` (which
+only runs *after* a successful load) ever got a chance to shrink it, so the
+cache couldn't self-heal. Fixed by switching `loadFetchCache` to the streaming
+implementation described above, rather than capping/evicting cache content —
+the size itself isn't a problem, only the old read path's inability to handle
+it was.
 
 ## Working on a single source: `ONLY_SOURCE`
 
@@ -110,14 +152,10 @@ the default branch. So PR preview builds *read* the cache the daily `main` build
 writes and make almost no outgoing requests themselves; a PR build's own save is
 scoped to the PR and can't pollute `main`.
 
-**Cold start / forks:** `fetch-cache.json` is **gitignored — never committed**.
-When no Actions Cache entry exists (first run, or a fork PR without cache
-access), the loader starts from an empty cache (`{"version":1,"entries":{}}`)
-and the build refetches every source once. The Actions Cache holds the live
-data; the file is regenerated on disk each build. It used to be committed as an
-"empty baseline," but populated copies kept riding into `main` through
-auto-merged discovery PRs and conflicting on rebase — gitignoring it removes
-that failure mode entirely.
+**Cold start / forks:** an empty committed `fetch-cache.json`
+(`{"version":1,"entries":{}}`) is the baseline when no Actions Cache entry
+exists (first run, or a fork PR without cache access). Never commit a populated
+version — let the Actions Cache hold the live data.
 
 ## Reporting: `proxyStaleServes`
 
@@ -143,5 +181,52 @@ through every surface: the step summary and console summary
 (`skills/build-report/SKILL.md`).
 
 A single transient blip clears itself on the next successful fetch. A source
-that keeps serving stale should be investigated; if Browserbase can no longer
-reach a source, set `disabled: true` on it.
+that keeps serving stale should be investigated; for a browserbase source that
+Browserbase can no longer reach, retire it via `skills/proxy-escalation/SKILL.md`
+(browserbase is the last proxy rung).
+
+## Cache effectiveness metrics
+
+To make the cache's effectiveness **observable per build** (rather than inferred
+from wall-clock — a cold cache is the usual cause of a slow build), every build
+emits hit/miss counters under a non-fatal `cacheStats` key in
+`output/build-errors.json`:
+
+```jsonc
+"cacheStats": {
+  "fetch":   { "freshHits": 812, "liveFetches": 14, "liveFailures": 2, "staleServes": 2, "cacheSize": 1180, "forcedRefresh": 236, "forcedRefreshApplied": 9, "lookups": 826, "hitRate": 98 },
+  "geocode": { "cacheHits": 9043, "knownVenueHits": 120, "unresolvableSkips": 610, "networkLookups": 7, "nominatimCalls": 9, "lookups": 9780, "hitRate": 100 }
+}
+```
+
+- **`fetch`** — the source fetch cache. `freshHits` were served from cache (no
+  network); `liveFetches` hit the network because the entry was stale/missing;
+  `liveFailures` are the subset that threw (then stale-served or rethrew);
+  `hitRate` = `freshHits / lookups`.
+  - **Proactive-refresh telemetry** (main builds only; 0 on PR builds):
+    `cacheSize` is the loaded cache's entry count (M); `forcedRefresh` is how
+    many keys were selected for the oldest-slice refresh (N ≈ 20% of M);
+    `forcedRefreshApplied` is how many of those were *actually requested* this
+    build (and thus force-missed → re-fetched). A large `forcedRefresh` with a
+    tiny `forcedRefreshApplied` means the budget is landing on orphaned cache
+    entries (per-event detail pages, removed sources) rather than active
+    sources — see docs/cache-freshness-strategy.md.
+- **`geocode`** — location resolution (`lib/geocoder.ts`). The four resolution
+  counters are **per location** and mutually exclusive: `cacheHits` (geo-cache),
+  `knownVenueHits` (hardcoded table), and `unresolvableSkips` (cached
+  `unresolvable` marker) avoid the network, while `networkLookups` counts
+  locations that fell through to the network path. `lookups` is their sum and
+  `hitRate` = `(lookups − networkLookups) / lookups`. `nominatimCalls` is a
+  separate **per-request** count of Nominatim HTTP calls — the throttled ~1
+  req/sec cost — and can exceed `networkLookups` because one location may try
+  several candidate strings (venue-prefix and suite-stripped retries).
+
+A **low `hitRate`** on either means the corresponding cache was cold for that
+run — e.g. a PR preview that didn't restore `main`'s warm cache — which directly
+explains a slow `Generate calendars` step. These counters are **non-fatal
+telemetry** (not counted in `totalErrors`); like the coverage stats (`geoStats`,
+`photoStats`, `costStats`) they surface in the build-perf reporting surfaces —
+the console summary and step summary (`lib/calendar_ripper.ts`) and the PR
+comment (`pr-preview.yml`) — but are intentionally not wired into the
+site-health surfaces (Discord, the web health dashboard), since cache hit rate
+is a build-performance signal, not a calendar-health signal.
