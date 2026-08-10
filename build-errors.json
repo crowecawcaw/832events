@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-08-10T04:21:04.483Z",
-  "totalErrors": 9,
+  "buildTime": "2026-08-10T10:05:09.926Z",
+  "totalErrors": 4,
   "configErrors": [],
   "sources": [
     {
@@ -90,37 +90,12 @@
       "error": "Error: HTTP 403: "
     }
   ],
-  "geocodeErrors": [
-    {
-      "type": "GeocodeError",
-      "location": "Resurrection MCC - Houston, TX",
-      "source": "concerts50-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Black Magic Social Club",
-      "source": "songkick-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Vertigo Houston",
-      "source": "songkick-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Hollywood Improv (The Main Room), 8162 Melrose Avenue, Hollywood, CA, 90046, United States",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    }
-  ],
+  "geocodeErrors": [],
   "geoStats": {
     "totalEvents": 2030,
     "eventsWithGeo": 1762,
     "eventsWithoutGeo": 268,
-    "geocodeErrors": 4
+    "geocodeErrors": 0
   },
   "uncertainEvents": [],
   "uncertaintyStats": {
@@ -151,15 +126,7 @@
     "external-houston-cinema-arts-society"
   ],
   "expectedEmptyCalendars": [],
-  "proxyStaleServes": [
-    {
-      "source": "texas-parks-wildlife-houston",
-      "url": "https://tpwd.texas.gov/calendar/near-city/houston-events",
-      "cachedAt": "2026-08-08T03:58:33.807Z",
-      "ageHours": 48,
-      "error": "fetch failed"
-    }
-  ],
+  "proxyStaleServes": [],
   "newZeroEventSources": [],
   "newSourceParseErrors": [],
   "urlEntityErrors": [],
@@ -11204,6 +11171,13 @@
       "events": 4,
       "expectEmpty": false,
       "source": "houston-maritime-museum"
+    },
+    {
+      "name": "external-houston-restaurant-weeks",
+      "type": "External",
+      "events": 1,
+      "expectEmpty": false,
+      "source": "houston-restaurant-weeks"
     },
     {
       "name": "external-inprint-houston",
