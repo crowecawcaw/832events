@@ -61,45 +61,6 @@ DTSTART:20281105T060000
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VTIMEZONE
-TZID:America/Chicago
-BEGIN:DAYLIGHT
-TZOFFSETFROM:-0600
-TZOFFSETTO:-0500
-TZNAME:CDT
-DTSTART:20250309T080000
-END:DAYLIGHT
-BEGIN:STANDARD
-TZOFFSETFROM:-0500
-TZOFFSETTO:-0600
-TZNAME:CST
-DTSTART:20251102T070000
-END:STANDARD
-BEGIN:DAYLIGHT
-TZOFFSETFROM:-0600
-TZOFFSETTO:-0500
-TZNAME:CDT
-DTSTART:20260308T080000
-END:DAYLIGHT
-BEGIN:STANDARD
-TZOFFSETFROM:-0500
-TZOFFSETTO:-0600
-TZNAME:CST
-DTSTART:20261101T070000
-END:STANDARD
-BEGIN:DAYLIGHT
-TZOFFSETFROM:-0600
-TZOFFSETTO:-0500
-TZNAME:CDT
-DTSTART:20270314T080000
-END:DAYLIGHT
-BEGIN:STANDARD
-TZOFFSETFROM:-0500
-TZOFFSETTO:-0600
-TZNAME:CST
-DTSTART:20271107T070000
-END:STANDARD
-END:VTIMEZONE
-BEGIN:VTIMEZONE
 TZID:America/Los_Angeles
 BEGIN:DAYLIGHT
 TZOFFSETFROM:-0800
@@ -136,6 +97,45 @@ TZOFFSETFROM:-0700
 TZOFFSETTO:-0800
 TZNAME:PST
 DTSTART:20271107T090000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20250309T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20251102T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20260308T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20261101T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20270314T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20271107T070000
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
@@ -212,142 +212,6 @@ LOCATION:The Comic Strip\, 1568 2nd Avenue\, New York\, NY 10028\, New York\, NY
 ATTACH;FMTTYPE=image/jpeg:https://applications-media.feverup.com/image/upload/f_auto,w_720,h_720/fever2/plan/photo/5d2619f6-48b3-11f1-af1d-da134b150e66.jpeg
 GEO:40.7748283;-73.9536392
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=The Comic Strip 1568 2nd Avenue New York NY 10028 New York NY 10028 United States;X-APPLE-RADIUS=500;X-TITLE=1568 2nd Avenue\, New York\, NY 10028:geo:-73.9536392,40.7748283
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20260809T150000
-DTEND;TZID=America/New_York:20260809T170000
-DTSTAMP:20260515T015156Z
-CREATED:20260502T030000Z
-LAST-MODIFIED:20260515T015156Z
-UID:10004816-1786287600-1786294800@comedycalendar.com
-SUMMARY:Daniel Sloss: BITTER LIVE at The Wilbur (Matinee)
-DESCRIPTION:Official TicketsResale Tickets \nAbout the Performer\nDaniel Sloss is one of Scotland’s most celebrated stand-up comedians\, known for his razor-sharp wit\, dark humor\, and deeply personal storytelling. He first gained international attention with his Netflix specials Dark and Jigsaw\, the latter of which became famous for reportedly causing thousands of breakups worldwide after audiences reconsidered their relationships. \nNow Sloss is back with his brand-new tour\, BITTER — a show that dives headfirst into love\, loss\, and the messy aftermath of both. Expect the same unflinching honesty and comedic brilliance that has made him one of the most talked-about comedians of his generation. His style blends laugh-out-loud moments with genuine emotional depth\, leaving audiences both in stitches and in their feelings. \nEvent Details\n\nDate: Sunday\, August 9\, 2026\nTime: 3:00 PM (Matinee Show)\nVenue: The Wilbur\, 246 Tremont St\, Boston\, MA 02116\nDoors Open: Approximately 2:00 PM\nAge Restriction: 18+ recommended (adult content)\nTicket Prices: From $68 (avg. ~$147)\n\nAbout the Venue\nThe Wilbur is one of Boston’s most iconic and beloved comedy venues\, located in the heart of the Theatre District at 246 Tremont Street. Built in 1914\, this stunning 1\,200-seat theater combines historic elegance with modern amenities\, offering an intimate yet grand atmosphere perfect for stand-up comedy. \nThe venue features excellent sightlines from every seat\, a full bar\, and a warm\, energetic atmosphere that makes every show feel special. Whether you’re in the orchestra\, mezzanine\, or balcony\, you’ll feel close to the action. Parking is available at nearby garages\, and the venue is easily accessible via the MBTA Green and Orange Lines (Boylston and Back Bay stations). \nWhat to Expect\nThis is a rare Sunday matinee performance of Daniel Sloss’s BITTER tour — a perfect afternoon outing for comedy fans who want to experience one of the world’s best stand-up comedians in an intimate Boston setting. The show runs approximately 90 minutes with no intermission. \nSloss performs solo\, commanding the stage with his signature blend of dark comedy and personal narrative. Fans of his Netflix specials will find BITTER to be his most mature and emotionally resonant work yet. Come prepared to laugh hard\, think deeply\, and leave with a new perspective on relationships and life. \nTicket Information\nTicket Prices: From $68 (average ~$147) \nSecure your seats through official Ticketmaster channels or find resale tickets through VividSeats: \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
-URL:https://comedycalendar.com/event/daniel-sloss-bitter-live-at-the-wilbur-matinee/
-LOCATION:The Wilbur\, 246 Tremont St.\, Boston\, MA\, 2116
-ATTACH;FMTTYPE=image/jpeg:https://media.ticketmaster.com/en-us/dam/a/cfa/e476394e-b2ce-4a11-8230-879e15686cfa_TABLET_LANDSCAPE_LARGE_16_9.jpg
-GEO:42.3507311;-71.0647252
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=The Wilbur 246 Tremont St. Boston MA 2116;X-APPLE-RADIUS=500;X-TITLE=246 Tremont St.:geo:-71.0647252,42.3507311
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260809T180000
-DTEND;TZID=America/Chicago:20260809T200000
-DTSTAMP:20260505T040000Z
-CREATED:20260505T040000Z
-LAST-MODIFIED:20260505T040000Z
-UID:10004953-1786298400-1786305600@comedycalendar.com
-SUMMARY:Charleston White LIVE at Bricktown Comedy Club Tulsa
-DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \n\nOfficial Tickets\nResale Tickets\n\nCharleston White LIVE at Bricktown Comedy Club Tulsa\nOne of comedy’s most provocative and fearless voices\, Charleston White\, is bringing his electrifying stand-up show to Bricktown Comedy Club Tulsa. Known for his raw honesty\, street-smart humor\, and unapologetic storytelling\, Charleston White delivers a comedy experience unlike any other. \nEvent Details\nDate: Sunday\, August 9\, 2026\nTime: 6:00 PM (Doors open 5:00 PM)\nVenue: Bricktown Comedy Club Tulsa\nAddress: 5982 S Yale Ave\, Tulsa\, OK 74135\nAge Requirement: 18+ Only\nTicket Prices: $97 – $176 (General Admission & Premium) \nAbout Charleston White\nCharleston White is a comedian\, activist\, and social media personality who has built a massive following with his unfiltered takes on life\, culture\, and society. Rising from humble beginnings in Fort Worth\, Texas\, White has channeled his life experiences into a powerful comedic voice that resonates with audiences across the country. His viral videos and live performances have earned him millions of fans who appreciate his bold\, no-nonsense approach to comedy and social commentary. \nWhat to Expect\n\nBold\, unfiltered stand-up comedy with real talk and real laughs\nPowerful storytelling rooted in authentic life experiences\nHigh-energy performance that keeps the crowd engaged all night\nThought-provoking humor that challenges perspectives\nAn intimate comedy club experience at Bricktown Comedy Club Tulsa\n\nVenue Information\nBricktown Comedy Club Tulsa is Tulsa’s home for live stand-up comedy\, located at 5982 S Yale Ave. The intimate venue offers a full bar and dining menu\, creating the perfect atmosphere for a memorable night out. Every seat puts you close to the action. \nTicket Information\nTickets for Charleston White at Bricktown Comedy Club Tulsa start at $97 for General Admission and go up to $176 for Premium seating. Only 48 tickets remain — secure yours now! \n\nOfficial Tickets\nResale Tickets\n\nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you.\nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
-URL:https://comedycalendar.com/event/charleston-white-live-at-bricktown-comedy-club-tulsa/
-LOCATION:Bricktown Comedy Club\, 5982 S Yale Ave\, Tulsa\, OK\, 74135\, United States
-ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/04/comedy-WRvTmn.jpg
-GEO:36.0773128;-95.9241109
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Bricktown Comedy Club 5982 S Yale Ave Tulsa OK 74135 United States;X-APPLE-RADIUS=500;X-TITLE=5982 S Yale Ave:geo:-95.9241109,36.0773128
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260809T180000
-DTEND;TZID=America/Chicago:20260809T200000
-DTSTAMP:20260523T184417Z
-CREATED:20260505T201900Z
-LAST-MODIFIED:20260523T184417Z
-UID:10004959-1786298400-1786305600@comedycalendar.com
-SUMMARY:Kelly Collette LIVE at Loony Bin Comedy Club Tulsa
-DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nOfficial Tickets\nResale Tickets\nKelly Collette LIVE at Loony Bin Comedy Club Tulsa\nDon’t miss Kelly Collette for one night only at Loony Bin Comedy Club Tulsa! A standup comedian\, writer\, and storyteller\, Kelly has gained millions of views on social media with her hilarious\, relatable content. This is a rare chance to see her live in Tulsa. \nEvent Details\nDate: Sunday\, August 9\, 2026\nTime: 6:00 PM (Doors open 5:00 PM)\nVenue: Loony Bin Comedy Club Tulsa\nAddress: 6808 S Memorial Dr\, Ste. 234\, Tulsa\, OK 74133\nAge Requirement: 18+ Only\nTicket Price: $22 \nAbout Kelly Collette\nKelly Collette is a standup comedian\, writer\, and storyteller who has built a massive social media following with her hilarious\, authentic content. Her clips have gained millions of views across platforms\, making her one of the most exciting rising voices in comedy. Known for her sharp wit\, relatable humor\, and engaging storytelling\, Kelly brings the same energy and authenticity to her live performances that has made her a fan favorite online. \nWhat to Expect\n\nHilarious stand-up comedy from a viral social media sensation\nSharp wit and relatable storytelling\nAuthentic humor that connects with audiences of all backgrounds\nOne night only in Tulsa — a rare live performance opportunity\nIntimate comedy club atmosphere at Loony Bin Tulsa\n\nVenue Information\nLoony Bin Comedy Club Tulsa at 6808 S Memorial Dr\, Ste. 234 is Tulsa’s premier intimate comedy venue. With no seat more than 50 feet from the stage\, a full bar\, and a complete dining menu\, it’s the perfect setting for a memorable night of laughs. \nTicket Information\nTickets for Kelly Collette at Loony Bin Comedy Club Tulsa are just $22. This is a one-night-only engagement — don’t miss out! \nOfficial Tickets\nResale Tickets\nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you.\nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
-URL:https://comedycalendar.com/event/kelly-collette-live-at-loony-bin-comedy-club-tulsa/
-LOCATION:Loony Bin Comedy Club Tulsa\, 6808 South Memorial Dr Ste. 234\, Tulsa\, 74133\, United States
-ATTACH;FMTTYPE=image/jpeg:https://a.vsstatic.com/mobile/app/category/comedy.jpg
-GEO:36.0661092;-95.8891342
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Loony Bin Comedy Club Tulsa 6808 South Memorial Dr Ste. 234 Tulsa 74133 United States;X-APPLE-RADIUS=500;X-TITLE=6808 South Memorial Dr Ste. 234:geo:-95.8891342,36.0661092
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Los_Angeles:20260809T190000
-DTEND;TZID=America/Los_Angeles:20260809T210000
-DTSTAMP:20260503T040000Z
-CREATED:20260503T040000Z
-LAST-MODIFIED:20260503T040000Z
-UID:10004892-1786302000-1786309200@comedycalendar.com
-SUMMARY:Vincent Bryant LIVE at Punch Line Comedy Club - Sacramento
-DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \n\nOfficial Tickets\nResale Tickets\n\nVincent Bryant LIVE at Punch Line Comedy Club – Sacramento\nStand-up comedian Vincent Bryant is coming to Punch Line Comedy Club in Sacramento on August 9\, 2026! Known for his high-energy performances and hilarious takes on everyday life\, Vincent Bryant delivers a comedy show that will have you laughing from start to finish. \nEvent Details\nDate: Sunday\, August 9\, 2026\nTime: 7:00 PM (Doors open at 6:00 PM)\nVenue: Punch Line Comedy Club – Sacramento\nAddress: 2100 Arden Way\, Sacramento\, CA 95825\nAge Requirement: 18+ with valid government-issued photo ID\nBeverage Minimum: 2 beverages per person \nAbout Vincent Bryant\nVincent Bryant is a dynamic stand-up comedian who has built a strong following through his relatable humor and energetic stage presence. With a style that blends sharp observations with personal storytelling\, Vincent has become a fan favorite on the comedy circuit\, performing at clubs and festivals across the country. \nWhat to Expect\n\nHigh-energy stand-up comedy performance\nRelatable humor and personal storytelling\nSharp observational comedy\nIntimate club atmosphere at Sacramento’s premier comedy venue\nFull bar service with 2-beverage minimum\n\nVenue Information\nPunch Line Comedy Club – Sacramento is located at 2100 Arden Way in Sacramento\, CA. One of the top comedy clubs in Northern California\, it features a full bar\, great sightlines\, and ample free parking in the shopping center lot. \nTicket Information\nTickets start from $37. This is an 18+ event with a 2-beverage minimum per person. Tickets are available through Ticketmaster (official) or VividSeats (resale). \n\nOfficial Tickets\nResale Tickets\n\nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
-URL:https://comedycalendar.com/event/vincent-bryant-live-at-punch-line-comedy-club-sacramento/
-LOCATION:Punch Line Comedy Club – Sacramento\, 2100 Arden Way\, Sacramento\, CA\, 95825
-ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/05/dbe808af-f532-4f2f-80cb-4b2a19d1e0b6_RETINA_PORTRAIT_16_9-9auhI6.jpg
-GEO:38.5943776;-121.4160953
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Punch Line Comedy Club – Sacramento 2100 Arden Way Sacramento CA 95825;X-APPLE-RADIUS=500;X-TITLE=2100 Arden Way:geo:-121.4160953,38.5943776
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20260809T190000
-DTEND;TZID=America/New_York:20260809T210000
-DTSTAMP:20260602T200052Z
-CREATED:20260602T194345Z
-LAST-MODIFIED:20260602T200052Z
-UID:10005291-1786302000-1786309200@comedycalendar.com
-SUMMARY:Comedy Cellar Las Vegas Showcase (Early)
-DESCRIPTION:This post contains affiliate links. We may earn a commission at no extra cost to you. \n\n  \n     Official Tickets\n   \n  \n     Resale Tickets\n  \n\nComedy Cellar Las Vegas brings one of the most legendary names in stand-up comedy to the heart of Las Vegas. Located inside the Rio Hotel & Casino\, this intimate comedy club is the West Coast home of New York City’s world-famous Comedy Cellar\, the venue that helped launch the careers of comedy icons including Dave Chappelle\, Chris Rock\, Jon Stewart\, Ray Romano\, Amy Schumer\, Aziz Ansari\, and countless others. \nUnlike traditional comedy shows featuring a single headliner\, Comedy Cellar presents a carefully curated lineup of professional comedians every night. Audiences can expect multiple performers during each show\, featuring a mix of nationally touring headliners\, television favorites\, Comedy Central veterans\, Netflix performers\, and rising stars from around the world. \nNo two shows are exactly alike\, making every visit a unique experience. Surprise drop-in appearances from major comedians performing elsewhere in Las Vegas have become part of the club’s reputation\, giving audiences the chance to see comedy superstars in an intimate setting. \nEvent Details\nVenue: Comedy Cellar Las Vegas at Rio Hotel & Casino\nLocation: 3700 W Flamingo Rd\, Las Vegas\, NV 89103\nShow Schedule: Nightly performances throughout the year\nAge Requirement: Recommended for audiences 18+ due to mature comedy content \nAbout the Venue\nOpened in 2018\, Comedy Cellar Las Vegas was designed to recreate the atmosphere and energy of the original Greenwich Village club that has become one of the most respected comedy venues in the world. The 300-seat showroom offers excellent sightlines and an intimate setting that allows audiences to experience stand-up comedy exactly as it was meant to be seen: up close and personal. \nThe venue combines the excitement of a Las Vegas night out with the authentic feel of a classic New York comedy club. Guests can enjoy a comfortable showroom environment while watching some of the best comedians working today perform in a setting that encourages spontaneity\, crowd interaction\, and unforgettable moments. \nConveniently located inside the Rio Hotel & Casino just minutes from the Las Vegas Strip\, the venue offers easy access for both tourists and local comedy fans. \nWhat to Expect\nExpect a fast-paced evening featuring multiple comedians performing throughout the show. The Comedy Cellar is known for showcasing a wide variety of comedic styles\, from observational humor and storytelling to sharp social commentary\, crowd work\, and cutting-edge stand-up. \nWhether you’re discovering a future comedy star or watching a seasoned veteran perfect their craft\, every show delivers the authentic comedy club experience that has made the Comedy Cellar one of the most respected brands in stand-up comedy. \nFor comedy fans visiting Las Vegas\, Comedy Cellar is widely considered one of the best places in the city to experience live stand-up comedy any night of the week.
-URL:https://comedycalendar.com/event/comedy-cellar-las-vegas-showcase-early/2026-08-09/
-LOCATION:Comedy Cellar Las Vegas at Rio Hotel & Casino\, 3700 W Flamingo Rd\, Las Vegas\, NV\, 89103\, United States
-ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fc4/a6703ea9-a17b-4211-b9dc-7308aa0b2fc4_RETINA_PORTRAIT_16_9.jpg
-GEO:36.1172452;-115.1861279
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Comedy Cellar Las Vegas at Rio Hotel & Casino 3700 W Flamingo Rd Las Vegas NV 89103 United States;X-APPLE-RADIUS=500;X-TITLE=3700 W Flamingo Rd:geo:-115.1861279,36.1172452
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260809T190000
-DTEND;TZID=America/Chicago:20260809T213000
-DTSTAMP:20260424T000000Z
-CREATED:20260424T000000Z
-LAST-MODIFIED:20260424T000000Z
-UID:10004747-1786302000-1786311000@comedycalendar.com
-SUMMARY:Christian Johnson LIVE at Laugh Out Loud Comedy Club
-DESCRIPTION:Official TicketsResale Tickets\n\nAbout the Performer\nChristian Johnson is a rising star in comedy with contagious good energy\, a unique style\, and refreshing clean comedy. He is best known for his viral comedy videos as “Uncle Nathaniel” — the character that took the internet by storm with his signature catchphrase “Lord Have Mer-Say.” \nChristian has gained over 2.5 million followers across his social media platforms and is rapidly making his way to the top of the list of comedians you need to know. He has shared the stage with countless celebrity comics and has traveled nationally and internationally sharing his undeniable talent. \nHis comedy is clean\, positive\, and universally relatable — the kind of humor that brings people together and leaves everyone in the room feeling good. Whether you know him from his viral videos or are discovering him for the first time\, Christian Johnson is a performer you won’t forget. \nEvent Details\n\nDate: Sunday\, August 9\, 2026\nShow Time: 7:00 PM CDT\nDoors Open: 6:00 PM CDT\nVenue: Laugh Out Loud Comedy Club\nAddress: 618 NW Loop 410\, San Antonio\, TX 78216\nAge Restriction: 18+ Event — Valid photo ID required\nContent: Clean comedy\n\nAbout the Venue\nLaugh Out Loud Comedy Club is San Antonio’s premier stand-up comedy destination\, conveniently located in Park North Plaza at Loop 410 and Blanco — just inside the loop and only a few miles from the airport. \nThe club features a full bar lounge where guests can grab a drink before the show\, and a comfortable showroom with first-come\, first-served seating. Preferred Tables are located center stage for the best views\, while General Admission tables are positioned on the sides and wings. \nThere is a 2-item food or beverage minimum per person once seated\, and an 18% service charge applies to all checks in the showroom. Early arrival is strongly recommended to secure your preferred seating. \nWhat to Expect\nChristian Johnson brings the same infectious energy from his viral videos to the live stage — amplified and in person. His clean comedy style means this is a show you can enjoy with friends of all backgrounds\, and the laughs are genuine and plentiful throughout. \nExpect crowd interaction\, hilarious character work\, and the kind of positive\, uplifting comedy that reminds you why live stand-up is such a special experience. Christian’s connection with his audience is immediate and real. \nThis is a Sunday night show at Laugh Out Loud Comedy Club — the perfect way to end your weekend on a high note. Grab your tickets now! \nTicket Information\n\nGeneral Admission: $25 (+ fees)\nPreferred Seating: $35 (+ fees)\nOrder Limit: 10 tickets per order\n\n\nOfficial TicketsResale Tickets\n\nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
-URL:https://comedycalendar.com/event/christian-johnson-live-at-laugh-out-loud-comedy-club/
-LOCATION:Laugh Out Loud Comedy Club\, 618 Northwest Loop 410\, San Antonio\, TX\, 78216\, USA
-ATTACH;FMTTYPE=image/png:https://comedycalendar.com/wp-content/uploads/2026/04/44_Edp-4G8w5S.png
-GEO:29.5193054;-98.5060363
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Laugh Out Loud Comedy Club 618 Northwest Loop 410 San Antonio TX 78216 USA;X-APPLE-RADIUS=500;X-TITLE=618 Northwest Loop 410:geo:-98.5060363,29.5193054
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Los_Angeles:20260809T193000
-DTEND;TZID=America/Los_Angeles:20260809T220000
-DTSTAMP:20260423T195300Z
-CREATED:20260423T195300Z
-LAST-MODIFIED:20260423T195300Z
-UID:10004724-1786303800-1786312800@comedycalendar.com
-SUMMARY:S.F. Comedy Showcase LIVE at Punch Line Comedy Club
-DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \n\nOfficial Tickets\nResale Tickets\n\nS.F. Comedy Showcase LIVE at Punch Line Comedy Club\nThe beloved S.F. Comedy Showcase returns to the iconic Punch Line Comedy Club in San Francisco for a night packed with top-tier stand-up comedy. Featuring a rotating lineup of local favorites and touring comedians\, this showcase is the perfect way to experience the best of Bay Area comedy. \nEvent Details\nDate: Sunday\, August 9\, 2026\nTime: 7:30 PM (Doors open at 6:45 PM)\nVenue: Punch Line Comedy Club – San Francisco\nAddress: 444 Battery Street\, San Francisco\, CA 94111\nAge Requirement: 18+ with valid government-issued photo ID\nBeverage Minimum: 2 beverages per person \nAbout S.F. Comedy Showcase\nThe S.F. Comedy Showcase is a long-running institution at Punch Line Comedy Club\, featuring a curated lineup of some of the best comedians performing in the Bay Area. Each show brings a fresh mix of emerging talent and established names\, making every performance unique and entertaining. \nWhat to Expect\n\nMultiple comedians performing back-to-back sets\nA mix of local Bay Area talent and touring comedians\nIntimate club atmosphere at one of SF’s most storied venues\nFull bar and beverage service available\n18+ show — valid photo ID required\nGeneral admission seating — first come\, first served\n\nVenue Information\nPunch Line Comedy Club – San Francisco is one of the most iconic comedy clubs on the West Coast\, located at 444 Battery Street in the heart of San Francisco’s Financial District. The intimate setting ensures every seat has a great view of the stage. \nTicket Information\nTickets start at $34. General Admission seating is first-come\, first-served. There is a 2 beverage minimum per person. Tickets are available through Ticketmaster (official) and VividSeats (resale). \n\nOfficial Tickets\nResale Tickets\n\nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
-URL:https://comedycalendar.com/event/sf-comedy-showcase-live-at-punch-line-comedy-club-2/
-LOCATION:Punch Line Comedy Club – San Francisco\, 444 Battery Street\, San Francisco\, California\, 94111\, United States Of America
-ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/c8b/28f14b21-0890-485a-a04a-4bebb12b6c8b_1444221_RETINA_LANDSCAPE_16_9.jpg
-GEO:37.795486;-122.4001359
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Punch Line Comedy Club – San Francisco 444 Battery Street San Francisco California 94111 United States Of America;X-APPLE-RADIUS=500;X-TITLE=444 Battery Street:geo:-122.4001359,37.795486
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20260809T200000
-DTEND;TZID=America/New_York:20260809T210000
-DTSTAMP:20260728T171241Z
-CREATED:20260714T165818Z
-LAST-MODIFIED:20260728T171241Z
-UID:10006337-1786305600-1786309200@comedycalendar.com
-SUMMARY:Sunset Sundays Comedy Show at Upper Eastside Hangout
-DESCRIPTION:Make the weekends last longer. Laugh during the Miami sunset with top comedians\, craft drinks\, food trucks\, and a neighborhood hangout vibe.\n\n\nA New Sunday Night Comedy Experience in Miami \nMiami Comedy is back on Sunday nights with the Biscuit Boyz comedy duo. \nJoin Miami’s Best Comedian\, Manny Garavito (as voted by Miami New Times)\, alongside Brian G\, one of the most booked and in-demand comedians in South Florida\, for a brand-new weekly comedy show at Upper East Side Hangout. \nManny and Brian have been working together for years and have a dynamic comedy style that includes crowdwork\, storytelling\, riffing\, and basically anything you throw at them. \nPerfect event for: \n\nBirthdays\nLocals looking for a neighborhood hang out spot\nVisitors looking to find where the locals hang out \nDate Night\nFamily Time\n…and anyone looking to make Sunday nights stand out during your weekend.\n\nLocated in one of Miami’s fastest-growing neighborhoods\, Upper East Side Hangout is exactly the kind of venue Miami needs more of. A laid-back outdoor gathering space.  \nFeaturing:\n\nCraft cocktails\nCold beers\nFood trucks\nPicnic tables \nHigh-top seating \n…and an atmosphere designed for people who actually want to enjoy where they’re spending their evening.\n\nSunset Sundays isn’t your typical comedy show experience. \nThis show was built for foodies\, friends\, families\, locals\, visitors\, and anyone looking for a better way to end the weekend.  \n \nFree Event For All \n \nVenue\nUpper East Side Hangout701 NE 79th StMiami\, FL 33138 \n \nFood Trucks:\n\nCheeseburger Baby\nNoodle Bar Hand Pulled Noodles\nProfessor Snacks Exotic Snacks\nTacomiendo Tacos
-URL:https://comedycalendar.com/event/sunset-sundays-comedy-show-at-upper-eastside-hangout-6/
-LOCATION:Upper Eastside Hangout\, Northeast 79th Street 701\, Miami\, FL\, 33138\, United States
-CATEGORIES:Showcase
-ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/06/567601418637ae2b03e8a8e7adefbff8-KutVBE.tmp_-TTqq4G.jpg
-GEO:25.8480585;-80.1824101
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Upper Eastside Hangout Northeast 79th Street 701 Miami FL 33138 United States;X-APPLE-RADIUS=500;X-TITLE=Northeast 79th Street 701:geo:-80.1824101,25.8480585
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20260809T213000
-DTEND;TZID=America/New_York:20260809T233000
-DTSTAMP:20260602T200151Z
-CREATED:20260602T200119Z
-LAST-MODIFIED:20260602T200151Z
-UID:10005869-1786311000-1786318200@comedycalendar.com
-SUMMARY:Comedy Cellar Las Vegas (Late)
-DESCRIPTION:This post contains affiliate links. We may earn a commission at no extra cost to you. \n\nOfficial Tickets\n\nResale Tickets\n\nComedy Cellar Las Vegas brings one of the most legendary names in stand-up comedy to the heart of Las Vegas. Located inside the Rio Hotel & Casino\, this intimate comedy club is the West Coast home of New York City’s world-famous Comedy Cellar\, the venue that helped launch the careers of comedy icons including Dave Chappelle\, Chris Rock\, Jon Stewart\, Ray Romano\, Amy Schumer\, Aziz Ansari\, and countless others. \nUnlike traditional comedy shows featuring a single headliner\, Comedy Cellar presents a carefully curated lineup of professional comedians every night. Audiences can expect multiple performers during each show\, featuring a mix of nationally touring headliners\, television favorites\, Comedy Central veterans\, Netflix performers\, and rising stars from around the world. \nNo two shows are exactly alike\, making every visit a unique experience. Surprise drop-in appearances from major comedians performing elsewhere in Las Vegas have become part of the club’s reputation\, giving audiences the chance to see comedy superstars in an intimate setting. \nEvent Details\nVenue: Comedy Cellar Las Vegas at Rio Hotel & Casino\nLocation: 3700 W Flamingo Rd\, Las Vegas\, NV 89103\nShow Schedule: Nightly performances throughout the year\nAge Requirement: Recommended for audiences 18+ due to mature comedy content \nAbout the Venue\nOpened in 2018\, Comedy Cellar Las Vegas was designed to recreate the atmosphere and energy of the original Greenwich Village club that has become one of the most respected comedy venues in the world. The 300-seat showroom offers excellent sightlines and an intimate setting that allows audiences to experience stand-up comedy exactly as it was meant to be seen: up close and personal. \nThe venue combines the excitement of a Las Vegas night out with the authentic feel of a classic New York comedy club. Guests can enjoy a comfortable showroom environment while watching some of the best comedians working today perform in a setting that encourages spontaneity\, crowd interaction\, and unforgettable moments. \nConveniently located inside the Rio Hotel & Casino just minutes from the Las Vegas Strip\, the venue offers easy access for both tourists and local comedy fans. \nWhat to Expect\nExpect a fast-paced evening featuring multiple comedians performing throughout the show. The Comedy Cellar is known for showcasing a wide variety of comedic styles\, from observational humor and storytelling to sharp social commentary\, crowd work\, and cutting-edge stand-up. \nWhether you’re discovering a future comedy star or watching a seasoned veteran perfect their craft\, every show delivers the authentic comedy club experience that has made the Comedy Cellar one of the most respected brands in stand-up comedy. \nFor comedy fans visiting Las Vegas\, Comedy Cellar is widely considered one of the best places in the city to experience live stand-up comedy any night of the week.
-URL:https://comedycalendar.com/event/comedy-cellar-las-vegas-late/2026-08-09/
-LOCATION:Comedy Cellar Las Vegas at Rio Hotel & Casino\, 3700 W Flamingo Rd\, Las Vegas\, NV\, 89103\, United States
-ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fc4/a6703ea9-a17b-4211-b9dc-7308aa0b2fc4_RETINA_PORTRAIT_16_9.jpg
-GEO:36.1172452;-115.1861279
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Comedy Cellar Las Vegas at Rio Hotel & Casino 3700 W Flamingo Rd Las Vegas NV 89103 United States;X-APPLE-RADIUS=500;X-TITLE=3700 W Flamingo Rd:geo:-115.1861279,36.1172452
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/New_York:20260810T190000
@@ -494,7 +358,7 @@ CREATED:20260424T000000Z
 LAST-MODIFIED:20260424T000000Z
 UID:10004748-1786563000-1786570200@comedycalendar.com
 SUMMARY:Tony Dabas LIVE at Laugh Out Loud Comedy Club
-DESCRIPTION:Official TicketsResale Tickets\n\nAbout the Performer\nTony Dabas\, hailing from Staten Island\, is a rising star in the New York City stand-up scene. Known for his quick wit and relatable humor\, Tony has also made a major name for himself in the world of social media\, collaborating with influencers on TikTok and Instagram to create hilarious characters and viral sketches. \nHis ability to connect with audiences both online and on stage makes him one of the most exciting comedians to watch in the comedy world right now. Tony’s comedy draws from his Staten Island roots and New York City experiences\, delivering the kind of sharp\, street-smart humor that resonates with audiences everywhere. \nWith a rapidly growing fanbase and a natural talent for both stand-up and character work\, Tony Dabas is building a career that is only going to get bigger. Don’t miss your chance to see him live in San Antonio! \nEvent Details\n\nDate: Wednesday\, August 12\, 2026\nShow Time: 7:30 PM CDT\nDoors Open: 6:30 PM CDT\nVenue: Laugh Out Loud Comedy Club\nAddress: 618 NW Loop 410\, San Antonio\, TX 78216\nAge Restriction: 18+ Event — Valid photo ID required\nVIP Meet & Greet: Available with VIP ticket purchase\n\nAbout the Venue\nLaugh Out Loud Comedy Club is San Antonio’s premier stand-up comedy destination\, conveniently located in Park North Plaza at Loop 410 and Blanco — just inside the loop and only a few miles from the airport. \nThe club features a full bar lounge where guests can grab a drink before the show\, and a comfortable showroom with first-come\, first-served seating. Preferred Tables are located center stage for the best views\, while General Admission tables are positioned on the sides and wings. \nThere is a 2-item food or beverage minimum per person once seated\, and an 18% service charge applies to all checks in the showroom. Early arrival is strongly recommended to secure your preferred seating. \nWhat to Expect\nTony Dabas brings the energy of New York City comedy to the San Antonio stage. His stand-up is fast-paced\, relatable\, and packed with the kind of sharp observations that make you laugh because they’re so true. \nVIP ticket holders get the added bonus of a Meet & Greet with Tony before the show — a great opportunity to meet one of comedy’s hottest rising stars up close. VIP seating is located center stage for the best view in the house. \nThis is a Wednesday night show at Laugh Out Loud Comedy Club — the perfect mid-week pick-me-up. Grab your tickets now! \nTicket Information\n\nGeneral Admission: $25 (+ fees)\nPreferred Seating: $35 (+ fees)\nVIP w/ Meet & Greet: $45 (+ fees)\nOrder Limit: 10 tickets per order\n\n\nOfficial TicketsResale Tickets\n\nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
+DESCRIPTION:Official TicketsResale Tickets\n\nAbout the Performer\nTony Dabas\, hailing from Staten Island\, is a rising star in the New York City stand-up scene. Known for his quick wit and relatable humor\, Tony has also made a major name for himself in the world of social media\, collaborating with influencers on TikTok and Instagram to create hilarious characters and viral sketches. \nHis ability to connect with audiences both online and on stage makes him one of the most exciting comedians to watch in the comedy world right now. Tony’s comedy draws from his Staten Island roots and New York City experiences\, delivering the kind of sharp\, street-smart humor that resonates with audiences everywhere. \nWith a rapidly growing fanbase and a natural talent for both stand-up and character work\, Tony Dabas is building a career that is only going to get bigger. Don’t miss your chance to see him live in San Antonio! \nEvent Details\n\nDate: Wednesday\, August 12\, 2026\nShow Time: 7:30 PM CDT\nDoors Open: 6:30 PM CDT\nVenue: Laugh Out Loud Comedy Club\nAddress: 618 NW Loop 410\, San Antonio\, TX 78216\nAge Restriction: 18+ Event — Valid photo ID required\n Available with VIP ticket purchase\n\nAbout the Venue\nLaugh Out Loud Comedy Club is San Antonio’s premier stand-up comedy destination\, conveniently located in Park North Plaza at Loop 410 and Blanco — just inside the loop and only a few miles from the airport. \nThe club features a full bar lounge where guests can grab a drink before the show\, and a comfortable showroom with first-come\, first-served seating. Preferred Tables are located center stage for the best views\, while General Admission tables are positioned on the sides and wings. \nThere is a 2-item food or beverage minimum per person once seated\, and an 18% service charge applies to all checks in the showroom. Early arrival is strongly recommended to secure your preferred seating. \nWhat to Expect\nTony Dabas brings the energy of New York City comedy to the San Antonio stage. His stand-up is fast-paced\, relatable\, and packed with the kind of sharp observations that make you laugh because they’re so true. \n \nThis is a Wednesday night show at Laugh Out Loud Comedy Club — the perfect mid-week pick-me-up. Grab your tickets now! \nTicket Information\n\nGeneral Admission: $25 (+ fees)\nPreferred Seating: $35 (+ fees)\n $45 (+ fees)\nOrder Limit: 10 tickets per order\n\n\nOfficial TicketsResale Tickets\n\nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
 URL:https://comedycalendar.com/event/tony-dabas-live-at-laugh-out-loud-comedy-club/
 LOCATION:Laugh Out Loud Comedy Club\, 618 Northwest Loop 410\, San Antonio\, TX\, 78216\, USA
 ATTACH;FMTTYPE=image/png:https://comedycalendar.com/wp-content/uploads/2026/04/43_Edp-21W6vW.png
@@ -591,5 +455,137 @@ LOCATION:Loony Bin Comedy Club Tulsa\, 6808 South Memorial Dr Ste. 234\, Tulsa\,
 ATTACH;FMTTYPE=image/jpeg:https://a.vsstatic.com/mobile/app/category/comedy.jpg
 GEO:36.0661092;-95.8891342
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Loony Bin Comedy Club Tulsa 6808 South Memorial Dr Ste. 234 Tulsa 74133 United States;X-APPLE-RADIUS=500;X-TITLE=6808 South Memorial Dr Ste. 234:geo:-95.8891342,36.0661092
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260813T190000
+DTEND;TZID=America/New_York:20260813T210000
+DTSTAMP:20260602T200052Z
+CREATED:20260602T194345Z
+LAST-MODIFIED:20260602T200052Z
+UID:10005295-1786647600-1786654800@comedycalendar.com
+SUMMARY:Comedy Cellar Las Vegas Showcase (Early)
+DESCRIPTION:This post contains affiliate links. We may earn a commission at no extra cost to you. \n\n  \n     Official Tickets\n   \n  \n     Resale Tickets\n  \n\nComedy Cellar Las Vegas brings one of the most legendary names in stand-up comedy to the heart of Las Vegas. Located inside the Rio Hotel & Casino\, this intimate comedy club is the West Coast home of New York City’s world-famous Comedy Cellar\, the venue that helped launch the careers of comedy icons including Dave Chappelle\, Chris Rock\, Jon Stewart\, Ray Romano\, Amy Schumer\, Aziz Ansari\, and countless others. \nUnlike traditional comedy shows featuring a single headliner\, Comedy Cellar presents a carefully curated lineup of professional comedians every night. Audiences can expect multiple performers during each show\, featuring a mix of nationally touring headliners\, television favorites\, Comedy Central veterans\, Netflix performers\, and rising stars from around the world. \nNo two shows are exactly alike\, making every visit a unique experience. Surprise drop-in appearances from major comedians performing elsewhere in Las Vegas have become part of the club’s reputation\, giving audiences the chance to see comedy superstars in an intimate setting. \nEvent Details\nVenue: Comedy Cellar Las Vegas at Rio Hotel & Casino\nLocation: 3700 W Flamingo Rd\, Las Vegas\, NV 89103\nShow Schedule: Nightly performances throughout the year\nAge Requirement: Recommended for audiences 18+ due to mature comedy content \nAbout the Venue\nOpened in 2018\, Comedy Cellar Las Vegas was designed to recreate the atmosphere and energy of the original Greenwich Village club that has become one of the most respected comedy venues in the world. The 300-seat showroom offers excellent sightlines and an intimate setting that allows audiences to experience stand-up comedy exactly as it was meant to be seen: up close and personal. \nThe venue combines the excitement of a Las Vegas night out with the authentic feel of a classic New York comedy club. Guests can enjoy a comfortable showroom environment while watching some of the best comedians working today perform in a setting that encourages spontaneity\, crowd interaction\, and unforgettable moments. \nConveniently located inside the Rio Hotel & Casino just minutes from the Las Vegas Strip\, the venue offers easy access for both tourists and local comedy fans. \nWhat to Expect\nExpect a fast-paced evening featuring multiple comedians performing throughout the show. The Comedy Cellar is known for showcasing a wide variety of comedic styles\, from observational humor and storytelling to sharp social commentary\, crowd work\, and cutting-edge stand-up. \nWhether you’re discovering a future comedy star or watching a seasoned veteran perfect their craft\, every show delivers the authentic comedy club experience that has made the Comedy Cellar one of the most respected brands in stand-up comedy. \nFor comedy fans visiting Las Vegas\, Comedy Cellar is widely considered one of the best places in the city to experience live stand-up comedy any night of the week.
+URL:https://comedycalendar.com/event/comedy-cellar-las-vegas-showcase-early/2026-08-13/
+LOCATION:Comedy Cellar Las Vegas at Rio Hotel & Casino\, 3700 W Flamingo Rd\, Las Vegas\, NV\, 89103\, United States
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fc4/a6703ea9-a17b-4211-b9dc-7308aa0b2fc4_RETINA_PORTRAIT_16_9.jpg
+GEO:36.1172452;-115.1861279
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Comedy Cellar Las Vegas at Rio Hotel & Casino 3700 W Flamingo Rd Las Vegas NV 89103 United States;X-APPLE-RADIUS=500;X-TITLE=3700 W Flamingo Rd:geo:-115.1861279,36.1172452
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260813T190000
+DTEND;TZID=America/Los_Angeles:20260813T213000
+DTSTAMP:20260515T015214Z
+CREATED:20260502T050000Z
+LAST-MODIFIED:20260515T015214Z
+UID:10004842-1786647600-1786656600@comedycalendar.com
+SUMMARY:Ali Wong Live LIVE at McCaw Hall (Aug 13)
+DESCRIPTION:Official TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you. \nAbout Ali Wong\nAli Wong is one of the most celebrated stand-up comedians of her generation\, known for her fearlessly raw\, hilarious\, and unapologetically honest comedy style. She burst into mainstream consciousness with her Netflix specials Baby Cobra (2016) and Hard Knock Wife (2018)\, both filmed while she was visibly pregnant — a bold and unforgettable choice that became her signature image. \nHer comedy dives deep into marriage\, motherhood\, sex\, race\, and the absurdities of modern life\, delivered with a rapid-fire wit and zero filter. Wong’s ability to make audiences simultaneously cringe and howl with laughter has earned her a devoted global fanbase and critical acclaim across the entertainment industry. \nBeyond stand-up\, Ali Wong has starred in the hit Netflix romantic comedy film Always Be My Maybe (2019)\, the critically acclaimed drama series Beef (2023) — for which she won a Primetime Emmy Award — and has appeared in numerous television and film projects. Her live shows are known for being high-energy\, deeply personal\, and absolutely unforgettable. \nEvent Details\nDate: Thursday\, August 13\, 2026 \nTime: 7:00 PM \nVenue: McCaw Hall\, 321 Mercer Street\, Seattle\, WA 98109 \nTicket Price Range: $59 – $199 \nAge Restrictions: This is an 18+ show. Strong adult language and mature themes throughout. \nAbout McCaw Hall\nMarion Oliver McCaw Hall is one of Seattle’s premier performing arts venues\, located in the heart of the Seattle Center campus — just steps from the iconic Space Needle. The hall is home to the Seattle Opera and Pacific Northwest Ballet\, and regularly hosts world-class comedy\, music\, and special events. \nWith a seating capacity of approximately 2\,900\, McCaw Hall offers excellent sightlines from virtually every seat in the house. The venue features a stunning modern design with state-of-the-art acoustics\, comfortable seating\, and a welcoming atmosphere that makes every performance feel intimate despite its size. \nAmenities include multiple bars and concession areas\, accessible seating options\, and convenient parking in the Seattle Center garage. The surrounding Seattle Center grounds offer great pre-show dining and entertainment options\, making it easy to turn the evening into a full night out. \nWhat to Expect\nAli Wong’s live shows are a masterclass in stand-up comedy — fast-paced\, deeply personal\, and packed with laugh-out-loud moments from start to finish. Expect her signature blend of self-deprecating humor\, sharp social commentary\, and stories about relationships\, family\, and the chaos of everyday life. \nThis is a solo stand-up performance\, so you’ll get the full Ali Wong experience with no distractions. Fans of her Netflix specials will recognize her style but can expect all-new material crafted for this tour. Arrive early to grab a drink\, find your seat\, and soak in the energy of a sold-out crowd ready to laugh. \nShows typically run approximately 75–90 minutes with no intermission. Dress comfortably — this is a casual\, fun night out with one of comedy’s biggest stars. \nTicket Information\nPrice Range: $59 – $199 (plus applicable fees) \nTickets are available through Ticketmaster (official) and VividSeats (resale marketplace). Resale ticket prices may vary from face value. \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
+URL:https://comedycalendar.com/event/ali-wong-live-at-mccaw-hall-aug-thu/
+LOCATION:McCaw Hall\, 321 Mercer Street\, Seattle\, Washington\, 98109\, United States
+ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/02/e03b01e0-2f00-4b0e-be33-7c89a92f3253_CUSTOM-9lU9z0.jpg
+GEO:47.6243782;-122.3502386
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=McCaw Hall 321 Mercer Street Seattle Washington 98109 United States;X-APPLE-RADIUS=500;X-TITLE=321 Mercer Street:geo:-122.3502386,47.6243782
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260813T190000
+DTEND;TZID=America/Los_Angeles:20260813T220000
+DTSTAMP:20260720T170000Z
+CREATED:20260720T170000Z
+LAST-MODIFIED:20260720T170000Z
+UID:10006342-1786647600-1786658400@comedycalendar.com
+SUMMARY:Jessica Kirson LIVE at The United Theater on Broadway
+DESCRIPTION:Official TicketsResale Tickets \nJessica Kirson\, one of the most electrifying stand-up comedians working today\, brings her high-energy\, no-holds-barred comedy to The United Theater on Broadway in Los Angeles on August 13\, 2026. \nKnown for her explosive stage presence and fearless material\, Kirson has become a favorite of comedy fans and fellow comedians alike. She has appeared on The Tonight Show\, Conan\, and released her own Comedy Central special. \nEvent Details\n\nDate: Thursday\, August 13\, 2026\nTime: 7:00 PM PDT\nVenue: The United Theater on Broadway\nAddress: 929 S Broadway\, Los Angeles\, CA 90015\nTickets From: $59\n\nAbout Jessica Kirson\nJessica Kirson is a stand-up comedian\, actress\, and producer known for her raw\, physical comedy style. She has been praised by Jerry Seinfeld\, Louis C.K.\, and Chris Rock. Her Comedy Central special and podcast Disgusting Hawk have earned her a devoted following. \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
+URL:https://comedycalendar.com/event/jessica-kirson-live-at-the-united-theater-on-broadway/
+LOCATION:CA
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/f5e/3b2a1c4d-5e6f-7890-abcd-ef1234567890_RETINA_PORTRAIT_3_2.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260813T193000
+DTEND;TZID=America/Chicago:20260813T213000
+DTSTAMP:20260327T033210Z
+CREATED:20260323T020000Z
+LAST-MODIFIED:20260327T033210Z
+UID:10004151-1786649400-1786656600@comedycalendar.com
+SUMMARY:Sam Jay LIVE at Laugh Out Loud Comedy Club
+DESCRIPTION:Official TicketsResale Tickets \nAbout the Performer\nSam Jay is a stand-up comic\, actor\, and Emmy-nominated writer best known as the host and executive producer of HBO’s Pause with Sam Jay\, a weekly late-night series. \nShe is a two-time Emmy nominee and WGA Award nominee for her writing on Saturday Night Live. Sam debuted her first one-hour stand-up special Sam Jay: 3 in the Morning on Netflix in 2020\, and her next special Sam Jay: Salute Me or Shoot Me premiered on HBO. \nSam has appeared in the Kenya Barris-directed Netflix film You People alongside Jonah Hill\, Eddie Murphy\, and Julia Louis-Dreyfus\, and co-created the Peacock series Bust Down. She was named one of Variety’s 10 Comics to Watch and a Comedy Central Comic to Watch. \nEvent Details\n\nDate: Thursday\, August 13\, 2026\nTime: 7:30 PM (Doors open at 6:30 PM)\nVenue: Laugh Out Loud Comedy Club\, 618 NW Loop 410\, San Antonio\, TX 78216\nAge Restriction: 18+ Event\nFood & Beverage: 2-item minimum per person once seated\n\nAbout the Venue\nLaugh Out Loud Comedy Club (LOL San Antonio) is San Antonio’s premier stand-up comedy destination\, conveniently located in Park North Plaza at Loop 410 and Blanco\, just inside the loop and a few miles from the airport. \nThe intimate club setting creates an electric atmosphere where every seat feels close to the stage\, making for an incredibly personal and engaging comedy experience. \nThe venue features a full bar and dining service\, so guests can enjoy food and drinks throughout the show. Seating is first come\, first served by section\, so arriving early is recommended to secure the best seats. \nLOL San Antonio is part of the nationally recognized Improv comedy club network\, consistently bringing top-tier national touring comedians to San Antonio. \nWhat to Expect\nSam Jay delivers a full headlining stand-up set packed with her signature sharp wit\, candid observations\, and fearless comedic voice. \nExpect incisive commentary on modern life\, relationships\, and culture delivered with the same unfiltered energy that has made her one of the most acclaimed comedians working today. \nThis is an 18+ event. Arrive early to grab a great seat and enjoy the full club experience with food and drinks before the show begins. \nTicket Information\nPrice Range: $22 – $40 (plus fees) \nTickets are available through official and resale channels: \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
+URL:https://comedycalendar.com/event/sam-jay-live-at-laugh-out-loud-comedy-club/
+LOCATION:Laugh Out Loud Comedy Club\, 618 Northwest Loop 410\, San Antonio\, TX\, 78216\, USA
+ATTACH;FMTTYPE=image/png:https://comedycalendar.com/wp-content/uploads/2026/03/53_Edp-aPbK4M.png
+GEO:29.5193054;-98.5060363
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Laugh Out Loud Comedy Club 618 Northwest Loop 410 San Antonio TX 78216 USA;X-APPLE-RADIUS=500;X-TITLE=618 Northwest Loop 410:geo:-98.5060363,29.5193054
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260813T193000
+DTEND;TZID=America/New_York:20260813T213000
+DTSTAMP:20260515T015219Z
+CREATED:20260502T050000Z
+LAST-MODIFIED:20260515T015219Z
+UID:10004847-1786649400-1786656600@comedycalendar.com
+SUMMARY:Josh Wolf: Touring Hard LIVE at Punch Line Houston
+DESCRIPTION:Official TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you. \nAbout the Performer\nJosh Wolf is a veteran stand-up comedian\, actor\, and television personality best known as a longtime panelist on Chelsea Lately on E! Network. With over two decades of experience in comedy\, Wolf has built a reputation as one of the most consistently funny and relatable performers on the road today. \nHis stand-up style is rooted in real life — marriage\, fatherhood\, and the beautiful chaos of raising a family. Josh has a gift for turning everyday frustrations into laugh-out-loud moments that resonate with audiences of all ages. His storytelling is warm\, honest\, and genuinely hilarious. \nThe Touring Hard show is Josh Wolf’s latest live comedy tour\, bringing his best material and new stories to clubs and theaters across the country. Houston is lucky to have him at the intimate Punch Line stage. \nEvent Details\n\nDate: Thursday\, August 13\, 2026\nTime: 7:30 PM (Doors open at 6:30 PM)\nVenue: Punch Line Houston\nAddress: 1204 Caroline Street\, Houston\, TX 77002\nAge Restriction: 18+ (2 Beverage Minimum per person)\nTicket Prices: $38 – $50 (fees included)\n\nAbout the Venue\nPunch Line Houston is the go-to comedy club in downtown Houston\, situated at 1204 Caroline Street. This Live Nation venue is known for bringing top-tier national comedians to an intimate\, club-style setting that puts you close to the action. \nThe general admission layout means you can find a great spot anywhere in the room\, with preferred seating upgrades available for those who want the best views. The full bar keeps the drinks flowing\, and the 2-beverage minimum per person is part of the club experience. \nValet parking is available at most shows. The Green Street garage on Clay between Main and Fannin provides additional parking with convenient skybridge access. The venue is cashless — all major credit and debit cards accepted. \nWhat to Expect\nJosh Wolf’s Touring Hard show is a masterclass in relatable comedy. Expect a full evening of polished stand-up that covers family life\, relationships\, and the hilarious realities of getting older. Wolf’s natural charisma and crowd connection make every show feel unique. \nThe Thursday night show kicks off at 7:30 PM\, with doors opening at 6:30 PM. Additional shows are available Friday August 14 and Saturday August 15 for those who can’t make the Thursday performance. The show runs approximately 90 minutes. \nRemember: no cell phones\, no recording\, and no heckling. Just sit back\, relax\, and enjoy one of the best stand-up comedians working today. \nTicket Information\nTickets start at $38 for general admission and up to $50 for preferred seating (all-in pricing\, fees included before taxes). Secure your seats through Ticketmaster or browse resale options on VividSeats. \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
+URL:https://comedycalendar.com/event/josh-wolf-touring-hard-live-at-punch-line-houston/
+LOCATION:Punch Line Houston\, 1204 Caroline Street\, Houston\, TX\, 77002\, United States
+ATTACH;FMTTYPE=image/jpeg:https://media.ticketmaster.com/en-us/dam/a/5ee/4bf7ddf6-f681-4c50-a892-d789ef9875ee_TABLET_LANDSCAPE_LARGE_16_9.jpg
+GEO:29.7533552;-95.3641123
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Punch Line Houston 1204 Caroline Street Houston TX 77002 United States;X-APPLE-RADIUS=500;X-TITLE=1204 Caroline Street:geo:-95.3641123,29.7533552
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260813T193000
+DTEND;TZID=America/Los_Angeles:20260813T220000
+DTSTAMP:20260423T195300Z
+CREATED:20260423T195300Z
+LAST-MODIFIED:20260423T195300Z
+UID:10004725-1786649400-1786658400@comedycalendar.com
+SUMMARY:Godfrey LIVE at Cobb's Comedy Club
+DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \n\nOfficial Tickets\nResale Tickets\n\nGodfrey LIVE at Cobb’s Comedy Club\n \nEvent Details\nDate: Thursday\, August 13\, 2026\nTime: 7:30 PM (Doors open at 6:30 PM)\nVenue: Cobb’s Comedy Club\nAddress: 915 Columbus Avenue\, San Francisco\, CA 94133\nAge Requirement: 18+ with valid government-issued photo ID\nBeverage Minimum: 2 beverages per person\nVIP: Front-of-House seating + Post-Show Meet & Greet available \nAbout Godfrey\nGodfrey is a Nigerian-American stand-up comedian and actor best known for his explosive energy and hilarious observations on culture\, race\, and everyday life. He has appeared on numerous TV shows and specials\, and his 2026 special “Rebel with a Cause” has been a massive hit with fans. With over 67 upcoming shows on his current tour\, Godfrey is one of the hottest comedians on the road right now. \nWhat to Expect\n\nHigh-energy stand-up from one of comedy’s most dynamic performers\nSharp cultural commentary and hilarious storytelling\nVIP option with post-show Meet & Greet\nIntimate club setting at one of SF’s premier comedy venues\nFull bar and beverage service available\n18+ show — valid photo ID required\n\nVenue Information\nCobb’s Comedy Club is one of San Francisco’s most beloved comedy venues\, located at 915 Columbus Avenue in the vibrant North Beach neighborhood. With a capacity of over 400\, it’s the perfect setting for a big-name comedy show. \nTicket Information\nTickets start at $35. VIP tickets include front-of-house seating and a post-show Meet & Greet. There is a 2 beverage minimum per person. Tickets are available through Ticketmaster (official) and VividSeats (resale). \n\nOfficial Tickets\nResale Tickets\n\nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
+URL:https://comedycalendar.com/event/godfrey-live-at-cobbs-comedy-club/
+LOCATION:Cobb’s Comedy Club\, 915 Columbus Avenue\, San Francisco\, California\, 94133\, United States Of America
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/5cc/4c227195-7b94-4072-b9f5-9d3e9d1535cc_RETINA_LANDSCAPE_16_9.jpg
+GEO:37.8029543;-122.4143041
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Cobb’s Comedy Club 915 Columbus Avenue San Francisco California 94133 United States Of America;X-APPLE-RADIUS=500;X-TITLE=915 Columbus Avenue:geo:-122.4143041,37.8029543
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260813T200000
+DTEND;TZID=America/Los_Angeles:20260813T220000
+DTSTAMP:20260503T040000Z
+CREATED:20260503T040000Z
+LAST-MODIFIED:20260503T040000Z
+UID:10004883-1786651200-1786658400@comedycalendar.com
+SUMMARY:Troy Bond LIVE at San Jose Improv
+DESCRIPTION:Official TicketsResale Tickets\n\nAbout the Performer\nTroy Bond is a fast-rising stand-up comedian and writer based in New York City\, known for his sharp joke writing\, expert crowdwork\, and tongue-in-cheek celebrity impressions. With over 3 million followers across social media platforms\, Troy has built one of the most engaged comedy audiences of his generation. \nAt just 27 years old\, Troy has already made a major mark on the comedy world. He was selected for the prestigious 2023 Just for Laughs New Faces of Comedy lineup — a showcase that has launched the careers of Kevin Hart\, Taylor Tomlinson\, Kumail Nanjiani\, and many more. He began performing stand-up at age 17 and has been selling out headlining shows across the United States ever since. \nTroy’s comedy tackles everything from capitalism and politics to superheroes and pop culture\, delivered with a versatile comedic voice that resonates with audiences of all backgrounds. He also co-hosts the BONDING podcast with fellow comedian Torey Cole\, where the duo discuss comedy\, life\, and everything in between. \nEvent Details\n\nDate: Thursday\, August 13\, 2026\nShow Time: 8:00 PM (Doors open at 6:30 PM)\nVenue: San Jose Improv\, 62 S Second St\, San Jose\, CA 95113\nAge Restriction: 21+ (Valid photo ID required)\nContent: Adult language and themes\nTwo-item minimum purchase required in the showroom\n\nAbout the Venue\nThe San Jose Improv is one of the Bay Area’s most beloved comedy clubs\, situated in the heart of downtown San Jose at 62 S Second St. As part of the nationally recognized Improv Comedy Club chain\, the San Jose location has been a launching pad and destination for the biggest names in stand-up comedy. \nThe intimate venue seats approximately 250 guests in a general admission\, first-come-first-served format\, with premium booth and table options available for a more elevated experience. Every seat in the house offers an excellent view of the stage\, making it one of the best places in the Bay Area to catch live comedy up close. \nThe club features a full bar and food menu\, with a mandatory two-item minimum per guest in the showroom. Parking is available in nearby downtown San Jose garages and street parking. The venue is conveniently located near public transit options in the heart of downtown San Jose. \nWhat to Expect\nTroy Bond’s live show is a high-energy\, fast-paced stand-up performance that showcases his exceptional joke-writing ability and natural stage charisma. Known for his ability to work the crowd and adapt on the fly\, Troy delivers a show that feels both polished and spontaneous. \nExpect sharp observational humor\, clever impressions\, and material that ranges from personal anecdotes to broader cultural commentary. Troy’s youthful energy and precision comedy make him one of the most exciting live performers working today. This is a 21+ event with adult-oriented material. \nSeating is general admission\, so arriving early is recommended to secure the best seats. Premium VIP booths and tables are available for purchase and include food and beverage credits. \nTicket Information\nPrice Range: $31.14 – $101.65 (includes fees) \nTickets are available through official channels and resale platforms. Troy Bond shows sell out quickly — purchase early to secure your spot. \n\nOfficial TicketsResale Tickets\n\nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
+URL:https://comedycalendar.com/event/troy-bond-live-at-san-jose-improv/
+LOCATION:San Jose Improv\, 62 S Second St\, San Jose\, California\, 95113\, United States
+ATTACH;FMTTYPE=image/jpeg:https://i.ticketweb.com/i/00/13/48/27/63_Edp.jpg?v=3
+GEO:37.3356413;-121.8883224
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=San Jose Improv 62 S Second St San Jose California 95113 United States;X-APPLE-RADIUS=500;X-TITLE=62 S Second St:geo:-121.8883224,37.3356413
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260813T213000
+DTEND;TZID=America/New_York:20260813T233000
+DTSTAMP:20260602T200151Z
+CREATED:20260602T200119Z
+LAST-MODIFIED:20260602T200151Z
+UID:10005873-1786656600-1786663800@comedycalendar.com
+SUMMARY:Comedy Cellar Las Vegas (Late)
+DESCRIPTION:This post contains affiliate links. We may earn a commission at no extra cost to you. \n\nOfficial Tickets\n\nResale Tickets\n\nComedy Cellar Las Vegas brings one of the most legendary names in stand-up comedy to the heart of Las Vegas. Located inside the Rio Hotel & Casino\, this intimate comedy club is the West Coast home of New York City’s world-famous Comedy Cellar\, the venue that helped launch the careers of comedy icons including Dave Chappelle\, Chris Rock\, Jon Stewart\, Ray Romano\, Amy Schumer\, Aziz Ansari\, and countless others. \nUnlike traditional comedy shows featuring a single headliner\, Comedy Cellar presents a carefully curated lineup of professional comedians every night. Audiences can expect multiple performers during each show\, featuring a mix of nationally touring headliners\, television favorites\, Comedy Central veterans\, Netflix performers\, and rising stars from around the world. \nNo two shows are exactly alike\, making every visit a unique experience. Surprise drop-in appearances from major comedians performing elsewhere in Las Vegas have become part of the club’s reputation\, giving audiences the chance to see comedy superstars in an intimate setting. \nEvent Details\nVenue: Comedy Cellar Las Vegas at Rio Hotel & Casino\nLocation: 3700 W Flamingo Rd\, Las Vegas\, NV 89103\nShow Schedule: Nightly performances throughout the year\nAge Requirement: Recommended for audiences 18+ due to mature comedy content \nAbout the Venue\nOpened in 2018\, Comedy Cellar Las Vegas was designed to recreate the atmosphere and energy of the original Greenwich Village club that has become one of the most respected comedy venues in the world. The 300-seat showroom offers excellent sightlines and an intimate setting that allows audiences to experience stand-up comedy exactly as it was meant to be seen: up close and personal. \nThe venue combines the excitement of a Las Vegas night out with the authentic feel of a classic New York comedy club. Guests can enjoy a comfortable showroom environment while watching some of the best comedians working today perform in a setting that encourages spontaneity\, crowd interaction\, and unforgettable moments. \nConveniently located inside the Rio Hotel & Casino just minutes from the Las Vegas Strip\, the venue offers easy access for both tourists and local comedy fans. \nWhat to Expect\nExpect a fast-paced evening featuring multiple comedians performing throughout the show. The Comedy Cellar is known for showcasing a wide variety of comedic styles\, from observational humor and storytelling to sharp social commentary\, crowd work\, and cutting-edge stand-up. \nWhether you’re discovering a future comedy star or watching a seasoned veteran perfect their craft\, every show delivers the authentic comedy club experience that has made the Comedy Cellar one of the most respected brands in stand-up comedy. \nFor comedy fans visiting Las Vegas\, Comedy Cellar is widely considered one of the best places in the city to experience live stand-up comedy any night of the week.
+URL:https://comedycalendar.com/event/comedy-cellar-las-vegas-late/2026-08-13/
+LOCATION:Comedy Cellar Las Vegas at Rio Hotel & Casino\, 3700 W Flamingo Rd\, Las Vegas\, NV\, 89103\, United States
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fc4/a6703ea9-a17b-4211-b9dc-7308aa0b2fc4_RETINA_PORTRAIT_16_9.jpg
+GEO:36.1172452;-115.1861279
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Comedy Cellar Las Vegas at Rio Hotel & Casino 3700 W Flamingo Rd Las Vegas NV 89103 United States;X-APPLE-RADIUS=500;X-TITLE=3700 W Flamingo Rd:geo:-115.1861279,36.1172452
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260813T214500
+DTEND;TZID=America/New_York:20260813T233000
+DTSTAMP:20260720T170000Z
+CREATED:20260720T170000Z
+LAST-MODIFIED:20260720T170000Z
+UID:10006345-1786657500-1786663800@comedycalendar.com
+SUMMARY:Michael Blackson LIVE at Hollywood Improv
+DESCRIPTION:Official TicketsResale Tickets \nMichael Blackson\, the self-proclaimed “African King of Comedy\,” brings his outrageous\, high-energy stand-up to the Hollywood Improv Main Room on August 13\, 2026. \nKnown for his hilarious accent\, wild stories\, and fearless crowd work\, Blackson has become one of the most entertaining live performers in comedy. He has appeared in Next Friday\, Coming 2 America\, and is a regular on radio and social media. \nEvent Details\n\nDate: Thursday\, August 13\, 2026\nTime: 9:45 PM PDT\nVenue: Hollywood Improv (The Main Room)\nAddress: 8162 Melrose Ave\, Hollywood\, CA 90046\nTickets From: $40\n\nAbout Michael Blackson\nMichael Blackson is a Ghanaian-American comedian and actor known as the “African King of Comedy.” He appeared in Next Friday and Coming 2 America and is a regular on The Breakfast Club. His live shows are known for explosive crowd interaction and non-stop laughs. \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
+URL:https://comedycalendar.com/event/michael-blackson-live-at-hollywood-improv/
+LOCATION:Hollywood Improv (The Main Room)\, 8162 Melrose Avenue\, Hollywood\, CA\, 90046\, United States
+GEO:34.0834521;-118.3673737
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Hollywood Improv (The Main Room) 8162 Melrose Avenue Hollywood CA 90046 United States;X-APPLE-RADIUS=500;X-TITLE=8162 Melrose Avenue:geo:-118.3673737,34.0834521
 END:VEVENT
 END:VCALENDAR

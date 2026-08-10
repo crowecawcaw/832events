@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-09T04:08:13.637Z",
+  "generated": "2026-08-10T04:21:04.477Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -748,6 +748,41 @@
             },
             "rss": {
               "href": "external-hobby-center.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "holocaust-museum-houston",
+      "friendlyName": "Holocaust Museum Houston",
+      "description": "Education and remembrance museum with programming including educator workshops, author talks, film screenings, and community lectures",
+      "tags": [
+        "Museum District",
+        "Museums",
+        "Community"
+      ],
+      "geo": {
+        "lat": 29.7355,
+        "lng": -95.3708,
+        "label": "Holocaust Museum Houston, 5401 Caroline St, Houston, TX 77004"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Holocaust%20Museum%20Houston%2C%205401%20Caroline%20St%2C%20Houston%2C%20TX%2077004"
+      },
+      "kind": "external",
+      "calendars": [
+        {
+          "name": "holocaust-museum-houston",
+          "friendlyName": "Holocaust Museum Houston",
+          "links": {
+            "ics": {
+              "href": "external-holocaust-museum-houston.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "external-holocaust-museum-houston.rss",
               "type": "application/rss+xml"
             }
           }
