@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-11T04:07:15.758Z",
+  "generated": "2026-08-11T10:00:17.975Z",
   "tags": [
     {
       "name": "Animals",
@@ -39,7 +39,7 @@
       "name": "Art",
       "slug": "art",
       "category": "Activities",
-      "eventCount": 216,
+      "eventCount": 214,
       "calendarCount": 10,
       "links": {
         "ics": {
@@ -56,7 +56,7 @@
       "name": "Arts",
       "slug": "arts",
       "category": "Activities",
-      "eventCount": 132,
+      "eventCount": 131,
       "calendarCount": 7,
       "links": {
         "ics": {
@@ -141,8 +141,8 @@
       "name": "Citywide",
       "slug": "citywide",
       "category": "Other",
-      "eventCount": 30,
-      "calendarCount": 1,
+      "eventCount": 229,
+      "calendarCount": 2,
       "links": {
         "ics": {
           "href": "tag-citywide.ics",
@@ -158,7 +158,7 @@
       "name": "Comedy",
       "slug": "comedy",
       "category": "Activities",
-      "eventCount": 201,
+      "eventCount": 196,
       "calendarCount": 4,
       "links": {
         "ics": {
@@ -175,8 +175,8 @@
       "name": "Community",
       "slug": "community",
       "category": "Community",
-      "eventCount": 548,
-      "calendarCount": 20,
+      "eventCount": 747,
+      "calendarCount": 21,
       "links": {
         "ics": {
           "href": "tag-community.ics",
@@ -243,7 +243,7 @@
       "name": "Culture",
       "slug": "culture",
       "category": "Other",
-      "eventCount": 72,
+      "eventCount": 71,
       "calendarCount": 2,
       "links": {
         "ics": {
@@ -277,7 +277,7 @@
       "name": "Downtown",
       "slug": "downtown",
       "category": "Neighborhoods",
-      "eventCount": 428,
+      "eventCount": 425,
       "calendarCount": 16,
       "links": {
         "ics": {
@@ -294,7 +294,7 @@
       "name": "EaDo",
       "slug": "eado",
       "category": "Neighborhoods",
-      "eventCount": 93,
+      "eventCount": 90,
       "calendarCount": 5,
       "links": {
         "ics": {
@@ -328,8 +328,8 @@
       "name": "Educational",
       "slug": "educational",
       "category": "Other",
-      "eventCount": 1,
-      "calendarCount": 1,
+      "eventCount": 200,
+      "calendarCount": 2,
       "links": {
         "ics": {
           "href": "tag-educational.ics",
@@ -413,7 +413,7 @@
       "name": "Film",
       "slug": "film",
       "category": "Other",
-      "eventCount": 1,
+      "eventCount": 2,
       "calendarCount": 1,
       "links": {
         "ics": {
@@ -430,7 +430,7 @@
       "name": "Food",
       "slug": "food",
       "category": "Activities",
-      "eventCount": 30,
+      "eventCount": 36,
       "calendarCount": 3,
       "links": {
         "ics": {
@@ -580,10 +580,27 @@
       }
     },
     {
+      "name": "Library",
+      "slug": "library",
+      "category": "Other",
+      "eventCount": 199,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-library.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-library.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
       "name": "MakersMarket",
       "slug": "makersmarket",
       "category": "Markets",
-      "eventCount": 30,
+      "eventCount": 29,
       "calendarCount": 1,
       "links": {
         "ics": {
@@ -617,7 +634,7 @@
       "name": "Medical Center",
       "slug": "medical-center",
       "category": "Neighborhoods",
-      "eventCount": 11,
+      "eventCount": 12,
       "calendarCount": 1,
       "links": {
         "ics": {
@@ -668,7 +685,7 @@
       "name": "Montrose",
       "slug": "montrose",
       "category": "Neighborhoods",
-      "eventCount": 288,
+      "eventCount": 289,
       "calendarCount": 4,
       "links": {
         "ics": {
@@ -702,7 +719,7 @@
       "name": "Museum District",
       "slug": "museum-district",
       "category": "Neighborhoods",
-      "eventCount": 109,
+      "eventCount": 107,
       "calendarCount": 10,
       "links": {
         "ics": {
@@ -736,7 +753,7 @@
       "name": "Music",
       "slug": "music",
       "category": "Activities",
-      "eventCount": 844,
+      "eventCount": 842,
       "calendarCount": 20,
       "links": {
         "ics": {
@@ -770,7 +787,7 @@
       "name": "Near Northside",
       "slug": "near-northside",
       "category": "Neighborhoods",
-      "eventCount": 134,
+      "eventCount": 135,
       "calendarCount": 4,
       "links": {
         "ics": {
@@ -787,7 +804,7 @@
       "name": "Nightlife",
       "slug": "nightlife",
       "category": "Activities",
-      "eventCount": 136,
+      "eventCount": 135,
       "calendarCount": 8,
       "links": {
         "ics": {
@@ -872,7 +889,7 @@
       "name": "Performance",
       "slug": "performance",
       "category": "Other",
-      "eventCount": 2,
+      "eventCount": 3,
       "calendarCount": 1,
       "links": {
         "ics": {
@@ -906,7 +923,7 @@
       "name": "Photography",
       "slug": "photography",
       "category": "Other",
-      "eventCount": 4,
+      "eventCount": 5,
       "calendarCount": 1,
       "links": {
         "ics": {
@@ -940,7 +957,7 @@
       "name": "Restaurant",
       "slug": "restaurant",
       "category": "Other",
-      "eventCount": 3,
+      "eventCount": 9,
       "calendarCount": 1,
       "links": {
         "ics": {
@@ -1042,7 +1059,7 @@
       "name": "The Heights",
       "slug": "the-heights",
       "category": "Neighborhoods",
-      "eventCount": 87,
+      "eventCount": 89,
       "calendarCount": 6,
       "links": {
         "ics": {
@@ -1059,7 +1076,7 @@
       "name": "Theater",
       "slug": "theater",
       "category": "Other",
-      "eventCount": 10,
+      "eventCount": 11,
       "calendarCount": 3,
       "links": {
         "ics": {
@@ -1161,7 +1178,7 @@
       "name": "Upper Kirby",
       "slug": "upper-kirby",
       "category": "Neighborhoods",
-      "eventCount": 120,
+      "eventCount": 119,
       "calendarCount": 3,
       "links": {
         "ics": {

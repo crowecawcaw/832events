@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-11T04:07:08.734Z",
+  "lastUpdated": "2026-08-11T09:59:39.102Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -269,6 +269,25 @@
             "Books",
             "Community",
             "The Heights"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "harris-county-public-library",
+      "description": "Harris County Public Library Events",
+      "friendlyLink": "https://hcpl.bibliocommons.com/v2/events",
+      "calendars": [
+        {
+          "name": "harris-county-public-library",
+          "friendlyName": "Harris County Public Library",
+          "icsUrl": "harris-county-public-library-harris-county-public-library.ics",
+          "rssUrl": "harris-county-public-library-harris-county-public-library.rss",
+          "tags": [
+            "Community",
+            "Educational",
+            "Library",
+            "Citywide"
           ]
         }
       ]
@@ -1230,6 +1249,7 @@
     "Holiday",
     "JapaneseCulture",
     "Kids",
+    "Library",
     "MakersMarket",
     "Markets",
     "Medical Center",

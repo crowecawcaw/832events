@@ -6,9 +6,9 @@ METHOD:PUBLISH
 X-WR-CALNAME:Film Events
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:u_mxAqb6R_XZlCHM5raPT
+UID:2EUgI_e8uPS-wqxPaTw6W
 SUMMARY:In Good Company
-DTSTAMP:20260811T040657Z
+DTSTAMP:20260811T095926Z
 DTSTART:20260813T170000Z
 DESCRIPTION:A free event previewing the newest episode of online artist con
 	versation series In Good Company featuring Houston artists Tay Butler and 
@@ -16,6 +16,25 @@ DESCRIPTION:A free event previewing the newest episode of online artist con
 	d by an in-person conversation between the artists.\n\nhttps://www.aurorap
 	ictureshow.org/programs/in-good-company\n\nFrom Aurora Picture Show
 URL:https://www.aurorapictureshow.org/programs/in-good-company
+GEO:29.7195;-95.3122
+LOCATION:5601A Navigation Blvd\, Houston\, TX 77011
+X-CALRIPPER-SOURCE:aurora-picture-show
+CATEGORIES:Aurora Picture Show
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+UID:mWFMvF7Htve17qPQkR8bN
+SUMMARY:Filmmaking Camps 2026 Premiere
+DTSTAMP:20260811T095926Z
+DTSTART:20260815T170000Z
+DESCRIPTION:Aurora Picture Show and the Museum of Fine Arts\, Houston prese
+	nt the free premiere screening of short films made collaboratively by arti
+	sts ages 7-15 in Aurora’s 2026 Summer Youth Filmmaking Camps at the museum
+	’s Brown Auditorium.\n\nhttps://www.aurorapictureshow.org/programs/filmmak
+	ing-camps-2026-premiere\n\nFrom Aurora Picture Show
+URL:https://www.aurorapictureshow.org/programs/filmmaking-camps-2026-premie
+	re
 GEO:29.7195;-95.3122
 LOCATION:5601A Navigation Blvd\, Houston\, TX 77011
 X-CALRIPPER-SOURCE:aurora-picture-show

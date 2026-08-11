@@ -72,7 +72,6 @@ UID:22750-1786579200-1786665599@houstonheights.org
 SUMMARY:Garbage and Recycle Pick Up
 DESCRIPTION:
 URL:https://houstonheights.org/event/gabage-and-recycle-pick-up-9/
-LOCATION:TX
 CATEGORIES:Garbage Pick-Up,Recycling pick-up
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/Garbage-Recyle-Icons.webp
 END:VEVENT
@@ -86,7 +85,6 @@ UID:22752-1787184000-1787270399@houstonheights.org
 SUMMARY:Garbage Pick Up
 DESCRIPTION:
 URL:https://houstonheights.org/event/gabage-pick-up-5/
-LOCATION:TX
 CATEGORIES:Garbage Pick-Up
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/GarbageIcon.webp
 END:VEVENT
@@ -114,7 +112,6 @@ UID:22754-1787788800-1787875199@houstonheights.org
 SUMMARY:Garbage and Recycle Pick Up
 DESCRIPTION:
 URL:https://houstonheights.org/event/gabage-and-recycle-pick-up-10/
-LOCATION:TX
 CATEGORIES:Garbage Pick-Up,Recycling pick-up
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/Garbage-Recyle-Icons.webp
 END:VEVENT
@@ -128,7 +125,6 @@ UID:22756-1788393600-1788479999@houstonheights.org
 SUMMARY:Gabage Pick Up
 DESCRIPTION:
 URL:https://houstonheights.org/event/gabage-pick-up-6/
-LOCATION:TX
 CATEGORIES:Garbage Pick-Up
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/GarbageIcon.webp
 END:VEVENT
@@ -156,7 +152,6 @@ UID:22758-1789603200-1789689599@houstonheights.org
 SUMMARY:Garbage Pick Up
 DESCRIPTION:
 URL:https://houstonheights.org/event/gabage-pick-up-7/
-LOCATION:TX
 CATEGORIES:Garbage Pick-Up
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/GarbageIcon.webp
 END:VEVENT
@@ -170,7 +165,6 @@ UID:22760-1790208000-1790294399@houstonheights.org
 SUMMARY:Garbage and Recycle Pick Up
 DESCRIPTION:
 URL:https://houstonheights.org/event/gabage-and-recycle-pick-up-11/
-LOCATION:TX
 CATEGORIES:Garbage Pick-Up,Recycling pick-up
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/Garbage-Recyle-Icons.webp
 END:VEVENT
@@ -184,7 +178,6 @@ UID:22762-1790812800-1790899199@houstonheights.org
 SUMMARY:Garbage Pick Up
 DESCRIPTION:
 URL:https://houstonheights.org/event/gabage-pick-up-8/
-LOCATION:TX
 CATEGORIES:Garbage Pick-Up
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/GarbageIcon.webp
 END:VEVENT
@@ -198,9 +191,21 @@ UID:26237-1790964000-1790982000@houstonheights.org
 SUMMARY:Speakeasy Casino Night
 DESCRIPTION:
 URL:https://houstonheights.org/event/hha-casino-night/
-LOCATION:TX
 CATEGORIES:Featured Events
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/07/Screenshot-2026-08-04-121806.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261004T090000
+DTEND;TZID=America/Chicago:20261004T140000
+DTSTAMP:20260811T000212Z
+CREATED:20260810T235812Z
+LAST-MODIFIED:20260811T000212Z
+UID:26363-1791104400-1791122400@houstonheights.org
+SUMMARY:Heights Urban Forestry Day
+DESCRIPTION:Heights Urban Forestry Day\nCelebrating the Yale Green Corridor 10 year Anniversary\nCommunity and Non-Profit Partners Participating / family friendly activities\n\nhoustonheights.org/urbanforestry
+URL:https://houstonheights.org/event/heights-urban-forestry-day/
+LOCATION:Houston Heights City Hall & Fire Station\, 107 W. 12th Street\, Houston\, TX\, 77008\, United States
+CATEGORIES:Featured Events
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20261008
@@ -212,7 +217,6 @@ UID:22764-1791417600-1791503999@houstonheights.org
 SUMMARY:Garbage and Recycle Pick Up
 DESCRIPTION:
 URL:https://houstonheights.org/event/gabage-and-recycle-pick-up-12/
-LOCATION:TX
 CATEGORIES:Garbage Pick-Up,Recycling pick-up
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/Garbage-Recyle-Icons.webp
 END:VEVENT
@@ -240,9 +244,20 @@ UID:22766-1792022400-1792108799@houstonheights.org
 SUMMARY:Garbage Pick Up
 DESCRIPTION:
 URL:https://houstonheights.org/event/gabage-pick-up-9/
-LOCATION:TX
 CATEGORIES:Garbage Pick-Up
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/GarbageIcon.webp
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261018T090000
+DTEND;TZID=America/Chicago:20261018T140000
+DTSTAMP:20260811T000113Z
+CREATED:20260810T235929Z
+LAST-MODIFIED:20260811T000113Z
+UID:26365-1792314000-1792332000@houstonheights.org
+SUMMARY:Heights Urban Forestry - FREE TREE GIVEAWAY DAY
+DESCRIPTION:Heights Urban Forestry\nFREE TREE GIVEAWAY DAY\nCommunity and Non-Profit Partners Participating\n\nhoustonheights.org/urbanforestry
+URL:https://houstonheights.org/event/heights-urban-forestry-free-tree-giveaway-day/
+CATEGORIES:Featured Events
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;VALUE=DATE:20261022
@@ -254,7 +269,6 @@ UID:22768-1792627200-1792713599@houstonheights.org
 SUMMARY:Garbage and Recycle Pick Up
 DESCRIPTION:
 URL:https://houstonheights.org/event/gabage-and-recycle-pick-up-13/
-LOCATION:TX
 CATEGORIES:Garbage Pick-Up,Recycling pick-up
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/Garbage-Recyle-Icons.webp
 END:VEVENT
@@ -268,7 +282,6 @@ UID:22770-1793232000-1793318399@houstonheights.org
 SUMMARY:Garbage Pick Up
 DESCRIPTION:
 URL:https://houstonheights.org/event/gabage-pick-up-10/
-LOCATION:TX
 CATEGORIES:Garbage Pick-Up
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/GarbageIcon.webp
 END:VEVENT
@@ -296,7 +309,6 @@ UID:22772-1793836800-1793923199@houstonheights.org
 SUMMARY:Garbage and Recycle Pick Up
 DESCRIPTION:
 URL:https://houstonheights.org/event/gabage-and-recycle-pick-up-14/
-LOCATION:TX
 CATEGORIES:Garbage Pick-Up,Recycling pick-up
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/Garbage-Recyle-Icons.webp
 END:VEVENT
@@ -310,7 +322,6 @@ UID:26239-1794070800-1794092400@houstonheights.org
 SUMMARY:HHA Art Crawl
 DESCRIPTION:
 URL:https://houstonheights.org/event/hha-art-crawl/
-LOCATION:TX
 CATEGORIES:Featured Events
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/07/Art-Crawl.webp
 END:VEVENT
@@ -338,7 +349,6 @@ UID:22774-1794441600-1794527999@houstonheights.org
 SUMMARY:Garbage Pick Up
 DESCRIPTION:
 URL:https://houstonheights.org/event/gabage-pick-up-11/
-LOCATION:TX
 CATEGORIES:Garbage Pick-Up
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/GarbageIcon.webp
 END:VEVENT
@@ -352,7 +362,6 @@ UID:22776-1795046400-1795132799@houstonheights.org
 SUMMARY:Garbage and Recycle Pick Up
 DESCRIPTION:
 URL:https://houstonheights.org/event/gabage-and-recycle-pick-up-15/
-LOCATION:TX
 CATEGORIES:Garbage Pick-Up,Recycling pick-up
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/Garbage-Recyle-Icons.webp
 END:VEVENT
@@ -366,7 +375,6 @@ UID:22778-1796256000-1796342399@houstonheights.org
 SUMMARY:Garbage and Recycle Pick Up
 DESCRIPTION:
 URL:https://houstonheights.org/event/gabage-and-recycle-pick-up-16/
-LOCATION:TX
 CATEGORIES:Garbage Pick-Up,Recycling pick-up
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/Garbage-Recyle-Icons.webp
 END:VEVENT
@@ -380,7 +388,6 @@ UID:22780-1796860800-1796947199@houstonheights.org
 SUMMARY:Garbage Pick Up
 DESCRIPTION:
 URL:https://houstonheights.org/event/gabage-pick-up-12/
-LOCATION:TX
 CATEGORIES:Garbage Pick-Up
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/GarbageIcon.webp
 END:VEVENT
@@ -408,7 +415,6 @@ UID:22782-1797465600-1797551999@houstonheights.org
 SUMMARY:Garbage and Recycle Pick Up
 DESCRIPTION:
 URL:https://houstonheights.org/event/gabage-and-recycle-pick-up-17/
-LOCATION:TX
 CATEGORIES:Garbage Pick-Up,Recycling pick-up
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/2026/01/Garbage-Recyle-Icons.webp
 END:VEVENT
