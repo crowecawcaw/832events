@@ -1,5 +1,5 @@
 name: Sawyer Yards
-status: candidate
+status: added
 platform: custom
 url: https://www.sawyeryards.com/events/upcoming-events
 tags:
@@ -8,7 +8,14 @@ tags:
   - Community
   - North Houston
 firstSeen: 2026-08-05
-lastChecked: 2026-08-05
-notes: "20,000 sq ft multi-purpose event space in North Houston (between Downtown & Heights). 60+ events/year reported. Calendar available; check for ICS feed or custom ripper."
+lastChecked: 2026-08-11
+pr: "initial-implementation"
+notes: "20,000 sq ft multi-purpose event space in North Houston (between Downtown & Heights). Custom HTML ripper with Browserbase proxy for bot detection bypass. ~60 events/year."
 impl:
+  type: custom
+  proxy: true
   observedEventCount: 60
+  geo:
+    lat: 29.7698
+    lng: -95.3839
+    label: "Sawyer Yards, 2101 Winter Street, Houston, TX 77007"
