@@ -1,0 +1,15 @@
+name: harris-county-public-library
+description: Harris County Public Library Events
+url: https://hcpl.bibliocommons.com/v2/events
+friendlyLink: https://hcpl.bibliocommons.com/v2/events
+calendars:
+  - name: harris-county-public-library
+    friendlyname: Harris County Public Library
+    timezone: America/Chicago
+# Multi-location across 26+ Houston-area branches, not a single venue
+geo: null
+tags:
+  - Community
+  - Educational
+  - Library
+  - Citywide
