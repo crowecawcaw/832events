@@ -1,5 +1,5 @@
 {
-  "buildTime": "2026-08-10T10:05:09.926Z",
+  "buildTime": "2026-08-11T04:07:15.751Z",
   "totalErrors": 4,
   "configErrors": [],
   "sources": [
@@ -92,9 +92,9 @@
   ],
   "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 2030,
-    "eventsWithGeo": 1762,
-    "eventsWithoutGeo": 268,
+    "totalEvents": 2023,
+    "eventsWithGeo": 1758,
+    "eventsWithoutGeo": 265,
     "geocodeErrors": 0
   },
   "uncertainEvents": [],
@@ -673,8 +673,8 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1314,
-    "totalEvents": 2030,
+    "eventsWithImage": 1312,
+    "totalEvents": 2023,
     "venuesWithImage": 0,
     "totalVenues": 64,
     "unresolvable": 0
@@ -1213,13 +1213,6 @@
       },
       {
         "source": "childrens-museum-houston",
-        "eventId": "little-builders-playtime-2026-08-10-91f5b169",
-        "summary": "Little Builders Playtime",
-        "date": "2026-08-10T10:00-05:00[America/Chicago]",
-        "url": "https://www.cmhouston.org/events/little-builders-playtime"
-      },
-      {
-        "source": "childrens-museum-houston",
         "eventId": "members-first-saturday-sneak-in-2026-09-05-5c1371fb",
         "summary": "Members' First Saturday Sneak-In",
         "date": "2026-09-05T10:00-05:00[America/Chicago]",
@@ -1374,12 +1367,6 @@
         "eventId": "i-said-what-i-said-2026-08-15",
         "summary": "I Said What I Said",
         "date": "2026-08-15T20:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "cullen-performance-hall",
-        "eventId": "new-student-orientation-2026-08-07",
-        "summary": "New Student Orientation",
-        "date": "2026-08-07T07:45-05:00[America/Chicago]"
       },
       {
         "source": "cullen-performance-hall",
@@ -1792,6 +1779,13 @@
       },
       {
         "source": "htxoutdoors",
+        "eventId": "dinner-after-full-moon-hike-2026-10-26",
+        "summary": "Dinner after Full Moon Hike",
+        "date": "2026-10-26T20:40-05:00[America/Chicago]",
+        "url": "https://htxoutdoors.com/events/canceled-dinner-after-full-moon-hike/"
+      },
+      {
+        "source": "htxoutdoors",
         "eventId": "evening-forest-hike-2026-08-14",
         "summary": "Evening Forest Hike",
         "date": "2026-08-14T19:00-05:00[America/Chicago]",
@@ -1831,13 +1825,6 @@
         "summary": "Glacier Camping Trip",
         "date": "2026-09-17T12:00-05:00[America/Chicago]",
         "url": "https://htxoutdoors.com/events/glacier-camping-trip/"
-      },
-      {
-        "source": "htxoutdoors",
-        "eventId": "intro-to-kayak-roll-pool-party-2026-08-10",
-        "summary": "Intro to Kayak Roll Pool Party",
-        "date": "2026-08-10T18:00-05:00[America/Chicago]",
-        "url": "https://htxoutdoors.com/events/intro-to-kayak-roll-pool-party-3/"
       },
       {
         "source": "htxoutdoors",
@@ -2318,12 +2305,6 @@
         "eventId": "eric-reprid-2026-08-13",
         "summary": "Eric Reprid",
         "date": "2026-08-13T19:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "songkick-houston",
-        "eventId": "freeze-the-mic-2026-2026-08-07",
-        "summary": "FREEZE THE MIC 2026",
-        "date": "2026-08-07T21:00-05:00[America/Chicago]"
       },
       {
         "source": "songkick-houston",
@@ -3329,12 +3310,6 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
-        "eventId": "interpretive-center-open-8-30am-to-10-30am-bastrop-state-park-2026-08-10",
-        "summary": "Interpretive Center Open 8:30am to 10:30am - Bastrop State Park",
-        "date": "2026-08-10T08:30-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
         "eventId": "interpretive-center-open-8-30am-to-2-30pm-bastrop-state-park-2026-08-17",
         "summary": "Interpretive Center Open 8:30am to 2:30pm - Bastrop State Park",
         "date": "2026-08-17T08:30-05:00[America/Chicago]"
@@ -3774,9 +3749,9 @@
     ]
   },
   "costStats": {
-    "eventsWithCost": 451,
-    "freeEvents": 332,
-    "totalEvents": 2030,
+    "eventsWithCost": 453,
+    "freeEvents": 334,
+    "totalEvents": 2023,
     "unresolvable": 0
   },
   "costGaps": [
@@ -4237,13 +4212,6 @@
     },
     {
       "source": "childrens-museum-houston",
-      "eventId": "little-builders-playtime-2026-08-10-91f5b169",
-      "summary": "Little Builders Playtime",
-      "date": "2026-08-10T10:00-05:00[America/Chicago]",
-      "url": "https://www.cmhouston.org/events/little-builders-playtime"
-    },
-    {
-      "source": "childrens-museum-houston",
       "eventId": "members-first-saturday-sneak-in-2026-09-05-5c1371fb",
       "summary": "Members' First Saturday Sneak-In",
       "date": "2026-09-05T10:00-05:00[America/Chicago]",
@@ -4538,12 +4506,6 @@
       "eventId": "i-said-what-i-said-2026-08-15",
       "summary": "I Said What I Said",
       "date": "2026-08-15T20:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "cullen-performance-hall",
-      "eventId": "new-student-orientation-2026-08-07",
-      "summary": "New Student Orientation",
-      "date": "2026-08-07T07:45-05:00[America/Chicago]"
     },
     {
       "source": "cullen-performance-hall",
@@ -5117,13 +5079,6 @@
     },
     {
       "source": "house-of-blues-houston",
-      "eventId": "tm-G5dIZ_arD2M62",
-      "summary": "Afroman",
-      "date": "2026-08-09T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/afroman-houston-texas-08-09-2026/event/3A006497BB3F71CF"
-    },
-    {
-      "source": "house-of-blues-houston",
       "eventId": "tm-G5dIZ_aSNwnaK",
       "summary": "Prof",
       "date": "2026-10-24T19:00-05:00[America/Chicago]",
@@ -5649,10 +5604,10 @@
     },
     {
       "source": "htxoutdoors",
-      "eventId": "bouldering-at-silver-street-2026-08-10",
-      "summary": "Bouldering at Silver Street",
-      "date": "2026-08-10T19:00-05:00[America/Chicago]",
-      "url": "https://htxoutdoors.com/events/boulder-silver-street-1/"
+      "eventId": "dinner-after-full-moon-hike-2026-10-26",
+      "summary": "Dinner after Full Moon Hike",
+      "date": "2026-10-26T20:40-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/canceled-dinner-after-full-moon-hike/"
     },
     {
       "source": "htxoutdoors",
@@ -5698,6 +5653,13 @@
     },
     {
       "source": "htxoutdoors",
+      "eventId": "full-moon-hike-2026-10-26",
+      "summary": "Full Moon Hike",
+      "date": "2026-10-26T18:45-05:00[America/Chicago]",
+      "url": "https://htxoutdoors.com/events/rained-out-full-moon-hike/"
+    },
+    {
+      "source": "htxoutdoors",
       "eventId": "glacier-backpacking-trip-2026-09-12",
       "summary": "Glacier Backpacking Trip",
       "date": "2026-09-12T12:00-05:00[America/Chicago]",
@@ -5709,13 +5671,6 @@
       "summary": "Glacier Camping Trip",
       "date": "2026-09-17T12:00-05:00[America/Chicago]",
       "url": "https://htxoutdoors.com/events/glacier-camping-trip/"
-    },
-    {
-      "source": "htxoutdoors",
-      "eventId": "intro-to-kayak-roll-pool-party-2026-08-10",
-      "summary": "Intro to Kayak Roll Pool Party",
-      "date": "2026-08-10T18:00-05:00[America/Chicago]",
-      "url": "https://htxoutdoors.com/events/intro-to-kayak-roll-pool-party-3/"
     },
     {
       "source": "htxoutdoors",
@@ -5821,13 +5776,6 @@
       "summary": "JAPAN FESTIVAL HOUSTON",
       "date": "2026-09-12T10:00:00.092-05:00[America/Chicago]",
       "url": "https://www.jas-hou.org/events/2026/japan-festival-houston"
-    },
-    {
-      "source": "japan-america-society-houston",
-      "eventId": "6a63bcc742322475b4b27395",
-      "summary": "The Samurai and the Prisoner Screening at River Oaks Theatre",
-      "date": "2026-08-07T19:00:00.226-05:00[America/Chicago]",
-      "url": "https://www.jas-hou.org/events/2026/8/7/the-samurai-and-the-prisoner"
     },
     {
       "source": "japan-america-society-houston",
@@ -6038,6 +5986,13 @@
       "summary": "They, Who Sound",
       "date": "2026-11-02T19:30-06:00[America/Chicago]",
       "url": "https://lawndaleartcenter.org/event/they-who-sound-185/"
+    },
+    {
+      "source": "lawndale-art-center",
+      "eventId": "they-who-sound-2026-11-09",
+      "summary": "They, Who Sound",
+      "date": "2026-11-09T19:30-06:00[America/Chicago]",
+      "url": "https://lawndaleartcenter.org/event/they-who-sound-186/"
     },
     {
       "source": "mcgonigels-mucky-duck",
@@ -6873,13 +6828,6 @@
     },
     {
       "source": "punch-line-comedy-club",
-      "eventId": "tm-G5dIZ_57JNZyX",
-      "summary": "TaTa Sherise",
-      "date": "2026-08-09T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/tata-sherise-houston-texas-08-09-2026/event/3A0064B1268C0E7E"
-    },
-    {
-      "source": "punch-line-comedy-club",
       "eventId": "tm-G5dIZ_57NZZlU",
       "summary": "Daniela Mora",
       "date": "2026-09-17T19:30-05:00[America/Chicago]",
@@ -7024,13 +6972,6 @@
       "summary": "Na'im Lynn",
       "date": "2026-09-03T19:30-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/naim-lynn-houston-texas-09-03-2026/event/3A006494B7BBC77E"
-    },
-    {
-      "source": "punch-line-comedy-club",
-      "eventId": "tm-G5dIZ_a3MSGrS",
-      "summary": "Na'im Lynn",
-      "date": "2026-09-04T21:15-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/naim-lynn-houston-texas-09-04-2026/event/3A006494B7CCC7B3"
     },
     {
       "source": "punch-line-comedy-club",
@@ -7687,12 +7628,6 @@
       "eventId": "eric-reprid-2026-08-13",
       "summary": "Eric Reprid",
       "date": "2026-08-13T19:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "songkick-houston",
-      "eventId": "freeze-the-mic-2026-2026-08-07",
-      "summary": "FREEZE THE MIC 2026",
-      "date": "2026-08-07T21:00-05:00[America/Chicago]"
     },
     {
       "source": "songkick-houston",
@@ -8698,12 +8633,6 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
-      "eventId": "interpretive-center-open-8-30am-to-10-30am-bastrop-state-park-2026-08-10",
-      "summary": "Interpretive Center Open 8:30am to 10:30am - Bastrop State Park",
-      "date": "2026-08-10T08:30-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
       "eventId": "interpretive-center-open-8-30am-to-2-30pm-bastrop-state-park-2026-08-17",
       "summary": "Interpretive Center Open 8:30am to 2:30pm - Bastrop State Park",
       "date": "2026-08-17T08:30-05:00[America/Chicago]"
@@ -9513,6 +9442,13 @@
     },
     {
       "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_5pJ55cC",
+      "summary": "Noah Gundersen: Rites of Spring US TOUR FALL 2026",
+      "date": "2026-11-09T18:30-06:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/noah-gundersen-rites-of-spring-us-houston-texas-11-09-2026/event/3A0064B5A62CBB4E"
+    },
+    {
+      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_5RPQ73Z",
       "summary": "Julia Jacklin: North America Tour 2026",
       "date": "2026-11-04T19:00-06:00[America/Chicago]",
@@ -10083,7 +10019,7 @@
     {
       "name": "childrens-museum-houston-main",
       "type": "Ripper",
-      "events": 32,
+      "events": 31,
       "expectEmpty": false,
       "source": "childrens-museum-houston"
     },
@@ -10104,7 +10040,7 @@
     {
       "name": "cullen-performance-hall-cullen-performance-hall",
       "type": "Ripper",
-      "events": 8,
+      "events": 7,
       "expectEmpty": false,
       "source": "cullen-performance-hall"
     },
@@ -10125,7 +10061,7 @@
     {
       "name": "downtown-houston-plus-downtown-houston-plus",
       "type": "Ripper",
-      "events": 106,
+      "events": 108,
       "expectEmpty": false,
       "source": "downtown-houston-plus"
     },
@@ -10167,7 +10103,7 @@
     {
       "name": "house-of-blues-houston-house-of-blues-houston",
       "type": "Ripper",
-      "events": 58,
+      "events": 57,
       "expectEmpty": false,
       "source": "house-of-blues-houston"
     },
@@ -10216,7 +10152,7 @@
     {
       "name": "japan-america-society-houston-japan-america-society-houston",
       "type": "Ripper",
-      "events": 6,
+      "events": 5,
       "expectEmpty": false,
       "source": "japan-america-society-houston"
     },
@@ -10251,7 +10187,7 @@
     {
       "name": "lawndale-art-center-lawndale-art-center",
       "type": "Ripper",
-      "events": 9,
+      "events": 10,
       "expectEmpty": false,
       "source": "lawndale-art-center"
     },
@@ -10335,7 +10271,7 @@
     {
       "name": "punch-line-comedy-club-punch-line-comedy-club",
       "type": "Ripper",
-      "events": 94,
+      "events": 92,
       "expectEmpty": false,
       "source": "punch-line-comedy-club"
     },
@@ -10384,7 +10320,7 @@
     {
       "name": "songkick-houston-songkick-houston",
       "type": "Ripper",
-      "events": 50,
+      "events": 49,
       "expectEmpty": false,
       "source": "songkick-houston"
     },
@@ -10398,7 +10334,7 @@
     {
       "name": "texas-parks-wildlife-houston-texas-parks-wildlife-houston",
       "type": "Ripper",
-      "events": 201,
+      "events": 200,
       "expectEmpty": false,
       "source": "texas-parks-wildlife-houston"
     },
@@ -10440,7 +10376,7 @@
     {
       "name": "white-oak-music-hall-white-oak-music-hall",
       "type": "Ripper",
-      "events": 101,
+      "events": 102,
       "expectEmpty": false,
       "source": "white-oak-music-hall"
     },
@@ -10475,35 +10411,35 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 845,
+      "events": 844,
       "expectEmpty": false,
       "source": "tag-music"
     },
     {
       "name": "tag-nightlife",
       "type": "Aggregate",
-      "events": 138,
+      "events": 136,
       "expectEmpty": false,
       "source": "tag-nightlife"
     },
     {
       "name": "tag-downtown",
       "type": "Aggregate",
-      "events": 429,
+      "events": 428,
       "expectEmpty": false,
       "source": "tag-downtown"
     },
     {
       "name": "tag-theater",
       "type": "Aggregate",
-      "events": 11,
+      "events": 10,
       "expectEmpty": false,
       "source": "tag-theater"
     },
     {
       "name": "tag-arts",
       "type": "Aggregate",
-      "events": 133,
+      "events": 132,
       "expectEmpty": false,
       "source": "tag-arts"
     },
@@ -10538,14 +10474,14 @@
     {
       "name": "tag-art",
       "type": "Aggregate",
-      "events": 215,
+      "events": 216,
       "expectEmpty": false,
       "source": "tag-art"
     },
     {
       "name": "tag-museum-district",
       "type": "Aggregate",
-      "events": 110,
+      "events": 109,
       "expectEmpty": false,
       "source": "tag-museum-district"
     },
@@ -10566,7 +10502,7 @@
     {
       "name": "tag-education",
       "type": "Aggregate",
-      "events": 268,
+      "events": 267,
       "expectEmpty": false,
       "source": "tag-education"
     },
@@ -10580,21 +10516,21 @@
     {
       "name": "tag-family",
       "type": "Aggregate",
-      "events": 51,
+      "events": 50,
       "expectEmpty": false,
       "source": "tag-family"
     },
     {
       "name": "tag-kids",
       "type": "Aggregate",
-      "events": 32,
+      "events": 31,
       "expectEmpty": false,
       "source": "tag-kids"
     },
     {
       "name": "tag-museum",
       "type": "Aggregate",
-      "events": 36,
+      "events": 35,
       "expectEmpty": false,
       "source": "tag-museum"
     },
@@ -10615,21 +10551,21 @@
     {
       "name": "tag-performingarts",
       "type": "Aggregate",
-      "events": 17,
+      "events": 15,
       "expectEmpty": false,
       "source": "tag-performingarts"
     },
     {
       "name": "tag-university",
       "type": "Aggregate",
-      "events": 8,
+      "events": 7,
       "expectEmpty": false,
       "source": "tag-university"
     },
     {
       "name": "tag-university-of-houston",
       "type": "Aggregate",
-      "events": 8,
+      "events": 7,
       "expectEmpty": false,
       "source": "tag-university-of-houston"
     },
@@ -10643,14 +10579,14 @@
     {
       "name": "tag-montrose",
       "type": "Aggregate",
-      "events": 289,
+      "events": 288,
       "expectEmpty": false,
       "source": "tag-montrose"
     },
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 547,
+      "events": 548,
       "expectEmpty": false,
       "source": "tag-community"
     },
@@ -10720,14 +10656,14 @@
     {
       "name": "tag-parks",
       "type": "Aggregate",
-      "events": 292,
+      "events": 291,
       "expectEmpty": false,
       "source": "tag-parks"
     },
     {
       "name": "tag-outdoor-recreation",
       "type": "Aggregate",
-      "events": 258,
+      "events": 257,
       "expectEmpty": false,
       "source": "tag-outdoor-recreation"
     },
@@ -10741,7 +10677,7 @@
     {
       "name": "tag-japaneseculture",
       "type": "Aggregate",
-      "events": 6,
+      "events": 5,
       "expectEmpty": false,
       "source": "tag-japaneseculture"
     },
@@ -10762,7 +10698,7 @@
     {
       "name": "tag-near-northside",
       "type": "Aggregate",
-      "events": 133,
+      "events": 134,
       "expectEmpty": false,
       "source": "tag-near-northside"
     },
@@ -10846,14 +10782,14 @@
     {
       "name": "tag-comedy",
       "type": "Aggregate",
-      "events": 205,
+      "events": 201,
       "expectEmpty": false,
       "source": "tag-comedy"
     },
     {
       "name": "tag-entertainment",
       "type": "Aggregate",
-      "events": 105,
+      "events": 103,
       "expectEmpty": false,
       "source": "tag-entertainment"
     },
@@ -10881,7 +10817,7 @@
     {
       "name": "tag-concert",
       "type": "Aggregate",
-      "events": 50,
+      "events": 49,
       "expectEmpty": false,
       "source": "tag-concert"
     },
@@ -10902,7 +10838,7 @@
     {
       "name": "tag-nature",
       "type": "Aggregate",
-      "events": 201,
+      "events": 200,
       "expectEmpty": false,
       "source": "tag-nature"
     },
@@ -11028,7 +10964,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 2040,
+      "events": 2033,
       "expectEmpty": false,
       "source": "tag-all"
     },
