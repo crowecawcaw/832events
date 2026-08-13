@@ -1,0 +1,337 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Hermann Park Conservancy - ECPv6.17.2//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Hermann Park Conservancy
+X-ORIGINAL-URL:https://hermannpark.org
+X-WR-CALDESC:Events for Hermann Park Conservancy
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-Robots-Tag:noindex
+X-PUBLISHED-TTL:PT1H
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20250309T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20251102T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20260308T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20261101T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20270314T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20271107T070000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260813T090000
+DTEND;TZID=America/Chicago:20260813T120000
+DTSTAMP:20260805T194437Z
+CREATED:20260805T194437Z
+LAST-MODIFIED:20260805T194437Z
+UID:28400-1786611600-1786622400@hermannpark.org
+SUMMARY:Japanese Garden Volunteer Day
+DESCRIPTION:Join us every Thursday for hands-on gardening projects at the Japanese Garden. From 9 a.m. to 12 p.m.\, come help with seasonal tasks like planting\, weeding\, mulching\, and pruning. A great way to connect with others and make a visible impact in the Park! \nNo experience needed. All ages are welcome. \nClick here to sign up!
+URL:https://hermannpark.org/event/japanese-garden-volunteer-day-12/
+LOCATION:Japanese Garden\, Hermann Park Japanese Garden\, Houston\, TX\, 77035\, United States
+ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2024/04/japanese_garden_2__-_photo_by_patrick_talley-scaled.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260815T080000
+DTEND;TZID=America/Chicago:20260815T090000
+DTSTAMP:20260805T192542Z
+CREATED:20260805T192542Z
+LAST-MODIFIED:20260805T192542Z
+UID:28375-1786780800-1786784400@hermannpark.org
+SUMMARY:Sound Bath with Daemein Smith (Prioritizing Peace)
+DESCRIPTION:Join us for a peaceful morning experience in Hermann Park with a free guided Sound Bath led by Daemein Smith of Prioritizing Peace. Set against the natural beauty of the Tsuru Family Terrace in the Commons\, this immersive meditation experience uses sound and vibration to promote relaxation\, mindfulness\, and emotional well-being. Guests are encouraged to slow down\, reset\, and “Prioritize Peace” through a calming journey of sound healing in nature. \n Tsuru Family Terrace\n Saturday\, August 15\n 8 – 9 a.m.\n Free Community Session \nGuests are encouraged to bring a yoga mat if available. Blankets and pillows are also recommended for additional comfort. All ages and experience levels welcome. \nParking: Free parking available across the street from the Commons in Lot S (6215 Main St\, Houston\, TX 77030). Additional street parking available along Main Street.
+URL:https://hermannpark.org/event/sound-bath-with-daemein-smith-prioritizing-peace-8/
+LOCATION:The Commons
+ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2025/08/P4060009-scaled.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260815T080000
+DTEND;TZID=America/Chicago:20260815T110000
+DTSTAMP:20260805T194622Z
+CREATED:20260805T194622Z
+LAST-MODIFIED:20260805T194622Z
+UID:28406-1786780800-1786791600@hermannpark.org
+SUMMARY:McGovern Centennial Gardens Volunteer Day
+DESCRIPTION:Join us every Saturday for hands-on gardening projects at the McGovern Centennial Gardens. From 8 a.m. to 11 a.m.\, come help with seasonal tasks like planting\, weeding\, mulching\, and pruning. A great way to connect with others and make a visible impact in the Park! \nNo experience needed. All ages are welcome. \nMeet at the Family Garden in McGovern Centennial Gardens. \n Click here to sign up!
+URL:https://hermannpark.org/event/mcgovern-centennial-gardens-volunteer-day-16/
+LOCATION:McGovern Centennial Gardens\, 1500 Hermann Drive\, Houston\, TX\, 77004\, United States
+ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2024/04/mcg_aerial4-scaled.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260820T090000
+DTEND;TZID=America/Chicago:20260820T120000
+DTSTAMP:20260805T194457Z
+CREATED:20260805T194457Z
+LAST-MODIFIED:20260805T194457Z
+UID:28402-1787216400-1787227200@hermannpark.org
+SUMMARY:Japanese Garden Volunteer Day
+DESCRIPTION:Join us every Thursday for hands-on gardening projects at the Japanese Garden. From 9 a.m. to 12 p.m.\, come help with seasonal tasks like planting\, weeding\, mulching\, and pruning. A great way to connect with others and make a visible impact in the Park! \nNo experience needed. All ages are welcome. \nClick here to sign up!
+URL:https://hermannpark.org/event/japanese-garden-volunteer-day-13/
+LOCATION:Japanese Garden\, Hermann Park Japanese Garden\, Houston\, TX\, 77035\, United States
+ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2024/04/japanese_garden_2__-_photo_by_patrick_talley-scaled.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260822T080000
+DTEND;TZID=America/Chicago:20260822T090000
+DTSTAMP:20260805T192610Z
+CREATED:20260805T192610Z
+LAST-MODIFIED:20260805T192610Z
+UID:28378-1787385600-1787389200@hermannpark.org
+SUMMARY:Sound Bath with Daemein Smith (Prioritizing Peace)
+DESCRIPTION:Join us for a peaceful morning experience in Hermann Park with a free guided Sound Bath led by Daemein Smith of Prioritizing Peace. Set against the natural beauty of the Tsuru Family Terrace in the Commons\, this immersive meditation experience uses sound and vibration to promote relaxation\, mindfulness\, and emotional well-being. Guests are encouraged to slow down\, reset\, and “Prioritize Peace” through a calming journey of sound healing in nature. \n Tsuru Family Terrace\n Saturday\, August 22\n 8 – 9 a.m.\n Free Community Session \nGuests are encouraged to bring a yoga mat if available. Blankets and pillows are also recommended for additional comfort. All ages and experience levels welcome. \nParking: Free parking available across the street from the Commons in Lot S (6215 Main St\, Houston\, TX 77030). Additional street parking available along Main Street.
+URL:https://hermannpark.org/event/sound-bath-with-daemein-smith-prioritizing-peace-9/
+LOCATION:The Commons
+ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2025/08/P4060009-scaled.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260822T080000
+DTEND;TZID=America/Chicago:20260822T110000
+DTSTAMP:20260805T194640Z
+CREATED:20260805T194640Z
+LAST-MODIFIED:20260805T194640Z
+UID:28408-1787385600-1787396400@hermannpark.org
+SUMMARY:McGovern Centennial Gardens Volunteer Day
+DESCRIPTION:Join us every Saturday for hands-on gardening projects at the McGovern Centennial Gardens. From 8 a.m. to 11 a.m.\, come help with seasonal tasks like planting\, weeding\, mulching\, and pruning. A great way to connect with others and make a visible impact in the Park! \nNo experience needed. All ages are welcome. \nMeet at the Family Garden in McGovern Centennial Gardens. \n Click here to sign up!
+URL:https://hermannpark.org/event/mcgovern-centennial-gardens-volunteer-day-17/
+LOCATION:McGovern Centennial Gardens\, 1500 Hermann Drive\, Houston\, TX\, 77004\, United States
+ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2024/04/mcg_aerial4-scaled.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260826T080000
+DTEND;TZID=America/Chicago:20260826T110000
+DTSTAMP:20260805T194413Z
+CREATED:20260805T193517Z
+LAST-MODIFIED:20260805T194413Z
+UID:28398-1787731200-1787742000@hermannpark.org
+SUMMARY:McGovern Centennial Gardens Volunteer Day
+DESCRIPTION:Join us every Wednesday for hands-on gardening projects at the McGovern Centennial Gardens. From 8 a.m. to 11 a.m.\, come help with seasonal tasks like planting\, weeding\, mulching\, and pruning. A great way to connect with others and make a visible impact in the Park! \nNo experience needed. All ages are welcome. \nMeet at the Family Garden in McGovern Centennial Gardens. \n Click here to sign up!
+URL:https://hermannpark.org/event/mcgovern-centennial-gardens-volunteer-day-15/
+LOCATION:McGovern Centennial Gardens\, 1500 Hermann Drive\, Houston\, TX\, 77004\, United States
+ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2024/04/mcg_aerial4-scaled.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260827T090000
+DTEND;TZID=America/Chicago:20260827T120000
+DTSTAMP:20260805T194516Z
+CREATED:20260805T194516Z
+LAST-MODIFIED:20260805T194516Z
+UID:28404-1787821200-1787832000@hermannpark.org
+SUMMARY:Japanese Garden Volunteer Day
+DESCRIPTION:Join us every Thursday for hands-on gardening projects at the Japanese Garden. From 9 a.m. to 12 p.m.\, come help with seasonal tasks like planting\, weeding\, mulching\, and pruning. A great way to connect with others and make a visible impact in the Park! \nNo experience needed. All ages are welcome. \nClick here to sign up!
+URL:https://hermannpark.org/event/japanese-garden-volunteer-day-14/
+LOCATION:Japanese Garden\, Hermann Park Japanese Garden\, Houston\, TX\, 77035\, United States
+ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2024/04/japanese_garden_2__-_photo_by_patrick_talley-scaled.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260829T080000
+DTEND;TZID=America/Chicago:20260829T090000
+DTSTAMP:20260805T192638Z
+CREATED:20260805T192638Z
+LAST-MODIFIED:20260805T192638Z
+UID:28381-1787990400-1787994000@hermannpark.org
+SUMMARY:Sound Bath with Daemein Smith (Prioritizing Peace)
+DESCRIPTION:Join us for a peaceful morning experience in Hermann Park with a free guided Sound Bath led by Daemein Smith of Prioritizing Peace. Set against the natural beauty of the Tsuru Family Terrace in the Commons\, this immersive meditation experience uses sound and vibration to promote relaxation\, mindfulness\, and emotional well-being. Guests are encouraged to slow down\, reset\, and “Prioritize Peace” through a calming journey of sound healing in nature. \n Tsuru Family Terrace\n Saturday\, August 29\n 8 – 9 a.m.\n Free Community Session \nGuests are encouraged to bring a yoga mat if available. Blankets and pillows are also recommended for additional comfort. All ages and experience levels welcome. \nParking: Free parking available across the street from the Commons in Lot S (6215 Main St\, Houston\, TX 77030). Additional street parking available along Main Street.
+URL:https://hermannpark.org/event/sound-bath-with-daemein-smith-prioritizing-peace-10/
+LOCATION:The Commons
+ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2025/08/P4060009-scaled.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260829T080000
+DTEND;TZID=America/Chicago:20260829T110000
+DTSTAMP:20260805T194702Z
+CREATED:20260805T194702Z
+LAST-MODIFIED:20260805T194702Z
+UID:28410-1787990400-1788001200@hermannpark.org
+SUMMARY:McGovern Centennial Gardens Volunteer Day
+DESCRIPTION:Join us every Saturday for hands-on gardening projects at the McGovern Centennial Gardens. From 8 a.m. to 11 a.m.\, come help with seasonal tasks like planting\, weeding\, mulching\, and pruning. A great way to connect with others and make a visible impact in the Park! \nNo experience needed. All ages are welcome. \nMeet at the Family Garden in McGovern Centennial Gardens. \n Click here to sign up!
+URL:https://hermannpark.org/event/mcgovern-centennial-gardens-volunteer-day-18/
+LOCATION:McGovern Centennial Gardens\, 1500 Hermann Drive\, Houston\, TX\, 77004\, United States
+ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2024/04/mcg_aerial4-scaled.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260905T080000
+DTEND;TZID=America/Chicago:20260905T090000
+DTSTAMP:20260805T193149Z
+CREATED:20260805T193149Z
+LAST-MODIFIED:20260805T193149Z
+UID:28384-1788595200-1788598800@hermannpark.org
+SUMMARY:Sound Bath with Daemein Smith (Prioritizing Peace)
+DESCRIPTION:Join us for a peaceful morning experience in Hermann Park with a free guided Sound Bath led by Daemein Smith of Prioritizing Peace. Set against the natural beauty of the Tsuru Family Terrace in the Commons\, this immersive meditation experience uses sound and vibration to promote relaxation\, mindfulness\, and emotional well-being. Guests are encouraged to slow down\, reset\, and “Prioritize Peace” through a calming journey of sound healing in nature. \n Tsuru Family Terrace\n Saturday\, September 5\n 8 – 9 a.m.\n Free Community Session \nGuests are encouraged to bring a yoga mat if available. Blankets and pillows are also recommended for additional comfort. All ages and experience levels welcome. \nParking: Free parking available across the street from the Commons in Lot S (6215 Main St\, Houston\, TX 77030). Additional street parking available along Main Street.
+URL:https://hermannpark.org/event/sound-bath-with-daemein-smith-prioritizing-peace-11/
+LOCATION:The Commons
+ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2025/08/P4060009-scaled.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260911T090000
+DTEND;TZID=America/Chicago:20260911T120000
+DTSTAMP:20260805T191711Z
+CREATED:20260805T191711Z
+LAST-MODIFIED:20260805T191711Z
+UID:28368-1789117200-1789128000@hermannpark.org
+SUMMARY:September 11 National Day of Service
+DESCRIPTION:Join Hermann Park Conservancy on Friday\, September 11\, from 9:00 a.m. to 12:00 p.m. for a meaningful morning of service in Hermann Park. \nIn recognition of the 9/11 National Day of Service and Remembrance\, volunteers will unite for good by participating in hands-on projects that help care for and beautify the Park. Projects may include gardening\, planting\, mulching\, litter removal\, and other seasonal maintenance activities. \nTogether\, we will honor the spirit of service\, strengthen our community\, and make a lasting impact on one of Houston’s most treasured public spaces. All tools and project instructions will be provided. \nSign up for a session at McGovern Centennial Gardens\, the Commons\, or the Heart of the Park HERE.
+URL:https://hermannpark.org/event/september-11-national-day-of-service/
+LOCATION:McGovern Centennial Gardens\, 1500 Hermann Drive\, Houston\, TX\, 77004\, United States
+ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2024/04/mcg_mount4-e1757000165605.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260912T080000
+DTEND;TZID=America/Chicago:20260912T090000
+DTSTAMP:20260805T193221Z
+CREATED:20260805T193221Z
+LAST-MODIFIED:20260805T193221Z
+UID:28387-1789200000-1789203600@hermannpark.org
+SUMMARY:Sound Bath with Daemein Smith (Prioritizing Peace)
+DESCRIPTION:Join us for a peaceful morning experience in Hermann Park with a free guided Sound Bath led by Daemein Smith of Prioritizing Peace. Set against the natural beauty of the Tsuru Family Terrace in the Commons\, this immersive meditation experience uses sound and vibration to promote relaxation\, mindfulness\, and emotional well-being. Guests are encouraged to slow down\, reset\, and “Prioritize Peace” through a calming journey of sound healing in nature. \n Tsuru Family Terrace\n Saturday\, September 12\n 8 – 9 a.m.\n Free Community Session \nGuests are encouraged to bring a yoga mat if available. Blankets and pillows are also recommended for additional comfort. All ages and experience levels welcome. \nParking: Free parking available across the street from the Commons in Lot S (6215 Main St\, Houston\, TX 77030). Additional street parking available along Main Street.
+URL:https://hermannpark.org/event/sound-bath-with-daemein-smith-prioritizing-peace-12/
+LOCATION:The Commons
+ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2025/08/P4060009-scaled.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260912T093000
+DTEND;TZID=America/Chicago:20260912T103000
+DTSTAMP:20260805T194832Z
+CREATED:20260805T194832Z
+LAST-MODIFIED:20260805T194832Z
+UID:28412-1789205400-1789209000@hermannpark.org
+SUMMARY:Zumba with Tiny Fitness
+DESCRIPTION:Join us on the Tsuru Family Terrace (wooden deck by the lawn) in the Commons for Zumba with Tiny Fitness. \n📍 Tsuru Family Terrace\n Saturday\, September 12\n⏰ 9:30 – 10:30 a.m.\n🎟️ Free Community Session \nParking:\nFree parking available across the street from the Commons in Lot S (6215 Main St\, Houston\, TX 77030). Additional street parking available along Main Street.
+URL:https://hermannpark.org/event/zumba-with-tiny-fitness-3/
+LOCATION:The Commons
+ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2025/08/P4060009-scaled.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260915T090000
+DTEND;TZID=America/Chicago:20260915T120000
+DTSTAMP:20260805T192103Z
+CREATED:20260805T191847Z
+LAST-MODIFIED:20260805T192103Z
+UID:28370-1789462800-1789473600@hermannpark.org
+SUMMARY:Kathrine McGovern Day of Service
+DESCRIPTION:Known for her kindness and lifelong dedication to service\, Kathrine G. McGovern\, along with her late husband\, John P. McGovern\, MD\, helped shape Houston into the vibrant\, compassionate city it is today. \nOn Tuesday\, September 15\, we invite you to celebrate her birthday by giving back to one of the places she loved most — the McGovern Centennial Gardens. Bring your friends\, family\, and your spirit of service. Together\, we’ll honor Mrs. McGovern’s memory in the most meaningful way: by caring for the community she cherished. \nVolunteer with us and help continue her legacy through gardening\, beautification\, and stewardship projects that keep the Gardens thriving and welcoming to all. \nSign up for this session in the McGovern Centennial Gardens HERE.
+URL:https://hermannpark.org/event/kathrine-mcgovern-day-of-service/
+LOCATION:McGovern Centennial Gardens\, 1500 Hermann Drive\, Houston\, TX\, 77004\, United States
+ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2024/04/mcg_mount4-e1757000165605.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260919T080000
+DTEND;TZID=America/Chicago:20260919T090000
+DTSTAMP:20260805T193303Z
+CREATED:20260805T193303Z
+LAST-MODIFIED:20260805T193303Z
+UID:28390-1789804800-1789808400@hermannpark.org
+SUMMARY:Sound Bath with Daemein Smith (Prioritizing Peace)
+DESCRIPTION:Join us for a peaceful morning experience in Hermann Park with a free guided Sound Bath led by Daemein Smith of Prioritizing Peace. Set against the natural beauty of the Tsuru Family Terrace in the Commons\, this immersive meditation experience uses sound and vibration to promote relaxation\, mindfulness\, and emotional well-being. Guests are encouraged to slow down\, reset\, and “Prioritize Peace” through a calming journey of sound healing in nature. \n Tsuru Family Terrace\n Saturday\, September 19\n 8 – 9 a.m.\n Free Community Session \nGuests are encouraged to bring a yoga mat if available. Blankets and pillows are also recommended for additional comfort. All ages and experience levels welcome. \nParking: Free parking available across the street from the Commons in Lot S (6215 Main St\, Houston\, TX 77030). Additional street parking available along Main Street.
+URL:https://hermannpark.org/event/sound-bath-with-daemein-smith-prioritizing-peace-13/
+LOCATION:The Commons
+ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2025/08/P4060009-scaled.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260924T183000
+DTEND;TZID=America/Chicago:20260924T193000
+DTSTAMP:20260805T190747Z
+CREATED:20260805T184907Z
+LAST-MODIFIED:20260805T190747Z
+UID:28365-1790274600-1790278200@hermannpark.org
+SUMMARY:Garden & Nature Series: Birdscaping with Native Plants
+DESCRIPTION:Discover how to turn your outdoor space into a haven for local and migrating birds. Participants will learn how native plants support birds by providing essential food\, shelter\, and nesting resources. The program will include a guided garden walk\, practical habitat-building tips\, and a hands-on activity to help guests begin creating their own bird-friendly space. \nThursday\, Sept. 24\n6:30 – 7:30 p.m.\nMcGovern Centennial Gardens – Family Garden (1500 Hermann Drive\, Houston\, TX 77004) \nRSVP FOR THIS FREE EVENT HERE. \n 
+URL:https://hermannpark.org/event/garden-nature-series-birdscaping-with-native-plants/
+LOCATION:McGovern Centennial Gardens\, 1500 Hermann Drive\, Houston\, TX\, 77004\, United States
+ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2024/02/mcg_family_garden_-_photo_by_lifted_up_aerial_photography-680x400-2.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260926T080000
+DTEND;TZID=America/Chicago:20260926T090000
+DTSTAMP:20260805T193329Z
+CREATED:20260805T193329Z
+LAST-MODIFIED:20260805T193329Z
+UID:28393-1790409600-1790413200@hermannpark.org
+SUMMARY:Sound Bath with Daemein Smith (Prioritizing Peace)
+DESCRIPTION:Join us for a peaceful morning experience in Hermann Park with a free guided Sound Bath led by Daemein Smith of Prioritizing Peace. Set against the natural beauty of the Tsuru Family Terrace in the Commons\, this immersive meditation experience uses sound and vibration to promote relaxation\, mindfulness\, and emotional well-being. Guests are encouraged to slow down\, reset\, and “Prioritize Peace” through a calming journey of sound healing in nature. \n Tsuru Family Terrace\n Saturday\, September 26\n 8 – 9 a.m.\n Free Community Session \nGuests are encouraged to bring a yoga mat if available. Blankets and pillows are also recommended for additional comfort. All ages and experience levels welcome. \nParking: Free parking available across the street from the Commons in Lot S (6215 Main St\, Houston\, TX 77030). Additional street parking available along Main Street.
+URL:https://hermannpark.org/event/sound-bath-with-daemein-smith-prioritizing-peace-14/
+LOCATION:The Commons
+ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2025/08/P4060009-scaled.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260926T090000
+DTEND;TZID=America/Chicago:20260926T120000
+DTSTAMP:20260805T192111Z
+CREATED:20260805T192111Z
+LAST-MODIFIED:20260805T192111Z
+UID:28372-1790413200-1790424000@hermannpark.org
+SUMMARY:National Public Lands Day
+DESCRIPTION:Join us on Saturday\, September 26\, for National Public Lands Day\, the nation’s largest single-day volunteer event for public lands! This is your chance to give back to Hermann Park\, one of Houston’s most cherished green spaces. \nWhether you’re pulling invasive weeds\, planting native grasses or helping with trail maintenance\, your time and energy will directly support the health and beauty of the park for generations to come. \nAll ages welcome – no experience necessary! Bring your friends\, family\, or coworkers and help us make a lasting impact. \nSign up for a session at McGovern Centennial Gardens\, the Commons\, or the Heart of the Park HERE.
+URL:https://hermannpark.org/event/national-public-lands-day/
+LOCATION:McGovern Centennial Gardens\, 1500 Hermann Drive\, Houston\, TX\, 77004\, United States
+ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2024/04/mcg_mount4-e1757000165605.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261010T093000
+DTEND;TZID=America/Chicago:20261010T103000
+DTSTAMP:20260805T195009Z
+CREATED:20260805T195009Z
+LAST-MODIFIED:20260805T195009Z
+UID:28415-1791624600-1791628200@hermannpark.org
+SUMMARY:Zumba with Tiny Fitness
+DESCRIPTION:Join us on the Tsuru Family Terrace (wooden deck by the lawn) in the Commons for Zumba with Tiny Fitness. \n📍 Tsuru Family Terrace\n Saturday\, October 10\n⏰ 9:30 – 10:30 a.m.\n🎟️ Free Community Session \nParking:\nFree parking available across the street from the Commons in Lot S (6215 Main St\, Houston\, TX 77030). Additional street parking available along Main Street.
+URL:https://hermannpark.org/event/zumba-with-tiny-fitness-4/
+LOCATION:The Commons
+ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2025/08/P4060009-scaled.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261024T080000
+DTEND;TZID=America/Chicago:20261024T110000
+DTSTAMP:20260717T161648Z
+CREATED:20260717T161634Z
+LAST-MODIFIED:20260717T161648Z
+UID:28123-1792828800-1792839600@hermannpark.org
+SUMMARY:Park to Port Bike Ride
+DESCRIPTION:Hermann Park Conservancy’s 12th annual Park to Port Bike Ride is set for Saturday\, October 24. \nThe 20-mile round-trip bike ride takes cyclists from Hermann Park’s Bayou Parkland along the Bayou Greenway trail all the way to Mason Park\, near the Port of Houston. Enjoy the turn-around party\, but be sure to save some energy for a well-deserved post-ride party under the Bill Coats Bridge! \nPark to Port is open to riders of all skill levels and is not a race. Whether you are an experienced cyclist or are riding just for fun\, you can go at your own pace on this scenic city journey. \nYour participation in Park to Port supports Hermann Park Conservancy and its stewardship efforts for one of Houston’s most beloved parks while promoting the ever-growing Bayou Greenway trail system. \nRegister and learn more at the following link: 12th Annual Park to Port Bike Ride. Early bird pricing is available until August 17. \nSPECIAL OFFER: Save $10 on registration when you sign up for BOTH the Park to Port Bike Ride and Run in the Park! Bundle deal is available via the link above. Information on Run in the Park can be found here.
+URL:https://hermannpark.org/event/park-to-port-bike-ride-2/
+LOCATION:Bayou Parkland\, 6532 Almeda Rd\, Houston\, TX\, 77021\, United States
+ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2026/07/HP_PTP_2025_Digital_1080x1080-e1784305129178.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261114T080000
+DTEND;TZID=America/Chicago:20261114T110000
+DTSTAMP:20260717T171910Z
+CREATED:20260717T161642Z
+LAST-MODIFIED:20260717T171910Z
+UID:28126-1794643200-1794654000@hermannpark.org
+SUMMARY:Run in the Park
+DESCRIPTION:Hermann Park Conservancy’s Run in the Park will return on Saturday\, November 14.\n\nParticipants will be able to run\, or walk\, to support the conservation efforts of the Conservancy. All proceeds from Run in the Park go towards the crucial work needed to maintain Hermann Park and its trail system.\n\nWith 5K and 10K routes\, as well as a 1K kids’ route for the in-person event\, exercise enthusiasts of all ages and abilities can come to explore the Park and enjoy the shaded trails enjoyed by millions of visitors per year. The event starts and ends at the Molly Ann Smith Plaza\, near the Jones Reflection Pool\, and includes a post-run party with food\, drinks\, music\, and more!\n\nThe Conservancy also offers an at-home\, virtual option. You can support Hermann Park at your own pace\, from the comfort of your own neighborhood! Virtual registrants will still get the exclusive Run in the Park t-shirt and access to an online leaderboard.\n\n\nRegister and learn more at the following link: 23rd Annual Run in the Park. Early bird pricing is available until August 14. \n\nSPECIAL OFFER: Save $10 on registration when you sign up for BOTH the Park to Port Bike Ride and Run in the Park! Bundle deal is available via the link above. Information on Run in the Park can be found here.
+URL:https://hermannpark.org/event/run-in-the-park-3/
+LOCATION:Molly Ann Smith Plaza\, Hermann Park\, Houston\, TX\, 77004\, United States
+ATTACH;FMTTYPE=image/png:https://hermannpark.org/wp-content/uploads/2026/07/HP_RITP_2026_Logo_BG-scaled-e1784308702643.png
+END:VEVENT
+END:VCALENDAR
