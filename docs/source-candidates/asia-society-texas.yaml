@@ -1,5 +1,5 @@
 name: Asia Society Texas
-status: candidate
+status: blocked
 platform: Custom/Eventbrite
 url: https://asiasociety.org/texas/
 tags:
@@ -8,5 +8,9 @@ tags:
   - Film
   - Uptown
 firstSeen: 2026-07-22
-lastChecked: 2026-07-22
-notes: Cultural organization hosting exhibitions, workshops, film festivals, and cultural events. Indian Film Festival Houston (February). May have Eventbrite integration or custom calendar.
+lastChecked: 2026-08-13
+notes: >
+  Cultural organization hosting exhibitions, workshops, film festivals, and cultural
+  events. Indian Film Festival Houston (February). HTTP 402 Payment Required -
+  website appears to be blocking automated fetches. Requires investigation or
+  proxy: true bypass.

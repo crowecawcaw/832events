@@ -1,11 +1,24 @@
 name: Houston Parks & Recreation Community Centers
-status: candidate
+status: investigating
 url: https://anc.apm.activecommunities.com/houstonparks
-platform: activenet
+platform: ActiveNet (APA)
 tags:
   - Parks
   - Community
   - Recreation
 firstSeen: "2026-07-23"
-lastChecked: "2026-07-23"
-notes: "H.P.A.R.D. (Houston Parks & Recreation Department) operates 60+ community centers using ActiveNet (APA) registration platform. Massive event volume potential. Needs verification if ActiveNet exposes ICS/JSON API for calendar scraping."
+lastChecked: "2026-08-13"
+notes: |
+  H.P.A.R.D. (Houston Parks & Recreation Department) operates 60+ community centers using ActiveNet (APA) registration platform.
+
+  STRONGEST REMAINING CANDIDATE (agent evaluation 2026-08-13):
+  - Accessibility: CONFIRMED - server returns functional responses
+  - Volume potential: MASSIVE (60+ venues)
+  - Implementation approach: Need to determine if ActiveNet exposes:
+    * ICS/iCal feed URL
+    * JSON API endpoint
+    * HTML structure for custom scraping
+
+  Next step: Check for standard ActiveNet calendar feeds (/eventcalendar.aspx, /?ical=1, /calendar.ics) or contact HPARD for programmatic access documentation. Custom ripper feasible if HTML is available.
+
+  Confidence: HIGH-MEDIUM (platform-based system, likely has APIs)
