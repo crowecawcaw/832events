@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-08-13T04:31:36.392Z",
-  "totalErrors": 7,
+  "buildTime": "2026-08-13T09:49:36.410Z",
+  "totalErrors": 5,
   "configErrors": [],
   "sources": [
     {
@@ -87,43 +87,18 @@
       "error": "null"
     },
     {
-      "name": "holocaust-museum-houston",
-      "friendlyName": "Holocaust Museum Houston",
-      "url": "https://hmh.org/?post_type=tribe_events&ical=1&eventDisplay=list",
-      "error": "Error: HTTP 403: "
-    },
-    {
       "name": "houston-heritage-holiday-market",
       "friendlyName": "Houston Heritage Holiday Market",
       "url": "https://ghwcc.org/calendar/?ical=1",
       "error": "null"
-    },
-    {
-      "name": "islamic-society-greater-houston",
-      "friendlyName": "Islamic Society of Greater Houston",
-      "url": "https://isgh.org/?post_type=tribe_events&ical=1",
-      "error": "Error: HTTP 403: "
     }
   ],
-  "geocodeErrors": [
-    {
-      "type": "GeocodeError",
-      "location": "Little Caesars Arena, 2645 Woodward Ave, Detroit, MI, 48201, USA",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Orpheum Theatre Minneapolis, 910 Hennepin Avenue, Minneapolis, MN, 55403",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    }
-  ],
+  "geocodeErrors": [],
   "geoStats": {
     "totalEvents": 2209,
     "eventsWithGeo": 1927,
     "eventsWithoutGeo": 282,
-    "geocodeErrors": 2
+    "geocodeErrors": 0
   },
   "uncertainEvents": [],
   "uncertaintyStats": {
@@ -153,7 +128,8 @@
     "tag-performance",
     "external-bad-astronaut-brewery",
     "external-eureka-heights-brew-co",
-    "external-houston-cinema-arts-society"
+    "external-houston-cinema-arts-society",
+    "external-islamic-society-greater-houston"
   ],
   "expectedEmptyCalendars": [],
   "proxyStaleServes": [],
@@ -706,7 +682,7 @@
     "eventsWithImage": 1291,
     "totalEvents": 2209,
     "venuesWithImage": 0,
-    "totalVenues": 62,
+    "totalVenues": 63,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -848,6 +824,12 @@
         "label": "Hobby Center for the Performing Arts, 800 Bagby St, Houston, TX 77002",
         "url": "https://www.thehobbycenter.org/events/",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hobby%20Center%20for%20the%20Performing%20Arts%2C%20800%20Bagby%20St%2C%20Houston%2C%20TX%2077002"
+      },
+      {
+        "source": "external",
+        "name": "holocaust-museum-houston",
+        "label": "Holocaust Museum Houston, 5401 Caroline St, Houston, TX 77004",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Holocaust%20Museum%20Houston%2C%205401%20Caroline%20St%2C%20Houston%2C%20TX%2077004"
       },
       {
         "source": "ripper",
@@ -9485,13 +9467,6 @@
     },
     {
       "source": "notsuoh",
-      "eventId": "burlesque-night-with-tentacle-temptations-2026-08-12",
-      "summary": "Burlesque Night with Tentacle Temptations",
-      "date": "2026-08-12T12:00-05:00[America/Chicago]",
-      "url": "https://www.notsuoh.com/events/iom4uvj4agxwp8but13ne3jx7kjvu0-y6cht"
-    },
-    {
-      "source": "notsuoh",
       "eventId": "femdome-djs-visuals-in-the-dome-femme-forward-bands-downstairs-2026-08-26",
       "summary": "FemDome : DJs & Visuals in the Dome & Femme Forward Bands Downstairs",
       "date": "2026-08-26T12:00-05:00[America/Chicago]",
@@ -13131,7 +13106,7 @@
     {
       "name": "notsuoh-notsuoh",
       "type": "Ripper",
-      "events": 6,
+      "events": 5,
       "expectEmpty": false,
       "source": "notsuoh"
     },
@@ -13320,21 +13295,21 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 849,
+      "events": 848,
       "expectEmpty": false,
       "source": "tag-music"
     },
     {
       "name": "tag-nightlife",
       "type": "Aggregate",
-      "events": 137,
+      "events": 136,
       "expectEmpty": false,
       "source": "tag-nightlife"
     },
     {
       "name": "tag-downtown",
       "type": "Aggregate",
-      "events": 429,
+      "events": 428,
       "expectEmpty": false,
       "source": "tag-downtown"
     },
@@ -13348,7 +13323,7 @@
     {
       "name": "tag-arts",
       "type": "Aggregate",
-      "events": 131,
+      "events": 130,
       "expectEmpty": false,
       "source": "tag-arts"
     },
@@ -13390,7 +13365,7 @@
     {
       "name": "tag-museum-district",
       "type": "Aggregate",
-      "events": 107,
+      "events": 108,
       "expectEmpty": false,
       "source": "tag-museum-district"
     },
@@ -13453,7 +13428,7 @@
     {
       "name": "tag-museums",
       "type": "Aggregate",
-      "events": 7,
+      "events": 8,
       "expectEmpty": false,
       "source": "tag-museums"
     },
@@ -13495,7 +13470,7 @@
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 745,
+      "events": 746,
       "expectEmpty": false,
       "source": "tag-community"
     },
@@ -13969,6 +13944,13 @@
       "source": "hobby-center"
     },
     {
+      "name": "external-holocaust-museum-houston",
+      "type": "External",
+      "events": 2,
+      "expectEmpty": false,
+      "source": "holocaust-museum-houston"
+    },
+    {
       "name": "external-houston-arboretum",
       "type": "External",
       "events": 30,
@@ -14044,6 +14026,13 @@
       "events": 29,
       "expectEmpty": false,
       "source": "ion-district"
+    },
+    {
+      "name": "external-islamic-society-greater-houston",
+      "type": "External",
+      "events": 0,
+      "expectEmpty": false,
+      "source": "islamic-society-greater-houston"
     },
     {
       "name": "external-levy-park-houston",
