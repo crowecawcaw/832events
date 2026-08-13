@@ -1,358 +1,150 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Eureka Heights Brewery - ECPv6.17.1//NONSGML v1.0//EN
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:Eureka Heights Brewery
-X-ORIGINAL-URL:https://www.eurekaheights.com
-X-WR-CALDESC:Events for Eureka Heights Brewery
-REFRESH-INTERVAL;VALUE=DURATION:PT1H
-X-Robots-Tag:noindex
-X-PUBLISHED-TTL:PT1H
-BEGIN:VTIMEZONE
-TZID:America/Chicago
-BEGIN:DAYLIGHT
-TZOFFSETFROM:-0600
-TZOFFSETTO:-0500
-TZNAME:CDT
-DTSTART:20250309T080000
-END:DAYLIGHT
-BEGIN:STANDARD
-TZOFFSETFROM:-0500
-TZOFFSETTO:-0600
-TZNAME:CST
-DTSTART:20251102T070000
-END:STANDARD
-BEGIN:DAYLIGHT
-TZOFFSETFROM:-0600
-TZOFFSETTO:-0500
-TZNAME:CDT
-DTSTART:20260308T080000
-END:DAYLIGHT
-BEGIN:STANDARD
-TZOFFSETFROM:-0500
-TZOFFSETTO:-0600
-TZNAME:CST
-DTSTART:20261101T070000
-END:STANDARD
-BEGIN:DAYLIGHT
-TZOFFSETFROM:-0600
-TZOFFSETTO:-0500
-TZNAME:CDT
-DTSTART:20270314T080000
-END:DAYLIGHT
-BEGIN:STANDARD
-TZOFFSETFROM:-0500
-TZOFFSETTO:-0600
-TZNAME:CST
-DTSTART:20271107T070000
-END:STANDARD
-END:VTIMEZONE
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260812T190000
-DTEND;TZID=America/Chicago:20260812T190000
-DTSTAMP:20260802T055334Z
-CREATED:20260802T055334Z
-LAST-MODIFIED:20260802T055334Z
-UID:10307-1786561200-1786561200@www.eurekaheights.com
-SUMMARY:Trivia Bowl (3 week tournament)
-DESCRIPTION:It’s that time of year again\, Trivia Bowl! \nGather your team and put your general knowledge to the test in a three-week trivia showdown. Compete head-to-head each week for the chance to claim the Trivia Bowl title. \nThe winning team earns ultimate bragging rights and the opportunity to brew a custom beer to enjoy while celebrating their victory in front of the competition. Don’t miss your chance to prove you’re the smartest team in the room!
-URL:https://www.eurekaheights.com/event/trivia-bowl-3-week-tournament/2026-08-12/
-LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
-CATEGORIES:Tap Room
-ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2026/08/08-05-26.png
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260813T173000
-DTEND;TZID=America/Chicago:20260813T183000
-DTSTAMP:20250610T125033Z
-CREATED:20250610T125033Z
-LAST-MODIFIED:20250610T125033Z
-UID:10210-1786642200-1786645800@www.eurekaheights.com
-SUMMARY:Laces Out Run Club
-DESCRIPTION:Every Thursday at 5:30 and 6:30 PM\, our Laces Out Run Club members start on a route of their choosing\, ranging from a 2\, 3.5\, 5\, or 8 mile run. After their run\, they receive $2 off beers the rest of the evening! \nREWARDS \n🎽 10 runs: EH headband\n🎽 25 runs: Laces Out shirt\n🎽 50 runs: Running shorts\n🎽 100 runs: Singlet \n  \n  \n  \n 
-URL:https://www.eurekaheights.com/event/laces-out-run-club-2025/2026-08-13/
-LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
-CATEGORIES:Tap Room
-ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2025/06/11.png
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260814T180000
-DTEND;TZID=America/Chicago:20260814T180000
-DTSTAMP:20260802T063313Z
-CREATED:20260802T063313Z
-LAST-MODIFIED:20260802T063313Z
-UID:10160-1786730400-1786730400@www.eurekaheights.com
-SUMMARY:Steak Night with Free Grillin'
-DESCRIPTION:Steak Night happens every second Friday of the month with Chef Michelle Free of Free Grillin! Non-meat alternatives available!
-URL:https://www.eurekaheights.com/event/steak-night-with-free-grillin/
-LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
-CATEGORIES:Tap Room
-ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2026/08/2026-08-14.png
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260814T180000
-DTEND;TZID=America/Chicago:20260814T180000
-DTSTAMP:20260802T063905Z
-CREATED:20260802T063905Z
-LAST-MODIFIED:20260802T063905Z
-UID:10164-1786730400-1786730400@www.eurekaheights.com
-SUMMARY:Space City Pinball Tournament
-DESCRIPTION:Pinball wizards\, unite! Come try your hand at one of the ten awesome pinball games from our friends at Wormhole! 10 Stern pinball games\, beer\, and prizes!
-URL:https://www.eurekaheights.com/event/space-city-pinball-tournament-2026-08-14/
-LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
-CATEGORIES:Tap Room
-ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2026/08/event-2026-08-14.png
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260815T120000
-DTEND;TZID=America/Chicago:20260815T150000
-DTSTAMP:20260802T065653Z
-CREATED:20260802T065653Z
-LAST-MODIFIED:20260802T065653Z
-UID:10168-1786795200-1786806000@www.eurekaheights.com
-SUMMARY:Animal Justice League Pet Adoptions
-DESCRIPTION:Come have a beer and find a best friend. Join our friends at Animal Justice League as they set up at the brewery with the hopes of finding you a new best friend. Come meet\, foster\, or just keep a puppy company. Donations are welcome to ensuring that we get Houston cats and dogs the care they need.
-URL:https://www.eurekaheights.com/event/animal-justice-league-pet-adoptions/
-LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
-CATEGORIES:Tap Room
-ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2026/08/event-2026-08-15.png
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260816T120000
-DTEND;TZID=America/Chicago:20260816T170000
-DTSTAMP:20260804T151442Z
-CREATED:20260802T080241Z
-LAST-MODIFIED:20260804T151442Z
-UID:10172-1786881600-1786899600@www.eurekaheights.com
-SUMMARY:Atypical Market
-DESCRIPTION:Curated selection of off beat and unique vendors. First 20 market guests get a free collage kit — all you need is scissors and you’re on your way to making your own masterpieces!
-URL:https://www.eurekaheights.com/event/atypical-market/
-LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
-CATEGORIES:Tap Room
-ATTACH;FMTTYPE=image/jpeg:https://www.eurekaheights.com/wp-content/uploads/2026/08/event-2026-08-16.jpg
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260816T160000
-DTEND;TZID=America/Chicago:20260816T160000
-DTSTAMP:20260802T080712Z
-CREATED:20260802T080712Z
-LAST-MODIFIED:20260802T080712Z
-UID:10176-1786896000-1786896000@www.eurekaheights.com
-SUMMARY:Lego Party
-DESCRIPTION:Come check out this awesome party event of building Lego sets and drinking beer! Our friends at Houston Toy Museum will be pre-selling Lego sets\, so you can come out and exercise your brain without your smartphone!
-URL:https://www.eurekaheights.com/event/lego-party-2026-08-16/
-LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
-CATEGORIES:Tap Room
-ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2026/08/event-2026-08-16.png
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260819T190000
-DTEND;TZID=America/Chicago:20260819T190000
-DTSTAMP:20260802T055334Z
-CREATED:20260802T055334Z
-LAST-MODIFIED:20260802T055334Z
-UID:10308-1787166000-1787166000@www.eurekaheights.com
-SUMMARY:Trivia Bowl (3 week tournament)
-DESCRIPTION:It’s that time of year again\, Trivia Bowl! \nGather your team and put your general knowledge to the test in a three-week trivia showdown. Compete head-to-head each week for the chance to claim the Trivia Bowl title. \nThe winning team earns ultimate bragging rights and the opportunity to brew a custom beer to enjoy while celebrating their victory in front of the competition. Don’t miss your chance to prove you’re the smartest team in the room!
-URL:https://www.eurekaheights.com/event/trivia-bowl-3-week-tournament/2026-08-19/
-LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
-CATEGORIES:Tap Room
-ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2026/08/08-05-26.png
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260820T173000
-DTEND;TZID=America/Chicago:20260820T183000
-DTSTAMP:20250610T125033Z
-CREATED:20250610T125033Z
-LAST-MODIFIED:20250610T125033Z
-UID:10211-1787247000-1787250600@www.eurekaheights.com
-SUMMARY:Laces Out Run Club
-DESCRIPTION:Every Thursday at 5:30 and 6:30 PM\, our Laces Out Run Club members start on a route of their choosing\, ranging from a 2\, 3.5\, 5\, or 8 mile run. After their run\, they receive $2 off beers the rest of the evening! \nREWARDS \n🎽 10 runs: EH headband\n🎽 25 runs: Laces Out shirt\n🎽 50 runs: Running shorts\n🎽 100 runs: Singlet \n  \n  \n  \n 
-URL:https://www.eurekaheights.com/event/laces-out-run-club-2025/2026-08-20/
-LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
-CATEGORIES:Tap Room
-ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2025/06/11.png
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260822T120000
-DTEND;TZID=America/Chicago:20260822T120000
-DTSTAMP:20260804T152626Z
-CREATED:20260802T083919Z
-LAST-MODIFIED:20260804T152626Z
-UID:10183-1787400000-1787400000@www.eurekaheights.com
-SUMMARY:10th Anniversary Party
-DESCRIPTION:We’re turning 10\, and we’re celebrating ALL WEEK LONG! \nJoin us as we kick off our 10-Year Birthday Bash with a full week of events: \nTuesday: Special High Five Members Night\nWednesday: Eureka Heights-themed Trivia\nThursday: Celebrate 10 Years of Laces Out Run Club\nFriday: Eureka Heights Garage Sale\nSaturday: Our 10-Year Birthday Bash!\nVIP Entry: 10 AM–12 PM\nOG beer pours\nLive music from CC Rider Band\nIce House Radio DJ\nLive screen printing by GooseWorks\nFirkin tappings\nAnd a whole lot more! \nSunday: Eureka & Chill with a special Discs & Donuts post-Eureka Heights party. \nCome raise a glass\, celebrate a decade of great beer\, and make some new memories with us. We can’t wait to celebrate with you! \nLink for VIP party
-URL:https://www.eurekaheights.com/event/10th-anniversary-party/
-LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
-CATEGORIES:Tap Room
-ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2026/08/event-2026-08-22.png
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260825T170000
-DTEND;TZID=America/Chicago:20260825T170000
-DTSTAMP:20260804T151558Z
-CREATED:20260802T085030Z
-LAST-MODIFIED:20260804T151558Z
-UID:10191-1787677200-1787677200@www.eurekaheights.com
-SUMMARY:High Five Membership Night
-DESCRIPTION:High Five Member night is every Tuesday where Members receive $4 pints. We will be doing a special members night on the last Tuesday of the quarter.
-URL:https://www.eurekaheights.com/event/high-five-membership-night-2026-08-25/
-LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
-CATEGORIES:Tap Room
-ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2026/08/event-2026-08-25.png
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260825T183000
-DTEND;TZID=America/Chicago:20260825T183000
-DTSTAMP:20260804T144504Z
-CREATED:20260804T144503Z
-LAST-MODIFIED:20260804T144504Z
-UID:10249-1787682600-1787682600@www.eurekaheights.com
-SUMMARY:EH Books and Brews
-DESCRIPTION:Join our monthly book club as we sit around have a beer and discuss our monthly book!
-URL:https://www.eurekaheights.com/event/eh-books-and-brews-8-24-2026/
-LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
-ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2026/08/book-margareta-magnusson.png
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260826T190000
-DTEND;TZID=America/Chicago:20260826T190000
-DTSTAMP:20260807T123445Z
-CREATED:20250618T133753Z
-LAST-MODIFIED:20260807T123445Z
-UID:10204-1787770800-1787770800@www.eurekaheights.com
-SUMMARY:Trivia Night
-DESCRIPTION:It’s the battle of the brains! Join us every Wednesday at 7 PM as we test how much random knowledge you’ve retained since high school.\nWarning: Side effects may include smugness and unexpected brain farts. \n 
-URL:https://www.eurekaheights.com/event/trivia-night-2025-06-25-2026-08-26/
-LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
-CATEGORIES:Tap Room
-ATTACH;FMTTYPE=image/jpeg:https://www.eurekaheights.com/wp-content/uploads/2025/06/general-trivia.jpg
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260827T173000
-DTEND;TZID=America/Chicago:20260827T183000
-DTSTAMP:20250610T125033Z
-CREATED:20250610T125033Z
-LAST-MODIFIED:20250610T125033Z
-UID:10213-1787851800-1787855400@www.eurekaheights.com
-SUMMARY:Laces Out Run Club
-DESCRIPTION:Every Thursday at 5:30 and 6:30 PM\, our Laces Out Run Club members start on a route of their choosing\, ranging from a 2\, 3.5\, 5\, or 8 mile run. After their run\, they receive $2 off beers the rest of the evening! \nREWARDS \n🎽 10 runs: EH headband\n🎽 25 runs: Laces Out shirt\n🎽 50 runs: Running shorts\n🎽 100 runs: Singlet \n  \n  \n  \n 
-URL:https://www.eurekaheights.com/event/laces-out-run-club-2025/2026-08-27/
-LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
-CATEGORIES:Tap Room
-ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2025/06/11.png
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260902T190000
-DTEND;TZID=America/Chicago:20260902T190000
-DTSTAMP:20260807T123446Z
-CREATED:20250618T133753Z
-LAST-MODIFIED:20260807T123446Z
-UID:10205-1788375600-1788375600@www.eurekaheights.com
-SUMMARY:Trivia Night
-DESCRIPTION:It’s the battle of the brains! Join us every Wednesday at 7 PM as we test how much random knowledge you’ve retained since high school.\nWarning: Side effects may include smugness and unexpected brain farts. \n 
-URL:https://www.eurekaheights.com/event/trivia-night-2025-06-25-2026-09-02/
-LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
-CATEGORIES:Tap Room
-ATTACH;FMTTYPE=image/jpeg:https://www.eurekaheights.com/wp-content/uploads/2025/06/general-trivia.jpg
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260903T173000
-DTEND;TZID=America/Chicago:20260903T183000
-DTSTAMP:20250610T125033Z
-CREATED:20250610T125033Z
-LAST-MODIFIED:20250610T125033Z
-UID:10215-1788456600-1788460200@www.eurekaheights.com
-SUMMARY:Laces Out Run Club
-DESCRIPTION:Every Thursday at 5:30 and 6:30 PM\, our Laces Out Run Club members start on a route of their choosing\, ranging from a 2\, 3.5\, 5\, or 8 mile run. After their run\, they receive $2 off beers the rest of the evening! \nREWARDS \n🎽 10 runs: EH headband\n🎽 25 runs: Laces Out shirt\n🎽 50 runs: Running shorts\n🎽 100 runs: Singlet \n  \n  \n  \n 
-URL:https://www.eurekaheights.com/event/laces-out-run-club-2025/2026-09-03/
-LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
-CATEGORIES:Tap Room
-ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2025/06/11.png
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260909T190000
-DTEND;TZID=America/Chicago:20260909T190000
-DTSTAMP:20260807T123447Z
-CREATED:20250618T133753Z
-LAST-MODIFIED:20260807T123447Z
-UID:10206-1788980400-1788980400@www.eurekaheights.com
-SUMMARY:Trivia Night
-DESCRIPTION:It’s the battle of the brains! Join us every Wednesday at 7 PM as we test how much random knowledge you’ve retained since high school.\nWarning: Side effects may include smugness and unexpected brain farts. \n 
-URL:https://www.eurekaheights.com/event/trivia-night-2025-06-25-2026-09-09/
-LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
-CATEGORIES:Tap Room
-ATTACH;FMTTYPE=image/jpeg:https://www.eurekaheights.com/wp-content/uploads/2025/06/general-trivia.jpg
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260910T173000
-DTEND;TZID=America/Chicago:20260910T183000
-DTSTAMP:20250610T125033Z
-CREATED:20250610T125033Z
-LAST-MODIFIED:20250610T125033Z
-UID:10217-1789061400-1789065000@www.eurekaheights.com
-SUMMARY:Laces Out Run Club
-DESCRIPTION:Every Thursday at 5:30 and 6:30 PM\, our Laces Out Run Club members start on a route of their choosing\, ranging from a 2\, 3.5\, 5\, or 8 mile run. After their run\, they receive $2 off beers the rest of the evening! \nREWARDS \n🎽 10 runs: EH headband\n🎽 25 runs: Laces Out shirt\n🎽 50 runs: Running shorts\n🎽 100 runs: Singlet \n  \n  \n  \n 
-URL:https://www.eurekaheights.com/event/laces-out-run-club-2025/2026-09-10/
-LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
-CATEGORIES:Tap Room
-ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2025/06/11.png
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260916T190000
-DTEND;TZID=America/Chicago:20260916T190000
-DTSTAMP:20260807T123448Z
-CREATED:20250618T133753Z
-LAST-MODIFIED:20260807T123448Z
-UID:10207-1789585200-1789585200@www.eurekaheights.com
-SUMMARY:Trivia Night
-DESCRIPTION:It’s the battle of the brains! Join us every Wednesday at 7 PM as we test how much random knowledge you’ve retained since high school.\nWarning: Side effects may include smugness and unexpected brain farts. \n 
-URL:https://www.eurekaheights.com/event/trivia-night-2025-06-25-2026-09-16/
-LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
-CATEGORIES:Tap Room
-ATTACH;FMTTYPE=image/jpeg:https://www.eurekaheights.com/wp-content/uploads/2025/06/general-trivia.jpg
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260917T173000
-DTEND;TZID=America/Chicago:20260917T183000
-DTSTAMP:20250610T125033Z
-CREATED:20250610T125033Z
-LAST-MODIFIED:20250610T125033Z
-UID:10219-1789666200-1789669800@www.eurekaheights.com
-SUMMARY:Laces Out Run Club
-DESCRIPTION:Every Thursday at 5:30 and 6:30 PM\, our Laces Out Run Club members start on a route of their choosing\, ranging from a 2\, 3.5\, 5\, or 8 mile run. After their run\, they receive $2 off beers the rest of the evening! \nREWARDS \n🎽 10 runs: EH headband\n🎽 25 runs: Laces Out shirt\n🎽 50 runs: Running shorts\n🎽 100 runs: Singlet \n  \n  \n  \n 
-URL:https://www.eurekaheights.com/event/laces-out-run-club-2025/2026-09-17/
-LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
-CATEGORIES:Tap Room
-ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2025/06/11.png
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260923T190000
-DTEND;TZID=America/Chicago:20260923T190000
-DTSTAMP:20260807T123448Z
-CREATED:20250618T133753Z
-LAST-MODIFIED:20260807T123448Z
-UID:10208-1790190000-1790190000@www.eurekaheights.com
-SUMMARY:Trivia Night
-DESCRIPTION:It’s the battle of the brains! Join us every Wednesday at 7 PM as we test how much random knowledge you’ve retained since high school.\nWarning: Side effects may include smugness and unexpected brain farts. \n 
-URL:https://www.eurekaheights.com/event/trivia-night-2025-06-25-2026-09-23/
-LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
-CATEGORIES:Tap Room
-ATTACH;FMTTYPE=image/jpeg:https://www.eurekaheights.com/wp-content/uploads/2025/06/general-trivia.jpg
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260924T173000
-DTEND;TZID=America/Chicago:20260924T183000
-DTSTAMP:20250610T125033Z
-CREATED:20250610T125033Z
-LAST-MODIFIED:20250610T125033Z
-UID:10220-1790271000-1790274600@www.eurekaheights.com
-SUMMARY:Laces Out Run Club
-DESCRIPTION:Every Thursday at 5:30 and 6:30 PM\, our Laces Out Run Club members start on a route of their choosing\, ranging from a 2\, 3.5\, 5\, or 8 mile run. After their run\, they receive $2 off beers the rest of the evening! \nREWARDS \n🎽 10 runs: EH headband\n🎽 25 runs: Laces Out shirt\n🎽 50 runs: Running shorts\n🎽 100 runs: Singlet \n  \n  \n  \n 
-URL:https://www.eurekaheights.com/event/laces-out-run-club-2025/2026-09-24/
-LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
-CATEGORIES:Tap Room
-ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2025/06/11.png
-END:VEVENT
-END:VCALENDAR
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <script>
+      (function(){
+          setTimeout(function(){
+              window.location.reload();
+          }, 5000);
+      }())
+  </script>
+  <link rel="icon" href="data:,">
+  <title>One moment, please...</title>
+  <style>
+.spinner {
+    -webkit-animation: spin 1s ease-out;
+    animation: spin 1s ease-out;
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+#outer-container {
+    text-align: center;
+}
+#container {
+        display: inline-block;
+        height: 100px;
+    }
+#text {
+    float: left;
+    height: 100px;
+    line-height: 100px;
+    font-size: 3rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0 .4em 0 .2em;
+    letter-spacing: 0.06em;
+    color: rgba(38, 122, 72, 0.86);
+}
+@media (min-height: 180px) {
+    #outer-container {
+        margin-top: 0;
+    }
+}
+@media (min-height: 360px) {
+    #outer-container {
+        margin-top: 5%;
+    }
+}
+@media (min-height: 540px) {
+    #outer-container {
+        margin-top: 10%;
+    }
+}
+@media (min-height: 720px) {
+    #outer-container {
+        margin-top: 20%;
+    }
+}
+@media (min-width: 1450px) {
+    .throbber {
+        width: 90px;
+        height: 90px;
+        float: left;
+        padding: 5px 0 5px 5px;
+        opacity: 0.86;
+    }
+    #container {
+        display: inline-block;
+        border: 3px solid rgb(38, 122, 72, 0.86);
+        border-radius: 51px;
+        height: 100px;
+    }
+}
+
+  </style>
+</head>
+<body>
+  <div id="outer-container">
+    <div id="container">
+<div class="throbber">
+    <svg class="spinner" width="90px" height="90px" viewBox="0 0 47 47"
+         version="1.1"
+         xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink">
+        <title>Loader</title>
+        <defs>
+            <polygon id="path-1"
+                     points="0 0.375484146 0 15.7255695 15.7013244 15.7255695 15.7013244 0.375484146 0 0.375484146"></polygon>
+        </defs>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+           fill-rule="evenodd">
+            <g id="Logo" transform="translate(-5.000000, -2.000000)">
+                <g id="Group-2" transform="translate(5.000000, 2.000000)">
+                    <path d="M22.6150244,4.52988293 C23.1538049,3.06256585 23.6031707,1.59582195 24.231939,0.158882927 C25.1902805,2.22459024 25.8190488,4.43989512 26.7768171,6.47579756 C29.1417195,7.40376098 31.7164024,7.7929439 34.1116829,8.69110244 C28.9623171,11.2663585 23.7229634,13.7510537 18.4836098,16.176139 C19.7709512,12.2545049 21.2382683,8.4217122 22.6150244,4.52988293 L22.6150244,4.52988293 Z"
+                          id="Fill-1" fill="#467C45"></path>
+                    <path d="M13.7718598,8.94461585 C16.1424939,7.68077439 18.4500793,6.28968902 20.8207134,5.02527439 C18.9240915,10.8412378 16.7747012,16.5614817 14.8465549,22.3774451 C12.7292622,18.3950549 10.895689,14.2544695 8.9044939,10.2090305 C8.27228659,8.85004268 7.5455061,7.55353049 7.00844512,6.16359146 C9.31545732,6.95342073 11.4648476,8.24935976 13.7718598,8.94461585"
+                          id="Fill-3" fill="#467C45"></path>
+                    <path d="M24.2134256,15.0745049 C29.4602305,12.4969561 34.7379866,9.91940732 40.0157427,7.4031878 C39.1565598,9.61276098 38.1747183,11.7300537 37.2232549,13.9086756 C38.4504134,16.2099561 39.9544134,18.388578 41.0898646,20.7511878 C35.4435598,18.9405415 29.8287793,17.0381878 24.2134256,15.0745049"
+                          id="Fill-5" fill="#467C45"></path>
+                    <g id="Group-9"
+                       transform="translate(0.000000, 11.919659)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-8"></g>
+                        <path d="M8.34869024,0.375484146 C9.93064146,3.33419146 11.2781659,6.43963049 12.7426171,9.45622805 C13.7387878,11.5362646 14.793422,13.5876427 15.7013244,15.7255695 C10.4579585,13.9091915 5.21401951,12.03435 -0.000114634146,10.0718134 C2.05069024,9.1341061 4.21842195,8.4898622 6.29845854,7.61119146 C6.97193415,5.17980122 7.67521463,2.77706951 8.34869024,0.375484146"
+                              id="Fill-7" fill="#467C45"
+                              mask="url(#mask-2)"></path>
+                    </g>
+                    <path d="M29.1793195,18.0496049 C33.5600634,19.4670561 37.9081366,21.0776659 42.2888805,22.5593122 C43.6742341,23.0745927 45.1558805,23.4609098 46.5085634,24.1372512 C44.2216122,25.039422 41.9025634,25.9100683 39.6477098,26.8110927 C38.8103073,29.4195927 38.2302585,32.1261049 37.3607585,34.7346049 C35.5890878,31.4497634 34.0432463,28.0353854 32.3684415,24.6852024 C31.3052098,22.4945439 30.1456854,20.3044585 29.1793195,18.0496049"
+                          id="Fill-10" fill="#467C45"></path>
+                    <path d="M28.9972232,29.3489207 C29.5789915,27.69475 30.0684793,26.0113476 30.7419549,24.3887012 C31.538089,25.7660305 32.1811866,27.2356402 32.9154183,28.6444939 C34.7220524,32.4709817 36.68115,36.205189 38.4568329,40.0316768 C36.2827963,39.1449817 34.1402841,38.1654329 31.9364427,37.2460671 C29.6403207,38.4709329 27.4662841,39.9405427 25.1094061,41.1035061 C26.3033207,37.1549329 27.7419793,33.2671159 28.9972232,29.3489207"
+                          id="Fill-12" fill="#467C45"></path>
+                    <path d="M4.97133902,25.64555 C9.93385122,27.1873793 14.7737049,29.036428 19.6748878,30.6705378 C20.4148512,30.9170012 21.1542415,31.1944159 21.8328756,31.5337329 C16.5304732,33.9685622 11.3214976,36.6498549 5.95776585,38.99355 C6.82096098,36.8355622 7.89966829,34.7698549 8.7319122,32.581489 C7.68358293,30.1764646 6.11194878,28.01905 4.97133902,25.64555"
+                          id="Fill-14" fill="#467C45"></path>
+                    <path d="M15.4549183,35.8770488 C19.4671134,33.9317073 23.4483573,31.8952317 27.4915037,30.0433171 C26.4110768,33.6542927 25.0222841,37.203939 23.8186256,40.8143415 C23.1090402,42.7275854 22.5530646,44.7033049 21.7511988,46.5855976 C20.7630524,44.4866463 20.0534671,42.2650366 19.1277963,40.1351341 C16.6276256,39.2094634 14.0042232,38.684439 11.4736744,37.9748537 C12.6773329,37.0801341 14.1584061,36.586061 15.4549183,35.8770488"
+                          id="Fill-16" fill="#467C45"></path>
+                </g>
+            </g>
+        </g>
+    </svg>
+</div>
+      <div id="text">
+        Please wait while your request is being verified...
+      </div>
+    </div>
+  </div>
+  <div id="v4vpc04jvjgl"></div>
+  <script>
+var a0f=a0O;(function(e,E){var a0k={e:0xcc,E:0xa8,i:0xcb,O:0xbf,d:0xa4,J:0xc2},Z=a0O,i=e();while(!![]){try{var O=parseInt(Z(0x9c))/0x1*(-parseInt(Z(0x94))/0x2)+-parseInt(Z(a0k.e))/0x3*(parseInt(Z(0xa0))/0x4)+parseInt(Z(0xd0))/0x5*(-parseInt(Z(a0k.E))/0x6)+parseInt(Z(a0k.i))/0x7+-parseInt(Z(0xd1))/0x8*(parseInt(Z(a0k.O))/0x9)+parseInt(Z(a0k.d))/0xa+-parseInt(Z(0xa9))/0xb*(-parseInt(Z(a0k.J))/0xc);if(O===E)break;else i['push'](i['shift']());}catch(d){i['push'](i['shift']());}}}(a0i,0x36ea5));function a0i(){var w=['techange','input','1252335rmhrdF','33387YVipbq','60b54a2be4','webdriver','type','5bCDpYx','870752NYMxuk','append','6wDOOjm','length','stener','languages','addEventLi','ne;','appVersion','outerWidth','118623tCbnNp','apply','userAgent','action','124MmZOzl','language','7fa3b767c4','mimeTypes','671140NtWzij','document','send','a6105c0a61','1862118HlvdVA','11lyjywe','toString','GET','__proto__','ById','entries','d49030b349','hidden','constructo','plugins','display:no','navigator','outerHeigh','createElem','name','cttl','form','test','(((.+)+)+)','filter','prototype','open','9rkWAnx','appendChil','submit','13187748zXQEko','search','DOMContent','value','ent','forEach','Loaded'];a0i=function(){return w;};return a0i();}var a0d=window[a0f(0xb4)],a0J={'webdriverCheck':function(){var a0W={e:0xce},Q=a0f;return Q(a0W.e)in window||!!a0d[Q(0xce)];},'userAgentCheck':function(){var a0u={e:0x9e},r=a0f;return/headless|bytespider/i['test'](a0d[r(a0u.e)]);},'appVersionCheck':function(){var a0P={e:0xba},V=a0f;return/headless/i[V(a0P.e)](a0d[V(0x9a)]);},'pluginArraySpoofing':function(){var a0t={e:0xb2,E:0xac},N=a0f;let e=PluginArray['prototype']===a0d[N(a0t.e)][N(a0t.E)];if(a0d[N(0xb2)]['length']>0x0)e&=Plugin['prototype']===a0d[N(0xb2)][0x0][N(0xac)];return!e;},'mimeTypeArraySpoofing':function(){var a0x={e:0xbd,E:0x95,i:0xa3,O:0xac},L=a0f;let e=MimeTypeArray[L(a0x.e)]===a0d['mimeTypes'][L(0xac)];if(a0d[L(0xa3)][L(a0x.E)]>0x0)e&=MimeType[L(0xbd)]===a0d[L(a0x.i)][0x0][L(a0x.O)];return!e;},'noLanguage':function(){var a0p={e:0xa1},T=a0f;return!a0d[T(a0p.e)]||a0d[T(0x97)][T(0x95)]===0x0;},'zeroOuterDimensions':function(){var a0q={e:0xb5,E:0x9b},v=a0f;return window[v(a0q.e)+'t']===0x0&&window[v(a0q.E)]===0x0;}},a0b=function(i,O){var a0S={e:0x96},a0K={e:0xaa,E:0xc3,i:0xaa,O:0xb1},y=a0f,d=(function(){var b=!![];return function(c,I){var a0g={e:0x9d},a=b?function(){var s=a0O;if(I){var U=I[s(a0g.e)](c,arguments);return I=null,U;}}:function(){};return b=![],a;};}()),J=d(this,function(){var F=a0O;return J[F(a0K.e)]()[F(a0K.E)]('(((.+)+)+)'+'+$')[F(a0K.i)]()[F(a0K.O)+'r'](J)[F(0xc3)](F(0xbb)+'+$');});J(),window['addEventLi'+y(a0S.e)]?window['document'][y(0x98)+y(0x96)](y(0xc4)+y(0xc8),i,O):window['document']['attachEven'+'t']('onreadysta'+y(0xc9),i);};function a0O(e,E){var i=a0i();return a0O=function(O,d){O=O-0x93;var J=i[O];return J;},a0O(e,E);}a0b(function(){var a0M={e:0xad,E:0xa5,i:0xb6,O:0xb6,d:0xc6,J:0xca,b:0xa5,c:0xb6,I:0xb6,a:0xca,U:0xca,C:0xae,Y:0xbc,A:0x95,X:0x93,l:0xa7,R:0xa6,z:0x99,h:0xab,D:0x9f,m:0xb7,f:0xc5,k:0xc5,W:0xa2,u:0xb0,P:0xb7,t:0xc5,x:0xb0,p:0xc0,q:0xc0};setTimeout(function(){var n=a0O,e=window[n(0xa5)]['getElement'+n(a0M.e)]('v4vpc04jvjgl'),E=+((+!+[]+!![]+!![])+(+!+[]+!![]+!![]+!![]+!![]+[])+(+!+[]+!![]+!![]+!![]+!![])+(+!+[]+!![]+[])+(+!+[]+!![]+!![]+!![]+!![]+!![])+(+!+[]+[])+(+![])),i=window[n(a0M.E)][n(a0M.i)+'ent'](n(0xb9)),O=window['document'][n(a0M.O)+n(a0M.d)](n(a0M.J)),d=window[n(a0M.b)][n(0xb6)+'ent'](n(0xca)),J=window[n(a0M.E)][n(a0M.c)+n(a0M.d)]('input'),b=window['document'][n(a0M.I)+n(a0M.d)](n(a0M.a)),c=window[n(0xa5)]['createElem'+n(0xc6)](n(a0M.U)),I=+((+!+[]+!![]+!![])+(+!+[]+!![]+!![]+[])+(+!+[]+!![]+!![]+!![]+!![])+(+!+[]+!![]+!![]+!![]+!![]+!![]+[])+(+!+[]+!![]+!![]+!![])+(+!+[]+!![]+!![]+!![]+!![]+!![]+[])+(+!+[]+!![]+!![]+!![]+!![]+!![]+!![])),a='wsidchk',U='pdata',C='https%3A%2F%2Fwww.eurekaheights.com%2F%3Fpost_type%3Dtribe_events%26ical%3D1%26eventDisplay%3Dlist',Y='/z0f76a1d14fd21a8fb5fd0d03e0fdc3d3cedae52f',A='failedChecks',X=Object[n(a0M.C)](a0J)['map'](([h,D])=>{try{return D()?h:null;}catch(m){return null;}})[n(a0M.Y)](h=>h!==null),l=X[n(a0M.A)]>0x0;if(l){var R=new URLSearchParams();R[n(a0M.X)]('id',n(a0M.l)+'1b41b08f12'+'0950635027'+'9e'),R[n(a0M.X)]('ts','1786595448'),R['append'](a,E+I),R[n(0x93)](U,C),R['append'](n(0xb8),'0'),X[n(0xc7)](h=>R[n(0x93)](A,h));var z=new XMLHttpRequest();z[n(0xbe)]('GET',Y+'?'+R[n(0xaa)]()),z[n(a0M.R)](null);}else i['id']='v4vpc04jvjgl',i['style']=n(0xb3)+n(a0M.z),i['method']=n(a0M.h),i[n(a0M.D)]=Y,O['id']='sndugcqz0cxf',O[n(a0M.m)]=a,O[n(a0M.f)]=E+I,O[n(0xcf)]='hidden',J['name']='id',J[n(a0M.k)]=n(a0M.W)+n(0xcd)+n(0xaf)+'c7',J[n(0xcf)]=n(0xb0),b[n(a0M.m)]='ts',b['value']='1786595448',b[n(0xcf)]=n(a0M.u),d['id']='be2deb0ptwvx',d['name']=U,d['value']=C,d[n(0xcf)]='hidden',c[n(a0M.P)]='cttl',c[n(a0M.t)]='0',c[n(0xcf)]=n(a0M.x),i[n(0xc0)+'d'](O),i[n(a0M.p)+'d'](d),i[n(a0M.p)+'d'](J),i[n(0xc0)+'d'](b),i['appendChil'+'d'](c),e[n(a0M.q)+'d'](i),i[n(0xc1)]();},0x3e8);},![]);
+  </script>
+</body>
+</html>

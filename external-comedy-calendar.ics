@@ -61,6 +61,45 @@ DTSTART:20281105T060000
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VTIMEZONE
+TZID:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20250309T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20251102T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20260308T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20261101T070000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:20270314T080000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:20271107T070000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VTIMEZONE
 TZID:America/Los_Angeles
 BEGIN:DAYLIGHT
 TZOFFSETFROM:-0800
@@ -100,42 +139,81 @@ DTSTART:20271107T090000
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VTIMEZONE
-TZID:America/Chicago
+TZID:America/Detroit
 BEGIN:DAYLIGHT
-TZOFFSETFROM:-0600
-TZOFFSETTO:-0500
-TZNAME:CDT
-DTSTART:20250309T080000
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:20250309T070000
 END:DAYLIGHT
 BEGIN:STANDARD
-TZOFFSETFROM:-0500
-TZOFFSETTO:-0600
-TZNAME:CST
-DTSTART:20251102T070000
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:20251102T060000
 END:STANDARD
 BEGIN:DAYLIGHT
-TZOFFSETFROM:-0600
-TZOFFSETTO:-0500
-TZNAME:CDT
-DTSTART:20260308T080000
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:20260308T070000
 END:DAYLIGHT
 BEGIN:STANDARD
-TZOFFSETFROM:-0500
-TZOFFSETTO:-0600
-TZNAME:CST
-DTSTART:20261101T070000
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:20261101T060000
 END:STANDARD
 BEGIN:DAYLIGHT
-TZOFFSETFROM:-0600
-TZOFFSETTO:-0500
-TZNAME:CDT
-DTSTART:20270314T080000
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:20270314T070000
 END:DAYLIGHT
 BEGIN:STANDARD
-TZOFFSETFROM:-0500
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:20271107T060000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:America/Denver
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0700
 TZOFFSETTO:-0600
-TZNAME:CST
-DTSTART:20271107T070000
+TZNAME:MDT
+DTSTART:20250309T090000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0700
+TZNAME:MST
+DTSTART:20251102T080000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0600
+TZNAME:MDT
+DTSTART:20260308T090000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0700
+TZNAME:MST
+DTSTART:20261101T080000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0600
+TZNAME:MDT
+DTSTART:20270314T090000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0700
+TZNAME:MST
+DTSTART:20271107T080000
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
@@ -214,186 +292,6 @@ GEO:40.7748283;-73.9536392
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=The Comic Strip 1568 2nd Avenue New York NY 10028 New York NY 10028 United States;X-APPLE-RADIUS=500;X-TITLE=1568 2nd Avenue\, New York\, NY 10028:geo:-73.9536392,40.7748283
 END:VEVENT
 BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20260811T190000
-DTEND;TZID=America/New_York:20260811T210000
-DTSTAMP:20260602T200052Z
-CREATED:20260602T194345Z
-LAST-MODIFIED:20260602T200052Z
-UID:10005293-1786474800-1786482000@comedycalendar.com
-SUMMARY:Comedy Cellar Las Vegas Showcase (Early)
-DESCRIPTION:This post contains affiliate links. We may earn a commission at no extra cost to you. \n\n  \n     Official Tickets\n   \n  \n     Resale Tickets\n  \n\nComedy Cellar Las Vegas brings one of the most legendary names in stand-up comedy to the heart of Las Vegas. Located inside the Rio Hotel & Casino\, this intimate comedy club is the West Coast home of New York City’s world-famous Comedy Cellar\, the venue that helped launch the careers of comedy icons including Dave Chappelle\, Chris Rock\, Jon Stewart\, Ray Romano\, Amy Schumer\, Aziz Ansari\, and countless others. \nUnlike traditional comedy shows featuring a single headliner\, Comedy Cellar presents a carefully curated lineup of professional comedians every night. Audiences can expect multiple performers during each show\, featuring a mix of nationally touring headliners\, television favorites\, Comedy Central veterans\, Netflix performers\, and rising stars from around the world. \nNo two shows are exactly alike\, making every visit a unique experience. Surprise drop-in appearances from major comedians performing elsewhere in Las Vegas have become part of the club’s reputation\, giving audiences the chance to see comedy superstars in an intimate setting. \nEvent Details\nVenue: Comedy Cellar Las Vegas at Rio Hotel & Casino\nLocation: 3700 W Flamingo Rd\, Las Vegas\, NV 89103\nShow Schedule: Nightly performances throughout the year\nAge Requirement: Recommended for audiences 18+ due to mature comedy content \nAbout the Venue\nOpened in 2018\, Comedy Cellar Las Vegas was designed to recreate the atmosphere and energy of the original Greenwich Village club that has become one of the most respected comedy venues in the world. The 300-seat showroom offers excellent sightlines and an intimate setting that allows audiences to experience stand-up comedy exactly as it was meant to be seen: up close and personal. \nThe venue combines the excitement of a Las Vegas night out with the authentic feel of a classic New York comedy club. Guests can enjoy a comfortable showroom environment while watching some of the best comedians working today perform in a setting that encourages spontaneity\, crowd interaction\, and unforgettable moments. \nConveniently located inside the Rio Hotel & Casino just minutes from the Las Vegas Strip\, the venue offers easy access for both tourists and local comedy fans. \nWhat to Expect\nExpect a fast-paced evening featuring multiple comedians performing throughout the show. The Comedy Cellar is known for showcasing a wide variety of comedic styles\, from observational humor and storytelling to sharp social commentary\, crowd work\, and cutting-edge stand-up. \nWhether you’re discovering a future comedy star or watching a seasoned veteran perfect their craft\, every show delivers the authentic comedy club experience that has made the Comedy Cellar one of the most respected brands in stand-up comedy. \nFor comedy fans visiting Las Vegas\, Comedy Cellar is widely considered one of the best places in the city to experience live stand-up comedy any night of the week.
-URL:https://comedycalendar.com/event/comedy-cellar-las-vegas-showcase-early/2026-08-11/
-LOCATION:Comedy Cellar Las Vegas at Rio Hotel & Casino\, 3700 W Flamingo Rd\, Las Vegas\, NV\, 89103\, United States
-ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fc4/a6703ea9-a17b-4211-b9dc-7308aa0b2fc4_RETINA_PORTRAIT_16_9.jpg
-GEO:36.1172452;-115.1861279
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Comedy Cellar Las Vegas at Rio Hotel & Casino 3700 W Flamingo Rd Las Vegas NV 89103 United States;X-APPLE-RADIUS=500;X-TITLE=3700 W Flamingo Rd:geo:-115.1861279,36.1172452
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Los_Angeles:20260811T193000
-DTEND;TZID=America/Los_Angeles:20260811T213000
-DTSTAMP:20260502T015140Z
-CREATED:20260501T010000Z
-LAST-MODIFIED:20260502T015140Z
-UID:10004809-1786476600-1786483800@comedycalendar.com
-SUMMARY:Dino Archie LIVE at Punch Line Comedy Club
-DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nOfficial Tickets\nResale Tickets \nDino Archie LIVE at Punch Line Comedy Club\nRising stand-up comedian Dino Archie brings his sharp wit and high-energy performance to the legendary Punch Line Comedy Club in San Francisco for one night only on August 11\, 2026. Known for his relatable storytelling and infectious stage presence\, Dino Archie delivers a show that keeps audiences laughing from start to finish. \nEvent Details\nDate: Tuesday\, August 11\, 2026\nTime: 7:30 PM (Doors open 6:45 PM)\nVenue: Punch Line Comedy Club – San Francisco\nAddress: 444 Battery Street\, San Francisco\, CA 94111\nAge Requirement: 18+ with valid government-issued photo ID\nBeverage Minimum: 2-drink minimum per person \nAbout Dino Archie\nDino Archie is a fast-rising stand-up comedian known for his energetic delivery and sharp observational humor. He has built a loyal following through his relatable takes on everyday life\, relationships\, and culture. His comedy resonates with diverse audiences and has earned him spots at top comedy clubs across the country. \nWhat to Expect\n\nHigh-energy stand-up comedy performance\nSharp observational humor and storytelling\nIntimate club setting at one of SF’s most iconic comedy venues\nFull bar and food service available\n18+ show with a 2-drink minimum\nLimited seating — general admission\, first come first served\n\nVenue Information\nPunch Line Comedy Club is San Francisco’s premier stand-up comedy venue\, located in the heart of the Financial District at 444 Battery Street. The intimate setting ensures every seat has a great view of the stage\, making it one of the best comedy experiences in the Bay Area. \nTicket Information\nTickets range from approximately $75 – $110 and are available through Ticketmaster (official) or VividSeats (resale). Tickets are non-refundable and non-exchangeable. Purchase early as shows at Punch Line sell out quickly. \nOfficial Tickets\nResale Tickets \nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
-URL:https://comedycalendar.com/event/dino-archie-live-at-punch-line-comedy-club/
-LOCATION:Punch Line Comedy Club – San Francisco\, 444 Battery Street\, San Francisco\, California\, 94111\, United States Of America
-ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/b23/5bf65849-17dc-43f5-af4f-4b445ab18b23_SOURCE
-GEO:37.795486;-122.4001359
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Punch Line Comedy Club – San Francisco 444 Battery Street San Francisco California 94111 United States Of America;X-APPLE-RADIUS=500;X-TITLE=444 Battery Street:geo:-122.4001359,37.795486
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20260811T210000
-DTEND;TZID=America/New_York:20260811T230000
-DTSTAMP:20260804T171157Z
-CREATED:20260714T165827Z
-LAST-MODIFIED:20260804T171157Z
-UID:10006339-1786482000-1786489200@comedycalendar.com
-SUMMARY:TOO LIT Tuesday Blackbird Ordinary Comedy Night
-DESCRIPTION:Too Lit Tuesday: Miami comedy\, guaranteed seats\, shots\, and an afterparty that turns a Tuesday into the weekend. Free Shots at 9PM.
-URL:https://comedycalendar.com/event/too-lit-tuesday-blackbird-ordinary-comedy-night-38/
-LOCATION:Blackbird Ordinary\, Southwest 1st Avenue 729\, Miami\, FL\, 33130\, United States
-CATEGORIES:Showcase
-ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/07/c7a30418e504ade8ab7859f20b4a88a4-QgmDMy.tmp_-sAFOvv.jpg
-GEO:25.7666715;-80.1951345
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Blackbird Ordinary Southwest 1st Avenue 729 Miami FL 33130 United States;X-APPLE-RADIUS=500;X-TITLE=Southwest 1st Avenue 729:geo:-80.1951345,25.7666715
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20260811T213000
-DTEND;TZID=America/New_York:20260811T233000
-DTSTAMP:20260602T200151Z
-CREATED:20260602T200119Z
-LAST-MODIFIED:20260602T200151Z
-UID:10005871-1786483800-1786491000@comedycalendar.com
-SUMMARY:Comedy Cellar Las Vegas (Late)
-DESCRIPTION:This post contains affiliate links. We may earn a commission at no extra cost to you. \n\nOfficial Tickets\n\nResale Tickets\n\nComedy Cellar Las Vegas brings one of the most legendary names in stand-up comedy to the heart of Las Vegas. Located inside the Rio Hotel & Casino\, this intimate comedy club is the West Coast home of New York City’s world-famous Comedy Cellar\, the venue that helped launch the careers of comedy icons including Dave Chappelle\, Chris Rock\, Jon Stewart\, Ray Romano\, Amy Schumer\, Aziz Ansari\, and countless others. \nUnlike traditional comedy shows featuring a single headliner\, Comedy Cellar presents a carefully curated lineup of professional comedians every night. Audiences can expect multiple performers during each show\, featuring a mix of nationally touring headliners\, television favorites\, Comedy Central veterans\, Netflix performers\, and rising stars from around the world. \nNo two shows are exactly alike\, making every visit a unique experience. Surprise drop-in appearances from major comedians performing elsewhere in Las Vegas have become part of the club’s reputation\, giving audiences the chance to see comedy superstars in an intimate setting. \nEvent Details\nVenue: Comedy Cellar Las Vegas at Rio Hotel & Casino\nLocation: 3700 W Flamingo Rd\, Las Vegas\, NV 89103\nShow Schedule: Nightly performances throughout the year\nAge Requirement: Recommended for audiences 18+ due to mature comedy content \nAbout the Venue\nOpened in 2018\, Comedy Cellar Las Vegas was designed to recreate the atmosphere and energy of the original Greenwich Village club that has become one of the most respected comedy venues in the world. The 300-seat showroom offers excellent sightlines and an intimate setting that allows audiences to experience stand-up comedy exactly as it was meant to be seen: up close and personal. \nThe venue combines the excitement of a Las Vegas night out with the authentic feel of a classic New York comedy club. Guests can enjoy a comfortable showroom environment while watching some of the best comedians working today perform in a setting that encourages spontaneity\, crowd interaction\, and unforgettable moments. \nConveniently located inside the Rio Hotel & Casino just minutes from the Las Vegas Strip\, the venue offers easy access for both tourists and local comedy fans. \nWhat to Expect\nExpect a fast-paced evening featuring multiple comedians performing throughout the show. The Comedy Cellar is known for showcasing a wide variety of comedic styles\, from observational humor and storytelling to sharp social commentary\, crowd work\, and cutting-edge stand-up. \nWhether you’re discovering a future comedy star or watching a seasoned veteran perfect their craft\, every show delivers the authentic comedy club experience that has made the Comedy Cellar one of the most respected brands in stand-up comedy. \nFor comedy fans visiting Las Vegas\, Comedy Cellar is widely considered one of the best places in the city to experience live stand-up comedy any night of the week.
-URL:https://comedycalendar.com/event/comedy-cellar-las-vegas-late/2026-08-11/
-LOCATION:Comedy Cellar Las Vegas at Rio Hotel & Casino\, 3700 W Flamingo Rd\, Las Vegas\, NV\, 89103\, United States
-ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fc4/a6703ea9-a17b-4211-b9dc-7308aa0b2fc4_RETINA_PORTRAIT_16_9.jpg
-GEO:36.1172452;-115.1861279
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Comedy Cellar Las Vegas at Rio Hotel & Casino 3700 W Flamingo Rd Las Vegas NV 89103 United States;X-APPLE-RADIUS=500;X-TITLE=3700 W Flamingo Rd:geo:-115.1861279,36.1172452
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Los_Angeles:20260812T190000
-DTEND;TZID=America/Los_Angeles:20260812T210000
-DTSTAMP:20260515T015200Z
-CREATED:20260319T000000Z
-LAST-MODIFIED:20260515T015200Z
-UID:10003420-1786561200-1786568400@comedycalendar.com
-SUMMARY:Ali Wong Live LIVE at McCaw Hall
-DESCRIPTION:Official TicketsResale Tickets \nAbout the Performer\nAli Wong is one of the biggest comedy stars in the world — an Emmy Award-winning actress\, comedian\, and writer whose Netflix specials Baby Cobra\, Hard Knock Wife\, and Don Wong have made her a household name. Known for her fearless\, hilarious\, and deeply personal comedy about marriage\, motherhood\, and modern life\, Wong has built a massive global following through her stand-up and screen work. \nHer breakout Netflix special Baby Cobra — filmed while she was seven months pregnant — became a cultural phenomenon and launched her into the comedy stratosphere. Since then\, Wong has starred in the Netflix series Beef (for which she won an Emmy)\, Always Be My Maybe\, and numerous other projects that have cemented her status as one of entertainment’s most versatile talents. \nAli Wong Live is her latest stand-up tour\, bringing a brand-new hour of comedy to some of the most prestigious venues in North America. Seattle’s McCaw Hall hosts two consecutive nights — August 12 and 13 — making this one of the most anticipated comedy events of the year in the Pacific Northwest. \nEvent Details\n\nDate: Wednesday\, August 12\, 2026\nShow Time: 7:00 PM\nVenue: McCaw Hall\, 321 Mercer Street\, Seattle\, WA 98109\nAge Policy: All Ages\nSeating: Reserved Seated\n\nAbout the Venue\nMcCaw Hall is one of Seattle’s premier performance venues\, located at Seattle Center at 321 Mercer Street. Home to Seattle Opera and Pacific Northwest Ballet\, McCaw Hall is a world-class facility with stunning acoustics\, excellent sightlines\, and a capacity of approximately 2\,900 guests. \nThe venue features orchestra\, mezzanine\, and balcony seating levels\, offering excellent views from every section. McCaw Hall is conveniently located at Seattle Center\, steps from the Space Needle and easily accessible via the Seattle Center Monorail from downtown. \nParking is available at the Seattle Center Garage and numerous nearby lots. The venue is also accessible via Seattle Metro bus routes. \nWhat to Expect\nAli Wong Live is a must-see comedy event — a full evening of stand-up comedy from one of the funniest and most celebrated performers working today. Expect bold\, hilarious observations about life\, relationships\, and the human experience delivered with Wong’s signature fearless energy. \nWong’s live shows are known for their incredible energy and the sense that you’re witnessing something truly special. Her ability to connect with audiences through honest\, sometimes shocking humor creates an unforgettable shared experience. \nTicket Information\nTickets for Ali Wong Live at McCaw Hall are available now. Prices range from $65 to $150 depending on seat selection. \n\nOfficial Tickets: Purchase directly through Ticketmaster for guaranteed authentic tickets.\nResale Tickets: Find deals on resale tickets through VividSeats.\n\nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
-URL:https://comedycalendar.com/event/ali-wong-live-at-mccaw-hall-seattle/
-LOCATION:McCaw Hall\, 321 Mercer Street\, Seattle\, Washington\, 98109\, United States
-ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/253/e03b01e0-2f00-4b0e-be33-7c89a92f3253_TABLET_LANDSCAPE_LARGE_16_9.jpg
-GEO:47.6243782;-122.3502386
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=McCaw Hall 321 Mercer Street Seattle Washington 98109 United States;X-APPLE-RADIUS=500;X-TITLE=321 Mercer Street:geo:-122.3502386,47.6243782
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20260812T190000
-DTEND;TZID=America/New_York:20260812T210000
-DTSTAMP:20260602T200052Z
-CREATED:20260602T194345Z
-LAST-MODIFIED:20260602T200052Z
-UID:10005294-1786561200-1786568400@comedycalendar.com
-SUMMARY:Comedy Cellar Las Vegas Showcase (Early)
-DESCRIPTION:This post contains affiliate links. We may earn a commission at no extra cost to you. \n\n  \n     Official Tickets\n   \n  \n     Resale Tickets\n  \n\nComedy Cellar Las Vegas brings one of the most legendary names in stand-up comedy to the heart of Las Vegas. Located inside the Rio Hotel & Casino\, this intimate comedy club is the West Coast home of New York City’s world-famous Comedy Cellar\, the venue that helped launch the careers of comedy icons including Dave Chappelle\, Chris Rock\, Jon Stewart\, Ray Romano\, Amy Schumer\, Aziz Ansari\, and countless others. \nUnlike traditional comedy shows featuring a single headliner\, Comedy Cellar presents a carefully curated lineup of professional comedians every night. Audiences can expect multiple performers during each show\, featuring a mix of nationally touring headliners\, television favorites\, Comedy Central veterans\, Netflix performers\, and rising stars from around the world. \nNo two shows are exactly alike\, making every visit a unique experience. Surprise drop-in appearances from major comedians performing elsewhere in Las Vegas have become part of the club’s reputation\, giving audiences the chance to see comedy superstars in an intimate setting. \nEvent Details\nVenue: Comedy Cellar Las Vegas at Rio Hotel & Casino\nLocation: 3700 W Flamingo Rd\, Las Vegas\, NV 89103\nShow Schedule: Nightly performances throughout the year\nAge Requirement: Recommended for audiences 18+ due to mature comedy content \nAbout the Venue\nOpened in 2018\, Comedy Cellar Las Vegas was designed to recreate the atmosphere and energy of the original Greenwich Village club that has become one of the most respected comedy venues in the world. The 300-seat showroom offers excellent sightlines and an intimate setting that allows audiences to experience stand-up comedy exactly as it was meant to be seen: up close and personal. \nThe venue combines the excitement of a Las Vegas night out with the authentic feel of a classic New York comedy club. Guests can enjoy a comfortable showroom environment while watching some of the best comedians working today perform in a setting that encourages spontaneity\, crowd interaction\, and unforgettable moments. \nConveniently located inside the Rio Hotel & Casino just minutes from the Las Vegas Strip\, the venue offers easy access for both tourists and local comedy fans. \nWhat to Expect\nExpect a fast-paced evening featuring multiple comedians performing throughout the show. The Comedy Cellar is known for showcasing a wide variety of comedic styles\, from observational humor and storytelling to sharp social commentary\, crowd work\, and cutting-edge stand-up. \nWhether you’re discovering a future comedy star or watching a seasoned veteran perfect their craft\, every show delivers the authentic comedy club experience that has made the Comedy Cellar one of the most respected brands in stand-up comedy. \nFor comedy fans visiting Las Vegas\, Comedy Cellar is widely considered one of the best places in the city to experience live stand-up comedy any night of the week.
-URL:https://comedycalendar.com/event/comedy-cellar-las-vegas-showcase-early/2026-08-12/
-LOCATION:Comedy Cellar Las Vegas at Rio Hotel & Casino\, 3700 W Flamingo Rd\, Las Vegas\, NV\, 89103\, United States
-ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fc4/a6703ea9-a17b-4211-b9dc-7308aa0b2fc4_RETINA_PORTRAIT_16_9.jpg
-GEO:36.1172452;-115.1861279
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Comedy Cellar Las Vegas at Rio Hotel & Casino 3700 W Flamingo Rd Las Vegas NV 89103 United States;X-APPLE-RADIUS=500;X-TITLE=3700 W Flamingo Rd:geo:-115.1861279,36.1172452
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260812T193000
-DTEND;TZID=America/Chicago:20260812T213000
-DTSTAMP:20260424T000000Z
-CREATED:20260424T000000Z
-LAST-MODIFIED:20260424T000000Z
-UID:10004748-1786563000-1786570200@comedycalendar.com
-SUMMARY:Tony Dabas LIVE at Laugh Out Loud Comedy Club
-DESCRIPTION:Official TicketsResale Tickets\n\nAbout the Performer\nTony Dabas\, hailing from Staten Island\, is a rising star in the New York City stand-up scene. Known for his quick wit and relatable humor\, Tony has also made a major name for himself in the world of social media\, collaborating with influencers on TikTok and Instagram to create hilarious characters and viral sketches. \nHis ability to connect with audiences both online and on stage makes him one of the most exciting comedians to watch in the comedy world right now. Tony’s comedy draws from his Staten Island roots and New York City experiences\, delivering the kind of sharp\, street-smart humor that resonates with audiences everywhere. \nWith a rapidly growing fanbase and a natural talent for both stand-up and character work\, Tony Dabas is building a career that is only going to get bigger. Don’t miss your chance to see him live in San Antonio! \nEvent Details\n\nDate: Wednesday\, August 12\, 2026\nShow Time: 7:30 PM CDT\nDoors Open: 6:30 PM CDT\nVenue: Laugh Out Loud Comedy Club\nAddress: 618 NW Loop 410\, San Antonio\, TX 78216\nAge Restriction: 18+ Event — Valid photo ID required\n Available with VIP ticket purchase\n\nAbout the Venue\nLaugh Out Loud Comedy Club is San Antonio’s premier stand-up comedy destination\, conveniently located in Park North Plaza at Loop 410 and Blanco — just inside the loop and only a few miles from the airport. \nThe club features a full bar lounge where guests can grab a drink before the show\, and a comfortable showroom with first-come\, first-served seating. Preferred Tables are located center stage for the best views\, while General Admission tables are positioned on the sides and wings. \nThere is a 2-item food or beverage minimum per person once seated\, and an 18% service charge applies to all checks in the showroom. Early arrival is strongly recommended to secure your preferred seating. \nWhat to Expect\nTony Dabas brings the energy of New York City comedy to the San Antonio stage. His stand-up is fast-paced\, relatable\, and packed with the kind of sharp observations that make you laugh because they’re so true. \n \nThis is a Wednesday night show at Laugh Out Loud Comedy Club — the perfect mid-week pick-me-up. Grab your tickets now! \nTicket Information\n\nGeneral Admission: $25 (+ fees)\nPreferred Seating: $35 (+ fees)\n $45 (+ fees)\nOrder Limit: 10 tickets per order\n\n\nOfficial TicketsResale Tickets\n\nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
-URL:https://comedycalendar.com/event/tony-dabas-live-at-laugh-out-loud-comedy-club/
-LOCATION:Laugh Out Loud Comedy Club\, 618 Northwest Loop 410\, San Antonio\, TX\, 78216\, USA
-ATTACH;FMTTYPE=image/png:https://comedycalendar.com/wp-content/uploads/2026/04/43_Edp-21W6vW.png
-GEO:29.5193054;-98.5060363
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Laugh Out Loud Comedy Club 618 Northwest Loop 410 San Antonio TX 78216 USA;X-APPLE-RADIUS=500;X-TITLE=618 Northwest Loop 410:geo:-98.5060363,29.5193054
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20260812T193000
-DTEND;TZID=America/New_York:20260812T213000
-DTSTAMP:20260519T232921Z
-CREATED:20260503T190000Z
-LAST-MODIFIED:20260519T232921Z
-UID:10004919-1786563000-1786570200@comedycalendar.com
-SUMMARY:Dino Archie LIVE at Punch Line Comedy Club Sacramento
-DESCRIPTION:Official Tickets\nResale Tickets\nAbout Dino Archie\nDino Archie is a stand-up comedian who has been making audiences laugh across the country with his sharp\, relatable humor and engaging stage presence. Known for his quick wit and ability to find comedy in the everyday moments of life\, Dino has built a strong following on the comedy club circuit. \nHis comedy style is grounded in personal experience and sharp observation\, drawing laughs from topics that resonate with audiences of all walks of life. Dino’s natural charisma and confident delivery make him a compelling performer who commands the stage from the moment he steps on it. \nWith appearances at comedy clubs and festivals across the country\, Dino Archie is a rising force in stand-up comedy. His Sacramento show at the Punch Line is a must-see for fans of smart\, accessible comedy. \nEvent Details\nDate: Wednesday\, August 12\, 2026 \nTime: 7:30 PM (Doors open one hour before the show) \nVenue: Punch Line Comedy Club – Sacramento\, 2100 Arden Way\, Sacramento\, CA 95825 \nAge Restriction: 18+ event. Two-beverage minimum per person. No re-entry. \nAbout the Venue\nPunch Line Comedy Club Sacramento is one of the most celebrated comedy venues on the West Coast\, located at 2100 Arden Way in Sacramento\, California. The intimate club seats approximately 300 guests in a tiered layout that ensures excellent sightlines from every seat. \nThe venue features a full bar and dining service\, with a two-beverage minimum per guest. The warm\, welcoming atmosphere and professional sound system make it the ideal setting for an evening of world-class stand-up comedy. Parking is available in the surrounding area. \nPunch Line Sacramento has hosted legends of comedy and continues to be the premier destination for live stand-up in the Sacramento region. \nWhat to Expect\nDino Archie delivers a sharp\, engaging stand-up set that blends personal storytelling with observational humor. Expect a fun Wednesday night out filled with genuine laughs and a comedian who knows how to work a room. \nThe show runs approximately 75-90 minutes and is an 18+ event with a two-beverage minimum. Arrive early to grab your drinks and settle in for a great night of comedy. \nTicket Information\nPrice Range: $29 – $55 (includes fees) \nPurchase official tickets through Ticketmaster or find resale options through VividSeats. \nOfficial Tickets\nResale Tickets\nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
-URL:https://comedycalendar.com/event/dino-archie-live-at-punch-line-comedy-club-sacramento/
-LOCATION:Punch Line Comedy Club – Sacramento\, 2100 Arden Way\, Sacramento\, CA\, 95825
-ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/b23/5bf65849-17dc-43f5-af4f-4b445ab18b23_RETINA_PORTRAIT_3_2.jpg
-GEO:38.5943776;-121.4160953
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Punch Line Comedy Club – Sacramento 2100 Arden Way Sacramento CA 95825;X-APPLE-RADIUS=500;X-TITLE=2100 Arden Way:geo:-121.4160953,38.5943776
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Los_Angeles:20260812T200000
-DTEND;TZID=America/Los_Angeles:20260812T220000
-DTSTAMP:20260502T010000Z
-CREATED:20260502T010000Z
-LAST-MODIFIED:20260502T010000Z
-UID:10004810-1786564800-1786572000@comedycalendar.com
-SUMMARY:Danny Jolles LIVE at Punch Line Comedy Club
-DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nOfficial Tickets\nResale Tickets \nDanny Jolles LIVE at Punch Line Comedy Club\nComedian Danny Jolles brings his acclaimed stand-up to the iconic Punch Line Comedy Club in San Francisco on Wednesday\, August 12\, 2026. Known for his clever writing and charismatic stage presence\, Danny Jolles delivers a night of laughs you won’t want to miss. \nEvent Details\nDate: Wednesday\, August 12\, 2026\nTime: 8:00 PM (Doors open 7:00 PM)\nVenue: Punch Line Comedy Club – San Francisco\nAddress: 444 Battery Street\, San Francisco\, CA 94111\nAge Requirement: 18+ with valid government-issued photo ID\nBeverage Minimum: 2-drink minimum per person \nAbout Danny Jolles\nDanny Jolles is a New York-based stand-up comedian who has appeared on Comedy Central\, Late Night with Seth Meyers\, and numerous comedy festivals. His sharp writing and likable persona have made him a fan favorite on the club circuit. He is known for his clever observations on modern life\, relationships\, and pop culture. \nWhat to Expect\n\nPolished stand-up comedy from a rising national headliner\nClever writing with sharp punchlines and great storytelling\nIntimate club atmosphere at San Francisco’s top comedy venue\nFull bar and food service available throughout the show\n18+ show with a 2-drink minimum per person\nGeneral admission seating — arrive early for best seats\n\nVenue Information\nPunch Line Comedy Club is San Francisco’s most celebrated stand-up comedy venue\, nestled in the Financial District at 444 Battery Street. With its intimate layout and legendary history of hosting comedy’s biggest names\, it’s the perfect place to catch a live show. \nTicket Information\nTickets range from approximately $45 – $85 and are available through Ticketmaster (official) or VividSeats (resale). All sales are final. Shows at Punch Line regularly sell out — secure your seats early. \nOfficial Tickets\nResale Tickets \nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
-URL:https://comedycalendar.com/event/danny-jolles-live-at-punch-line-comedy-club/
-LOCATION:Punch Line Comedy Club – San Francisco\, 444 Battery Street\, San Francisco\, California\, 94111\, United States Of America
-ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/05/98dd3d1c-b25c-4813-b654-bb89fae3bb47_SOURCE-SIDDCn.jpg
-GEO:37.795486;-122.4001359
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Punch Line Comedy Club – San Francisco 444 Battery Street San Francisco California 94111 United States Of America;X-APPLE-RADIUS=500;X-TITLE=444 Battery Street:geo:-122.4001359,37.795486
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Los_Angeles:20260812T200000
-DTEND;TZID=America/Los_Angeles:20260812T220000
-DTSTAMP:20260810T040000Z
-CREATED:20260810T040000Z
-LAST-MODIFIED:20260810T040000Z
-UID:10006614-1786564800-1786572000@comedycalendar.com
-SUMMARY:Usama Siddiquee: Right After You Left LIVE at Hollywood Palladium
-DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nOfficial Tickets (Ticketmaster) \nResale Tickets (VividSeats) \nUsama Siddiquee: Right After You Left LIVE at Hollywood Palladium\nUsama Siddiquee brings his highly anticipated stand-up special “Right After You Left” to the iconic Hollywood Palladium for one unforgettable night on August 12\, 2026. \nThis is a Vinyl Room @ the Palladium show — an intimate stage experience inside one of Hollywood’s most legendary venues. \nEvent Details\nDate: Wednesday\, August 12\, 2026 \nTime: 8:00 PM PDT (Doors open at 7:00 PM) \nVenue: Hollywood Palladium (Vinyl Room) \nAddress: 6215 W Sunset Blvd\, Hollywood\, CA 90028 \nAge Requirement: 18+ Event \nAbout Usama Siddiquee\nUsama Siddiquee is a rising stand-up comedian known for his sharp\, introspective humor and relatable storytelling. He has built a loyal following through his live performances and online presence\, earning a reputation as one of the most exciting voices in contemporary comedy. \n“Right After You Left” is his most personal and polished show yet — a journey through heartbreak\, growth\, and the absurdity of modern life. \nWhat to Expect\n\nA full-length stand-up performance by Usama Siddiquee\nSharp\, personal comedy about relationships and self-discovery\nIntimate Vinyl Room setting inside the Hollywood Palladium\nAn 18+ event — valid photo ID required at entry\nOne of the most anticipated comedy shows in LA this summer\n\nVenue Information\nThe Hollywood Palladium is one of Los Angeles’ most iconic entertainment venues\, located at 6215 W Sunset Blvd in Hollywood. The Vinyl Room is an intimate stage space within the Palladium\, offering a close\, personal comedy experience. \nTicket Information\nTickets start from $84. This is an 18+ event. \nOfficial Tickets (Ticketmaster) \nResale Tickets (VividSeats) \nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
-URL:https://comedycalendar.com/event/usama-siddiquee-right-after-you-left-live-at-hollywood-palladium/
-LOCATION:CA
-ATTACH;FMTTYPE=image/jpeg:https://media.ticketmaster.com/en-us/dam/a/a12/f6c544db-b3a3-4d88-b839-922713136a12_CUSTOM.jpg
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20260812T210000
-DTEND;TZID=America/New_York:20260812T223000
-DTSTAMP:20260804T171201Z
-CREATED:20260529T060430Z
-LAST-MODIFIED:20260804T171201Z
-UID:10005034-1786568400-1786573800@comedycalendar.com
-SUMMARY:Wingman Wednesdays Miami’s Social Comedy Show
-DESCRIPTION:Blackbird Ordinary. Meet new people. Laugh at hilarious dating stories. Join the conversation. Ladies drink free during showtime 9-10:30 PM.
-URL:https://comedycalendar.com/event/wingman-wednesdays-miamis-social-comedy-show-9/
-LOCATION:Blackbird Ordinary\, Southwest 1st Avenue 729\, Miami\, FL\, 33130\, United States
-CATEGORIES:Events,Showcase,Stand-Up Comedy
-ATTACH;FMTTYPE=image/png:https://comedycalendar.com/wp-content/uploads/2026/05/Wingman-Wednesday-Banner-EB-l6o0Gy.png
-GEO:25.7666715;-80.1951345
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Blackbird Ordinary Southwest 1st Avenue 729 Miami FL 33130 United States;X-APPLE-RADIUS=500;X-TITLE=Southwest 1st Avenue 729:geo:-80.1951345,25.7666715
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20260812T213000
-DTEND;TZID=America/New_York:20260812T233000
-DTSTAMP:20260602T200151Z
-CREATED:20260602T200119Z
-LAST-MODIFIED:20260602T200151Z
-UID:10005872-1786570200-1786577400@comedycalendar.com
-SUMMARY:Comedy Cellar Las Vegas (Late)
-DESCRIPTION:This post contains affiliate links. We may earn a commission at no extra cost to you. \n\nOfficial Tickets\n\nResale Tickets\n\nComedy Cellar Las Vegas brings one of the most legendary names in stand-up comedy to the heart of Las Vegas. Located inside the Rio Hotel & Casino\, this intimate comedy club is the West Coast home of New York City’s world-famous Comedy Cellar\, the venue that helped launch the careers of comedy icons including Dave Chappelle\, Chris Rock\, Jon Stewart\, Ray Romano\, Amy Schumer\, Aziz Ansari\, and countless others. \nUnlike traditional comedy shows featuring a single headliner\, Comedy Cellar presents a carefully curated lineup of professional comedians every night. Audiences can expect multiple performers during each show\, featuring a mix of nationally touring headliners\, television favorites\, Comedy Central veterans\, Netflix performers\, and rising stars from around the world. \nNo two shows are exactly alike\, making every visit a unique experience. Surprise drop-in appearances from major comedians performing elsewhere in Las Vegas have become part of the club’s reputation\, giving audiences the chance to see comedy superstars in an intimate setting. \nEvent Details\nVenue: Comedy Cellar Las Vegas at Rio Hotel & Casino\nLocation: 3700 W Flamingo Rd\, Las Vegas\, NV 89103\nShow Schedule: Nightly performances throughout the year\nAge Requirement: Recommended for audiences 18+ due to mature comedy content \nAbout the Venue\nOpened in 2018\, Comedy Cellar Las Vegas was designed to recreate the atmosphere and energy of the original Greenwich Village club that has become one of the most respected comedy venues in the world. The 300-seat showroom offers excellent sightlines and an intimate setting that allows audiences to experience stand-up comedy exactly as it was meant to be seen: up close and personal. \nThe venue combines the excitement of a Las Vegas night out with the authentic feel of a classic New York comedy club. Guests can enjoy a comfortable showroom environment while watching some of the best comedians working today perform in a setting that encourages spontaneity\, crowd interaction\, and unforgettable moments. \nConveniently located inside the Rio Hotel & Casino just minutes from the Las Vegas Strip\, the venue offers easy access for both tourists and local comedy fans. \nWhat to Expect\nExpect a fast-paced evening featuring multiple comedians performing throughout the show. The Comedy Cellar is known for showcasing a wide variety of comedic styles\, from observational humor and storytelling to sharp social commentary\, crowd work\, and cutting-edge stand-up. \nWhether you’re discovering a future comedy star or watching a seasoned veteran perfect their craft\, every show delivers the authentic comedy club experience that has made the Comedy Cellar one of the most respected brands in stand-up comedy. \nFor comedy fans visiting Las Vegas\, Comedy Cellar is widely considered one of the best places in the city to experience live stand-up comedy any night of the week.
-URL:https://comedycalendar.com/event/comedy-cellar-las-vegas-late/2026-08-12/
-LOCATION:Comedy Cellar Las Vegas at Rio Hotel & Casino\, 3700 W Flamingo Rd\, Las Vegas\, NV\, 89103\, United States
-ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fc4/a6703ea9-a17b-4211-b9dc-7308aa0b2fc4_RETINA_PORTRAIT_16_9.jpg
-GEO:36.1172452;-115.1861279
-X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Comedy Cellar Las Vegas at Rio Hotel & Casino 3700 W Flamingo Rd Las Vegas NV 89103 United States;X-APPLE-RADIUS=500;X-TITLE=3700 W Flamingo Rd:geo:-115.1861279,36.1172452
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260813T190000
 DTEND;TZID=America/Chicago:20260813T210000
 DTSTAMP:20260503T040000Z
@@ -463,7 +361,7 @@ UID:10006342-1786647600-1786658400@comedycalendar.com
 SUMMARY:Jessica Kirson LIVE at The United Theater on Broadway
 DESCRIPTION:Official TicketsResale Tickets \nJessica Kirson\, one of the most electrifying stand-up comedians working today\, brings her high-energy\, no-holds-barred comedy to The United Theater on Broadway in Los Angeles on August 13\, 2026. \nKnown for her explosive stage presence and fearless material\, Kirson has become a favorite of comedy fans and fellow comedians alike. She has appeared on The Tonight Show\, Conan\, and released her own Comedy Central special. \nEvent Details\n\nDate: Thursday\, August 13\, 2026\nTime: 7:00 PM PDT\nVenue: The United Theater on Broadway\nAddress: 929 S Broadway\, Los Angeles\, CA 90015\nTickets From: $59\n\nAbout Jessica Kirson\nJessica Kirson is a stand-up comedian\, actress\, and producer known for her raw\, physical comedy style. She has been praised by Jerry Seinfeld\, Louis C.K.\, and Chris Rock. Her Comedy Central special and podcast Disgusting Hawk have earned her a devoted following. \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
 URL:https://comedycalendar.com/event/jessica-kirson-live-at-the-united-theater-on-broadway/
-LOCATION:CA
+LOCATION:FL
 ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/f5e/3b2a1c4d-5e6f-7890-abcd-ef1234567890_RETINA_PORTRAIT_3_2.jpg
 END:VEVENT
 BEGIN:VEVENT
@@ -584,5 +482,185 @@ LOCATION:Raleigh Improv\, 1224 Parkside Main St\, Cary\, NC\, 27519\, United Sta
 ATTACH;FMTTYPE=image/png:https://comedycalendar.com/wp-content/uploads/2026/03/34_Edp-1oY5NC.png
 GEO:35.8490976;-78.8909556
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Raleigh Improv 1224 Parkside Main St Cary NC 27519 United States Of America;X-APPLE-RADIUS=500;X-TITLE=1224 Parkside Main St:geo:-78.8909556,35.8490976
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260814T190000
+DTEND;TZID=America/Los_Angeles:20260814T210000
+DTSTAMP:20260515T015233Z
+CREATED:20260325T040000Z
+LAST-MODIFIED:20260515T015233Z
+UID:10003941-1786734000-1786741200@comedycalendar.com
+SUMMARY:David Cross: Shootin' The Shit\, Seeing What Sticks LIVE at Punch Line Comedy Club Sacramento
+DESCRIPTION:Official TicketsResale Tickets \nAbout David Cross\nDavid Cross is one of comedy’s most celebrated and boundary-pushing performers — a comedian\, actor\, and writer best known for co-creating and starring in the legendary HBO sketch series “Mr. Show with Bob and David\,” his role as Tobias Fünke in “Arrested Development\,” and multiple acclaimed stand-up specials. \nHis comedy is sharp\, political\, and brilliantly absurdist\, tackling everything from American culture and politics to personal observations with a fearless\, uncompromising voice. “Shootin’ The Shit\, Seeing What Sticks” promises a fresh\, raw hour of material from one of stand-up’s most distinctive voices. \nEvent Details\nDate: Friday\, August 14\, 2026\nTime: 7:00 PM (Doors open at 6:00 PM)\nVenue: Punch Line Comedy Club – Sacramento\nAddress: 2100 Arden Way\, Sacramento\, CA 95825\nAge Restriction: 18+ / 2 Beverage Minimum \nAbout the Venue\nPunch Line Comedy Club Sacramento is Northern California’s premier comedy destination. Located at 2100 Arden Way in Sacramento\, this legendary club has been the go-to spot for world-class stand-up comedy for decades. \nThe intimate setting features general admission and preferred premium seating\, a full bar\, and a classic two-drink minimum. The room holds a few hundred guests\, making every show feel personal and electric. Ample parking is available in the adjacent shopping center. Note: the 7:00 PM show on Aug 14 is sold out — check for the 9:15 PM show or Aug 15 dates. \nWhat to Expect\nThis is a solo headline performance of David Cross’s “Shootin’ The Shit\, Seeing What Sticks” tour. Multiple shows are available August 14–15\, so check for your preferred time. Expect sharp\, provocative\, and brilliantly funny stand-up comedy. Shows run approximately 75–90 minutes. \nTicket Information\nTickets range from approximately $68 – $95 (all-in pricing\, fees included before taxes). \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
+URL:https://comedycalendar.com/event/david-cross-shootin-the-shit-seeing-what-sticks-live-at-punch-line-comedy-club-sacramento/
+LOCATION:Punch Line Comedy Club – Sacramento\, 2100 Arden Way\, Sacramento\, CA\, 95825
+ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/03/2418e6e7-712b-4099-906c-8f527e8c65ae_CUSTOM-FAeoAE.jpg
+GEO:38.5943776;-121.4160953
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Punch Line Comedy Club – Sacramento 2100 Arden Way Sacramento CA 95825;X-APPLE-RADIUS=500;X-TITLE=2100 Arden Way:geo:-121.4160953,38.5943776
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260814T190000
+DTEND;TZID=America/Chicago:20260814T210000
+DTSTAMP:20260327T020000Z
+CREATED:20260327T020000Z
+LAST-MODIFIED:20260327T020000Z
+UID:10004152-1786734000-1786741200@comedycalendar.com
+SUMMARY:Kevin Nealon LIVE at Laugh Out Loud Comedy Club
+DESCRIPTION:Official TicketsResale Tickets \nAbout the Performer\nKevin Nealon is a beloved comedian and actor best known for his nine-year stint as a cast member of NBC’s Saturday Night Live (1986-1995)\, where he created iconic characters including ‘The Subliminal Man’ and ‘Hans and Franz\,’ and served as a recurring anchor on ‘Weekend Update.’ \nNealon received critical acclaim for his role in the Showtime series Weeds\, which earned multiple Golden Globe and Screen Actors Guild Award nominations. He has starred alongside Adam Sandler in numerous films including Just Go with It\, Anger Management\, Happy Gilmore\, and You Don’t Mess with the Zohan. \nHis dry wit and likeable demeanor have made him a fan favorite for decades\, and he continues to tour his stand-up comedy across the country. \nEvent Details\n\nDate: Friday\, August 14\, 2026\nTime: 7:00 PM (Doors open at 6:00 PM)\nVenue: Laugh Out Loud Comedy Club\, 618 NW Loop 410\, San Antonio\, TX 78216\nAge Restriction: 18+ Event\nAdditional Shows: Also performing August 14 (9:30 PM) and August 15 (7:00 PM & 9:30 PM)\nFood & Beverage: 2-item minimum per person once seated\n\nAbout the Venue\nLaugh Out Loud Comedy Club (LOL San Antonio) is San Antonio’s premier stand-up comedy destination\, conveniently located in Park North Plaza at Loop 410 and Blanco\, just inside the loop and a few miles from the airport. \nThe intimate club setting creates an electric atmosphere where every seat feels close to the stage\, making for an incredibly personal and engaging comedy experience. \nThe venue features a full bar and dining service\, so guests can enjoy food and drinks throughout the show. Seating is first come\, first served by section\, so arriving early is recommended to secure the best seats. \nLOL San Antonio is part of the nationally recognized Improv comedy club network\, consistently bringing top-tier national touring comedians to San Antonio. \nWhat to Expect\nKevin Nealon delivers a full headlining stand-up set showcasing his signature dry wit\, clever observations\, and the kind of understated comedic genius that made him a household name on SNL. \nExpect a polished\, engaging performance that draws on decades of experience in stand-up\, television\, and film. \nThis is an 18+ event. Arrive early to grab a great seat and enjoy the full club experience with food and drinks before the show begins. \nTicket Information\nPrice Range: $30 – $50 (plus fees) \nTickets are available through official and resale channels: \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
+URL:https://comedycalendar.com/event/kevin-nealon-live-at-laugh-out-loud-comedy-club/
+LOCATION:Laugh Out Loud Comedy Club\, 618 Northwest Loop 410\, San Antonio\, TX\, 78216\, USA
+ATTACH;FMTTYPE=image/png:https://comedycalendar.com/wp-content/uploads/2026/03/74_Edp-CMOeUk.png
+GEO:29.5193054;-98.5060363
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Laugh Out Loud Comedy Club 618 Northwest Loop 410 San Antonio TX 78216 USA;X-APPLE-RADIUS=500;X-TITLE=618 Northwest Loop 410:geo:-98.5060363,29.5193054
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260814T190000
+DTEND;TZID=America/New_York:20260814T210000
+DTSTAMP:20260602T200052Z
+CREATED:20260602T194345Z
+LAST-MODIFIED:20260602T200052Z
+UID:10005296-1786734000-1786741200@comedycalendar.com
+SUMMARY:Comedy Cellar Las Vegas Showcase (Early)
+DESCRIPTION:This post contains affiliate links. We may earn a commission at no extra cost to you. \n\n  \n     Official Tickets\n   \n  \n     Resale Tickets\n  \n\nComedy Cellar Las Vegas brings one of the most legendary names in stand-up comedy to the heart of Las Vegas. Located inside the Rio Hotel & Casino\, this intimate comedy club is the West Coast home of New York City’s world-famous Comedy Cellar\, the venue that helped launch the careers of comedy icons including Dave Chappelle\, Chris Rock\, Jon Stewart\, Ray Romano\, Amy Schumer\, Aziz Ansari\, and countless others. \nUnlike traditional comedy shows featuring a single headliner\, Comedy Cellar presents a carefully curated lineup of professional comedians every night. Audiences can expect multiple performers during each show\, featuring a mix of nationally touring headliners\, television favorites\, Comedy Central veterans\, Netflix performers\, and rising stars from around the world. \nNo two shows are exactly alike\, making every visit a unique experience. Surprise drop-in appearances from major comedians performing elsewhere in Las Vegas have become part of the club’s reputation\, giving audiences the chance to see comedy superstars in an intimate setting. \nEvent Details\nVenue: Comedy Cellar Las Vegas at Rio Hotel & Casino\nLocation: 3700 W Flamingo Rd\, Las Vegas\, NV 89103\nShow Schedule: Nightly performances throughout the year\nAge Requirement: Recommended for audiences 18+ due to mature comedy content \nAbout the Venue\nOpened in 2018\, Comedy Cellar Las Vegas was designed to recreate the atmosphere and energy of the original Greenwich Village club that has become one of the most respected comedy venues in the world. The 300-seat showroom offers excellent sightlines and an intimate setting that allows audiences to experience stand-up comedy exactly as it was meant to be seen: up close and personal. \nThe venue combines the excitement of a Las Vegas night out with the authentic feel of a classic New York comedy club. Guests can enjoy a comfortable showroom environment while watching some of the best comedians working today perform in a setting that encourages spontaneity\, crowd interaction\, and unforgettable moments. \nConveniently located inside the Rio Hotel & Casino just minutes from the Las Vegas Strip\, the venue offers easy access for both tourists and local comedy fans. \nWhat to Expect\nExpect a fast-paced evening featuring multiple comedians performing throughout the show. The Comedy Cellar is known for showcasing a wide variety of comedic styles\, from observational humor and storytelling to sharp social commentary\, crowd work\, and cutting-edge stand-up. \nWhether you’re discovering a future comedy star or watching a seasoned veteran perfect their craft\, every show delivers the authentic comedy club experience that has made the Comedy Cellar one of the most respected brands in stand-up comedy. \nFor comedy fans visiting Las Vegas\, Comedy Cellar is widely considered one of the best places in the city to experience live stand-up comedy any night of the week.
+URL:https://comedycalendar.com/event/comedy-cellar-las-vegas-showcase-early/2026-08-14/
+LOCATION:Comedy Cellar Las Vegas at Rio Hotel & Casino\, 3700 W Flamingo Rd\, Las Vegas\, NV\, 89103\, United States
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/fc4/a6703ea9-a17b-4211-b9dc-7308aa0b2fc4_RETINA_PORTRAIT_16_9.jpg
+GEO:36.1172452;-115.1861279
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Comedy Cellar Las Vegas at Rio Hotel & Casino 3700 W Flamingo Rd Las Vegas NV 89103 United States;X-APPLE-RADIUS=500;X-TITLE=3700 W Flamingo Rd:geo:-115.1861279,36.1172452
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260814T190000
+DTEND;TZID=America/New_York:20260814T213000
+DTSTAMP:20260326T211811Z
+CREATED:20260322T200000Z
+LAST-MODIFIED:20260326T211811Z
+UID:10004046-1786734000-1786743000@comedycalendar.com
+SUMMARY:Bret Ernst LIVE at Pittsburgh Improv
+DESCRIPTION:Official TicketsResale Tickets \nAbout Bret Ernst\nBret Ernst is a nationally touring headliner who has earned marquee status on the Sunset Strip and is one of the most consistently funny comedians working today. \nBorn in New Jersey and raised in South Florida\, Ernst is best known to TV audiences from his recurring role on the hit Netflix series Cobra Kai and his appearance in Vince Vaughn’s Wild West Comedy Show. He has appeared on Comedy Central\, BET’s One Mic Stand\, Showtime’s Comics Without Borders\, and The Late Late Show on CBS. \nHis stand-up is sharp\, relatable\, and never vulgar — a rare combination that makes him a crowd favorite at clubs across the country. Fans consistently describe his shows as non-stop laughter from start to finish. \nEvent Details\nDate: Friday\, August 14\, 2026\nTime: 7:00 PM (doors open at 6:00 PM)\nVenue: Pittsburgh Improv\, 166 E. Bridge St\, Homestead\, PA 15120\nAge Restriction: 21+ Event\nShow Duration: Approximately 90 minutes \nAbout the Venue\nThe Pittsburgh Improv is Pittsburgh’s premier comedy club\, located in the Waterfront entertainment complex in Homestead\, PA — just minutes from downtown Pittsburgh. \nThe intimate showroom seats approximately 300 guests with excellent sightlines from every seat. A full-service bar and restaurant are on-site\, with a two-drink minimum per person. \nFree parking is available throughout the Waterfront complex. Easily accessible via I-376 and Route 837. Arrive early to enjoy dinner before the show. \nWhat to Expect\nBret Ernst delivers a polished\, high-energy stand-up set that covers relationships\, family\, pop culture\, and the absurdities of everyday life. \nHis quick wit and natural stage presence make every show feel effortless and genuine. This is a great show for date nights\, groups of friends\, or anyone looking for a quality evening of comedy. \nThe Pittsburgh Improv typically features a local opener before the headliner takes the stage. \nTicket Information\nTickets range from $25 – $60 depending on seating and availability. \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
+URL:https://comedycalendar.com/event/bret-ernst-live-at-pittsburgh-improv/
+LOCATION:Pittsburgh Improv\, 166 E. Bridge St\, Homestead\, Pennsylvania\, 15120\, United States
+ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/03/22905989-8b5f-453c-8eee-45218bd015b3_518811_RETINA_PORTRAIT_3_2-qTuZto.jpg
+GEO:40.4089383;-79.9149412
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Pittsburgh Improv 166 E. Bridge St Homestead Pennsylvania 15120 United States;X-APPLE-RADIUS=500;X-TITLE=166 E. Bridge St:geo:-79.9149412,40.4089383
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260814T190000
+DTEND;TZID=America/New_York:20260814T213000
+DTSTAMP:20260502T033835Z
+CREATED:20260502T030000Z
+LAST-MODIFIED:20260502T033835Z
+UID:10004814-1786734000-1786743000@comedycalendar.com
+SUMMARY:Yannis Pappas LIVE at Punch Line Philly
+DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nOfficial Tickets\nResale Tickets \nYannis Pappas LIVE at Punch Line Philly\nGet ready for a hilarious night as comedian Yannis Pappas takes the stage at Punch Line Philly in Philadelphia on August 14\, 2026. Known for his razor-sharp wit\, relatable storytelling\, and explosive energy\, Yannis delivers a stand-up experience that keeps audiences laughing from start to finish. \nEvent Details\nDate: Friday\, August 14\, 2026\nTime: 7:00 PM (Doors open 1 hour before show)\nVenue: Punch Line Philly\nAddress: 33 E. Laurel Street\, Philadelphia\, PA 19123\nAge Requirement: 21+ with valid government-issued photo ID (18+ with parent or legal guardian over 30)\nParking: Lot N: 49 Richmond Street | Lot S: 1025 N. Front Street\nDrink Minimum: 2-beverage minimum per person \nAbout Yannis Pappas\nYannis Pappas is a New York-based stand-up comedian and actor best known for his viral character “Mr. Panos” and his appearances on Comedy Central and various podcasts. He has headlined clubs and theaters across the country\, earning a devoted following for his bold\, unfiltered humor and storytelling style. Yannis is also the co-host of the popular “History Hyenas” podcast. \nWhat to Expect\n\nHigh-energy stand-up comedy from one of NYC’s top headliners\nSharp observational humor and personal storytelling\nAn intimate club setting at one of Philly’s premier comedy venues\nFull bar service with a 2-drink minimum\nA night of non-stop laughs in the heart of Philadelphia\nMultiple show times available — check Ticketmaster for all options\n\nVenue Information\nPunch Line Philly is Philadelphia’s premier stand-up comedy club\, located at 33 E. Laurel Street in the Northern Liberties neighborhood. The intimate showroom offers excellent sightlines from every seat\, full bar service\, and a lively atmosphere that makes every show feel special. \nTicket Information\nTickets are available now through Ticketmaster (official) and VividSeats (resale marketplace). Prices vary by show time and seating. There is an 8-ticket limit per person. No refunds or exchanges unless the event is cancelled or postponed. \nOfficial Tickets\nResale Tickets \nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
+URL:https://comedycalendar.com/event/yannis-pappas-live-at-punch-line-philly/
+LOCATION:Punch Line Philly\, 33 E. Laurel Street\, Philadelphia\, PA\, 19123\, United States
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/dff/d5b4320c-ec22-463d-b541-01d783a3fdff_1837011_TABLET_LANDSCAPE_LARGE_16_9.jpg
+GEO:39.9652742;-75.1351879
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Punch Line Philly 33 E. Laurel Street Philadelphia PA 19123 United States;X-APPLE-RADIUS=500;X-TITLE=33 E. Laurel Street:geo:-75.1351879,39.9652742
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Detroit:20260814T190000
+DTEND;TZID=America/Detroit:20260814T220000
+DTSTAMP:20260321T230629Z
+CREATED:20260320T210000Z
+LAST-MODIFIED:20260321T230629Z
+UID:10003628-1786734000-1786744800@comedycalendar.com
+SUMMARY:Nate Bargatze: Big Dumb Eyes World Tour LIVE at Little Caesars Arena
+DESCRIPTION:Official TicketsResale Tickets \nAbout the Performer\nNate Bargatze is the #1 comedian in the world according to Pollstar — a Grammy and Emmy-nominated stand-up comedian\, New York Times #1 bestselling author\, actor\, podcaster\, director\, and producer who has redefined what it means to be a mainstream comedy superstar. \nHailed as “The Nicest Man in Stand-Up” by The Atlantic and “One of the Funniest People” by CBS Mornings\, Bargatze sold over 1.2 million tickets in 2024 alone and broke more than 20 venue records. Billboard declared he set the record for the biggest one-year gross by a comedy performer in history. \nHis Netflix specials — The Tennessee Kid\, The Greatest Average American (Grammy-nominated)\, and Hello World (Amazon’s most-streamed original comedy special in its first 28 days) — have made him a household name. His latest Netflix special\, Your Friend\, Nate Bargatze\, debuted on Christmas Eve 2024 and was a global top-10 show for two weeks\, earning three Emmy nominations. \nBargatze’s comedy is clean\, wholesome\, and universally relatable — the kind of humor that brings entire families together for a night of pure\, unfiltered laughter. His Big Dumb Eyes World Tour features all-new material and is one of the most anticipated comedy tours of 2026. \nEvent Details\nDate: Friday\, August 14\, 2026 \nTime: 7:00 PM EDT \nVenue: Little Caesars Arena — 2645 Woodward Ave\, Detroit\, MI 48201 \nPhone: (313) 471-7000 \nContent: Clean stand-up comedy — all ages welcome. \nAbout the Venue\nLittle Caesars Arena is Detroit’s premier sports and entertainment arena\, located at 2645 Woodward Ave in the heart of The District Detroit. Home to the Detroit Red Wings and Detroit Pistons\, the arena opened in 2017 and seats approximately 20\,000 for concerts and major events. \nThe arena features state-of-the-art sound and lighting\, multiple concession levels\, premium club spaces\, and excellent sightlines from virtually every seat. The venue is designed for large-scale entertainment experiences\, making it the perfect setting for a comedian of Nate Bargatze’s caliber and reach. \nLittle Caesars Arena is easily accessible from downtown Detroit\, with multiple parking structures and public transit options nearby. The surrounding District Detroit neighborhood offers dining and entertainment options before and after the show. \nWhat to Expect\nExpect a world-class arena comedy experience featuring Nate Bargatze performing all-new material from his Big Dumb Eyes book and tour. His shows are known for their warmth\, storytelling\, and the kind of clean\, feel-good humor that leaves audiences of all ages in tears of laughter. \nThis is a full arena production with professional lighting\, sound\, and staging — a true event-level comedy experience. Bargatze’s ability to fill arenas while maintaining an intimate\, conversational style is what sets him apart from every other comedian working today. \nDoors open before showtime. Arrive early to find your seats and enjoy the full arena atmosphere. This is a family-friendly show — bring the whole crew. \nTicket Information\nPrice Range: $45 – $150 (prices may vary based on seat selection and demand) \nTickets are available now. Nate Bargatze has broken arena records across the country — don’t wait to secure your Detroit seats. \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
+URL:https://comedycalendar.com/event/nate-bargatze-big-dumb-eyes-world-tour-live-at-little-caesars-arena/
+LOCATION:Little Caesars Arena\, 2645 Woodward Ave\, Detroit\, MI\, 48201\, USA
+ATTACH;FMTTYPE=image/jpeg:https://www.313presents.com/assets/img/Detroit-NateBargatze_BigDumbEyes_2025_600x600-a9ff8f45ac.jpg
+GEO:42.3415519;-83.0543162
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Little Caesars Arena 2645 Woodward Ave Detroit MI 48201 USA;X-APPLE-RADIUS=500;X-TITLE=2645 Woodward Ave:geo:-83.0543162,42.3415519
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260814T190000
+DTEND;TZID=America/Chicago:20260814T220000
+DTSTAMP:20260515T015239Z
+CREATED:20260321T190000Z
+LAST-MODIFIED:20260515T015239Z
+UID:10003596-1786734000-1786744800@comedycalendar.com
+SUMMARY:Josh Johnson's Comedy Band Camp LIVE at Orpheum Theatre
+DESCRIPTION:Official TicketsResale Tickets \nAbout the Performer\nJosh Johnson is a rising star in the stand-up comedy world\, best known for his sharp wit\, incisive social commentary\, and effortlessly cool stage presence. A regular on The Daily Show and a Netflix special veteran\, Johnson has built a devoted following with his ability to tackle complex topics — race\, culture\, politics — with disarming humor and intelligence. \nHis 2026 tour\, Comedy Band Camp\, is a unique and ambitious live experience that blends stand-up comedy with live musical performance. Johnson brings together a full band to create a show unlike anything else on the comedy circuit — part concert\, part comedy special\, all entertainment. \nFans can expect Johnson’s signature blend of observational humor\, cultural critique\, and storytelling\, all elevated by a live musical backdrop that adds energy and spontaneity to every performance. \nEvent Details\n\nDate: Friday\, August 14\, 2026\nTime: 7:00 PM CDT\nVenue: Orpheum Theatre\, 910 Hennepin Avenue\, Minneapolis\, MN 55403\nTicket Price Range: $39 – $125\nAge Restrictions: All ages welcome; some content may be intended for mature audiences\n\nAbout the Venue\nThe Orpheum Theatre is one of Minneapolis’s most iconic and beloved performance venues. Located in the heart of the Hennepin Theatre District at 910 Hennepin Avenue\, this stunning 2\,600-seat historic theater has been a cornerstone of Twin Cities entertainment since 1921. \nThe Orpheum features ornate architecture\, plush seating\, excellent sightlines from virtually every seat\, and world-class acoustics — making it the perfect setting for a show that combines comedy and live music. The venue offers a full bar\, concessions\, and accessible seating options throughout. \nParking is available in several nearby ramps and surface lots along Hennepin Avenue and in the surrounding downtown Minneapolis area. The venue is also easily accessible via Metro Transit light rail (Government Plaza station is a short walk away). \nWhat to Expect\nJosh Johnson’s Comedy Band Camp is not your typical stand-up show. This is a full-scale live event featuring Johnson performing alongside a live band\, creating a dynamic and immersive comedy experience that blurs the line between concert and comedy special. \nExpect high-energy performances\, crowd interaction\, and the kind of sharp\, culturally aware humor that has made Johnson one of the most talked-about comedians of his generation. The Orpheum’s grand setting adds an extra layer of spectacle to what promises to be an unforgettable night. \nThis is a rare opportunity to see Josh Johnson in one of Minneapolis’s most prestigious venues — don’t miss it. \nTicket Information\nTickets range from $39 to $125 depending on seat location. Purchase official tickets directly through Ticketmaster or find resale tickets through VividSeats. \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
+URL:https://comedycalendar.com/event/josh-johnsons-comedy-band-camp-live-at-orpheum-theatre/
+LOCATION:Orpheum Theatre Minneapolis\, 910 Hennepin Avenue\, Minneapolis\, MN\, 55403
+ATTACH;FMTTYPE=image/jpeg:https://media.ticketmaster.com/en-us/dam/a/a1f/6aec4b02-7063-4485-bcc9-242f0eef6a1f_TABLET_LANDSCAPE_LARGE_16_9.jpg
+GEO:34.0425006;-118.2539055
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Orpheum Theatre Minneapolis 910 Hennepin Avenue Minneapolis MN 55403;X-APPLE-RADIUS=500;X-TITLE=910 Hennepin Avenue:geo:-118.2539055,34.0425006
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260814T190000
+DTEND;TZID=America/Chicago:20260814T230000
+DTSTAMP:20260505T201300Z
+CREATED:20260505T201300Z
+LAST-MODIFIED:20260505T201300Z
+UID:10004954-1786734000-1786748400@comedycalendar.com
+SUMMARY:An Evening With Kevin Smith LIVE at Bricktown Comedy Club Tulsa
+DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \n\nOfficial Tickets\nResale Tickets\n\nAn Evening With Kevin Smith LIVE at Bricktown Comedy Club Tulsa\nLegendary filmmaker\, comedian\, and pop culture icon Kevin Smith is bringing his celebrated one-man show to Bricktown Comedy Club Tulsa. An Evening With Kevin Smith is an unforgettable night of storytelling\, Q&A\, and laughs as the director of Clerks\, Mallrats\, and Dogma shares behind-the-scenes tales from Hollywood and beyond. \nEvent Details\nDate: Friday\, August 14\, 2026 (also Saturday\, August 15)\nTime: 7:00 PM (Doors open 6:00 PM)\nVenue: Bricktown Comedy Club Tulsa\nAddress: 5982 S Yale Ave\, Tulsa\, OK 74135\nAge Requirement: 18+ Only\nTicket Prices: From $118 (General Admission) \nAbout Kevin Smith\nKevin Smith is the acclaimed filmmaker\, writer\, actor\, and podcaster behind the iconic View Askewniverse — the interconnected universe of films including Clerks\, Mallrats\, Chasing Amy\, Dogma\, and Jay and Silent Bob Strike Back. Beyond filmmaking\, Smith is a beloved live performer whose Evening With shows have become legendary for their hilarious\, candid storytelling and audience interaction. He is also the host of the popular podcast Hollywood Babble-On and a fixture at comic conventions worldwide. \nWhat to Expect\n\nHilarious behind-the-scenes Hollywood stories from Kevin Smith himself\nInteractive Q&A session with the audience\nCandid tales from the making of Clerks\, Mallrats\, Dogma\, and more\nPop culture commentary and personal anecdotes\nAn intimate\, one-of-a-kind evening with a true Hollywood legend\nMultiple show times available August 14-15\n\nVenue Information\nBricktown Comedy Club Tulsa is Tulsa’s premier comedy destination at 5982 S Yale Ave\, featuring an intimate stage\, full bar\, and dining menu. The venue’s close-up seating ensures every guest feels part of the show. \nTicket Information\nTickets for An Evening With Kevin Smith at Bricktown Comedy Club Tulsa start at $118. Multiple show times are available on August 14 (7:00 PM & 9:45 PM) and August 15 (6:00 PM & 8:45 PM). Limited tickets remain — book now! \n\nOfficial Tickets\nResale Tickets\n\nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you.\nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
+URL:https://comedycalendar.com/event/an-evening-with-kevin-smith-live-at-bricktown-comedy-club-tulsa/
+LOCATION:Bricktown Comedy Club\, 5982 S Yale Ave\, Tulsa\, OK\, 74135\, United States
+ATTACH;FMTTYPE=image/jpeg:https://comedycalendar.com/wp-content/uploads/2026/05/public-speaking-aN37a4.jpg
+GEO:36.0773128;-95.9241109
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Bricktown Comedy Club 5982 S Yale Ave Tulsa OK 74135 United States;X-APPLE-RADIUS=500;X-TITLE=5982 S Yale Ave:geo:-95.9241109,36.0773128
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Denver:20260814T193000
+DTEND;TZID=America/Denver:20260814T213000
+DTSTAMP:20260320T190604Z
+CREATED:20260319T170000Z
+LAST-MODIFIED:20260320T190604Z
+UID:10003469-1786735800-1786743000@comedycalendar.com
+SUMMARY:David Koechner LIVE at Denver Improv
+DESCRIPTION:Official TicketsResale Tickets \nAbout the Performer\nDavid Koechner is a beloved comedian and actor best known for his iconic role as Champ Kind in the Anchorman franchise alongside Will Ferrell. He is also widely recognized for his years as a cast member on Saturday Night Live and his recurring role as Todd Packer on The Office. \nBeyond his acting career\, Koechner is a seasoned stand-up comedian who has been performing live comedy for decades. His stand-up is warm\, energetic\, and full of the kind of big\, physical humor that has made him a fan favorite. \nExpect a hilarious evening with one of Hollywood’s most recognizable comedic talents — a performer who brings the same infectious energy to the stage that he brings to the screen. \nEvent Details\n\nDate: Friday\, August 14\, 2026\nShow Time: 7:30 PM MDT (Doors open at 6:15 PM)\nVenue: Denver Improv\, 8246 E 49th Ave #1400\, Denver\, CO 80238\nAge Restriction: 21+ event — valid ID required\nTwo-item minimum purchase required per guest in the showroom\nAdditional shows: August 15 (6:30 PM & 9:15 PM)\n\nAbout the Venue\nDenver Improv is Colorado’s premier comedy club\, located in the Northfield Stapleton shopping district. The club features a full-service restaurant and bar alongside its intimate showroom\, seating approximately 300 guests in a general admission format. \nThe close-quarters layout ensures every seat has a great view of the stage. Parking is available in the surrounding Northfield shopping center lots\, and the venue is easily accessible from I-70. \nWhat to Expect\nThis is a headline stand-up comedy show featuring David Koechner. The performance runs approximately 90 minutes and includes an opening act. Seating is general admission — arrive early for the best seats. \nCell phones\, photography\, and video recording are strictly prohibited during the show. Late arrivals will not be admitted more than 30 minutes after showtime. \nTicket Information\nTickets start at $78\, plus fees. \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
+URL:https://comedycalendar.com/event/david-koechner-live-at-denver-improv/
+LOCATION:Denver Improv\, 8246 Northfield Blvd\, Denver\, CO\, 80238\, United States
+ATTACH;FMTTYPE=image/jpeg:https://i.ticketweb.com/i/00/12/88/78/94_Edp.jpg?v=3
+GEO:39.7818719;-104.8922808
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Denver Improv 8246 Northfield Blvd Denver CO 80238 United States;X-APPLE-RADIUS=500;X-TITLE=8246 Northfield Blvd:geo:-104.8922808,39.7818719
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260814T193000
+DTEND;TZID=America/New_York:20260814T213000
+DTSTAMP:20260515T015252Z
+CREATED:20260502T030000Z
+LAST-MODIFIED:20260515T015252Z
+UID:10004817-1786735800-1786743000@comedycalendar.com
+SUMMARY:Majah Hype LIVE at The Wilbur
+DESCRIPTION:Official TicketsResale Tickets \nAbout the Performer\nMajah Hype is one of the Caribbean’s most beloved and internationally recognized comedians\, known for his hilarious impressions\, infectious energy\, and unique ability to capture the essence of Caribbean culture through comedy. Born in Barbados and raised across the Caribbean\, he has built a massive following through his viral social media videos and sold-out live shows across North America and the Caribbean. \nHis comedy is rooted in the everyday experiences of Caribbean life — family dynamics\, island culture\, and the universal humor of human nature. Whether he’s doing spot-on impressions of different Caribbean accents or riffing on life in the diaspora\, Majah Hype delivers laughs that resonate with audiences of all backgrounds. His Boston debut at The Wilbur is sure to be an unforgettable night of Caribbean-infused comedy. \nEvent Details\n\nDate: Friday\, August 14\, 2026\nTime: 7:30 PM (Doors open at 6:30 PM)\nVenue: The Wilbur\, 246 Tremont St\, Boston\, MA 02116\nAge Restriction: 18+ recommended\nTicket Prices: From $37 (avg. ~$71)\n\nAbout the Venue\nThe Wilbur is one of Boston’s most iconic comedy and entertainment venues\, nestled in the heart of the Theatre District at 246 Tremont Street. This historic 1\,200-seat theater\, built in 1914\, offers a stunning blend of classic architecture and modern comfort\, making it one of the premier destinations for live comedy in New England. \nThe venue boasts excellent sightlines from every section — orchestra\, mezzanine\, and balcony — along with a full-service bar and a lively pre-show atmosphere. The Wilbur is easily accessible via the MBTA (Boylston and Back Bay stations on the Green and Orange Lines)\, and several parking garages are located within walking distance on Tremont and Stuart Streets. \nWhat to Expect\nGet ready for a high-energy night of Caribbean comedy unlike anything you’ve seen before. Majah Hype’s live show is a full-on experience — packed with impressions\, storytelling\, crowd interaction\, and non-stop laughter from start to finish. His ability to connect with audiences of all backgrounds makes this a show for everyone\, whether you’re from the islands or just love great comedy. \nThis is a solo headlining performance\, and Majah Hype is known for going above and beyond on stage. Expect the show to run approximately 90 minutes. Arrive early to grab a drink and get settled — this is one show you don’t want to miss a minute of. \nTicket Information\nTicket Prices: From $37 (average ~$71) \nSecure your seats through official Ticketmaster channels or find resale tickets through VividSeats: \nOfficial TicketsResale Tickets \nThis post contains affiliate links. We may earn a commission at no extra cost to you.
+URL:https://comedycalendar.com/event/majah-hype-live-at-the-wilbur/
+LOCATION:The Wilbur\, 246 Tremont St.\, Boston\, MA\, 2116
+ATTACH;FMTTYPE=image/jpeg:https://media.ticketmaster.com/en-us/dam/a/3a6/bd4d65a6-3c4a-4573-b74c-4edb52fbb3a6_1175711_TABLET_LANDSCAPE_LARGE_16_9.jpg
+GEO:42.3507311;-71.0647252
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=The Wilbur 246 Tremont St. Boston MA 2116;X-APPLE-RADIUS=500;X-TITLE=246 Tremont St.:geo:-71.0647252,42.3507311
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20260814T193000
+DTEND;TZID=America/Los_Angeles:20260814T213000
+DTSTAMP:20260601T180000Z
+CREATED:20260601T180000Z
+LAST-MODIFIED:20260601T180000Z
+UID:10005183-1786735800-1786743000@comedycalendar.com
+SUMMARY:Alfred Robles: Vatos with Gatos LIVE at Brea Improv
+DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nOfficial Tickets (Ticketmaster) \nResale Tickets (VividSeats) \nAlfred Robles: Vatos with Gatos LIVE at Brea Improv\nLos Angeles comedian Alfred Robles brings his “Vatos with Gatos” tour to the Brea Improv for a multi-night run in August 2026. \nKnown for his hilarious cat-loving\, street-smart comedy\, Alfred Robles has built a massive following through his viral videos and live performances. \nEvent Details\nDate: Friday\, August 14\, 2026\nTime: 7:30 PM PDT (Doors open at 6:00 PM)\nVenue: Brea Improv\nAddress: 180 S Brea Blvd\, Brea\, CA 92821\nAge Requirement: 21+\nSeating: General Admission\, first-come first-served\nNote: Two-item minimum purchase required \nAbout Alfred Robles\nAlfred Robles is a Los Angeles-based comedian known for his unique blend of street humor and cat-loving comedy. He has built a massive social media following and tours extensively across the country. His “Vatos with Gatos” tour celebrates his signature style of comedy. \nWhat to Expect\n\nHilarious stand-up from one of LA’s most beloved comedians\nThe Vatos with Gatos tour — a unique comedy experience\nIntimate club setting at the Brea Improv\nMultiple show times available Friday through Sunday\n21+ show with full bar and two-item minimum\n\nVenue Information\nBrea Improv is located at 180 S Brea Blvd in Brea\, CA. Part of the legendary Improv comedy club chain in Orange County\, CA. \nTicket Information\nTickets start at $25 (plus fees). \nOfficial Tickets (Ticketmaster) \nResale Tickets (VividSeats) \nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
+URL:https://comedycalendar.com/event/alfred-robles-vatos-with-gatos-live-at-brea-improv/
+LOCATION:Brea Improv\, 180 South Brea Blvd\, Brea\, CA\, 92821\, United States
+ATTACH;FMTTYPE=image/png:https://comedycalendar.com/wp-content/uploads/2026/05/44_Edp-Nq5zyv.png
+GEO:33.9183365;-117.8988084
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Brea Improv 180 South Brea Blvd Brea CA 92821 United States;X-APPLE-RADIUS=500;X-TITLE=180 South Brea Blvd:geo:-117.8988084,33.9183365
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20260814T193000
+DTEND;TZID=America/New_York:20260814T220000
+DTSTAMP:20260515T015248Z
+CREATED:20260328T210000Z
+LAST-MODIFIED:20260515T015248Z
+UID:10004340-1786735800-1786744800@comedycalendar.com
+SUMMARY:Nikki Glaser: The Stunning Tour LIVE at Premier Theater at Foxwoods Resort Casino
+DESCRIPTION:This post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you. \nOfficial Tickets\nResale Tickets \nNikki Glaser: The Stunning Tour LIVE at Premier Theater at Foxwoods Resort Casino\nOne of comedy’s hottest stars\, Nikki Glaser\, brings her highly anticipated The Stunning Tour to the Premier Theater at Foxwoods Resort Casino in Mashantucket\, CT on Friday\, August 14\, 2026. Known for her razor-sharp wit and fearlessly honest humor\, Nikki is riding a massive wave of popularity following her acclaimed roast appearances and sold-out tours. \nEvent Details\nDate: Friday\, August 14\, 2026\nTime: 7:30 PM ET\nVenue: Premier Theater at Foxwoods Resort Casino\nAddress: 39 Norwich Westerly Road\, Mashantucket\, CT 06339\nAge Requirement: All Ages\nParking: On-site parking available \nAbout Nikki Glaser\nNikki Glaser is one of the funniest and most fearless comedians working today. She has hosted and appeared on numerous TV shows\, specials\, and podcasts\, and became a household name after her show-stopping performance at the Tom Brady Roast on Netflix. Her comedy is bold\, personal\, and always hilarious. \nWhat to Expect\n\nA full evening of Nikki Glaser’s signature stand-up comedy\nCandid\, confessional humor that pushes boundaries\nOne of the hottest touring comedians of 2026\nA world-class venue inside Foxwoods Resort Casino\nAn unforgettable night of laughs in Connecticut\n\nVenue Information\nThe Premier Theater at Foxwoods Resort Casino is one of New England’s premier entertainment venues\, located inside the world-famous Foxwoods Resort Casino in Mashantucket\, CT. The theater offers excellent sightlines\, top-notch sound\, and easy access to dining and gaming. \nTicket Information\nTickets start from $106. Secure your seats now before they sell out — this show is expected to be a hot ticket! \nOfficial Tickets\nResale Tickets \nThis post contains affiliate links. We earn a commission if you purchase tickets through our links at no extra cost to you.\nAll sales are final. Show times subject to change. Valid photo ID may be required for entry.
+URL:https://comedycalendar.com/event/nikki-glaser-the-stunning-tour-live-at-premier-theater-at-foxwoods-resort-casino/
+LOCATION:Premier Theater at Foxwoods Resort Casino\, 39 Norwich Westerly Road\, Mashantucket\, CT\, 6339\, United States Of America
+ATTACH;FMTTYPE=image/jpeg:https://s1.ticketm.net/dam/a/562/9b4d6bc8-b9b8-4eae-9600-39045f190562_TABLET_LANDSCAPE_LARGE_16_9.jpg
+GEO:41.4758112;-71.9626466
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=Premier Theater at Foxwoods Resort Casino 39 Norwich Westerly Road Mashantucket CT 6339 United States Of America;X-APPLE-RADIUS=500;X-TITLE=39 Norwich Westerly Road:geo:-71.9626466,41.4758112
 END:VEVENT
 END:VCALENDAR

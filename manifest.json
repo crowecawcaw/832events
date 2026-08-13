@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-12T04:29:12.714Z",
+  "lastUpdated": "2026-08-13T04:31:20.352Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -584,6 +584,23 @@
       ]
     },
     {
+      "name": "murder-by-the-book",
+      "description": "Murder By The Book",
+      "friendlyLink": "https://www.murderbooks.com/events",
+      "calendars": [
+        {
+          "name": "murder-by-the-book",
+          "friendlyName": "Murder By The Book",
+          "icsUrl": "murder-by-the-book-murder-by-the-book.ics",
+          "rssUrl": "murder-by-the-book-murder-by-the-book.rss",
+          "tags": [
+            "Books",
+            "West University"
+          ]
+        }
+      ]
+    },
+    {
       "name": "noto-houston",
       "description": "NOTO Houston",
       "friendlyLink": "https://www.eventbrite.com/o/noto-events-69829155243",
@@ -763,24 +780,6 @@
             "Outdoor Recreation",
             "Nature",
             "Education"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "the-deluxe-theater",
-      "description": "The DeLUXE Theater Houston",
-      "friendlyLink": "https://thedeluxetheater.com/",
-      "calendars": [
-        {
-          "name": "the-deluxe-theater",
-          "friendlyName": "The DeLUXE Theater Houston",
-          "icsUrl": "the-deluxe-theater-the-deluxe-theater.ics",
-          "rssUrl": "the-deluxe-theater-the-deluxe-theater.rss",
-          "tags": [
-            "Theater",
-            "Performance",
-            "Near Northside"
           ]
         }
       ]
@@ -987,16 +986,6 @@
       ]
     },
     {
-      "name": "eureka-heights-brew-co",
-      "friendlyName": "Eureka Heights Brewery",
-      "icsUrl": "external-eureka-heights-brew-co.ics",
-      "originalIcsUrl": "https://www.eurekaheights.com/?post_type=tribe_events&ical=1&eventDisplay=list",
-      "tags": [
-        "Beer",
-        "The Heights"
-      ]
-    },
-    {
       "name": "hermann-park",
       "friendlyName": "Hermann Park Conservancy",
       "description": "Hermann Park Conservancy",
@@ -1021,18 +1010,6 @@
         "Arts",
         "Downtown",
         "Music"
-      ]
-    },
-    {
-      "name": "holocaust-museum-houston",
-      "friendlyName": "Holocaust Museum Houston",
-      "description": "Education and remembrance museum with programming including educator workshops, author talks, film screenings, and community lectures",
-      "icsUrl": "external-holocaust-museum-houston.ics",
-      "originalIcsUrl": "https://hmh.org/?post_type=tribe_events&ical=1&eventDisplay=list",
-      "tags": [
-        "Museum District",
-        "Museums",
-        "Community"
       ]
     },
     {
@@ -1267,7 +1244,6 @@
     "Outdoor Recreation",
     "Outdoors",
     "Parks",
-    "Performance",
     "PerformingArts",
     "Photography",
     "Ports",
@@ -1287,6 +1263,7 @@
     "Upper Kirby",
     "Uptown",
     "Wedgewood",
+    "West University",
     "Women",
     "Workshops"
   ]

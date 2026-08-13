@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-12T04:29:19.988Z",
+  "generated": "2026-08-13T04:31:36.386Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -576,40 +576,6 @@
       ]
     },
     {
-      "name": "eureka-heights-brew-co",
-      "friendlyName": "Eureka Heights Brewery",
-      "description": "Eureka Heights Brewery",
-      "tags": [
-        "Beer",
-        "The Heights"
-      ],
-      "geo": {
-        "lat": 29.7823,
-        "lng": -95.4181,
-        "label": "Eureka Heights Brewery, 2454 Sawyer St, Houston, TX 77007"
-      },
-      "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=Eureka%20Heights%20Brewery%2C%202454%20Sawyer%20St%2C%20Houston%2C%20TX%2077007"
-      },
-      "kind": "external",
-      "calendars": [
-        {
-          "name": "eureka-heights-brew-co",
-          "friendlyName": "Eureka Heights Brewery",
-          "links": {
-            "ics": {
-              "href": "external-eureka-heights-brew-co.ics",
-              "type": "text/calendar"
-            },
-            "rss": {
-              "href": "external-eureka-heights-brew-co.rss",
-              "type": "application/rss+xml"
-            }
-          }
-        }
-      ]
-    },
-    {
       "name": "good-on-paper-bookshop",
       "friendlyName": "Good on Paper Books and Stationery",
       "description": "Good on Paper Books and Stationery",
@@ -748,41 +714,6 @@
             },
             "rss": {
               "href": "external-hobby-center.rss",
-              "type": "application/rss+xml"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "name": "holocaust-museum-houston",
-      "friendlyName": "Holocaust Museum Houston",
-      "description": "Education and remembrance museum with programming including educator workshops, author talks, film screenings, and community lectures",
-      "tags": [
-        "Museum District",
-        "Museums",
-        "Community"
-      ],
-      "geo": {
-        "lat": 29.7355,
-        "lng": -95.3708,
-        "label": "Holocaust Museum Houston, 5401 Caroline St, Houston, TX 77004"
-      },
-      "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=Holocaust%20Museum%20Houston%2C%205401%20Caroline%20St%2C%20Houston%2C%20TX%2077004"
-      },
-      "kind": "external",
-      "calendars": [
-        {
-          "name": "holocaust-museum-houston",
-          "friendlyName": "Holocaust Museum Houston",
-          "links": {
-            "ics": {
-              "href": "external-holocaust-museum-houston.ics",
-              "type": "text/calendar"
-            },
-            "rss": {
-              "href": "external-holocaust-museum-houston.rss",
               "type": "application/rss+xml"
             }
           }
@@ -1609,6 +1540,41 @@
       ]
     },
     {
+      "name": "murder-by-the-book",
+      "friendlyName": "Murder By The Book",
+      "description": "Murder By The Book",
+      "url": "https://www.murderbooks.com/events",
+      "tags": [
+        "Books",
+        "West University"
+      ],
+      "geo": {
+        "lat": 29.7255,
+        "lng": -95.4175,
+        "label": "Murder By The Book, 2342 Bissonnet St, Houston, TX 77005"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Murder%20By%20The%20Book%2C%202342%20Bissonnet%20St%2C%20Houston%2C%20TX%2077005"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "murder-by-the-book",
+          "friendlyName": "Murder By The Book",
+          "links": {
+            "ics": {
+              "href": "murder-by-the-book-murder-by-the-book.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "murder-by-the-book-murder-by-the-book.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "new-magnolia-brewing",
       "friendlyName": "New Magnolia Brewing",
       "description": "Brewery and bar in Montrose featuring live music, comedy, art events, and community gatherings.",
@@ -2000,42 +1966,6 @@
             },
             "rss": {
               "href": "sawyer-yards-sawyer-yards.rss",
-              "type": "application/rss+xml"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "name": "the-deluxe-theater",
-      "friendlyName": "The DeLUXE Theater Houston",
-      "description": "The DeLUXE Theater Houston",
-      "url": "https://thedeluxetheater.com/",
-      "tags": [
-        "Theater",
-        "Performance",
-        "Near Northside"
-      ],
-      "geo": {
-        "lat": 29.7186,
-        "lng": -95.3468,
-        "label": "The DeLUXE Theater, 3303 Lyons Avenue, Houston, TX 77020"
-      },
-      "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=The%20DeLUXE%20Theater%2C%203303%20Lyons%20Avenue%2C%20Houston%2C%20TX%2077020"
-      },
-      "kind": "ripper",
-      "calendars": [
-        {
-          "name": "the-deluxe-theater",
-          "friendlyName": "The DeLUXE Theater Houston",
-          "links": {
-            "ics": {
-              "href": "the-deluxe-theater-the-deluxe-theater.ics",
-              "type": "text/calendar"
-            },
-            "rss": {
-              "href": "the-deluxe-theater-the-deluxe-theater.rss",
               "type": "application/rss+xml"
             }
           }
