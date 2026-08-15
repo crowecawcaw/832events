@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-14T04:29:52.477Z",
+  "lastUpdated": "2026-08-15T03:24:50.387Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -566,23 +566,6 @@
       ]
     },
     {
-      "name": "murder-by-the-book",
-      "description": "Murder By The Book",
-      "friendlyLink": "https://www.murderbooks.com/events",
-      "calendars": [
-        {
-          "name": "murder-by-the-book",
-          "friendlyName": "Murder By The Book",
-          "icsUrl": "murder-by-the-book-murder-by-the-book.ics",
-          "rssUrl": "murder-by-the-book-murder-by-the-book.rss",
-          "tags": [
-            "Books",
-            "West University"
-          ]
-        }
-      ]
-    },
-    {
       "name": "noto-houston",
       "description": "NOTO Houston",
       "friendlyLink": "https://www.eventbrite.com/o/noto-events-69829155243",
@@ -942,6 +925,18 @@
       ]
     },
     {
+      "name": "east-end-farmers-market",
+      "friendlyName": "East End Farmers Market",
+      "icsUrl": "external-east-end-farmers-market.ics",
+      "originalIcsUrl": "https://eastendhouston.com/events/?ical=1",
+      "tags": [
+        "FarmersMarket",
+        "Community",
+        "Food",
+        "EaDo"
+      ]
+    },
+    {
       "name": "energy-corridor-farmers-market",
       "friendlyName": "Energy Corridor Farmers Market",
       "description": "Farmers market and community events in the Energy Corridor",
@@ -965,6 +960,16 @@
         "Art",
         "Community",
         "Museum District"
+      ]
+    },
+    {
+      "name": "eureka-heights-brew-co",
+      "friendlyName": "Eureka Heights Brewery",
+      "icsUrl": "external-eureka-heights-brew-co.ics",
+      "originalIcsUrl": "https://www.eurekaheights.com/?post_type=tribe_events&ical=1&eventDisplay=list",
+      "tags": [
+        "Beer",
+        "The Heights"
       ]
     },
     {
@@ -1257,7 +1262,6 @@
     "Upper Kirby",
     "Uptown",
     "Wedgewood",
-    "West University",
     "Women",
     "Workshops"
   ]
