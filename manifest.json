@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-15T03:24:50.387Z",
+  "lastUpdated": "2026-08-16T03:34:30.024Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -15,23 +15,6 @@
             "Music",
             "Nightlife",
             "Downtown"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "aurora-picture-show",
-      "description": "Aurora Picture Show",
-      "friendlyLink": "https://www.aurorapictureshow.org/programs",
-      "calendars": [
-        {
-          "name": "aurora-picture-show",
-          "friendlyName": "Aurora Picture Show",
-          "icsUrl": "aurora-picture-show-aurora-picture-show.ics",
-          "rssUrl": "aurora-picture-show-aurora-picture-show.rss",
-          "tags": [
-            "Film",
-            "EaDo"
           ]
         }
       ]
@@ -561,6 +544,23 @@
           "tags": [
             "Music",
             "Upper Kirby"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "murder-by-the-book",
+      "description": "Murder By The Book",
+      "friendlyLink": "https://www.murderbooks.com/events",
+      "calendars": [
+        {
+          "name": "murder-by-the-book",
+          "friendlyName": "Murder By The Book",
+          "icsUrl": "murder-by-the-book-murder-by-the-book.ics",
+          "rssUrl": "murder-by-the-book-murder-by-the-book.rss",
+          "tags": [
+            "Books",
+            "West University"
           ]
         }
       ]
@@ -1215,7 +1215,6 @@
     "Entertainment",
     "Family",
     "FarmersMarket",
-    "Film",
     "Food",
     "FoodFestival",
     "Gallery",
@@ -1262,6 +1261,7 @@
     "Upper Kirby",
     "Uptown",
     "Wedgewood",
+    "West University",
     "Women",
     "Workshops"
   ]

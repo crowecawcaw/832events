@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-15T03:25:24.286Z",
+  "generated": "2026-08-16T03:34:38.597Z",
   "venues": [
     {
       "name": "713-music-hall",
@@ -66,41 +66,6 @@
             },
             "rss": {
               "href": "external-aia-houston.rss",
-              "type": "application/rss+xml"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "name": "aurora-picture-show",
-      "friendlyName": "Aurora Picture Show",
-      "description": "Aurora Picture Show",
-      "url": "https://www.aurorapictureshow.org/programs",
-      "tags": [
-        "Film",
-        "EaDo"
-      ],
-      "geo": {
-        "lat": 29.7195,
-        "lng": -95.3122,
-        "label": "Aurora Picture Show, 5601A Navigation Blvd, Houston, TX 77011"
-      },
-      "map": {
-        "web": "https://www.google.com/maps/search/?api=1&query=Aurora%20Picture%20Show%2C%205601A%20Navigation%20Blvd%2C%20Houston%2C%20TX%2077011"
-      },
-      "kind": "ripper",
-      "calendars": [
-        {
-          "name": "aurora-picture-show",
-          "friendlyName": "Aurora Picture Show",
-          "links": {
-            "ics": {
-              "href": "aurora-picture-show-aurora-picture-show.ics",
-              "type": "text/calendar"
-            },
-            "rss": {
-              "href": "aurora-picture-show-aurora-picture-show.rss",
               "type": "application/rss+xml"
             }
           }
@@ -1602,6 +1567,41 @@
             },
             "rss": {
               "href": "external-memorial-park-conservancy.rss",
+              "type": "application/rss+xml"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "murder-by-the-book",
+      "friendlyName": "Murder By The Book",
+      "description": "Murder By The Book",
+      "url": "https://www.murderbooks.com/events",
+      "tags": [
+        "Books",
+        "West University"
+      ],
+      "geo": {
+        "lat": 29.7255,
+        "lng": -95.4175,
+        "label": "Murder By The Book, 2342 Bissonnet St, Houston, TX 77005"
+      },
+      "map": {
+        "web": "https://www.google.com/maps/search/?api=1&query=Murder%20By%20The%20Book%2C%202342%20Bissonnet%20St%2C%20Houston%2C%20TX%2077005"
+      },
+      "kind": "ripper",
+      "calendars": [
+        {
+          "name": "murder-by-the-book",
+          "friendlyName": "Murder By The Book",
+          "links": {
+            "ics": {
+              "href": "murder-by-the-book-murder-by-the-book.ics",
+              "type": "text/calendar"
+            },
+            "rss": {
+              "href": "murder-by-the-book-murder-by-the-book.rss",
               "type": "application/rss+xml"
             }
           }
