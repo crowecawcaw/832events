@@ -1,8 +1,23 @@
 {
-  "buildTime": "2026-08-16T03:34:38.604Z",
-  "totalErrors": 7,
+  "buildTime": "2026-08-17T03:36:11.414Z",
+  "totalErrors": 9,
   "configErrors": [],
   "sources": [
+    {
+      "source": "murder-by-the-book",
+      "calendar": "murder-by-the-book",
+      "type": "Ripper",
+      "errorCount": 1,
+      "parseErrorCount": 1,
+      "uncertaintyCount": 0,
+      "errors": [
+        {
+          "type": "ParseError",
+          "reason": "Ripper crashed: Error: Murder By The Book fetch failed: HTTP 403 ",
+          "context": ""
+        }
+      ]
+    },
     {
       "source": "pride-houston",
       "calendar": "pride-houston",
@@ -13,7 +28,7 @@
       "errors": [
         {
           "type": "ParseError",
-          "reason": "Failed to fetch Eventbrite events for organizer 19231282193: Error: Eventbrite API error: 401 ",
+          "reason": "Failed to fetch Eventbrite events for organizer 19231282193: Error: Browserbase API returned invalid JSON (HTTP 200)",
           "context": "pride-houston"
         }
       ]
@@ -82,37 +97,49 @@
   ],
   "externalCalendarFailures": [
     {
-      "name": "houston-heritage-holiday-market",
-      "friendlyName": "Houston Heritage Holiday Market",
-      "url": "https://ghwcc.org/calendar/?ical=1",
+      "name": "bad-astronaut-brewery",
+      "friendlyName": "Bad Astronaut Brewery",
+      "url": "https://badastronautbeer.com/?post_type=tribe_events&ical=1&eventDisplay=list",
       "error": "Error: HTTP 403: "
     },
     {
-      "name": "islamic-society-greater-houston",
-      "friendlyName": "Islamic Society of Greater Houston",
-      "url": "https://isgh.org/?post_type=tribe_events&ical=1",
+      "name": "eureka-heights-brew-co",
+      "friendlyName": "Eureka Heights Brewery",
+      "url": "https://www.eurekaheights.com/?post_type=tribe_events&ical=1&eventDisplay=list",
+      "error": "Error: HTTP 500: "
+    },
+    {
+      "name": "houston-heritage-holiday-market",
+      "friendlyName": "Houston Heritage Holiday Market",
+      "url": "https://ghwcc.org/calendar/?ical=1",
       "error": "Error: HTTP 403: "
     }
   ],
   "geocodeErrors": [
     {
       "type": "GeocodeError",
-      "location": "Club Mesquite",
-      "source": "songkick-houston",
+      "location": "Club Mesquite - Houston, TX",
+      "source": "concerts50-houston",
       "reason": "Nominatim returned no results"
     },
     {
       "type": "GeocodeError",
-      "location": "Space City Church",
-      "source": "songkick-houston",
+      "location": "House of Blues Cleveland, 308 Euclid Avenue, Cleveland, OH, 44114, USA",
+      "source": "external-comedy-calendar",
+      "reason": "Nominatim returned no results"
+    },
+    {
+      "type": "GeocodeError",
+      "location": "DeVos Performance Hall, 303 Monroe NW, Grand Rapids, Michigan, 49503, United States",
+      "source": "external-comedy-calendar",
       "reason": "Nominatim returned no results"
     }
   ],
   "geoStats": {
-    "totalEvents": 2182,
-    "eventsWithGeo": 1922,
-    "eventsWithoutGeo": 260,
-    "geocodeErrors": 2
+    "totalEvents": 2139,
+    "eventsWithGeo": 1888,
+    "eventsWithoutGeo": 251,
+    "geocodeErrors": 3
   },
   "uncertainEvents": [],
   "uncertaintyStats": {
@@ -125,6 +152,7 @@
     "docs-houston-docs-houston",
     "heritage-society-heritage-society",
     "mossrose-bookshop-mossrose-bookshop",
+    "murder-by-the-book-murder-by-the-book",
     "nrg-arena-nrg-arena",
     "nrg-stadium-nrg-stadium",
     "pride-houston-pride-houston",
@@ -136,13 +164,14 @@
     "the-gite-gallery-the-gite-gallery",
     "tag-jazz",
     "tag-history",
+    "tag-west-university",
     "tag-events",
     "tag-fifa",
     "tag-literary",
     "tag-cultural",
     "tag-performance",
-    "external-bad-astronaut-brewery",
-    "external-houston-cinema-arts-society"
+    "external-houston-cinema-arts-society",
+    "external-islamic-society-greater-houston"
   ],
   "expectedEmptyCalendars": [],
   "proxyStaleServes": [],
@@ -692,10 +721,10 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1299,
-    "totalEvents": 2182,
+    "eventsWithImage": 1261,
+    "totalEvents": 2139,
     "venuesWithImage": 0,
-    "totalVenues": 63,
+    "totalVenues": 61,
     "unresolvable": 0
   },
   "photoGaps": {
@@ -808,12 +837,6 @@
         "label": "ERJCC Houston, 5600 North Braeswood Blvd, Houston, TX 77096",
         "url": "https://www.erjcchouston.org/events/",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=ERJCC%20Houston%2C%205600%20North%20Braeswood%20Blvd%2C%20Houston%2C%20TX%2077096"
-      },
-      {
-        "source": "external",
-        "name": "eureka-heights-brew-co",
-        "label": "Eureka Heights Brewery, 2454 Sawyer St, Houston, TX 77007",
-        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Eureka%20Heights%20Brewery%2C%202454%20Sawyer%20St%2C%20Houston%2C%20TX%2077007"
       },
       {
         "source": "ripper",
@@ -999,13 +1022,6 @@
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=Memorial%20Park%2C%20Houston%2C%20TX"
       },
       {
-        "source": "ripper",
-        "name": "murder-by-the-book",
-        "label": "Murder By The Book, 2342 Bissonnet St, Houston, TX 77005",
-        "url": "https://www.murderbooks.com/events",
-        "mapUrl": "https://www.google.com/maps/search/?api=1&query=Murder%20By%20The%20Book%2C%202342%20Bissonnet%20St%2C%20Houston%2C%20TX%2077005"
-      },
-      {
         "source": "external",
         "name": "new-magnolia-brewing",
         "label": "New Magnolia Brewing, Houston, TX",
@@ -1140,6 +1156,13 @@
       },
       {
         "source": "childrens-museum-houston",
+        "eventId": "all-about-rosh-hashanah-2026-09-06-f855e2b1",
+        "summary": "All About Rosh Hashanah",
+        "date": "2026-09-06T10:00-05:00[America/Chicago]",
+        "url": "https://www.cmhouston.org/events/all-about-rosh-hashanah"
+      },
+      {
+        "source": "childrens-museum-houston",
         "eventId": "bank-of-america-museums-on-us-2026-09-05-fa7563ae",
         "summary": "Bank of America Museums on Us®",
         "date": "2026-09-05T10:00-05:00[America/Chicago]",
@@ -1214,6 +1237,13 @@
         "summary": "Mid-Autumn Festival",
         "date": "2026-09-27T10:00-05:00[America/Chicago]",
         "url": "https://www.cmhouston.org/events/mid-autumn-festival"
+      },
+      {
+        "source": "childrens-museum-houston",
+        "eventId": "mindfest-challenge-8-chladni-sound-patterns-2026-09-05-b15b5db7",
+        "summary": "MindFest Challenge 8: Chladni Sound Patterns",
+        "date": "2026-09-05T10:00-05:00[America/Chicago]",
+        "url": "https://www.cmhouston.org/events/mindfest-challenge-8-chladni-sound-patterns"
       },
       {
         "source": "childrens-museum-houston",
@@ -1304,21 +1334,27 @@
       },
       {
         "source": "downtown-houston-events",
+        "eventId": "art-club-dj-night-leonce-2026-08-22",
+        "summary": "Art Club - DJ Night: Leonce",
+        "date": "2026-08-22T22:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
         "eventId": "art-club-dj-night-matt-ox-2026-08-19",
         "summary": "Art Club - DJ Night: Matt Ox",
         "date": "2026-08-19T21:00-05:00[America/Chicago]"
       },
       {
         "source": "downtown-houston-events",
-        "eventId": "art-club-dj-night-san-pacho-2026-08-15",
-        "summary": "Art Club - DJ Night: San Pacho",
-        "date": "2026-08-15T22:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "downtown-houston-events",
         "eventId": "blanket-bingo-2026-08-20",
         "summary": "Blanket Bingo",
         "date": "2026-08-20T18:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "byov-bring-your-own-vinyl-night-at-hifi-at-the-finn-2026-08-22",
+        "summary": "BYOV: Bring Your Own Vinyl Night at HiFi at The Finn",
+        "date": "2026-08-22T21:00-05:00[America/Chicago]"
       },
       {
         "source": "downtown-houston-events",
@@ -1346,15 +1382,15 @@
       },
       {
         "source": "downtown-houston-events",
-        "eventId": "flow-breath-2026-08-15",
-        "summary": "Flow & Breath",
-        "date": "2026-08-15T10:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "downtown-houston-events",
         "eventId": "flow-breath-2026-08-19",
         "summary": "Flow & Breath",
         "date": "2026-08-19T18:30-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "flow-breath-2026-08-22",
+        "summary": "Flow & Breath",
+        "date": "2026-08-22T10:00-05:00[America/Chicago]"
       },
       {
         "source": "downtown-houston-events",
@@ -1370,15 +1406,15 @@
       },
       {
         "source": "downtown-houston-events",
-        "eventId": "happy-hour-on-main-2026-08-20",
-        "summary": "Happy Hour on Main",
-        "date": "2026-08-20T16:00-05:00[America/Chicago]"
+        "eventId": "grupo-duelo-2026-08-22",
+        "summary": "Grupo Duelo",
+        "date": "2026-08-22T20:00-05:00[America/Chicago]"
       },
       {
         "source": "downtown-houston-events",
-        "eventId": "horizon-a-new-interactive-art-installation-coming-to-avenida-houston-2026-08-15",
-        "summary": "Horizon, A New Interactive Art Installation Coming to Avenida Houston",
-        "date": "2026-08-15T08:00-05:00[America/Chicago]"
+        "eventId": "happy-hour-on-main-2026-08-20",
+        "summary": "Happy Hour on Main",
+        "date": "2026-08-20T16:00-05:00[America/Chicago]"
       },
       {
         "source": "downtown-houston-events",
@@ -1415,6 +1451,12 @@
         "eventId": "horizon-a-new-interactive-art-installation-coming-to-avenida-houston-2026-08-21",
         "summary": "Horizon, A New Interactive Art Installation Coming to Avenida Houston",
         "date": "2026-08-21T08:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "horizon-a-new-interactive-art-installation-coming-to-avenida-houston-2026-08-22",
+        "summary": "Horizon, A New Interactive Art Installation Coming to Avenida Houston",
+        "date": "2026-08-22T08:00-05:00[America/Chicago]"
       },
       {
         "source": "downtown-houston-events",
@@ -1460,39 +1502,15 @@
       },
       {
         "source": "downtown-houston-events",
-        "eventId": "musical-bingo-at-hifi-at-the-finn-2026-08-15",
-        "summary": "Musical Bingo at HiFi at the Finn",
-        "date": "2026-08-15T19:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "downtown-houston-events",
         "eventId": "pasta-making-class-2026-08-20",
         "summary": "Pasta Making Class",
         "date": "2026-08-20T18:30-05:00[America/Chicago]"
       },
       {
         "source": "downtown-houston-events",
-        "eventId": "pride-houston-s-48th-annual-festival-parade-2026-08-15",
-        "summary": "Pride Houston's 48th Annual Festival & Parade",
-        "date": "2026-08-15T17:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "downtown-houston-events",
         "eventId": "stag-s-leap-wine-cellars-five-course-wine-dinner-at-marriott-marquis-houston-2026-08-20",
         "summary": "Stag's Leap Wine Cellars Five-Course Wine Dinner at Marriott Marquis Houston",
         "date": "2026-08-20T18:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "downtown-houston-events",
-        "eventId": "the-girl-on-the-train-2026-08-15",
-        "summary": "The Girl on the Train",
-        "date": "2026-08-15T14:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "downtown-houston-events",
-        "eventId": "the-girl-on-the-train-2026-08-15",
-        "summary": "The Girl on the Train",
-        "date": "2026-08-15T20:00-05:00[America/Chicago]"
       },
       {
         "source": "downtown-houston-events",
@@ -1532,6 +1550,24 @@
       },
       {
         "source": "downtown-houston-events",
+        "eventId": "the-girl-on-the-train-2026-08-22",
+        "summary": "The Girl on the Train",
+        "date": "2026-08-22T14:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "the-girl-on-the-train-2026-08-22",
+        "summary": "The Girl on the Train",
+        "date": "2026-08-22T20:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "the-julia-ideson-buildings-100th-birthday-celebration-a-day-of-vintage-library-and-book-fun-2026-08-22",
+        "summary": "The Julia Ideson Buildings 100th Birthday Celebration: A Day of Vintage Library and Book Fun",
+        "date": "2026-08-22T12:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
         "eventId": "trivia-nights-the-office-2026-08-18",
         "summary": "Trivia Nights: The Office",
         "date": "2026-08-18T18:00-05:00[America/Chicago]"
@@ -1541,6 +1577,12 @@
         "eventId": "undercurrents-in-the-cistern-2026-08-17",
         "summary": "Undercurrents in the Cistern",
         "date": "2026-08-17T10:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "downtown-houston-events",
+        "eventId": "undercurrents-in-the-cistern-2026-08-22",
+        "summary": "Undercurrents in the Cistern",
+        "date": "2026-08-22T10:00-05:00[America/Chicago]"
       },
       {
         "source": "downtown-houston-events",
@@ -1565,13 +1607,6 @@
         "eventId": "purpose-2026-09-18",
         "summary": "Purpose",
         "date": "2026-09-18T19:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "good-on-paper-bookshop",
-        "eventId": "author-talk-with-local-writer-rasheed-abou-elsamh-2026-08-13-f94fa7d7",
-        "summary": "Author Talk with Local Writer Rasheed Abou-Elsamh",
-        "date": "2026-08-13T19:30-05:00[America/Chicago]",
-        "url": "https://www.goodonpaperbooks.com/events"
       },
       {
         "source": "good-on-paper-bookshop",
@@ -3276,13 +3311,6 @@
       },
       {
         "source": "lake-houston-brewery",
-        "eventId": "sunday-brunch-2026-08-16",
-        "summary": "Sunday Brunch!",
-        "date": "2026-08-16T11:00-05:00[America/Chicago]",
-        "url": "https://www.lakehoustonbrew.com/event-details/sunday-brunch-2026-08-16-11-00"
-      },
-      {
-        "source": "lake-houston-brewery",
         "eventId": "sunday-brunch-2026-08-23",
         "summary": "Sunday Brunch!",
         "date": "2026-08-23T11:00-05:00[America/Chicago]",
@@ -3359,18 +3387,11 @@
         "url": "https://www.lakehoustonbrew.com/event-details/sunday-brunch-2026-11-01-11-00"
       },
       {
-        "source": "post-houston",
-        "eventId": "a-houston-market-2026-08-15-6cd950ee",
-        "summary": "A Houston Market",
-        "date": "2026-08-15T11:00-05:00[America/Chicago]",
-        "url": "https://posthtx.com/event/a-houston-market"
-      },
-      {
-        "source": "post-houston",
-        "eventId": "cup-of-joey-2026-08-15-b6519c36",
-        "summary": "Cup of Joey",
-        "date": "2026-08-15T08:30-05:00[America/Chicago]",
-        "url": "https://posthtx.com/event/cup-of-joey"
+        "source": "lake-houston-brewery",
+        "eventId": "sunday-brunch-2026-11-08",
+        "summary": "Sunday Brunch!",
+        "date": "2026-11-08T11:00-06:00[America/Chicago]",
+        "url": "https://www.lakehoustonbrew.com/event-details/sunday-brunch-2026-11-08-11-00"
       },
       {
         "source": "post-houston",
@@ -3395,10 +3416,24 @@
       },
       {
         "source": "post-houston",
+        "eventId": "eslabon-armado-amor-nocturno-2026-08-22-a117ebf6",
+        "summary": "Eslabon Armado - Amor Nocturno",
+        "date": "2026-08-22T12:00-05:00[America/Chicago]",
+        "url": "https://posthtx.comhttps://www.ticketmaster.com/eslabon-armado-amor-nocturno-houston-texas-08-22-2026/event/3A0064C3E66C1173?_gl=1*gkh2qt*_ga*NzYxNTUyNDQ2LjE3NDQ5NDcwOTQ.*_ga_C1T806G4DF*czE3ODE0OTk5MjckbzExMCRnMSR0MTc4MTUwMDEwOCRqNTkkbDAkaDA."
+      },
+      {
+        "source": "post-houston",
         "eventId": "free-zumba-class-tuesday-2026-08-18-4a95f656",
         "summary": "Free Zumba Class - Tuesday",
         "date": "2026-08-18T18:30-05:00[America/Chicago]",
         "url": "https://posthtx.com/event/free-zumba-tuesday-class"
+      },
+      {
+        "source": "post-houston",
+        "eventId": "karaoke-night-saturday-mic-fever-2026-08-22-28e47570",
+        "summary": "Karaoke Night: Saturday Mic Fever",
+        "date": "2026-08-22T19:00-05:00[America/Chicago]",
+        "url": "https://posthtx.com/event/karaoke-night-saturday-mic-fever"
       },
       {
         "source": "post-houston",
@@ -3437,10 +3472,10 @@
       },
       {
         "source": "rooftop-cinema-club-houston",
-        "eventId": "michael-2026-08-16",
-        "summary": "Michael",
-        "date": "2026-08-16T17:00-05:00[America/Chicago]",
-        "url": "https://rooftopcinemaclub.com/us/houston/uptown/screenings/michael-25067"
+        "eventId": "obsession-2026-08-18",
+        "summary": "Obsession",
+        "date": "2026-08-18T17:00-05:00[America/Chicago]",
+        "url": "https://rooftopcinemaclub.com/us/houston/uptown/screenings/obsession-23943"
       },
       {
         "source": "rooftop-cinema-club-houston",
@@ -3448,13 +3483,6 @@
         "summary": "Sinners",
         "date": "2026-09-22T14:15-05:00[America/Chicago]",
         "url": "https://rooftopcinemaclub.com/us/houston/uptown/screenings/sinners-23972"
-      },
-      {
-        "source": "rooftop-cinema-club-houston",
-        "eventId": "spider-man-brand-new-day-2026-08-16",
-        "summary": "Spider-Man: Brand New Day",
-        "date": "2026-08-16T15:30-05:00[America/Chicago]",
-        "url": "https://rooftopcinemaclub.com/us/houston/uptown/screenings/spider-man-brand-new-day-24026"
       },
       {
         "source": "rooftop-cinema-club-houston",
@@ -3472,6 +3500,13 @@
       },
       {
         "source": "rooftop-cinema-club-houston",
+        "eventId": "spider-man-brand-new-day-2026-08-19",
+        "summary": "Spider-Man: Brand New Day",
+        "date": "2026-08-19T15:30-05:00[America/Chicago]",
+        "url": "https://rooftopcinemaclub.com/us/houston/uptown/screenings/spider-man-brand-new-day-24030"
+      },
+      {
+        "source": "rooftop-cinema-club-houston",
         "eventId": "the-devil-wears-prada-2-2026-08-18",
         "summary": "The Devil Wears Prada 2",
         "date": "2026-08-18T14:15-05:00[America/Chicago]",
@@ -3486,17 +3521,17 @@
       },
       {
         "source": "rooftop-cinema-club-houston",
+        "eventId": "the-first-wives-club-2026-09-24",
+        "summary": "The First Wives Club",
+        "date": "2026-09-24T14:00-05:00[America/Chicago]",
+        "url": "https://rooftopcinemaclub.com/us/houston/uptown/screenings/the-first-wives-club-23973"
+      },
+      {
+        "source": "rooftop-cinema-club-houston",
         "eventId": "the-princess-bride-2026-08-19",
         "summary": "The Princess Bride",
         "date": "2026-08-19T14:15-05:00[America/Chicago]",
         "url": "https://rooftopcinemaclub.com/us/houston/uptown/screenings/the-princess-bride-22898"
-      },
-      {
-        "source": "rooftop-cinema-club-houston",
-        "eventId": "the-princess-diaries-2026-08-16",
-        "summary": "The Princess Diaries",
-        "date": "2026-08-16T14:15-05:00[America/Chicago]",
-        "url": "https://rooftopcinemaclub.com/us/houston/uptown/screenings/the-princess-diaries-22894"
       },
       {
         "source": "rooftop-cinema-club-houston",
@@ -3525,13 +3560,6 @@
         "summary": "Closing Reception: Casa De Cultura",
         "date": "2026-08-22T17:00-05:00[America/Chicago]",
         "url": "https://www.sawyeryards.com/do/closing-reception-casa-de-cultura"
-      },
-      {
-        "source": "sawyer-yards",
-        "eventId": "crafts-community-support-day-food-drive-2026-08-15",
-        "summary": "Crafts + Community Support Day: Food Drive",
-        "date": "2026-08-15T12:00-05:00[America/Chicago]",
-        "url": "https://www.sawyeryards.com/do/crafts-community-support-day-food-drive"
       },
       {
         "source": "sawyer-yards",
@@ -3577,16 +3605,16 @@
       },
       {
         "source": "sawyer-yards",
-        "eventId": "silver-street-third-saturday-2026-08-15",
+        "eventId": "silver-street-third-saturday-2026-09-19",
         "summary": "Silver Street Third Saturday",
-        "date": "2026-08-15T12:00-05:00[America/Chicago]",
+        "date": "2026-09-19T12:00-05:00[America/Chicago]",
         "url": "https://www.sawyeryards.com/do/silver-street-third-saturday-2026"
       },
       {
         "source": "sawyer-yards",
-        "eventId": "the-silos-third-saturday-2026-08-15",
+        "eventId": "the-silos-third-saturday-2026-09-19",
         "summary": "The Silos Third Saturday",
-        "date": "2026-08-15T12:00-05:00[America/Chicago]",
+        "date": "2026-09-19T12:00-05:00[America/Chicago]",
         "url": "https://www.sawyeryards.com/do/the-silos-third-saturday-2026"
       },
       {
@@ -3647,6 +3675,12 @@
       },
       {
         "source": "songkick-houston",
+        "eventId": "crystal-gayle-2026-08-23",
+        "summary": "Crystal Gayle",
+        "date": "2026-08-23T16:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "songkick-houston",
         "eventId": "devildriver-2026-08-20",
         "summary": "DevilDriver",
         "date": "2026-08-20T18:00-05:00[America/Chicago]"
@@ -3662,6 +3696,12 @@
         "eventId": "don-trip-2026-08-20",
         "summary": "Don Trip",
         "date": "2026-08-20T19:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "songkick-houston",
+        "eventId": "dreamfone-2026-08-23",
+        "summary": "dreamfone",
+        "date": "2026-08-23T18:30-05:00[America/Chicago]"
       },
       {
         "source": "songkick-houston",
@@ -3683,6 +3723,24 @@
       },
       {
         "source": "songkick-houston",
+        "eventId": "duelo-2026-08-23",
+        "summary": "Duelo",
+        "date": "2026-08-23T19:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "songkick-houston",
+        "eventId": "emarosa-2026-08-23",
+        "summary": "Emarosa",
+        "date": "2026-08-23T18:30-05:00[America/Chicago]"
+      },
+      {
+        "source": "songkick-houston",
+        "eventId": "erin-jackson-2026-08-23",
+        "summary": "Erin Jackson",
+        "date": "2026-08-23T19:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "songkick-houston",
         "eventId": "eslabon-armado-2026-08-22",
         "summary": "ESLABON ARMADO",
         "date": "2026-08-22T20:00-05:00[America/Chicago]"
@@ -3695,15 +3753,9 @@
       },
       {
         "source": "songkick-houston",
-        "eventId": "gregory-porter-2026-08-15",
-        "summary": "Gregory Porter",
-        "date": "2026-08-15T20:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "songkick-houston",
-        "eventId": "hermanos-espinoza-2026-08-15",
-        "summary": "Hermanos Espinoza",
-        "date": "2026-08-15T19:00-05:00[America/Chicago]"
+        "eventId": "hayla-2026-08-23",
+        "summary": "Hayla",
+        "date": "2026-08-23T19:00-05:00[America/Chicago]"
       },
       {
         "source": "songkick-houston",
@@ -3725,15 +3777,9 @@
       },
       {
         "source": "songkick-houston",
-        "eventId": "josh-wolf-2026-08-15",
-        "summary": "Josh Wolf",
-        "date": "2026-08-15T21:15-05:00[America/Chicago]"
-      },
-      {
-        "source": "songkick-houston",
-        "eventId": "josh-wolf-2026-08-15",
-        "summary": "Josh Wolf",
-        "date": "2026-08-15T19:00-05:00[America/Chicago]"
+        "eventId": "kandi-burruss-2026-08-23",
+        "summary": "Kandi Burruss",
+        "date": "2026-08-23T18:00-05:00[America/Chicago]"
       },
       {
         "source": "songkick-houston",
@@ -3758,18 +3804,6 @@
         "eventId": "maddix-2026-08-22",
         "summary": "Maddix",
         "date": "2026-08-22T21:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "songkick-houston",
-        "eventId": "mark-normand-2026-08-15",
-        "summary": "Mark Normand",
-        "date": "2026-08-15T19:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "songkick-houston",
-        "eventId": "mark-normand-2026-08-15",
-        "summary": "Mark Normand",
-        "date": "2026-08-15T21:30-05:00[America/Chicago]"
       },
       {
         "source": "songkick-houston",
@@ -3803,12 +3837,6 @@
       },
       {
         "source": "songkick-houston",
-        "eventId": "rattlesnake-milk-2026-08-15",
-        "summary": "Rattlesnake Milk",
-        "date": "2026-08-15T19:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "songkick-houston",
         "eventId": "raymix-2026-08-22",
         "summary": "Raymix",
         "date": "2026-08-22T21:00-05:00[America/Chicago]"
@@ -3830,6 +3858,12 @@
         "eventId": "royal-coda-2026-08-16",
         "summary": "Royal Coda",
         "date": "2026-08-16T12:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "songkick-houston",
+        "eventId": "rusted-cage-2026-08-23",
+        "summary": "Rusted Cage",
+        "date": "2026-08-23T15:00-05:00[America/Chicago]"
       },
       {
         "source": "songkick-houston",
@@ -3863,12 +3897,6 @@
       },
       {
         "source": "songkick-houston",
-        "eventId": "the-spazmatics-texas-2026-08-15",
-        "summary": "The Spazmatics Texas",
-        "date": "2026-08-15T21:45-05:00[America/Chicago]"
-      },
-      {
-        "source": "songkick-houston",
         "eventId": "the-temper-trap-2026-08-16",
         "summary": "The Temper Trap",
         "date": "2026-08-16T19:00-05:00[America/Chicago]"
@@ -3887,9 +3915,9 @@
       },
       {
         "source": "songkick-houston",
-        "eventId": "whales-2026-08-15",
-        "summary": "Whales",
-        "date": "2026-08-15T20:00-05:00[America/Chicago]"
+        "eventId": "veaux-2026-08-23",
+        "summary": "VEAUX",
+        "date": "2026-08-23T19:00-05:00[America/Chicago]"
       },
       {
         "source": "songkick-houston",
@@ -3926,12 +3954,6 @@
         "eventId": "all-about-snakes-2026-08-29",
         "summary": "All About Snakes",
         "date": "2026-08-29T15:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
-        "eventId": "all-about-us-a-guided-hike-2026-08-16",
-        "summary": "All About Us: a Guided Hike",
-        "date": "2026-08-16T10:00-05:00[America/Chicago]"
       },
       {
         "source": "texas-parks-wildlife-houston",
@@ -4130,18 +4152,6 @@
         "eventId": "b-a-r-k-ranger-hike-2026-10-24",
         "summary": "B.A.R.K. Ranger Hike",
         "date": "2026-10-24T09:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
-        "eventId": "backyard-bass-2026-08-16",
-        "summary": "Backyard Bass",
-        "date": "2026-08-16T09:30-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
-        "eventId": "basic-fishing-2026-08-16",
-        "summary": "Basic Fishing",
-        "date": "2026-08-16T09:00-05:00[America/Chicago]"
       },
       {
         "source": "texas-parks-wildlife-houston",
@@ -4427,12 +4437,6 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
-        "eventId": "fishing-with-a-ranger-2026-08-16",
-        "summary": "Fishing with a Ranger",
-        "date": "2026-08-16T09:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
         "eventId": "fishing-with-a-ranger-2026-08-22",
         "summary": "Fishing with a Ranger",
         "date": "2026-08-22T20:30-05:00[America/Chicago]"
@@ -4640,12 +4644,6 @@
         "eventId": "island-trail-hike-2026-08-29",
         "summary": "Island Trail Hike",
         "date": "2026-08-29T08:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
-        "eventId": "junior-ranger-journaling-2026-08-16",
-        "summary": "Junior Ranger Journaling",
-        "date": "2026-08-16T10:00-05:00[America/Chicago]"
       },
       {
         "source": "texas-parks-wildlife-houston",
@@ -4859,12 +4857,6 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
-        "eventId": "skulls-and-shells-2026-08-16",
-        "summary": "Skulls and Shells",
-        "date": "2026-08-16T13:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
         "eventId": "spectacular-snakes-2026-08-22",
         "summary": "Spectacular Snakes!",
         "date": "2026-08-22T13:00-05:00[America/Chicago]"
@@ -4910,12 +4902,6 @@
         "eventId": "texas-outdoor-family-leadership-training-lake-livingston-state-park-application-open-until-sept-1-2026-09-11",
         "summary": "Texas Outdoor Family Leadership Training | Lake Livingston State Park | (Application Open Until Sept 1)",
         "date": "2026-09-11T18:30-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
-        "eventId": "the-mystery-of-the-missing-monarchs-2026-08-16",
-        "summary": "The Mystery of the Missing Monarchs",
-        "date": "2026-08-16T14:50-05:00[America/Chicago]"
       },
       {
         "source": "texas-parks-wildlife-houston",
@@ -4992,12 +4978,19 @@
     ]
   },
   "costStats": {
-    "eventsWithCost": 459,
-    "freeEvents": 327,
-    "totalEvents": 2182,
+    "eventsWithCost": 448,
+    "freeEvents": 322,
+    "totalEvents": 2139,
     "unresolvable": 0
   },
   "costGaps": [
+    {
+      "source": "713-music-hall",
+      "eventId": "tm-G5dIZ_1Kqu9Hb",
+      "summary": "El Tri",
+      "date": "2026-11-15T20:00-06:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/el-tri-houston-texas-11-15-2026/event/3A0064A4DD357F18"
+    },
     {
       "source": "713-music-hall",
       "eventId": "tm-G5dIZ_1LihpHI",
@@ -5378,6 +5371,13 @@
     },
     {
       "source": "childrens-museum-houston",
+      "eventId": "all-about-rosh-hashanah-2026-09-06-f855e2b1",
+      "summary": "All About Rosh Hashanah",
+      "date": "2026-09-06T10:00-05:00[America/Chicago]",
+      "url": "https://www.cmhouston.org/events/all-about-rosh-hashanah"
+    },
+    {
+      "source": "childrens-museum-houston",
       "eventId": "bank-of-america-museums-on-us-2026-09-05-fa7563ae",
       "summary": "Bank of America Museums on Us®",
       "date": "2026-09-05T10:00-05:00[America/Chicago]",
@@ -5462,6 +5462,13 @@
     },
     {
       "source": "childrens-museum-houston",
+      "eventId": "mindfest-challenge-8-chladni-sound-patterns-2026-09-05-b15b5db7",
+      "summary": "MindFest Challenge 8: Chladni Sound Patterns",
+      "date": "2026-09-05T10:00-05:00[America/Chicago]",
+      "url": "https://www.cmhouston.org/events/mindfest-challenge-8-chladni-sound-patterns"
+    },
+    {
+      "source": "childrens-museum-houston",
       "eventId": "mindfest-challenge-8-overtime-2026-09-10-f8833ee7",
       "summary": "MindFest Challenge 8: Overtime",
       "date": "2026-09-10T10:00-05:00[America/Chicago]",
@@ -5525,6 +5532,20 @@
     },
     {
       "source": "concerts50-houston",
+      "eventId": "boys-don-t-cry-scout-bar-houston-houston-tx-2026-08-22-27b483f8",
+      "summary": "Boys Don't Cry",
+      "date": "2026-08-22T21:00-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/boys-don-t-cry-in-houston-tickets-aug-22-2026"
+    },
+    {
+      "source": "concerts50-houston",
+      "eventId": "dess-dior-house-of-blues-restaurant-bar-houston-tx-2026-08-22-e682317f",
+      "summary": "Dess Dior",
+      "date": "2026-08-22T19:00-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/dess-dior-in-houston-tickets-jun-19-2026"
+    },
+    {
+      "source": "concerts50-houston",
       "eventId": "doja-cat-toyota-center-houston-tx-2026-11-07-20ac9e9e",
       "summary": "Doja Cat",
       "date": "2026-11-07T19:30-06:00[America/Chicago]",
@@ -5539,10 +5560,31 @@
     },
     {
       "source": "concerts50-houston",
-      "eventId": "faetooth-white-oak-music-hall-houston-tx-2026-08-16-acf3ccfc",
-      "summary": "Faetooth",
-      "date": "2026-08-16T19:00-05:00[America/Chicago]",
-      "url": "https://concerts50.com/show/faetooth-in-houston-tickets-apr-19-2026"
+      "eventId": "duelo-toyota-center-houston-tx-2026-08-22-7717056f",
+      "summary": "Duelo",
+      "date": "2026-08-22T20:00-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/duelo-in-houston-tickets-aug-22-2026"
+    },
+    {
+      "source": "concerts50-houston",
+      "eventId": "eslabon-armado-713-music-hall-houston-tx-2026-08-22-bc282ad6",
+      "summary": "Eslabon Armado",
+      "date": "2026-08-22T20:00-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/eslabon-armado-in-houston-tickets-aug-22-2026"
+    },
+    {
+      "source": "concerts50-houston",
+      "eventId": "hayla-white-oak-music-hall-houston-tx-2026-08-23-fd5166cd",
+      "summary": "HAYLA",
+      "date": "2026-08-23T19:00-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/hayla-in-houston-tickets-aug-23-2026"
+    },
+    {
+      "source": "concerts50-houston",
+      "eventId": "jacquees-bayou-music-center-houston-tx-2026-08-22-13e82db1",
+      "summary": "Jacquees",
+      "date": "2026-08-22T20:00-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/jacquees-in-houston-tickets-aug-22-2026"
     },
     {
       "source": "concerts50-houston",
@@ -5553,10 +5595,24 @@
     },
     {
       "source": "concerts50-houston",
+      "eventId": "maddix-9pm-music-venue-houston-tx-2026-08-22-53563943",
+      "summary": "Maddix",
+      "date": "2026-08-22T21:00-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/maddix-in-houston-tickets-aug-22-2026"
+    },
+    {
+      "source": "concerts50-houston",
       "eventId": "malcolm-todd-713-music-hall-houston-tx-2026-09-03-18bf0403",
       "summary": "Malcolm Todd",
       "date": "2026-09-03T20:00-05:00[America/Chicago]",
       "url": "https://concerts50.com/show/malcolm-todd-in-houston-tickets-sep-03-2026"
+    },
+    {
+      "source": "concerts50-houston",
+      "eventId": "mario-aguilar-house-of-blues-restaurant-bar-houston-tx-2026-08-22-2777e191",
+      "summary": "Mario Aguilar",
+      "date": "2026-08-22T20:00-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/mario-aguilar-in-houston-tickets-aug-22-2026"
     },
     {
       "source": "concerts50-houston",
@@ -5574,10 +5630,17 @@
     },
     {
       "source": "concerts50-houston",
-      "eventId": "royal-coda-warehouse-live-houston-tx-2026-08-16-c3c5cb24",
-      "summary": "Royal Coda",
-      "date": "2026-08-16T20:00-05:00[America/Chicago]",
-      "url": "https://concerts50.com/show/royal-coda-in-houston-tickets-aug-16-2026"
+      "eventId": "raymix-club-mesquite-houston-tx-2026-08-22-709c34a5",
+      "summary": "Raymix",
+      "date": "2026-08-22T21:00-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/la-factoria-in-houston-tickets-aug-22-2026"
+    },
+    {
+      "source": "concerts50-houston",
+      "eventId": "sincere-engineer-white-oak-music-hall-houston-tx-2026-08-22-e3f5173d",
+      "summary": "Sincere Engineer",
+      "date": "2026-08-22T19:00-05:00[America/Chicago]",
+      "url": "https://concerts50.com/show/sincere-engineer-in-houston-tickets-aug-22-2026"
     },
     {
       "source": "concerts50-houston",
@@ -5592,20 +5655,6 @@
       "summary": "Tame Impala",
       "date": "2026-09-19T19:00-05:00[America/Chicago]",
       "url": "https://concerts50.com/show/tame-impala-in-houston-tickets-sep-19-2026"
-    },
-    {
-      "source": "concerts50-houston",
-      "eventId": "the-temper-trap-house-of-blues-restaurant-bar-houston-tx-2026-08-16-708c14dd",
-      "summary": "The Temper Trap",
-      "date": "2026-08-16T19:00-05:00[America/Chicago]",
-      "url": "https://concerts50.com/show/the-temper-trap-in-houston-tickets-aug-16-2026"
-    },
-    {
-      "source": "concerts50-houston",
-      "eventId": "willow-avalon-houston-heights-houston-tx-2026-08-16-73decb06",
-      "summary": "Willow Avalon",
-      "date": "2026-08-16T20:00-05:00[America/Chicago]",
-      "url": "https://concerts50.com/show/willow-avalon-in-houston-tickets-aug-16-2026"
     },
     {
       "source": "concerts50-houston",
@@ -5640,21 +5689,27 @@
     },
     {
       "source": "downtown-houston-events",
+      "eventId": "art-club-dj-night-leonce-2026-08-22",
+      "summary": "Art Club - DJ Night: Leonce",
+      "date": "2026-08-22T22:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
       "eventId": "art-club-dj-night-matt-ox-2026-08-19",
       "summary": "Art Club - DJ Night: Matt Ox",
       "date": "2026-08-19T21:00-05:00[America/Chicago]"
     },
     {
       "source": "downtown-houston-events",
-      "eventId": "art-club-dj-night-san-pacho-2026-08-15",
-      "summary": "Art Club - DJ Night: San Pacho",
-      "date": "2026-08-15T22:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "downtown-houston-events",
       "eventId": "blanket-bingo-2026-08-20",
       "summary": "Blanket Bingo",
       "date": "2026-08-20T18:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "byov-bring-your-own-vinyl-night-at-hifi-at-the-finn-2026-08-22",
+      "summary": "BYOV: Bring Your Own Vinyl Night at HiFi at The Finn",
+      "date": "2026-08-22T21:00-05:00[America/Chicago]"
     },
     {
       "source": "downtown-houston-events",
@@ -5682,15 +5737,15 @@
     },
     {
       "source": "downtown-houston-events",
-      "eventId": "flow-breath-2026-08-15",
-      "summary": "Flow & Breath",
-      "date": "2026-08-15T10:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "downtown-houston-events",
       "eventId": "flow-breath-2026-08-19",
       "summary": "Flow & Breath",
       "date": "2026-08-19T18:30-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "flow-breath-2026-08-22",
+      "summary": "Flow & Breath",
+      "date": "2026-08-22T10:00-05:00[America/Chicago]"
     },
     {
       "source": "downtown-houston-events",
@@ -5706,15 +5761,15 @@
     },
     {
       "source": "downtown-houston-events",
-      "eventId": "happy-hour-on-main-2026-08-20",
-      "summary": "Happy Hour on Main",
-      "date": "2026-08-20T16:00-05:00[America/Chicago]"
+      "eventId": "grupo-duelo-2026-08-22",
+      "summary": "Grupo Duelo",
+      "date": "2026-08-22T20:00-05:00[America/Chicago]"
     },
     {
       "source": "downtown-houston-events",
-      "eventId": "horizon-a-new-interactive-art-installation-coming-to-avenida-houston-2026-08-15",
-      "summary": "Horizon, A New Interactive Art Installation Coming to Avenida Houston",
-      "date": "2026-08-15T08:00-05:00[America/Chicago]"
+      "eventId": "happy-hour-on-main-2026-08-20",
+      "summary": "Happy Hour on Main",
+      "date": "2026-08-20T16:00-05:00[America/Chicago]"
     },
     {
       "source": "downtown-houston-events",
@@ -5751,6 +5806,12 @@
       "eventId": "horizon-a-new-interactive-art-installation-coming-to-avenida-houston-2026-08-21",
       "summary": "Horizon, A New Interactive Art Installation Coming to Avenida Houston",
       "date": "2026-08-21T08:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "horizon-a-new-interactive-art-installation-coming-to-avenida-houston-2026-08-22",
+      "summary": "Horizon, A New Interactive Art Installation Coming to Avenida Houston",
+      "date": "2026-08-22T08:00-05:00[America/Chicago]"
     },
     {
       "source": "downtown-houston-events",
@@ -5796,39 +5857,15 @@
     },
     {
       "source": "downtown-houston-events",
-      "eventId": "musical-bingo-at-hifi-at-the-finn-2026-08-15",
-      "summary": "Musical Bingo at HiFi at the Finn",
-      "date": "2026-08-15T19:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "downtown-houston-events",
       "eventId": "pasta-making-class-2026-08-20",
       "summary": "Pasta Making Class",
       "date": "2026-08-20T18:30-05:00[America/Chicago]"
     },
     {
       "source": "downtown-houston-events",
-      "eventId": "pride-houston-s-48th-annual-festival-parade-2026-08-15",
-      "summary": "Pride Houston's 48th Annual Festival & Parade",
-      "date": "2026-08-15T17:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "downtown-houston-events",
       "eventId": "stag-s-leap-wine-cellars-five-course-wine-dinner-at-marriott-marquis-houston-2026-08-20",
       "summary": "Stag's Leap Wine Cellars Five-Course Wine Dinner at Marriott Marquis Houston",
       "date": "2026-08-20T18:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "downtown-houston-events",
-      "eventId": "the-girl-on-the-train-2026-08-15",
-      "summary": "The Girl on the Train",
-      "date": "2026-08-15T14:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "downtown-houston-events",
-      "eventId": "the-girl-on-the-train-2026-08-15",
-      "summary": "The Girl on the Train",
-      "date": "2026-08-15T20:00-05:00[America/Chicago]"
     },
     {
       "source": "downtown-houston-events",
@@ -5868,6 +5905,24 @@
     },
     {
       "source": "downtown-houston-events",
+      "eventId": "the-girl-on-the-train-2026-08-22",
+      "summary": "The Girl on the Train",
+      "date": "2026-08-22T14:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "the-girl-on-the-train-2026-08-22",
+      "summary": "The Girl on the Train",
+      "date": "2026-08-22T20:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "the-julia-ideson-buildings-100th-birthday-celebration-a-day-of-vintage-library-and-book-fun-2026-08-22",
+      "summary": "The Julia Ideson Buildings 100th Birthday Celebration: A Day of Vintage Library and Book Fun",
+      "date": "2026-08-22T12:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
       "eventId": "trivia-nights-the-office-2026-08-18",
       "summary": "Trivia Nights: The Office",
       "date": "2026-08-18T18:00-05:00[America/Chicago]"
@@ -5877,6 +5932,12 @@
       "eventId": "undercurrents-in-the-cistern-2026-08-17",
       "summary": "Undercurrents in the Cistern",
       "date": "2026-08-17T10:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "downtown-houston-events",
+      "eventId": "undercurrents-in-the-cistern-2026-08-22",
+      "summary": "Undercurrents in the Cistern",
+      "date": "2026-08-22T10:00-05:00[America/Chicago]"
     },
     {
       "source": "downtown-houston-events",
@@ -5901,13 +5962,6 @@
       "eventId": "purpose-2026-09-18",
       "summary": "Purpose",
       "date": "2026-09-18T19:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "good-on-paper-bookshop",
-      "eventId": "author-talk-with-local-writer-rasheed-abou-elsamh-2026-08-13-f94fa7d7",
-      "summary": "Author Talk with Local Writer Rasheed Abou-Elsamh",
-      "date": "2026-08-13T19:30-05:00[America/Chicago]",
-      "url": "https://www.goodonpaperbooks.com/events"
     },
     {
       "source": "good-on-paper-bookshop",
@@ -7430,13 +7484,6 @@
     },
     {
       "source": "house-of-blues-houston",
-      "eventId": "tm-G5dIZ_1Ukw7mW",
-      "summary": "Tooloji",
-      "date": "2026-08-15T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/tooloji-houston-texas-08-15-2026/event/3A0064AD86C84BBD"
-    },
-    {
-      "source": "house-of-blues-houston",
       "eventId": "tm-G5dIZ_1XTaHwt",
       "summary": "Dax - The Anger Management Tour",
       "date": "2026-10-26T19:00-05:00[America/Chicago]",
@@ -8116,13 +8163,6 @@
     },
     {
       "source": "htxoutdoors",
-      "eventId": "board-game-afternoon-2026-08-16",
-      "summary": "Board Game Afternoon",
-      "date": "2026-08-16T13:00-05:00[America/Chicago]",
-      "url": "https://htxoutdoors.com/events/board-game-night-1/"
-    },
-    {
-      "source": "htxoutdoors",
       "eventId": "dinner-after-full-moon-hike-2026-10-26",
       "summary": "Dinner after Full Moon Hike",
       "date": "2026-10-26T20:40-05:00[America/Chicago]",
@@ -8368,13 +8408,6 @@
     },
     {
       "source": "lake-houston-brewery",
-      "eventId": "sunday-brunch-2026-08-16",
-      "summary": "Sunday Brunch!",
-      "date": "2026-08-16T11:00-05:00[America/Chicago]",
-      "url": "https://www.lakehoustonbrew.com/event-details/sunday-brunch-2026-08-16-11-00"
-    },
-    {
-      "source": "lake-houston-brewery",
       "eventId": "sunday-brunch-2026-08-23",
       "summary": "Sunday Brunch!",
       "date": "2026-08-23T11:00-05:00[America/Chicago]",
@@ -8449,6 +8482,13 @@
       "summary": "Sunday Brunch!",
       "date": "2026-11-01T11:00-06:00[America/Chicago]",
       "url": "https://www.lakehoustonbrew.com/event-details/sunday-brunch-2026-11-01-11-00"
+    },
+    {
+      "source": "lake-houston-brewery",
+      "eventId": "sunday-brunch-2026-11-08",
+      "summary": "Sunday Brunch!",
+      "date": "2026-11-08T11:00-06:00[America/Chicago]",
+      "url": "https://www.lakehoustonbrew.com/event-details/sunday-brunch-2026-11-08-11-00"
     },
     {
       "source": "lawndale-art-center",
@@ -8617,13 +8657,6 @@
       "summary": "Sweet Megg",
       "date": "2026-10-02T18:00-05:00[America/Chicago]",
       "url": "https://www.mcgonigels.com/shows/sweet-megg/"
-    },
-    {
-      "source": "mcgonigels-mucky-duck",
-      "eventId": "mcgonigels-32172",
-      "summary": "Chuck Prophet",
-      "date": "2026-08-15T18:00-05:00[America/Chicago]",
-      "url": "https://www.mcgonigels.com/shows/chuck-prophet/"
     },
     {
       "source": "mcgonigels-mucky-duck",
@@ -9054,13 +9087,6 @@
     },
     {
       "source": "mcgonigels-mucky-duck",
-      "eventId": "mcgonigels-33347",
-      "summary": "John Egan, Anna La Mare, Hudson Mueller",
-      "date": "2026-08-15T20:30-05:00[America/Chicago]",
-      "url": "https://www.mcgonigels.com/shows/john-egan-anna-la-mare-hudson-mueller/"
-    },
-    {
-      "source": "mcgonigels-mucky-duck",
       "eventId": "mcgonigels-33353",
       "summary": "Christine Albert and Ben Jones",
       "date": "2026-10-16T18:00-05:00[America/Chicago]",
@@ -9130,27 +9156,6 @@
       "url": "https://www.mcgonigels.com/shows/bettysoo-early-show/"
     },
     {
-      "source": "murder-by-the-book",
-      "eventId": "jennifer-hillier-in-conversation-with-abby-dunn-2026-08-24",
-      "summary": "Jennifer Hillier in conversation with Abby Dunn",
-      "date": "2026-08-24T18:30-05:00[America/Chicago]",
-      "url": "https://www.murderbooks.com/event/2026-08-24/jennifer-hillier-conversation-abby-dunn"
-    },
-    {
-      "source": "murder-by-the-book",
-      "eventId": "kailee-pedersen-2026-08-27",
-      "summary": "Kailee Pedersen",
-      "date": "2026-08-27T18:30-05:00[America/Chicago]",
-      "url": "https://www.murderbooks.com/pedersen"
-    },
-    {
-      "source": "murder-by-the-book",
-      "eventId": "tim-sullivan-2026-08-26",
-      "summary": "Tim Sullivan",
-      "date": "2026-08-26T18:30-05:00[America/Chicago]",
-      "url": "https://www.murderbooks.com/Sullivan"
-    },
-    {
       "source": "notsuoh",
       "eventId": "femdome-djs-visuals-in-the-dome-femme-forward-bands-downstairs-2026-08-26",
       "summary": "FemDome : DJs & Visuals in the Dome & Femme Forward Bands Downstairs",
@@ -9187,20 +9192,6 @@
     },
     {
       "source": "post-houston",
-      "eventId": "a-houston-market-2026-08-15-6cd950ee",
-      "summary": "A Houston Market",
-      "date": "2026-08-15T11:00-05:00[America/Chicago]",
-      "url": "https://posthtx.com/event/a-houston-market"
-    },
-    {
-      "source": "post-houston",
-      "eventId": "cup-of-joey-2026-08-15-b6519c36",
-      "summary": "Cup of Joey",
-      "date": "2026-08-15T08:30-05:00[America/Chicago]",
-      "url": "https://posthtx.com/event/cup-of-joey"
-    },
-    {
-      "source": "post-houston",
       "eventId": "dj-night-san-pacho-2026-08-15-530f530f",
       "summary": "DJ Night — San Pacho",
       "date": "2026-08-15T22:00-05:00[America/Chicago]",
@@ -9222,10 +9213,24 @@
     },
     {
       "source": "post-houston",
+      "eventId": "eslabon-armado-amor-nocturno-2026-08-22-a117ebf6",
+      "summary": "Eslabon Armado - Amor Nocturno",
+      "date": "2026-08-22T12:00-05:00[America/Chicago]",
+      "url": "https://posthtx.comhttps://www.ticketmaster.com/eslabon-armado-amor-nocturno-houston-texas-08-22-2026/event/3A0064C3E66C1173?_gl=1*gkh2qt*_ga*NzYxNTUyNDQ2LjE3NDQ5NDcwOTQ.*_ga_C1T806G4DF*czE3ODE0OTk5MjckbzExMCRnMSR0MTc4MTUwMDEwOCRqNTkkbDAkaDA."
+    },
+    {
+      "source": "post-houston",
       "eventId": "free-zumba-class-tuesday-2026-08-18-4a95f656",
       "summary": "Free Zumba Class - Tuesday",
       "date": "2026-08-18T18:30-05:00[America/Chicago]",
       "url": "https://posthtx.com/event/free-zumba-tuesday-class"
+    },
+    {
+      "source": "post-houston",
+      "eventId": "karaoke-night-saturday-mic-fever-2026-08-22-28e47570",
+      "summary": "Karaoke Night: Saturday Mic Fever",
+      "date": "2026-08-22T19:00-05:00[America/Chicago]",
+      "url": "https://posthtx.com/event/karaoke-night-saturday-mic-fever"
     },
     {
       "source": "post-houston",
@@ -9362,13 +9367,6 @@
     },
     {
       "source": "punch-line-comedy-club",
-      "eventId": "tm-G5dIZ_5HhrrDB",
-      "summary": "Tee Sanders",
-      "date": "2026-08-16T18:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/tee-sanders-houston-texas-08-16-2026/event/3A0064BF1B79EEFA"
-    },
-    {
-      "source": "punch-line-comedy-club",
       "eventId": "tm-G5dIZ_5HjiTZS",
       "summary": "Sydney Castillo",
       "date": "2026-08-30T19:00-05:00[America/Chicago]",
@@ -9502,6 +9500,13 @@
     },
     {
       "source": "punch-line-comedy-club",
+      "eventId": "tm-G5dIZ_8nytajr",
+      "summary": "Keith Pedro: Job Your Love Tour",
+      "date": "2026-11-15T19:00-06:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/keith-pedro-job-your-love-tour-houston-texas-11-15-2026/event/3A00650AB9A4971E"
+    },
+    {
+      "source": "punch-line-comedy-club",
       "eventId": "tm-G5dIZ_8SZxyJi",
       "summary": "Will Pepper",
       "date": "2026-09-18T21:30-05:00[America/Chicago]",
@@ -9534,20 +9539,6 @@
       "summary": "Na'im Lynn",
       "date": "2026-09-04T19:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/naim-lynn-houston-texas-09-04-2026/event/3A006494B7C3C78A"
-    },
-    {
-      "source": "punch-line-comedy-club",
-      "eventId": "tm-G5dIZ_a3Rq5EW",
-      "summary": "Josh Wolf: Touring Hard",
-      "date": "2026-08-15T21:15-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/josh-wolf-touring-hard-houston-texas-08-15-2026/event/3A006494AF74B9FD"
-    },
-    {
-      "source": "punch-line-comedy-club",
-      "eventId": "tm-G5dIZ_a3RQlEJ",
-      "summary": "Josh Wolf: Touring Hard",
-      "date": "2026-08-15T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/josh-wolf-touring-hard-houston-texas-08-15-2026/event/3A006494AF6AB9E6"
     },
     {
       "source": "punch-line-comedy-club",
@@ -9964,10 +9955,10 @@
     },
     {
       "source": "rooftop-cinema-club-houston",
-      "eventId": "michael-2026-08-16",
-      "summary": "Michael",
-      "date": "2026-08-16T17:00-05:00[America/Chicago]",
-      "url": "https://rooftopcinemaclub.com/us/houston/uptown/screenings/michael-25067"
+      "eventId": "obsession-2026-08-18",
+      "summary": "Obsession",
+      "date": "2026-08-18T17:00-05:00[America/Chicago]",
+      "url": "https://rooftopcinemaclub.com/us/houston/uptown/screenings/obsession-23943"
     },
     {
       "source": "rooftop-cinema-club-houston",
@@ -9975,13 +9966,6 @@
       "summary": "Sinners",
       "date": "2026-09-22T14:15-05:00[America/Chicago]",
       "url": "https://rooftopcinemaclub.com/us/houston/uptown/screenings/sinners-23972"
-    },
-    {
-      "source": "rooftop-cinema-club-houston",
-      "eventId": "spider-man-brand-new-day-2026-08-16",
-      "summary": "Spider-Man: Brand New Day",
-      "date": "2026-08-16T15:30-05:00[America/Chicago]",
-      "url": "https://rooftopcinemaclub.com/us/houston/uptown/screenings/spider-man-brand-new-day-24026"
     },
     {
       "source": "rooftop-cinema-club-houston",
@@ -9999,6 +9983,13 @@
     },
     {
       "source": "rooftop-cinema-club-houston",
+      "eventId": "spider-man-brand-new-day-2026-08-19",
+      "summary": "Spider-Man: Brand New Day",
+      "date": "2026-08-19T15:30-05:00[America/Chicago]",
+      "url": "https://rooftopcinemaclub.com/us/houston/uptown/screenings/spider-man-brand-new-day-24030"
+    },
+    {
+      "source": "rooftop-cinema-club-houston",
       "eventId": "the-devil-wears-prada-2-2026-08-18",
       "summary": "The Devil Wears Prada 2",
       "date": "2026-08-18T14:15-05:00[America/Chicago]",
@@ -10013,17 +10004,17 @@
     },
     {
       "source": "rooftop-cinema-club-houston",
+      "eventId": "the-first-wives-club-2026-09-24",
+      "summary": "The First Wives Club",
+      "date": "2026-09-24T14:00-05:00[America/Chicago]",
+      "url": "https://rooftopcinemaclub.com/us/houston/uptown/screenings/the-first-wives-club-23973"
+    },
+    {
+      "source": "rooftop-cinema-club-houston",
       "eventId": "the-princess-bride-2026-08-19",
       "summary": "The Princess Bride",
       "date": "2026-08-19T14:15-05:00[America/Chicago]",
       "url": "https://rooftopcinemaclub.com/us/houston/uptown/screenings/the-princess-bride-22898"
-    },
-    {
-      "source": "rooftop-cinema-club-houston",
-      "eventId": "the-princess-diaries-2026-08-16",
-      "summary": "The Princess Diaries",
-      "date": "2026-08-16T14:15-05:00[America/Chicago]",
-      "url": "https://rooftopcinemaclub.com/us/houston/uptown/screenings/the-princess-diaries-22894"
     },
     {
       "source": "rooftop-cinema-club-houston",
@@ -10052,13 +10043,6 @@
       "summary": "Closing Reception: Casa De Cultura",
       "date": "2026-08-22T17:00-05:00[America/Chicago]",
       "url": "https://www.sawyeryards.com/do/closing-reception-casa-de-cultura"
-    },
-    {
-      "source": "sawyer-yards",
-      "eventId": "crafts-community-support-day-food-drive-2026-08-15",
-      "summary": "Crafts + Community Support Day: Food Drive",
-      "date": "2026-08-15T12:00-05:00[America/Chicago]",
-      "url": "https://www.sawyeryards.com/do/crafts-community-support-day-food-drive"
     },
     {
       "source": "sawyer-yards",
@@ -10104,16 +10088,16 @@
     },
     {
       "source": "sawyer-yards",
-      "eventId": "silver-street-third-saturday-2026-08-15",
+      "eventId": "silver-street-third-saturday-2026-09-19",
       "summary": "Silver Street Third Saturday",
-      "date": "2026-08-15T12:00-05:00[America/Chicago]",
+      "date": "2026-09-19T12:00-05:00[America/Chicago]",
       "url": "https://www.sawyeryards.com/do/silver-street-third-saturday-2026"
     },
     {
       "source": "sawyer-yards",
-      "eventId": "the-silos-third-saturday-2026-08-15",
+      "eventId": "the-silos-third-saturday-2026-09-19",
       "summary": "The Silos Third Saturday",
-      "date": "2026-08-15T12:00-05:00[America/Chicago]",
+      "date": "2026-09-19T12:00-05:00[America/Chicago]",
       "url": "https://www.sawyeryards.com/do/the-silos-third-saturday-2026"
     },
     {
@@ -10174,6 +10158,12 @@
     },
     {
       "source": "songkick-houston",
+      "eventId": "crystal-gayle-2026-08-23",
+      "summary": "Crystal Gayle",
+      "date": "2026-08-23T16:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "songkick-houston",
       "eventId": "devildriver-2026-08-20",
       "summary": "DevilDriver",
       "date": "2026-08-20T18:00-05:00[America/Chicago]"
@@ -10189,6 +10179,12 @@
       "eventId": "don-trip-2026-08-20",
       "summary": "Don Trip",
       "date": "2026-08-20T19:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "songkick-houston",
+      "eventId": "dreamfone-2026-08-23",
+      "summary": "dreamfone",
+      "date": "2026-08-23T18:30-05:00[America/Chicago]"
     },
     {
       "source": "songkick-houston",
@@ -10210,6 +10206,24 @@
     },
     {
       "source": "songkick-houston",
+      "eventId": "duelo-2026-08-23",
+      "summary": "Duelo",
+      "date": "2026-08-23T19:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "songkick-houston",
+      "eventId": "emarosa-2026-08-23",
+      "summary": "Emarosa",
+      "date": "2026-08-23T18:30-05:00[America/Chicago]"
+    },
+    {
+      "source": "songkick-houston",
+      "eventId": "erin-jackson-2026-08-23",
+      "summary": "Erin Jackson",
+      "date": "2026-08-23T19:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "songkick-houston",
       "eventId": "eslabon-armado-2026-08-22",
       "summary": "ESLABON ARMADO",
       "date": "2026-08-22T20:00-05:00[America/Chicago]"
@@ -10222,15 +10236,9 @@
     },
     {
       "source": "songkick-houston",
-      "eventId": "gregory-porter-2026-08-15",
-      "summary": "Gregory Porter",
-      "date": "2026-08-15T20:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "songkick-houston",
-      "eventId": "hermanos-espinoza-2026-08-15",
-      "summary": "Hermanos Espinoza",
-      "date": "2026-08-15T19:00-05:00[America/Chicago]"
+      "eventId": "hayla-2026-08-23",
+      "summary": "Hayla",
+      "date": "2026-08-23T19:00-05:00[America/Chicago]"
     },
     {
       "source": "songkick-houston",
@@ -10252,15 +10260,9 @@
     },
     {
       "source": "songkick-houston",
-      "eventId": "josh-wolf-2026-08-15",
-      "summary": "Josh Wolf",
-      "date": "2026-08-15T21:15-05:00[America/Chicago]"
-    },
-    {
-      "source": "songkick-houston",
-      "eventId": "josh-wolf-2026-08-15",
-      "summary": "Josh Wolf",
-      "date": "2026-08-15T19:00-05:00[America/Chicago]"
+      "eventId": "kandi-burruss-2026-08-23",
+      "summary": "Kandi Burruss",
+      "date": "2026-08-23T18:00-05:00[America/Chicago]"
     },
     {
       "source": "songkick-houston",
@@ -10285,18 +10287,6 @@
       "eventId": "maddix-2026-08-22",
       "summary": "Maddix",
       "date": "2026-08-22T21:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "songkick-houston",
-      "eventId": "mark-normand-2026-08-15",
-      "summary": "Mark Normand",
-      "date": "2026-08-15T19:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "songkick-houston",
-      "eventId": "mark-normand-2026-08-15",
-      "summary": "Mark Normand",
-      "date": "2026-08-15T21:30-05:00[America/Chicago]"
     },
     {
       "source": "songkick-houston",
@@ -10330,12 +10320,6 @@
     },
     {
       "source": "songkick-houston",
-      "eventId": "rattlesnake-milk-2026-08-15",
-      "summary": "Rattlesnake Milk",
-      "date": "2026-08-15T19:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "songkick-houston",
       "eventId": "raymix-2026-08-22",
       "summary": "Raymix",
       "date": "2026-08-22T21:00-05:00[America/Chicago]"
@@ -10357,6 +10341,12 @@
       "eventId": "royal-coda-2026-08-16",
       "summary": "Royal Coda",
       "date": "2026-08-16T12:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "songkick-houston",
+      "eventId": "rusted-cage-2026-08-23",
+      "summary": "Rusted Cage",
+      "date": "2026-08-23T15:00-05:00[America/Chicago]"
     },
     {
       "source": "songkick-houston",
@@ -10390,12 +10380,6 @@
     },
     {
       "source": "songkick-houston",
-      "eventId": "the-spazmatics-texas-2026-08-15",
-      "summary": "The Spazmatics Texas",
-      "date": "2026-08-15T21:45-05:00[America/Chicago]"
-    },
-    {
-      "source": "songkick-houston",
       "eventId": "the-temper-trap-2026-08-16",
       "summary": "The Temper Trap",
       "date": "2026-08-16T19:00-05:00[America/Chicago]"
@@ -10414,9 +10398,9 @@
     },
     {
       "source": "songkick-houston",
-      "eventId": "whales-2026-08-15",
-      "summary": "Whales",
-      "date": "2026-08-15T20:00-05:00[America/Chicago]"
+      "eventId": "veaux-2026-08-23",
+      "summary": "VEAUX",
+      "date": "2026-08-23T19:00-05:00[America/Chicago]"
     },
     {
       "source": "songkick-houston",
@@ -10453,12 +10437,6 @@
       "eventId": "all-about-snakes-2026-08-29",
       "summary": "All About Snakes",
       "date": "2026-08-29T15:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
-      "eventId": "all-about-us-a-guided-hike-2026-08-16",
-      "summary": "All About Us: a Guided Hike",
-      "date": "2026-08-16T10:00-05:00[America/Chicago]"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -10657,18 +10635,6 @@
       "eventId": "b-a-r-k-ranger-hike-2026-10-24",
       "summary": "B.A.R.K. Ranger Hike",
       "date": "2026-10-24T09:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
-      "eventId": "backyard-bass-2026-08-16",
-      "summary": "Backyard Bass",
-      "date": "2026-08-16T09:30-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
-      "eventId": "basic-fishing-2026-08-16",
-      "summary": "Basic Fishing",
-      "date": "2026-08-16T09:00-05:00[America/Chicago]"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -10954,12 +10920,6 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
-      "eventId": "fishing-with-a-ranger-2026-08-16",
-      "summary": "Fishing with a Ranger",
-      "date": "2026-08-16T09:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
       "eventId": "fishing-with-a-ranger-2026-08-22",
       "summary": "Fishing with a Ranger",
       "date": "2026-08-22T20:30-05:00[America/Chicago]"
@@ -11167,12 +11127,6 @@
       "eventId": "island-trail-hike-2026-08-29",
       "summary": "Island Trail Hike",
       "date": "2026-08-29T08:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
-      "eventId": "junior-ranger-journaling-2026-08-16",
-      "summary": "Junior Ranger Journaling",
-      "date": "2026-08-16T10:00-05:00[America/Chicago]"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -11386,12 +11340,6 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
-      "eventId": "skulls-and-shells-2026-08-16",
-      "summary": "Skulls and Shells",
-      "date": "2026-08-16T13:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
       "eventId": "spectacular-snakes-2026-08-22",
       "summary": "Spectacular Snakes!",
       "date": "2026-08-22T13:00-05:00[America/Chicago]"
@@ -11437,12 +11385,6 @@
       "eventId": "texas-outdoor-family-leadership-training-lake-livingston-state-park-application-open-until-sept-1-2026-09-11",
       "summary": "Texas Outdoor Family Leadership Training | Lake Livingston State Park | (Application Open Until Sept 1)",
       "date": "2026-09-11T18:30-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
-      "eventId": "the-mystery-of-the-missing-monarchs-2026-08-16",
-      "summary": "The Mystery of the Missing Monarchs",
-      "date": "2026-08-16T14:50-05:00[America/Chicago]"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -11567,13 +11509,6 @@
     },
     {
       "source": "the-mood-room",
-      "eventId": "6a74bdb506ae4c3afd482afc",
-      "summary": "Nine - Baby Makin’ Music Played Live",
-      "date": "2026-08-15T20:00:00.623-05:00[America/Chicago]",
-      "url": "https://www.themoodroomhouston.com/events/still-sippin-htown-hits-crafted-live-tby6p-b3hmn-tzaj9-w8jjw-pym4f-495ed-dggml"
-    },
-    {
-      "source": "the-mood-room",
       "eventId": "6a74bec61d7ef03049329e7c",
       "summary": "Ovo Takeover - PartyNextDoor vs Drake",
       "date": "2026-08-22T21:00:00.453-05:00[America/Chicago]",
@@ -11585,6 +11520,13 @@
       "summary": "No Chaser Open Mic",
       "date": "2026-08-18T19:00:00.453-05:00[America/Chicago]",
       "url": "https://www.themoodroomhouston.com/events/rose-frequency-6ynks-8gbhm-kb6wh-8mtjj-csx5l"
+    },
+    {
+      "source": "warehouse-live",
+      "eventId": "anees-2026-08-30",
+      "summary": "anees",
+      "date": "2026-08-30T20:00-05:00[America/Chicago]",
+      "url": "https://www.bside.show/go/anees#id=lucky-duck-tour-houston-tx-houston"
     },
     {
       "source": "warehouse-live",
@@ -11613,13 +11555,6 @@
       "summary": "O Fresh",
       "date": "2026-08-29T19:00-05:00[America/Chicago]",
       "url": "https://wl.seetickets.us/event/o-fresh/681214?afflky=warehouselive"
-    },
-    {
-      "source": "warehouse-live",
-      "eventId": "royal-coda-2026-08-16",
-      "summary": "Royal Coda",
-      "date": "2026-08-16T20:00-05:00[America/Chicago]",
-      "url": "https://wl.seetickets.us/event/royal-coda/691427?afflky=warehouselive"
     },
     {
       "source": "warehouse-live",
@@ -12260,13 +12195,6 @@
     },
     {
       "source": "white-oak-music-hall",
-      "eventId": "tm-G5dIZ_uE-LNAK",
-      "summary": "Zenjii: Single Release Party",
-      "date": "2026-08-15T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/zenjii-single-release-party-houston-texas-08-15-2026/event/3A0064D9E17E3153"
-    },
-    {
-      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_ueWHhKG",
       "summary": "PLAYLUNCH",
       "date": "2026-10-28T19:00-05:00[America/Chicago]",
@@ -12361,7 +12289,7 @@
     {
       "name": "713-music-hall-713-music-hall",
       "type": "Ripper",
-      "events": 28,
+      "events": 29,
       "expectEmpty": false,
       "source": "713-music-hall"
     },
@@ -12375,7 +12303,7 @@
     {
       "name": "aurora-picture-show-aurora-picture-show",
       "type": "Ripper",
-      "events": 2,
+      "events": 1,
       "expectEmpty": false,
       "source": "aurora-picture-show"
     },
@@ -12403,21 +12331,21 @@
     {
       "name": "central-market-cooking-school-central-market-cooking-school",
       "type": "Ripper",
-      "events": 77,
+      "events": 75,
       "expectEmpty": false,
       "source": "central-market-cooking-school"
     },
     {
       "name": "childrens-museum-houston-main",
       "type": "Ripper",
-      "events": 21,
+      "events": 23,
       "expectEmpty": false,
       "source": "childrens-museum-houston"
     },
     {
       "name": "concerts50-houston-concerts50-houston",
       "type": "Ripper",
-      "events": 14,
+      "events": 20,
       "expectEmpty": false,
       "source": "concerts50-houston"
     },
@@ -12445,7 +12373,7 @@
     {
       "name": "downtown-houston-events-downtown-houston-events",
       "type": "Ripper",
-      "events": 42,
+      "events": 44,
       "expectEmpty": false,
       "source": "downtown-houston-events"
     },
@@ -12459,7 +12387,7 @@
     {
       "name": "encore-houston-encore-houston",
       "type": "Ripper",
-      "events": 28,
+      "events": 27,
       "expectEmpty": false,
       "source": "encore-houston"
     },
@@ -12473,7 +12401,7 @@
     {
       "name": "good-on-paper-bookshop-good-on-paper-bookshop",
       "type": "Ripper",
-      "events": 10,
+      "events": 9,
       "expectEmpty": false,
       "source": "good-on-paper-bookshop"
     },
@@ -12501,7 +12429,7 @@
     {
       "name": "house-of-blues-houston-house-of-blues-houston",
       "type": "Ripper",
-      "events": 56,
+      "events": 55,
       "expectEmpty": false,
       "source": "house-of-blues-houston"
     },
@@ -12543,7 +12471,7 @@
     {
       "name": "htxoutdoors-htxoutdoors",
       "type": "Ripper",
-      "events": 31,
+      "events": 30,
       "expectEmpty": false,
       "source": "htxoutdoors"
     },
@@ -12571,7 +12499,7 @@
     {
       "name": "latin-city-latin-city",
       "type": "Ripper",
-      "events": 18,
+      "events": 17,
       "expectEmpty": false,
       "source": "latin-city"
     },
@@ -12592,7 +12520,7 @@
     {
       "name": "mcgonigels-mucky-duck-mcgonigels-mucky-duck",
       "type": "Ripper",
-      "events": 88,
+      "events": 86,
       "expectEmpty": false,
       "source": "mcgonigels-mucky-duck"
     },
@@ -12606,7 +12534,7 @@
     {
       "name": "murder-by-the-book-murder-by-the-book",
       "type": "Ripper",
-      "events": 3,
+      "events": 0,
       "expectEmpty": false,
       "source": "murder-by-the-book"
     },
@@ -12662,14 +12590,14 @@
     {
       "name": "project-row-houses-project-row-houses",
       "type": "Ripper",
-      "events": 145,
+      "events": 144,
       "expectEmpty": false,
       "source": "project-row-houses"
     },
     {
       "name": "punch-line-comedy-club-punch-line-comedy-club",
       "type": "Ripper",
-      "events": 96,
+      "events": 94,
       "expectEmpty": false,
       "source": "punch-line-comedy-club"
     },
@@ -12704,7 +12632,7 @@
     {
       "name": "sawyer-yards-sawyer-yards",
       "type": "Ripper",
-      "events": 13,
+      "events": 12,
       "expectEmpty": false,
       "source": "sawyer-yards"
     },
@@ -12732,7 +12660,7 @@
     {
       "name": "texas-parks-wildlife-houston-texas-parks-wildlife-houston",
       "type": "Ripper",
-      "events": 182,
+      "events": 175,
       "expectEmpty": false,
       "source": "texas-parks-wildlife-houston"
     },
@@ -12753,14 +12681,14 @@
     {
       "name": "the-mood-room-the-mood-room",
       "type": "Ripper",
-      "events": 10,
+      "events": 9,
       "expectEmpty": false,
       "source": "the-mood-room"
     },
     {
       "name": "the-secret-group-the-secret-group",
       "type": "Ripper",
-      "events": 51,
+      "events": 45,
       "expectEmpty": false,
       "source": "the-secret-group"
     },
@@ -12774,7 +12702,7 @@
     {
       "name": "white-oak-music-hall-white-oak-music-hall",
       "type": "Ripper",
-      "events": 100,
+      "events": 99,
       "expectEmpty": false,
       "source": "white-oak-music-hall"
     },
@@ -12788,14 +12716,14 @@
     {
       "name": "tag-the-heights",
       "type": "Aggregate",
-      "events": 83,
+      "events": 65,
       "expectEmpty": false,
       "source": "tag-the-heights"
     },
     {
       "name": "tag-upper-kirby",
       "type": "Aggregate",
-      "events": 115,
+      "events": 111,
       "expectEmpty": false,
       "source": "tag-upper-kirby"
     },
@@ -12809,7 +12737,7 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 831,
+      "events": 833,
       "expectEmpty": false,
       "source": "tag-music"
     },
@@ -12837,21 +12765,21 @@
     {
       "name": "tag-arts",
       "type": "Aggregate",
-      "events": 131,
+      "events": 133,
       "expectEmpty": false,
       "source": "tag-arts"
     },
     {
       "name": "tag-film",
       "type": "Aggregate",
-      "events": 2,
+      "events": 1,
       "expectEmpty": false,
       "source": "tag-film"
     },
     {
       "name": "tag-eado",
       "type": "Aggregate",
-      "events": 80,
+      "events": 72,
       "expectEmpty": false,
       "source": "tag-eado"
     },
@@ -12865,14 +12793,14 @@
     {
       "name": "tag-midtown",
       "type": "Aggregate",
-      "events": 93,
+      "events": 92,
       "expectEmpty": false,
       "source": "tag-midtown"
     },
     {
       "name": "tag-art",
       "type": "Aggregate",
-      "events": 218,
+      "events": 215,
       "expectEmpty": false,
       "source": "tag-art"
     },
@@ -12886,56 +12814,56 @@
     {
       "name": "tag-culinary",
       "type": "Aggregate",
-      "events": 77,
+      "events": 75,
       "expectEmpty": false,
       "source": "tag-culinary"
     },
     {
       "name": "tag-workshops",
       "type": "Aggregate",
-      "events": 77,
+      "events": 75,
       "expectEmpty": false,
       "source": "tag-workshops"
     },
     {
       "name": "tag-education",
       "type": "Aggregate",
-      "events": 269,
+      "events": 260,
       "expectEmpty": false,
       "source": "tag-education"
     },
     {
       "name": "tag-uptown",
       "type": "Aggregate",
-      "events": 89,
+      "events": 87,
       "expectEmpty": false,
       "source": "tag-uptown"
     },
     {
       "name": "tag-family",
       "type": "Aggregate",
-      "events": 37,
+      "events": 39,
       "expectEmpty": false,
       "source": "tag-family"
     },
     {
       "name": "tag-kids",
       "type": "Aggregate",
-      "events": 21,
+      "events": 23,
       "expectEmpty": false,
       "source": "tag-kids"
     },
     {
       "name": "tag-museum",
       "type": "Aggregate",
-      "events": 25,
+      "events": 27,
       "expectEmpty": false,
       "source": "tag-museum"
     },
     {
       "name": "tag-concerts",
       "type": "Aggregate",
-      "events": 14,
+      "events": 20,
       "expectEmpty": false,
       "source": "tag-concerts"
     },
@@ -12984,21 +12912,21 @@
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 743,
+      "events": 737,
       "expectEmpty": false,
       "source": "tag-community"
     },
     {
       "name": "tag-culture",
       "type": "Aggregate",
-      "events": 72,
+      "events": 74,
       "expectEmpty": false,
       "source": "tag-culture"
     },
     {
       "name": "tag-books",
       "type": "Aggregate",
-      "events": 27,
+      "events": 23,
       "expectEmpty": false,
       "source": "tag-books"
     },
@@ -13040,7 +12968,7 @@
     {
       "name": "tag-sports",
       "type": "Aggregate",
-      "events": 59,
+      "events": 58,
       "expectEmpty": false,
       "source": "tag-sports"
     },
@@ -13075,21 +13003,21 @@
     {
       "name": "tag-parks",
       "type": "Aggregate",
-      "events": 266,
+      "events": 255,
       "expectEmpty": false,
       "source": "tag-parks"
     },
     {
       "name": "tag-outdoor-recreation",
       "type": "Aggregate",
-      "events": 239,
+      "events": 229,
       "expectEmpty": false,
       "source": "tag-outdoor-recreation"
     },
     {
       "name": "tag-hiking",
       "type": "Aggregate",
-      "events": 31,
+      "events": 30,
       "expectEmpty": false,
       "source": "tag-hiking"
     },
@@ -13103,35 +13031,35 @@
     {
       "name": "tag-third-ward",
       "type": "Aggregate",
-      "events": 147,
+      "events": 146,
       "expectEmpty": false,
       "source": "tag-third-ward"
     },
     {
       "name": "tag-beer",
       "type": "Aggregate",
-      "events": 48,
+      "events": 31,
       "expectEmpty": false,
       "source": "tag-beer"
     },
     {
       "name": "tag-near-northside",
       "type": "Aggregate",
-      "events": 131,
+      "events": 129,
       "expectEmpty": false,
       "source": "tag-near-northside"
     },
     {
       "name": "tag-food",
       "type": "Aggregate",
-      "events": 40,
+      "events": 38,
       "expectEmpty": false,
       "source": "tag-food"
     },
     {
       "name": "tag-foodfestival",
       "type": "Aggregate",
-      "events": 18,
+      "events": 17,
       "expectEmpty": false,
       "source": "tag-foodfestival"
     },
@@ -13152,7 +13080,7 @@
     {
       "name": "tag-west-university",
       "type": "Aggregate",
-      "events": 3,
+      "events": 0,
       "expectEmpty": false,
       "source": "tag-west-university"
     },
@@ -13201,14 +13129,14 @@
     {
       "name": "tag-comedy",
       "type": "Aggregate",
-      "events": 182,
+      "events": 173,
       "expectEmpty": false,
       "source": "tag-comedy"
     },
     {
       "name": "tag-entertainment",
       "type": "Aggregate",
-      "events": 108,
+      "events": 106,
       "expectEmpty": false,
       "source": "tag-entertainment"
     },
@@ -13257,7 +13185,7 @@
     {
       "name": "tag-nature",
       "type": "Aggregate",
-      "events": 182,
+      "events": 175,
       "expectEmpty": false,
       "source": "tag-nature"
     },
@@ -13285,7 +13213,7 @@
     {
       "name": "tag-hermann-park",
       "type": "Aggregate",
-      "events": 21,
+      "events": 19,
       "expectEmpty": false,
       "source": "tag-hermann-park"
     },
@@ -13299,7 +13227,7 @@
     {
       "name": "tag-restaurant",
       "type": "Aggregate",
-      "events": 2,
+      "events": 1,
       "expectEmpty": false,
       "source": "tag-restaurant"
     },
@@ -13369,7 +13297,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 2194,
+      "events": 2150,
       "expectEmpty": false,
       "source": "tag-all"
     },
@@ -13395,16 +13323,9 @@
       "source": "axelrad-beer-garden"
     },
     {
-      "name": "external-bad-astronaut-brewery",
-      "type": "External",
-      "events": 0,
-      "expectEmpty": false,
-      "source": "bad-astronaut-brewery"
-    },
-    {
       "name": "external-ccs-houston",
       "type": "External",
-      "events": 18,
+      "events": 17,
       "expectEmpty": false,
       "source": "ccs-houston"
     },
@@ -13444,16 +13365,9 @@
       "source": "erjcc-houston"
     },
     {
-      "name": "external-eureka-heights-brew-co",
-      "type": "External",
-      "events": 17,
-      "expectEmpty": false,
-      "source": "eureka-heights-brew-co"
-    },
-    {
       "name": "external-hermann-park",
       "type": "External",
-      "events": 21,
+      "events": 19,
       "expectEmpty": false,
       "source": "hermann-park"
     },
@@ -13481,7 +13395,7 @@
     {
       "name": "external-houston-black-restaurant-week",
       "type": "External",
-      "events": 4,
+      "events": 3,
       "expectEmpty": false,
       "source": "houston-black-restaurant-week"
     },
@@ -13549,9 +13463,16 @@
       "source": "ion-district"
     },
     {
+      "name": "external-islamic-society-greater-houston",
+      "type": "External",
+      "events": 0,
+      "expectEmpty": false,
+      "source": "islamic-society-greater-houston"
+    },
+    {
       "name": "external-levy-park-houston",
       "type": "External",
-      "events": 26,
+      "events": 24,
       "expectEmpty": false,
       "source": "levy-park-houston"
     },
