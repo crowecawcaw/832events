@@ -1,208 +1,138 @@
-# Claude Code automation: the recommended workflow set
+# Claude Code Routines: the recommended automation set
 
-The skills under `skills/` are the operating manual; the **automation
-workflows** are what run them on a schedule so the site maintains itself.
-These run as **GitHub Actions workflows** using the
-[`anthropics/claude-code-action@v1`](https://github.com/anthropics/claude-code-action)
-action — they live entirely in this repo (`.github/workflows/`) and need
-**only** the `CLAUDE_CODE_OAUTH_TOKEN` secret that the PR-review and
-`@claude`-mention workflows already use.
-
-> **History:** these used to be *routines* — resources created in your
-> Anthropic account and pointed at the repo, fired on an account schedule.
-> They have been replaced with in-repo GitHub Actions so the whole
-> automation set is versioned alongside the code, needs no account-scoped
-> resources, and reuses the single `CLAUDE_CODE_OAUTH_TOKEN` secret. The
-> old `CLAUDE_ROUTINE_ID` / `CLAUDE_ROUTINE_TOKEN` secrets and the
-> routine-fire API call are no longer used.
+The skills under `skills/` are the operating manual; **routines** are what
+run them on a schedule so the site maintains itself. Routines are resources
+in *your* Anthropic account (created in Claude Code, pointed at your repo) —
+they are not files this repo can ship. The repo's **only** coupling to any
+routine is the `trigger-error-routine` job in
+`.github/workflows/publish_calendars.yml`, which fires one routine by id
+when a daily build has errors.
 
 This catalog documents the automation set the reference instance
-(832.events) actually runs: two scheduled/error-driven workflows, plus
-the owner-driven interactive workflows (`@claude` mentions and PR review).
-A copy is **self-maintaining** once the two exist — see the operator
-journey in [`city-template.md`](./city-template.md#operator-journey).
+(206.events) actually runs: four hooks. A copy is **self-maintaining** once
+all four exist — see the operator journey in
+[`city-template.md`](./city-template.md#operator-journey).
 
-The prompts in each workflow are **suggested templates** — adjust wording,
-cadence, and scope to taste by editing the workflow file.
+The prompts below are **suggested templates** — adjust wording, cadence,
+and scope to taste when creating the routine in your account.
 
 ## Quick reference
 
-| Workflow | File | Trigger | Runs |
+| Hook | Trigger | Runs | Repo secrets needed |
 |---|---|---|---|
-| [Build-error responder](#1-build-error-responder) | `publish_calendars.yml` (`build-error-responder` job) | After a build with errors (≤ once per 24 h) | `skills/build-report/SKILL.md` |
-| [Source pipeline](#2-source-pipeline) | `source-pipeline.yml` | `schedule` (daily 08:30 UTC) + `workflow_dispatch` | `skills/source-discovery/SKILL.md` |
+| [Build-error responder](#1-build-error-responder) | Fired by `publish_calendars.yml` when a build has errors (≤ once per 24 h) | `skills/build-report/SKILL.md` | `CLAUDE_ROUTINE_ID`, `CLAUDE_ROUTINE_TOKEN` |
+| [Daily source discovery](#2-daily-source-discovery) | Account-scheduled, daily | `skills/source-discovery/SKILL.md` steps 1–5 | none |
+| [Daily source implementation](#3-daily-source-implementation) | Account-scheduled, daily | `skills/source-discovery/SKILL.md` steps 6–8 | none |
+| [GitHub-issues responder](#4-github-issues-responder) | Issue-driven (feedback form + manual issues) | triage → the matching skill | none |
 
-Both authenticate with the same `CLAUDE_CODE_OAUTH_TOKEN` secret and
-skip silently on a copy that hasn't set it (or, on a fork whose
-`github.repository` doesn't match the reference instance).
-
-## Access control (who can trigger Claude)
-
-These workflows run Claude with `contents: write` / `pull-requests: write`
-and the `CLAUDE_CODE_OAUTH_TOKEN` secret, so trigger access is restricted
-to the **repo owner**:
-
-- **Scheduled workflows** (discovery, implementation) can't be triggered by
-  outsiders — `schedule` isn't user-initiated and `workflow_dispatch`
-  requires write access. They're additionally fork-guarded by
-  `github.repository`.
-- **Build-error responder** runs inside the publish pipeline (push to
-  `main` / schedule / dispatch), never on PRs.
-- **Interactive workflows** are owner-gated in their job `if:`:
-  `claude.yml` (`@claude` mentions on issues/PRs/reviews) requires
-  `github.actor == github.repository_owner`, and `claude-code-review.yml`
-  only runs for PRs authored by the owner
-  (`github.event.pull_request.user.login == github.repository_owner`).
-
-The gate is on the **triggering actor**, not `author_association` — a
-stranger commenting `@claude` on an issue *you* opened still carries your
-`author_association` on the issue payload, so an actor check is the correct
-signal. There is intentionally **no** workflow that auto-acts on
-externally-opened issues or external/fork PRs. To drive Claude on any
-issue or PR, the owner comments `@claude`.
-
-> If this repo is ever moved under a GitHub **org**, `github.repository_owner`
-> becomes the org name (which no `github.actor` equals), locking everyone
-> out — switch the gates to an explicit login allowlist at that point. The
-> same allowlist is how you'd grant a trusted collaborator access.
-
-## Autonomous PRs: in-session validation, owner merges
-
-The build-error responder and the source pipeline act from inside GitHub
-Actions using the default `GITHUB_TOKEN`. GitHub attributes those to
-`github-actions[bot]` and — by design, to prevent recursion — **does not
-start new workflow runs from `GITHUB_TOKEN` events**. So a bot push to
-`main`, and any PR a bot opens, does **not** trigger CI (`pr-preview.yml`,
-`web-e2e.yml`) or the automated `claude-code-review.yml`. (This only
-affects bot activity; pushes and PRs *you* make trigger everything
-normally.)
-
-Rather than introduce a privileged App/PAT token to work around the
-recursion guard, these workflows **self-validate in the same session**
-before landing anything.
-
-**Everything lands in one human-review PR — nothing is committed to
-`main` directly.**
-
-- **Discovery hands its markdown to implementation in-session.** An
-  orchestrator agent runs a discovery sub-agent (writes the candidate files
-  and discovery log into the working tree, reports its top pick) and then an
-  implementation sub-agent (builds that candidate). Neither sub-agent
-  commits or pushes; the markdown stays in the working tree and rides into
-  the same PR as the code rather than landing as a separate commit or
-  throwaway PR.
-- **The pipeline opens one PR for human review.** Phase 2 implements the
-  highest-confidence candidate, then opens a single PR containing both the
-  Phase 1 markdown (discovery log + candidate files) and the source code.
-  It writes real code, which should be validated by a human (and ideally
-  real CI) before landing, so it **never** pushes to `main` or self-merges.
-  Before opening the PR it builds the affected source
-  (`ONLY_SOURCE=<source> npm run generate-calendars`), runs `npm run
-  test:all`, and runs `/code-review` on the working-tree diff, addressing
-  findings (the `code-review` plugin is loaded for this). The build-error
-  responder follows the same self-validate-then-PR pattern.
-
-  For **content-only** PRs (sources/, docs/, allowed-removals/, the caches),
-  the pipeline then makes the PR **self-merging** in two steps:
-
-  1. **Enable GitHub auto-merge** on its own PR (`gh pr merge --auto`).
-  2. **Dispatch `pr-checks.yml` on the PR branch.** A bot-opened PR never
-     triggers `pr-preview.yml` (the `GITHUB_TOKEN` recursion guard suppresses
-     it), so without this the required `build / build` check would sit at
-     "Expected" forever. `workflow_dispatch` is *exempt* from that guard;
-     `pr-checks.yml` calls the same reusable `build-calendars.yml`, producing
-     a check run named exactly `build / build` on the PR head. When it passes,
-     GitHub merges the PR — no manual click, no privileged PAT.
-
-  It never pushes to `main` or self-merges directly; GitHub does the merge
-  when the check passes. A PR that touches anything else (workflows, engine
-  code, config) is left for the owner — the pipeline only enables auto-merge
-  when every changed file is content. Note: the auto-merge commit is itself a
-  `GITHUB_TOKEN` event, so it does not trigger an immediate publish — merged
-  content deploys with the next nightly build.
-
-This needs two one-time repo settings (see `docs/SETUP.md` → "Native
-auto-merge"): enable **Allow auto-merge**, and protect `main` with **Require
-status checks** (`build / build`). Until those are set, `gh pr merge --auto` is
-a no-op and PRs wait for a manual merge.
+Only the build-error responder is wired to the repo at all; the other three
+live entirely in your account and need no secrets or workflow changes.
 
 ## 1. Build-error responder
 
 **Purpose:** drain `build-errors.json` — fix broken sources, resolve
 geocode errors, and chain into the resolver skills (uncertainty, photos,
-costs, proxy escalation). When the build is healthy it falls through to
-source discovery, so even this one workflow keeps a copy improving.
+costs). When the build is healthy it falls through to source discovery, so
+even this one routine keeps a copy improving. (Proxy escalation is **not**
+run here — build-report runs in the CI-style environment where the proxy
+fetch paths can't be tested; it only *reports* the proxy queue. Escalation
+runs in the out-of-band job — see `skills/outofband-generate/SKILL.md` and
+`docs/proxy-verification.md`.)
 
-**Trigger & cadence:** the `build-error-responder` job in
-`.github/workflows/publish_calendars.yml` runs after the daily build when
-the build finished with a non-zero error count (push, schedule, or manual
-dispatch — never on PRs, since that workflow doesn't trigger on PRs). It is
-rate-limited to at most once per rolling 24 h window via the Actions cache;
-a `workflow_dispatch` run with `force_routine=true` bypasses the limit. The
-job runs `anthropics/claude-code-action@v1` with the build-report prompt
-and opens PR(s) with its fixes, self-validated in-session (see
-[Autonomous PRs](#autonomous-prs-in-session-validation-owner-merges) above).
+**Trigger & cadence:** fired by the repo, not a schedule. The
+`trigger-error-routine` job in `.github/workflows/publish_calendars.yml`
+calls the routine-fire API when a daily build finishes with errors,
+rate-limited to once per 24 h (bypass with a manual workflow dispatch and
+`force_routine=true`). See that job for the wire details; it skips
+silently while the secrets are unset. Give the routine itself no schedule
+(or a slow weekly one as a safety net).
 
-**Prompt (in the workflow):**
+**Suggested prompt:**
 
 ```
-Read skills/build-report/SKILL.md and follow it completely ...
+Read skills/build-report/SKILL.md and follow it completely.
 ```
 
-**Secrets & repo coupling:** `CLAUDE_CODE_OAUTH_TOKEN`. The job skips
-silently when the secret is unset.
+**Secrets & repo coupling:** after creating the routine, copy its id and
+token into the `CLAUDE_ROUTINE_ID` and `CLAUDE_ROUTINE_TOKEN` repo
+secrets. This is the only hook that touches repo configuration.
 
 **Without it:** build-error triage is manual — watch
 `https://<your-domain>/build-errors.json` (or the Discord notification,
 if enabled) and run `skills/build-report/SKILL.md` yourself when errors
 appear.
 
-## 2. Source pipeline
+## 2. Daily source discovery
 
-**Purpose:** grow the catalog. A single daily workflow discovers new sources
-and implements the best ones in one run:
+**Purpose:** grow the catalog — scan for new event sources in your city,
+quality-gate them, record candidates under `docs/source-candidates/`, and
+flag dead sources.
 
-- **Crawl** (deterministic pre-step, `scripts/discovery-crawl.ts`) — before the
-  agent runs, a fixed Brave-search crawl fingerprints and *verifies* new domains
-  (fetching each candidate `.ics` to confirm a real, upcoming feed) and emits a
-  ranked shortlist artifact (`output/discovery-shortlist.json`). The agent works
-  that shortlist top-down (STEP 0) instead of doing its own web search, and files
-  a `notviable` candidate for each rejection — the crawler's only memory, since it
-  keeps no state on `main`. It's `continue-on-error`, so a crawl hiccup never
-  blocks the run (the agent just falls back to its own discovery). See
-  [`discovery-crawler.md`](./discovery-crawler.md).
-- **Discover** (`skills/source-discovery/SKILL.md` steps 1–5) — scan for new
-  event sources in your city, quality-gate them, and record candidates in
-  `docs/source-candidates/` (git history is the log). Flag dead sources.
-- **Implement** (`skills/source-discovery/SKILL.md` steps 6–8) — build **up to
-  5** pending candidates, cheapest/highest volume first (external ICS + built-in
-  platform rippers), validating each in-session (`npm run validate`, per-source
-  `ONLY_SOURCE` build, `npm run test:all`, `/code-review`). It opens **one PR
-  for human review** with all successfully-built sources plus the
-  `docs/source-candidates/` updates. Since CI won't run on a bot-authored
-  PR, in-session validation is the gate; the repo owner merges.
+**Trigger & cadence:** account-scheduled, daily.
 
-If discovery turns up nothing and no candidates are implementable, it opens no PR.
+**Suggested prompt:**
 
-**Trigger & cadence:** `.github/workflows/source-pipeline.yml` (`schedule` daily
-08:30 UTC); also supports `workflow_dispatch` for a manual run.
+```
+Read skills/source-discovery/SKILL.md and follow steps 1-5 (discovery and
+candidate triage only - do not implement a source). Record new candidates
+under docs/source-candidates/ and append today's discovery log.
+```
 
-**Secrets & repo coupling:** `CLAUDE_CODE_OAUTH_TOKEN`.
+**Secrets & repo coupling:** none.
 
-**Without it:** the source catalog stops growing, dead sources go
-unflagged, and candidates are never implemented until a human runs the
-skill.
+**Without it:** the source catalog stops growing and dead sources go
+unflagged until a human runs the skill.
 
-## Issues, PRs, and comments (owner-driven, not automated)
+## 3. Daily source implementation
 
-There is intentionally **no** workflow that auto-acts on externally-opened
-issues or external/fork PRs — this instance doesn't take external
-contributions, and an agent with write access reacting to stranger input
-is exposure we don't want (see [Access control](#access-control-who-can-trigger-claude)).
+**Purpose:** turn candidates into live calendars — pick the
+highest-confidence candidate from `docs/source-candidates/` and implement
+it as its own PR, following the quality gates.
 
-To act on an issue or PR, the **owner** drives Claude on demand by
-commenting `@claude` with the request (handled by `claude.yml`, owner-gated).
-For a new-source request follow `skills/source-discovery/SKILL.md`; for a
-broken calendar follow `skills/build-report/SKILL.md`; for an event poster
-or "is X covered?" question follow `skills/source-from-event/SKILL.md`. PRs
-the owner opens are auto-reviewed by `claude-code-review.yml`.
+**Trigger & cadence:** account-scheduled, daily (offset it a few hours
+after the discovery routine so fresh candidates are available).
+
+**Suggested prompt:**
+
+```
+Read skills/source-discovery/SKILL.md and follow it from step 6: pick the
+highest-confidence existing candidate in docs/source-candidates/ and
+implement that one source as a PR. Do not run the discovery scan.
+```
+
+**Secrets & repo coupling:** none.
+
+**Without it:** candidates pile up in `docs/source-candidates/`
+unimplemented.
+
+## 4. GitHub-issues responder
+
+**Purpose:** act on user feedback. The in-app feedback form files labeled
+GitHub issues automatically (see [`user-feedback.md`](./user-feedback.md)),
+and users also open issues by hand — bug reports, new-source requests,
+stale-calendar reports. This hook triages them and turns them into PRs.
+
+**Trigger & cadence:** issue-driven — use whatever issue-triggered
+automation your setup supports (a Claude Code GitHub integration responding
+to new issues, or an account-scheduled routine that sweeps open issues
+daily).
+
+**Suggested prompt:**
+
+```
+List the open GitHub issues on this repo that have no linked PR. Pick the
+most actionable one. For a new-source request, follow
+skills/source-discovery/SKILL.md (quality gates included). For a broken or
+incorrect calendar, follow skills/build-report/SKILL.md conventions to fix
+the ripper. For an event poster or "is X covered?" question, follow
+skills/source-from-event/SKILL.md. Open a PR and comment on the issue with
+the result.
+```
+
+**Secrets & repo coupling:** none for the routine itself. (The
+`FEEDBACK_GITHUB_ISSUES_TOKEN` secret mentioned in the favorites-worker
+setup is unrelated — it lets the *feedback form* file issues, not the
+responder read them.)
+
+**Without it:** feedback-form submissions and user issues sit until a
+human triages them.
