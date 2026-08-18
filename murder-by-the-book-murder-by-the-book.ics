@@ -1,7 +1,71 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 CALSCALE:GREGORIAN
-PRODID:adamgibbons/ics
+PRODID:832.events
 METHOD:PUBLISH
+X-WR-CALNAME:Murder By The Book
 X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://www.murderbooks.com
+ /sites/default/files/styles/large/public/image/2026/06/17/hillier-dunn-8-2
+ 4-2026-1.png?itok=QYo8wT_F
+ATTACH;FMTTYPE=image/png:https://www.murderbooks.com/sites/default/files/st
+ yles/large/public/image/2026/06/17/hillier-dunn-8-24-2026-1.png?itok=QYo8w
+ T_F
+UID:BgCnWwHgyz1SHhApCymHM
+SUMMARY:Jennifer Hillier in conversation with Abby Dunn
+DTSTAMP:20260818T032824Z
+DTSTART:20260824T233000Z
+DESCRIPTION:Jennifer Hillier was born and raised in Toronto\, Canada\, and 
+	lived in the Seattle area for years before returning home to Toronto\, whe
+	re she now lives with her family.\nAbby Dunn is the creator...\n\nhttps://
+	www.murderbooks.com/event/2026-08-24/jennifer-hillier-conversation-abby-du
+	nn
+URL:https://www.murderbooks.com/event/2026-08-24/jennifer-hillier-conversat
+	ion-abby-dunn
+GEO:29.7255;-95.4175
+LOCATION:Murder By The Book\, 2342 Bissonnet St\, Houston\, TX 77005
+TRANSP:TRANSPARENT
+DURATION:PT1H30M
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://www.murderbooks.com
+ /sites/default/files/styles/large/public/2026-05/sullivan-8-26-2026.png?it
+ ok=0GViPkkG
+ATTACH;FMTTYPE=image/png:https://www.murderbooks.com/sites/default/files/st
+ yles/large/public/2026-05/sullivan-8-26-2026.png?itok=0GViPkkG
+UID:Ydb0Fk0c4KjeHgkYNkEvX
+SUMMARY:Tim Sullivan
+DTSTAMP:20260818T032824Z
+DTSTART:20260826T233000Z
+DESCRIPTION:Tim Sullivan is an internationally bestselling author and accla
+	imed screenwriter\, whose credits include A Handful of Dust\, Where Angels
+	 Fear to Tread\, Jack and Sarah\, and Letters to Juliet. He is a...\n\nhtt
+	ps://www.murderbooks.com/Sullivan
+URL:https://www.murderbooks.com/Sullivan
+GEO:29.7255;-95.4175
+LOCATION:Murder By The Book\, 2342 Bissonnet St\, Houston\, TX 77005
+TRANSP:TRANSPARENT
+DURATION:PT1H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://www.murderbooks.com
+ /sites/default/files/styles/large/public/image/2026/06/04/pedersen-8-27-20
+ 26.png?itok=M8xJ4nrb
+ATTACH;FMTTYPE=image/png:https://www.murderbooks.com/sites/default/files/st
+ yles/large/public/image/2026/06/04/pedersen-8-27-2026.png?itok=M8xJ4nrb
+UID:itr986NLKbi2-xsl8lfYR
+SUMMARY:Kailee Pedersen
+DTSTAMP:20260818T032824Z
+DTSTART:20260827T233000Z
+DESCRIPTION:Kailee Pedersen writes haunted\, unsettling speculative fiction
+	. She graduated with a BA in classics from Columbia University\, specializ
+	ing in ancient Greek. Kailee was adopted from Nanning\, China a...\n\nhttp
+	s://www.murderbooks.com/pedersen
+URL:https://www.murderbooks.com/pedersen
+GEO:29.7255;-95.4175
+LOCATION:Murder By The Book\, 2342 Bissonnet St\, Houston\, TX 77005
+TRANSP:TRANSPARENT
+DURATION:PT1H
+END:VEVENT
 END:VCALENDAR

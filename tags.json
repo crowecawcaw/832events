@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-17T03:36:11.422Z",
+  "generated": "2026-08-18T03:28:57.788Z",
   "tags": [
     {
       "name": "Animals",
@@ -39,7 +39,7 @@
       "name": "Art",
       "slug": "art",
       "category": "Activities",
-      "eventCount": 215,
+      "eventCount": 216,
       "calendarCount": 10,
       "links": {
         "ics": {
@@ -73,8 +73,8 @@
       "name": "Beer",
       "slug": "beer",
       "category": "Activities",
-      "eventCount": 31,
-      "calendarCount": 2,
+      "eventCount": 46,
+      "calendarCount": 3,
       "links": {
         "ics": {
           "href": "tag-beer.ics",
@@ -90,8 +90,8 @@
       "name": "Books",
       "slug": "books",
       "category": "Activities",
-      "eventCount": 23,
-      "calendarCount": 3,
+      "eventCount": 26,
+      "calendarCount": 4,
       "links": {
         "ics": {
           "href": "tag-books.ics",
@@ -141,7 +141,7 @@
       "name": "Citywide",
       "slug": "citywide",
       "category": "Other",
-      "eventCount": 229,
+      "eventCount": 188,
       "calendarCount": 2,
       "links": {
         "ics": {
@@ -175,7 +175,7 @@
       "name": "Community",
       "slug": "community",
       "category": "Community",
-      "eventCount": 737,
+      "eventCount": 699,
       "calendarCount": 21,
       "links": {
         "ics": {
@@ -277,7 +277,7 @@
       "name": "Downtown",
       "slug": "downtown",
       "category": "Neighborhoods",
-      "eventCount": 429,
+      "eventCount": 430,
       "calendarCount": 16,
       "links": {
         "ics": {
@@ -311,7 +311,7 @@
       "name": "Education",
       "slug": "education",
       "category": "Activities",
-      "eventCount": 260,
+      "eventCount": 259,
       "calendarCount": 2,
       "links": {
         "ics": {
@@ -328,7 +328,7 @@
       "name": "Educational",
       "slug": "educational",
       "category": "Other",
-      "eventCount": 200,
+      "eventCount": 159,
       "calendarCount": 2,
       "links": {
         "ics": {
@@ -481,7 +481,7 @@
       "name": "Hiking",
       "slug": "hiking",
       "category": "Other",
-      "eventCount": 30,
+      "eventCount": 31,
       "calendarCount": 1,
       "links": {
         "ics": {
@@ -566,7 +566,7 @@
       "name": "Library",
       "slug": "library",
       "category": "Other",
-      "eventCount": 199,
+      "eventCount": 158,
       "calendarCount": 1,
       "links": {
         "ics": {
@@ -651,7 +651,7 @@
       "name": "Midtown",
       "slug": "midtown",
       "category": "Neighborhoods",
-      "eventCount": 92,
+      "eventCount": 94,
       "calendarCount": 7,
       "links": {
         "ics": {
@@ -702,7 +702,7 @@
       "name": "Museum District",
       "slug": "museum-district",
       "category": "Neighborhoods",
-      "eventCount": 94,
+      "eventCount": 95,
       "calendarCount": 10,
       "links": {
         "ics": {
@@ -736,7 +736,7 @@
       "name": "Music",
       "slug": "music",
       "category": "Activities",
-      "eventCount": 833,
+      "eventCount": 838,
       "calendarCount": 20,
       "links": {
         "ics": {
@@ -753,7 +753,7 @@
       "name": "Nature",
       "slug": "nature",
       "category": "Other",
-      "eventCount": 175,
+      "eventCount": 174,
       "calendarCount": 1,
       "links": {
         "ics": {
@@ -770,7 +770,7 @@
       "name": "Near Northside",
       "slug": "near-northside",
       "category": "Neighborhoods",
-      "eventCount": 129,
+      "eventCount": 131,
       "calendarCount": 3,
       "links": {
         "ics": {
@@ -787,7 +787,7 @@
       "name": "Nightlife",
       "slug": "nightlife",
       "category": "Activities",
-      "eventCount": 138,
+      "eventCount": 140,
       "calendarCount": 8,
       "links": {
         "ics": {
@@ -855,7 +855,7 @@
       "name": "Parks",
       "slug": "parks",
       "category": "Community",
-      "eventCount": 255,
+      "eventCount": 254,
       "calendarCount": 6,
       "links": {
         "ics": {
@@ -991,7 +991,7 @@
       "name": "Sports",
       "slug": "sports",
       "category": "Activities",
-      "eventCount": 58,
+      "eventCount": 59,
       "calendarCount": 3,
       "links": {
         "ics": {
@@ -1025,8 +1025,8 @@
       "name": "The Heights",
       "slug": "the-heights",
       "category": "Neighborhoods",
-      "eventCount": 65,
-      "calendarCount": 5,
+      "eventCount": 80,
+      "calendarCount": 6,
       "links": {
         "ics": {
           "href": "tag-the-heights.ics",
@@ -1187,6 +1187,23 @@
         },
         "rss": {
           "href": "tag-wedgewood.rss",
+          "type": "application/rss+xml"
+        }
+      }
+    },
+    {
+      "name": "West University",
+      "slug": "west-university",
+      "category": "Neighborhoods",
+      "eventCount": 3,
+      "calendarCount": 1,
+      "links": {
+        "ics": {
+          "href": "tag-west-university.ics",
+          "type": "text/calendar"
+        },
+        "rss": {
+          "href": "tag-west-university.rss",
           "type": "application/rss+xml"
         }
       }
