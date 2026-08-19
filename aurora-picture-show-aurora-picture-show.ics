@@ -1,25 +1,7 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 CALSCALE:GREGORIAN
-PRODID:832.events
+PRODID:adamgibbons/ics
 METHOD:PUBLISH
-X-WR-CALNAME:Aurora Picture Show
 X-PUBLISHED-TTL:PT1H
-BEGIN:VEVENT
-UID:AZyQdMLqmm8481z9gzNQG
-SUMMARY:Filmmaking Camps 2026 Premiere
-DTSTAMP:20260818T032823Z
-DTSTART:20260815T170000Z
-DESCRIPTION:Aurora Picture Show and the Museum of Fine Arts\, Houston prese
-	nt the free premiere screening of short films made collaboratively by arti
-	sts ages 7-15 in Aurora’s 2026 Summer Youth Filmmaking Camps at the museum
-	’s Brown Auditorium.\n\nhttps://www.aurorapictureshow.org/programs/filmmak
-	ing-camps-2026-premiere
-URL:https://www.aurorapictureshow.org/programs/filmmaking-camps-2026-premie
-	re
-GEO:29.7195;-95.3122
-LOCATION:5601A Navigation Blvd\, Houston\, TX 77011
-TRANSP:TRANSPARENT
-DURATION:PT2H
-END:VEVENT
 END:VCALENDAR

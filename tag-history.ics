@@ -1,7 +1,78 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 CALSCALE:GREGORIAN
-PRODID:adamgibbons/ics
+PRODID:832.events
 METHOD:PUBLISH
+X-WR-CALNAME:History Events
 X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://static1.squarespac
+ e.com/static/55943139e4b0ab7d56b27bcf/55ad53ebe4b0059e31308ad6/6a845d5ebf4
+ 6477c2fe67d1e/1787059600296/
+ATTACH;FMTTYPE=image/jpeg:https://static1.squarespace.com/static/55943139e4
+ b0ab7d56b27bcf/55ad53ebe4b0059e31308ad6/6a845d5ebf46477c2fe67d1e/178705960
+ 0296/
+UID:2vmskcWziFyh6r8T0vMNp
+SUMMARY:Visit Houston Experience: Black History Tour with Actress 
+DTSTAMP:20260819T033136Z
+DTSTART:20260822T150000Z
+DESCRIPTION:https://www.heritagesociety.org/calendar/2024/11/23/visit-houst
+	on-experience-black-history-tour-with-actress-fp4ya-522wx-77ylr-9fzzn-2nkz
+	p-d675e-rzfbd-n544p-3wz6f-3nk2y-bztnf-nhadc-tfzxw\n\nFrom The Heritage Soc
+	iety
+URL:https://www.heritagesociety.org/calendar/2024/11/23/visit-houston-exper
+	ience-black-history-tour-with-actress-fp4ya-522wx-77ylr-9fzzn-2nkzp-d675e-
+	rzfbd-n544p-3wz6f-3nk2y-bztnf-nhadc-tfzxw
+GEO:29.760728;-95.372803
+LOCATION:The Heritage Society\, 1100 Bagby Street\, Houston\, TX\, 77002
+X-CALRIPPER-SOURCE:heritage-society
+CATEGORIES:The Heritage Society
+TRANSP:TRANSPARENT
+DURATION:PT1H30M
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://static1.squarespac
+ e.com/static/55943139e4b0ab7d56b27bcf/55ad53ebe4b0059e31308ad6/6a845df1908
+ ec30011575e84/1787059863258/
+ATTACH;FMTTYPE=image/jpeg:https://static1.squarespace.com/static/55943139e4
+ b0ab7d56b27bcf/55ad53ebe4b0059e31308ad6/6a845df1908ec30011575e84/178705986
+ 3258/
+UID:9N3Mwg6D1kp4kE9DIwnxB
+SUMMARY:Women's Equality Day with Speakers from Women's Organizations
+DTSTAMP:20260819T033136Z
+DTSTART:20260826T223000Z
+DESCRIPTION:https://www.heritagesociety.org/calendar/2026/8/26/womens-equal
+	ity-day-with-speakers-from-womens-organizations\n\nFrom The Heritage Socie
+	ty
+URL:https://www.heritagesociety.org/calendar/2026/8/26/womens-equality-day-
+	with-speakers-from-womens-organizations
+GEO:29.760728;-95.372803
+LOCATION:The Heritage Society\, 1100 Bagby Street\, Houston\, TX\, 77002
+X-CALRIPPER-SOURCE:heritage-society
+CATEGORIES:The Heritage Society
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
+BEGIN:VEVENT
+IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://static1.squarespac
+ e.com/static/55943139e4b0ab7d56b27bcf/55ad53ebe4b0059e31308ad6/6a845eb09f6
+ f8763fe4d2bf7/1787060032918/
+ATTACH;FMTTYPE=image/jpeg:https://static1.squarespace.com/static/55943139e4
+ b0ab7d56b27bcf/55ad53ebe4b0059e31308ad6/6a845eb09f6f8763fe4d2bf7/178706003
+ 2918/
+UID:wId7XgaH4RXLFi1G-lF_x
+SUMMARY:Happy Birthday Houston 190th!  A Free Family Day Event
+DTSTAMP:20260819T033136Z
+DTSTART:20260829T180000Z
+DESCRIPTION:https://www.heritagesociety.org/calendar/2026/8/29/happy-birthd
+	ay-houston-190th-a-free-family-day-event\n\nFrom The Heritage Society
+URL:https://www.heritagesociety.org/calendar/2026/8/29/happy-birthday-houst
+	on-190th-a-free-family-day-event
+GEO:29.760728;-95.372803
+LOCATION:The Heritage Society\, 1100 Bagby Street\, Houston\, TX\, 77002
+X-CALRIPPER-SOURCE:heritage-society
+CATEGORIES:The Heritage Society
+TRANSP:TRANSPARENT
+DURATION:PT5H
+END:VEVENT
 END:VCALENDAR

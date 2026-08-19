@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-18T03:28:48.103Z",
+  "lastUpdated": "2026-08-19T03:31:45.006Z",
   "rippers": [
     {
       "name": "713-music-hall",
@@ -294,6 +294,24 @@
       ]
     },
     {
+      "name": "heritage-society",
+      "description": "The Heritage Society",
+      "friendlyLink": "https://www.heritagesociety.org/calendar",
+      "calendars": [
+        {
+          "name": "heritage-society",
+          "friendlyName": "The Heritage Society",
+          "icsUrl": "heritage-society-heritage-society.ics",
+          "rssUrl": "heritage-society-heritage-society.rss",
+          "tags": [
+            "History",
+            "Community",
+            "Downtown"
+          ]
+        }
+      ]
+    },
+    {
       "name": "house-of-blues-houston",
       "description": "House of Blues Houston",
       "friendlyLink": "https://houston.houseofblues.com/",
@@ -544,23 +562,6 @@
           "tags": [
             "Music",
             "Upper Kirby"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "murder-by-the-book",
-      "description": "Murder By The Book",
-      "friendlyLink": "https://www.murderbooks.com/events",
-      "calendars": [
-        {
-          "name": "murder-by-the-book",
-          "friendlyName": "Murder By The Book",
-          "icsUrl": "murder-by-the-book-murder-by-the-book.ics",
-          "rssUrl": "murder-by-the-book-murder-by-the-book.rss",
-          "tags": [
-            "Books",
-            "West University"
           ]
         }
       ]
@@ -1221,6 +1222,7 @@
     "Hermann Park",
     "Hiking",
     "HistoricPreservation",
+    "History",
     "Holiday",
     "JapaneseCulture",
     "Kids",
@@ -1261,7 +1263,6 @@
     "Upper Kirby",
     "Uptown",
     "Wedgewood",
-    "West University",
     "Women",
     "Workshops"
   ]
