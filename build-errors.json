@@ -1,6 +1,6 @@
 {
-  "buildTime": "2026-08-19T03:32:06.805Z",
-  "totalErrors": 10,
+  "buildTime": "2026-08-20T03:31:29.753Z",
+  "totalErrors": 6,
   "configErrors": [],
   "sources": [
     {
@@ -115,31 +115,12 @@
       "error": "Error: HTTP 403: "
     }
   ],
-  "geocodeErrors": [
-    {
-      "type": "GeocodeError",
-      "location": "Henke & Pillot, 809 Congress Ave, Houston, TX, 77002, United States",
-      "source": "external-365-things-houston",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "Kingsbury Hall Salt Lake City, 1395 Presidents Circle, Salt Lake City, Utah, 84112, United States",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    },
-    {
-      "type": "GeocodeError",
-      "location": "The Orpheum Theatre Memphis, 203 S. Main St., Memphis, TN, 38103, United States Of America",
-      "source": "external-comedy-calendar",
-      "reason": "Nominatim returned no results"
-    }
-  ],
+  "geocodeErrors": [],
   "geoStats": {
-    "totalEvents": 2205,
-    "eventsWithGeo": 1954,
-    "eventsWithoutGeo": 251,
-    "geocodeErrors": 3
+    "totalEvents": 2153,
+    "eventsWithGeo": 1906,
+    "eventsWithoutGeo": 247,
+    "geocodeErrors": 0
   },
   "uncertainEvents": [],
   "uncertaintyStats": {
@@ -173,15 +154,7 @@
     "external-houston-cinema-arts-society"
   ],
   "expectedEmptyCalendars": [],
-  "proxyStaleServes": [
-    {
-      "source": "texas-parks-wildlife-houston",
-      "url": "https://tpwd.texas.gov/calendar/near-city/houston-events",
-      "cachedAt": "2026-08-17T03:34:33.610Z",
-      "ageHours": 48,
-      "error": "fetch failed"
-    }
-  ],
+  "proxyStaleServes": [],
   "newZeroEventSources": [],
   "newSourceParseErrors": [],
   "urlEntityErrors": [],
@@ -728,8 +701,8 @@
     }
   ],
   "photoStats": {
-    "eventsWithImage": 1316,
-    "totalEvents": 2205,
+    "eventsWithImage": 1323,
+    "totalEvents": 2153,
     "venuesWithImage": 0,
     "totalVenues": 63,
     "unresolvable": 0
@@ -1316,6 +1289,13 @@
       },
       {
         "source": "childrens-museum-houston",
+        "eventId": "shriners-children-s-texas-free-family-night-thursday-2026-11-19-91f4133c",
+        "summary": "Shriners Children's Texas Free Family Night Thursday",
+        "date": "2026-11-19T10:00-06:00[America/Chicago]",
+        "url": "https://www.cmhouston.org/events/shriners-childrens-tm-texas-free-family-night-thursday-4"
+      },
+      {
+        "source": "childrens-museum-houston",
         "eventId": "wizards-and-wonders-2026-08-29-c735aa4b",
         "summary": "Wizards and Wonders",
         "date": "2026-08-29T10:00-05:00[America/Chicago]",
@@ -1645,13 +1625,6 @@
       },
       {
         "source": "good-on-paper-bookshop",
-        "eventId": "little-listener-s-children-s-storytime-2026-08-16-122cf084",
-        "summary": "Little Listener's Children's Storytime",
-        "date": "2026-08-16T12:30-05:00[America/Chicago]",
-        "url": "https://www.goodonpaperbooks.com/events"
-      },
-      {
-        "source": "good-on-paper-bookshop",
         "eventId": "sleepy-storytime-with-bookseller-michelle-2026-08-21-cfc6366a",
         "summary": "Sleepy Storytime with Bookseller Michelle",
         "date": "2026-08-21T18:00-05:00[America/Chicago]",
@@ -1680,20 +1653,6 @@
       },
       {
         "source": "harris-county-public-library",
-        "eventId": "hcpl-008d24ac",
-        "summary": "Knotty and Nice",
-        "date": "2026-08-19T13:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/695da199491b809c6f115e1a"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-01f8e50b",
-        "summary": "Tween Spark Perler Beads",
-        "date": "2026-08-19T16:30-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/69a1bb8ab48451fc3c0588e3"
-      },
-      {
-        "source": "harris-county-public-library",
         "eventId": "hcpl-0231338c",
         "summary": "Adult Watercolor Art Club",
         "date": "2026-08-20T18:30-05:00[America/Chicago]",
@@ -1701,45 +1660,10 @@
       },
       {
         "source": "harris-county-public-library",
-        "eventId": "hcpl-02b9c096",
-        "summary": "FutureU Walk-Ins",
-        "date": "2026-08-19T11:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a17146146d5f64f7dcd0cae"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-03086c36",
-        "summary": "Summer Journal Club!",
-        "date": "2026-08-19T17:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/69f4de9b596674bcd583c59f"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-041208fc",
-        "summary": "Level 2 ESL",
-        "date": "2026-08-19T17:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a613b6ca41369ab2c67fadf"
-      },
-      {
-        "source": "harris-county-public-library",
         "eventId": "hcpl-089e65e1",
         "summary": "Baby Time (0-2 years)",
         "date": "2026-08-20T10:15-05:00[America/Chicago]",
         "url": "https://hcpl.bibliocommons.com/events/6a18c8f8f56bd86e00b2e1ce"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-0a2815fd",
-        "summary": "Toddler Time",
-        "date": "2026-08-19T09:30-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6949c4e89e881bab98aea547"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-0c1ff977",
-        "summary": "S.Age Crafts",
-        "date": "2026-08-19T18:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a58249982c03c5c17d85275"
       },
       {
         "source": "harris-county-public-library",
@@ -1757,31 +1681,10 @@
       },
       {
         "source": "harris-county-public-library",
-        "eventId": "hcpl-134d92b4",
-        "summary": "Lil' Cubs Baby Time",
-        "date": "2026-08-19T11:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a6130cbf213992f00c6437a"
-      },
-      {
-        "source": "harris-county-public-library",
         "eventId": "hcpl-13df69ed",
         "summary": "Toddler Story Time",
         "date": "2026-08-20T10:30-05:00[America/Chicago]",
         "url": "https://hcpl.bibliocommons.com/events/69499649fd55fb290058a570"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-13f097cd",
-        "summary": "Baby Bouncer",
-        "date": "2026-08-19T11:15-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a736a99614a3e1aa9b6ea05"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-141e11a7",
-        "summary": "Cricut 1 on 1 Orientation",
-        "date": "2026-08-19T16:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/69efcbe7defec6489cc0a7c0"
       },
       {
         "source": "harris-county-public-library",
@@ -1806,13 +1709,6 @@
       },
       {
         "source": "harris-county-public-library",
-        "eventId": "hcpl-176dce19",
-        "summary": "Homeschool Hangout",
-        "date": "2026-08-19T13:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/693b063ec967cb41207c5d37"
-      },
-      {
-        "source": "harris-county-public-library",
         "eventId": "hcpl-17858152",
         "summary": "America 250: The History of American Medicine",
         "date": "2026-08-24T14:00-05:00[America/Chicago]",
@@ -1834,38 +1730,10 @@
       },
       {
         "source": "harris-county-public-library",
-        "eventId": "hcpl-1ab40437",
-        "summary": "The Magic of Color: Watercolor Painting for Adults",
-        "date": "2026-08-19T17:30-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/69de52eebd5c392c7644287e"
-      },
-      {
-        "source": "harris-county-public-library",
         "eventId": "hcpl-1ba1ff58",
         "summary": "Career and College Help | Ayuda para busca de Empleo o Carreras",
         "date": "2026-08-25T12:30-05:00[America/Chicago]",
         "url": "https://hcpl.bibliocommons.com/events/6a836615d4b10d0030071fe9"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-1e384152",
-        "summary": "Teen Time Stories (Summer Storytime)",
-        "date": "2026-08-19T17:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a1e142b52c88111723c608e"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-201327f8",
-        "summary": "Conversational ESL Classes",
-        "date": "2026-08-19T10:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/69683d074a9fd98b7f77b2f9"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-20ffe944",
-        "summary": "Crafts & Coffee",
-        "date": "2026-08-19T10:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a15bbc4a99bdd027d42e0c2"
       },
       {
         "source": "harris-county-public-library",
@@ -1897,13 +1765,6 @@
       },
       {
         "source": "harris-county-public-library",
-        "eventId": "hcpl-23cf44db",
-        "summary": "Parfait Your Way",
-        "date": "2026-08-19T15:30-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a6388180d65ac360041ed95"
-      },
-      {
-        "source": "harris-county-public-library",
         "eventId": "hcpl-295a768c",
         "summary": "Preschool Story Time",
         "date": "2026-08-20T10:30-05:00[America/Chicago]",
@@ -1932,27 +1793,6 @@
       },
       {
         "source": "harris-county-public-library",
-        "eventId": "hcpl-32a27596",
-        "summary": "Intermediate ESL Classes",
-        "date": "2026-08-19T13:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/69683c624a9fd98b7f77b28f"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-3377f1ad",
-        "summary": "Word Crafters",
-        "date": "2026-08-19T15:30-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a5e7481cca66c2f00a4c171"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-349fd15d",
-        "summary": "Future U! - Revise Your Resume'",
-        "date": "2026-08-19T14:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a739f3bb3bdcec4a666d4d6"
-      },
-      {
-        "source": "harris-county-public-library",
         "eventId": "hcpl-34f5f2bc",
         "summary": "From Canva to Cricut: Design It, Make It, Love It",
         "date": "2026-08-20T16:00-05:00[America/Chicago]",
@@ -1964,20 +1804,6 @@
         "summary": "Toddler Story Time",
         "date": "2026-08-25T10:30-05:00[America/Chicago]",
         "url": "https://hcpl.bibliocommons.com/events/6a60ecad88e9bf280032950c"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-380206dc",
-        "summary": "Baby Bouncer",
-        "date": "2026-08-19T10:15-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a736961b46787079eadad35"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-3818ef10",
-        "summary": "Pre-School Storytime at Barbara Bush",
-        "date": "2026-08-19T10:30-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6931d358ddf56328001f473f"
       },
       {
         "source": "harris-county-public-library",
@@ -2002,13 +1828,6 @@
       },
       {
         "source": "harris-county-public-library",
-        "eventId": "hcpl-3f18581c",
-        "summary": "Sapling Storytime for Preschoolers",
-        "date": "2026-08-19T10:30-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/692098749be7c6685c293eaf"
-      },
-      {
-        "source": "harris-county-public-library",
         "eventId": "hcpl-413a317f",
         "summary": "Cricut Orientation",
         "date": "2026-08-24T18:00-05:00[America/Chicago]",
@@ -2030,24 +1849,10 @@
       },
       {
         "source": "harris-county-public-library",
-        "eventId": "hcpl-49497412",
-        "summary": "Library Movie Nights",
-        "date": "2026-08-19T18:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/695c38396f926136000e78ef"
-      },
-      {
-        "source": "harris-county-public-library",
         "eventId": "hcpl-4d451143",
         "summary": "Tours & Tales at Barbara Bush",
         "date": "2026-08-20T10:00-05:00[America/Chicago]",
         "url": "https://hcpl.bibliocommons.com/events/6917689261706d280022ce0b"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-4e20bfb0",
-        "summary": "Introductory ESL Classes",
-        "date": "2026-08-19T16:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/696839b04a9fd98b7f77b16c"
       },
       {
         "source": "harris-county-public-library",
@@ -2156,13 +1961,6 @@
       },
       {
         "source": "harris-county-public-library",
-        "eventId": "hcpl-61a128ae",
-        "summary": "Preschool Story Time",
-        "date": "2026-08-19T11:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a68d1680e562e28009d01ca"
-      },
-      {
-        "source": "harris-county-public-library",
         "eventId": "hcpl-6278c676",
         "summary": "Inprint Bilingual Memoir Writing Series!Featured Event. Inprint Bilingual Memoir Writing Series!",
         "date": "2026-08-24T16:30-05:00[America/Chicago]",
@@ -2205,24 +2003,10 @@
       },
       {
         "source": "harris-county-public-library",
-        "eventId": "hcpl-67421043",
-        "summary": "Together Time: Pokemon Watercolor - Tiempo Juntos: Pokémon Acuarela",
-        "date": "2026-08-19T14:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a70b7d5e30fe484596686f7"
-      },
-      {
-        "source": "harris-county-public-library",
         "eventId": "hcpl-67bcb3ce",
         "summary": "Preschool Story Time",
         "date": "2026-08-25T10:30-05:00[America/Chicago]",
         "url": "https://hcpl.bibliocommons.com/events/6a61278ce9de6536001d92bf"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-68034f6c",
-        "summary": "Mother Goose",
-        "date": "2026-08-19T11:30-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/69836e9d491b809c6f178aee"
       },
       {
         "source": "harris-county-public-library",
@@ -2233,38 +2017,10 @@
       },
       {
         "source": "harris-county-public-library",
-        "eventId": "hcpl-689fd2bf",
-        "summary": "Leaving a Legacy - Genealogy in Action",
-        "date": "2026-08-19T10:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a80e062386764026a171d39"
-      },
-      {
-        "source": "harris-county-public-library",
         "eventId": "hcpl-68b78d5e",
         "summary": "Computer Basics",
         "date": "2026-08-20T11:30-05:00[America/Chicago]",
         "url": "https://hcpl.bibliocommons.com/events/6a62685c7b79214226aab995"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-692a9eac",
-        "summary": "Sapling Storytime for Preschoolers",
-        "date": "2026-08-19T11:15-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/69209899a6fedec9530a4892"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-694124f0",
-        "summary": "Teen \"Bring Your Own Book\" Book Club",
-        "date": "2026-08-19T16:30-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a4c3f446db61d28009a6465"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-6a12f028",
-        "summary": "Pre-K+ Storytime (for Walkers & Talkers)",
-        "date": "2026-08-19T10:15-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a42ee38ed35742f00ff425d"
       },
       {
         "source": "harris-county-public-library",
@@ -2289,13 +2045,6 @@
       },
       {
         "source": "harris-county-public-library",
-        "eventId": "hcpl-7057b42a",
-        "summary": "Spin-a-Yarn",
-        "date": "2026-08-19T11:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a5e733ccca66c2f00a4c0f5"
-      },
-      {
-        "source": "harris-county-public-library",
         "eventId": "hcpl-7156bdcf",
         "summary": "The Next Chapter - Monday Matinee - Indiana Jones and the Last Crusade (1989)",
         "date": "2026-08-24T14:00-05:00[America/Chicago]",
@@ -2303,24 +2052,10 @@
       },
       {
         "source": "harris-county-public-library",
-        "eventId": "hcpl-71cf95c7",
-        "summary": "Beginner Spanish - FULL",
-        "date": "2026-08-19T15:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a4d65b94b05243d005587dc"
-      },
-      {
-        "source": "harris-county-public-library",
         "eventId": "hcpl-7340b24c",
         "summary": "Computer Assistance",
         "date": "2026-08-24T13:00-05:00[America/Chicago]",
         "url": "https://hcpl.bibliocommons.com/events/699caa811e64afd01e5d72e6"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-7508a75e",
-        "summary": "Teen-Tween Space",
-        "date": "2026-08-19T14:45-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a5a6bae7b79214226a9415a"
       },
       {
         "source": "harris-county-public-library",
@@ -2377,20 +2112,6 @@
         "summary": "Kidney Smart",
         "date": "2026-08-24T11:00-05:00[America/Chicago]",
         "url": "https://hcpl.bibliocommons.com/events/6a5e4ff19943bdf31ea038d1"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-800e4cdb",
-        "summary": "Diamond Art Painting Club **18 and Up Only**",
-        "date": "2026-08-19T15:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a61624adaaaf4f51a20ad08"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-822987c2",
-        "summary": "Preschool Story Time",
-        "date": "2026-08-19T10:30-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6949c5789fb47cac989f2933"
       },
       {
         "source": "harris-county-public-library",
@@ -2541,20 +2262,6 @@
       },
       {
         "source": "harris-county-public-library",
-        "eventId": "hcpl-a3a8ebfe",
-        "summary": "Teen Movie -- Happy Death Day",
-        "date": "2026-08-19T17:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a67a3757b79214226aba4b2"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-a3adc39f",
-        "summary": "Speed Friending **21+ ONLY**",
-        "date": "2026-08-19T18:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a6281c2d23de82955c8dcf3"
-      },
-      {
-        "source": "harris-county-public-library",
         "eventId": "hcpl-a51027d2",
         "summary": "Adult Computer Classes with Harris County Universal Services",
         "date": "2026-08-24T13:00-05:00[America/Chicago]",
@@ -2583,13 +2290,6 @@
       },
       {
         "source": "harris-county-public-library",
-        "eventId": "hcpl-ab742a05",
-        "summary": "Intermediate Dungeons & Dragons",
-        "date": "2026-08-19T17:15-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a692057d23de82955c96ad2"
-      },
-      {
-        "source": "harris-county-public-library",
         "eventId": "hcpl-abd38468",
         "summary": "Clase de Ingles - English Class (Intro)",
         "date": "2026-08-22T14:00-05:00[America/Chicago]",
@@ -2601,13 +2301,6 @@
         "summary": "ESL Conversation Class",
         "date": "2026-08-24T18:30-05:00[America/Chicago]",
         "url": "https://hcpl.bibliocommons.com/events/691b40cb0562322f003099e5"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-aeb72a33",
-        "summary": "Oil Pastel Class",
-        "date": "2026-08-19T13:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a56acd7fb418a28009afcd9"
       },
       {
         "source": "harris-county-public-library",
@@ -2646,13 +2339,6 @@
       },
       {
         "source": "harris-county-public-library",
-        "eventId": "hcpl-b3b02500",
-        "summary": "Tales for Tots",
-        "date": "2026-08-19T10:15-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/69836d071e64afd01e59142d"
-      },
-      {
-        "source": "harris-county-public-library",
         "eventId": "hcpl-b3b2eca6",
         "summary": "American Mah-jongg Meetup at Bear CreekFeatured Event. American Mah-jongg Meetup at Bear Creek",
         "date": "2026-08-20T17:30-05:00[America/Chicago]",
@@ -2674,31 +2360,10 @@
       },
       {
         "source": "harris-county-public-library",
-        "eventId": "hcpl-b71434a8",
-        "summary": "Baby Story Time",
-        "date": "2026-08-19T10:15-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a84985bbe14820029882966"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-b876e647",
-        "summary": "StorytimeFeatured Event. Storytime",
-        "date": "2026-08-19T10:30-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/698e591e491b809c6f197504"
-      },
-      {
-        "source": "harris-county-public-library",
         "eventId": "hcpl-b9e631ee",
         "summary": "Toddler Time",
         "date": "2026-08-20T10:15-05:00[America/Chicago]",
         "url": "https://hcpl.bibliocommons.com/events/691e3df7683f18f7608dc6d5"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-bbbcf40e",
-        "summary": "Lil Buds Toddler Story Time",
-        "date": "2026-08-19T10:30-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a690e24e9de6536001edd2b"
       },
       {
         "source": "harris-county-public-library",
@@ -2758,20 +2423,6 @@
       },
       {
         "source": "harris-county-public-library",
-        "eventId": "hcpl-cbca5c2b",
-        "summary": "Cross-stitching for Beginners",
-        "date": "2026-08-19T15:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a60e97ca41369ab2c67de82"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-cd249e39",
-        "summary": "FutureU Free Help and Resources",
-        "date": "2026-08-19T12:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a836cfb3b6c71003e598147"
-      },
-      {
-        "source": "harris-county-public-library",
         "eventId": "hcpl-cec7351a",
         "summary": "Free Computer Classes",
         "date": "2026-08-25T10:00-05:00[America/Chicago]",
@@ -2793,45 +2444,10 @@
       },
       {
         "source": "harris-county-public-library",
-        "eventId": "hcpl-d2eb55d8",
-        "summary": "Basic ESL",
-        "date": "2026-08-19T14:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a7a40d11d5d03c3a6bbaf1c"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-d3422c71",
-        "summary": "Pathway to Citizenship | Camino a la Ciudadanía",
-        "date": "2026-08-19T18:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/691e40b161706d280023b19d"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-d383926e",
-        "summary": "Upstairs Library Hobbit Scavenger Hunt **18 and Up Only**",
-        "date": "2026-08-19T16:30-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a62855e898f0d205114734b"
-      },
-      {
-        "source": "harris-county-public-library",
         "eventId": "hcpl-d54d8d55",
         "summary": "Tiny Tots",
         "date": "2026-08-24T10:30-05:00[America/Chicago]",
         "url": "https://hcpl.bibliocommons.com/events/6949c351ea69de6e00109e3d"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-d7a5aa21",
-        "summary": "Curriculum Swap Drop Off",
-        "date": "2026-08-19T10:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a6159349e0a050e3e53f55a"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-d7ab97da",
-        "summary": "WU Film Appreciation Club",
-        "date": "2026-08-19T18:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/696583731e64afd01e53fa77"
       },
       {
         "source": "harris-county-public-library",
@@ -2874,13 +2490,6 @@
         "summary": "Needlework Network",
         "date": "2026-08-25T11:30-05:00[America/Chicago]",
         "url": "https://hcpl.bibliocommons.com/events/6a7c9cc25d8bc300315a232c"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-e368d13a",
-        "summary": "Prekindergarten Story Time",
-        "date": "2026-08-19T10:30-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/69499621ea69de6e00109681"
       },
       {
         "source": "harris-county-public-library",
@@ -2940,20 +2549,6 @@
       },
       {
         "source": "harris-county-public-library",
-        "eventId": "hcpl-ec70c510",
-        "summary": "Clases de Computación Gratis",
-        "date": "2026-08-19T12:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a612fff9943bdf31ea0d224"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-ecf14775",
-        "summary": "Computer Basics Class - Clase de Computacion Basico",
-        "date": "2026-08-19T13:30-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a592f5bcca66c2f00a3e57d"
-      },
-      {
-        "source": "harris-county-public-library",
         "eventId": "hcpl-edc7fdad",
         "summary": "Hangin' with the Homies",
         "date": "2026-08-20T11:00-05:00[America/Chicago]",
@@ -3010,13 +2605,6 @@
       },
       {
         "source": "harris-county-public-library",
-        "eventId": "hcpl-f4a5dd8d",
-        "summary": "Pre-K+ Storytime (for Walkers & Talkers)",
-        "date": "2026-08-19T11:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a42ee38ed35742f00ff425e"
-      },
-      {
-        "source": "harris-county-public-library",
         "eventId": "hcpl-f5292496",
         "summary": "Journalling Group",
         "date": "2026-08-22T14:30-05:00[America/Chicago]",
@@ -3049,13 +2637,6 @@
         "summary": "Giggle & Grow Storytime",
         "date": "2026-08-25T11:30-05:00[America/Chicago]",
         "url": "https://hcpl.bibliocommons.com/events/6a84b9bd4cb69d003e21ab4b"
-      },
-      {
-        "source": "harris-county-public-library",
-        "eventId": "hcpl-ff7c3f7f",
-        "summary": "Wiggle Wednesday",
-        "date": "2026-08-19T11:00-05:00[America/Chicago]",
-        "url": "https://hcpl.bibliocommons.com/events/6a42e6974407827f8aa83e38"
       },
       {
         "source": "harris-county-public-library",
@@ -3933,6 +3514,12 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
+        "eventId": "a-shell-of-a-time-how-to-build-a-sea-shell-2026-08-20",
+        "summary": "A Shell Of A Time: How To Build A Sea Shell",
+        "date": "2026-08-20T10:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "texas-parks-wildlife-houston",
         "eventId": "adopt-a-beach-2026-09-19",
         "summary": "Adopt A Beach",
         "date": "2026-09-19T10:00-05:00[America/Chicago]"
@@ -4278,12 +3865,6 @@
         "eventId": "east-texas-fire-and-nature-festival-3rd-annual-2026-10-10",
         "summary": "East Texas Fire and Nature Festival - 3rd Annual",
         "date": "2026-10-10T10:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
-        "eventId": "education-center-open-2026-08-19",
-        "summary": "Education Center Open",
-        "date": "2026-08-19T13:30-05:00[America/Chicago]"
       },
       {
         "source": "texas-parks-wildlife-houston",
@@ -4707,6 +4288,12 @@
       },
       {
         "source": "texas-parks-wildlife-houston",
+        "eventId": "moonlight-melodies-with-wild-notes-2026-09-19",
+        "summary": "Moonlight Melodies with Wild Notes🌓🎼",
+        "date": "2026-09-19T20:00-05:00[America/Chicago]"
+      },
+      {
+        "source": "texas-parks-wildlife-houston",
         "eventId": "nature-center-open-hours-2026-09-04",
         "summary": "Nature Center Open Hours",
         "date": "2026-09-04T13:00-05:00[America/Chicago]"
@@ -4812,12 +4399,6 @@
         "eventId": "pond-life-2026-08-23",
         "summary": "Pond Life",
         "date": "2026-08-23T11:00-05:00[America/Chicago]"
-      },
-      {
-        "source": "texas-parks-wildlife-houston",
-        "eventId": "reading-ranger-2026-08-19",
-        "summary": "Reading Ranger",
-        "date": "2026-08-19T10:30-05:00[America/Chicago]"
       },
       {
         "source": "texas-parks-wildlife-houston",
@@ -4978,9 +4559,9 @@
     ]
   },
   "costStats": {
-    "eventsWithCost": 471,
-    "freeEvents": 337,
-    "totalEvents": 2205,
+    "eventsWithCost": 477,
+    "freeEvents": 343,
+    "totalEvents": 2153,
     "unresolvable": 0
   },
   "costGaps": [
@@ -5046,13 +4627,6 @@
       "summary": "Arcángel - La 8va Maravilla World Tour",
       "date": "2026-11-05T20:00-06:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/arcangel-la-8va-maravilla-world-tour-houston-texas-11-05-2026/event/3A0064B49C099594"
-    },
-    {
-      "source": "713-music-hall",
-      "eventId": "tm-G5dIZ_598AvDz",
-      "summary": "Calle 24 - Eterno Tour",
-      "date": "2026-09-13T20:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/calle-24-eterno-tour-houston-texas-09-13-2026/event/3A0064B5D0141EF8"
     },
     {
       "source": "713-music-hall",
@@ -5165,6 +4739,13 @@
       "summary": "Role Model Presents: Chuck On Tour",
       "date": "2026-10-06T19:30-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/role-model-presents-chuck-on-tour-houston-texas-10-06-2026/event/3A0064CBD487ECEC"
+    },
+    {
+      "source": "713-music-hall",
+      "eventId": "tm-G5dIZ_kwOWtSt",
+      "summary": "RAWAYANA - ¿Dónde es el after? World Tour",
+      "date": "2026-11-18T20:00-06:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/rawayana-donde-es-el-after-world-houston-texas-11-18-2026/event/3A00646CA0F69CE9"
     },
     {
       "source": "713-music-hall",
@@ -5522,6 +5103,13 @@
       "summary": "Shriners Children's Texas Free Family Night Thursday",
       "date": "2026-10-29T10:00-05:00[America/Chicago]",
       "url": "https://www.cmhouston.org/events/shriners-childrens-tm-texas-free-family-night-thursday-3"
+    },
+    {
+      "source": "childrens-museum-houston",
+      "eventId": "shriners-children-s-texas-free-family-night-thursday-2026-11-19-91f4133c",
+      "summary": "Shriners Children's Texas Free Family Night Thursday",
+      "date": "2026-11-19T10:00-06:00[America/Chicago]",
+      "url": "https://www.cmhouston.org/events/shriners-childrens-tm-texas-free-family-night-thursday-4"
     },
     {
       "source": "childrens-museum-houston",
@@ -5994,13 +5582,6 @@
     },
     {
       "source": "good-on-paper-bookshop",
-      "eventId": "little-listener-s-children-s-storytime-2026-08-16-122cf084",
-      "summary": "Little Listener's Children's Storytime",
-      "date": "2026-08-16T12:30-05:00[America/Chicago]",
-      "url": "https://www.goodonpaperbooks.com/events"
-    },
-    {
-      "source": "good-on-paper-bookshop",
       "eventId": "sleepy-storytime-with-bookseller-michelle-2026-08-21-cfc6366a",
       "summary": "Sleepy Storytime with Bookseller Michelle",
       "date": "2026-08-21T18:00-05:00[America/Chicago]",
@@ -6029,20 +5610,6 @@
     },
     {
       "source": "harris-county-public-library",
-      "eventId": "hcpl-008d24ac",
-      "summary": "Knotty and Nice",
-      "date": "2026-08-19T13:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/695da199491b809c6f115e1a"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-01f8e50b",
-      "summary": "Tween Spark Perler Beads",
-      "date": "2026-08-19T16:30-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/69a1bb8ab48451fc3c0588e3"
-    },
-    {
-      "source": "harris-county-public-library",
       "eventId": "hcpl-0231338c",
       "summary": "Adult Watercolor Art Club",
       "date": "2026-08-20T18:30-05:00[America/Chicago]",
@@ -6050,45 +5617,10 @@
     },
     {
       "source": "harris-county-public-library",
-      "eventId": "hcpl-02b9c096",
-      "summary": "FutureU Walk-Ins",
-      "date": "2026-08-19T11:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a17146146d5f64f7dcd0cae"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-03086c36",
-      "summary": "Summer Journal Club!",
-      "date": "2026-08-19T17:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/69f4de9b596674bcd583c59f"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-041208fc",
-      "summary": "Level 2 ESL",
-      "date": "2026-08-19T17:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a613b6ca41369ab2c67fadf"
-    },
-    {
-      "source": "harris-county-public-library",
       "eventId": "hcpl-089e65e1",
       "summary": "Baby Time (0-2 years)",
       "date": "2026-08-20T10:15-05:00[America/Chicago]",
       "url": "https://hcpl.bibliocommons.com/events/6a18c8f8f56bd86e00b2e1ce"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-0a2815fd",
-      "summary": "Toddler Time",
-      "date": "2026-08-19T09:30-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6949c4e89e881bab98aea547"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-0c1ff977",
-      "summary": "S.Age Crafts",
-      "date": "2026-08-19T18:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a58249982c03c5c17d85275"
     },
     {
       "source": "harris-county-public-library",
@@ -6106,31 +5638,10 @@
     },
     {
       "source": "harris-county-public-library",
-      "eventId": "hcpl-134d92b4",
-      "summary": "Lil' Cubs Baby Time",
-      "date": "2026-08-19T11:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a6130cbf213992f00c6437a"
-    },
-    {
-      "source": "harris-county-public-library",
       "eventId": "hcpl-13df69ed",
       "summary": "Toddler Story Time",
       "date": "2026-08-20T10:30-05:00[America/Chicago]",
       "url": "https://hcpl.bibliocommons.com/events/69499649fd55fb290058a570"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-13f097cd",
-      "summary": "Baby Bouncer",
-      "date": "2026-08-19T11:15-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a736a99614a3e1aa9b6ea05"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-141e11a7",
-      "summary": "Cricut 1 on 1 Orientation",
-      "date": "2026-08-19T16:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/69efcbe7defec6489cc0a7c0"
     },
     {
       "source": "harris-county-public-library",
@@ -6155,13 +5666,6 @@
     },
     {
       "source": "harris-county-public-library",
-      "eventId": "hcpl-176dce19",
-      "summary": "Homeschool Hangout",
-      "date": "2026-08-19T13:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/693b063ec967cb41207c5d37"
-    },
-    {
-      "source": "harris-county-public-library",
       "eventId": "hcpl-17858152",
       "summary": "America 250: The History of American Medicine",
       "date": "2026-08-24T14:00-05:00[America/Chicago]",
@@ -6183,38 +5687,10 @@
     },
     {
       "source": "harris-county-public-library",
-      "eventId": "hcpl-1ab40437",
-      "summary": "The Magic of Color: Watercolor Painting for Adults",
-      "date": "2026-08-19T17:30-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/69de52eebd5c392c7644287e"
-    },
-    {
-      "source": "harris-county-public-library",
       "eventId": "hcpl-1ba1ff58",
       "summary": "Career and College Help | Ayuda para busca de Empleo o Carreras",
       "date": "2026-08-25T12:30-05:00[America/Chicago]",
       "url": "https://hcpl.bibliocommons.com/events/6a836615d4b10d0030071fe9"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-1e384152",
-      "summary": "Teen Time Stories (Summer Storytime)",
-      "date": "2026-08-19T17:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a1e142b52c88111723c608e"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-201327f8",
-      "summary": "Conversational ESL Classes",
-      "date": "2026-08-19T10:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/69683d074a9fd98b7f77b2f9"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-20ffe944",
-      "summary": "Crafts & Coffee",
-      "date": "2026-08-19T10:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a15bbc4a99bdd027d42e0c2"
     },
     {
       "source": "harris-county-public-library",
@@ -6246,13 +5722,6 @@
     },
     {
       "source": "harris-county-public-library",
-      "eventId": "hcpl-23cf44db",
-      "summary": "Parfait Your Way",
-      "date": "2026-08-19T15:30-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a6388180d65ac360041ed95"
-    },
-    {
-      "source": "harris-county-public-library",
       "eventId": "hcpl-295a768c",
       "summary": "Preschool Story Time",
       "date": "2026-08-20T10:30-05:00[America/Chicago]",
@@ -6281,27 +5750,6 @@
     },
     {
       "source": "harris-county-public-library",
-      "eventId": "hcpl-32a27596",
-      "summary": "Intermediate ESL Classes",
-      "date": "2026-08-19T13:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/69683c624a9fd98b7f77b28f"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-3377f1ad",
-      "summary": "Word Crafters",
-      "date": "2026-08-19T15:30-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a5e7481cca66c2f00a4c171"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-349fd15d",
-      "summary": "Future U! - Revise Your Resume'",
-      "date": "2026-08-19T14:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a739f3bb3bdcec4a666d4d6"
-    },
-    {
-      "source": "harris-county-public-library",
       "eventId": "hcpl-34f5f2bc",
       "summary": "From Canva to Cricut: Design It, Make It, Love It",
       "date": "2026-08-20T16:00-05:00[America/Chicago]",
@@ -6313,20 +5761,6 @@
       "summary": "Toddler Story Time",
       "date": "2026-08-25T10:30-05:00[America/Chicago]",
       "url": "https://hcpl.bibliocommons.com/events/6a60ecad88e9bf280032950c"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-380206dc",
-      "summary": "Baby Bouncer",
-      "date": "2026-08-19T10:15-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a736961b46787079eadad35"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-3818ef10",
-      "summary": "Pre-School Storytime at Barbara Bush",
-      "date": "2026-08-19T10:30-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6931d358ddf56328001f473f"
     },
     {
       "source": "harris-county-public-library",
@@ -6351,13 +5785,6 @@
     },
     {
       "source": "harris-county-public-library",
-      "eventId": "hcpl-3f18581c",
-      "summary": "Sapling Storytime for Preschoolers",
-      "date": "2026-08-19T10:30-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/692098749be7c6685c293eaf"
-    },
-    {
-      "source": "harris-county-public-library",
       "eventId": "hcpl-413a317f",
       "summary": "Cricut Orientation",
       "date": "2026-08-24T18:00-05:00[America/Chicago]",
@@ -6379,24 +5806,10 @@
     },
     {
       "source": "harris-county-public-library",
-      "eventId": "hcpl-49497412",
-      "summary": "Library Movie Nights",
-      "date": "2026-08-19T18:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/695c38396f926136000e78ef"
-    },
-    {
-      "source": "harris-county-public-library",
       "eventId": "hcpl-4d451143",
       "summary": "Tours & Tales at Barbara Bush",
       "date": "2026-08-20T10:00-05:00[America/Chicago]",
       "url": "https://hcpl.bibliocommons.com/events/6917689261706d280022ce0b"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-4e20bfb0",
-      "summary": "Introductory ESL Classes",
-      "date": "2026-08-19T16:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/696839b04a9fd98b7f77b16c"
     },
     {
       "source": "harris-county-public-library",
@@ -6505,13 +5918,6 @@
     },
     {
       "source": "harris-county-public-library",
-      "eventId": "hcpl-61a128ae",
-      "summary": "Preschool Story Time",
-      "date": "2026-08-19T11:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a68d1680e562e28009d01ca"
-    },
-    {
-      "source": "harris-county-public-library",
       "eventId": "hcpl-6278c676",
       "summary": "Inprint Bilingual Memoir Writing Series!Featured Event. Inprint Bilingual Memoir Writing Series!",
       "date": "2026-08-24T16:30-05:00[America/Chicago]",
@@ -6554,24 +5960,10 @@
     },
     {
       "source": "harris-county-public-library",
-      "eventId": "hcpl-67421043",
-      "summary": "Together Time: Pokemon Watercolor - Tiempo Juntos: Pokémon Acuarela",
-      "date": "2026-08-19T14:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a70b7d5e30fe484596686f7"
-    },
-    {
-      "source": "harris-county-public-library",
       "eventId": "hcpl-67bcb3ce",
       "summary": "Preschool Story Time",
       "date": "2026-08-25T10:30-05:00[America/Chicago]",
       "url": "https://hcpl.bibliocommons.com/events/6a61278ce9de6536001d92bf"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-68034f6c",
-      "summary": "Mother Goose",
-      "date": "2026-08-19T11:30-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/69836e9d491b809c6f178aee"
     },
     {
       "source": "harris-county-public-library",
@@ -6582,38 +5974,10 @@
     },
     {
       "source": "harris-county-public-library",
-      "eventId": "hcpl-689fd2bf",
-      "summary": "Leaving a Legacy - Genealogy in Action",
-      "date": "2026-08-19T10:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a80e062386764026a171d39"
-    },
-    {
-      "source": "harris-county-public-library",
       "eventId": "hcpl-68b78d5e",
       "summary": "Computer Basics",
       "date": "2026-08-20T11:30-05:00[America/Chicago]",
       "url": "https://hcpl.bibliocommons.com/events/6a62685c7b79214226aab995"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-692a9eac",
-      "summary": "Sapling Storytime for Preschoolers",
-      "date": "2026-08-19T11:15-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/69209899a6fedec9530a4892"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-694124f0",
-      "summary": "Teen \"Bring Your Own Book\" Book Club",
-      "date": "2026-08-19T16:30-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a4c3f446db61d28009a6465"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-6a12f028",
-      "summary": "Pre-K+ Storytime (for Walkers & Talkers)",
-      "date": "2026-08-19T10:15-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a42ee38ed35742f00ff425d"
     },
     {
       "source": "harris-county-public-library",
@@ -6638,13 +6002,6 @@
     },
     {
       "source": "harris-county-public-library",
-      "eventId": "hcpl-7057b42a",
-      "summary": "Spin-a-Yarn",
-      "date": "2026-08-19T11:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a5e733ccca66c2f00a4c0f5"
-    },
-    {
-      "source": "harris-county-public-library",
       "eventId": "hcpl-7156bdcf",
       "summary": "The Next Chapter - Monday Matinee - Indiana Jones and the Last Crusade (1989)",
       "date": "2026-08-24T14:00-05:00[America/Chicago]",
@@ -6652,24 +6009,10 @@
     },
     {
       "source": "harris-county-public-library",
-      "eventId": "hcpl-71cf95c7",
-      "summary": "Beginner Spanish - FULL",
-      "date": "2026-08-19T15:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a4d65b94b05243d005587dc"
-    },
-    {
-      "source": "harris-county-public-library",
       "eventId": "hcpl-7340b24c",
       "summary": "Computer Assistance",
       "date": "2026-08-24T13:00-05:00[America/Chicago]",
       "url": "https://hcpl.bibliocommons.com/events/699caa811e64afd01e5d72e6"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-7508a75e",
-      "summary": "Teen-Tween Space",
-      "date": "2026-08-19T14:45-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a5a6bae7b79214226a9415a"
     },
     {
       "source": "harris-county-public-library",
@@ -6726,20 +6069,6 @@
       "summary": "Kidney Smart",
       "date": "2026-08-24T11:00-05:00[America/Chicago]",
       "url": "https://hcpl.bibliocommons.com/events/6a5e4ff19943bdf31ea038d1"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-800e4cdb",
-      "summary": "Diamond Art Painting Club **18 and Up Only**",
-      "date": "2026-08-19T15:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a61624adaaaf4f51a20ad08"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-822987c2",
-      "summary": "Preschool Story Time",
-      "date": "2026-08-19T10:30-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6949c5789fb47cac989f2933"
     },
     {
       "source": "harris-county-public-library",
@@ -6890,20 +6219,6 @@
     },
     {
       "source": "harris-county-public-library",
-      "eventId": "hcpl-a3a8ebfe",
-      "summary": "Teen Movie -- Happy Death Day",
-      "date": "2026-08-19T17:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a67a3757b79214226aba4b2"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-a3adc39f",
-      "summary": "Speed Friending **21+ ONLY**",
-      "date": "2026-08-19T18:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a6281c2d23de82955c8dcf3"
-    },
-    {
-      "source": "harris-county-public-library",
       "eventId": "hcpl-a51027d2",
       "summary": "Adult Computer Classes with Harris County Universal Services",
       "date": "2026-08-24T13:00-05:00[America/Chicago]",
@@ -6932,13 +6247,6 @@
     },
     {
       "source": "harris-county-public-library",
-      "eventId": "hcpl-ab742a05",
-      "summary": "Intermediate Dungeons & Dragons",
-      "date": "2026-08-19T17:15-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a692057d23de82955c96ad2"
-    },
-    {
-      "source": "harris-county-public-library",
       "eventId": "hcpl-abd38468",
       "summary": "Clase de Ingles - English Class (Intro)",
       "date": "2026-08-22T14:00-05:00[America/Chicago]",
@@ -6950,13 +6258,6 @@
       "summary": "ESL Conversation Class",
       "date": "2026-08-24T18:30-05:00[America/Chicago]",
       "url": "https://hcpl.bibliocommons.com/events/691b40cb0562322f003099e5"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-aeb72a33",
-      "summary": "Oil Pastel Class",
-      "date": "2026-08-19T13:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a56acd7fb418a28009afcd9"
     },
     {
       "source": "harris-county-public-library",
@@ -6995,13 +6296,6 @@
     },
     {
       "source": "harris-county-public-library",
-      "eventId": "hcpl-b3b02500",
-      "summary": "Tales for Tots",
-      "date": "2026-08-19T10:15-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/69836d071e64afd01e59142d"
-    },
-    {
-      "source": "harris-county-public-library",
       "eventId": "hcpl-b3b2eca6",
       "summary": "American Mah-jongg Meetup at Bear CreekFeatured Event. American Mah-jongg Meetup at Bear Creek",
       "date": "2026-08-20T17:30-05:00[America/Chicago]",
@@ -7023,31 +6317,10 @@
     },
     {
       "source": "harris-county-public-library",
-      "eventId": "hcpl-b71434a8",
-      "summary": "Baby Story Time",
-      "date": "2026-08-19T10:15-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a84985bbe14820029882966"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-b876e647",
-      "summary": "StorytimeFeatured Event. Storytime",
-      "date": "2026-08-19T10:30-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/698e591e491b809c6f197504"
-    },
-    {
-      "source": "harris-county-public-library",
       "eventId": "hcpl-b9e631ee",
       "summary": "Toddler Time",
       "date": "2026-08-20T10:15-05:00[America/Chicago]",
       "url": "https://hcpl.bibliocommons.com/events/691e3df7683f18f7608dc6d5"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-bbbcf40e",
-      "summary": "Lil Buds Toddler Story Time",
-      "date": "2026-08-19T10:30-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a690e24e9de6536001edd2b"
     },
     {
       "source": "harris-county-public-library",
@@ -7107,20 +6380,6 @@
     },
     {
       "source": "harris-county-public-library",
-      "eventId": "hcpl-cbca5c2b",
-      "summary": "Cross-stitching for Beginners",
-      "date": "2026-08-19T15:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a60e97ca41369ab2c67de82"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-cd249e39",
-      "summary": "FutureU Free Help and Resources",
-      "date": "2026-08-19T12:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a836cfb3b6c71003e598147"
-    },
-    {
-      "source": "harris-county-public-library",
       "eventId": "hcpl-cec7351a",
       "summary": "Free Computer Classes",
       "date": "2026-08-25T10:00-05:00[America/Chicago]",
@@ -7142,45 +6401,10 @@
     },
     {
       "source": "harris-county-public-library",
-      "eventId": "hcpl-d2eb55d8",
-      "summary": "Basic ESL",
-      "date": "2026-08-19T14:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a7a40d11d5d03c3a6bbaf1c"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-d3422c71",
-      "summary": "Pathway to Citizenship | Camino a la Ciudadanía",
-      "date": "2026-08-19T18:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/691e40b161706d280023b19d"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-d383926e",
-      "summary": "Upstairs Library Hobbit Scavenger Hunt **18 and Up Only**",
-      "date": "2026-08-19T16:30-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a62855e898f0d205114734b"
-    },
-    {
-      "source": "harris-county-public-library",
       "eventId": "hcpl-d54d8d55",
       "summary": "Tiny Tots",
       "date": "2026-08-24T10:30-05:00[America/Chicago]",
       "url": "https://hcpl.bibliocommons.com/events/6949c351ea69de6e00109e3d"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-d7a5aa21",
-      "summary": "Curriculum Swap Drop Off",
-      "date": "2026-08-19T10:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a6159349e0a050e3e53f55a"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-d7ab97da",
-      "summary": "WU Film Appreciation Club",
-      "date": "2026-08-19T18:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/696583731e64afd01e53fa77"
     },
     {
       "source": "harris-county-public-library",
@@ -7223,13 +6447,6 @@
       "summary": "Needlework Network",
       "date": "2026-08-25T11:30-05:00[America/Chicago]",
       "url": "https://hcpl.bibliocommons.com/events/6a7c9cc25d8bc300315a232c"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-e368d13a",
-      "summary": "Prekindergarten Story Time",
-      "date": "2026-08-19T10:30-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/69499621ea69de6e00109681"
     },
     {
       "source": "harris-county-public-library",
@@ -7289,20 +6506,6 @@
     },
     {
       "source": "harris-county-public-library",
-      "eventId": "hcpl-ec70c510",
-      "summary": "Clases de Computación Gratis",
-      "date": "2026-08-19T12:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a612fff9943bdf31ea0d224"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-ecf14775",
-      "summary": "Computer Basics Class - Clase de Computacion Basico",
-      "date": "2026-08-19T13:30-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a592f5bcca66c2f00a3e57d"
-    },
-    {
-      "source": "harris-county-public-library",
       "eventId": "hcpl-edc7fdad",
       "summary": "Hangin' with the Homies",
       "date": "2026-08-20T11:00-05:00[America/Chicago]",
@@ -7359,13 +6562,6 @@
     },
     {
       "source": "harris-county-public-library",
-      "eventId": "hcpl-f4a5dd8d",
-      "summary": "Pre-K+ Storytime (for Walkers & Talkers)",
-      "date": "2026-08-19T11:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a42ee38ed35742f00ff425e"
-    },
-    {
-      "source": "harris-county-public-library",
       "eventId": "hcpl-f5292496",
       "summary": "Journalling Group",
       "date": "2026-08-22T14:30-05:00[America/Chicago]",
@@ -7398,13 +6594,6 @@
       "summary": "Giggle & Grow Storytime",
       "date": "2026-08-25T11:30-05:00[America/Chicago]",
       "url": "https://hcpl.bibliocommons.com/events/6a84b9bd4cb69d003e21ab4b"
-    },
-    {
-      "source": "harris-county-public-library",
-      "eventId": "hcpl-ff7c3f7f",
-      "summary": "Wiggle Wednesday",
-      "date": "2026-08-19T11:00-05:00[America/Chicago]",
-      "url": "https://hcpl.bibliocommons.com/events/6a42e6974407827f8aa83e38"
     },
     {
       "source": "harris-county-public-library",
@@ -7569,6 +6758,13 @@
     },
     {
       "source": "house-of-blues-houston",
+      "eventId": "tm-G5dIZ_5CDbqdm",
+      "summary": "DragonForce: Inhuman Rampage 20th Anniversary",
+      "date": "2026-11-18T18:30-06:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/dragonforce-inhuman-rampage-20th-anniversary-houston-texas-11-18-2026/event/3A0064B3BB61D0EE"
+    },
+    {
+      "source": "house-of-blues-houston",
       "eventId": "tm-G5dIZ_5l5hDDc",
       "summary": "Kelela - new avatar live",
       "date": "2026-09-17T19:00-05:00[America/Chicago]",
@@ -7718,7 +6914,7 @@
       "source": "house-of-blues-houston",
       "eventId": "tm-G5dIZ_dmErt5w",
       "summary": "W.A.S.P. - 1984 TO HEADLESS",
-      "date": "2026-09-20T19:00-05:00[America/Chicago]",
+      "date": "2026-09-20T18:00-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/wasp-1984-to-headless-houston-texas-09-20-2026/event/3A00643BA77A92F2"
     },
     {
@@ -7947,13 +7143,6 @@
     },
     {
       "source": "houston-dash",
-      "eventId": "tm-Z7r9jZ1A7OxbA",
-      "summary": "Houston Dash vs. Chicago Stars FC",
-      "date": "2026-08-19T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OxbA"
-    },
-    {
-      "source": "houston-dash",
       "eventId": "tm-Z7r9jZ1A7OxbF",
       "summary": "Houston Dash vs. Orlando Pride",
       "date": "2026-10-18T12:00-05:00[America/Chicago]",
@@ -8042,13 +7231,6 @@
       "summary": "Houston Dash vs. Portland Thorns FC",
       "date": "2026-11-01T16:00-06:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7Oxba"
-    },
-    {
-      "source": "houston-dynamo-fc",
-      "eventId": "tm-Z7r9jZ1A7OxbA",
-      "summary": "Houston Dash vs. Chicago Stars FC",
-      "date": "2026-08-19T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OxbA"
     },
     {
       "source": "houston-dynamo-fc",
@@ -9886,6 +9068,13 @@
     },
     {
       "source": "punch-line-comedy-club",
+      "eventId": "tm-G5dIZ_G2GkWLj",
+      "summary": "Luke Kidgell - Live In The USA",
+      "date": "2026-11-18T19:30-06:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/luke-kidgell-live-in-the-usa-houston-texas-11-18-2026/event/3A0064C3CC1BD7DC"
+    },
+    {
+      "source": "punch-line-comedy-club",
       "eventId": "tm-G5dIZ_GVfuADX",
       "summary": "Splou",
       "date": "2026-09-11T21:15-05:00[America/Chicago]",
@@ -9911,6 +9100,13 @@
       "summary": "Joanne Mcnally: Pinotphile",
       "date": "2026-10-21T19:30-05:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/joanne-mcnally-pinotphile-houston-texas-10-21-2026/event/3A006468109E4D92"
+    },
+    {
+      "source": "punch-line-comedy-club",
+      "eventId": "tm-G5dIZ_okBUPuI",
+      "summary": "Ha Ha Halloween Showcase",
+      "date": "2026-10-31T20:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/ha-ha-halloween-showcase-houston-texas-10-31-2026/event/3A006511BADA5368"
     },
     {
       "source": "punch-line-comedy-club",
@@ -10494,6 +9690,12 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
+      "eventId": "a-shell-of-a-time-how-to-build-a-sea-shell-2026-08-20",
+      "summary": "A Shell Of A Time: How To Build A Sea Shell",
+      "date": "2026-08-20T10:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "texas-parks-wildlife-houston",
       "eventId": "adopt-a-beach-2026-09-19",
       "summary": "Adopt A Beach",
       "date": "2026-09-19T10:00-05:00[America/Chicago]"
@@ -10839,12 +10041,6 @@
       "eventId": "east-texas-fire-and-nature-festival-3rd-annual-2026-10-10",
       "summary": "East Texas Fire and Nature Festival - 3rd Annual",
       "date": "2026-10-10T10:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
-      "eventId": "education-center-open-2026-08-19",
-      "summary": "Education Center Open",
-      "date": "2026-08-19T13:30-05:00[America/Chicago]"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -11268,6 +10464,12 @@
     },
     {
       "source": "texas-parks-wildlife-houston",
+      "eventId": "moonlight-melodies-with-wild-notes-2026-09-19",
+      "summary": "Moonlight Melodies with Wild Notes🌓🎼",
+      "date": "2026-09-19T20:00-05:00[America/Chicago]"
+    },
+    {
+      "source": "texas-parks-wildlife-houston",
       "eventId": "nature-center-open-hours-2026-09-04",
       "summary": "Nature Center Open Hours",
       "date": "2026-09-04T13:00-05:00[America/Chicago]"
@@ -11373,12 +10575,6 @@
       "eventId": "pond-life-2026-08-23",
       "summary": "Pond Life",
       "date": "2026-08-23T11:00-05:00[America/Chicago]"
-    },
-    {
-      "source": "texas-parks-wildlife-houston",
-      "eventId": "reading-ranger-2026-08-19",
-      "summary": "Reading Ranger",
-      "date": "2026-08-19T10:30-05:00[America/Chicago]"
     },
     {
       "source": "texas-parks-wildlife-houston",
@@ -11839,13 +11035,6 @@
     },
     {
       "source": "white-oak-music-hall",
-      "eventId": "tm-G5dIZ_5pEYhMw",
-      "summary": "Chanel Beads",
-      "date": "2026-10-07T19:00-05:00[America/Chicago]",
-      "url": "https://www.ticketmaster.com/chanel-beads-houston-texas-10-07-2026/event/3A0064B5A7C1BDF2"
-    },
-    {
-      "source": "white-oak-music-hall",
       "eventId": "tm-G5dIZ_5pJ55cC",
       "summary": "Noah Gundersen: Rites of Spring US TOUR FALL 2026",
       "date": "2026-11-09T18:30-06:00[America/Chicago]",
@@ -11962,6 +11151,13 @@
       "summary": "THE KILANS: COULD YOU KEEP IT DARK? TOUR",
       "date": "2026-11-07T19:00-06:00[America/Chicago]",
       "url": "https://www.ticketmaster.com/the-kilans-could-you-keep-it-houston-texas-11-07-2026/event/3A00650AE7D7E08F"
+    },
+    {
+      "source": "white-oak-music-hall",
+      "eventId": "tm-G5dIZ_8MXc4oL",
+      "summary": "LUCY (Cooper B. Handy)",
+      "date": "2026-10-26T19:00-05:00[America/Chicago]",
+      "url": "https://www.ticketmaster.com/lucy-cooper-b-handy-houston-texas-10-26-2026/event/3A00650DFEB5545F"
     },
     {
       "source": "white-oak-music-hall",
@@ -12444,7 +11640,7 @@
     {
       "name": "childrens-museum-houston-main",
       "type": "Ripper",
-      "events": 22,
+      "events": 23,
       "expectEmpty": false,
       "source": "childrens-museum-houston"
     },
@@ -12486,7 +11682,7 @@
     {
       "name": "downtown-houston-plus-downtown-houston-plus",
       "type": "Ripper",
-      "events": 107,
+      "events": 110,
       "expectEmpty": false,
       "source": "downtown-houston-plus"
     },
@@ -12507,14 +11703,14 @@
     {
       "name": "good-on-paper-bookshop-good-on-paper-bookshop",
       "type": "Ripper",
-      "events": 8,
+      "events": 7,
       "expectEmpty": false,
       "source": "good-on-paper-bookshop"
     },
     {
       "name": "harris-county-public-library-harris-county-public-library",
       "type": "Ripper",
-      "events": 199,
+      "events": 143,
       "expectEmpty": false,
       "source": "harris-county-public-library"
     },
@@ -12535,7 +11731,7 @@
     {
       "name": "house-of-blues-houston-house-of-blues-houston",
       "type": "Ripper",
-      "events": 59,
+      "events": 60,
       "expectEmpty": false,
       "source": "house-of-blues-houston"
     },
@@ -12549,14 +11745,14 @@
     {
       "name": "houston-dash-houston-dash",
       "type": "Ripper",
-      "events": 14,
+      "events": 13,
       "expectEmpty": false,
       "source": "houston-dash"
     },
     {
       "name": "houston-dynamo-fc-houston-dynamo-fc",
       "type": "Ripper",
-      "events": 14,
+      "events": 13,
       "expectEmpty": false,
       "source": "houston-dynamo-fc"
     },
@@ -12696,14 +11892,14 @@
     {
       "name": "project-row-houses-project-row-houses",
       "type": "Ripper",
-      "events": 149,
+      "events": 152,
       "expectEmpty": false,
       "source": "project-row-houses"
     },
     {
       "name": "punch-line-comedy-club-punch-line-comedy-club",
       "type": "Ripper",
-      "events": 94,
+      "events": 96,
       "expectEmpty": false,
       "source": "punch-line-comedy-club"
     },
@@ -12822,7 +12018,7 @@
     {
       "name": "tag-the-heights",
       "type": "Aggregate",
-      "events": 79,
+      "events": 78,
       "expectEmpty": false,
       "source": "tag-the-heights"
     },
@@ -12843,7 +12039,7 @@
     {
       "name": "tag-music",
       "type": "Aggregate",
-      "events": 857,
+      "events": 858,
       "expectEmpty": false,
       "source": "tag-music"
     },
@@ -12857,7 +12053,7 @@
     {
       "name": "tag-downtown",
       "type": "Aggregate",
-      "events": 434,
+      "events": 438,
       "expectEmpty": false,
       "source": "tag-downtown"
     },
@@ -12906,14 +12102,14 @@
     {
       "name": "tag-art",
       "type": "Aggregate",
-      "events": 222,
+      "events": 225,
       "expectEmpty": false,
       "source": "tag-art"
     },
     {
       "name": "tag-museum-district",
       "type": "Aggregate",
-      "events": 97,
+      "events": 98,
       "expectEmpty": false,
       "source": "tag-museum-district"
     },
@@ -12948,21 +12144,21 @@
     {
       "name": "tag-family",
       "type": "Aggregate",
-      "events": 39,
+      "events": 40,
       "expectEmpty": false,
       "source": "tag-family"
     },
     {
       "name": "tag-kids",
       "type": "Aggregate",
-      "events": 22,
+      "events": 23,
       "expectEmpty": false,
       "source": "tag-kids"
     },
     {
       "name": "tag-museum",
       "type": "Aggregate",
-      "events": 26,
+      "events": 27,
       "expectEmpty": false,
       "source": "tag-museum"
     },
@@ -13011,14 +12207,14 @@
     {
       "name": "tag-montrose",
       "type": "Aggregate",
-      "events": 304,
+      "events": 301,
       "expectEmpty": false,
       "source": "tag-montrose"
     },
     {
       "name": "tag-community",
       "type": "Aggregate",
-      "events": 748,
+      "events": 697,
       "expectEmpty": false,
       "source": "tag-community"
     },
@@ -13032,28 +12228,28 @@
     {
       "name": "tag-books",
       "type": "Aggregate",
-      "events": 22,
+      "events": 21,
       "expectEmpty": false,
       "source": "tag-books"
     },
     {
       "name": "tag-educational",
       "type": "Aggregate",
-      "events": 200,
+      "events": 144,
       "expectEmpty": false,
       "source": "tag-educational"
     },
     {
       "name": "tag-library",
       "type": "Aggregate",
-      "events": 199,
+      "events": 143,
       "expectEmpty": false,
       "source": "tag-library"
     },
     {
       "name": "tag-citywide",
       "type": "Aggregate",
-      "events": 229,
+      "events": 173,
       "expectEmpty": false,
       "source": "tag-citywide"
     },
@@ -13074,21 +12270,21 @@
     {
       "name": "tag-sports",
       "type": "Aggregate",
-      "events": 59,
+      "events": 57,
       "expectEmpty": false,
       "source": "tag-sports"
     },
     {
       "name": "tag-soccer",
       "type": "Aggregate",
-      "events": 28,
+      "events": 26,
       "expectEmpty": false,
       "source": "tag-soccer"
     },
     {
       "name": "tag-women",
       "type": "Aggregate",
-      "events": 14,
+      "events": 13,
       "expectEmpty": false,
       "source": "tag-women"
     },
@@ -13137,7 +12333,7 @@
     {
       "name": "tag-third-ward",
       "type": "Aggregate",
-      "events": 151,
+      "events": 154,
       "expectEmpty": false,
       "source": "tag-third-ward"
     },
@@ -13235,14 +12431,14 @@
     {
       "name": "tag-comedy",
       "type": "Aggregate",
-      "events": 189,
+      "events": 191,
       "expectEmpty": false,
       "source": "tag-comedy"
     },
     {
       "name": "tag-entertainment",
       "type": "Aggregate",
-      "events": 106,
+      "events": 108,
       "expectEmpty": false,
       "source": "tag-entertainment"
     },
@@ -13403,7 +12599,7 @@
     {
       "name": "tag-all",
       "type": "Aggregate",
-      "events": 2215,
+      "events": 2163,
       "expectEmpty": false,
       "source": "tag-all"
     },
