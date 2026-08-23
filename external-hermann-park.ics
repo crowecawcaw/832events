@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Hermann Park Conservancy - ECPv6.17.2//NONSGML v1.0//EN
+PRODID:-//Hermann Park Conservancy - ECPv6.17.3//NONSGML v1.0//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Hermann Park Conservancy
@@ -49,45 +49,6 @@ DTSTART:20271107T070000
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260820T090000
-DTEND;TZID=America/Chicago:20260820T120000
-DTSTAMP:20260805T194457Z
-CREATED:20260805T194457Z
-LAST-MODIFIED:20260805T194457Z
-UID:28402-1787216400-1787227200@hermannpark.org
-SUMMARY:Japanese Garden Volunteer Day
-DESCRIPTION:Join us every Thursday for hands-on gardening projects at the Japanese Garden. From 9 a.m. to 12 p.m.\, come help with seasonal tasks like planting\, weeding\, mulching\, and pruning. A great way to connect with others and make a visible impact in the Park! \nNo experience needed. All ages are welcome. \nClick here to sign up!
-URL:https://hermannpark.org/event/japanese-garden-volunteer-day-13/
-LOCATION:Japanese Garden\, Hermann Park Japanese Garden\, Houston\, TX\, 77035\, United States
-ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2024/04/japanese_garden_2__-_photo_by_patrick_talley-scaled.jpg
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260822T080000
-DTEND;TZID=America/Chicago:20260822T090000
-DTSTAMP:20260805T192610Z
-CREATED:20260805T192610Z
-LAST-MODIFIED:20260805T192610Z
-UID:28378-1787385600-1787389200@hermannpark.org
-SUMMARY:Sound Bath with Daemein Smith (Prioritizing Peace)
-DESCRIPTION:Join us for a peaceful morning experience in Hermann Park with a free guided Sound Bath led by Daemein Smith of Prioritizing Peace. Set against the natural beauty of the Tsuru Family Terrace in the Commons\, this immersive meditation experience uses sound and vibration to promote relaxation\, mindfulness\, and emotional well-being. Guests are encouraged to slow down\, reset\, and “Prioritize Peace” through a calming journey of sound healing in nature. \n Tsuru Family Terrace\n Saturday\, August 22\n 8 – 9 a.m.\n Free Community Session \nGuests are encouraged to bring a yoga mat if available. Blankets and pillows are also recommended for additional comfort. All ages and experience levels welcome. \nParking: Free parking available across the street from the Commons in Lot S (6215 Main St\, Houston\, TX 77030). Additional street parking available along Main Street.
-URL:https://hermannpark.org/event/sound-bath-with-daemein-smith-prioritizing-peace-9/
-LOCATION:The Commons
-ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2025/08/P4060009-scaled.jpg
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260822T080000
-DTEND;TZID=America/Chicago:20260822T110000
-DTSTAMP:20260805T194640Z
-CREATED:20260805T194640Z
-LAST-MODIFIED:20260805T194640Z
-UID:28408-1787385600-1787396400@hermannpark.org
-SUMMARY:McGovern Centennial Gardens Volunteer Day
-DESCRIPTION:Join us every Saturday for hands-on gardening projects at the McGovern Centennial Gardens. From 8 a.m. to 11 a.m.\, come help with seasonal tasks like planting\, weeding\, mulching\, and pruning. A great way to connect with others and make a visible impact in the Park! \nNo experience needed. All ages are welcome. \nMeet at the Family Garden in McGovern Centennial Gardens. \n Click here to sign up!
-URL:https://hermannpark.org/event/mcgovern-centennial-gardens-volunteer-day-17/
-LOCATION:McGovern Centennial Gardens\, 1500 Hermann Drive\, Houston\, TX\, 77004\, United States
-ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2024/04/mcg_aerial4-scaled.jpg
-END:VEVENT
-BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260826T080000
 DTEND;TZID=America/Chicago:20260826T110000
 DTSTAMP:20260805T194413Z
@@ -114,6 +75,19 @@ LOCATION:Japanese Garden\, Hermann Park Japanese Garden\, Houston\, TX\, 77035\,
 ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2024/04/japanese_garden_2__-_photo_by_patrick_talley-scaled.jpg
 END:VEVENT
 BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260828T120000
+DTEND;TZID=America/Chicago:20260828T200000
+DTSTAMP:20260821T205259Z
+CREATED:20260821T204937Z
+LAST-MODIFIED:20260821T205259Z
+UID:28528-1787918400-1787947200@hermannpark.org
+SUMMARY:Thirsty's Fan HQ Pop-Up by Coca-Cola
+DESCRIPTION:Get those H’s UP! Thirsty’s is ready to swarm into H-town to refresh your fan work with some ice-cold Coca-Cola\, photo-worthy moments\, and exclusive merch\, as the Houston Texans take on the Carolina Panthers this weekend. \nLake Plaza at Hermann Park (6100 Hermann Park Drive\, Houston\, TX 77030) \nFriday\, August 28: 12 – 8 p.m.\nSaturday\, August 29: 12 – 8 p.m. \nSpecial Appearances: \nFriday\, August 28 \n\nBrian Cushing (3 – 4:30 p.m.)\nTexans Mariachi + Houston Texans Cheerleaders (5 – 6 p.m.)\n\nSaturday\, August 29 \n\nDeep Steel Thunder Drumline (2 – 3 p.m.)\nToro + Houston Texans Cheerleaders (5 – 6 p.m.)\n\n\nLearn more at https://www.thirstysfanhq.com/texans-houston-tx.
+URL:https://hermannpark.org/event/thirstys-fan-hq-pop-up-by-coca-cola/
+LOCATION:Lake Plaza
+ATTACH;FMTTYPE=image/png:https://hermannpark.org/wp-content/uploads/2026/08/Texans-Coca-Cola-Activation.png
+END:VEVENT
+BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260829T080000
 DTEND;TZID=America/Chicago:20260829T090000
 DTSTAMP:20260805T192638Z
@@ -138,6 +112,19 @@ DESCRIPTION:Join us every Saturday for hands-on gardening projects at the McGove
 URL:https://hermannpark.org/event/mcgovern-centennial-gardens-volunteer-day-18/
 LOCATION:McGovern Centennial Gardens\, 1500 Hermann Drive\, Houston\, TX\, 77004\, United States
 ATTACH;FMTTYPE=image/jpeg:https://hermannpark.org/wp-content/uploads/2024/04/mcg_aerial4-scaled.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20260829T120000
+DTEND;TZID=America/Chicago:20260829T200000
+DTSTAMP:20260821T205257Z
+CREATED:20260821T205115Z
+LAST-MODIFIED:20260821T205257Z
+UID:28532-1788004800-1788033600@hermannpark.org
+SUMMARY:Thirsty's Fan HQ Pop-Up by Coca-Cola
+DESCRIPTION:Get those H’s UP! Thirsty’s is ready to swarm into H-town to refresh your fan work with some ice-cold Coca-Cola\, photo-worthy moments\, and exclusive merch\, as the Houston Texans take on the Carolina Panthers this weekend. \nLake Plaza at Hermann Park (6100 Hermann Park Drive\, Houston\, TX 77030) \nFriday\, August 28: 12 – 8 p.m.\nSaturday\, August 29: 12 – 8 p.m. \nSpecial Appearances: \nFriday\, August 28 \n\nBrian Cushing (3 – 4:30 p.m.)\nTexans Mariachi + Houston Texans Cheerleaders (5 – 6 p.m.)\n\nSaturday\, August 29 \n\nDeep Steel Thunder Drumline (2 – 3 p.m.)\nToro + Houston Texans Cheerleaders (5 – 6 p.m.)\n\nLearn more at https://www.thirstysfanhq.com/texans-houston-tx.
+URL:https://hermannpark.org/event/thirstys-fan-hq-pop-up-by-coca-cola-2/
+LOCATION:Lake Plaza
+ATTACH;FMTTYPE=image/png:https://hermannpark.org/wp-content/uploads/2026/08/Texans-Coca-Cola-Activation.png
 END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260905T080000

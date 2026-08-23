@@ -1,6 +1,11 @@
 [
   {
     "type": "ParseError",
+    "reason": "Cannot parse dateline: \"Now through Sunday, August 23 11am - 5pm\"",
+    "context": "Vibe Artisan Market: Now through Sunday, August 23 11am - 5pm"
+  },
+  {
+    "type": "ParseError",
     "reason": "Failed to fetch events page 1: HTTP 500",
     "context": "https://thedeluxetheater.com/wp-json/wp/v2/mec-events?page=1&per_page=100"
   }

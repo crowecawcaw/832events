@@ -1,7 +1,20 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 CALSCALE:GREGORIAN
-PRODID:adamgibbons/ics
+PRODID:832.events
 METHOD:PUBLISH
+X-WR-CALNAME:Saint Arnold Brewing Company
 X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:zhQnMY2m_YQydAUq4G3DN
+SUMMARY:Oktoberfest at Saint Arnold
+DTSTAMP:20260823T033654Z
+DTSTART:20261004T153000Z
+DESCRIPTION:https://www.saintarnold.com/oktoberfest-at-saint-arnold/
+URL:https://www.saintarnold.com/oktoberfest-at-saint-arnold/
+GEO:29.7809;-95.32
+LOCATION:2000 Lyons Ave\, Houston\, TX 77020
+TRANSP:TRANSPARENT
+DURATION:PT2H
+END:VEVENT
 END:VCALENDAR

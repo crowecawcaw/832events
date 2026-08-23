@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Houston Arboretum &amp; Nature Center - ECPv6.17.2//NONSGML v1.0//EN
+PRODID:-//Houston Arboretum &amp; Nature Center - ECPv6.17.3//NONSGML v1.0//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Houston Arboretum &amp; Nature Center
@@ -48,32 +48,6 @@ TZNAME:CST
 DTSTART:20271107T070000
 END:STANDARD
 END:VTIMEZONE
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260822T090000
-DTEND;TZID=America/Chicago:20260822T110000
-DTSTAMP:20260528T162403Z
-CREATED:20260528T162402Z
-LAST-MODIFIED:20260528T162403Z
-UID:10001546-1787389200-1787396400@houstonarboretum.org
-SUMMARY:Fourth Saturday Phenology Walk
-DESCRIPTION:Fourth Saturday of the Month9:00 – 11:00 amFree\, donations appreciatedAll ages\, minors must be accompanied by an adult \n\n\n\nMeet in front of the Nature Center building \n\n\n\nDiscover the hidden seasonal rhythms of nature firsthand on our guided Phenology Walks\, where we track the life cycles of different plants across ecosystems\, from the first spring bud burst to winter dormancy. You’ll learn how shifting weather patterns and climate change influence the timing of these important events in our local ecosystems and how you can become a community scientist\, contributing vital data from your own backyard to a global research initiative.  \n\n\n\nThese relaxing morning walks are led by scientists from Rice University and staff from the Arboretum. We welcome nature enthusiasts of all ages\, however kids 12 years and younger must be accompanied by a guardian. \n\n\n\nLearn more about the study of phenology and ways you can contribute at https://www.usanpn.org/nn \n\n\n\n\n\n\n\nCommunity Science Partner
-URL:https://houstonarboretum.org/event/fourth-saturday-phenology-walk/2026-08-22/
-CATEGORIES:Adult Programs,Community Science,Fourth Saturday Phenology Walk,Plants & Gardening
-ATTACH;FMTTYPE=image/png:https://houstonarboretum.org/wp-content/uploads/2026/05/Phenology-1280-x-720.png
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/Chicago:20260822T100000
-DTEND;TZID=America/Chicago:20260822T120000
-DTSTAMP:20260811T170821Z
-CREATED:20260421T213551Z
-LAST-MODIFIED:20260811T170821Z
-UID:10001534-1787392800-1787400000@houstonarboretum.org
-SUMMARY:A Year in the Wildlife Garden
-DESCRIPTION:$22 member / $37 nonmemberAges 12+\, minors must be accompanied by an adult \n\n\n\nWhat’s the best time to plant wildflowers\, put up a birdhouse\, or clean up the garden after a freeze? With a little understanding of nature’s rhythms\, you can plan your year to maximize wildlife benefits and minimize your stress. In this class we’ll talk through a year in the wildlife garden and send you home with a calendar of to-dos for each season. \n\n\n\nPlease dress for the weather and wear walking shoes. \n\n\n\n\nsold out
-URL:https://houstonarboretum.org/event/a-year-in-the-wildlife-garden/
-CATEGORIES:Adult Programs,Nature & Wildlife,Plants & Gardening
-ATTACH;FMTTYPE=image/jpeg:https://houstonarboretum.org/wp-content/uploads/2026/04/Pollinator-Garden-Kelsey-Low.jpg
-END:VEVENT
 BEGIN:VEVENT
 DTSTART;TZID=America/Chicago:20260829T170000
 DTEND;TZID=America/Chicago:20260829T190000
@@ -437,5 +411,31 @@ DESCRIPTION:The Houston Arboretum is partnering with the Gulf Coast Regional Blo
 URL:https://houstonarboretum.org/event/blood-drive/2026-10-03/
 CATEGORIES:Blood Drives,Health & Wellness
 ATTACH;FMTTYPE=image/jpeg:https://houstonarboretum.org/wp-content/uploads/2023/05/Blood-Drive-Group-Small-1024x538-1.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261003T110000
+DTEND;TZID=America/Chicago:20261003T114500
+DTSTAMP:20260702T140232Z
+CREATED:20240702T163043Z
+LAST-MODIFIED:20260702T140232Z
+UID:10001622-1791025200-1791027900@houstonarboretum.org
+SUMMARY:Guided Nature Hikes
+DESCRIPTION:Select Saturdays (weather permitting)10:00 am – 10:45 am and 11:00 am – 11:45 amFreeAll ages\, minors must be accompanied by an adultHikes are limited to 20 spots on a first come\, first served basis. \n\n\n\nPlease meet at the Information signage located between the 610 Parking Loop and the Nature Center Building. \n\n\n\nVenture out with an Arboretum Guide for a hike through the Houston Arboretum. Explore our ecosystems to learn about the local wildlife\, plants\, and natural history of our beautiful nature center. Hikes will vary but expect to spend 40-45 minutes on the trail.  \n\n\n\nPlease come prepared for the outdoors. Closed toe shoes\, a water bottle\, weather-appropriate hiking attire\, and bug spray are recommended. \n\n\n\nupcoming hikes\n\n\n\n\n\nEnglish \n\n\n\nSeptember 12October 3November 7December 5 \n\n\n\n\n\nEspañol \n\n\n\nSeptiembre 19Octubre 10Noviembre 14Diciembre 12 \n\n\n\n\n\nNo groups\, please. Groups can book a Private Group Tour during the week\, and Scout Groups can visit our Girl Scout and Boy Scout pages to book a private opportunity. \n\n\n\n\nGuided Nature Hikes en español
+URL:https://houstonarboretum.org/event/guided-nature-hikes/2026-10-03/2/
+CATEGORIES:Adult Programs,Family Programs,Nature & Wildlife
+ATTACH;FMTTYPE=image/jpeg:https://houstonarboretum.org/wp-content/uploads/2024/07/Guided-Nature-Hike-16x9-1.jpg
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20261005T093000
+DTEND;TZID=America/Chicago:20261005T101500
+DTSTAMP:20260702T180350Z
+CREATED:20240701T180347Z
+LAST-MODIFIED:20260702T180350Z
+UID:10001648-1791192600-1791195300@houstonarboretum.org
+SUMMARY:Tyke Hikes
+DESCRIPTION:For children 18 months – 4 years\n\n\n\n\n\nEncourage your child’s curiosity about nature and spend time with them exploring outdoors! Children with an adult companion can join a naturalist for a story reading\, a simple nature or sensory development activity\, and a stroller-friendly hike on the beautiful Arboretum trails. Arrive dressed in close-toed shoes and comfortable play clothes. Be prepared for the weather including hat\, sunscreen\, jackets\, raincoat\, or rain boots\, as needed. Enjoy an interesting new nature experience each week with themes such as ponds\, bones\, senses\, and leaves.  \n\n\n\nSelect Mondays9:30 am-10:15 am10:30 am-11:15 am \n\n\n\n\n\n\n\npricing\n\n\n\nFree for Family Tree Members and above (please have member card on hand)$7 per child for nonmembers\, pay at the door. \n\n\n\nNo preregistration is necessary; however\, attendance is limited to 20 children per session. Sign-up will take place in front of the Beautyberry Classroom. Doors will close 15 minutes after the class begins or once the session is full. Siblings who are not within the age range may attend but may not participate. \n\n\n\n\n\n\n\n\n\nupcoming hikes\n\n\n\nSeptember 14\, 21\, 28October 5\, 12\, 26November 2\, 9\, 16December 7\, 14\, 21 \n\n\n\n\n\n\n\n\nTYKE HIKES EN ESPAÑOL!\n\n\n\n\nIs your child wild about nature? The Arboretum is the natural place to celebrate a birthday.
+URL:https://houstonarboretum.org/event/tyke-hikes/2026-10-05/1/
+CATEGORIES:Children’s Programs,Preschool
+ATTACH;FMTTYPE=image/jpeg:https://houstonarboretum.org/wp-content/uploads/2024/07/Tyke-Hike-Arrowwood-Pond-16x9-1.jpg
 END:VEVENT
 END:VCALENDAR

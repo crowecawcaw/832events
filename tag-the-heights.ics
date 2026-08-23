@@ -6,42 +6,10 @@ METHOD:PUBLISH
 X-WR-CALNAME:The Heights Events
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/webp:https://houstonheights.org
- /wp-content/uploads/2026/01/GarbageIcon.webp
-ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/202
- 6/01/GarbageIcon.webp
-UID:YHdgk4li7eCTOeWeEIhTk
-SUMMARY:Garbage Pick Up
-DTSTAMP:20260822T032649Z
-DTSTART;TZID=America/Chicago:20260906T090000
-DESCRIPTION:https://houstonheights.org/event/gabage-pick-up-5/\n\nFrom Hous
-	ton Heights Association
-URL:https://houstonheights.org/event/gabage-pick-up-5/
-X-CALRIPPER-SOURCE:houston-heights-association
-CATEGORIES:Houston Heights Association
-TRANSP:TRANSPARENT
-DURATION:PT24H
-END:VEVENT
-BEGIN:VEVENT
-UID:OKtnU1crTioYnTqPM-_tO
-SUMMARY:Books & Bourbon Book Club
-DTSTAMP:20260822T032649Z
-DTSTART:20260820T003000Z
-DESCRIPTION:https://www.goodonpaperbooks.com/events\n\nFrom Good on Paper B
-	ooks
-URL:https://www.goodonpaperbooks.com/events
-GEO:29.8096;-95.3914
-LOCATION:250 W 19th St Suite D\, Houston\, TX 77008
-X-CALRIPPER-SOURCE:good-on-paper-bookshop
-CATEGORIES:Good on Paper Books
-TRANSP:TRANSPARENT
-DURATION:PT1H30M
-END:VEVENT
-BEGIN:VEVENT
-UID:1iOkvvo7AsITenDmozCZD
+UID:XuukvetWfFvqsoUn84i0L
 SUMMARY:Sleepy Storytime with Bookseller Michelle
-DTSTAMP:20260822T032649Z
-DTSTART:20260821T230000Z
+DTSTAMP:20260823T033701Z
+DTSTART;TZID=America/Chicago:20260906T090000
 DESCRIPTION:https://www.goodonpaperbooks.com/events\n\nFrom Good on Paper B
 	ooks
 URL:https://www.goodonpaperbooks.com/events
@@ -58,9 +26,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:Ew_fNf9BB14q3ywMPFI4I
+UID:4q9qK5MBVhU9aqbqQc7Cu
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260822T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -74,37 +42,9 @@ TRANSP:TRANSPARENT
 DURATION:PT7H
 END:VEVENT
 BEGIN:VEVENT
-IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://www.eurekaheights.c
- om/wp-content/uploads/2026/08/event-2026-08-22.png
-ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2
- 026/08/event-2026-08-22.png
-UID:i285Y5j2FaOfTQURXIeZ-
-SUMMARY:10th Anniversary Party
-DTSTAMP:20260822T032649Z
-DTSTART:20260822T120000Z
-DESCRIPTION:We’re turning 10\, and we’re celebrating ALL WEEK LONG! \nJoin 
-	us as we kick off our 10-Year Birthday Bash with a full week of events: \n
-	Tuesday: Special High Five Members Night\nWednesday: Eureka Heights-themed
-	 Trivia\nThursday: Celebrate 10 Years of Laces Out Run Club\nFriday: Eurek
-	a Heights Garage Sale\nSaturday: Our 10-Year Birthday Bash!\nVIP Entry: 10
-	 AM–12 PM\nOG beer pours\nLive music from CC Rider Band\nIce House Radio D
-	J\nLive screen printing by GooseWorks\nFirkin tappings\nAnd a whole lot mo
-	re! \nSunday: Eureka & Chill with a special Discs & Donuts post-Eureka Hei
-	ghts party. \nCome raise a glass\, celebrate a decade of great beer\, and 
-	make some new memories with us. We can’t wait to celebrate with you! \nLin
-	k for VIP party\n\nhttps://www.eurekaheights.com/event/10th-anniversary-pa
-	rty/\n\nFrom Eureka Heights Brewery
-URL:https://www.eurekaheights.com/event/10th-anniversary-party/
-LOCATION:Tap Room\, 941 W 18TH ST.\, Houston\, TX\, 77008\, United States
-X-CALRIPPER-SOURCE:eureka-heights-brew-co
-CATEGORIES:Eureka Heights Brewery
-TRANSP:TRANSPARENT
-DURATION:PT1H
-END:VEVENT
-BEGIN:VEVENT
-UID:sJZYOTBDJPJC0-R2lowQx
+UID:T2r3r7x-2jB3JSao8eu8Q
 SUMMARY:White Balloon Sale @ Good on Paper
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260822T150000Z
 DESCRIPTION:https://www.goodonpaperbooks.com/events\n\nFrom Good on Paper B
 	ooks
@@ -122,9 +62,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:NBAnLqP7Z2Sc-_Kk61pbU
+UID:pClf9lxpuVuRwrvU3zT1Z
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260823T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -144,9 +84,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://images.squarespace
 ATTACH;FMTTYPE=image/jpeg:https://images.squarespace-cdn.com/content/v1/59d
  e6d50268b967f32bb0e30/1654523673612-VBGNST8QRK30EWF08ZSP/153635513_4398733
  97438067_1526613263952669805_n.jpg
-UID:ND2t594k5i4r27WksGhVa
+UID:Uw-NGM4hFAuT0kjqtnU4k
 SUMMARY:Heights Mercantile Farmer's Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260823T140000Z
 DESCRIPTION:https://www.heightsmercantile.com/events/11/23-pdyxw-t2zznt3gny
 	54b5-92afj-9m453-swwsz-5sme7-l7wx8-k8hsn-amc9r-h4k39-csyj8-nfcnh-4dr87-brx
@@ -166,9 +106,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://www.eurekaheights.c
  om/wp-content/uploads/2026/08/event-2026-08-25.png
 ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2
  026/08/event-2026-08-25.png
-UID:6fZfKsfj3HgRSWrx75AT8
+UID:Ae1M_YA91rv1WMQ-DqD7j
 SUMMARY:High Five Membership Night
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260825T170000Z
 DESCRIPTION:High Five Member night is every Tuesday where Members receive $
 	4 pints. We will be doing a special members night on the last Tuesday of t
@@ -187,9 +127,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://www.eurekaheights.c
  om/wp-content/uploads/2026/08/book-margareta-magnusson.png
 ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2
  026/08/book-margareta-magnusson.png
-UID:jSXFkpYHUc59yD8NDwy-F
+UID:xBBbgBXi-WEqsNjBf8jSz
 SUMMARY:EH Books and Brews
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260825T183000Z
 DESCRIPTION:Join our monthly book club as we sit around have a beer and dis
 	cuss our monthly book!\n\nhttps://www.eurekaheights.com/event/eh-books-and
@@ -202,9 +142,9 @@ TRANSP:TRANSPARENT
 DURATION:PT1H
 END:VEVENT
 BEGIN:VEVENT
-UID:Uw6o_YQoeLdVM9iT9zY0n
+UID:0Vgfk-q32ac3WQFvglPaK
 SUMMARY:The Past Tense Book Club
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260826T003000Z
 DESCRIPTION:https://www.goodonpaperbooks.com/events\n\nFrom Good on Paper B
 	ooks
@@ -221,10 +161,10 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/webp:https://houstonheights.org
  /wp-content/uploads/2026/08/CE80E614CB2502B3AA564CB4359A4921_0.webp
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/202
  6/08/CE80E614CB2502B3AA564CB4359A4921_0.webp
-UID:b6Z5mmB9d8GhC1neDTxdg
+UID:tIKWVRXcRPiGlhICYXGR_
 SUMMARY:Heights Garden Club Presents: Angel Wing Arts brings this Bee Water
 	ing Station Craft to the Heights Garden Club
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260826T183000Z
 DESCRIPTION:AUGUST 26th at 6:30pm\, join us at the Heights Fire Station \nC
 	arolyn\, of Angel Wing Arts\, (Instagram @cacoatesart or @anglewingarts) a
@@ -261,9 +201,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://www.eurekaheights.
  com/wp-content/uploads/2025/06/general-trivia.jpg
 ATTACH;FMTTYPE=image/jpeg:https://www.eurekaheights.com/wp-content/uploads/
  2025/06/general-trivia.jpg
-UID:hZEsLKGcB0HNXp-DMcvj4
+UID:6T3O-sx4W-5W8S4gT0dGC
 SUMMARY:Trivia Night
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260826T190000Z
 DESCRIPTION:It’s the battle of the brains! Join us every Wednesday at 7 PM 
 	as we test how much random knowledge you’ve retained since high school.\nW
@@ -278,9 +218,9 @@ TRANSP:TRANSPARENT
 DURATION:PT1H
 END:VEVENT
 BEGIN:VEVENT
-UID:5e_Oo_OrqlEUvot3h_MDy
+UID:BihujEZeJgRAFAhPy4p6Y
 SUMMARY:Book Buffet Book Club
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260826T233000Z
 DESCRIPTION:https://www.goodonpaperbooks.com/events\n\nFrom Good on Paper B
 	ooks
@@ -297,9 +237,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/webp:https://houstonheights.org
  /wp-content/uploads/2026/01/Garbage-Recyle-Icons.webp
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/202
  6/01/Garbage-Recyle-Icons.webp
-UID:5uJLrhu3L2yNM0a8oX8f9
+UID:KP00cWNdQXIyazCrzqXij
 SUMMARY:Garbage and Recycle Pick Up
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260827T000000Z
 DESCRIPTION:https://houstonheights.org/event/gabage-and-recycle-pick-up-10/
 	\n\nFrom Houston Heights Association
@@ -314,9 +254,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://www.eurekaheights.c
  om/wp-content/uploads/2025/06/11.png
 ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2
  025/06/11.png
-UID:VDIg6u7yguILEz17PDVqB
+UID:jtZBAzddwLfWpvMafuZju
 SUMMARY:Laces Out Run Club
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260827T173000Z
 DESCRIPTION:Every Thursday at 5:30 and 6:30 PM\, our Laces Out Run Club mem
 	bers start on a route of their choosing\, ranging from a 2\, 3.5\, 5\, or 
@@ -338,9 +278,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:OIV0kNoPCOcCGR3-Ge-s2
+UID:OFpyWAUiTqENDNqd75gDM
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260829T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -358,9 +298,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://www.eurekaheights.
  com/wp-content/uploads/2026/08/IMG_5953.jpeg
 ATTACH;FMTTYPE=image/jpeg:https://www.eurekaheights.com/wp-content/uploads/
  2026/08/IMG_5953.jpeg
-UID:0WDW36Lkpb6nojcm-A6KS
+UID:1v7p1Te5fnuYiwuWtKbts
 SUMMARY:HOPERA presents Opera Karaoke!
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260829T190000Z
 DESCRIPTION:Our FREE Season Kickoff Party at Eureka Heights 7pm-close. \nWe
 	’re kicking things off the only way we know how—with another unforgettable
@@ -375,10 +315,10 @@ TRANSP:TRANSPARENT
 DURATION:PT1H
 END:VEVENT
 BEGIN:VEVENT
-UID:iTu3_pTduFBsWie-uyquz
+UID:111FuAUKMKbWHS6FX-27C
 SUMMARY:Book Launch: Lunar Rendezvous with Debut Author and Former NASA Man
 	ager Vesper Black
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260830T003000Z
 DESCRIPTION:https://www.goodonpaperbooks.com/events\n\nFrom Good on Paper B
 	ooks
@@ -396,9 +336,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:P5RIrPHyFq3hAW1mXorcs
+UID:gLoUtxUye4RfIKdQ9JR9E
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260830T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -417,9 +357,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-Apr25-145-scaled-e1753461453830.jpg
-UID:QmwiljfXhl2t7N3K-7L1m
+UID:pUiG0jbNFuUPOjraYVuQI
 SUMMARY:Mariachi at the Market with Alamo Tamales
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260830T120000Z
 DESCRIPTION:Enjoy live mariachi music at the Houston Farmers Market on the 
 	last Sunday of every month from 12–2 PM\, presented in partnership with Al
@@ -439,9 +379,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://www.eurekaheights.
  com/wp-content/uploads/2025/06/general-trivia.jpg
 ATTACH;FMTTYPE=image/jpeg:https://www.eurekaheights.com/wp-content/uploads/
  2025/06/general-trivia.jpg
-UID:GlHAvlWFRaKJJSmWFo0pz
+UID:LSgjoobXGJOJeWFeQuJNo
 SUMMARY:Trivia Night
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260902T190000Z
 DESCRIPTION:It’s the battle of the brains! Join us every Wednesday at 7 PM 
 	as we test how much random knowledge you’ve retained since high school.\nW
@@ -460,9 +400,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/webp:https://houstonheights.org
  /wp-content/uploads/2026/01/GarbageIcon.webp
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/202
  6/01/GarbageIcon.webp
-UID:wTSuEW8PactRjb5SQreVt
+UID:N3qpgTZg5bFN8bcgyXYWx
 SUMMARY:Gabage Pick Up
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260903T000000Z
 DESCRIPTION:https://houstonheights.org/event/gabage-pick-up-6/\n\nFrom Hous
 	ton Heights Association
@@ -477,9 +417,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://www.eurekaheights.c
  om/wp-content/uploads/2025/06/11.png
 ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2
  025/06/11.png
-UID:fRZ9tjGrjWTd5A8JB-wKv
+UID:vxxo6zMzvixL7__wE-QDD
 SUMMARY:Laces Out Run Club
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260903T173000Z
 DESCRIPTION:Every Thursday at 5:30 and 6:30 PM\, our Laces Out Run Club mem
 	bers start on a route of their choosing\, ranging from a 2\, 3.5\, 5\, or 
@@ -501,9 +441,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:KeX3Licw56fF3P8yx9ml_
+UID:JeOndqx2aaskCI7N26-2Q
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260905T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -522,9 +462,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:ZA0MNCPuLbY9fWazNGzHE
+UID:XU5LvcRkq5St0lN0nY9ZI
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260906T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -538,9 +478,9 @@ TRANSP:TRANSPARENT
 DURATION:PT7H
 END:VEVENT
 BEGIN:VEVENT
-UID:-uMrOs0qQ8mB5eNLN6Px1
+UID:RMWkD8xrnNAdoaSw5ci08
 SUMMARY:Rice Village Farmers Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260906T140000Z
 DESCRIPTION:Community farmers market featuring local produce\, artisan good
 	s\, and specialty foods.\n\nhttps://www.ricevillagehouston.com/\n\nFrom Ri
@@ -561,9 +501,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://images.squarespace
 ATTACH;FMTTYPE=image/jpeg:https://images.squarespace-cdn.com/content/v1/59d
  e6d50268b967f32bb0e30/1654523205327-47CYLDFUN7DU0LB9K9UH/200784326_1844298
  47023927_6696795934744819395_n.jpg
-UID:rt8D37mLWcWFxd1FWfMk3
+UID:3giY-NfVN8uEeXFPrT-CH
 SUMMARY:Heights Mercantile Farmer's Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260906T140000Z
 DESCRIPTION:https://www.heightsmercantile.com/events/11/23-pdyxw-t2zznt3gny
 	54b5-92afj-9m453-swwsz-5sme7-l7wx8-k8hsn-amc9r-h4k39-csyj8-nfcnh-4dr87-brx
@@ -583,9 +523,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://www.eurekaheights.
  com/wp-content/uploads/2025/06/general-trivia.jpg
 ATTACH;FMTTYPE=image/jpeg:https://www.eurekaheights.com/wp-content/uploads/
  2025/06/general-trivia.jpg
-UID:U0qnBOLhnZU5isjW9e2QA
+UID:eZSK6_TV2n1iQ3UC2hhdt
 SUMMARY:Trivia Night
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260909T190000Z
 DESCRIPTION:It’s the battle of the brains! Join us every Wednesday at 7 PM 
 	as we test how much random knowledge you’ve retained since high school.\nW
@@ -604,9 +544,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://www.eurekaheights.c
  om/wp-content/uploads/2025/06/11.png
 ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2
  025/06/11.png
-UID:keB1rBhLKGgPFJgZ-IaCE
+UID:YJxrT8XhkVc32HB5Qktdr
 SUMMARY:Laces Out Run Club
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260910T173000Z
 DESCRIPTION:Every Thursday at 5:30 and 6:30 PM\, our Laces Out Run Club mem
 	bers start on a route of their choosing\, ranging from a 2\, 3.5\, 5\, or 
@@ -628,9 +568,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:CtNJKNwgEopU9R6HoO1X0
+UID:WxvQEtvn9swRTvEp1qTrJ
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260912T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -649,9 +589,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:8ktlUXDRhoK7mDO3O22ZL
+UID:xLuDHCloFu51-xoc2NMtt
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260913T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -669,9 +609,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/webp:https://houstonheights.org
  /wp-content/uploads/2026/01/September-Place-Holder-ARt.webp
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/202
  6/01/September-Place-Holder-ARt.webp
-UID:TU8STHND9ahOs68XJyjiO
+UID:rGv7rIsQo0BUCqZgXuz3e
 SUMMARY:September 2026 General Meeting
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260914T183000Z
 DESCRIPTION:https://houstonheights.org/event/september-2026-general-meeting
 	/\n\nFrom Houston Heights Association
@@ -688,9 +628,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://www.eurekaheights.
  com/wp-content/uploads/2025/06/general-trivia.jpg
 ATTACH;FMTTYPE=image/jpeg:https://www.eurekaheights.com/wp-content/uploads/
  2025/06/general-trivia.jpg
-UID:OOUFlJLlwjgDxLBZA7e0P
+UID:8Z7D8a0MRJOrqDDa6p9Ry
 SUMMARY:Trivia Night
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260916T190000Z
 DESCRIPTION:It’s the battle of the brains! Join us every Wednesday at 7 PM 
 	as we test how much random knowledge you’ve retained since high school.\nW
@@ -709,9 +649,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/webp:https://houstonheights.org
  /wp-content/uploads/2026/01/GarbageIcon.webp
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/202
  6/01/GarbageIcon.webp
-UID:V_t0tj_88SXsckyu57HFw
+UID:d3k8s9b-fMreNFw4F5otl
 SUMMARY:Garbage Pick Up
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260917T000000Z
 DESCRIPTION:https://houstonheights.org/event/gabage-pick-up-7/\n\nFrom Hous
 	ton Heights Association
@@ -726,9 +666,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://www.eurekaheights.c
  om/wp-content/uploads/2025/06/11.png
 ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2
  025/06/11.png
-UID:3XM8thMLiCudIMY2xZCYQ
+UID:y4Io5jKJupj5XAgNDfdb5
 SUMMARY:Laces Out Run Club
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260917T173000Z
 DESCRIPTION:Every Thursday at 5:30 and 6:30 PM\, our Laces Out Run Club mem
 	bers start on a route of their choosing\, ranging from a 2\, 3.5\, 5\, or 
@@ -750,9 +690,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:K1uCJXvNpi4rw1i2eET-0
+UID:unTKVcpH-yqRcTw60226a
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260919T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -771,9 +711,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:nc4SVtak2bJjOWMACOQIi
+UID:Ui174x5zhb6VkMw7fdJTK
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260920T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -793,9 +733,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://images.squarespace
 ATTACH;FMTTYPE=image/jpeg:https://images.squarespace-cdn.com/content/v1/59d
  e6d50268b967f32bb0e30/1654523121150-XE2M808JHV6UV1G9GZ8E/274710400_3539680
  80070102_2782260298910822061_n.jpg
-UID:SzyBdhDw7j3lzWEMn7kFC
+UID:bPsFS67U4nwlmX2T13mKY
 SUMMARY:Heights Mercantile Farmer's Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260920T140000Z
 DESCRIPTION:https://www.heightsmercantile.com/events/11/23-pdyxw-t2zznt3gny
 	54b5-92afj-9m453-swwsz-5sme7-l7wx8-k8hsn-amc9r-h4k39-csyj8-nfcnh-4dr87-brx
@@ -815,9 +755,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://www.eurekaheights.
  com/wp-content/uploads/2025/06/general-trivia.jpg
 ATTACH;FMTTYPE=image/jpeg:https://www.eurekaheights.com/wp-content/uploads/
  2025/06/general-trivia.jpg
-UID:LSBptg1uOXKNnU4niNiOZ
+UID:fDj6YzVVjl1K-uaSDrakl
 SUMMARY:Trivia Night
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260923T190000Z
 DESCRIPTION:It’s the battle of the brains! Join us every Wednesday at 7 PM 
 	as we test how much random knowledge you’ve retained since high school.\nW
@@ -836,9 +776,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/webp:https://houstonheights.org
  /wp-content/uploads/2026/01/Garbage-Recyle-Icons.webp
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/202
  6/01/Garbage-Recyle-Icons.webp
-UID:uWcoG0zGcxUt1VUKMQHCV
+UID:rKn4LvE8bi0HacI7mN7lT
 SUMMARY:Garbage and Recycle Pick Up
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260924T000000Z
 DESCRIPTION:https://houstonheights.org/event/gabage-and-recycle-pick-up-11/
 	\n\nFrom Houston Heights Association
@@ -853,9 +793,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/png:https://www.eurekaheights.c
  om/wp-content/uploads/2025/06/11.png
 ATTACH;FMTTYPE=image/png:https://www.eurekaheights.com/wp-content/uploads/2
  025/06/11.png
-UID:n-ChGR7s2QO993JQTLdmc
+UID:Ga_2w0RvXT6MaeDDB_KIL
 SUMMARY:Laces Out Run Club
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260924T173000Z
 DESCRIPTION:Every Thursday at 5:30 and 6:30 PM\, our Laces Out Run Club mem
 	bers start on a route of their choosing\, ranging from a 2\, 3.5\, 5\, or 
@@ -877,9 +817,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:8N0Vj_4cCd6fGSMApz9Oa
+UID:-dVoaLbSajwAnOzKEK6Ag
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260926T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -898,9 +838,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:P8O-u50qr87oBYN2rdeX4
+UID:S0MO-wY_vMQJqOovCYGOB
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260927T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -919,9 +859,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-Apr25-145-scaled-e1753461453830.jpg
-UID:kFVWegiWGaD-yNCZb0G9-
+UID:hUAI5BRik_0lSBuT0PQ2V
 SUMMARY:Mariachi at the Market with Alamo Tamales
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20260927T120000Z
 DESCRIPTION:Enjoy live mariachi music at the Houston Farmers Market on the 
 	last Sunday of every month from 12–2 PM\, presented in partnership with Al
@@ -941,9 +881,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/webp:https://houstonheights.org
  /wp-content/uploads/2026/01/GarbageIcon.webp
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/202
  6/01/GarbageIcon.webp
-UID:SX0aT652thvUoaur1n6ca
+UID:vgk0Fhr-uQpyUtgqMDNeQ
 SUMMARY:Garbage Pick Up
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261001T000000Z
 DESCRIPTION:https://houstonheights.org/event/gabage-pick-up-8/\n\nFrom Hous
 	ton Heights Association
@@ -958,9 +898,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/webp:https://houstonheights.org
  /wp-content/uploads/2026/07/Screenshot-2026-08-04-121806.webp
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/202
  6/07/Screenshot-2026-08-04-121806.webp
-UID:dlvLfFlALoJc2qiBgsmMp
+UID:-pnjJTq_T5RmKN4buHSje
 SUMMARY:Speakeasy Casino Night
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261002T180000Z
 DESCRIPTION:Houston Heights Association · Est. 1973\n        \n        Spea
 	keasyCasino Nightin the Heights\n        \n          One night\, back in t
@@ -1054,9 +994,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:bxAF-E3kM-cCVnD_uaEhg
+UID:xFM4EntNoz600kKsap0Eo
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261003T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -1070,9 +1010,9 @@ TRANSP:TRANSPARENT
 DURATION:PT7H
 END:VEVENT
 BEGIN:VEVENT
-UID:eR44VvzISv50cta4frP1j
+UID:qAh6LLJ0o3bHHxXS8uQ6D
 SUMMARY:Heights Urban Forestry Day
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261004T090000Z
 DESCRIPTION:Heights Urban Forestry Day\nCelebrating the Yale Green Corridor
 	 10 year Anniversary\nCommunity and Non-Profit Partners Participating / fa
@@ -1093,9 +1033,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:myTrLqH8pSypmLyd19b0c
+UID:A-xtRZ0qvNnZ_HtSnRxoM
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261004T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -1113,9 +1053,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/webp:https://houstonheights.org
  /wp-content/uploads/2026/01/Garbage-Recyle-Icons.webp
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/202
  6/01/Garbage-Recyle-Icons.webp
-UID:0WD0BJGKClYsh8nx9mM-Q
+UID:FhIn4zDMQ_4d8l9b3axis
 SUMMARY:Garbage and Recycle Pick Up
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261008T000000Z
 DESCRIPTION:https://houstonheights.org/event/gabage-and-recycle-pick-up-12/
 	\n\nFrom Houston Heights Association
@@ -1131,9 +1071,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:d-lzVvA9ghLcCYtEg3wuf
+UID:k1CUISekU-4MSTuDWv5_j
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261010T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -1152,9 +1092,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:pPfd6qxss8U5ebTv0NDmV
+UID:nO8EUisAp9iPQVKYOdmFm
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261011T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -1172,9 +1112,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/webp:https://houstonheights.org
  /wp-content/uploads/2026/01/October-Place-Holder-ARt.webp
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/202
  6/01/October-Place-Holder-ARt.webp
-UID:9w9jf0cJf6INdKqZ8VPWt
+UID:kELiU-WLLjiu6N8CE17IY
 SUMMARY:October 2026 General Meeting
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261012T183000Z
 DESCRIPTION:https://houstonheights.org/event/october-2026-general-meeting/\
 	n\nFrom Houston Heights Association
@@ -1191,9 +1131,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/webp:https://houstonheights.org
  /wp-content/uploads/2026/01/GarbageIcon.webp
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/202
  6/01/GarbageIcon.webp
-UID:iHTe0NwANUo2a2P7uKX7P
+UID:yOoclYDseVmKMcEUPiJrx
 SUMMARY:Garbage Pick Up
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261015T000000Z
 DESCRIPTION:https://houstonheights.org/event/gabage-pick-up-9/\n\nFrom Hous
 	ton Heights Association
@@ -1209,9 +1149,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:bvl31OM1ESqYFPjoqr-eC
+UID:LNMorwM8UG5FV8CvrTktY
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261017T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -1225,9 +1165,9 @@ TRANSP:TRANSPARENT
 DURATION:PT7H
 END:VEVENT
 BEGIN:VEVENT
-UID:ZHBWE6YAzuBPNcpQzifFp
+UID:yNgFEUEFLXn2LvnMQNqu-
 SUMMARY:Heights Urban Forestry - FREE TREE GIVEAWAY DAY
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261018T090000Z
 DESCRIPTION:Heights Urban Forestry\nFREE TREE GIVEAWAY DAY\nCommunity and N
 	on-Profit Partners Participating\n\nhoustonheights.org/urbanforestry\n\nht
@@ -1246,9 +1186,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:DmtnPlpj3HmS4zzPuIwv_
+UID:NjBGgnze0kJAMA4o9VhAw
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261018T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -1266,9 +1206,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/webp:https://houstonheights.org
  /wp-content/uploads/2026/01/Garbage-Recyle-Icons.webp
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/202
  6/01/Garbage-Recyle-Icons.webp
-UID:jsqCUbpJHlJ7_MquF1hXY
+UID:0L4hdgoiTKQ-ON6eshUUX
 SUMMARY:Garbage and Recycle Pick Up
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261022T000000Z
 DESCRIPTION:https://houstonheights.org/event/gabage-and-recycle-pick-up-13/
 	\n\nFrom Houston Heights Association
@@ -1284,9 +1224,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:l19Nn9pKkqaoc868lMiMI
+UID:6FrIstpnECjQ-nhKtAU_C
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261024T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -1305,9 +1245,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:b9j44T5EAHi-sEljkifCp
+UID:F4sCHkeLvoWAnE0hobRAV
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261025T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -1326,9 +1266,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-Apr25-145-scaled-e1753461453830.jpg
-UID:RkLo6_U50feWEe5LXWQcO
+UID:U938EeK7yaVpuNZcVVMFY
 SUMMARY:Mariachi at the Market with Alamo Tamales
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261025T120000Z
 DESCRIPTION:Enjoy live mariachi music at the Houston Farmers Market on the 
 	last Sunday of every month from 12–2 PM\, presented in partnership with Al
@@ -1348,9 +1288,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/webp:https://houstonheights.org
  /wp-content/uploads/2026/01/GarbageIcon.webp
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/202
  6/01/GarbageIcon.webp
-UID:NE3VtNf1EQT3ATC64nCDy
+UID:pQFSKYnMKOevx-EGAJ6D4
 SUMMARY:Garbage Pick Up
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261029T000000Z
 DESCRIPTION:https://houstonheights.org/event/gabage-pick-up-10/\n\nFrom Hou
 	ston Heights Association
@@ -1365,9 +1305,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/webp:https://houstonheights.org
  /wp-content/uploads/2026/08/image0.webp
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/202
  6/08/image0.webp
-UID:VDumNz5bL3riihBAmjsch
+UID:JhdeviHLN_tLVYgHCetC0
 SUMMARY:Donovan Halloween Party
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261031T090000Z
 DESCRIPTION:https://houstonheights.org/event/donovan-halloween-party/\n\nFr
 	om Houston Heights Association
@@ -1384,9 +1324,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/webp:https://houstonheights.org
  /wp-content/uploads/2026/08/image0.webp
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/202
  6/08/image0.webp
-UID:sP5VZft0ofoJsnxJMeOSg
+UID:bTmcnB9FgMDYEroRg6p8d
 SUMMARY:Donovan Park Halloween Party
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261031T090000Z
 DESCRIPTION:https://houstonheights.org/event/donovan-park-halloween-party/\
 	n\nFrom Houston Heights Association
@@ -1404,9 +1344,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:XG9pe7gzwC5ur8uatUZ-s
+UID:MtaNUR0VKxcwclxX_u2wG
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261031T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -1425,9 +1365,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:7sQ1oUkGZql5IxafaG82D
+UID:6fIT29DxdlLyGXtv7Ed2i
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261101T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -1445,9 +1385,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/webp:https://houstonheights.org
  /wp-content/uploads/2026/01/Garbage-Recyle-Icons.webp
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/202
  6/01/Garbage-Recyle-Icons.webp
-UID:jYIGC-YntvTTtn14Gz1WD
+UID:axxrLaduEHESYvj8myP6X
 SUMMARY:Garbage and Recycle Pick Up
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261105T000000Z
 DESCRIPTION:https://houstonheights.org/event/gabage-and-recycle-pick-up-14/
 	\n\nFrom Houston Heights Association
@@ -1463,9 +1403,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:Z3aP4__O5tjraEwekem8p
+UID:hcfxfI-27SZkbcGSkkdVY
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261107T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -1483,9 +1423,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/webp:https://houstonheights.org
  /wp-content/uploads/2026/07/Art-Crawl.webp
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/202
  6/07/Art-Crawl.webp
-UID:J8AnQATZ29uyxPt66cbDW
+UID:IHZ12Z5V9yxtgooO1fonY
 SUMMARY:HHA Art Crawl
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261107T170000Z
 DESCRIPTION:https://houstonheights.org/event/hha-art-crawl/\n\nFrom Houston
 	 Heights Association
@@ -1501,9 +1441,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:PVrB2yj9Y1uI6Uks3IU7n
+UID:i4HWLuiHHeoiYUK5wMGM_
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261108T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -1521,9 +1461,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/webp:https://houstonheights.org
  /wp-content/uploads/2026/01/November-Place-Holder-ARt.webp
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/202
  6/01/November-Place-Holder-ARt.webp
-UID:1GamUHAlyOX4wB7XC5eWr
+UID:ySZo3nBNrPfiYU_7nyvSO
 SUMMARY:November 2026 General Meeting
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261109T183000Z
 DESCRIPTION:https://houstonheights.org/event/november-2026-general-meeting/
 	\n\nFrom Houston Heights Association
@@ -1540,9 +1480,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/webp:https://houstonheights.org
  /wp-content/uploads/2026/01/GarbageIcon.webp
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/202
  6/01/GarbageIcon.webp
-UID:GlB_g8kkmNSCzDVW2Oq_z
+UID:ndEdrVp5Wrutad329-d-Q
 SUMMARY:Garbage Pick Up
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261112T000000Z
 DESCRIPTION:https://houstonheights.org/event/gabage-pick-up-11/\n\nFrom Hou
 	ston Heights Association
@@ -1558,9 +1498,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:GHHThRP6Hh0fKas11yz7V
+UID:vkC8bR8h8AHGUaI67p65Q
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261114T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -1579,9 +1519,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:jJahDHk-JTWMGNZafzt4J
+UID:h4x7c1BwCkU5NZS13-tyP
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261115T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
@@ -1599,9 +1539,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/webp:https://houstonheights.org
  /wp-content/uploads/2026/01/Garbage-Recyle-Icons.webp
 ATTACH;FMTTYPE=image/webp:https://houstonheights.org/wp-content/uploads/202
  6/01/Garbage-Recyle-Icons.webp
-UID:1uyEoAsqg60pzdUq1IW2Q
+UID:Lg52JfzmhnL-mdciFO2vj
 SUMMARY:Garbage and Recycle Pick Up
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261119T000000Z
 DESCRIPTION:https://houstonheights.org/event/gabage-and-recycle-pick-up-15/
 	\n\nFrom Houston Heights Association
@@ -1617,9 +1557,9 @@ IMAGE;VALUE=URI;DISPLAY=BADGE;FMTTYPE=image/jpeg:https://thehoustonfarmersm
  .jpg
 ATTACH;FMTTYPE=image/jpeg:https://thehoustonfarmersmarket.com/wp-content/up
  loads/FarmersMarket-May24-103-scaled-e1753462229492.jpg
-UID:coGnWX0pwPDTGeXmrCa8_
+UID:65brk0TFgB1dMPzqd9Ifo
 SUMMARY:Shop Local Market
-DTSTAMP:20260822T032649Z
+DTSTAMP:20260823T033701Z
 DTSTART:20261121T100000Z
 DESCRIPTION:Discover one-of-a-kind gifts\, handmade art\, lush plants\, cra
 	ft coffee\, sweet treats\, and more at Shop Local Market’s weekend pop-up!
