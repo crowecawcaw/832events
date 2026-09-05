@@ -1,14 +1,14 @@
 name: Menil Collection
-status: investigating
+status: added
 platform: eventbrite
 url: https://www.eventbrite.com/o/the-menil-collection-103448972041
 tags:
   - Museums
   - Art
-  - Museum District
+  - Midtown
 firstSeen: 2026-06-14
-lastChecked: 2026-08-06
-notes: "Free world-class art museum; showed 2+ events on 2026-08-05 but returned 0 events on 2026-08-06. May be temporary or events have ended. Re-verify next cycle."
+lastChecked: 2026-08-09
+notes: "Free world-class art museum with Eventbrite integration. Implemented as built-in Eventbrite ripper."
 impl:
   organizerId: "103448972041"
   observedEventCount: 2

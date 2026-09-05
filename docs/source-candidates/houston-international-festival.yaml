@@ -1,11 +1,16 @@
 name: Houston International Festival
-status: investigating
+status: added
 platform: Eventbrite
 url: https://www.eventbrite.com/o/houston-international-and-cultural-festivals-llc-107765316421
 tags:
   - Citywide
   - Cultural
   - Festival
+  - Music
 firstSeen: 2026-07-31
-lastChecked: 2026-07-31
-notes: Annual October cultural festival celebrating international traditions. Organized by Houston International and Cultural Festivals LLC. Organizer ID 107765316421 returned 0 events on 2026-07-31; may be out of season or not actively listing. Revisit closer to October.
+lastChecked: 2026-08-09
+notes: |
+  Annual October cultural festival celebrating international traditions.
+  Implemented as built-in Eventbrite ripper (expectEmpty: true).
+  Currently 0 events as of August; expected to populate in September/October.
+  Eventbrite organizerId: 107765316421

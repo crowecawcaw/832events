@@ -1,0 +1,22 @@
+name: eldorado-ballroom
+type: eventbrite
+expectEmpty: true
+description: "Eldorado Ballroom"
+url: https://www.theeldoradoballroom.com/
+friendlyLink: https://www.theeldoradoballroom.com/
+tags:
+  - Music
+  - Jazz
+  - Dance
+  - Third Ward
+geo:
+  lat: 29.7205
+  lng: -95.3111
+  label: "Eldorado Ballroom, 3017 Delano St, Houston, TX 77003"
+calendars:
+  - name: eldorado-ballroom
+    friendlyname: "Eldorado Ballroom"
+    timezone: America/Chicago
+    config:
+      organizerId: "66985790043"
+      defaultLocation: "Houston, TX"

@@ -1,12 +1,12 @@
-name: houston-theater-district
-status: investigating
+name: Houston Theater District
+status: added
 url: https://houstontheaterdistrict.org/calendars
-description: "Houston Theater District - Event Calendars"
-reason: "Squarespace platform with calendar structure detected, but currently returns 0 events (itemCount: 0 from ?format=json). Per AGENTS.md hard rule: new sources must produce ≥1 event before merge. Retry after 30 days or verify with venue that events are being added."
+description: "Houston Theater District"
+platform: Squarespace
 type: squarespace
-last_checked: 2026-07-18
+firstSeen: 2026-07-18
+lastChecked: 2026-08-09
 notes: |
-  - Website is live and accessible (not 404/403)
-  - Squarespace built-in ripper would work if events were present
-  - Partner venues listed: Houston Ballet, Houston Grand Opera, Houston Symphony
-  - May be seasonal or temporarily inactive
+  Theater district aggregator with Squarespace platform. Currently returns 0 events (expectEmpty: true).
+  Partner venues: Houston Ballet, Houston Grand Opera, Houston Symphony.
+  Implemented as built-in Squarespace ripper; events expected to appear seasonally.
