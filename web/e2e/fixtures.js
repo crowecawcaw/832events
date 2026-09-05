@@ -36,6 +36,145 @@ export const mockEvents = [
   { icsUrl: 'test-ripper-cal2.ics', summary: 'Movie Premiere', description: 'A film', location: 'SIFF', date: toJoda(future(3)) },
 ]
 
+// Derive the streaming payload pair (events-index.ndjson + event-descriptions.json)
+// from a plain events fixture, mirroring lib/discovery.ts buildEventsIndexStream:
+// a metadata header line, then date-sorted events with `description` replaced by
+// a `d` dictionary index; the dictionary doc carries the same `generated` stamp.
+export function streamPairFor(events, generated = '2026-01-01T00:00:00.000Z') {
+  const toMs = (s) => new Date(String(s).replace(/\[.*\]$/, '')).getTime()
+  const sorted = [...events].sort((a, b) => toMs(a.date) - toMs(b.date))
+  const descriptions = []
+  const byText = new Map()
+  const stream = sorted.map(({ description, ...rest }) => {
+    if (description === undefined || description === '') return rest
+    if (!byText.has(description)) { byText.set(description, descriptions.length); descriptions.push(description) }
+    return { ...rest, d: byText.get(description) }
+  })
+  const header = { format: 'events-stream/1', generated }
+  return {
+    ndjson: [header, ...stream].map((e) => JSON.stringify(e)).join('\n') + '\n',
+    dictionary: { generated, descriptions },
+  }
+}
+
+// Two-phase load fixtures (issue 649). The "soon" payload covers only the near
+// term and omits `description`; the full index adds a far-future event that the
+// soon payload doesn't contain. Used only by payload-split.spec.js, which
+// overrides both events routes so the shared specs' counts are untouched.
+export const mockEventsSoon = [
+  { icsUrl: 'test-ripper-cal1.ics', summary: 'Soon Jazz Show', location: 'Neumos, Capitol Hill', date: toJoda(future(2)), lat: 47.61, lng: -122.32 },
+]
+export const mockEventsFull = [
+  { icsUrl: 'test-ripper-cal1.ics', summary: 'Soon Jazz Show', description: 'Live jazz tonight', location: 'Neumos, Capitol Hill', date: toJoda(future(2)), lat: 47.61, lng: -122.32 },
+  { icsUrl: 'test-ripper-cal2.ics', summary: 'Far Future Fest', description: 'A festival far ahead', location: 'SIFF', date: toJoda(future(20)) },
+]
+
+// Events carrying the structured `uncertainty` field (the replacement for the
+// old raw "⚠️ …" description line). Used only by uncertainty.spec.js, which
+// overrides the events-index route so the shared specs' event counts are
+// untouched. One of each kind: `pending` (approximate, being verified) and
+// `unresolvable` (not posted by the source).
+export const mockUncertainEvents = [
+  {
+    icsUrl: 'test-ripper-cal1.ics', summary: 'Approximate Duration Show',
+    description: 'Headliner plus support.', location: 'Neumos, Capitol Hill',
+    date: toJoda(future(2)), lat: 47.61, lng: -122.32,
+    uncertainty: { fields: ['duration'], kind: 'pending' },
+  },
+  {
+    icsUrl: 'test-ripper-cal1.ics', summary: 'Unposted Details Show',
+    description: 'Doors at an unannounced time.', location: 'Neumos, Capitol Hill',
+    date: toJoda(future(3)), lat: 47.61, lng: -122.32,
+    uncertainty: { fields: ['startTime', 'cost'], kind: 'unresolvable' },
+  },
+]
+
+// Events carrying the build-stamped `weather` field (docs/weather-badges.md),
+// one per confidence tier plus a stale-forecast event that the client-side
+// staleness guard must suppress. Used only by weather.spec.js, which overrides
+// the events-index route so the shared specs' event counts are untouched.
+const weatherAsOf = new Date().toISOString()
+const staleAsOf = new Date(Date.now() - 72 * 3_600_000).toISOString()
+export const mockWeatherEvents = [
+  {
+    icsUrl: 'test-ripper-cal1.ics', summary: 'Sunny Market Day',
+    description: 'Open-air market.', location: 'Ballard Ave NW',
+    date: toJoda(future(1)), lat: 47.668, lng: -122.384,
+    weather: { hi: 74, lo: 61, pop: 5, code: 0, asOf: weatherAsOf, conf: 'high' },
+  },
+  {
+    icsUrl: 'test-ripper-cal1.ics', summary: 'Rainy Outdoor Movie',
+    description: 'Bring a tarp.', location: 'Marymoor Park',
+    date: toJoda(future(4)), lat: 47.663, lng: -122.121,
+    weather: { hi: 55, lo: 48, pop: 70, code: 61, asOf: weatherAsOf, conf: 'medium' },
+  },
+  {
+    icsUrl: 'test-ripper-cal1.ics', summary: 'Long Range Garden Walk',
+    description: 'A week out.', location: 'Seattle Japanese Garden',
+    date: toJoda(future(6)), lat: 47.629, lng: -122.297,
+    weather: { hi: 68, lo: 54, pop: 40, code: 3, asOf: weatherAsOf, conf: 'low' },
+  },
+  {
+    icsUrl: 'test-ripper-cal1.ics', summary: 'Stale Forecast Fair',
+    description: 'Forecast too old to trust.', location: 'City Hall Park',
+    date: toJoda(future(2)), lat: 47.602, lng: -122.330,
+    weather: { hi: 70, lo: 60, pop: 0, code: 0, asOf: staleAsOf, conf: 'high' },
+  },
+]
+
+// A recurring event that is NOT modeled as recurring: four identical-title
+// instances at one venue/source on different days (a weekly trivia night),
+// scraped as independent dated events. Plus two distractors that must NOT be
+// folded into the series:
+//   - "Open Mic" — same venue/source, different title (belongs under
+//     "More from <channel>", not "Other dates").
+//   - "Tuesday Trivia Night" at a DIFFERENT venue/source — same title but a
+//     different groupKey (different coords + icsUrl), so it must stay separate.
+// Used only by recurring-dates.spec.js, which overrides the events-index route
+// so the shared specs' counts are untouched.
+export const mockRecurringEvents = [
+  { icsUrl: 'test-ripper-cal1.ics', summary: 'Tuesday Trivia Night', description: 'Weekly pub trivia.', location: 'Neumos, Capitol Hill', date: toJoda(future(1)), lat: 47.61, lng: -122.32 },
+  { icsUrl: 'test-ripper-cal1.ics', summary: 'Tuesday Trivia Night', description: 'Weekly pub trivia.', location: 'Neumos, Capitol Hill', date: toJoda(future(8)), lat: 47.61, lng: -122.32 },
+  { icsUrl: 'test-ripper-cal1.ics', summary: 'Tuesday Trivia Night', description: 'Weekly pub trivia.', location: 'Neumos, Capitol Hill', date: toJoda(future(15)), lat: 47.61, lng: -122.32 },
+  { icsUrl: 'test-ripper-cal1.ics', summary: 'Tuesday Trivia Night', description: 'Weekly pub trivia.', location: 'Neumos, Capitol Hill', date: toJoda(future(22)), lat: 47.61, lng: -122.32 },
+  { icsUrl: 'test-ripper-cal1.ics', summary: 'Open Mic', description: 'Sign-up at the door.', location: 'Neumos, Capitol Hill', date: toJoda(future(3)), lat: 47.61, lng: -122.32 },
+  { icsUrl: 'test-ripper-cal2.ics', summary: 'Tuesday Trivia Night', description: 'A different bar entirely.', location: 'SIFF', date: toJoda(future(5)), lat: 47.70, lng: -122.40 },
+]
+
+// Cross-source duplicate marks as the BUILD-TIME dedup pass would emit them
+// (lib/cross-source-dedup.ts). The canonical (cal1) carries `dedupedSources`;
+// the suppressed copy (cal2) carries `duplicateOf` and must be hidden from
+// lists and folded into the canonical's "Also listed in" attribution.
+// Used only by cross-source-dedup.spec.js (overrides the events-index route).
+const dupGroupId = 'test-ripper-cal1.ics Live Aloha Hawaiian Cultural Festival|' + toJoda(future(2))
+export const mockDuplicateEvents = [
+  {
+    icsUrl: 'test-ripper-cal1.ics', summary: 'Live Aloha Hawaiian Cultural Festival',
+    description: 'Hawaiian cultural festival.', location: 'Seattle Center, 305 Harrison St, Seattle, WA 98109',
+    date: toJoda(future(2)), lat: 47.6235, lng: -122.3517,
+    duplicateGroupId: dupGroupId, dedupedSources: ['test-ripper-cal2.ics'],
+  },
+  {
+    icsUrl: 'test-ripper-cal2.ics', summary: 'Festal: Live Aloha Hawaiian Cultural Festival',
+    description: 'Hawaiian cultural festival.', location: 'Seattle Center',
+    date: toJoda(future(2)), lat: 47.6250, lng: -122.3517,
+    duplicateGroupId: dupGroupId, duplicateOf: dupGroupId,
+  },
+  // A normal, unrelated event so the list isn't a single row.
+  { icsUrl: 'test-ripper-cal1.ics', summary: 'Jazz Night', description: 'Live jazz', location: 'Neumos, Capitol Hill', date: toJoda(future(4)), lat: 47.61, lng: -122.32 },
+]
+
+// Events carrying each `cost` shape, including the new `{ soldOut: true }`
+// state. Used only by cost.spec.js, which overrides the events-index route so
+// the shared specs' event counts are untouched. One row per shape so the
+// rendered label/styling of each can be asserted and screenshotted.
+export const mockCostEvents = [
+  { icsUrl: 'test-ripper-cal1.ics', summary: 'Sold Out Show', description: 'A packed house.', location: 'Neumos, Capitol Hill', date: toJoda(future(2)), lat: 47.61, lng: -122.32, cost: { soldOut: true } },
+  { icsUrl: 'test-ripper-cal1.ics', summary: 'Free Show', description: 'No cover.', location: 'Neumos, Capitol Hill', date: toJoda(future(3)), lat: 47.61, lng: -122.32, cost: { min: 0 } },
+  { icsUrl: 'test-ripper-cal1.ics', summary: 'Priced Show', description: 'Tickets from $25.', location: 'Neumos, Capitol Hill', date: toJoda(future(4)), lat: 47.61, lng: -122.32, cost: { min: 25, max: 75 } },
+  { icsUrl: 'test-ripper-cal1.ics', summary: 'Ticketed Show', description: 'Amount not posted.', location: 'Neumos, Capitol Hill', date: toJoda(future(5)), lat: 47.61, lng: -122.32, cost: { paid: true } },
+]
+
 export const mockVenues = {
   generated: '',
   venues: [{

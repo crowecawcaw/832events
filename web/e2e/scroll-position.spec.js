@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test'
-import { installDataMocks } from './mock-routes.js'
+import { installDataMocks, overrideEventsIndex } from './mock-routes.js'
 import { mockManifest } from './fixtures.js'
 
 // Red/green regression test for event-list scroll restoration.
@@ -8,7 +8,7 @@ import { mockManifest } from './fixtures.js'
 // open an event for details, then hit back to keep browsing. The list should
 // return to where you left off — but today the `.a-content` scroll container
 // carries a `key` that flips between the section view and the event overlay
-// (App832.jsx), so React remounts it on back-nav and the scroll position is
+// (App206.jsx), so React remounts it on back-nav and the scroll position is
 // reset to the top.
 //
 // This test is RED against the current code (restored scrollTop ≈ 0) and turns
@@ -52,14 +52,9 @@ const pageErrorsByPage = new WeakMap()
 
 test.beforeEach(async ({ page }) => {
   await installDataMocks(page)
-  // Override the events feed with a list long enough to scroll. Re-registering
-  // the route takes precedence over the default two-event mock.
-  await page.route('**/events-index.json', (route) =>
-    route.fulfill({
-      status: 200,
-      contentType: 'application/json',
-      body: JSON.stringify(makeManyEvents(60)),
-    }))
+  // Override the events corpus with a list long enough to scroll.
+  // Re-registering the routes takes precedence over the default two-event mock.
+  await overrideEventsIndex(page, makeManyEvents(60))
 
   const pageErrors = []
   pageErrorsByPage.set(page, pageErrors)
